@@ -1,0 +1,543 @@
+GENRE;Nom_Commun;Nom_Latin;CATEGORIE;TYPE
+GAVIIDÉS;Plongeon catmarin;Gavia stellata;A;Migrateur Hivernant
+GAVIIDÉS;Plongeon arctique;Gavia arctica;A;Migrateur Hivernant
+GAVIIDÉS;Plongeon imbrin;Gavia immer;A;Migrateur Hivernant
+GAVIIDÉS;Plongeon à bec blanc;Gavia adamsii;A;Hivernant occasionnel
+PODICIPÉDIDÉS;Grèbe à bec bigarré;Podilymbus podiceps;A;Migrateur occasionnel Hivernant occasionnel
+PODICIPÉDIDÉS;Grèbe castagneux;Tachybaptus ruficollis;A;Nicheur Migrateur Hivernant
+PODICIPÉDIDÉS;Grèbe huppé;Podiceps cristatus;A;Nicheur Migrateur Hivernant
+PODICIPÉDIDÉS;Grèbe jougris;Podiceps grisegena;A;Nicheur occasionnel Migrateur Hivernant
+PODICIPÉDIDÉS;Grèbe esclavon;Podiceps auritus;A;Migrateur Hivernant
+PODICIPÉDIDÉS;Grèbe à cou noir;Podiceps nigricollis;A;Nicheur Migrateur Hivernant
+DIOMÉDÉIDÉS;Albatros à sourcils noirs;Diomedea melanophris;A;Migrateur occasionnel
+DIOMÉDÉIDÉS;Albatros hurleur;Diomedea exulans;B;Migrateur occasionnel
+PROCELLARIIDÉS;Fulmar géant de Hall;Macronectes giganteus hall;A;Migrateur occasionnel
+PROCELLARIIDÉS;Fulmar boréal;Fulmarus glacialis;A;Nicheur Migrateur Hivernant rare
+PROCELLARIIDÉS;Pétrel de Bulwer;Bulweria bulwerii;A;Migrateur occasionnel
+PROCELLARIIDÉS;Puffin cendré;Calonectris diomedea;A;Nicheur Migrateur Hivernant occasionnel
+PROCELLARIIDÉS;Puffin majeur;Puffinus gravis;A;Migrateur
+PROCELLARIIDÉS;Puffin fuligineux;Puffinus griseus;A;Migrateur Hivernant occasionnel
+PROCELLARIIDÉS;Puffin des Anglais;Puffinus puffinus;A;Nicheur Migrateur Hivernant rare
+PROCELLARIIDÉS;Puffin des Baléares;Puffinus mauretanicus;A;Migrateur Hivernant
+PROCELLARIIDÉS;Puffin yelkouan;Puffinus yelkouan;A;Nicheur Migrateur Hivernant
+PROCELLARIIDÉS;Puffin semblable;Puffinus assimilis;A;Migrateur occasionnel
+HYDROBATIDÉS;Océanite de Wilson;Oceanites oceanicus;A;Migrateur occasionnel
+HYDROBATIDÉS;Océanite tempête;Hydrobates pelagicus;A;Nicheur Migrateur Hivernant
+HYDROBATIDÉS;Océanite culblanc;Oceanodroma leucorhoa;A;Migrateur Hivernant
+HYDROBATIDÉS;Océanite de Swinhoe;Oceanodroma monorhis;A;Migrateur occasionnel
+HYDROBATIDÉS;Océanite de Castro;Oceanodroma castro;A;Migrateur occasionnel
+SULIDÉS;Fou de Bassan;Morus bassanus;A;Nicheur Migrateur Hivernant
+PHALACROCORACIDÉS;Grand Cormoran;Phalacrocorax carbo;A;Nicheur Migrateur Hivernant
+PHALACROCORACIDÉS;Cormoran huppé;Phalacrocorax aristotelis;A;Nicheur sédentaire Migrateur Hivernant
+PHALACROCORACIDÉS;Cormoran pygmée;Phalacrocorax pygmaeus;A;Migrateur occasionnel
+PÉLÉCANIDÉS;Pélican blanc;Pelecanus onocrotalus;B,D1;Migrateur occasionnel
+FRÉGATIDÉS;Frégate superbe;Fregata magnificens;B;Migrateur occasionnel
+ARDÉIDÉS;Butor étoilé;Botaurus stellaris;A;Nicheur sédentaire Migrateur Hivernant
+ARDÉIDÉS;Blongios nain;Ixobrychus minutus;A;Nicheur Migrateur
+ARDÉIDÉS;Bihoreau gris;Nycticorax nycticorax;A;Nicheur Migrateur Hivernant rare
+ARDÉIDÉS;Héron vert;Butorides virescens;A;Migrateur occasionnel
+ARDÉIDÉS;Crabier chevelu;Ardeola ralloides;A;Nicheur Migrateur Hivernant occasionnel
+ARDÉIDÉS;Héron garde-bufs;Bubulcus ibis;A;Nicheur sédentaire Migrateur Hivernant
+ARDÉIDÉS;Aigrette des récifs;Egretta gularis;A;Migrateur occasionnel
+ARDÉIDÉS;Aigrette garzette;Egretta garzetta;A;Nicheur Migrateur Hivernant
+ARDÉIDÉS;Grande Aigrette;Egretta alba;A;Nicheur rare Migrateur Hivernant
+ARDÉIDÉS;Héron cendré;Ardea cinerea;A;Nicheur Migrateur Hivernant
+ARDÉIDÉS;Grand Héron;Ardea herodias;A;Migrateur occasionnel
+ARDÉIDÉS;Héron pourpré;Ardea purpurea;A;Nicheur Migrateur
+ARDÉIDÉS;Héron mélanocéphale;Ardea melanocephala;A;Migrateur occasionnel
+CICONIIDÉS;Cigogne noire;Ciconia nigra;A;Nicheur rare Migrateur
+CICONIIDÉS;Cigogne blanche;Ciconia ciconia;A;Nicheur Migrateur Hivernant rare
+THRESKIORNITHIDÉS;Ibis falcinelle;Plegadis falcinellus;A;Nicheur occasionnel Migrateur rare Hivernant occasionnel
+THRESKIORNITHIDÉS;Ibis sacré;Threskiornis aethiopicus;C;Nicheur sédentaire Migrateur
+THRESKIORNITHIDÉS;Spatule blanche;Platalea leucorodia;A;Nicheur rare Migrateur Hivernant rare
+PHOENICOPTÉRIDÉS;Flamant rose;Phoenicopterus ruber;A;Nicheur sédentaire
+ANATIDÉS;Cygne tuberculé;Cygnus olor;A,C;Nicheur sédentaire Migrateur Hivernant
+ANATIDÉS;Cygne de Bewick;Cygnus columbianus;A;Hivernant
+ANATIDÉS;Cygne chanteur;Cygnus cygnus;A;Hivernant
+ANATIDÉS;Oie des moissons;Anser fabalis;A;Hivernant
+ANATIDÉS;Oie à bec court;Anser brachyrhynchus;A;Hivernant occasionnel
+ANATIDÉS;Oie rieuse;Anser albifrons;A;Hivernant
+ANATIDÉS;Oie naine;Anser erythropus;A;Hivernant occasionnel
+ANATIDÉS;Oie cendrée;Anser anser;A,C;Nicheur rare Migrateur Hivernant
+ANATIDÉS;Oie des neiges;Anser caerulescens;B,D1;Hivernant occasionnel
+ANATIDÉS;Bernache du Canada;Branta canadensis;C;Nicheur sédentaire Migrateur Hivernant
+ANATIDÉS;Bernache nonnette;Branta leucopsis;A;Hivernant rare
+ANATIDÉS;Bernache cravant;Branta bernicla;A;Migrateur Hivernant
+ANATIDÉS;Bernache du Pacifique *;Branta bernicla nigricans;A;Hivernant occasionnel
+ANATIDÉS;Bernache à cou roux;Branta ruficollis;A;Hivernant occasionnel
+ANATIDÉS;Ouette d'Egypte;Alopochen aegyptiacus;B C;Nicheur rare Hivernant rare
+ANATIDÉS;Tadorne casarca;Tadorna ferruginea;B,D1;Migrateur occasionnel
+ANATIDÉS;Tadorne de Belon;Tadorna tadorna;A;Nicheur sédentaire Migrateur Hivernant
+ANATIDÉS;Canard mandarin;Aix galericulata;C,D2;Nicheur rare
+ANATIDÉS;Canard siffleur;Anas penelope;A;Nicheur occasionnel Migrateur Hivernant
+ANATIDÉS;Canard à front blanc;Anas americana;A;Migrateur occasionnel
+ANATIDÉS;Canard chipeau;Anas strepera;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Sarcelle élégante;Anas formosa;B,D1;Migrateur occasionnel
+ANATIDÉS;Sarcelle d'hiver;Anas crecca;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Sarcelle à ailes vertes *;Anas (crecca) carolinensis;A;Migrateur occasionnel
+ANATIDÉS;Canard colvert;Anas platyrhynchos;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Canard noir;Anas rubripes;A;Migrateur occasionnel
+ANATIDÉS;Canard pilet;Anas acuta;A;Nicheur rare Migrateur Hivernant
+ANATIDÉS;Sarcelle d'été;Anas querquedula;A;Nicheur Migrateur Hivernant occasionnel
+ANATIDÉS;Sarcelle à ailes bleues;Anas discors;A;Migrateur occasionnel
+ANATIDÉS;Canard souchet;Anas clypeata;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Sarcelle marbrée;Marmaronetta angustirostris;A;Nicheur occasionnel Migrateur occasionnel
+ANATIDÉS;Nette rousse;Netta rufina;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Fuligule milouin;Aythya ferina;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Fuligule à bec cerclé;Aythya collaris;A;Migrateur occasionnel Hivernant occasionnel
+ANATIDÉS;Fuligule nyroca;Aythya nyroca;A;Nicheur occasionnel Migrateur Hivernant rare
+ANATIDÉS;Fuligule morillon;Aythya fuligula;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Fuligule milouinan;Aythya marila;A;Migrateur Hivernant
+ANATIDÉS;Fuligule à tête noire;Aythya affinis;A;Hivernant occasionnel
+ANATIDÉS;Eider à duvet;Somateria mollissima;A;Nicheur rare Migrateur Hivernant
+ANATIDÉS;Eider à tête grise;Somateria spectabilis;A;Hivernant occasionnel
+ANATIDÉS;Eider de Steller;Polysticta stelleri;B;Hivernant occasionnel
+ANATIDÉS;Harelde boréale;Clangula hyemalis;A;Hivernant
+ANATIDÉS;Macreuse noire;Melanitta nigra;A;Migrateur Hivernant
+ANATIDÉS;Macreuse à bec jaune;Melanitta (nigra) americana;A;Migrateur occasionnel
+ANATIDÉS;Macreuse à front blanc;Melanitta perspicillata;A;Migrateur occasionnel Hivernant occasionnel
+ANATIDÉS;Macreuse brune;Melanitta fusca;A;Migrateur Hivernant
+ANATIDÉS;Garrot d'Islande;Bucephala islandica;A;Hivernant occasionnel
+ANATIDÉS;Garrot à oeil d'or;Bucephala clangula;A;Hivernant
+ANATIDÉS;Harle piette;Mergus albellus;A;Hivernant
+ANATIDÉS;Harle huppé;Mergus serrator;A;Nicheur occasionnel Migrateur Hivernant
+ANATIDÉS;Harle bièvre;Mergus merganser;A;Nicheur Migrateur Hivernant
+ANATIDÉS;Érismature à tête blanche;Oxyura leucocephala;A;Migrateur occasionnel
+ANATIDÉS;Érismature rousse;Oxyura jamaicensis;C;Nicheur occasionnel Migrateur rare
+ACCIPITRIDÉS;Bondrée apivore;Pernis apivorus;A;Nicheur Migrateur
+ACCIPITRIDÉS;Élanion blanc;Elanus caeruleus;A;Nicheur rare Migrateur occasionnel
+ACCIPITRIDÉS;Milan noir;Milvus migrans;A;Nicheur Migrateur Hivernant rare
+ACCIPITRIDÉS;Milan royal;Milvus milvus;A;Nicheur Migrateur Hivernant
+ACCIPITRIDÉS;Pygargue à queue blanche;Haliaeetus albicilla;A;Hivernant rare
+ACCIPITRIDÉS;Gypaète barbu;Gypaetus barbatus;A;Nicheur sédentaire rare
+ACCIPITRIDÉS;Vautour percnoptère;Neophron percnopterus;A;Nicheur rare
+ACCIPITRIDÉS;Vautour fauve;Gyps fulvus;A;Nicheur sédentaire
+ACCIPITRIDÉS;Vautour oricou;Torgos tracheliotus;B;Migrateur occasionnel
+ACCIPITRIDÉS;Vautour moine;Aegypius monachus;A;Nicheur rare Migrateur occasionnel
+ACCIPITRIDÉS;Circaète Jean-le-Blanc;Circaetus gallicus;A;Nicheur Migrateur
+ACCIPITRIDÉS;Busard des roseaux;Circus aeruginosus;A;Nicheur Migrateur Hivernant
+ACCIPITRIDÉS;Busard Saint-Martin;Circus cyaneus;A;Nicheur Migrateur Hivernant
+ACCIPITRIDÉS;Busard pâle;Circus macrourus;A;Migrateur occasionnel
+ACCIPITRIDÉS;Busard cendré;Circus pygargus;A;Nicheur Migrateur
+ACCIPITRIDÉS;Autour des palombes;Accipiter gentilis;A;Nicheur Migrateur Hivernant
+ACCIPITRIDÉS;Epervier d'Europe;Accipiter nisus;A;Nicheur Migrateur Hivernant
+ACCIPITRIDÉS;Buse variable;Buteo buteo;A;Nicheur Migrateur Hivernant
+ACCIPITRIDÉS;Buse de Russie;Buteo buteo vulpinus;A;Migrateur occasionnel
+ACCIPITRIDÉS;Buse féroce;Buteo rufinus;A;Migrateur occasionnel
+ACCIPITRIDÉS;Buse pattue;Buteo lagopus;A;Hivernant rare
+ACCIPITRIDÉS;Aigle pomarin;Aquila pomarina;A;Migrateur occasionnel
+ACCIPITRIDÉS;Aigle criard;Aquila clanga;A;Migrateur rare Hivernant rare
+ACCIPITRIDÉS;Aigle des steppes;Aquila nipalensis;A;Migrateur occasionnel
+ACCIPITRIDÉS;Aigle impérial;Aquila heliaca;A;Migrateur occasionnel
+ACCIPITRIDÉS;Aigle ibérique;Aquila adalberti;B;Migrateur occasionnel
+ACCIPITRIDÉS;Aigle royal;Aquila chrysaetos;A;Nicheur sédentaire
+ACCIPITRIDÉS;Aigle botté;Hieraaetus pennatus;A;Nicheur Migrateur Hivernant rare
+ACCIPITRIDÉS;Aigle de Bonelli;Hieraaetus fasciatus;A;Nicheur sédentaire rare
+PANDIONIDÉS;Balbuzard pêcheur;Pandion haliaetus;A;Nicheur rare Migrateur Hivernant rare
+FALCONIDÉS;Faucon crécerellette;Falco naumanni;A;Nicheur rare Migrateur occasionnel
+FALCONIDÉS;Faucon crécerelle;Falco tinnunculus;A;Nicheur sédentaire Migrateur Hivernant
+FALCONIDÉS;Faucon kobez;Falco vespertinus;A;Nicheur occasionnel Migrateur Hivernant occasionnel
+FALCONIDÉS;Faucon émerillon;Falco columbarius;A;Migrateur Hivernant
+FALCONIDÉS;Faucon hobereau;Falco subbuteo;A;Nicheur Migrateur Hivernant occasionnel
+FALCONIDÉS;Faucon d'Eléonore;Falco eleonorae;A;Migrateur rare
+FALCONIDÉS;Faucon lanier;Falco biarmicus;A,D1;Migrateur occasionnel Hivernant occasionnel
+FALCONIDÉS;Faucon sacre;Falco cherrug;A,D1;Migrateur occasionnel Hivernant occasionnel
+FALCONIDÉS;Faucon gerfaut;Falco rusticolus;A;Migrateur occasionnel Hivernant occasionnel
+FALCONIDÉS;Faucon pèlerin;Falco peregrinus;A;Nicheur Migrateur Hivernant
+TÉTRAONIDÉS;Gélinotte des bois;Bonasa bonasia;A;Nicheur sédentaire
+TÉTRAONIDÉS;Lagopède alpin;Lagopus mutus;A;Nicheur sédentaire
+TÉTRAONIDÉS;Tétras lyre;Tetrao tetrix;A;Nicheur sédentaire
+TÉTRAONIDÉS;Grand Tétras;Tetrao urogallus;A;Nicheur sédentaire
+PHASIANIDÉS;Colin de Californie;Callipepla californica;C;Nicheur sédentaire rare
+PHASIANIDÉS;Colin de Virginie;Colinus virginianus;C;Nicheur sédentaire rare
+PHASIANIDÉS;Perdrix bartavelle;Alectoris graeca;A;Nicheur sédentaire
+PHASIANIDÉS;Perdrix rouge;Alectoris rufa;A;Nicheur sédentaire
+PHASIANIDÉS;Perdrix grise;Perdix perdix;A;Nicheur sédentaire
+PHASIANIDÉS;Caille des blés;Coturnix coturnix;A;Nicheur Migrateur Hivernant occasionnel
+PHASIANIDÉS;Faisan vénéré;Syrmaticus reevesii;C;Nicheur sédentaire rare
+PHASIANIDÉS;Faisan de Colchide;Phasianus colchicus;C;Nicheur sédentaire
+RALLIDÉS;Râle d'eau;Rallus aquaticus;A;Nicheur sédentaire Migrateur Hivernant
+RALLIDÉS;Marouette ponctuée;Porzana porzana;A;Nicheur Migrateur Hivernant occasionnel
+RALLIDÉS;Marouette de Caroline;Porzana carolina;A;Migrateur occasionnel
+RALLIDÉS;Marouette poussin;Porzana parva;A;Nicheur rare Migrateur rare Hivernant occasionnel
+RALLIDÉS;Marouette de Baillon;Porzana pusilla;A;Nicheur rare Migrateur rare
+RALLIDÉS;Râle des genêts;Crex crex;A;Nicheur Migrateur Hivernant occasionnel
+RALLIDÉS;Gallinule poule-d'eau;Gallinula chloropus;A;Nicheur sédentaire Migrateur Hivernant
+RALLIDÉS;Talève d'Allen;Porphyrula alleni;A;Migrateur occasionnel
+RALLIDÉS;Talève sultane;Porphyrio porphyrio;A;Nicheur sédentaire rare Migrateur occasionnel Hivernant occasionnel
+RALLIDÉS;Foulque macroule;Fulica atra;A;Nicheur sédentaire Migrateur Hivernant
+RALLIDÉS;Foulque caronculée;Fulica cristata;B;Migrateur occasionnel
+GRUIDÉS;Grue cendrée;Grus grus;A;Nicheur rare Migrateur Hivernant
+ OTIDIDÉS;Outarde canepetière;Tetrax tetrax;A;Nicheur Migrateur Hivernant
+ OTIDIDÉS;Outarde houbara;Chlamydotis undulata;B;Migrateur occasionnel
+ OTIDIDÉS;Outarde barbue;Otis tarda;A;Migrateur occasionnel Hivernant occasionnel
+HAEMATOPODIDÉS;Huîtrier pie;Haematopus ostralegus;A;Nicheur sédentaire Migrateur Hivernant
+RÉCURVIROSTRIDÉS;Échasse blanche;Himantopus himantopus;A;Nicheur Migrateur Hivernant occasionnel
+RÉCURVIROSTRIDÉS;Avocette élégante;Recurvirostra avosetta;A;Nicheur Migrateur Hivernant
+BURHINIDÉS;Oedicnème criard;Burhinus oedicnemus;A;Nicheur Migrateur Hivernant rare
+GLARÉOLIDÉS;Courvite isabelle;Cursorius cursor;A;Migrateur occasionnel
+GLARÉOLIDÉS;Glaréole à collier;Glareola pratincola;A;Nicheur rare Migrateur rare
+GLARÉOLIDÉS;Glaréole à ailes noires;Glareola nordmanni;A;Nicheur occasionnel Migrateur occasionnel
+CHARADRIIDÉS;Petit Gravelot;Charadrius dubius;A;Nicheur Migrateur Hivernant occasionnel
+CHARADRIIDÉS;Grand Gravelot;Charadrius hiaticula;A;Nicheur Migrateur Hivernant
+CHARADRIIDÉS;Gravelot kildir;Charadrius vociferus;A;Migrateur occasionnel
+CHARADRIIDÉS;Gravelot pâtre;Charadrius pecuarius;A;Migrateur occasionnel
+CHARADRIIDÉS;Gravelot à collier interrompu;Charadrius alexandrinus;A;Nicheur Migrateur Hivernant
+CHARADRIIDÉS;Gravelot mongol;Charadrius mongolus;A;Migrateur occasionnel
+CHARADRIIDÉS;Gravelot de Leschenault;Charadrius leschenaultii;A;Migrateur occasionnel
+CHARADRIIDÉS;Pluvier asiatique;Charadrius asiaticus;A;Migrateur occasionnel
+CHARADRIIDÉS;Pluvier guignard;Charadrius morinellus;A;Nicheur rare Migrateur rare
+CHARADRIIDÉS;Pluvier fauve;Pluvialis fulva;A;Migrateur occasionnel
+CHARADRIIDÉS;Pluvier bronzé;Pluvialis dominica;A;Migrateur occasionnel
+CHARADRIIDÉS;Pluvier doré;Pluvialis apricaria;A;Migrateur Hivernant
+CHARADRIIDÉS;Pluvier argenté;Pluvialis squatarola;A;Migrateur Hivernant
+CHARADRIIDÉS;Vanneau sociable;Chettusia gregaria;A;Migrateur occasionnel
+CHARADRIIDÉS;Vanneau à queue blanche;Chettusia leucura;A;Migrateur occasionnel
+CHARADRIIDÉS;Vanneau huppé;Vanellus vanellus;A;Nicheur Migrateur Hivernant
+SCOLOPACIDÉS;Bécasseau maubèche;Calidris canutus;A;Migrateur Hivernant
+SCOLOPACIDÉS;Bécasseau sanderling;Calidris alba;A;Migrateur Hivernant
+SCOLOPACIDÉS;Bécasseau semipalmé;Calidris pusilla;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécasseau d'Alaska;Calidris mauri;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécasseau à cou roux;Calidris ruficollis;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécasseau minute;Calidris minuta;A;Migrateur Hivernant
+SCOLOPACIDÉS;Bécasseau de Temminck;Calidris temminckii;A;Migrateur Hivernant occasionnel
+SCOLOPACIDÉS;Bécasseau minuscule;Calidris minutilla;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécasseau de Bonaparte;Calidris fuscicollis;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécasseau de Baird;Calidris bairdii;A;Migrateur occasionnel Hivernant occasionnel
+SCOLOPACIDÉS;Bécasseau tacheté;Calidris melanotos;A;Migrateur rare
+SCOLOPACIDÉS;Bécasseau à queue pointue;Calidris acuminata;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécasseau cocorli;Calidris ferruginea;A;Migrateur Hivernant occasionnel
+SCOLOPACIDÉS;Bécasseau violet;Calidris maritima;A;Hivernant
+SCOLOPACIDÉS;Bécasseau variable;Calidris alpina;A;Nicheur occasionnel Migrateur Hivernant
+SCOLOPACIDÉS;Bécasseau falcinelle;Limicola falcinellus;A;Migrateur rare
+SCOLOPACIDÉS;Bécasseau échasse;Micropalama himantopus;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécasseau rousset;Tryngites subruficollis;A;Migrateur rare
+SCOLOPACIDÉS;Combattant varié;Philomachus pugnax;A;Nicheur rare Migrateur Hivernant
+SCOLOPACIDÉS;Bécassine sourde;Lymnocryptes minimus;A;Migrateur Hivernant
+SCOLOPACIDÉS;Bécassine des marais;Gallinago gallinago;A;Nicheur Migrateur Hivernant
+SCOLOPACIDÉS;Bécassine double;Gallinago media;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécassin à bec court;Limnodromus griseus;A;Migrateur occasionnel
+SCOLOPACIDÉS;Bécassin à long bec;Limnodromus scolopaceus;A;Migrateur occasionnel Hivernant occasionnel
+SCOLOPACIDÉS;Bécasse des bois;Scolopax rusticola;A;Nicheur Migrateur Hivernant
+SCOLOPACIDÉS;Barge à queue noire;Limosa limosa;A;Nicheur rare Migrateur Hivernant
+SCOLOPACIDÉS;Barge rousse;Limosa lapponica;A;Migrateur Hivernant
+SCOLOPACIDÉS;Courlis corlieu;Numenius phaeopus;A;Migrateur Hivernant rare
+SCOLOPACIDÉS;Courlis à bec grêle;Numenius tenuirostris;A;Migrateur occasionnel
+SCOLOPACIDÉS;Courlis cendré;Numenius arquata;A;Nicheur Migrateur Hivernant
+SCOLOPACIDÉS;Bartramie des champs;Bartramia longicauda;A;Migrateur occasionnel
+SCOLOPACIDÉS;Chevalier arlequin;Tringa erythropus;A;Migrateur Hivernant
+SCOLOPACIDÉS;Chevalier gambette;Tringa totanus;A;Nicheur Migrateur Hivernant
+SCOLOPACIDÉS;Chevalier stagnatile;Tringa stagnatilis;A;Migrateur rare
+SCOLOPACIDÉS;Chevalier aboyeur;Tringa nebularia;A;Migrateur Hivernant
+SCOLOPACIDÉS;Chevalier criard;Tringa melanoleuca;A;Migrateur occasionnel
+SCOLOPACIDÉS;Chevalier à pattes jaunes;Tringa flavipes;A;Migrateur occasionnel
+SCOLOPACIDÉS;Chevalier solitaire;Tringa solitaria;A;Migrateur occasionnel Hivernant occasionnel
+SCOLOPACIDÉS;Chevalier culblanc;Tringa ochropus;A;Nicheur occasionnel Migrateur Hivernant
+SCOLOPACIDÉS;Chevalier sylvain;Tringa glareola;A;Migrateur
+SCOLOPACIDÉS;Chevalier bargette;Tringa cinerea;A;Migrateur occasionnel Hivernant occasionnel
+SCOLOPACIDÉS;Chevalier guignette;Actitis hypoleucos;A;Nicheur Migrateur Hivernant
+SCOLOPACIDÉS;Chevalier grivelé;Actitis macularia;A;Migrateur occasionnel
+SCOLOPACIDÉS;Chevalier semipalmé;Catoptrophorus semipalmatus;A;Migrateur occasionnel
+SCOLOPACIDÉS;Tournepierre à collier;Arenaria interpres;A;Migrateur Hivernant
+SCOLOPACIDÉS;Phalarope de Wilson;Phalaropus tricolor;A;Migrateur occasionnel Hivernant occasionnel
+SCOLOPACIDÉS;Phalarope à bec étroit;Phalaropus lobatus;A;Migrateur Hivernant occasionnel
+SCOLOPACIDÉS;Phalarope à bec large;Phalaropus fulicarius;A;Migrateur Hivernant rare
+STERCORARIIDÉS;Labbe pomarin;Stercorarius pomarinus;A;Migrateur Hivernant rare
+STERCORARIIDÉS;Labbe parasite;Stercorarius parasiticus;A;Migrateur Hivernant rare
+STERCORARIIDÉS;Labbe à longue queue;Stercorarius longicaudus;A;Migrateur rare
+STERCORARIIDÉS;Grand Labbe;Catharacta skua;A;Migrateur Hivernant
+LARIDÉS;Goéland ichthyaète;Larus ichthyaetus;A;Migrateur occasionnel
+LARIDÉS;Mouette mélanocéphale;Larus melanocephalus;A;Nicheur Migrateur Hivernant
+LARIDÉS;Mouette atricille;Larus atricilla;A;Migrateur occasionnel
+LARIDÉS;Mouette de Franklin;Larus pipixcan;A;Migrateur occasionnel Hivernant occasionnel
+LARIDÉS;Mouette pygmée;Larus minutus;A;Nicheur occasionnel Migrateur Hivernant
+LARIDÉS;Mouette de Sabine;Larus sabini;A;Migrateur Hivernant occasionnel
+LARIDÉS;Mouette de Bonaparte;Larus philadelphia;A;Migrateur occasionnel
+LARIDÉS;Mouette rieuse;Larus ridibundus;A;Nicheur Migrateur Hivernant
+LARIDÉS;Goéland railleur;Larus genei;A;Nicheur Migrateur rare Hivernant occasionnel
+LARIDÉS;Goéland d'Audouin;Larus audouinii;A;Nicheur sédentaire rare Migrateur rare
+LARIDÉS;Goéland à bec cerclé;Larus delawarensis;A;Migrateur rare Hivernant rare
+LARIDÉS;Goéland cendré;Larus canus;A;Nicheur Migrateur Hivernant
+LARIDÉS;Goéland brun;Larus fuscus;A;Nicheur Migrateur Hivernant
+LARIDÉS;Goéland argenté;Larus argentatus;A;Nicheur Migrateur Hivernant
+LARIDÉS;Goéland leucophée;Larus cachinnans;A;Nicheur Migrateur Hivernant
+LARIDÉS;Goéland pontique;*;A;Migrateur rare Hivernant rare
+LARIDÉS;Goéland à ailes blanches;Larus glaucoides;A;Hivernant occasionnel
+LARIDÉS;Goéland bourgmestre;Larus hyperboreus;A;Hivernant rare
+LARIDÉS;Goéland marin;Larus marinus;A;Nicheur sédentaire Hivernant
+LARIDÉS;Mouette de Ross;Rhodostethia rosea;B;Migrateur occasionnel
+LARIDÉS;Mouette tridactyle;Rissa tridactyla;A;Nicheur Migrateur Hivernant
+LARIDÉS;Mouette blanche;Pagophila eburnea;A;Migrateur occasionnel
+STERNIDÉS;Sterne hansel;Gelochelidon nilotica;A;Nicheur Migrateur rare
+STERNIDÉS;Sterne caspienne;Sterna caspia;A;Migrateur rare
+STERNIDÉS;Sterne voyageuse;Sterna bengalensis;A;Migrateur occasionnel
+STERNIDÉS;Sterne caugek;Sterna sandvicensis;A;Nicheur Migrateur Hivernant
+STERNIDÉS;Sterne élégante;Sterna elegans;A;Nicheur occasionnel
+STERNIDÉS;Sterne de Dougall;Sterna dougallii;A;Nicheur Migrateur rare
+STERNIDÉS;Sterne pierregarin;Sterna hirundo;A;Nicheur Migrateur Hivernant rare
+STERNIDÉS;Sterne arctique;Sterna paradisaea;A;Nicheur occasionnel Migrateur
+STERNIDÉS;Sterne de Forster;Sterna forsteri;A;Migrateur occasionnel
+STERNIDÉS;Sterne bridée;Sterna anaethetus;A;Migrateur occasionnel
+STERNIDÉS;Sterne fuligineuse;Sterna fuscata;A;Migrateur occasionnel
+STERNIDÉS;Sterne naine;Sterna albifrons;A;Nicheur Migrateur
+STERNIDÉS;Guifette moustac;Chlidonias hybridus;A;Nicheur Migrateur Hivernant rare
+STERNIDÉS;Guifette noire;Chlidonias niger;A;Nicheur Migrateur Hivernant occasionnel
+STERNIDÉS;Guifette leucoptère;Chlidonias leucopterus;A;Migrateur rare
+ALCIDÉS;Guillemot de Troïl;Uria aalge;A;Nicheur rare Migrateur Hivernant
+ALCIDÉS;Guillemot de Brünnich;Uria lomvia;A;Hivernant occasionnel
+ALCIDÉS;Pingouin torda;Alca torda;A;Nicheur rare Migrateur Hivernant
+ALCIDÉS;Guillemot à miroir;Cepphus grylle;A;Hivernant occasionnel
+ALCIDÉS;Mergule nain;Alle alle;A;Migrateur rare Hivernant rare
+ALCIDÉS;Macareux moine;Fratercula arctica;A;Nicheur rare Migrateur Hivernant
+PTÉROCLIDIDÉS;Ganga cata Pterocles;alchata;A;Nicheur sédentaire rare Migrateur occasionnel
+PTÉROCLIDIDÉS;Syrrhapte paradoxal;Syrrhaptes paradoxus;A;Migrateur occasionnel
+COLUMBIDÉS;Pigeon biset;Columba livia;A;Nicheur sédentaire
+COLUMBIDÉS;Pigeon colombin;Columba oenas;A;Nicheur Migrateur Hivernant
+COLUMBIDÉS;Pigeon ramier;Columba palumbus;A;Nicheur sédentaire Migrateur Hivernant
+COLUMBIDÉS;Tourterelle turque;Streptopelia decaocto;A;Nicheur sédentaire Migrateur Hivernant
+COLUMBIDÉS;Tourterelle des bois;Streptopelia turtur;A;Nicheur Migrateur
+COLUMBIDÉS;Tourterelle orientale;Streptopelia orientalis;A;Migrateur occasionnel
+PSITTACIDÉS;Perruche à collier;Psittacula krameri;C;Nicheur occasionnel Migrateur rare
+CUCULIDÉS;Coucou geai;Clamator glandarius;A;Nicheur Migrateur Hivernant occasionnel
+CUCULIDÉS;Coucou gris;Cuculus canorus;A;Nicheur Migrateur
+CUCULIDÉS;Coulicou à bec jaune;Coccyzus americanus;A;Migrateur occasionnel
+TYTONIDÉS;Effraie des clochers;Tyto alba;A;Nicheur sédentaire Migrateur Hivernant
+STRIGIDÉS;Petit-duc scops;Otus scops;A;Nicheur Migrateur Hivernant rare
+STRIGIDÉS;Grand-duc d'Europe;Bubo bubo;A;Nicheur sédentaire
+STRIGIDÉS;Harfang des neiges;Nyctea scandiaca;A;Migrateur occasionnel Hivernant occasionnel
+STRIGIDÉS;Chouette épervière;Surnia ulula;B;Migrateur occasionnel
+STRIGIDÉS;Chevêchette d'Europe;Glaucidium passerinum;A;Nicheur sédentaire
+STRIGIDÉS;Chevêche d'Athéna;Athene noctua;A;Nicheur sédentaire
+STRIGIDÉS;Chouette hulotte;Strix aluco;A;Nicheur sédentaire
+STRIGIDÉS;Hibou moyen-duc;Asio otus;A;Nicheur Migrateur Hivernant
+STRIGIDÉS;Hibou des marais;Asio flammeus;A;Nicheur rare Migrateur Hivernant
+STRIGIDÉS;Chouette de Tengmalm;Aegolius funereus;A;Nicheur sédentaire
+CAPRIMULGIDÉS;Engoulevent d'Europe;Caprimulgus europaeus;A;Nicheur Migrateur
+CAPRIMULGIDÉS;Engoulevent à collier roux;Caprimulgus ruficollis;A;Migrateur occasionnel
+CAPRIMULGIDÉS;Engoulevent d'Amérique;Chordeiles minor;A;Migrateur occasionnel
+APODIDÉS;Martinet noir;Apus apus;A;Nicheur Migrateur
+APODIDÉS;Martinet pâle;Apus pallidus;A;Nicheur Migrateur
+APODIDÉS;Martinet à ventre blanc;Apus melba;A;Nicheur Migrateur
+ALCÉDINIDÉS;Martin-pêcheur d'Europe;Alcedo atthis;A;Nicheur Migrateur Hivernant
+MÉROPIDÉS;Guêpier de Perse;Merops persicus;A;Migrateur occasionnel
+MÉROPIDÉS;Guêpier d'Europe;Merops apiaster;A;Nicheur Migrateur
+CORACIIDÉS;Rollier d'Europe;Coracias garrulus;A;Nicheur Migrateur rare
+UPUPIDÉS;Huppe fasciée;Upupa epops;A;Nicheur Migrateur Hivernant occasionnel
+PICIDÉS;Torcol fourmilier;Jynx torquilla;A;Nicheur Migrateur Hivernant rare
+PICIDÉS;Pic cendré;Picus canus;A;Nicheur sédentaire
+PICIDÉS;Pic vert;Picus viridis;A;Nicheur sédentaire
+PICIDÉS;Pic noir;Dryocopus martius;A;Nicheur sédentaire
+PICIDÉS;Pic épeiche;Dendrocopos major;A;Nicheur sédentaire Migrateur
+PICIDÉS;Pic mar;Dendrocopos medius;A;Nicheur sédentaire
+PICIDÉS;Pic à dos blanc;Dendrocopos leucotos;A;Nicheur sédentaire
+PICIDÉS;Pic épeichette;Dendrocopos minor;A;Nicheur sédentaire
+PICIDÉS;Pic tridactyle;Picoides tridactylus;A;Nicheur sédentaire rare Migrateur rare
+ALAUDIDÉS;Sirli de Dupont;Chersophilus duponti;B;Migrateur occasionnel
+ALAUDIDÉS;Alouette calandre;Melanocorypha calandra;A;Nicheur sédentaire rare Migrateur occasionnel
+ALAUDIDÉS;Alouette calandrelle;Calandrella brachydactyla;A;Nicheur Migrateur rare Hivernant occasionnel
+ALAUDIDÉS;Alouette pispolette;Calandrella rufescens;B;Migrateur occasionnel
+ALAUDIDÉS;Cochevis huppé;Galerida cristata;A;Nicheur sédentaire Migrateur Hivernant
+ALAUDIDÉS;Cochevis de Thékla;Galerida theklae;A;Nicheur sédentaire rare
+ALAUDIDÉS;Alouette lulu;Lullula arborea;A;Nicheur Migrateur Hivernant
+ALAUDIDÉS;Alouette des champs;Alauda arvensis;A;Nicheur sédentaire Migrateur Hivernant
+ALAUDIDÉS;Alouette haussecol;Eremophila alpestris;A;Hivernant rare
+HIRUNDINIDÉS;Hirondelle paludicole;Riparia paludicola;A;Migrateur occasionnel
+HIRUNDINIDÉS;Hirondelle de rivage;Riparia riparia;A;Nicheur Migrateur
+HIRUNDINIDÉS;Hirondelle de rochers;Ptyonoprogne rupestris;A;Nicheur Migrateur Hivernant
+HIRUNDINIDÉS;Hirondelle rustique;Hirundo rustica;A;Nicheur Migrateur Hivernant occasionnel
+HIRUNDINIDÉS;Hirondelle rousseline;Hirundo daurica;A;Nicheur rare Migrateur rare
+HIRUNDINIDÉS;Hirondelle de fenêtre;Delichon urbica;A;Nicheur Migrateur Hivernant occasionnel
+MOTACILLIDÉS;Pipit de Richard;Anthus richardi;A;Migrateur rare Hivernant occasionnel
+MOTACILLIDÉS;Pipit de Godlewski;Anthus godlewskii;A;Migrateur occasionnel
+MOTACILLIDÉS;Pipit rousseline;Anthus campestris;A;Nicheur Migrateur
+MOTACILLIDÉS;Pipit à dos olive;Anthus hodgsoni;A;Migrateur occasionnel
+MOTACILLIDÉS;Pipit des arbres;Anthus trivialis;A;Nicheur Migrateur
+MOTACILLIDÉS;Pipit de la Petchora;Anthus gustavi;A;Migrateur occasionnel
+MOTACILLIDÉS;Pipit farlouse;Anthus pratensis;A;Nicheur Migrateur Hivernant
+MOTACILLIDÉS;Pipit à gorge rousse;Anthus cervinus;A;Migrateur rare
+MOTACILLIDÉS;Pipit maritime;Anthus petrosus;A;Nicheur sédentaire Migrateur Hivernant
+MOTACILLIDÉS;Pipit spioncelle;Anthus spinoletta;A;Nicheur Migrateur Hivernant
+MOTACILLIDÉS;Bergeronnette printanière;Motacilla flava;A;Nicheur Migrateur Hivernant occasionnel
+MOTACILLIDÉS;Bergeronnette flavéole *;Motacilla flava flavissima;A;Nicheur Migrateur
+MOTACILLIDÉS;Bergeronnette à tête grise *;Motacilla flava thunbergi;A;Migrateur
+MOTACILLIDÉS;Bergeronnnette des Balkans;Motacilla feldegg;A;Migrateur occasionnel
+MOTACILLIDÉS;Bergeronnette citrine;Motacilla citreola;A;Migrateur occasionnel
+MOTACILLIDÉS;Bergeronnette des ruisseaux;Motacilla cinerea;A;Nicheur Migrateur Hivernant
+MOTACILLIDÉS;Bergeronnette grise;Motacilla alba;A;Nicheur Migrateur Hivernant
+MOTACILLIDÉS;Bergeronnette de Yarrell *;Motacilla yarrellii;A;Nicheur rare Migrateur Hivernant
+BOMBYCILLIDÉS;Jaseur boréal;Bombycilla garrulus;A;Hivernant rare
+CINCLIDÉS;Cincle plongeur;Cinclus cinclus;A;Nicheur sédentaire Hivernant
+TROGLODYTIDÉS;Troglodyte mignon;Troglodytes troglodytes;A;Nicheur sédentaire
+PRUNELLIDÉS;Accenteur mouchet;Prunella modularis;A;Nicheur sédentaire Migrateur Hivernant
+PRUNELLIDÉS;Accenteur à gorge noire;Prunella atrogularis;A;Migrateur occasionnel
+PRUNELLIDÉS;Accenteur alpin;Prunella collaris;A;Nicheur sédentaire Migrateur Hivernant
+TURDIDÉS;Agrobate roux;Cercotrichas galactotes;A;Migrateur occasionnel
+TURDIDÉS;Rougegorge familier;Erithacus rubecula;A;Nicheur sédentaire Migrateur Hivernant
+TURDIDÉS;Rossignol progné;Luscinia luscinia;A;Migrateur occasionnel
+TURDIDÉS;Rossignol philomèle;Luscinia megarhynchos;A;Nicheur Migrateur
+TURDIDÉS;Gorgebleue à miroir;Luscinia svecica;A;Nicheur Migrateur Hivernant rare
+TURDIDÉS;Robin à flancs roux;Tarsiger cyanurus;A;Migrateur occasionnel
+TURDIDÉS;Rougequeue noir;Phoenicurus ochruros;A;Nicheur Migrateur Hivernant
+TURDIDÉS;Rougequeue à front blanc;Phoenicurus phoenicurus;A;Nicheur Migrateur
+TURDIDÉS;Rougequeue de Moussier;Phoenicurus moussieri;A;Migrateur occasionnel
+TURDIDÉS;Tarier des prés;Saxicola rubetra;A;Nicheur Migrateur Hivernant occasionnel
+TURDIDÉS;Tarier pâtre;Saxicola torquata;A;Nicheur Migrateur Hivernant
+TURDIDÉS;Tarier de Sibérie *;Saxicola torquata maura;A;Migrateur occasionnel Hivernant occasionnel
+TURDIDÉS;Traquet isabelle;Oenanthe isabellina;A;Migrateur occasionnel
+TURDIDÉS;Traquet motteux;Oenanthe oenanthe;A;Nicheur Migrateur Hivernant occasionnel
+TURDIDÉS;Traquet pie;Oenanthe pleschanka;A;Migrateur occasionnel
+TURDIDÉS;Traquet oreillard;Oenanthe hispanica;A;Nicheur Migrateur rare
+TURDIDÉS;Traquet du désert;Oenanthe deserti;A;Migrateur occasionnel Hivernant occasionnel
+TURDIDÉS;Traquet rieur;Oenanthe leucura;A;Nicheur sédentaire rare Migrateur occasionnel
+TURDIDÉS;Monticole de roche;Monticola saxatilis;A;Nicheur Migrateur rare
+TURDIDÉS;Monticole bleu;Monticola solitarius;A;Nicheur sédentaire
+TURDIDÉS;Grive dorée;Zoothera dauma;A;Migrateur occasionnel
+TURDIDÉS;Grive de Sibérie;Zoothera sibirica;A;Migrateur occasionnel
+TURDIDÉS;Grive à dos olive;Catharus ustulatus;A;Migrateur occasionnel
+TURDIDÉS;Grive à joues grises;Catharus minimus;A;Migrateur occasionnel
+TURDIDÉS;Merle à plastron;Turdus torquatus;A;Nicheur Migrateur Hivernant rare
+TURDIDÉS;Merle noir;Turdus merula;A;Nicheur sédentaire Migrateur Hivernant
+TURDIDÉS;Grive obscure;Turdus obscurus;A;Migrateur occasionnel
+TURDIDÉS;Grive de Naumann;Turdus naumanni;A;Migrateur occasionnel Hivernant occasionnel
+TURDIDÉS;Grive à gorge rousse;Turdus ruficollis;A;Migrateur occasionnel
+TURDIDÉS;Grive à gorge noire *;Turdus ruficollis atrogularis;A;Migrateur occasionnel
+TURDIDÉS;Grive litorne;Turdus pilaris;A;Nicheur Migrateur Hivernant
+TURDIDÉS;Grive musicienne;Turdus philomelos;A;Nicheur Migrateur Hivernant
+TURDIDÉS;Grive mauvis;Turdus iliacus;A;Migrateur Hivernant
+TURDIDÉS;Grive draine;Turdus viscivorus;A;Nicheur Migrateur Hivernant
+SYLVIIDÉS;Bouscarle de Cetti;Cettia cetti;A;Nicheur sédentaire
+SYLVIIDÉS;Cisticole des joncs;Cisticola juncidis;A;Nicheur sédentaire Migrateur
+SYLVIIDÉS;Locustelle de Pallas;Locustella certhiola;A;Migrateur occasionnel
+SYLVIIDÉS;Locustelle lancéolée;Locustella lanceolata;A;Migrateur occasionnel
+SYLVIIDÉS;Locustelle tachetée;Locustella naevia;A;Nicheur Migrateur
+SYLVIIDÉS;Locustelle fluviatile;Locustella fluviatilis;A;Migrateur occasionnel
+SYLVIIDÉS;Locustelle luscinioïde;Locustella luscinioides;A;Nicheur Migrateur
+SYLVIIDÉS;Locustelle fasciée;Locustella fasciolata;B;Migrateur occasionnel
+SYLVIIDÉS;Lusciniole à moustaches;Acrocephalus melanopogon;A;Nicheur sédentaire Migrateur Hivernant
+SYLVIIDÉS;Phragmite aquatique;Acrocephalus paludicola;A;Nicheur occasionnel Migrateur rare
+SYLVIIDÉS;Phragmite des joncs;Acrocephalus schoenobaenus;A;Nicheur Migrateur
+SYLVIIDÉS;Rousserolle isabelle;Acrocephalus agricola;A;Migrateur occasionnel
+SYLVIIDÉS;Rousserolle des buissons;Acrocephalus dumetorum;A;Migrateur occasionnel
+SYLVIIDÉS;Rousserolle verderolle;Acrocephalus palustris;A;Nicheur Migrateur
+SYLVIIDÉS;Rousserolle effarvatte;Acrocephalus scirpaceus;A;Nicheur Migrateur
+SYLVIIDÉS;Rousserolle turdoïde;Acrocephalus arundinaceus;A;Nicheur Migrateur
+SYLVIIDÉS;Hypolaïs pâle;Hippolais pallida;A;Migrateur occasionnel
+SYLVIIDÉS;Hypolaïs bottée;Hippolais caligata;A;Migrateur occasionnel
+SYLVIIDÉS;Hypolaïs ictérine;Hippolais icterina;A;Nicheur Migrateur
+SYLVIIDÉS;Hypolaïs polyglotte;Hippolais polyglotta;A;Nicheur Migrateur
+SYLVIIDÉS;Fauvette sarde;Sylvia sarda;A;Nicheur sédentaire Migrateur occasionnel
+SYLVIIDÉS;Fauvette pitchou;Sylvia undata;A;Nicheur sédentaire
+SYLVIIDÉS;Fauvette à lunettes;Sylvia conspicillata;A;Nicheur Hivernant rare
+SYLVIIDÉS;Fauvette passerinette;Sylvia cantillans;A;Nicheur Migrateur
+SYLVIIDÉS;Fauvette mélanocéphale;Sylvia melanocephala;A;Nicheur sédentaire
+SYLVIIDÉS;Fauvette de Rüppell;Sylvia rueppelli;A;Migrateur occasionnel
+SYLVIIDÉS;Fauvette naine;Sylvia nana;A;Migrateur occasionnel
+SYLVIIDÉS;Fauvette orphée;Sylvia hortensis;A;Nicheur
+SYLVIIDÉS;Fauvette épervière;Sylvia nisoria;A;Migrateur occasionnel
+SYLVIIDÉS;Fauvette babillarde;Sylvia curruca;A;Nicheur Migrateur
+SYLVIIDÉS;Fauvette grisette;Sylvia communis;A;Nicheur Migrateur Hivernant occasionnel
+SYLVIIDÉS;Fauvette des jardins;Sylvia borin;A;Nicheur Migrateur
+SYLVIIDÉS;Fauvette à tête noire;Sylvia atricapilla;A;Nicheur Migrateur Hivernant
+SYLVIIDÉS;Pouillot verdâtre;Phylloscopus trochiloides;A;Migrateur occasionnel
+SYLVIIDÉS;Pouillot boréal;Phylloscopus borealis;A;Migrateur occasionnel
+SYLVIIDÉS;Pouillot de Pallas;Phylloscopus proregulus;A;Migrateur occasionnel
+SYLVIIDÉS;Pouillot à grands sourcils;Phylloscopus inornatus;A;Migrateur rare Hivernant occasionnel
+SYLVIIDÉS;Pouillot de Hume;Phylloscopus humei;A;Migrateur occasionnel Hivernant occasionnel
+SYLVIIDÉS;Pouillot de Schwarz;Phylloscopus schwarzi;A;Migrateur occasionnel
+SYLVIIDÉS;Pouillot brun;Phylloscopus fuscatus;A;Migrateur occasionnel
+SYLVIIDÉS;Pouillot de Bonelli;Phylloscopus bonelli;A;Nicheur Migrateur
+SYLVIIDÉS;Pouillot siffleur;Phylloscopus sibilatrix;A;Nicheur Migrateur
+SYLVIIDÉS;Pouillot véloce;Phylloscopus collybita;A;Nicheur Migrateur Hivernant
+SYLVIIDÉS;Pouillot ibérique;Phylloscopus (collybita) brehmii;A;Nicheur Migrateur Hivernant
+SYLVIIDÉS;Pouillot de Sibérie *;Phylloscopus collybita tristis;A;Migrateur rare
+SYLVIIDÉS;Pouillot fitis;Phylloscopus trochilus;A;Nicheur Migrateur
+SYLVIIDÉS;Roitelet huppé;Regulus regulus;A;Nicheur Migrateur Hivernant
+SYLVIIDÉS;Roitelet à triple bandeau;Regulus ignicapillus;A;Nicheur Migrateur Hivernant
+MUSCICAPIDÉS;Gobemouche gris;Muscicapa striata;A;Nicheur Migrateur
+MUSCICAPIDÉS;Gobemouche nain;Ficedula parva;A;Migrateur rare
+MUSCICAPIDÉS;Gobemouche à collier;Ficedula albicollis;A;Nicheur Migrateur
+MUSCICAPIDÉS;Gobemouche noir;Ficedula hypoleuca;A;Nicheur Migrateur
+TIMALIIDÉS;Panure à moustaches;Panurus biarmicus;A;Nicheur sédentaire Migrateur Hivernant
+AEGITHALIDÉS;Mésange à longue queue;Aegithalos caudatus;A;Nicheur sédentaire Migrateur Hivernant
+PARIDÉS;Mésange nonnette;Parus palustris;A;Nicheur sédentaire
+PARIDÉS;Mésange boréale;Parus montanus;A;Nicheur sédentaire
+PARIDÉS;Mésange huppée;Parus cristatus;A;Nicheur sédentaire Migrateur Hivernant
+PARIDÉS;Mésange noire;Parus ater;A;Nicheur sédentaire Migrateur Hivernant
+PARIDÉS;Mésange bleue;Parus caeruleus;A;Nicheur sédentaire Migrateur Hivernant
+PARIDÉS;Mésange azurée;Parus cyanus;B;Migrateur occasionnel
+PARIDÉS;Mésange charbonnière;Parus major;A;Nicheur sédentaire Migrateur Hivernant
+SITTIDÉS;Sittelle corse;Sitta whiteheadi;A;Nicheur sédentaire
+SITTIDÉS;Sittelle torchepot;Sitta europaea;A;Nicheur sédentaire Hivernant
+TICHODROMADIDÉS;Tichodrome échelette;Tichodroma muraria;A;Nicheur Migrateur Hivernant
+CERTHIIDÉS;Grimpereau des bois;Certhia familiaris;A;Nicheur sédentaire Migrateur occasionnel
+CERTHIIDÉS;Grimpereau des jardins;Certhia brachydactyla;A;Nicheur sédentaire
+RÉMIZIDÉS;Rémiz penduline;Remiz pendulinus;A;Nicheur rare Migrateur Hivernant
+ORIOLIDÉS;Loriot d'Europe;Oriolus oriolus;A;Nicheur Migrateur
+LANIIDÉS;Pie-grièche isabelle;Lanius isabellinus;A;Migrateur occasionnel
+LANIIDÉS;Pie-grièche écorcheur;Lanius collurio;A;Nicheur Migrateur
+LANIIDÉS;Pie-grièche à poitrine rose;Lanius minor;A;Nicheur rare
+LANIIDÉS;Pie-grièche grise;Lanius excubitor;A;Nicheur sédentaire Migrateur Hivernant
+LANIIDÉS;Pie-grièche méridionale;Lanius meridionalis;A;Nicheur sédentaire
+LANIIDÉS;Pie-grièche à tête rousse;Lanius senator;A;Nicheur Migrateur
+LANIIDÉS;Pie-grièche masquée;Lanius nubicus;A;Migrateur occasionnel
+CORVIDÉS;Geai des chênes;Garrulus glandarius;A;Nicheur sédentaire Migrateur Hivernant
+CORVIDÉS;Pie bavarde;Pica pica;A;Nicheur sédentaire
+CORVIDÉS;Cassenoix moucheté;Nucifraga caryocatactes;A;Nicheur sédentaire Migrateur rare
+CORVIDÉS;Chocard à bec jaune;Pyrrhocorax graculus;A;Nicheur sédentaire
+CORVIDÉS;Crave à bec rouge;Pyrrhocorax pyrrhocorax;A;Nicheur sédentaire
+CORVIDÉS;Choucas des tours;Corvus monedula;A;Nicheur sédentaire Migrateur Hivernant
+CORVIDÉS;Choucas de Daourie;Corvus dauuricus;A;Migrateur occasionnel
+CORVIDÉS;Corbeau freux;Corvus frugilegus;A;Nicheur sédentaire Migrateur Hivernant
+CORVIDÉS;Corneille noire;Corvus corone;A;Nicheur sédentaire Hivernant
+CORVIDÉS;Corneille mantelée *;Corvus corone cornix;A;Nicheur occasionnel Hivernant rare
+CORVIDÉS;Grand Corbeau;Corvus corax;A;Nicheur sédentaire Migrateur occasionnel
+STURNIDÉS;Étourneau sansonnet;Sturnus vulgaris;A;Nicheur sédentaire Migrateur Hivernant
+STURNIDÉS;Étourneau unicolore;Sturnus unicolor;A;Nicheur sédentaire
+STURNIDÉS;Étourneau roselin;Sturnus roseus;A;Migrateur occasionnel Hivernant occasionnel
+PASSÉRIDÉS;Moineau domestique;Passer domesticus;A;Nicheur sédentaire Migrateur Hivernant
+PASSÉRIDÉS;Moineau cisalpin *;Passer domesticus italiae;A;Nicheur sédentaire
+PASSÉRIDÉS;Moineau espagnol;Passer hispaniolensis;A;Nicheur occasionnel Migrateur occasionnel Hivernant occasionnel
+PASSÉRIDÉS;Moineau friquet;Passer montanus;A;Nicheur Migrateur Hivernant
+PASSÉRIDÉS;Moineau soulcie;Petronia petronia;A;Nicheur sédentaire
+PASSÉRIDÉS;Niverolle alpine;Montifringilla nivalis;A;Nicheur sédentaire
+VIRÉONIDÉS;Viréo à oeil rouge;Vireo olivaceus;A;Migrateur occasionnel
+FRINGILLIDÉS;Pinson des arbres;Fringilla coelebs;A;Nicheur sédentaire Migrateur Hivernant
+FRINGILLIDÉS;Pinson du Nord;Fringilla montifringilla;A;Migrateur Hivernant
+FRINGILLIDÉS;Serin cini;Serinus serinus;A;Nicheur Migrateur Hivernant
+FRINGILLIDÉS;Venturon montagnard;Serinus citrinella;A;Nicheur sédentaire Migrateur Hivernant
+FRINGILLIDÉS;Venturon corse *;Serinus (citrinella) corsicana;A;Nicheur sédentaire
+FRINGILLIDÉS;Verdier d'Europe;Carduelis chloris;A;Nicheur sédentaire Migrateur Hivernant
+FRINGILLIDÉS;Chardonneret élégant;Carduelis carduelis;A;Nicheur sédentaire Migrateur Hivernant
+FRINGILLIDÉS;Tarin des aulnes C;arduelis spinus;A;Nicheur Migrateur Hivernant
+FRINGILLIDÉS;Linotte mélodieuse;Carduelis cannabina;A;Nicheur Migrateur Hivernant
+FRINGILLIDÉS;Linotte à bec jaune;Carduelis flavirostris;A;Hivernant rare
+FRINGILLIDÉS;Sizerin flammé;Carduelis flammea;A;Nicheur Migrateur Hivernant
+FRINGILLIDÉS;Sizerin blanchâtre;Carduelis hornemanni;A;Migrateur occasionnel
+FRINGILLIDÉS;Bec-croisé bifascié;Loxia leucoptera;A;Hivernant occasionnel
+FRINGILLIDÉS;Bec-croisé des sapins;Loxia curvirostra;A;Nicheur sédentaire Migrateur Hivernant
+FRINGILLIDÉS;Bec-croisé perroquet;Loxia pytyopsittacus;A;Hivernant occasionnel
+FRINGILLIDÉS;Roselin githagine;Rhodopechys githaginea;A;Migrateur occasionnel
+FRINGILLIDÉS;Roselin cramoisi;Carpodacus erythrinus;A;Nicheur rare Migrateur rare
+FRINGILLIDÉS;Durbec des sapins;Pinicola enucleator;A;Migrateur occasionnel
+FRINGILLIDÉS;Bouvreuil pivoine;Pyrrhula pyrrhula;A;Nicheur sédentaire Migrateur Hivernant
+FRINGILLIDÉS;Grosbec casse-noyaux;Coccothraustes coccothraustes;A;Nicheur sédentaire Migrateur Hivernant
+PARULIDÉS;Paruline à collier;Parula americana;A;Migrateur occasionnel
+PARULIDÉS;Paruline rayée;Dendroica striata;A;Migrateur occasionnel
+PARULIDÉS;Paruline flamboyante;Setophaga ruticilla;A;Migrateur occasionnel
+PARULIDÉS;Paruline des ruisseaux;Seiurus noveboracensis;A;Migrateur occasionnel
+EMBÉRIZIDÉS;Bruant lapon;Calcarius lapponicus;A;Hivernant
+EMBÉRIZIDÉS;Bruant des neiges;Plectrophenax nivalis;A;Hivernant
+EMBÉRIZIDÉS;Bruant à calotte blanche;Emberiza leucocephalos;A;Migrateur occasionnel Hivernant occasionnel
+EMBÉRIZIDÉS;Bruant jaune;Emberiza citrinella;A;Nicheur sédentaire Migrateur Hivernant
+EMBÉRIZIDÉS;Bruant zizi;Emberiza cirlus;A;Nicheur sédentaire Migrateur
+EMBÉRIZIDÉS;Bruant fou;Emberiza cia;A;Nicheur sédentaire Migrateur rare
+EMBÉRIZIDÉS;Bruant ortolan;Emberiza hortulana;A;Nicheur Migrateur
+EMBÉRIZIDÉS;Bruant cendrillard;Emberiza caesia;B;Migrateur occasionnel
+EMBÉRIZIDÉS;Bruant rustique;Emberiza rustica;A;Migrateur occasionnel
+EMBÉRIZIDÉS;Bruant nain;Emberiza pusilla;A;Migrateur occasionnel Hivernant occasionnel
+EMBÉRIZIDÉS;Bruant auréole;Emberiza aureola;A;Migrateur occasionnel
+EMBÉRIZIDÉS;Bruant des roseaux;Emberiza schoeniclus;A;Nicheur Migrateur Hivernant
+EMBÉRIZIDÉS;Bruant mélanocéphale;Emberiza melanocephala;A;Migrateur occasionnel
+EMBÉRIZIDÉS;Bruant proyer;Miliaria calandra;A;Nicheur sédentaire Migrateur Hivernant
+EMBÉRIZIDÉS;Cardinal à poitrine rose;Pheucticus ludovicianus;A;Migrateur occasionnel
+ICTÉRIDÉS;Goglu des prés;Dolichonyx oryzivorus;A;Migrateur occasionnel 
