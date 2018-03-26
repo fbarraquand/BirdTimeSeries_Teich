@@ -20,8 +20,15 @@ oiseaux_Frequents_t=SpeciesL[vec_n_obs_oiseaux_t>75]
 
 data_migration=read.table('/home/cpicoche/Documents/Data_to_treat/TRANSFERT_LIMICOLES/IN/oiseaux.csv',header=TRUE,sep=";")
 Species_migration=as.character(unique(data_migration$Nom_Latin))
+data_migration$TYPE=gsub("Nicheur","Breeding",data_migration$TYPE)
+data_migration$TYPE=gsub("Hivernant","Wintering",data_migration$TYPE)
+data_migration$TYPE=gsub("Migrateur","Migratory",data_migration$TYPE)
+data_migration$TYPE=gsub("occasionnel","occasional",data_migration$TYPE)
+data_migration$TYPE=gsub("sédentaire","sedentary",data_migration$TYPE)
 
-cross_species=intersect(oiseaux_Frequents_t,Species_migration)
+
+cross_species=intersect(SpeciesL,Species_migration)
+#cross_species=intersect(oiseaux_Frequents_t,Species_migration)
 
 species_not_recognized=length(SpeciesL)-length(cross_species)
 
@@ -32,6 +39,9 @@ ty=unique(data_migration$TYPE)
 plop=table(data_migration$TYPE)
 plop=sort(plop[plop>0])
 
-par(mar=c(2,25,1,1))
-barplot(plop,horiz=TRUE,las=1)
+pdf("OUT/known_migratory_birds.pdf")
+par(mar=c(2,18,1,1))
+barplot(plop,horiz=TRUE,las=1,cex.names=0.7)
+dev.off()
+
 
