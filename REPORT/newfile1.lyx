@@ -1,0 +1,659 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\size largest
+About synchrony among birds
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Section
+Methods
+\end_layout
+
+\begin_layout Subsection
+Creation of a monthly snapshot of birds abundance in Teich
+\end_layout
+
+\begin_layout Subsection
+Synchrony: variance-ratio
+\end_layout
+
+\begin_layout Standard
+We follow 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "loreau_species_2008"
+literal "false"
+
+\end_inset
+
+ and first use a community-wide synchrony index, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi_{L}=\frac{\text{var(}C\text{)}}{\left(\sum_{i=1}^{n}\sqrt{\text{var(}P_{i}\text{)}}\right)^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\text{var(}C\text{)}$
+\end_inset
+
+ is the variance of the whole community, made of 
+\begin_inset Formula $n$
+\end_inset
+
+ species, and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\text{var(}P_{i}\text{)}$
+\end_inset
+
+ is the variance of separated populations.
+ This statistic varies between 0 (no synchrony, which can be viewed as compensat
+ion) and 1 (synchrony).
+\end_layout
+
+\begin_layout Standard
+Another index is possible, built by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\text{\ensuremath{\phi_{G}}}=\frac{1}{n}\sum_{i}\text{Corr}(P_{i},\sum_{i\neq j}P_{j})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[DESCRIPTION OF GROSS and comparison of them]
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Being an aggregated value, the interpretation of these statistics can be
+ difficult when the dynamics of the populations are not stationary, different
+ species play separate roles in the community, or when we want to consider
+ different frequencies.
+ Indeed, computing this statistic over a year means computing the common
+ responses of different species to the seasonal variability.
+ On the other hand, computing this statistic for a fixed period of time
+ in the year (a month, or a season), over several years, means computing
+ the common responses to inter-annual variability which can be linked to
+ anthropogenic changes.
+ This does not mean that the first index, over a single year, would not
+ contain part of this information, but it is more likely to be hidden by
+ a more visible and stronger phenomenon such as the season.
+ In addition to environmental variability, the birds' phenology has to be
+ considered as some of them are just passing in the reserve while migrating
+ to the South, some of them stop for breeding and others are there all year-roun
+d.
+ This also changes the way we can interprete the synchrony between birds
+ for months when breeding or migration is common.
+ 
+\end_layout
+
+\begin_layout Standard
+We therefore considered several scales in our analyses: temporal scale was
+ considered by computing synchrony at the monthly, seasonal and yearly scale;
+ taxonomic scale was considered by computing a population-wide index, then
+ using only the most frequent species, and finally considering only separate
+ groups of species with a known ecology (Anas, Calidris, migratory and shorebird
+s).
+ Finally, anthropogenic changes were considered by separating the years
+ before and after 2006, when a change in water management was made.
+ 
+\end_layout
+
+\begin_layout Standard
+We computed these two statistics using the package 'codyn' in R 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "codyn"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Season definition 
+\end_layout
+
+\begin_layout Standard
+There are different ways of computing the season: the first one we used
+ was based on 'official' season (winter beginning in January and ending
+ in March, spring beginning in April, and so on) and the second one we used
+ separated only 'wintering season' and 'breeding season'.
+ The first definition we had of these two seasons was based on the observation
+ of the time series [Here, Christelle, maybe you can add how you did it?].
+ The wintering period was defined as the 5 months between October and February
+ while the breeding period covered te four months between April and July.
+ We wanted to assess the impact of this somehow arbitrary definition on
+ the final result and varied both the number of months in each period and
+ the beginning of the wintering period, keeping the same period of time
+ between wintering and breeding [Fred, we need to consult 'bird specialists'
+ here].
+ 
+\end_layout
+
+\begin_layout Paragraph
+Migratory birds
+\end_layout
+
+\begin_layout Standard
+The migratory status of each bird was assessed based on the data from http://www.
+oiseaux-nature.com/liste_oiseaux_france.html 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+They cite the 'Comité de l'Avifaune française', but I think it's only for
+ the categories A-D, not for the migration.
+ We need to find a 'citable' reference, or to talk to CF about this.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Synchrony: frequency-based analyses
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Subsection
+Description of the data set
+\end_layout
+
+\begin_layout Standard
+[here the most frequent birds, maybe their phylogeny? , also the shorebirds/wade
+rs and their migratory status.
+ Can be directly taken from the first report]
+\end_layout
+
+\begin_layout Subsection
+Synchrony: variance ratio
+\end_layout
+
+\begin_layout Section
+
+\size large
+Synchronie par mois
+\end_layout
+
+\begin_layout Subsection
+
+\size large
+\bar under
+Principe général
+\end_layout
+
+\begin_layout Standard
+La synchonie à partir du package CODYN, elle est calculée à partir d'un
+ dataframe qui inclus les données d'abondances d'un ensemble d'années pour
+ un mois considéré et ceci pour un ensemble d'espèces.
+\end_layout
+
+\begin_layout Standard
+exemple : 
+\end_layout
+
+\begin_layout Standard
+Années : 2006-2016
+\end_layout
+
+\begin_layout Standard
+mois : janvier.
+\end_layout
+
+\begin_layout Standard
+Genre : Anas
+\end_layout
+
+\begin_layout Standard
+La dataframe des abondances de tous les mois de janvier pour les années
+ 2006 à 2016 pour l'ensemble des espèces du genre Anas.
+\end_layout
+
+\begin_layout Subsection
+
+\size large
+\bar under
+Calcul de la synchronie sur toutes les espèces.
+\end_layout
+
+\begin_layout Standard
+- Calcul de la synchronie Loreau et Gross
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte toutes les années
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années à partir de 2006
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années avant 2006.
+\end_layout
+
+\begin_layout Standard
+- On considère toutes les espèces
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../../Data_to_treat/TRANSFERT_LIMICOLES/RAPPORT/t36-Axe1-Teich-Comparaison_synchronie_mois_toutes_especes.pdf
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\size large
+\bar under
+Calcul de la synchonie par mois sur le genre Calidris et Anas
+\end_layout
+
+\begin_layout Standard
+- Calcul de la synchronie Loreau et Gross
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte toutes les années
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années à partir de 2006
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années avant 2006.
+\end_layout
+
+\begin_layout Standard
+- On considères successivement que les espèces du genre Anas, puis du genre
+ Calidris
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t37-Axe1-Teich-SynchronyComparison_byMonth_selectedGenres.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\size large
+\bar under
+Calcul de la synchonie par mois sur les espèces fréquentes uniquement
+\end_layout
+
+\begin_layout Standard
+- Calcul de la synchronie Loreau et Gross
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte toutes les années
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années à partir de 2006
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années avant 2006.
+\end_layout
+
+\begin_layout Standard
+- On considère uniquement les espèces avec au minimun 75 observations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t38-Axe1-Teich-SynchronyComparison_byMonth_frequentSpecies.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\bar under
+Liste des espèces fréquentes considérées (60 espèces):
+\end_layout
+
+\begin_layout Standard
+"Anas platyrhynchos" "Anas acuta" "Anas strepera" "Anas penelope" "Anas
+ clypeata" "Anas crecca" "Aythya ferina" "Aythya fuligula" "Tadorna tadorna"
+ "Fulica atra" "Ardea cinerea" "Phalacrocorax carbo" "Gallinago gallinago"
+ "Anas querquedula" "Cygnus olor" "Ciconia ciconia" "Anser anser" "Egretta
+ garzetta" "Chroicocephalus ridibundus" "Nycticorax nycticorax" "Netta rufina"
+ "Tachybaptus ruficollis" "Charadrius hiaticula" "Numenius arquata" "Tringa
+ erythropus" "Tringa totanus" "Actitis hypoleucos" "Calidris canutus" "Calidris
+ minuta" "Calidris alpina" "Pluvialis squatarola" "Tringa nebularia" "Calidris
+ ferruginea" "Limosa limosa" "Charadrius dubius" "Tringa ochropus" "Bubulcus
+ ibis" "Arenaria interpres" "Numenius phaeopus" "Limosa lapponica" "Philomachus
+ pugnax" "Vanellus vanellus" "Platalea leucorodia" "Recurvirostra avosetta"
+ "Podiceps nigricollis" "Gallinula chloropus" "Podiceps cristatus" "Larus
+ michahellis" "Rallus aquaticus" "Larus argentatus" "Larus marinus" "Himantopus
+ himantopus" "Larus fuscus" "Casmerodius albus" "Falco peregrinus" "Circus
+ aeruginosus" "Threskiornis aethiopicus" "Milvus migrans" "Accipiter nisus"
+ "Alcedo atthis" 
+\end_layout
+
+\begin_layout Subsection
+
+\size large
+\bar under
+Calcul de la synchonie par mois sur les limicoles uniquement
+\end_layout
+
+\begin_layout Standard
+- Calcul de la synchronie Loreau et Gross
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte toutes les années
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années à partir de 2006
+\end_layout
+
+\begin_layout Standard
+- En prenant en compte les années avant 2006.
+\end_layout
+
+\begin_layout Standard
+- On considère uniqument les espèces appartenant au groupe des limicoles.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t39-Axe1-Teich-SynchronyComparison_byMonth_onlywadingBirds.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\bar under
+Liste des limicoles considérés (31 espèces)
+\bar default
+ :
+\end_layout
+
+\begin_layout Standard
+"Recurvirostra avosetta" "Limosa limosa" "Limosa lapponica" "Calidris temminckii
+" "Calidris canutus" "Calidris alba" "Calidris alpina" "Calidris minuta"
+ "Calidris maritima" "Gallinago gallinago" "Tringa flavipes" "Tringa nebularia"
+ "Tringa erythropus" "Tringa ochropus" "Tringa totanus" "Tringa glareola"
+ "Actitis hypoleucos" "Philomachus pugnax" "Numenius arquata" "Numenius
+ phaeopus" "Himantopus himantopus" "Charadrius hiaticula" "Charadrius alexandrin
+us" "Haematopus ostralegus" "Burrhinus oedicnemus" "Charadrius dubius" "Phalarop
+us lobatus" "Pluvialis squatarola" "Pluvialis apricaria" "Arenaria interpres"
+ "Vanellus vanellus" 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "Library"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
