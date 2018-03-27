@@ -257,6 +257,8 @@ We therefore considered several scales in our analyses: temporal scale was
  using only the most frequent species, and finally considering only separate
  groups of species with a known ecology (Anas, Calidris, migratory and shorebird
 s).
+ The taxonomic precision of the dataset was also considered by keeping separate
+ species or grouping them by genera.
  Finally, anthropogenic changes were considered by separating the years
  before and after 2006, when a change in water management was made.
  
@@ -282,8 +284,9 @@ Season definition
 \begin_layout Standard
 There are different ways of computing the season: the first one we used
  was based on 'official' season (winter beginning in January and ending
- in March, spring beginning in April, and so on) and the second one we used
- separated only 'wintering season' and 'breeding season'.
+ in March, spring beginning in April and ending in June, and so on) and
+ the second one we used separated only 'wintering season' and 'breeding
+ season'.
  The first definition we had of these two seasons was based on the observation
  of the time series [Here, Christelle, maybe you can add how you did it?].
  The wintering period was defined as the 5 months between October and February
@@ -303,6 +306,18 @@ Migratory birds
 \begin_layout Standard
 The migratory status of each bird was assessed based on the data from http://www.
 oiseaux-nature.com/liste_oiseaux_france.html.
+ Based on this database, we can identify only 50% of all species, even for
+ frequent species only (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Migrating_species"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  
 \begin_inset Foot
 status open
@@ -311,6 +326,15 @@ status open
 They cite the 'Comité de l'Avifaune française', but I think it's only for
  the categories A-D, not for the migration.
  We need to find a 'citable' reference, or to talk to CF about this.
+ We also have to deal with such definition as 
+\begin_inset Quotes eld
+\end_inset
+
+Nicheur sédentaire Migrateur
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -339,6 +363,33 @@ reference "tab:Latin-and-common-names"
 plural "false"
 caps "false"
 noprefix "false"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I realize here that 
+\begin_inset Quotes eld
+\end_inset
+
+Anas
+\begin_inset Quotes erd
+\end_inset
+
+ tends to be replaced by synonymous genus, won't it be a problem when using
+ our analysis on 
+\begin_inset Quotes eld
+\end_inset
+
+Anas
+\begin_inset Quotes erd
+\end_inset
+
+ only?
+\end_layout
 
 \end_inset
 
@@ -3778,8 +3829,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ecology of all 155 (over 279) species whose migratory status was known (left)
- and 30 (over 60) frequent birds only (right)
+Number of birds in each 'migratory category': 155 (over 279) species were
+ identified (left) and 30 (over 60) frequent birds only (right)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Migrating_species"
@@ -3807,71 +3858,54 @@ name "fig:Migrating_species"
 Synchrony: variance ratio
 \end_layout
 
-\begin_layout Section
-
-\size large
-Synchronie par mois
-\end_layout
-
-\begin_layout Subsection
-
-\size large
-\bar under
-Principe général
+\begin_layout Subsubsection
+Yearly synchrony
 \end_layout
 
 \begin_layout Standard
-La synchonie à partir du package CODYN, elle est calculée à partir d'un
- dataframe qui inclus les données d'abondances d'un ensemble d'années pour
- un mois considéré et ceci pour un ensemble d'espèces.
+We first wanted to test the effect 
 \end_layout
 
 \begin_layout Standard
-exemple : 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t35-Axe1-Teich-Comparaison_synchronie_genre_espece.pdf
+	width 95text%
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-Années : 2006-2016
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-mois : janvier.
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-Genre : Anas
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-La dataframe des abondances de tous les mois de janvier pour les années
- 2006 à 2016 pour l'ensemble des espèces du genre Anas.
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
-
-\size large
-\bar under
-Calcul de la synchronie sur toutes les espèces.
-\end_layout
-
-\begin_layout Standard
-- Calcul de la synchronie Loreau et Gross
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte toutes les années
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années à partir de 2006
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années avant 2006.
-\end_layout
-
-\begin_layout Standard
-- On considère toutes les espèces
+\begin_layout Subsubsection
+Monthly synchrony
 \end_layout
 
 \begin_layout Standard
@@ -3908,34 +3942,6 @@ status open
 
 \end_layout
 
-\begin_layout Subsection
-
-\size large
-\bar under
-Calcul de la synchonie par mois sur le genre Calidris et Anas
-\end_layout
-
-\begin_layout Standard
-- Calcul de la synchronie Loreau et Gross
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte toutes les années
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années à partir de 2006
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années avant 2006.
-\end_layout
-
-\begin_layout Standard
-- On considères successivement que les espèces du genre Anas, puis du genre
- Calidris
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -3947,6 +3953,19 @@ status open
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t37-Axe1-Teich-SynchronyComparison_byMonth_selectedGenres.pdf
 	width 95text%
+	special page=1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t37-Axe1-Teich-SynchronyComparison_byMonth_selectedGenres.pdf
+	width 95text%
+	special page=2
 
 \end_inset
 
@@ -3968,33 +3987,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-
-\size large
-\bar under
-Calcul de la synchonie par mois sur les espèces fréquentes uniquement
-\end_layout
-
-\begin_layout Standard
-- Calcul de la synchronie Loreau et Gross
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte toutes les années
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années à partir de 2006
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années avant 2006.
-\end_layout
-
-\begin_layout Standard
-- On considère uniquement les espèces avec au minimun 75 observations
 \end_layout
 
 \begin_layout Standard
@@ -4032,65 +4024,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset space \space{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-
-\bar under
-Liste des espèces fréquentes considérées (60 espèces):
-\end_layout
-
-\begin_layout Standard
-"Anas platyrhynchos" "Anas acuta" "Anas strepera" "Anas penelope" "Anas
- clypeata" "Anas crecca" "Aythya ferina" "Aythya fuligula" "Tadorna tadorna"
- "Fulica atra" "Ardea cinerea" "Phalacrocorax carbo" "Gallinago gallinago"
- "Anas querquedula" "Cygnus olor" "Ciconia ciconia" "Anser anser" "Egretta
- garzetta" "Chroicocephalus ridibundus" "Nycticorax nycticorax" "Netta rufina"
- "Tachybaptus ruficollis" "Charadrius hiaticula" "Numenius arquata" "Tringa
- erythropus" "Tringa totanus" "Actitis hypoleucos" "Calidris canutus" "Calidris
- minuta" "Calidris alpina" "Pluvialis squatarola" "Tringa nebularia" "Calidris
- ferruginea" "Limosa limosa" "Charadrius dubius" "Tringa ochropus" "Bubulcus
- ibis" "Arenaria interpres" "Numenius phaeopus" "Limosa lapponica" "Philomachus
- pugnax" "Vanellus vanellus" "Platalea leucorodia" "Recurvirostra avosetta"
- "Podiceps nigricollis" "Gallinula chloropus" "Podiceps cristatus" "Larus
- michahellis" "Rallus aquaticus" "Larus argentatus" "Larus marinus" "Himantopus
- himantopus" "Larus fuscus" "Casmerodius albus" "Falco peregrinus" "Circus
- aeruginosus" "Threskiornis aethiopicus" "Milvus migrans" "Accipiter nisus"
- "Alcedo atthis" 
-\end_layout
-
-\begin_layout Subsection
-
-\size large
-\bar under
-Calcul de la synchonie par mois sur les limicoles uniquement
-\end_layout
-
-\begin_layout Standard
-- Calcul de la synchronie Loreau et Gross
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte toutes les années
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années à partir de 2006
-\end_layout
-
-\begin_layout Standard
-- En prenant en compte les années avant 2006.
-\end_layout
-
-\begin_layout Standard
-- On considère uniqument les espèces appartenant au groupe des limicoles.
-\end_layout
-
-\begin_layout Standard
 \align center
 \begin_inset Float figure
 wide false
@@ -4123,26 +4056,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection*
-
-\bar under
-Liste des limicoles considérés (31 espèces)
-\bar default
- :
-\end_layout
-
-\begin_layout Standard
-"Recurvirostra avosetta" "Limosa limosa" "Limosa lapponica" "Calidris temminckii
-" "Calidris canutus" "Calidris alba" "Calidris alpina" "Calidris minuta"
- "Calidris maritima" "Gallinago gallinago" "Tringa flavipes" "Tringa nebularia"
- "Tringa erythropus" "Tringa ochropus" "Tringa totanus" "Tringa glareola"
- "Actitis hypoleucos" "Philomachus pugnax" "Numenius arquata" "Numenius
- phaeopus" "Himantopus himantopus" "Charadrius hiaticula" "Charadrius alexandrin
-us" "Haematopus ostralegus" "Burrhinus oedicnemus" "Charadrius dubius" "Phalarop
-us lobatus" "Pluvialis squatarola" "Pluvialis apricaria" "Arenaria interpres"
- "Vanellus vanellus" 
 \end_layout
 
 \begin_layout Standard
