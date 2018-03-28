@@ -3,7 +3,7 @@
 
 library("codyn")
 library("lubridate")
-#rm(list=ls())
+rm(list=ls())
 graphics.off()
 
 ##################################################################################
@@ -29,10 +29,15 @@ vec_n_obs_oiseaux_t=rep(0,length(SpeciesL))
 for (i in 1:length(SpeciesL)){
   vec_n_obs_oiseaux_t[i]=sum(as.character(DBt$Nom_latin)==SpeciesL[i],na.rm = TRUE)
 }
-oiseaux_Frequents_t=SpeciesL[vec_n_obs_oiseaux_t>20] #125/279
-oiseaux_Frequents_t=SpeciesL[vec_n_obs_oiseaux_t>50] #75/279
 oiseaux_Frequents_t=SpeciesL[vec_n_obs_oiseaux_t>75] #60/279
-oiseaux_Frequents_t_F = SpeciesF[vec_n_obs_oiseaux_t>75] #60/279 #même chose mais pour les noms en français.
+
+limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidris temminckii","Calidris canutus",
+              "Calidris alba","Calidris alpina","Calidris minuta","Calidris maritima" ,"Gallinago gallinago",
+              "Tringa flavipes","Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
+              "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
+              "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
+              "Burrhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
+              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
 
 #############################################################################
 ##Définition des saisons
@@ -41,13 +46,13 @@ spring = c(4,5,6)
 summer = c(7,8,9)
 autumn = c(10,11,12)
 
-Hivernage = c(10,11,12,1,2)
-Nichage   = c(4,5,6,7)
+Hivernage = c(11,12,1,2)
+Nichage   = c(5,6,7,8)
 
 #Two ways of defining values per season : mean abundance or max abundance
 #We can also use the three or fGour series as replicates!
 
-sp=oiseaux_Frequents_t
+sp=limicoles
 #sp=SpeciesL
 yy=unique(year(DBt$Date))
 DBt$Nombre=as.numeric(DBt$Nombre)
@@ -66,27 +71,27 @@ for (dd in 1:length(DBt$Date)){
 	if(length(DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])>0){
 	#Season
 	if(mois>0&mois<4){
-		array_mean_seasonal[s,"Winter",y]=array_mean_seasonal[s,"Winter",y]+1/3*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
+		array_mean_seasonal[s,"Winter",y]=array_mean_seasonal[s,"Winter",y]+1/length(winter)*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
 		array_max_seasonal[s,"Winter",y]=max(array_max_seasonal[s,"Winter",y],DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])
 	}else if(mois>3&mois<7){
-		array_mean_seasonal[s,"Spring",y]=array_mean_seasonal[s,"Spring",y]+1/3*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
+		array_mean_seasonal[s,"Spring",y]=array_mean_seasonal[s,"Spring",y]+1/length(spring)*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
 		array_max_seasonal[s,"Spring",y]=max(array_max_seasonal[s,"Spring",y],DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])
 	}else if (mois>6&mois<10){
-		array_mean_seasonal[s,"Summer",y]=array_mean_seasonal[s,"Summer",y]+1/3*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
+		array_mean_seasonal[s,"Summer",y]=array_mean_seasonal[s,"Summer",y]+1/length(summer)*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
 		array_max_seasonal[s,"Summer",y]=max(array_max_seasonal[s,"Summer",y],DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])
 	}else{
-		array_mean_seasonal[s,"Autumn",y]=array_mean_seasonal[s,"Autumn",y]+1/3*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
+		array_mean_seasonal[s,"Autumn",y]=array_mean_seasonal[s,"Autumn",y]+1/length(autumn)*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
 		array_max_seasonal[s,"Autumn",y]=max(array_max_seasonal[s,"Autumn",y],DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])
 	}
 	#Wintering
-	if(mois>3&mois<8){
-		array_mean_hivnich[s,"Breeding",y]=array_mean_hivnich[s,"Breeding",y]+1/4*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
+	if(mois>4&mois<9){
+		array_mean_hivnich[s,"Breeding",y]=array_mean_hivnich[s,"Breeding",y]+1/length(Nichage)*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
 		array_max_hivnich[s,"Breeding",y]=max(array_max_hivnich[s,"Breeding",y],DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])
-	}else if(mois>9){
-		array_mean_hivnich[s,"Wintering",as.character(as.integer(y)+1)]=array_mean_hivnich[s,"Wintering",as.character(as.integer(y)+1)]+1/5*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
+	}else if(mois>10){
+		array_mean_hivnich[s,"Wintering",as.character(as.integer(y)+1)]=array_mean_hivnich[s,"Wintering",as.character(as.integer(y)+1)]+1/length(Hivernage)*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
 		array_max_hivnich[s,"Wintering",as.character(as.integer(y)+1)]=max(array_max_hivnich[s,"Wintering",as.character(as.integer(y)+1)],DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])
 	}else if(mois>0&mois<3){
-		array_mean_hivnich[s,"Wintering",y]=array_mean_hivnich[s,"Wintering",y]+1/5*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
+		array_mean_hivnich[s,"Wintering",y]=array_mean_hivnich[s,"Wintering",y]+1/length(Hivernage)*DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s]
 		array_max_hivnich[s,"Wintering",y]=max(array_max_hivnich[s,"Wintering",y],DBt$Nombre[DBt$Date==d&DBt$Nom_latin==s])
 	}
 	}
@@ -94,8 +99,8 @@ for (dd in 1:length(DBt$Date)){
 }
 
 #}#1==0
-array_tmp_seasonal=array_mean_seasonal
-array_tmp_hivnich=array_mean_hivnich
+array_tmp_seasonal=array_max_seasonal
+array_tmp_hivnich=array_max_hivnich
 
 sp_data_frame=c()
 abundance_winter=c()
@@ -271,7 +276,7 @@ swintering_post_2006=synchrony(wintering_post_2006,time.var="dates",species.var=
 sbreeding_post_2006=synchrony(breeding_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_nichage",metric=amethod) 
 
 #Bar plot grouping per season
-pdf(paste("OUT/seasonal_synchrony_",amethod,"_frequent.pdf",sep=""),width=16)
+pdf(paste("OUT/seasonal_synchrony_",amethod,"_limicoles_max.pdf",sep=""),width=16)
 data=matrix(NA,nrow=3,ncol=4)
 colnames(data)=c("Winter","Spring","Summer","Autumn")
 rownames(data)=c("All","Pre 2006","Post 2006")
@@ -283,10 +288,11 @@ par(mfrow=c(1,2))
 barplot(data,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data),args.legend=list(x='topleft',bty="n"),ylim=c(0,0.65))
 barplot(t(data),col=c("Lightblue","Green","Red","Orange"),border="white",beside=T,legend=colnames(data),args.legend=list(x='topleft',bty="n"),ylim=c(0,0.65))
 dev.off()
+data_freq_season4_Loreau=data
 
-pdf(paste("OUT/seasonal2_synchrony_",amethod,"_frequent.pdf",sep=""),width=16)
+pdf(paste("OUT/seasonal2_synchrony_",amethod,"_limicoles_same_length_winteringbreeding_max.pdf",sep=""),width=16)
 data=matrix(NA,nrow=3,ncol=2)
-colnames(data)=c("Wintering","Breeding")
+colnames(data)=c("Cold season","Warm season")
 rownames(data)=c("All","Pre 2006","Post 2006")
 data[,1]=c(swintering_all,swintering_pre_2006,swintering_post_2006)
 data[,2]=c(sbreeding_all,sbreeding_pre_2006,sbreeding_post_2006)
@@ -295,3 +301,58 @@ barplot(data,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legen
 barplot(t(data),col=c("Lightblue","Green"),border="white",beside=T,legend=colnames(data),args.legend=list(x='topleft',bty="n"),ylim=c(0,0.65))
 dev.off()
 
+data_freq_season2_Loreau=data
+
+
+amethod="Gross"
+swinter_all=synchrony(winter_all,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_winter",metric=amethod)
+sspring_all=synchrony(spring_all,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_spring",metric=amethod)
+ssummer_all=synchrony(summer_all,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_summer",metric=amethod)
+sautumn_all=synchrony(autumn_all,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_autumn",metric=amethod)
+swintering_all=synchrony(wintering_all,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_hivernage",metric=amethod)
+sbreeding_all=synchrony(breeding_all,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_nichage",metric=amethod)
+
+swinter_pre_2006=synchrony(winter_pre_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_winter",metric=amethod)
+sspring_pre_2006=synchrony(spring_pre_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_spring",metric=amethod)
+ssummer_pre_2006=synchrony(summer_pre_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_summer",metric=amethod)
+sautumn_pre_2006=synchrony(autumn_pre_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_autumn",metric=amethod)
+swintering_pre_2006=synchrony(wintering_pre_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_hivernage",metric=amethod)
+sbreeding_pre_2006=synchrony(breeding_pre_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_nichage",metric=amethod)
+
+swinter_post_2006=synchrony(winter_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_winter",metric=amethod)
+sspring_post_2006=synchrony(spring_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_spring",metric=amethod)
+ssummer_post_2006=synchrony(summer_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_summer",metric=amethod)
+sautumn_post_2006=synchrony(autumn_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_autumn",metric=amethod)
+swintering_post_2006=synchrony(wintering_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_hivernage",metric=amethod)
+sbreeding_post_2006=synchrony(breeding_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_nichage",metric=amethod)
+
+#Bar plot grouping per season
+pdf(paste("OUT/seasonal_synchrony_",amethod,"_limicoles_max.pdf",sep=""),width=16)
+data=matrix(NA,nrow=3,ncol=4)
+colnames(data)=c("Winter","Spring","Summer","Autumn")
+rownames(data)=c("All","Pre 2006","Post 2006")
+data[,1]=c(swinter_all,swinter_pre_2006,swinter_post_2006)
+data[,2]=c(sspring_all,sspring_pre_2006,sspring_post_2006)
+data[,3]=c(ssummer_all,ssummer_pre_2006,ssummer_post_2006)
+data[,4]=c(sautumn_all,sautumn_pre_2006,sautumn_post_2006)
+par(mfrow=c(1,2))
+barplot(data,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data),args.legend=list(x='topleft',bty="n"),ylim=c(0,0.65))
+barplot(t(data),col=c("Lightblue","Green","Red","Orange"),border="white",beside=T,legend=colnames(data),args.legend=list(x='topleft',bty="n"),ylim=c(0,0.65))
+dev.off()
+data_freq_season4_Gross=data
+
+pdf(paste("OUT/seasonal2_synchrony_",amethod,"_limicoles_same_length_winteringbreeding_max.pdf",sep=""),width=16)
+data=matrix(NA,nrow=3,ncol=2)
+colnames(data)=c("Cold season","Warm season")
+rownames(data)=c("All","Pre 2006","Post 2006")
+data[,1]=c(swintering_all,swintering_pre_2006,swintering_post_2006)
+data[,2]=c(sbreeding_all,sbreeding_pre_2006,sbreeding_post_2006)
+par(mfrow=c(1,2))
+barplot(data,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data),args.legend=list(x='topleft',bty="n"),ylim=c(0,0.65))
+barplot(t(data),col=c("Lightblue","Green"),border="white",beside=T,legend=colnames(data),args.legend=list(x='topleft',bty="n"),ylim=c(0,0.65))
+dev.off()
+
+data_freq_season2_Gross=data
+
+save(data_freq_season2_Loreau,data_freq_season4_Loreau,data_freq_season2_Gross,data_freq_season4_Gross,file="indices_limicoles_using_max_values.RData")
+save(winter_all,spring_all,summer_all,autumn_all,wintering_all,breeding_all,winter_pre_2006,spring_pre_2006,summer_pre_2006,autumn_pre_2006,wintering_pre_2006,breeding_pre_2006,winter_post_2006,spring_post_2006,summer_post_2006,autumn_post_2006,wintering_post_2006,breeding_post_2006,file="data_limicoles_using_max_values.RData")

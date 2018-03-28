@@ -31,6 +31,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -3953,6 +3954,7 @@ The index developped by Gross is more stable and its values remain between
 \begin_layout Standard
 As differences remained small, we kept the species level in the following
  analyses.
+ Frequent species and the whole community have a similar pattern.
  
 \end_layout
 
@@ -3986,13 +3988,28 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t21-Axe1-Teich-Synchronie_par_annee_espèces_fréquence.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of the synchrony of the whole community over years, according
- to Loreau's (red and orange) and Gross' (blue) indices and according to
- the taxonomic level (the species-level is indicated by triangles and the
- genus-level is indicated by dots).
+Evolution of the synchrony of the whole community (top) and frequent birds
+ only (bottom) over years, according to Loreau's (red and orange) and Gross'
+ (blue) indices and according to the taxonomic level (the species-level
+ is indicated by triangles and the genus-level is indicated by dots).
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4230,7 +4247,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal_synchrony_Loreau_frequent.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t40-Axe1-Teich-Comparaison_synchronie_4saisons_toutes_especes.pdf
 	width 95text%
 
 \end_inset
@@ -4241,12 +4258,12 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal_synchrony_Gross_frequent.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal_synchrony_Loreau_frequent.pdf
 	width 95text%
 
 \end_inset
 
->
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4254,7 +4271,9 @@ status open
 
 \begin_layout Plain Layout
 Comparison of Loreau (top) and Gross (bottom) indices for frequent species
- averaged over seasons
+ averaged over seasons, considering average observed values (top, so-called
+ 'first version' in the Method section) or average values including missing
+ months (bottom, so-called 'second version' in the Method section)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Season_v2_LG_frequent"
@@ -4280,6 +4299,60 @@ name "fig:Season_v2_LG_frequent"
 
 \begin_layout Paragraph
 2 seasons
+\end_layout
+
+\begin_layout Standard
+We present the synchrony indices as a function of the wintering/breeding
+ (or cold/warm) seasons on Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison_of_season"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ If we consider only frequent birds or waders, relative patterns do not
+ change for both indices (ie, the summer synchrony is higher than the winter
+ synchrony for all years and years before 2006, but it's the contrary for
+ years after 2006, with Loreau index only).
+ The absence of negative values for Gross indices should be noticed: according
+ to this index, the small values of synchrony that we observe can be attributed
+ to independent dynamics, but not to compensation.
+ 
+\end_layout
+
+\begin_layout Standard
+The lack of difference in relative indices, due to the beginning or the
+ duration of the two seasons considered encourages us to focus on one definition
+ only of the two different seasons, following our first observations.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+BUT the first definition we proposed had different length: the wintering
+ period lasted 5 months and the breeding season lasted 4 months.
+ Differences are small, see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Season2_v2_LG_frequent"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4318,6 +4391,13 @@ status open
 \begin_layout Plain Layout
 Comparison of indices for Loreau (top) and Gross (bottom) with different
  definition of the season
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparison_of_season"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4340,7 +4420,14 @@ status open
 \align center
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal2_synchrony_Loreau_frequent.pdf
-	width 95text%
+	width 47text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal2_synchrony_Loreau_freq_same_length_winteringbreeding.pdf
+	width 46text%
 
 \end_inset
 
@@ -4351,11 +4438,18 @@ status open
 \align center
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal2_synchrony_Gross_frequent.pdf
-	width 95text%
+	width 47text%
 
 \end_inset
 
->
+ 
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal2_synchrony_Gross_frequ_same_length_winteringbreeding.pdf
+	width 47text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4363,8 +4457,11 @@ status open
 
 \begin_layout Plain Layout
 Comparison of Loreau (top) and Gross (bottom) indices for frequent species
- averaged over wintering (October to February) and breeding (April to July)
- season
+ averaged over cold (October to February, left ; November to February, right)
+ and warm (April to July, left ; May to August, right) seasons.
+ The two columns oppose a case where seasons have been defined by pre-examining
+ the time series, and have different durations (left) while the second one
+ shows seasons with the same duration (right)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Season2_v2_LG_frequent"
@@ -4384,7 +4481,7 @@ name "fig:Season2_v2_LG_frequent"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 To do?
 \end_layout
 
@@ -4399,6 +4496,29 @@ Could we test for specific values of synchronys, whether we want to estimate
 \begin_layout Standard
 For now, we don't mention it, but we thought of using maximum abundance
  over a season instead of using the mean abundance.
+\end_layout
+
+\begin_layout Standard
+We need to choose: 
+\end_layout
+
+\begin_layout Itemize
+the taxonomic level.
+ For now, we use the species level, but this should be confirmed
+\end_layout
+
+\begin_layout Itemize
+the definition of the mean (see above).
+ 
+\end_layout
+
+\begin_layout Itemize
+the definition of the season (it also depends whether we want to test 'wintering
+' or 'cold season') : lengths, beginning, separation between months
+\end_layout
+
+\begin_layout Itemize
+do we always separate between before and after 2006 ?
 \end_layout
 
 \begin_layout Standard
