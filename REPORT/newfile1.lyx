@@ -3936,8 +3936,6 @@ Tried to simplify this to have a better idea of what was going on.
 The index developped by Gross is more stable and its values remain between
  -0.1 and 0.3, except for 2016 when we can observe a sharp increase at the
  genus-level.
- We could interprete such values as the fact that populations tend to be
- independent.
  Contrary to what we observe with 
 \begin_inset Formula $\phi$
 \end_inset
@@ -3949,6 +3947,24 @@ The index developped by Gross is more stable and its values remain between
 .
  During the first period, the species level leads to higher values, but
  after 2005/2006, the genus level has higher values (except in 2009).
+ 
+\end_layout
+
+\begin_layout Standard
+As differences remained small, we kept the species level in the following
+ analyses.
+ 
+\end_layout
+
+\begin_layout Standard
+We could interprete the small values observed after 1987 as populations
+ being independent (according to Gross) or at least, asynchronous (according
+ to Loreau).
+ This may indicate that bird dynamics are not too sensitive to seasonal
+ changes, or that their phenology varies according to this environmental
+ fluctuations.
+ The first hypothesis makes sense if we consider that most birds have a
+ lifetime exceeding the year.
  
 \end_layout
 
@@ -4006,6 +4022,49 @@ Monthly synchrony
 \end_layout
 
 \begin_layout Standard
+We compared the monthly synchrony indices for all species and for frequent
+ species only (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Monthly_all_species_v1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Patterns are similar but more pronounced when using frequent species only.
+ Focusing on this second analysis and on Loreau's index, we can see that
+ the changes in 2006 made a difference in bird dynamics: for the period
+ before 2006, birds tended to be more synchronous during the warm months
+ whereas after 2006, they tend to desynchronize during the summer.
+ On the contrary, Gross' index shows the same pattern for all years, with
+ a change a synchrony from April to September.
+ 
+\end_layout
+
+\begin_layout Standard
+This can be linked to summer migration or to breeding(???).
+\end_layout
+
+\begin_layout Standard
+[We/I need more details on Calidris and Anas phenology to interprete Fig
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Montly_AnasCalidris_v1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -4015,11 +4074,15 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../../../Data_to_treat/TRANSFERT_LIMICOLES/RAPPORT/t36-Axe1-Teich-Comparaison_synchronie_mois_toutes_especes.pdf
-	width 90text%
+	width 95text%
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t38-Axe1-Teich-SynchronyComparison_byMonth_frequentSpecies.pdf
 	width 95text%
@@ -4152,6 +4215,190 @@ name "fig:Montly_waders_v1"
 
 \begin_layout Subsubsection
 Seasonal synchrony
+\end_layout
+
+\begin_layout Paragraph
+4 seasons
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal_synchrony_Loreau_frequent.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal_synchrony_Gross_frequent.pdf
+	width 95text%
+
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of Loreau (top) and Gross (bottom) indices for frequent species
+ averaged over seasons
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Season_v2_LG_frequent"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+2 seasons
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T43-Axe1-Teich-Synchrony_Season_Comparison_Tab_synchronySaison.pdf
+	width 95text%
+	special page=1
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T43-Axe1-Teich-Synchrony_Season_Comparison_Tab_synchronySaison.pdf
+	width 95text%
+	special page=2
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of indices for Loreau (top) and Gross (bottom) with different
+ definition of the season
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal2_synchrony_Loreau_frequent.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/seasonal2_synchrony_Gross_frequent.pdf
+	width 95text%
+
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of Loreau (top) and Gross (bottom) indices for frequent species
+ averaged over wintering (October to February) and breeding (April to July)
+ season
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Season2_v2_LG_frequent"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+To do?
+\end_layout
+
+\begin_layout Standard
+Could we test for specific values of synchronys, whether we want to estimate
+ if birds are really synchronous (randomizing all values and computing the
+ corresponding synchrony to have a null distribution) ; or to test if the
+ months between April and September are really different (-> difference
+ of distribution, then ?)
+\end_layout
+
+\begin_layout Standard
+For now, we don't mention it, but we thought of using maximum abundance
+ over a season instead of using the mean abundance.
 \end_layout
 
 \begin_layout Standard
