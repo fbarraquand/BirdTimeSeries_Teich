@@ -256,8 +256,29 @@ We therefore considered several scales in our analyses: temporal scale was
  considered by computing synchrony at the monthly, seasonal and yearly scale;
  taxonomic scale was considered by computing a population-wide index, then
  using only the most frequent species, and finally considering only separate
- groups of species with a known ecology (Anas, Calidris, migratory and shorebird
-s).
+ groups of species with a known ecology (9 species of 
+\shape italic
+Anas
+\shape default
+, 12 species of 
+\shape italic
+Calidris
+\shape default
+, and waders
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We should also consider the migratory birds, but this means we have to know
+ when and where they migrate: I assume that we both have birds coming from
+ the North to spend the winter here and birds coming from the South in the
+ summer...
+ Right?
+\end_layout
+
+\end_inset
+
+).
  The taxonomic precision of the dataset was also considered by keeping separate
  species or grouping them by genera.
  Finally, anthropogenic changes were considered by separating the years
@@ -314,7 +335,7 @@ There are different ways of computing the season: the first one we used
  We wanted to assess the impact of this somehow arbitrary definition on
  the final result and varied both the number of months in each period and
  the beginning of the wintering period, keeping the same period of time
- between wintering and breeding [Fred, we need to consult 'bird specialists'
+ between wintering and breeding [Fred, we need to consult ornithologists
  here].
  
 \end_layout
@@ -327,7 +348,8 @@ Migratory birds
 The migratory status of each bird was assessed based on the data from http://www.
 oiseaux-nature.com/liste_oiseaux_france.html.
  Based on this database, we can identify only 50% of all species, even for
- frequent species only (Table 
+ frequent species only (see Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Migrating_species"
@@ -366,6 +388,13 @@ Nicheur sédentaire Migrateur
 Synchrony: frequency-based analyses
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Results
 \end_layout
@@ -399,7 +428,7 @@ Anas
 \begin_inset Quotes erd
 \end_inset
 
- tends to be replaced by synonymous genus, won't it be a problem when using
+ tends to be replaced by synonymous genera, won't it be a problem when using
  our analysis on 
 \begin_inset Quotes eld
 \end_inset
@@ -3874,6 +3903,13 @@ name "fig:Migrating_species"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Synchrony: variance ratio
 \end_layout
@@ -4034,6 +4070,13 @@ name "fig:Genus_Species_synchrony"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Monthly synchrony
 \end_layout
@@ -4063,25 +4106,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-This can be linked to summer migration or to breeding(???).
-\end_layout
-
-\begin_layout Standard
-[We/I need more details on Calidris and Anas phenology to interprete Fig
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Montly_AnasCalidris_v1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-]
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -4091,7 +4115,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../../../Data_to_treat/TRANSFERT_LIMICOLES/RAPPORT/t36-Axe1-Teich-Comparaison_synchronie_mois_toutes_especes.pdf
-	width 95text%
+	width 85text%
 
 \end_inset
 
@@ -4102,7 +4126,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t38-Axe1-Teich-SynchronyComparison_byMonth_frequentSpecies.pdf
-	width 95text%
+	width 85text%
 
 \end_inset
 
@@ -4132,6 +4156,47 @@ name "fig:Monthly_all_species_v1"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Focusing on Loreau's index, synchrony among genera or within the wader's
+ functional group is generally higher than among the whole community, regardless
+ of the number of species included (Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Montly_AnasCalidris_v1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Montly_waders_v1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\shape italic
+Calidris
+\shape default
+ spp are especially synchronized throughout the year.
+ On the contrary, waders tend to desynchronize during the warmer months.
+ 
+\end_layout
+
+\begin_layout Standard
+Contrary to Loreau's index, Gross's index remains in the same, low range
+ for frequent birds and for smaller groups.
+ It seems more sensitive to the change made in 2006 for waders in the summer.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4210,7 +4275,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolutionf of monthly synchrony the waders' functional group
+Evolutionf of monthly synchrony within the waders' functional group
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Montly_waders_v1"
@@ -4230,12 +4295,44 @@ name "fig:Montly_waders_v1"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Seasonal synchrony
 \end_layout
 
 \begin_layout Paragraph
-4 seasons
+Comparing methods
+\end_layout
+
+\begin_layout Standard
+In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Synchrony_taxonomic_level"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we compare the values of the different synchrony indices for different
+ groups of birds.
+ As before, Loreau's statistic is higher for smaller groups than for all
+ frequent birds.
+ Calidris spp.
+ form the most stable and most synchronous groups whereas the Anas genus
+ is not necessarily more synchronous than all waders (which could be expected
+ for phylogeny reasons [?]).
+ The index values do not vary much from one season to another, or from one
+ classification to another.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4247,7 +4344,182 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t40-Axe1-Teich-Comparaison_synchronie_4saisons_toutes_especes.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_taxonomic_level_4seasons.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_taxonomic_level_2seasons.pdf
+	width 44text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of synchronys in different bird communities, computed with Loreau
+ and Gross methods, over 2 or 4 seasons
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Synchrony_taxonomic_level"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We also compared the statistics computed on average or maximum abundances
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Synchrony_mean_max"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Patterns within different periods (before and after 2006, or among seasons)
+ remain globally the same, but using the maximum values tends to under-estimate
+ the synchrony values, especially for Gross's index.
+ This observation does not hold for the years following 2006.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_meanmax_level_4seasons.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_meanmax_level_2seasons.pdf
+	width 44text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of synchronys among frequent birds only, computed with Loreau
+ and Gross methods, taking the mean or maximum abundance, over 2 or 4 seasons
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Synchrony_mean_max"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4 seasons
+\end_layout
+
+\begin_layout Standard
+Defining the mean abundance as the average observed values consistently
+ leads to smaller values than using all months and possible missing observations
+ as 0 (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Season_v2_LG_frequent"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ This difference in averaging also leads to different patterns in the synchrony
+ evolution with season.
+ There is however a common feature as synchrony computed with all years
+ is always smaller than two different synchronys with a threshold around
+ 2006
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I feel like we need to choose a method before commenting on the differences
+ between the seasons, as the conclusions would not be the same
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t40-Axe1-Teich-Comparison_synchrony_4seasons_all_species.pdf
 	width 95text%
 
 \end_inset
@@ -4270,10 +4542,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Comparison of Loreau (top) and Gross (bottom) indices for frequent species
- averaged over seasons, considering average observed values (top, so-called
- 'first version' in the Method section) or average values including missing
- months (bottom, so-called 'second version' in the Method section)
+Comparison of Loreau indices for frequent species averaged over seasons,
+ considering average observed values (top, so-called 'first version' in
+ the Method section) or average values including missing months (bottom,
+ so-called 'second version' in the Method section)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Season_v2_LG_frequent"
@@ -4297,6 +4569,13 @@ name "fig:Season_v2_LG_frequent"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 2 seasons
 \end_layout
@@ -4315,10 +4594,10 @@ noprefix "false"
 \end_inset
 
 .
- If we consider only frequent birds or waders, relative patterns do not
- change for both indices (ie, the summer synchrony is higher than the winter
- synchrony for all years and years before 2006, but it's the contrary for
- years after 2006, with Loreau index only).
+ If we consider only frequent birds, relative patterns do not change for
+ the two indices (ie, the summer synchrony is higher than the winter synchrony
+ for all years and years before 2006, but it's the contrary for years after
+ 2006, with Loreau index only).
  The absence of negative values for Gross indices should be noticed: according
  to this index, the small values of synchrony that we observe can be attributed
  to independent dynamics, but not to compensation.
@@ -4364,7 +4643,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T43-Axe1-Teich-Synchrony_Season_Comparison_Tab_synchronySaison.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T43-Axe1-Teich-Synchrony_Season_Comparison_Tab_synchronySaison_frequent_birds.pdf
 	width 95text%
 	special page=1
 
@@ -4376,7 +4655,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T43-Axe1-Teich-Synchrony_Season_Comparison_Tab_synchronySaison.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T43-Axe1-Teich-Synchrony_Season_Comparison_Tab_synchronySaison_frequent_birds.pdf
 	width 95text%
 	special page=2
 
@@ -4491,11 +4770,6 @@ Could we test for specific values of synchronys, whether we want to estimate
  corresponding synchrony to have a null distribution) ; or to test if the
  months between April and September are really different (-> difference
  of distribution, then ?)
-\end_layout
-
-\begin_layout Standard
-For now, we don't mention it, but we thought of using maximum abundance
- over a season instead of using the mean abundance.
 \end_layout
 
 \begin_layout Standard

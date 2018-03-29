@@ -1,3 +1,4 @@
+# Script by CPicoche 2018
 # Coding from the first script by C. Aluome and F. Barraquand to analyze data after creating the monthly snapshot of bird abundance. 
 #Focusing on seasonal values
 
@@ -52,7 +53,7 @@ Nichage   = c(5,6,7,8)
 #Two ways of defining values per season : mean abundance or max abundance
 #We can also use the three or fGour series as replicates!
 
-sp=limicoles
+sp=SpeciesL[grep("Calidris",SpeciesL)]
 #sp=SpeciesL
 yy=unique(year(DBt$Date))
 DBt$Nombre=as.numeric(DBt$Nombre)
@@ -276,7 +277,7 @@ swintering_post_2006=synchrony(wintering_post_2006,time.var="dates",species.var=
 sbreeding_post_2006=synchrony(breeding_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_nichage",metric=amethod) 
 
 #Bar plot grouping per season
-pdf(paste("OUT/seasonal_synchrony_",amethod,"_limicoles_max.pdf",sep=""),width=16)
+pdf(paste("OUT/seasonal_synchrony_",amethod,"_Calidris_max.pdf",sep=""),width=16)
 data=matrix(NA,nrow=3,ncol=4)
 colnames(data)=c("Winter","Spring","Summer","Autumn")
 rownames(data)=c("All","Pre 2006","Post 2006")
@@ -290,7 +291,7 @@ barplot(t(data),col=c("Lightblue","Green","Red","Orange"),border="white",beside=
 dev.off()
 data_freq_season4_Loreau=data
 
-pdf(paste("OUT/seasonal2_synchrony_",amethod,"_limicoles_same_length_winteringbreeding_max.pdf",sep=""),width=16)
+pdf(paste("OUT/seasonal2_synchrony_",amethod,"_Calidris_same_length_winteringbreeding_max.pdf",sep=""),width=16)
 data=matrix(NA,nrow=3,ncol=2)
 colnames(data)=c("Cold season","Warm season")
 rownames(data)=c("All","Pre 2006","Post 2006")
@@ -327,7 +328,7 @@ swintering_post_2006=synchrony(wintering_post_2006,time.var="dates",species.var=
 sbreeding_post_2006=synchrony(breeding_post_2006,time.var="dates",species.var="sp_data_frame",abundance.var="abundance_nichage",metric=amethod)
 
 #Bar plot grouping per season
-pdf(paste("OUT/seasonal_synchrony_",amethod,"_limicoles_max.pdf",sep=""),width=16)
+pdf(paste("OUT/seasonal_synchrony_",amethod,"_Calidris_max.pdf",sep=""),width=16)
 data=matrix(NA,nrow=3,ncol=4)
 colnames(data)=c("Winter","Spring","Summer","Autumn")
 rownames(data)=c("All","Pre 2006","Post 2006")
@@ -341,7 +342,7 @@ barplot(t(data),col=c("Lightblue","Green","Red","Orange"),border="white",beside=
 dev.off()
 data_freq_season4_Gross=data
 
-pdf(paste("OUT/seasonal2_synchrony_",amethod,"_limicoles_same_length_winteringbreeding_max.pdf",sep=""),width=16)
+pdf(paste("OUT/seasonal2_synchrony_",amethod,"_Calidris_same_length_winteringbreeding_max.pdf",sep=""),width=16)
 data=matrix(NA,nrow=3,ncol=2)
 colnames(data)=c("Cold season","Warm season")
 rownames(data)=c("All","Pre 2006","Post 2006")
@@ -354,5 +355,5 @@ dev.off()
 
 data_freq_season2_Gross=data
 
-save(data_freq_season2_Loreau,data_freq_season4_Loreau,data_freq_season2_Gross,data_freq_season4_Gross,file="indices_limicoles_using_max_values.RData")
-save(winter_all,spring_all,summer_all,autumn_all,wintering_all,breeding_all,winter_pre_2006,spring_pre_2006,summer_pre_2006,autumn_pre_2006,wintering_pre_2006,breeding_pre_2006,winter_post_2006,spring_post_2006,summer_post_2006,autumn_post_2006,wintering_post_2006,breeding_post_2006,file="data_limicoles_using_max_values.RData")
+save(data_freq_season2_Loreau,data_freq_season4_Loreau,data_freq_season2_Gross,data_freq_season4_Gross,file="indices_Calidris_using_max_values.RData")
+save(winter_all,spring_all,summer_all,autumn_all,wintering_all,breeding_all,winter_pre_2006,spring_pre_2006,summer_pre_2006,autumn_pre_2006,wintering_pre_2006,breeding_pre_2006,winter_post_2006,spring_post_2006,summer_post_2006,autumn_post_2006,wintering_post_2006,breeding_post_2006,file="data_Calidrisi_using_max_values.RData")
