@@ -8,7 +8,8 @@ library ("RColorBrewer") #pour la génération automatique de couleur
 library("corrplot")
 library("lubridate")
 library("stringr")
-
+library("codyn")
+library ("pracma")
 DIRECTORY_ORIGIN = "/home/caluome/git/BirdTimeSeries_Teich/"
 setwd(paste(DIRECTORY_ORIGIN,"IN/",sep=""))
 options(nwarnings = 300) #nb de messages de warnings conservés
@@ -18,7 +19,9 @@ options(nwarnings = 300) #nb de messages de warnings conservés
 ##################################################################################
 # -- importation des données du Teich
 #DBt<-read.csv(file="/home/caluome/Documents/DATA/DATA/le_Teich/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
-DBt<-read.csv(file="DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
+#DBt<-read.csv(file="DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
+DBt<-read.csv(file="DBWithMonthlyPhotoTeich_maxsum.csv",header=TRUE,sep=",",dec=".")
+
 DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)")
 DBt$Date=as.Date(as.character(DBt$Date))
 minAnnee = as.numeric(format(min(DBt$Date), format = "%Y"))
@@ -736,3 +739,76 @@ dev.off()
 #                              SCRIPT T-44
 #
 # ---------------------------------------------------------------------
+
+# abondance, calidris, anas, waders.
+abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE))
+abondance_calidris = subset(DBt,grepl("^Calidris",DBt$Nom_latin,ignore.case = TRUE))
+abondance_waders = subset(DBt, DBt$Nom_latin %in% limicoles)
+#plot(abondance_waders$Date,abondance_waders$Nombre,type="o",col="red")
+#lines(abondance_calidris$Date,abondance_calidris$Nombre,type="o",col="blue")
+#par(new=TRUE)
+#plot(abondance_anas$Date,abondance_anas$Nombre,type="o",col="green")
+pdf("T44-Axe1-Teich-Abondance_of_waders_anas_and_calidris.pdf",width=15,height=10)
+# rather make three graphs!!!
+par(mfrow=c(3,1)) 
+minD = min(abondance_waders$Date,abondance_anas$Date,abondance_calidris$Date)
+maxD = max(abondance_waders$Date,abondance_anas$Date,abondance_calidris$Date)
+ticks = date(paste(unique(as.numeric(format(unique(DBt$Date), format = "%Y"))),"-01-01",sep=""))
+ticks = ticks[seq(1,length(ticks),by = 2)]
+nameTicks=unique(as.numeric(format(unique(DBt$Date), format = "%Y")))
+nameTicks = nameTicks[seq(1,length(nameTicks),by = 2)]
+plot(abondance_waders$Date,abondance_waders$Nombre,type="o",col="black",xlab="Date",ylab="Abondance of all Waders",xlim=c(minD,maxD),main='Abundance of waders in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+axis(1, at=ticks, labels=nameTicks)
+plot(abondance_calidris$Date,abondance_calidris$Nombre,type="o",col="blue",xlab="Date",ylab="Abondance of all Calidris",xlim=c(minD,maxD),main='Abundance of Calidris in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+axis(1, at=ticks, labels=nameTicks)
+plot(abondance_anas$Date,abondance_anas$Nombre,type="o",col="green",xlab="Date",ylab="Abondance of all Anas",xlim=c(minD,maxD),main='Abundance of Anas in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+axis(1, at=ticks, labels=nameTicks)
+
+## with log
+# rather make three graphs!!!
+par(mfrow=c(3,1)) 
+
+plot(abondance_waders$Date,log10(abondance_waders$Nombre),type="o",col="black",xlab="Date",ylab="Abondance of all Waders",xlim=c(minD,maxD),main='Log of abundance of waders in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+axis(1, at=ticks, labels=nameTicks)
+plot(abondance_calidris$Date,log10(abondance_calidris$Nombre),type="o",col="blue",xlab="Date",ylab="Abondance of all Calidris",xlim=c(minD,maxD),main='Log of abundance of Calidris in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+axis(1, at=ticks, labels=nameTicks)
+plot(abondance_anas$Date,log10(abondance_anas$Nombre),type="o",col="green",xlab="Date",ylab="Abondance of all Anas",xlim=c(minD,maxD),main='Log of abundance of Anas in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+axis(1, at=ticks, labels=nameTicks)
+
+
+## smoothies average
+# rather make three graphs!!!
+par(mfrow=c(3,1)) 
+
+plot(abondance_waders$Date,abondance_waders$Nombre,col="black",xlab="Date",ylab="Abondance of all Waders",xlim=c(minD,maxD),main='Abundance of waders in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+lines(abondance_waders$Date,movavg(abondance_waders$Nombre,3,type='t'),col="red")
+axis(1, at=ticks, labels=nameTicks)
+
+plot(abondance_calidris$Date,movavg(abondance_calidris$Nombre,3,type='s'),col="blue",xlab="Date",ylab="Abondance of all Calidris",xlim=c(minD,maxD),main='Abundance of Calidris in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+lines(abondance_calidris$Date,movavg(abondance_calidris$Nombre,3,type='t'),col="red")
+axis(1, at=ticks, labels=nameTicks)
+
+
+plot(abondance_anas$Date,movavg(abondance_anas$Nombre,3,type='s'),col="green",xlab="Date",ylab="Abondance of all Anas",xlim=c(minD,maxD),main='Abundance of Anas in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n")
+axis(1, at=ticks, labels=nameTicks)
+
+
+## smoothies average + log
+# rather make three graphs!!!
+par(mfrow=c(3,1)) 
+minD=date("1981-01-01")
+plot(abondance_waders$Date,log10(abondance_waders$Nombre),col="black",xlab="Date",ylab="Abondance of all Waders",xlim=c(minD,maxD),main='Log of abundance of waders in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n",pch=19)
+lines(abondance_waders$Date,movavg(log10(abondance_waders$Nombre),3,type='t'),col="orange",lwd=1.5)
+axis(1, at=ticks, labels=nameTicks)
+
+plot(abondance_calidris$Date,log10(abondance_calidris$Nombre),col="blue",xlab="Date",ylab="Abondance of all Calidris",xlim=c(minD,maxD),main='Log of abundance of Calidris in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n",pch=19)
+lines(abondance_calidris$Date,movavg(log10(abondance_calidris$Nombre),3,type='t'),col="orange",lwd=1.5)
+axis(1, at=ticks, labels=nameTicks)
+
+
+plot(abondance_anas$Date,log10(abondance_anas$Nombre),col="green",xlab="Date",ylab="Abondance of all Anas",xlim=c(minD,maxD),main='Log of abundance of Anas in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n",pch=19)
+lines(abondance_anas$Date,movavg(log10(abondance_anas$Nombre),3,type='t'),col="orange",lwd=1.5)
+axis(1, at=ticks, labels=nameTicks)
+
+
+dev.off()
