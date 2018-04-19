@@ -1,0 +1,278 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Synchronous or compensatory community dynamics? Insights from a long-term
+ bird study at multiple temporal and taxonomic scales
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Ecological theory suggests that within rich communities where a number of
+ species have similar functions, due to their proximity in morphological
+ or phylogenetic space, they might exhibit compensatory dynamics (Gonzalez
+ & Loreau), i.e., species within the same guild should swap places to some
+ extent, whenever there is a space or resource constraint combined with
+ temporal environmental variability.
+ Which species 
+\begin_inset Quotes eld
+\end_inset
+
+win
+\begin_inset Quotes erd
+\end_inset
+
+ at any particular point in time may then depend on the fine-grained temporal
+ environmental variation, or just on random exclusion processes (e.g., who
+ gets there first).
+ Whatever the cause of compensatory dynamics, its main consequences for
+ ecosystem functioning is therefore that the community as a whole exhibits
+ lower biomass variation than its constituent species (REFS), and is therefore
+ more stable in the sense of lower variation.
+ 
+\end_layout
+
+\begin_layout Standard
+Early investigations of synchronous vs compensatory dynamics focused on
+ the variance ratio, that is, the variance of the sum of the community biomass
+ divided by the sum of the variance of the component species biomasses.
+ Unfortunately, this approach is not appropriate for communities subjected
+ to community-wide environmental forcing (REFs), because one main environmental
+ driver (e.g., temperature or light) may synchronize all the species abundances
+ or growth rates.
+ Further research has therefore focused on specific timeframes where compensator
+y dynamics may be found (e.g., below the seasonal scale where temperature
+ fluctuation tends to synchronize species, Vasseur ref).
+ 
+\end_layout
+
+\begin_layout Standard
+Despite this effort to make temporal scales more precise, temporal compensation
+ has been surprinsingly elusive in the field (REFs)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+They say the Ernest papers for small mammals in drylands are some of the
+ best examples
+\end_layout
+
+\end_inset
+
+.
+ Most datasets used to evaluate temporal compensation vs synchrony involve
+ planktonic organisms (REFs) or terrestrial plants ( ; though see).
+ Here, we take advantage of a long-term bird time series record at the monthly
+ scale (XX years), in a natural reserve, that allows us to dig deeper into
+ patterns of synchrony between species at various time and taxonomic scales.
+ 
+\end_layout
+
+\begin_layout Standard
+Indeed, taxonomic scale should be a main modulator of synchrony/compensation,
+ a factor of variation that has been somewhat negelected for now.
+ On the one hand, one could argue that compensation should be higher between
+ similar species, because functional and phylogenetic differences being
+ generally correlated.
+ If species A and B are two duck species that share almost the same food
+ niche and share many traits, it makes little difference to the rest of
+ the community whether one species gets replaced by the other (functional
+ compensation, 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "gonzalez2009causes"
+literal "false"
+
+\end_inset
+
+).
+ On the other hand, it could be argued as well that more dissimilar groups
+ of species - within the same trophic level nonetheless - could exhibit
+ compensation exactly because they have different environmental preferences
+ and the environment varies (e.g., groups of species preferring more open
+ vs more closed habitats replacing each other as a function of changes in
+ vegetation height).
+ Surprisingly, this aspect has been relatively less well explored even though
+ there is some empirical evidence for this 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sinclair2013asynchronous"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Our dataset is ideally suited to tackle how synchronous are bird communities
+ at different temporal and taxonomic scale given that (i) it is a highly
+ temporally resolved time series with respect to the species typical generation
+ times and (ii) the reserve where the data has been collected was subjected
+ to a major management change c.
+ 2006 (change in water levels), favouring different types of wetland birds
+ (so that over long timescales, there is a potential for changes in community
+ composition).
+ 
+\end_layout
+
+\begin_layout Section
+Material and Methods
+\end_layout
+
+\begin_layout Subsection
+Data
+\end_layout
+
+\begin_layout Standard
+The monthly time series used for the statistical analyses have been collected
+ at the Teich Ornithological Reserve, Arcachon Bay, France ([coordinates
+ here]).
+ The reserve is constituted of XX ha of wetlands , and the data have been
+ aggregated at the reserve scale by using for each species the maximum observed
+ abundance over a month, which provide a 
+\begin_inset Quotes eld
+\end_inset
+
+monthly snapshot
+\begin_inset Quotes erd
+\end_inset
+
+ of the bird community.
+ In the statistical analyses, we use both the monthly data and aggregates
+ at the seasonal scale.
+ We defined two seasons in the following manner XXXX (see Appendix S1 for
+ alternative choices of season definition).
+ 
+\end_layout
+
+\begin_layout Subsection
+Statistical Analyses
+\end_layout
+
+\begin_layout Standard
+We computed synchrony indices at the seasonal scales (
+\end_layout
+
+\begin_layout Section
+Results 
+\end_layout
+
+\begin_layout Standard
+Figs 1-2-3
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+Compensatory dynamics are still rare even a short frequencies among taxonomicall
+y or functionally close species, i.e.
+ there is no functional compensation.
+ Yet, accross contrasted guilds can change in frequency in the long run
+ (in this case, due a change in management).
+ We therefore suggest that compensation should be searched for more often
+ between rather within functional groups, and on relatively long timescales
+ above that of the dominant driver (e.g., seasonality).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "/home/frederic/Dropbox/database/total"
+options "/home/frederic/Dropbox/database/ecol_let"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
