@@ -796,15 +796,20 @@ minD=date("1981-01-01")
 plot(abondance_waders$Date,log10(abondance_waders$Nombre),col="black",xlab="Date",ylab="Abondance of all Waders",xlim=c(minD,maxD),main='Log of abundance of waders in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n",pch=19)
 lines(abondance_waders$Date,movavg(log10(abondance_waders$Nombre),3,type='t'),col="orange",lwd=1.5)
 axis(1, at=ticks, labels=nameTicks)
-
+#
 plot(abondance_calidris$Date,log10(abondance_calidris$Nombre),col="blue",xlab="Date",ylab="Abondance of all Calidris",xlim=c(minD,maxD),main='Log of abundance of Calidris in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n",pch=19)
 lines(abondance_calidris$Date,movavg(log10(abondance_calidris$Nombre),3,type='t'),col="orange",lwd=1.5)
 axis(1, at=ticks, labels=nameTicks)
-
-
+#
 plot(abondance_anas$Date,log10(abondance_anas$Nombre),col="green",xlab="Date",ylab="Abondance of all Anas",xlim=c(minD,maxD),main='Log of abundance of Anas in the dataset',cex.lab=1.2,cex.main=1.5,xaxt="n",pch=19)
 lines(abondance_anas$Date,movavg(log10(abondance_anas$Nombre),3,type='t'),col="orange",lwd=1.5)
 axis(1, at=ticks, labels=nameTicks)
 
 
 dev.off()
+
+# ---------------------------------------------------------------------
+#
+#                              SCRIPT T-45
+#
+# ---------------------------------------------------------------------
