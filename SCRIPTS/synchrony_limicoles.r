@@ -7,8 +7,9 @@ library("RColorBrewer")
 
 ##################################################################################
 # -- importation des données du Teich
+#DBt<-read.csv(file="/home/cpicoche/Documents/Data_to_treat/TRANSFERT_LIMICOLES/IN/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
 DBt<-read.csv(file="/home/cpicoche/Documents/Data_to_treat/TRANSFERT_LIMICOLES/IN/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
-DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)")
+DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)" )#& !(DBt$Annee %in% c(2007,2008)))
 DBt$Date=as.Date(as.character(DBt$Date))
 minAnnee = as.numeric(format(min(DBt$Date), format = "%Y"))
 maxAnnee = as.numeric(format(max(DBt$Date), format = "%Y"))
