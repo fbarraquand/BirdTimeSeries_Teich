@@ -19,8 +19,8 @@ image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...)
             else axis(4)
             if (exists("z.boot") && !is.null(z.boot)) {
                 z.boot = 1 - abs(1 - 2 * z.boot)
-                contour(x, y, z.boot[, , i], levels = 0.05, lty = 3, 
-                  add = TRUE, drawlabels = FALSE)
+#                contour(x, y, z.boot[, , i], levels = 0.05, lty = 3,  #Removing the uncorrected p-values
+#                  add = TRUE, drawlabels = FALSE)
                 zb = p.adjust(as.vector(z.boot), method = "BY")
                 dim(zb) = dim(z.boot)
                 contour(x, y, zb[, , i], levels = 0.05, lwd = 2, 
