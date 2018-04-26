@@ -44,7 +44,7 @@
 \use_package stmaryrd 1
 \use_package undertilde 1
 \cite_engine natbib
-\cite_engine_type authoryear
+\cite_engine_type numerical
 \biblio_style plainnat
 \use_bibtopic false
 \use_indices false
@@ -93,10 +93,17 @@ Introduction
 \begin_layout Standard
 Ecological theory suggests that within rich communities where a number of
  species have similar functions, due to their proximity in morphological
- or phylogenetic space, they might exhibit compensatory dynamics (Gonzalez
- & Loreau), i.e., species within the same guild should swap places to some
- extent, whenever there is a space or resource constraint combined with
- temporal environmental variability.
+ or phylogenetic space, they might exhibit compensatory dynamics 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gonzalez2009causes"
+literal "false"
+
+\end_inset
+
+, i.e., species within the same guild should swap places to some extent, whenever
+ there is a space or resource constraint combined with temporal environmental
+ variability.
  Which species 
 \begin_inset Quotes eld
 \end_inset
@@ -162,7 +169,7 @@ Indeed, taxonomic scale should be a main modulator of synchrony/compensation,
  the community whether one species gets replaced by the other (functional
  compensation, 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "gonzalez2009causes"
 literal "false"
 
@@ -235,7 +242,7 @@ Statistical Analyses
 \end_layout
 
 \begin_layout Standard
-We computed synchrony indices at the seasonal scales (
+We computed synchrony indices at the seasonal scales ()
 \end_layout
 
 \begin_layout Section
@@ -266,8 +273,8 @@ y or functionally close species, i.e.
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "/home/frederic/Dropbox/database/total"
-options "/home/frederic/Dropbox/database/ecol_let"
+bibfiles "BiblioTeich"
+options "prsb"
 
 \end_inset
 
