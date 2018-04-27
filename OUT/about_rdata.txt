@@ -1,4 +1,0 @@
-OUT/data_frequent_birds.RData                   OUT/data_limicoles.RData                   OUT/indices_freq.RData                   OUT/indices_limicoles.RData
-OUT/data_frequent_birds_using_max_values.RData  OUT/data_limicoles_using_max_values.RData  OUT/indices_freq_using_max_values.RData  OUT/indices_limicoles_using_max_values.RData
-
-RData files are temporary files containing the average (when nothing is said in the filename) or maximum (when "max" is indicated in the filename) abundances for frequent birds (freq) and for waders (limicoles). The 'data' files contain average values for 2 or 4 season (the first case corresponding to wintering and breeding, wintering being from November to February while breeding is from May to August). The 'indices' files contain the values of Loreau and Gross indices for 2 or 4 season. 
