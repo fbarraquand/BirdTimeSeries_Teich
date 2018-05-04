@@ -8,8 +8,8 @@ library("RColorBrewer")
 ##################################################################################
 # -- importation des données du Teich
 #DBt<-read.csv(file="/home/cpicoche/Documents/Data_to_treat/TRANSFERT_LIMICOLES/IN/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
-DBt<-read.csv(file="/home/cpicoche/Documents/Data_to_treat/TRANSFERT_LIMICOLES/IN/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
-DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)" )#& !(DBt$Annee %in% c(2007,2008)))
+DBt<-read.csv(file="/home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/IN/DBWithMonthlyPhotoTeich_completed.csv",header=TRUE,sep=",",dec=".")
+DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)" | DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")  )#& !(DBt$Annee %in% c(2007,2008)))
 DBt$Date=as.Date(as.character(DBt$Date))
 minAnnee = as.numeric(format(min(DBt$Date), format = "%Y"))
 maxAnnee = as.numeric(format(max(DBt$Date), format = "%Y"))
@@ -60,8 +60,9 @@ mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0)
 mr = wmr.boot(mm, smoothing = 1,reps=100)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
+png('OUT/Figure3.png',width=800)
 image_mvcwt(mr,reset.par=F,cex.axis=4,z.fun="Mod")
 
 abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
 print(Sys.time())
-
+dev.off()
