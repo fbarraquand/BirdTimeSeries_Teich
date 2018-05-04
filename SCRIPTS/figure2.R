@@ -36,7 +36,7 @@ par(mfrow=c(1,1),mar=c(2,2,1,1))
 
 which_var="data_freq_season2_Gross"
 data_tmp=freq[[which_var]]
-point_bar=barplot(data_tmp,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data_tmp),args.legend=list(x='topleft',bty="n"),ylim=c(0.,1.1),xlim=c(0,9),main="Gross")
+point_bar=barplot(data_tmp,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data_tmp),args.legend=list(x='topleft',bty="n"),ylim=c(0.,0.7),xlim=c(0,9),main="")
 data_bis=lim[[which_var]]
 points(c(point_bar),c(data_bis),pch=21,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
 for(i in 1:floor(length(point_bar)/3)){
@@ -59,7 +59,7 @@ pdf("OUT/comparison_taxonomic_level_4seasons.pdf",width=14)
 par(mfrow=c(1,1),mar=c(2,2,1,1))
 which_var="data_freq_season4_Gross"
 data_tmp=freq[[which_var]]
-point_bar=barplot(data_tmp,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data_tmp),args.legend=list(x='topleft',bty="n"),ylim=c(0.,1.1),xlim=c(0,17),main="Gross")
+point_bar=barplot(data_tmp,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data_tmp),args.legend=list(x='topleft',bty="n"),ylim=c(0.,0.7),xlim=c(0,17),main="")
 data_bis=lim[[which_var]]
 points(c(point_bar),c(data_bis),pch=21,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
 for(i in 1:floor(length(point_bar)/3)){

@@ -253,6 +253,99 @@ Results
 Figs 1-2-3
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_taxonomic_level_4seasons.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_taxonomic_level_2seasons.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gross' synchrony index as a function of the season (official season, top,
+ or wintering and breeding season, bottom), calculated on different functional
+ (frequent birds, waders) or taxonomic (Anas, Calidris) groups.
+ Indices were computed on the whole dataset (black) or with the same dataset
+ separated in two periods: before and after 2006 (light and dark blue),
+ when a management change occurred.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/Figure3.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet modulus ratio for the wader community, scaling from 0 (compensation)
+ to 1 (synchrony).
+ Black lines delineate regions significantly different from the null model
+ with a false discovery rate controlled at the 5% level.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Discussion
 \end_layout
