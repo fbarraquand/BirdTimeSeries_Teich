@@ -1,0 +1,250 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+How to test for significance of synchrony indices?
+\end_layout
+
+\begin_layout Section
+'synchrony' package
+\end_layout
+
+\begin_layout Standard
+The package 'synchrony' described in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gouhier_synchrony_2014"
+literal "false"
+
+\end_inset
+
+ uses Loreau's index 
+\begin_inset Formula $\Phi_{x}$
+\end_inset
+
+ to compute community synchronies 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "loreau_species_2008"
+literal "false"
+
+\end_inset
+
+.
+ For this index, they test 
+\begin_inset Formula $H1=\Phi_{x}\geq\phi_{x}($
+\end_inset
+
+or 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Phi\leq\phi_{x}$
+\end_inset
+
+) for populations fluctuating randomly.
+ To compute 
+\begin_inset Formula $\Phi_{x}$
+\end_inset
+
+ under the random fluctuation hypothesis, they either shuffle each population's
+ time series, destroying both the auto- and cross-correlation, or shift
+ each population by a random lag to only remove the cross-correlation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "purves_fine-scale_2002"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+This paper concerns fine-scale 
+\family default
+\series bold
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+spatial
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ structure
+\end_layout
+
+\end_inset
+
+.
+ I don't think we should use the first algorithm: if we get rid of the auto-corr
+elation in the original time series, we are testing a null hypothesis for
+ randomly fluctuating individuals, not only populations.
+ The second proposition is close to what is done in the spectral domain
+ by randomly shifting the phase of the signal 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "keitt_coherent_2008"
+literal "false"
+
+\end_inset
+
+.
+ 
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Fred
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, do you think we should use more complex, frequency-based, randomization
+ processes? (IAAFT as we did for Granger-causality?) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "tmp_Biblio_signif"
+options "prsb"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

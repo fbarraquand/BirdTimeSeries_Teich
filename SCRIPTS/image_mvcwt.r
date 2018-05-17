@@ -23,7 +23,7 @@ image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...)
 #                  add = TRUE, drawlabels = FALSE)
                 zb = p.adjust(as.vector(z.boot), method = "BY")
                 dim(zb) = dim(z.boot)
-                contour(x, y, zb[, , i], levels = 0.05, lwd = 2, 
+                contour(x, y, zb[, , i], levels = 0.05, lwd = 1,lty=3, 
                   add = TRUE, drawlabels = FALSE)
             }
             if (is.finite(bound)) {
@@ -35,7 +35,7 @@ image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...)
             box()
         }
         axis(1,cex.axis=1.8)
-        mtext("", 1, 1, outer = TRUE,cex=2)
+        mtext("Years", 1, 1, outer = TRUE,cex=2)
         mtext("Scale (years)", 2, 1, outer = TRUE,cex=2)
     })
 	par(mar=c(2,.5,2,2))

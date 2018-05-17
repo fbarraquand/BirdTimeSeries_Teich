@@ -15,11 +15,13 @@ id_rands=id_obs+1
 id_p=id_obs+2
 thresh=0.05
 
-pdf("tmp_figure2.pdf",width=20)
-plot(0,0,t="n",ylim=c(0,0.8),xlim=c(0,15),xaxt="n",xlab="",ylab="")
-#for (type_of_season in c("data_freq_season4_Gross","data_freq_season2_Gross")){
+pdf("tmp_figure2.pdf",width=12.5)
+layout(matrix(c(1,1,3,2,2,4),2,3,byrow=T))
+par(mar=c(4,5,0.5,0.5))
 type_of_season="data_freq_season4_Gross"
-axis(1,at=c(2,6,10,14),lab=c("Winter","Spring","Summer","Autumn"))
+plot(0,0,t="n",ylim=c(0.15,0.75),xlim=c(0,15),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2)
+axis(1,at=c(2,6,10,14),lab=rep("",4),cex.axis=2)
+#for (type_of_season in c("data_freq_season4_Gross","data_freq_season2_Gross")){
 	for (season in 1:4){
 		obs=calidris[[type_of_season]][[season]][id_obs]
 		ic=lapply(calidris[[type_of_season]][[season]][id_rands],function(x) 2*sd(x[1:100])/sqrt(100))
@@ -27,11 +29,11 @@ axis(1,at=c(2,6,10,14),lab=c("Winter","Spring","Summer","Autumn"))
 		x=1:3+(season-1)*4
 		yHigh=as.numeric(obs)+as.numeric(ic)
 		yLow=as.numeric(obs)-as.numeric(ic)
-		points(x,obs,t="o",lty=1,pch=21,col="black",bg=c("Black","Lightblue","Darkblue"),cex=2)
+		points(x,obs,t="o",lty=1,pch=21,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
 		arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
 		for (i in 1:3){
 			if (p_s[i]<thresh){
-				points(x[i],as.numeric(obs[i])+0.05,pch='*',col="black",cex=2)
+				points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
 			}
 		}
 	}
@@ -43,15 +45,18 @@ axis(1,at=c(2,6,10,14),lab=c("Winter","Spring","Summer","Autumn"))
                 x=1:3+(season-1)*4
                 yHigh=as.numeric(obs)+as.numeric(ic)
                 yLow=as.numeric(obs)-as.numeric(ic)
-                points(x,obs,t="o",lty=1,pch=22,col="black",bg=c("Black","Lightblue","Darkblue"),cex=2)
+                points(x,obs,t="o",lty=1,pch=22,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
                 arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
                 for (i in 1:3){
                         if (p_s[i]<thresh){
-                                points(x[i],as.numeric(obs[i])+0.05,pch='*',col="black",cex=2)
+                                points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
                         }
                 }
         }
 
+par(mar=c(4,5,0.5,0.5))
+plot(0,0,t="n",ylim=c(0.15,0.75),xlim=c(0,15),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2)
+axis(1,at=c(2,6,10,14),lab=c("Winter","Spring","Summer","Autumn"),cex.axis=2)
         for (season in 1:4){
                 obs=lim[[type_of_season]][[season]][id_obs]
                 ic=lapply(lim[[type_of_season]][[season]][id_rands],function(x) 2*sd(x[1:100])/sqrt(100))
@@ -59,11 +64,11 @@ axis(1,at=c(2,6,10,14),lab=c("Winter","Spring","Summer","Autumn"))
                 x=1:3+(season-1)*4
                 yHigh=as.numeric(obs)+as.numeric(ic)
                 yLow=as.numeric(obs)-as.numeric(ic)
-                points(x,obs,pch=23,t="o",lty=1,col="black",bg=c("Black","Lightblue","Darkblue"),cex=2)
+                points(x,obs,pch=23,t="o",lty=1,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
                 arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
                 for (i in 1:3){
                         if (p_s[i]<thresh){
-                                points(x[i],as.numeric(obs[i])+0.05,pch='*',col="black",cex=2)
+                                points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
                         }
                 }
         }
@@ -75,96 +80,94 @@ axis(1,at=c(2,6,10,14),lab=c("Winter","Spring","Summer","Autumn"))
                 x=1:3+(season-1)*4
                 yHigh=as.numeric(obs)+as.numeric(ic)
                 yLow=as.numeric(obs)-as.numeric(ic)
-                points(x,obs,pch=24,t="o",lty=1,col="black",bg=c("Black","Lightblue","Darkblue"),cex=2)
+                points(x,obs,pch=24,t="o",lty=1,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
                 arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
                 for (i in 1:3){
                         if (p_s[i]<thresh){
-                                points(x[i],as.numeric(obs[i])+0.05,pch='*',col="black",cex=2)
+                                points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
                         }
                 }
         }
 
 
-legend("topright",c("Anas","Calidris","Waders","Freq"),pch=c(21,22,23,24),pt.bg="black",border="white",pt.cex=2,bty="n")
-dev.off()
-stop()
+legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+#dev.off()
 #}		
 
 
-data_bis=anas[[which_var]]
-points(c(point_bar),c(data_bis),pch=22,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-for(i in 1:floor(length(point_bar)/3)){
-lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-}
+type_of_season="data_freq_season2_Gross"
+par(mar=c(4,0.5,0.5,0.5))
+plot(0,0,t="n",ylim=c(0.15,0.75),xlim=c(0,7),xaxt="n",xlab="",ylab="",yaxt="n")
+axis(1,at=c(2,6),lab=rep("",2),cex.axis=2)
+#for (type_of_season in c("data_freq_season4_Gross","data_freq_season2_Gross")){
+        for (season in 1:2){
+                obs=calidris[[type_of_season]][[season]][id_obs]
+                ic=lapply(calidris[[type_of_season]][[season]][id_rands],function(x) 2*sd(x[1:100])/sqrt(100))
+                p_s=calidris[[type_of_season]][[season]][id_p]
+                x=1:3+(season-1)*4
+                yHigh=as.numeric(obs)+as.numeric(ic)
+                yLow=as.numeric(obs)-as.numeric(ic)
+                points(x,obs,t="o",lty=1,pch=21,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
+                arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
+                for (i in 1:3){
+                        if (p_s[i]<thresh){
+                                points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
+                        }
+                }
+        }
 
+        for (season in 1:2){
+                obs=anas[[type_of_season]][[season]][id_obs]
+                ic=lapply(anas[[type_of_season]][[season]][id_rands],function(x) 2*sd(x[1:100])/sqrt(100))
+                p_s=anas[[type_of_season]][[season]][id_p]
+                x=1:3+(season-1)*4
+                yHigh=as.numeric(obs)+as.numeric(ic)
+                yLow=as.numeric(obs)-as.numeric(ic)
+                points(x,obs,t="o",lty=1,pch=22,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
+                arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
+                for (i in 1:3){
+                        if (p_s[i]<thresh){
+                                points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
+                        }
+                }
+        }
+legend("topleft",c("Calidris","Anas"),pch=c(21,22),pt.bg="black",pt.cex=2,bty="n",cex=2)
 
-stop()
+par(mar=c(4,0.5,0.5,0.5))
+plot(0,0,t="n",ylim=c(0.15,0.75),xlim=c(0,7),xaxt="n",xlab="",ylab="",yaxt="n")
+axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
+#for (type_of_season in c("data_freq_season4_Gross","data_freq_season2_Gross")){
+        for (season in 1:2){
+                obs=lim[[type_of_season]][[season]][id_obs]
+                ic=lapply(lim[[type_of_season]][[season]][id_rands],function(x) 2*sd(x[1:100])/sqrt(100))
+                p_s=lim[[type_of_season]][[season]][id_p]
+                x=1:3+(season-1)*4
+                yHigh=as.numeric(obs)+as.numeric(ic)
+                yLow=as.numeric(obs)-as.numeric(ic)
+                points(x,obs,t="o",lty=1,pch=23,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
+                arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
+                for (i in 1:3){
+                        if (p_s[i]<thresh){
+                                points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
+                        }
+                }
+        }
 
-pdf("OUT/comparison_taxonomic_level_2seasons.pdf",width=12)
-par(mfrow=c(1,1),mar=c(2,2,1,1))
+        for (season in 1:2){
+                obs=freq[[type_of_season]][[season]][id_obs]
+                ic=lapply(freq[[type_of_season]][[season]][id_rands],function(x) 2*sd(x[1:100])/sqrt(100))
+                p_s=freq[[type_of_season]][[season]][id_p]
+                x=1:3+(season-1)*4
+                yHigh=as.numeric(obs)+as.numeric(ic)
+                yLow=as.numeric(obs)-as.numeric(ic)
+                points(x,obs,t="o",lty=1,pch=24,col=c("Black","Lightblue","Darkblue"),bg=c("Black","Lightblue","Darkblue"),cex=2)
+                arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=c("Black","Lightblue","Darkblue"),lwd=2)
+                for (i in 1:3){
+                        if (p_s[i]<thresh){
+                                points(x[i],as.numeric(obs[i]),pch='*',col="red",cex=2)
+                        }
+                }
+        }
 
-#which_var="data_freq_season2_Loreau"
-#data_tmp=freq[[which_var]]
-#colnames(data_tmp)=c("Cold season","Warm season")
-#point_bar=barplot(data_tmp,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data_tmp),args.legend=list(x='topleft',bty="n"),ylim=c(0,1.1),xlim=c(0,9),main="Loreau")
-#data_bis=lim[[which_var]]
-#points(c(point_bar),c(data_bis),pch=21,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-#for(i in 1:floor(length(point_bar)/3)){
-#lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-#}
-#data_bis=anas[[which_var]]
-#points(c(point_bar),c(data_bis),pch=22,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-#for(i in 1:floor(length(point_bar)/3)){
-#lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-#}
-#data_bis=calidris[[which_var]]
-#points(c(point_bar),c(data_bis),pch=24,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-#for(i in 1:floor(length(point_bar)/3)){
-#lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-#}
-#legend("topright",c("Freq","Waders","Anas","Calidris"),pch=c(NA,21,22,24),fill=c("Black",NA,NA,NA),pt.bg="black",border="white",pt.cex=2,bty="n")
-
-which_var="data_freq_season2_Gross"
-data_tmp=freq[[which_var]]
-point_bar=barplot(data_tmp,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data_tmp),args.legend=list(x='topleft',bty="n"),ylim=c(0.,0.7),xlim=c(0,9),main="")
-data_bis=lim[[which_var]]
-points(c(point_bar),c(data_bis),pch=21,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-for(i in 1:floor(length(point_bar)/3)){
-lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-}
-data_bis=anas[[which_var]]
-points(c(point_bar),c(data_bis),pch=22,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-for(i in 1:floor(length(point_bar)/3)){
-lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-}
-data_bis=calidris[[which_var]]
-points(c(point_bar),c(data_bis),pch=24,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-for(i in 1:floor(length(point_bar)/3)){
-lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-}
-legend("topright",c("Freq","Waders","Anas","Calidris"),pch=c(NA,21,22,24),pt.bg="black",fill=c("black",NA,NA,NA),border="white",pt.cex=2,bty="n")
+legend("topleft",c("Waders","Freq"),pch=c(23,24),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
-
-pdf("OUT/comparison_taxonomic_level_4seasons.pdf",width=14)
-par(mfrow=c(1,1),mar=c(2,2,1,1))
-which_var="data_freq_season4_Gross"
-data_tmp=freq[[which_var]]
-point_bar=barplot(data_tmp,col=c("Black","Lightblue","Darkblue"),border="white",beside=T,legend=rownames(data_tmp),args.legend=list(x='topleft',bty="n"),ylim=c(0.,0.7),xlim=c(0,17),main="")
-data_bis=lim[[which_var]]
-points(c(point_bar),c(data_bis),pch=21,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-for(i in 1:floor(length(point_bar)/3)){
-lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-}
-data_bis=anas[[which_var]]
-points(c(point_bar),c(data_bis),pch=22,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-for(i in 1:floor(length(point_bar)/3)){
-lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-}
-data_bis=calidris[[which_var]]
-points(c(point_bar),c(data_bis),pch=24,col="white",bg=c("Black","Lightblue","Darkblue"),cex=2)
-for(i in 1:floor(length(point_bar)/3)){
-lines(c(point_bar)[(1+(i-1)*3):(i*3)],c(data_bis)[(1+(i-1)*3):(i*3)])
-}
-legend("topright",c("Freq","Waders","Anas","Calidris"),pch=c(NA,21,22,24),pt.bg="black",fill=c("black",NA,NA,NA),border="white",pt.cex=2,bty="n")
-dev.off()
-

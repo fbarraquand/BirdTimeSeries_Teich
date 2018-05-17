@@ -72,11 +72,12 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author 274868703 "Coralie PICOCHE"
 \end_header
 
 \begin_body
@@ -242,7 +243,209 @@ Statistical Analyses
 \end_layout
 
 \begin_layout Standard
-We computed synchrony indices at the seasonal scales ()
+
+\change_inserted 274868703 1526540163
+We used the synchrony index defined by 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+, which writes
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 274868703 1526540168
+\begin_inset Formula 
+\begin{equation}
+\text{\ensuremath{\eta}}=\frac{1}{n}\sum_{i}\text{Corr}(P_{i},\sum_{j\neq i}P_{j})\label{eq:Gross}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 274868703 1526541877
+The index described in eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Gross"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ varies between -1 (compensation, total biomass is constant) and 1 (synchrony),
+ while 0 represents a case where all populations fluctuate independently.
+ Contrary to previous indices (see, for instance, 
+\begin_inset CommandInset citation
+LatexCommand citealt
+key "loreau_species_2008"
+literal "false"
+
+\end_inset
+
+), this index is independent from the richness of the community and its
+ overall stability 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bluthgen_land_2016"
+literal "false"
+
+\end_inset
+
+.
+ 
+\change_unchanged
+We computed synchrony indices at the seasonal scales
+\change_inserted 274868703 1526542708
+ using the codyn package in R 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hallett_codyn_2016"
+literal "false"
+
+\end_inset
+
+.
+ We used two definitions of the season.
+ The first one was based on official months: winter corresponded to the
+ three months between January and March, until autumn which was defined
+ as the months between October and December.
+ The second definition was based on observations of bird presence related
+ to temperature: we defined a 'cold season' as the months between November
+ of the previous year and February, and a 'warm season', from May to August.
+ In both cases, we averaged bird abundances over the season and computed
+ the synchrony index from one year to another.
+ We also differentiated three periods: before and after 2006, where management
+ chance ocurred, and a period including all years, ignoring the change in
+ 2006.
+ We computed the statisticial significance of the synchrony values obtained
+ with Monte Carlo randomizations 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gouhier_synchrony_2014"
+literal "false"
+
+\end_inset
+
+.
+ For each sets of time series (each season), we kept the auto-correlation
+ of the species time-series but removed the cross-correlation between species
+ by shifting each time series by a random lag 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "purves_fine-scale_2002"
+literal "false"
+
+\end_inset
+
+.
+ We obtained 100 sets of randomized time series for each season and period
+ of time considered and
+\change_deleted 274868703 1526540928
+ ()
+\change_inserted 274868703 1526545548
+ computed the corresponding synchrony index.
+ We then compared the observed values to the values obtained with the randomized
+ time-series.
+ Independence of species was rejected at the 5% threshold.
+ threshold
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 274868703 1526542049
+Do we Bonferronni-correct? In this case, 5/16 for the 4 seasons? (4 groups/4
+ season?)Do we add the equation for the p-value? Doesn't feel necessary
+ to me but what do you think?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 274868703 1526542757
+In addition to time-series analysis, we focused on the wader community for
+ a further frequency-based analysis.
+ Based on the work by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "keitt_coherent_2008"
+literal "false"
+
+\end_inset
+
+, we used the wavelet transform of the time series to measure the coherency
+ between time series
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 274868703 1526542921
+\begin_inset Formula 
+\begin{equation}
+\rho(t,s)=\frac{\Lambda_{t,s}(|\sum_{k}w_{k}(\tau,s)|)}{\Lambda_{t,s}(\sum_{k}|w_{k}(\tau,s)|)}\label{eq:Keitt}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 274868703 1526543688
+where 
+\begin_inset Formula $w_{k}(\tau,s)$
+\end_inset
+
+ is the continuous Morlet wavelet transform of species 
+\begin_inset Formula $k$
+\end_inset
+
+ at time 
+\begin_inset Formula $\tau$
+\end_inset
+
+ for scale 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda_{t,s}(\centerdot)=\int_{-\infty}^{+\infty}e^{-\frac{1}{2}(\frac{t-\tau}{s})^{2}}(\centerdot)d\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $|\centerdot|$
+\end_inset
+
+ is the modulus of the complex number.
+ The numerator corresponds to the total biomass variation while the denominator
+ corresponds to the variations of each species.
+ This index is close to 0 when species compensate and reaches 1 when they
+ are synchronous.
+ As before, the significance of each value was tested at the 5%, Bonferroni-corr
+ected, threshold by 100 phase-randomizations of each species time series,
+ and computation of the corresponding 
+\begin_inset Formula $\rho$
+\end_inset
+
+ values.-
 \end_layout
 
 \begin_layout Section
@@ -261,6 +464,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\change_deleted 274868703 1526546658
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_taxonomic_level_4seasons.pdf
 	width 95text%
@@ -268,12 +473,31 @@ status open
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
 \align center
+
+\change_deleted 274868703 1526546655
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/comparison_taxonomic_level_2seasons.pdf
+	width 95text%
+
+\end_inset
+
+
+\change_inserted 274868703 1526546688
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted 274868703 1526546715
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/tmp_figure2.pdf
 	width 95text%
 
 \end_inset
@@ -285,6 +509,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\change_deleted 274868703 1526546734
 Gross' synchrony index as a function of the season (official season, top,
  or wintering and breeding season, bottom), calculated on different functional
  (frequent birds, waders) or taxonomic (Anas, Calidris) groups.
@@ -292,6 +518,18 @@ Gross' synchrony index as a function of the season (official season, top,
  separated in two periods: before and after 2006 (light and dark blue),
  when a management change occurred.
  
+\change_inserted 274868703 1526547561
+Gross' synchrony index as a function of the season (official season, left,
+ or cold and warm season, right), calculated on different functional (frequent
+ birds, waders, bottom) or taxonomic (Anas, Calidris, top) groups.
+ Indices were computed on the whole dataset (black) or with the same dataset
+ separated in two periods: before and after 2006 (light and dark blue),
+ when a management change occurred.
+ Red stars correspond to synchrony values significantly different from the
+ null model (independent species), at the 5% threshold.
+ 
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -331,7 +569,15 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio for the wader community, scaling from 0 (compensation)
  to 1 (synchrony).
- Black lines delineate regions significantly different from the null model
+ 
+\change_inserted 274868703 1526547267
+Dashed 
+\change_deleted 274868703 1526547272
+B
+\change_inserted 274868703 1526547272
+b
+\change_unchanged
+lack lines delineate regions significantly different from the null model
  with a false discovery rate controlled at the 5% level.
  
 \end_layout
