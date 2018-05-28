@@ -11,6 +11,7 @@ library("stringr")
 library("codyn")
 library ("pracma")
 DIRECTORY_ORIGIN = "/home/caluome/git/BirdTimeSeries_Teich/"
+#DIRECTORY_ORIGIN = "/home/caluome/Documents/LabExCOTE/DATA/Graphes/Axe1/TRANSFERT_LIMICOLES"
 setwd(paste(DIRECTORY_ORIGIN,"IN/",sep=""))
 options(nwarnings = 300) #nb de messages de warnings conservés
 
@@ -18,11 +19,13 @@ options(nwarnings = 300) #nb de messages de warnings conservés
 
 ##################################################################################
 # -- importation des données du Teich
-#DBt<-read.csv(file="/home/caluome/Documents/DATA/DATA/le_Teich/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
-#DBt<-read.csv(file="DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
-DBt<-read.csv(file="DBWithMonthlyPhotoTeich_maxsum.csv",header=TRUE,sep=",",dec=".")
+# DBt<-read.csv(file="/home/caluome/Documents/DATA/DATA/le_Teich/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
+# DBt<-read.csv(file="DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
+DBt<-read.csv(file="DBWithMonthlyPhotoTeich_completed.csv",header=TRUE,sep=",",dec=".")
+#DBt<-read.csv(file="DBWithMonthlyPhotoTeich_maxsum.csv",header=TRUE,sep=",",dec=".")
 
-DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)")
+#DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)")
+DBt = subset(DBt,((DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") | (DBt$Annee==1987 & DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique"))
 DBt$Date=as.Date(as.character(DBt$Date))
 minAnnee = as.numeric(format(min(DBt$Date), format = "%Y"))
 maxAnnee = as.numeric(format(max(DBt$Date), format = "%Y"))
@@ -739,7 +742,7 @@ dev.off()
 #                              SCRIPT T-44
 #
 # ---------------------------------------------------------------------
-
+library(pracma)
 # abondance, calidris, anas, waders.
 abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE))
 abondance_calidris = subset(DBt,grepl("^Calidris",DBt$Nom_latin,ignore.case = TRUE))
@@ -813,3 +816,32 @@ dev.off()
 #                              SCRIPT T-45
 #
 # ---------------------------------------------------------------------
+
+
+
+
+abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE))
+abondance_calidris = subset(DBt,grepl("^Calidris",DBt$Nom_latin,ignore.case = TRUE))
+abondance_waders = subset(DBt, DBt$Nom_latin %in% limicoles)
+ticks = date(paste(unique(as.numeric(format(unique(DBt$Date), format = "%Y"))),"-01-01",sep=""))
+ticks = ticks[seq(1,length(ticks),by = 2)]
+nameTicks=unique(as.numeric(format(unique(DBt$Date), format = "%Y")))
+nameTicks = nameTicks[seq(1,length(nameTicks),by = 2)]
+listColor = c('green','red','blue','#F0C300','pink','lightgreen','violet','lightblue','darkred','#6600FF','orange','#BABABA','#40826D','#3A9D23','#C71585','#F88E55','#EDFF0C')
+# start anas
+temp_species = unique(as.character(abondance_anas$Nom_latin))
+print (paste("Nombre d'espèces",length(temp_species)))
+
+### avec le log
+ymin = 0
+ymax = log(max(abondance_anas$Nombre))
+xmin = min(abondance_anas$Date)
+xmax = max(abondance_anas$Date)
+plot(abondance_anas$Date,log(abondance_anas$Nombre),col="black",xlab="Date",ylab="Log abundance",xlim=c(xmin,xmax),main='a)',cex.lab=1.2,cex.main=1.5,xaxt="n",pch=19,ylim=c(ymin,ymax),type="l")
+for (s in 1:length(temp_species)){
+  points(abondance_anas$Date[as.character(abondance_anas$Nom_latin) == temp_species[s]],log(abondance_anas$Nombre[abondance_anas$Nom_latin==temp_species[s]]),col=listColor[s],pch=19)
+}
+axis(1, at=ticks, labels=nameTicks)
+
+
+
