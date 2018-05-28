@@ -845,3 +845,224 @@ axis(1, at=ticks, labels=nameTicks)
 
 
 
+# ---------------------------------------------------------------------
+#
+#                              SCRIPT T-45
+#
+# ---------------------------------------------------------------------
+library(plotrix)
+create_somme = function(colonneDate,colonneResultats){
+  minAnnee = as.numeric(format(min(colonneDate), format = "%Y"))
+  maxAnnee = as.numeric(format(max(colonneDate), format = "%Y"))
+  nb = (maxAnnee-minAnnee)+1
+  mat <- matrix(data=0:0,nrow=nb, ncol=12) #12 : 1col by month
+  rownames(mat)=minAnnee:maxAnnee
+  colnames(mat)=1:12
+  for (i in 1:length(colonneDate)){
+    annee = format(colonneDate[i], format = "%Y") #extraire un mois d'une date
+    annee = as.numeric(annee)
+    mois  = format(colonneDate[i], format = "%m") #extraire un mois d'une date
+    mois = as.numeric(mois)
+    #print (annee,mois)
+    mat[as.character(annee),as.character(mois)]=mat[as.character(annee),as.character(mois)]+colonneResultats[i]
+  }
+  return (mat)
+}
+
+
+
+create_mat_percent=function(matrice,i_abondance_tot){
+  species = unique(as.character(matrice$Nom_latin))
+  mat <- matrix(data=0:0,nrow=length(species), ncol=3) 
+  rownames(mat)=species
+  colnames(mat)=c('somme','indice','percent')
+  for (i in 1:length(species)){
+    mat[species[i],'somme']=sum(matrice$Nombre[as.character(matrice$Nom_latin)==species[i]],na.rm=TRUE) # I crush seasonality
+    mat[species[i],'indice']=sum(matrice$Nombre[as.character(matrice$Nom_latin)==species[i]],na.rm=TRUE)/i_abondance_tot # I crush seasonality
+    mat[species[i],'percent']=(sum(matrice$Nombre[as.character(matrice$Nom_latin)==species[i]],na.rm=TRUE)/i_abondance_tot)*100 # I crush seasonality
+  }
+  return (mat)
+}
+
+d_ticks = date(paste(unique(as.numeric(format(unique(DBt$Date), format = "%Y"))),"-01-01",sep=""))
+d_ticks = d_ticks[seq(1,length(d_ticks),by = 2)]
+nameTicks=unique(as.numeric(format(unique(DBt$Date), format = "%Y")))
+nameTicks = nameTicks[seq(1,length(nameTicks),by = 2)]
+listColor = c('darkgreen','red','blue','#F0C300','pink','lightgreen','violet','lightblue','darkred','#6600FF','orange','#BABABA','#40826D','#3A9D23','#C71585','#F88E55','#00ffff','yellow','darkgrey','royalblue1','chocolate','antiquewhite1','black','deeppink','lightcoral','mediumorchid1','mediumaquamarine','olivedrab1','orangered','springgreen1','thistle1')
+
+
+# The doughnut function permits to draw a donut plot (source : https://www.r-graph-gallery.com/130-ring-or-donut-chart/)
+# I added option label.cex for change size of labels
+doughnut <-
+  function (x, labels = names(x), edges = 200, outer.radius = 0.8, 
+            inner.radius=0.6, clockwise = FALSE,
+            init.angle = if (clockwise) 90 else 0, density = NULL, 
+            angle = 45, col = NULL, border = FALSE, lty = NULL, 
+            main = NULL, label.cex=1,coord.x=c(1,1),...)
+  {
+    if (!is.numeric(x) || any(is.na(x) | x < 0))
+      stop("'x' values must be positive.")
+    if (is.null(labels))
+      labels <- as.character(seq_along(x))
+    else labels <- as.graphicsAnnot(labels)
+    x <- c(0, cumsum(x)/sum(x))
+    dx <- diff(x)
+    nx <- length(dx)
+    plot.new()
+    pin <- par("pin")
+    xlim <-coord.x
+    ylim <- c(-1, 1)
+    if (pin[1L] > pin[2L])
+      xlim <- (pin[1L]/pin[2L]) * xlim
+    else ylim <- (pin[2L]/pin[1L]) * ylim
+    plot.window(xlim, ylim, "", asp = 1)
+    if (is.null(col))
+      col <- if (is.null(density))
+        palette()
+    else par("fg")
+    col <- rep(col, length.out = nx)
+    border <- rep(border, length.out = nx)
+    lty <- rep(lty, length.out = nx)
+    angle <- rep(angle, length.out = nx)
+    density <- rep(density, length.out = nx)
+    twopi <- if (clockwise)
+      -2 * pi
+    else 2 * pi
+    t2xy <- function(t, radius) {
+      t2p <- twopi * t + init.angle * pi/180
+      list(x = radius * cos(t2p), 
+           y = radius * sin(t2p))
+    }
+    for (i in 1L:nx) {
+      n <- max(2, floor(edges * dx[i]))
+      P <- t2xy(seq.int(x[i], x[i + 1], length.out = n),
+                outer.radius)
+      polygon(c(P$x, 0), c(P$y, 0), density = density[i], 
+              angle = angle[i], border = border[i], 
+              col = col[i], lty = lty[i])
+      Pout <- t2xy(mean(x[i + 0:1]), outer.radius)
+      lab <- as.character(labels[i])
+      if (!is.na(lab) && nzchar(lab)) {
+        lines(c(1, 1.05) * Pout$x, c(1, 1.05) * Pout$y)
+        text(1.1 * Pout$x, 1.1 * Pout$y, labels[i], 
+             xpd = TRUE, adj = ifelse(Pout$x < 0, 1, 0), cex=label.cex,
+             #font=2,
+             ...)
+      }
+      ## Add white disc          
+      Pin <- t2xy(seq.int(0, 1, length.out = n*nx),
+                  inner.radius)
+      polygon(Pin$x, Pin$y, density = density[i], 
+              angle = angle[i], border = border[i], 
+              col = "white", lty = lty[i])
+    }
+    
+    title(main = main, ...)
+    invisible(NULL)
+  }
+
+# Let's use the function, it works like PiePlot !
+# inner.radius controls the width of the ring!
+#doughnut( c(3,5,9,12) , inner.radius=0.5, col=c(rgb(0.2,0.2,0.4,0.5), rgb(0.8,0.2,0.4,0.5), rgb(0.2,0.9,0.4,0.4) , rgb(0.0,0.9,0.8,0.4)) )
+
+pdf("T45-Axe1-Teich-Abondance_of_waders_anas_and_calidris_vers2.pdf",width=15,height=10,family = 'Times')
+# rather make three graphs!!!
+par(mfrow=c(3,2))
+layout(matrix(c(1,2,3,4,5,6), 3, 2, byrow = TRUE),heights = c(1,1,1),widths = c(3,1))
+abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE) & DBt$Annee>=1981)
+abondance_calidris = subset(DBt,grepl("^Calidris",DBt$Nom_latin,ignore.case = TRUE)& DBt$Annee>=1981)
+abondance_waders = subset(DBt, DBt$Nom_latin %in% limicoles & DBt$Annee>=1981)
+
+
+## abondance totale
+abondance_tot_anas = sum(abondance_anas$Nombre,na.rm=TRUE) # I crush seasonality
+abondance_tot_calidris = sum(abondance_calidris$Nombre,na.rm=TRUE) 
+abondance_tot_waders = sum(abondance_waders$Nombre,na.rm=TRUE) 
+
+# matrice percent abondance without seasonality
+mat_percent_abondance_tot_anas     = create_mat_percent(abondance_anas,abondance_tot_anas)
+mat_percent_abondance_tot_calidris = create_mat_percent(abondance_calidris,abondance_tot_calidris)
+mat_percent_abondance_tot_waders   = create_mat_percent(abondance_waders,abondance_tot_waders)
+
+minimal_percent = 1.00001 # percent minimal for considere the species
+# Anas First
+mat=create_somme(abondance_anas$Date,abondance_anas$Nombre)
+temp_date = expand.grid(15,colnames(mat),rownames(mat)) #15 because i need a day for build complete date.
+temp_date = c(paste(temp_date[,1],temp_date[,2],temp_date[,3],sep='-'))
+temp_date = as.Date(temp_date,format="%d-%m-%Y")
+temp_value = c(t(mat))
+temp_species = unique(as.character(abondance_anas$Nom_latin))
+temp_species = temp_species[order(temp_species)]
+ymin = 0
+ymax = log(max(abondance_anas$Nombre))+0.5 #tocorrect
+xmin = date("1981-01-01")
+xmax = date("2016-04-01")
+par(mar=c(1.5,4.3,0.1,1))
+par(oma=c(0,0,0,0))
+
+plot(temp_date,log(temp_value),col="black",xlab="",ylab="Log abundance",xlim=c(xmin,xmax),cex.lab=2,cex.axis=1.8,xaxt="n",pch=19,ylim=c(ymin,ymax),type="l",lwd =2)
+lines(temp_date,log(temp_value+1),col="black",lwd =1,lty=3)
+for (s in 1:length(temp_species)){
+  points(abondance_anas$Date[as.character(abondance_anas$Nom_latin) == temp_species[s]],log(abondance_anas$Nombre[abondance_anas$Nom_latin==temp_species[s]]),col=listColor[s],pch=19)
+}
+#text(c(0,1), "a)",cex = 2)
+mtext("\n (a)",side=3,cex = 1.5, adj = 0,padj=1)
+axis(1, at=d_ticks, cex=1.8, ticks=TRUE, labels=FALSE) # pas de label
+
+par(mar=c(0.1,0.1,0.1,0.1))
+mat_percent_abondance_tot_anas = mat_percent_abondance_tot_anas[ order(row.names(mat_percent_abondance_tot_anas)), ]
+
+doughnut( c(mat_percent_abondance_tot_anas[,'percent'][round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.3,coord.x=c(-0.5,1) )
+
+# next Calidris
+par(mar=c(1.5,4.3,0.1,1))
+mat=create_somme(abondance_calidris$Date,abondance_calidris$Nombre)
+temp_date = expand.grid(15,colnames(mat),rownames(mat)) #15 because i need a day for build complete date.
+temp_date = c(paste(temp_date[,1],temp_date[,2],temp_date[,3],sep='-'))
+temp_date = as.Date(temp_date,format="%d-%m-%Y")
+temp_value = c(t(mat))
+temp_species = unique(as.character(abondance_calidris$Nom_latin))
+temp_species = temp_species[order(temp_species)]
+ymin = 0
+ymax = log(max(abondance_calidris$Nombre))
+
+plot(temp_date,log(temp_value),col="black",xlab="",ylab="Log abundance",xlim=c(xmin,xmax),cex.axis=1.8,cex.lab=2,xaxt="n",pch=19,ylim=c(ymin,ymax),type="l",lwd =2)
+lines(temp_date,log(temp_value+1),col="black",lwd =1,lty=3)
+for (s in 1:length(temp_species)){
+  points(abondance_calidris$Date[as.character(abondance_calidris$Nom_latin) == temp_species[s]],log(abondance_calidris$Nombre[abondance_calidris$Nom_latin==temp_species[s]]),col=listColor[s],pch=19)
+}
+axis(1, at=d_ticks, cex=1.8, ticks=TRUE, labels=FALSE) # pas de label
+mtext("\n (b)",side=3,cex = 1.5, adj = 0,padj = 1)
+# plot.new()
+par(mar=c(0.1,0.1,0.1,0.1))
+mat_percent_abondance_tot_calidris = mat_percent_abondance_tot_calidris[ order(row.names(mat_percent_abondance_tot_calidris)), ]
+
+
+doughnut( c(mat_percent_abondance_tot_calidris[,'percent'][round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent]) , inner.radius=0.145, col=listColor[which(round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.7,1) )
+
+# next waders
+par(mar=c(4,4.3,0,1))
+mat=create_somme(abondance_waders$Date,abondance_waders$Nombre)
+temp_date = expand.grid(15,colnames(mat),rownames(mat)) #15 because i need a day for build complete date.
+temp_date = c(paste(temp_date[,1],temp_date[,2],temp_date[,3],sep='-'))
+temp_date = as.Date(temp_date,format="%d-%m-%Y")
+temp_value = c(t(mat))
+temp_species = unique(as.character(abondance_waders$Nom_latin))
+temp_species = temp_species[order(temp_species)]
+ymin = 0
+ymax = log(max(abondance_waders$Nombre))
+plot(temp_date,log(temp_value),col="black",xlab="Year",ylab="Log abundance",xlim=c(xmin,xmax),cex.axis=1.8,cex.lab=2,xaxt="n",pch=19,ylim=c(ymin,ymax),type="l",lwd =2)
+lines(temp_date,log(temp_value+1),col="black",lwd =1,lty=3)
+for (s in 1:length(temp_species)){
+  points(abondance_waders$Date[as.character(abondance_waders$Nom_latin) == temp_species[s]],log(abondance_waders$Nombre[abondance_waders$Nom_latin==temp_species[s]]),col=listColor[s],pch=19)
+}
+mtext("\n (c)",side=3,cex = 1.5, adj = 0,padj = 1)
+axis(1, at=d_ticks, labels=nameTicks,cex=1.8,cex.axis=1.8)
+mat_percent_abondance_tot_waders = mat_percent_abondance_tot_waders[ order(row.names(mat_percent_abondance_tot_waders)), ]
+par(mar=c(0.1,0.1,0.1,0.1))
+
+doughnut( c(mat_percent_abondance_tot_waders[,'percent'][round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.5,1),lty=1 )
+dev.off()
+
+
+
