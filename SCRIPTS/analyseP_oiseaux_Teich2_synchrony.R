@@ -25,7 +25,13 @@ DBt<-read.csv(file="DBWithMonthlyPhotoTeich_completed.csv",header=TRUE,sep=",",d
 #DBt<-read.csv(file="DBWithMonthlyPhotoTeich_maxsum.csv",header=TRUE,sep=",",dec=".")
 
 #DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)")
-DBt = subset(DBt,((DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") | (DBt$Annee==1987 & DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique"))
+#DBt = subset(DBt,((DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") | (DBt$Annee==1987 & DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")))
+#DBt = subset(DBt,((DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") |  DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique"))
+#DBt = subset(DBt,((DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") | (DBt$Annee==1987 & DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")| (DBt$Annee==2003 & DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")))
+#DBt = subset(DBt,((DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") |  DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique"))
+
+DBt = subset(DBt,(((DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") | ((DBt$Protocol==1 | DBt$Protocol==2)  & DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")))
+
 DBt$Date=as.Date(as.character(DBt$Date))
 minAnnee = as.numeric(format(min(DBt$Date), format = "%Y"))
 maxAnnee = as.numeric(format(max(DBt$Date), format = "%Y"))
