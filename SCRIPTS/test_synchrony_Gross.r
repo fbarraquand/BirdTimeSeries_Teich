@@ -1,4 +1,4 @@
-#CP 16/05/2018
+##CP 16/05/2018
 #Using the synchrony package, and more particularly the community.sync function from Gouhier and Guichard (2014) to compute confidence intervals for Gross index
 
 community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"), 

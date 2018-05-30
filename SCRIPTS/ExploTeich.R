@@ -9,7 +9,7 @@ rm(list=ls())
 graphics.off()
 library("lattice")
 
-DIRECTORY_ORIGIN = "/home/caluome/git/BirdTimeSeries_Teich/"
+DIRECTORY_ORIGIN = "/home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/"
 setwd(DIRECTORY_ORIGIN)
 #setwd(paste(DIRECTORY_ORIGIN,"IN/",sep=""))
 
