@@ -153,3 +153,27 @@ table_seasonal_warm[,'Freq']=freq_season[,'Warm',]
 table_seasonal_warm[,'Cormorant']=cormorant_season[,'Warm',]
 table_seasonal_warm[,'HeronEgret']=heregr_season[,'Warm',]
 write.table(table_seasonal_warm,"IN/warmseason_abundances.csv",sep=";")
+
+#Produce data frames and not table
+building_line='data_frame_cold=rbind('
+for (nem in colnames(table_seasonal_cold)){
+	building_line=paste(building_line,'cbind(rep(\"',nem,'\",',dim(table_seasonal_cold)[1],'),table_seasonal_cold[,\"',nem,'\"]),',sep="")
+}
+building_line=substr(building_line,1,nchar(building_line)-1)
+building_line=paste(building_line,')',sep="")
+eval(parse(text=building_line))
+data_frame_cold=cbind(rownames(data_frame_cold),data_frame_cold)
+write.table(data_frame_cold,"IN/coldseason_abundances_asdataframe.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
+
+#Produce data frames and not table
+building_line='data_frame_warm=rbind('
+for (nem in colnames(table_seasonal_warm)){
+        building_line=paste(building_line,'cbind(rep(\"',nem,'\",',dim(table_seasonal_warm)[1],'),table_seasonal_warm[,\"',nem,'\"]),',sep="")
+}
+building_line=substr(building_line,1,nchar(building_line)-1)
+building_line=paste(building_line,')',sep="")
+eval(parse(text=building_line))
+data_frame_warm=cbind(rownames(data_frame_warm),data_frame_warm)
+write.table(data_frame_cold,"IN/warmseason_abundances_asdataframe.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
+
+
