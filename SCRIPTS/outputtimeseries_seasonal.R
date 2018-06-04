@@ -25,7 +25,11 @@ season2_average=function(tab){
 		length_cold=length(Hivernage)
 		if(y==min(yy)){
 			list_month=month(tab$Date[year(tab$Date)==y])
-			length_warm=length(intersect(Nichage,list_month))
+			if(min(list_month)>min(Nichage)&max(list_month)<max(Nichage)){
+				length_warm=length(intersect(Nichage,list_month))
+			}else if(min(list_month)>max(Nichage)){
+				length_warm=NA
+			}
 			length_cold=length(intersect(c(1,2),list_month))
 		}else if (y==max(yy)){
 			list_month=month(tab$Date[year(tab$Date)==y])
@@ -174,6 +178,6 @@ building_line=substr(building_line,1,nchar(building_line)-1)
 building_line=paste(building_line,')',sep="")
 eval(parse(text=building_line))
 data_frame_warm=cbind(rownames(data_frame_warm),data_frame_warm)
-write.table(data_frame_cold,"IN/warmseason_abundances_asdataframe.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
+write.table(data_frame_warm,"IN/warmseason_abundances_asdataframe.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
 
 
