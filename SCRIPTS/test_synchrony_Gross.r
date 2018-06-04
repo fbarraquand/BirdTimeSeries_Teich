@@ -14,8 +14,8 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
 	data_matrix=convert_to_matrix(data)
 	#sp_data_frame=sapply(colnames(data_matrix),function(x) rep(x,dim(data_matrix)[1]))
 	#adates=rep(c(data[2]),dim(data_matrix)[2])
-	dates=data[2]
-	sp_data_frame=data[1]
+	dates=data[1]
+	sp_data_frame=data[2]
 	nr = NROW(data_matrix)
         nc = NCOL(data_matrix)
         if (!quiet) 
@@ -58,8 +58,8 @@ convert_to_matrix=function(data){
 	rownames(mm)=adates
 	for (s in sp){
 		for (d in adates){
-			if(length(which(data[1]==s&data[2]==d))>0){
-			mm[as.character(d),s]=data[which(data[1]==s&data[2]==d),3]
+			if(length(which(data$sp_data_frame==s&data$dates==d))>0){
+			mm[as.character(d),s]=data[which(data$sp_data_frame==s&data$dates==d),3]
 			}
 		}
 	}
