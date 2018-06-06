@@ -1068,7 +1068,7 @@ mat_percent_abondance_tot_waders = mat_percent_abondance_tot_waders[ order(row.n
 par(mar=c(0.1,0.1,0.1,0.1))
 
 doughnut( c(mat_percent_abondance_tot_waders[,'percent'][round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.5,1),lty=1 )
-dev.off()
+dev.off() 
 
 
 
