@@ -125,7 +125,8 @@ SynchronyMonth=function(matrice,file_out,titre,loreau=TRUE, gross=TRUE,ymin=-1,y
 	vec_synchrony_Loreau = rep(0,12) #Final results
   vec_synchrony_Gross = rep(0,12) #Final results
   for (m in 1:12){
-    subdata   = subset(DBt,as.numeric(format(DBt$Date, format = "%m"))==m & as.numeric(format(DBt$Date, format = "%Y"))>=2006 & DBt$Nom_latin %in% limicoles)
+    #subdata   = subset(DBt,as.numeric(format(DBt$Date, format = "%m"))==m & as.numeric(format(DBt$Date, format = "%Y"))>=2006 & DBt$Nom_latin %in% limicoles)
+    subdata   = subset(DBt,as.numeric(format(DBt$Date, format = "%m"))==m & as.numeric(format(DBt$Date, format = "%Y"))>=2007)
     date      = subdata$Date
     date      = c(as.numeric(date))
     abundance = c(as.numeric(subdata$Nombre))
@@ -147,7 +148,7 @@ SynchronyMonth=function(matrice,file_out,titre,loreau=TRUE, gross=TRUE,ymin=-1,y
   vec_synchrony_Loreau = rep(0,12) #Final results
   vec_synchrony_Gross = rep(0,12) #Final results
   for (m in 1:12){
-    subdata   = subset(DBt,as.numeric(format(DBt$Date, format = "%m"))==m & as.numeric(format(DBt$Date, format = "%Y"))<2006 & DBt$Nom_latin %in% limicoles)
+    subdata   = subset(DBt,as.numeric(format(DBt$Date, format = "%m"))==m & as.numeric(format(DBt$Date, format = "%Y"))<2007 )
     date      = subdata$Date
     date      = c(as.numeric(date))
     abundance = c(as.numeric(subdata$Nombre))
