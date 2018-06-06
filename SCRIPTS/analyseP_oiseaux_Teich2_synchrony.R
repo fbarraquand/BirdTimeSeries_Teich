@@ -64,13 +64,13 @@ limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calid
               "Tringa flavipes","Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
               "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
-              "Burrhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
+              "Burhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
               "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
 
 
 
 
-
+summed_abundances<-read.csv(file="summed_abundances.csv",header=TRUE,sep=";",dec=".") 
 setwd(paste(DIRECTORY_ORIGIN,"OUT/",sep=""))
 
 # ---------------------------------------------------------------------
@@ -79,9 +79,9 @@ setwd(paste(DIRECTORY_ORIGIN,"OUT/",sep=""))
 #
 # ---------------------------------------------------------------------
 #### T36 : SYNCHRONY CALCUL by MONTH
-SynchronyMonth=function(matrice,file_out,titre){ 
+SynchronyMonth=function(matrice,file_out,titre,loreau=TRUE, gross=TRUE,ymin=-1,ymax=1){ 
   pdf(file_out,width=14,height=8)
-  par(mar=c(4,4.5,3,2.5))
+  par(mar=c(4,4.5,5,2.5))
   par(oma = c(4.2, 0.5, 0.5, 0.5))
   vec_synchrony_Loreau = rep(0,12) #final results
   vec_synchrony_Gross  = rep(0,12) #final results
@@ -97,10 +97,29 @@ SynchronyMonth=function(matrice,file_out,titre){
     vec_synchrony_Gross[m]=synchrony(dataF_DBt, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross") 
     
   }
-  plot(1:12,vec_synchrony_Loreau,type="o",ylim=c(-0.05,1),pch=19, 
+  if(loreau==TRUE & gross==TRUE){
+  plot(1:12,vec_synchrony_Loreau,type="o",ylim=c(ymin,ymax),pch=19, 
        main=titre,ylab="Value of synchrony",xlab="month",cex.main=2,cex.lab=2,
        cex=2,cex.axis=2)
   lines(1:12,vec_synchrony_Gross,col="orange",type = "o",pch=19,cex=2)
+  }
+  if(loreau == TRUE & gross==FALSE){
+    plot(1:12,vec_synchrony_Loreau,type="o",ylim=c(ymin,ymax),pch=19, 
+         main=titre,ylab="Value of synchrony",xlab="month",cex.main=2,cex.lab=2,
+         cex=2,cex.axis=2)
+  }
+  if(loreau==FALSE & gross ==TRUE){
+    plot(1:12,vec_synchrony_Gross,type="o",ylim=c(ymin,ymax),pch=19, 
+         main=titre,ylab="Value of synchrony",xlab="month",cex.main=2,cex.lab=2,
+         cex=2,cex.axis=2,col="orange")
+  }
+  if(loreau ==FALSE & gross==FALSE){print("ERREUR, l'une des métriques doit être égale à true")
+    exit()}
+  abline(h=0,col='black',lty=3)
+  print ("Loreau toute la série")
+  print (vec_synchrony_Loreau)
+  print ("Gross toute la série")
+  print (vec_synchrony_Gross)
   #-----------------------
   # PERIODE >= 2006
 	vec_synchrony_Loreau = rep(0,12) #Final results
@@ -117,8 +136,12 @@ SynchronyMonth=function(matrice,file_out,titre){
     vec_synchrony_Gross[m]=synchrony(dataF_DBt, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross") 
     
   }
-  lines(1:12,vec_synchrony_Loreau,col="blue",type = "o",pch=19,cex=2)
-  lines(1:12,vec_synchrony_Gross,col="red",type = "o",pch=19,cex=2)
+  if(loreau==TRUE){lines(1:12,vec_synchrony_Loreau,col="blue",type = "o",pch=19,cex=2)}
+  if (gross==TRUE){lines(1:12,vec_synchrony_Gross,col="red",type = "o",pch=19,cex=2)}
+  print ("Loreau après 2006")
+  print (vec_synchrony_Loreau)
+  print ("Gross  après 2006")
+  print (vec_synchrony_Gross)
   #-----------------------
   # PERIODE < 2006
   vec_synchrony_Loreau = rep(0,12) #Final results
@@ -135,15 +158,28 @@ SynchronyMonth=function(matrice,file_out,titre){
     vec_synchrony_Gross[m]=synchrony(dataF_DBt, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross") 
     
   }
-  lines(1:12,vec_synchrony_Loreau,col="lightblue",type = "o",pch=19,cex=2)
-  lines(1:12,vec_synchrony_Gross,col="lightgreen",type = "o",pch=19,cex=2)
+  if(loreau==TRUE){lines(1:12,vec_synchrony_Loreau,col="lightblue",type = "o",pch=19,cex=2)}
+  if(gross==TRUE){lines(1:12,vec_synchrony_Gross,col="lightgreen",type = "o",pch=19,cex=2)}
   par(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)
   plot(0, 0, type = "n", bty = "n", xaxt = "n", yaxt = "n")
-  legend("bottom",c("Synchony by Loreau","Synchrony by Gross","Synchony by Loreau from 2006","Synchrony by Gross from 2006","Synchony by Loreau before 2006","Synchrony by Gross before 2006"), col=c("black","orange","blue","red","lightblue","lightgreen"),pch=c(16,16), xpd = TRUE, 
-         horiz=TRUE,
-         inset = c(0,0),bty = "n",cex=0.7,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)
+  if(loreau == TRUE & gross==TRUE){
+    legend("bottom",c("Synchony by Loreau","Synchrony by Gross","Synchony by Loreau from 2006","Synchrony by Gross from 2006","Synchony by Loreau before 2006","Synchrony by Gross before 2006"), col=c("black","orange","blue","red","lightblue","lightgreen"),pch=c(16,16), xpd = TRUE, 
+           horiz=TRUE,
+           inset = c(0,0),bty = "n",cex=0.7,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)
+  }
+  if(loreau==TRUE & gross==FALSE){
+    legend("bottom",c("Synchony by Loreau","Synchony by Loreau from 2006","Synchony by Loreau before 2006"), col=c("black","blue","lightblue"),pch=c(16,16), xpd = TRUE,  horiz=TRUE,inset = c(0,0),bty = "n",cex=0.7,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)
+  }
   
+  if(loreau==FALSE & gross==TRUE){
+    legend("bottom",c("Synchrony by Gross","Synchrony by Gross from 2006","Synchrony by Gross before 2006"), col=c("orange","red","lightgreen"),pch=c(16,16), xpd = TRUE,  horiz=TRUE,inset = c(0,0),bty = "n",cex=0.7,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)
+    
+  }
   dev.off()
+  print ("Loreau Avant 2006")
+  print (vec_synchrony_Loreau)
+  print ("Gross  Avant 2006")
+  print (vec_synchrony_Gross)
 }
 
 ## - Calls of the function n°T36
@@ -161,6 +197,7 @@ SynchronyMonth(tempDBt,"t39-Axe1-Teich-SynchronyComparison_byMonth_onlywadingBir
 # ---------------------------------------------------------------------
 #### T37 : SYNCHRONY BY MONTH, ONLY ANAS AND CALIDRIS
 Genre_synchronie =c('Anas','Calidris')
+
 pdf("t37-Axe1-Teich-SynchronyComparison_byMonth_selectedGenres.pdf",width=14,height=8)
 for (g in 1:length(Genre_synchronie)){
   par(mar=c(4,4.5,3,2.5))
@@ -1068,7 +1105,76 @@ mat_percent_abondance_tot_waders = mat_percent_abondance_tot_waders[ order(row.n
 par(mar=c(0.1,0.1,0.1,0.1))
 
 doughnut( c(mat_percent_abondance_tot_waders[,'percent'][round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.5,1),lty=1 )
-dev.off() 
+dev.off()
+
+
+pdf("T47-Axe1-Teich-les_3_especes.pdf",width=20,height=6,family = 'Times')
+par(mar=c(4,5,3,1))
+d_ticks = date(paste(unique(as.numeric(format(unique(DBt$Date), format = "%Y"))),"-01-01",sep=""))
+d_ticks = d_ticks[seq(1,length(d_ticks),by = 2)]
+nameTicks=unique(as.numeric(format(unique(DBt$Date), format = "%Y")))
+nameTicks = nameTicks[seq(1,length(nameTicks),by = 2)]
+abondance_egretta = subset(DBt,DBt$Nom_latin=='Egretta garzetta' & DBt$Annee>=1981)
+abondance_phalacrocorax = subset(DBt,DBt$Nom_latin=='Phalacrocorax carbo' & DBt$Annee>=1981)
+abondance_ardea = subset(DBt,DBt$Nom_latin=='Ardea cinerea' & DBt$Annee>=1981)
+ymin = 0
+ymax = max(abondance_egretta$Nombre,abondance_phalacrocorax$Nombre,abondance_ardea$Nombre,na.rm=TRUE)
+ymax = log(max(abondance_egretta$Nombre,abondance_phalacrocorax$Nombre,abondance_ardea$Nombre,na.rm=TRUE))
+xmin = date("1981-01-01")
+xmax = date("2016-04-01")
+plot(abondance_egretta$Date,log(abondance_egretta$Nombre),col="darkgreen",xlab="Year",ylab="Log abundance",xlim=c(xmin,xmax),cex.lab=1.8,cex.axis=1.5,xaxt="n",pch=19,ylim=c(ymin,ymax),type="o",lwd =1.8,cex=0.9)
+lines(abondance_egretta$Date,log(abondance_egretta$Nombre+1),col="darkgreen",lwd =1,lty=3)
+lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre),col="darkred",type='o',lwd=1.8,pch=19,cex=0.9)
+lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre+1),col="darkred",lwd =1,lty=3)
+lines(abondance_ardea$Date,log(abondance_ardea$Nombre),col="darkblue",type='o',lwd=1.8,pch=19,cex=0.9)
+lines(abondance_ardea$Date,log(abondance_ardea$Nombre+1),col="darkblue",lwd =1,lty=3)
+axis(1, at=d_ticks, labels=nameTicks,cex.axis=1.5)
+legend("topright",legend = c("Egretta garzetta",'Phalacrocorax carbo','Ardea cinerea'),col=c('darkgreen','darkred','darkblue'),pch=19,lwd=1)
+dev.off()
 
 
 
+#----- T48
+# test rapide 
+# les 3 espèces en même temps
+temp_data = subset(DBt,((DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Phalacrocorax carbo' | DBt$Nom_latin=='Ardea cinerea') &DBt$Annee>=1981))
+SynchronyMonth(matrice = temp_data,file_out = "T48-Axe1-Teich_Synchrony_for_the_3_competing_species.pdf",titre = "Gross synchrony calculation between \nEgretta garzetta, Phalacrocorax carbo and Ardea cinerea\n",loreau = FALSE,ymin = -0.5,ymax=1)
+
+## I put Egretta and Ardea in a same subset.
+HeronEgret = subset(summed_abundances,summed_abundances$Nom_latin=='HeronEgret')
+temp_data = subset(DBt,(DBt$Nom_latin=='Egretta garzetta' &DBt$Annee>=1981))
+temp_data=subset(temp_data, select=c("Nom_latin", "Date","Nombre"))
+HeronEgret=subset(HeronEgret,select=c("Nom_latin", "Date","Nombre")) # just to be sure
+temp_data=rbind(temp_data,HeronEgret) # for use the same function.
+SynchronyMonth(matrice = temp_data,file_out = "T48b-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
+
+# somme des valeurs HeronEgret
+HeronEgret =subset(DBt,((DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Ardea cinerea') &DBt$Annee>=1981))
+matHeronEgret = create_somme(HeronEgret$Date,HeronEgret$Nombre)
+temp_date = expand.grid(15,colnames(matHeronEgret),rownames(matHeronEgret)) #15 because i need a day for build complete date.
+temp_date = c(paste(temp_date[,1],temp_date[,2],temp_date[,3],sep='-'))
+temp_date = as.Date(temp_date,format="%d-%m-%Y")
+temp_value = c(t(matHeronEgret))
+temp_species = rep("Heron+Egret",length(temp_date))
+Cormoran = subset(DBt,(DBt$Nom_latin=='Phalacrocorax carbo' &DBt$Annee>=1981))
+Cormoran=subset(Cormoran, select=c("Nom_latin", "Date","Nombre"))
+df_HeronEgret = cbind(as.character(temp_date),temp_value,temp_species)
+colnames(df_HeronEgret)=c("Date","Nombre","Nom_latin")
+temp_matrice = rbind(Cormoran,df_HeronEgret)
+
+SynchronyMonth(matrice = temp_matrice,file_out = "T48c-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
+
+### si on met le cormoran à 15.
+Cormoran = subset(DBt,(DBt$Nom_latin=='Phalacrocorax carbo' &DBt$Annee>=1981))
+matCormoran = create_somme(Cormoran$Date,Cormoran$Nombre)
+temp_date_C = expand.grid(15,colnames(matCormoran),rownames(matCormoran)) #15 because i need a day for build complete date.
+temp_date_C = c(paste(temp_date_C[,1],temp_date_C[,2],temp_date_C[,3],sep='-'))
+temp_date_C = as.Date(temp_date_C,format="%d-%m-%Y")
+temp_value_C = c(t(matCormoran))
+temp_species_C = rep("Phalacrocorax carbo",length(temp_date))
+df_Cormoran = cbind(as.character(temp_date_C),temp_value_C,temp_species_C)
+colnames(df_Cormoran)=c("Date","Nombre","Nom_latin")
+temp_matrice = rbind(df_Cormoran,df_HeronEgret)
+temp_matrice= as.data.frame(temp_matrice)
+temp_matrice$Date=as.Date(as.character(temp_matrice$Date),format="%Y-%m-%d")
+SynchronyMonth(matrice = temp_matrice,file_out = "T48d-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
