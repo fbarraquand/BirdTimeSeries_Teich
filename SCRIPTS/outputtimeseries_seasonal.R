@@ -4,12 +4,39 @@ rm(list=ls())
 graphics.off()
 
 sum_of_species=function(tab, sp,nom){
+	require('lubridate')
 	tab=subset(tab,tab$Nom_latin %in% sp, c("Nombre","Date"))
 	tab_sum=aggregate(tab$Nombre,list(tab$Date),sum)
-	tab_sum=cbind(rep(nom,length(tab_sum[[1]])),tab_sum)
-        names(tab_sum)=c("Nom_latin","Date","Nombre")
+	names(tab_sum)=c("Date","Nombre")
+	tab_sum$Date=as.Date(tab_sum$Date)
+	yy=unique(year(tab$Date))
+	nombre=c()
+	dates=c()
+	for(y in yy){
+		min_m=1
+		max_m=12
+		#Do not create artefacts
+		if(y==min(yy)){
+		min_m=min(month(tab_sum$Date[year(tab_sum$Date)==y]))
+		}else if(y==max(yy)){
+		max_m=max(month(tab_sum$Date[year(tab_sum$Date)==y]))
+		}
+		for(m in min_m:max_m){
+			dates=c(dates,as.character(paste(y,sprintf("%02d",m),"15",sep="-")))
+			if(length(sum(tab_sum$Nombre[month(tab_sum$Date)==m&year(tab_sum$Date)==y]))>0){
+				nombre=c(nombre,sum(tab_sum$Nombre[month(tab_sum$Date)==m&year(tab_sum$Date)==y]))
+			}else{
+				nombre=c(nombre,0)
+			}
+		}
+	}
+	tab_sum=cbind(rep(nom,length(nombre)),dates,nombre)
+        tab_sum=as.data.frame(tab_sum)
+	names(tab_sum)=c("Nom_latin","Date","Nombre")
 	return(tab_sum)
 }
+
+as.numeric.factor <- function(x) {as.numeric(levels(x))[x]}
 
 season2_average=function(tab){
 	require('lubridate')
@@ -18,7 +45,9 @@ season2_average=function(tab){
 	yy=unique(year(tab$Date))
 	sp=unique(tab$Nom_latin)
 	array_mean=array(0,dim=c(length(sp),2,length(yy)),dimnames=list(sp,c("Cold","Warm"),as.character(yy)))
-	
+	if(class(tab$Nombre)=="factor"){
+        tab$Nombre=as.numeric.factor(tab$Nombre)
+	}
 	tab_yy=array(NA,dim=c(length(yy),2),dimnames=list(as.character(yy),c('Cold','Warm')))
 	for (y in yy){
 		length_warm=length(Nichage)
@@ -74,7 +103,7 @@ season2_average=function(tab){
 DBt<-read.csv(file="/home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/IN/DBWithMonthlyPhotoTeich_completed.csv",header=TRUE,sep=",",dec=".")
 DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)" | DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique") & (DBt$Annee>1980))
 sp=unique(DBt$Nom_latin)
-
+stop()
 print('Anas')
 sp_anas=sp[grep("Anas",sp)]
 anas_sum=sum_of_species(DBt,sp_anas,"Anas")
