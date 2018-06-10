@@ -353,9 +353,10 @@ SynchronySeason(DBt,"t40-Axe1-Teich-Comparison_synchrony_4seasons_all_species.pd
 # ---------------------------------------------------------------------
 ###### SYNCHRONy BY SEASON, other way of calculating, using the overlap of winter over two years.
 #### T40 V2  
-SynchronySeason2 = function(matrice,file_out,titre){
-  saison=list(c(11,12,1,2,3),c(5,6,7,8,9))
-  saison =  list(hiver_n=c(11, 12), hiver_n1=c(1,2,3),ete=c(5,6,7,8,9))
+SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
+  # saison=list(c(11,12,1,2,3),c(5,6,7,8,9))
+  # saison =  list(hiver_n=c(11, 12), hiver_n1=c(1,2,3),ete=c(5,6,7,8,9))
+  saison = list(hiver_n=c(11,12),hiver_n1=c(1,2),ete=c(5,6,7,8))
   
   vec_synchrony_Loreau=rep(0,6) #6 for 2season by 3 periods (all,before 2006 and from 2006)
   vec_synchrony_Gross=rep(0,6)
@@ -365,7 +366,7 @@ SynchronySeason2 = function(matrice,file_out,titre){
   abondance_hiver=c()
   date_hiver=c()
   species_hiver=c()
-  for(y in min(subdata$Annee):max(subdata$Annee)-1){
+  for(y in min(matrice$Annee):max(matrice$Annee)-1){
       subdata_ete = subset(matrice,as.numeric(format(matrice$Date, format = "%m")) %in% saison[['ete']] & as.numeric(format(matrice$Date, format = "%Y"))==y)
       subdata_hiver = subset(matrice,(as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n']] & as.numeric(format(matrice$Date, format = "%Y"))==y) | (as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n1']] & as.numeric(format(matrice$Date, format = "%Y"))==y+1))
       
@@ -406,9 +407,9 @@ SynchronySeason2 = function(matrice,file_out,titre){
   vec_synchrony_Gross[2]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
   
   #-----------------------
-  # PERIODE >= 2006
+  # PERIODE >= 2007
 
-  for(y in 2006:max(subdata$Annee)-1){
+  for(y in 2007:max(matrice$Annee)-1){
     subdata_ete = subset(matrice,as.numeric(format(matrice$Date, format = "%m")) %in% saison[['ete']] & as.numeric(format(matrice$Date, format = "%Y"))==y)
     subdata_hiver = subset(matrice,(as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n']] & as.numeric(format(matrice$Date, format = "%Y"))==y) | (as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n1']] & as.numeric(format(matrice$Date, format = "%Y"))==y+1))
     
@@ -449,7 +450,7 @@ SynchronySeason2 = function(matrice,file_out,titre){
   vec_synchrony_Gross[4]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
   #-----------------------
   # PERIODE < 2006
-  for(y in min(subdata$Annee):2006){
+  for(y in min(matrice$Annee):2006){
     subdata_ete = subset(matrice,as.numeric(format(matrice$Date, format = "%m")) %in% saison[['ete']] & as.numeric(format(matrice$Date, format = "%Y"))==y)
     subdata_hiver = subset(matrice,(as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n']] & as.numeric(format(matrice$Date, format = "%Y"))==y) | (as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n1']] & as.numeric(format(matrice$Date, format = "%Y"))==y+1))
     
@@ -489,21 +490,44 @@ SynchronySeason2 = function(matrice,file_out,titre){
   vec_synchrony_Loreau[6]= synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
   vec_synchrony_Gross[6]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
   
-
-  data_synchro =c(c(vec_synchrony_Loreau),c(vec_synchrony_Gross))
-  max_value = max(data_synchro,na.rm=TRUE)+0.002
+  data_synchro=c()
+  
+  if (Loreau == TRUE & Gross == TRUE){data_synchro =c(c(vec_synchrony_Loreau),c(vec_synchrony_Gross))
+  }
+  if(Loreau ==TRUE & Gross ==FALSE){data_synchro =c(vec_synchrony_Loreau)}
+  if(Loreau ==FALSE & Gross ==TRUE){data_synchro =c(vec_synchrony_Gross)
+  print ("Gross : W-All,S-All,W>=2007,S>=2007,W<2007,S<2007")
+  print (vec_synchrony_Gross)}
+  if(Loreau == FALSE & Gross ==FALSE){exit()}
+  max_value = max(data_synchro,na.rm=TRUE)+0.1
+  min_value = min(data_synchro,na.rm=TRUE)-0.1
   data_synchro = matrix(data_synchro,nc=6, byrow=T)
-  type =c("winter-all","summer-all","winter>=2006","summer>=2006","winter<2006","summer<2006")
+  type =c("winter-all","summer-all","winter>=2007","summer>=2007","winter<2007","summer<2007")
   colnames(data_synchro) = type
   pdf(file_out,width=14,height=8)
   par(mar=c(4,4.5,3,2.5))
   par(oma = c(4.2, 0.5, 0.5, 0.5))
-  barplot(data_synchro, xlab="X",ylab="Y", beside=T, col=c("#FFFFAA","#AAFFAA"), ylim=c(0,max_value), main=titre,cex.lab=1,cex.axis = 1,cex.main=2) # Tracer les barres
+  if (Loreau == TRUE & Gross == TRUE){
+  barplot(data_synchro, xlab="X",ylab="Y", beside=T, col=c("#FFFFAA","#AAFFAA"), ylim=c(min_value,max_value), main=titre,cex.lab=1,cex.axis = 1,cex.main=1.2)}
+  if (Loreau == TRUE & Gross == FALSE){
+    barplot(data_synchro, xlab="X",ylab="Y", beside=T, col=c("#FFFFAA"), ylim=c(min_value,max_value), main=titre,cex.lab=1,cex.axis = 1,cex.main=1.2)}
+  if (Loreau == FALSE & Gross == TRUE){
+    barplot(data_synchro, xlab="X",ylab="Y", beside=T, col=c("#AAFFAA"), ylim=c(min_value,max_value), main=titre,cex.lab=1,cex.axis = 1,cex.main=1.2)
+    }
+  
+  
   par(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)
   plot(0, 0, type = "n", bty = "n", xaxt = "n", yaxt = "n")
-  legend("bottom",c("Synchony by Loreau","Synchrony by Gross"), col=c("#FFFFAA","#AAFFAA"),pch=c(16,16), xpd = TRUE, 
+  if (Loreau == TRUE & Gross == TRUE){legend("bottom",c("Synchony by Loreau","Synchrony by Gross"), col=c("#FFFFAA","#AAFFAA"),pch=c(16,16), xpd = TRUE, 
          horiz=TRUE,
-         inset = c(0,0),bty = "n",cex=0.8,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)
+         inset = c(0,0),bty = "n",cex=0.8,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)}
+  if (Loreau == TRUE & Gross == FALSE){legend("bottom",c("Synchony by Loreau"), col=c("#FFFFAA"),pch=c(16,16), xpd = TRUE, 
+                                             horiz=TRUE,
+                                             inset = c(0,0),bty = "n",cex=0.8,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)}
+  if (Loreau == FALSE & Gross == TRUE){legend("bottom",c("Synchrony by Gross"), col=c("#AAFFAA"),pch=c(16,16), xpd = TRUE, 
+                                             horiz=TRUE,
+                                             inset = c(0,0),bty = "n",cex=0.8,pt.cex=1.5,lty=1,pt.lwd=1.5,lwd=1.5)}
+  
   dev.off()
 }
 ## - call function
@@ -1137,19 +1161,22 @@ dev.off()
 
 #----- T48
 # test rapide 
-# les 3 espèces en même temps
+# Calcul of synchrony for the 3 species, without modification.
 temp_data = subset(DBt,((DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Phalacrocorax carbo' | DBt$Nom_latin=='Ardea cinerea') &DBt$Annee>=1981))
 SynchronyMonth(matrice = temp_data,file_out = "T48-Axe1-Teich_Synchrony_for_the_3_competing_species.pdf",titre = "Gross synchrony calculation between \nEgretta garzetta, Phalacrocorax carbo and Ardea cinerea\n",loreau = FALSE,ymin = -0.5,ymax=1)
 
-## I put Egretta and Ardea in a same subset.
+## I put Egretta and Ardea in a same subset. I used the data of Coralie(summed_abundances)
 HeronEgret = subset(summed_abundances,summed_abundances$Nom_latin=='HeronEgret')
-temp_data = subset(DBt,(DBt$Nom_latin=='Egretta garzetta' &DBt$Annee>=1981))
+temp_data = subset(DBt,(DBt$Nom_latin=='Phalacrocorax carbo' &DBt$Annee>=1981))
 temp_data=subset(temp_data, select=c("Nom_latin", "Date","Nombre"))
 HeronEgret=subset(HeronEgret,select=c("Nom_latin", "Date","Nombre")) # just to be sure
 temp_data=rbind(temp_data,HeronEgret) # for use the same function.
 SynchronyMonth(matrice = temp_data,file_out = "T48b-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
 
-# somme des valeurs HeronEgret
+# -----
+# Sum of values of Heron and Aigrette, I create my own dataset for check
+# Egretta and Ardea have the same dates.
+# After 2007, Phalacrocorax has differents dates.
 HeronEgret =subset(DBt,((DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Ardea cinerea') &DBt$Annee>=1981))
 matHeronEgret = create_somme(HeronEgret$Date,HeronEgret$Nombre)
 temp_date = expand.grid(15,colnames(matHeronEgret),rownames(matHeronEgret)) #15 because i need a day for build complete date.
@@ -1162,10 +1189,21 @@ Cormoran=subset(Cormoran, select=c("Nom_latin", "Date","Nombre"))
 df_HeronEgret = cbind(as.character(temp_date),temp_value,temp_species)
 colnames(df_HeronEgret)=c("Date","Nombre","Nom_latin")
 temp_matrice = rbind(Cormoran,df_HeronEgret)
+Annee = format(temp_matrice$Date,format = "%Y")
+temp_matrice =cbind(temp_matrice,Annee)
+temp_matrice$Annee=as.numeric(as.character(temp_matrice$Annee))
+temp_matrice$Nom_latin=as.character(temp_matrice$Nom_latin)
+temp_matrice$Nombre=as.numeric(temp_matrice$Nombre)
 
-SynchronyMonth(matrice = temp_matrice,file_out = "T48c-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
+#----- T49
 
-### si on met le cormoran à 15.
+#SynchronyMonth(matrice = temp_matrice,file_out = "T48c-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
+SynchronySeason2(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",Loreau = FALSE,Gross=TRUE)
+
+#-------- 
+# Sum of values of Heron and Aigrette, I create my own dataset for check
+# Egretta and Ardea have the same dates.
+# After 2007, Phalacrocorax has differents dates. In this test, i changed the days of this data, all data is artificially made on the 15th of the month. it is to see the impact of the day on the calculation of the index of Gross.
 Cormoran = subset(DBt,(DBt$Nom_latin=='Phalacrocorax carbo' &DBt$Annee>=1981))
 matCormoran = create_somme(Cormoran$Date,Cormoran$Nombre)
 temp_date_C = expand.grid(15,colnames(matCormoran),rownames(matCormoran)) #15 because i need a day for build complete date.
@@ -1178,4 +1216,18 @@ colnames(df_Cormoran)=c("Date","Nombre","Nom_latin")
 temp_matrice = rbind(df_Cormoran,df_HeronEgret)
 temp_matrice= as.data.frame(temp_matrice)
 temp_matrice$Date=as.Date(as.character(temp_matrice$Date),format="%Y-%m-%d")
+
 SynchronyMonth(matrice = temp_matrice,file_out = "T48d-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
+
+
+# TEST BY SEASON FOR THE SAME SPECIES.
+# type =c("winter-all","summer-all","winter>=2006","summer>=2006","winter<2006","summer<2006")
+# SynchronySeason(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\nSame Date",saison = c(c(11,12,1,2),c(6,7,8,9)),type=type )
+
+Annee = format(temp_matrice$Date,format = "%Y")
+temp_matrice =cbind(temp_matrice,Annee)
+temp_matrice$Annee=as.numeric(as.character(temp_matrice$Annee))
+temp_matrice$Nom_latin=as.character(temp_matrice$Nom_latin)
+temp_matrice$Nombre=as.numeric(temp_matrice$Nombre)
+
+SynchronySeason2(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species__same_date_for_Phalacrocorax.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\nSame Dates for Phalacrocorax",Loreau = FALSE,Gross=TRUE)
