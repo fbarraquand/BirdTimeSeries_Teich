@@ -13,8 +13,7 @@ library("lubridate")
 DBt<-read.csv(file="./IN/DBWithMonthlyPhotoTeich_completed.csv",header=TRUE,sep=",",dec=".")
 
 DBt$Date=as.Date(DBt$Date)
-DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)" | DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")) #Before 2007, not interesting for what I want
-
+DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & (DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)" | DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")) 
 #DBt = subset(DBt,(((DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)") | ((DBt$Protocol==1 | DBt$Protocol==2)  & DBt$Lieu_dit=="USN01-Artigues-Réserve ornithologique")))
 
 species=sort(unique(DBt$Nom_latin))
@@ -23,8 +22,11 @@ for (s in species){
 	for (a in 1973:2016){
 		for (m in 1:12){
 			plou=subset(DBt, Nom_latin==s & Mois==m & Annee==a)
-			if (length(unique(plou$Jour))>1){
-				print(paste(a,m,unique(plou$Jour)))	
+			if (length(plou$Jour)>1){
+				print('*****************************************\n')	
+				print(paste(a,m,unique(plou$Jour)))
+				print(plou$Nombre)
+				print('*****************************************\n')	
 			}
 		}
 	}

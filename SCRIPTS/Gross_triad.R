@@ -10,8 +10,8 @@ thresh=0.05
 # Héron cendré Ardea cinerea
 # Aigrette garzette Egretta garzetta
 
-db_warm=read.csv("IN/warmseason_abundances_asdataframe.csv",sep=";",header=T)
-db_cold=read.csv("IN/coldseason_abundances_asdataframe.csv",sep=";",header=T)
+db_warm=read.csv("IN/warmseason_abundances_asdataframe_summedgroups.csv",sep=";",header=T)
+db_cold=read.csv("IN/coldseason_abundances_asdataframe_summedgroups.csv",sep=";",header=T)
 
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
@@ -35,6 +35,7 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 
 #Plot everything
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
+print(essai_taxo)
 color=rep(c("Black","Lightblue","Darkblue"),2)
 pdf("OUT/gross_triad.pdf")
 par(mfrow=c(1,1),mar=c(3,2,1,.5))
@@ -42,6 +43,7 @@ plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="")
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs
+	print(obs)
         ic=2*sd(essai_taxo[[v]]$rands[1:100])/sqrt(100)
         p_s=essai_taxo[[v]]$pval
         x=v+(v>3)
