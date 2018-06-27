@@ -64,12 +64,14 @@ season2_average=function(tab){
 			length_cold=length(intersect(c(11,12),list_month))
 		}
 		tab_yy[as.character(y),]=c(length_cold,length_warm)
+	
 	}
 	for (dd in 1:length(tab$Date)){
         	d=tab$Date[dd]
 	        y=as.character(year(as.Date(d)))
         	mois=as.integer(month(as.Date(d)))
 		for (s in sp){
+			print(s)
 			 if(length(tab$Nombre[tab$Date==d&tab$Nom_latin==s])>0){
 				if(mois>=min(Nichage)&mois<=max(Nichage)){
 			               array_mean[s,"Warm",y]=array_mean[s,"Warm",y]+1/tab_yy[y,'Warm']*tab$Nombre[tab$Date==d&tab$Nom_latin==s]
@@ -77,9 +79,10 @@ season2_average=function(tab){
 	                		array_mean[s,"Cold",y]=array_mean[s,"Cold",y]+1/tab_yy[y,'Cold']*tab$Nombre[tab$Date==d&tab$Nom_latin==s]
         			}else if(mois>0&mois<=Hivernage[4]){
 					if(as.integer(y)>min(yy)){ #because we can do nothing with january and february 1981
-			                	array_mean[s,"Cold",as.character(as.integer(y)-1)]=array_mean[s,"Cold",y]+1/tab_yy[as.character(as.integer(y)-1),'Cold']*tab$Nombre[tab$Date==d&tab$Nom_latin==s]
+			                	array_mean[s,"Cold",as.character(as.integer(y)-1)]=array_mean[s,"Cold",as.character(as.integer(y)-1)]+1/tab_yy[as.character(as.integer(y)-1),'Cold']*tab$Nombre[tab$Date==d&tab$Nom_latin==s]
 					}
         			}
+	
 
 			}
 		}
