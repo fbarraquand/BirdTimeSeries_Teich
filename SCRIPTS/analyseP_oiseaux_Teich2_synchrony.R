@@ -366,7 +366,7 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
   abondance_hiver=c()
   date_hiver=c()
   species_hiver=c()
-  for(y in min(matrice$Annee):max(matrice$Annee)-1){
+  for(y in min(matrice$Annee):(max(matrice$Annee)-1)){
       subdata_ete = subset(matrice,as.numeric(format(matrice$Date, format = "%m")) %in% saison[['ete']] & as.numeric(format(matrice$Date, format = "%Y"))==y)
       subdata_hiver = subset(matrice,(as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n']] & as.numeric(format(matrice$Date, format = "%Y"))==y) | (as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n1']] & as.numeric(format(matrice$Date, format = "%Y"))==y+1))
       
@@ -414,7 +414,7 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
   abondance_hiver=c()
   date_hiver=c()
   species_hiver=c()
-  for(y in 2007:max(matrice$Annee)-1){
+  for(y in 2007:(max(matrice$Annee)-1)){
     subdata_ete = subset(matrice,as.numeric(format(matrice$Date, format = "%m")) %in% saison[['ete']] & as.numeric(format(matrice$Date, format = "%Y"))==y)
     subdata_hiver = subset(matrice,(as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n']] & as.numeric(format(matrice$Date, format = "%Y"))==y) | (as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n1']] & as.numeric(format(matrice$Date, format = "%Y"))==y+1))
     
@@ -507,13 +507,13 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
   }
   if(Loreau ==TRUE & Gross ==FALSE){data_synchro =c(vec_synchrony_Loreau)}
   if(Loreau ==FALSE & Gross ==TRUE){data_synchro =c(vec_synchrony_Gross)
-  print ("Gross : W-All,S-All,W>=2007,S>=2007,W<2007,S<2007")
+  print ("Gross : Sum.-All,Wint.-All,Sum.>=2007,Wint.>=2007,Sum.<2007,wint.<2007")
   print (vec_synchrony_Gross)}
   if(Loreau == FALSE & Gross ==FALSE){exit()}
   max_value = max(data_synchro,na.rm=TRUE)+0.1
   min_value = min(data_synchro,na.rm=TRUE)-0.1
   data_synchro = matrix(data_synchro,nc=6, byrow=T)
-  type =c("winter-all","summer-all","winter>=2007","summer>=2007","winter<2007","summer<2007")
+  type =c("Summer-all","winter-all","summer>=2007","winter>=2007","summer<2007","winter<2007")
   colnames(data_synchro) = type
   pdf(file_out,width=14,height=8)
   par(mar=c(4,4.5,3,2.5))
@@ -1245,14 +1245,59 @@ temp_matrice$Nombre=as.numeric(as.character(temp_matrice$Nombre))
 
 SynchronySeason2(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species__same_date_for_Phalacrocorax.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\nSame Dates for Phalacrocorax",Loreau = FALSE,Gross=TRUE)
 
+# # with dataset of Coralie juste Heron Egret
+# HeronEgret = subset(summed_abundances,summed_abundances$Nom_latin=='HeronEgret')
+# temp_data = subset(DBt,(DBt$Nom_latin=='Phalacrocorax carbo' &DBt$Annee>=1981))
+# temp_data=subset(temp_data, select=c("Nom_latin", "Date","Nombre"))
+# HeronEgret=subset(HeronEgret,select=c("Nom_latin", "Date","Nombre")) # just to be sure
+# temp_data=rbind(temp_data,HeronEgret) # for use the same function.
+# Annee = format(temp_data$Date,format = "%Y")
+# temp_data =cbind(temp_data,Annee)
+# temp_data$Annee=as.numeric(as.character(temp_data$Annee))
+# temp_data$Nom_latin=as.character(temp_data$Nom_latin)
+# temp_data$Nombre=as.numeric(as.character(temp_data$Nombre))
+# temp_data$Nombre=as.numeric(as.character(temp_data$Nombre))
+# SynchronySeason2(matrice = temp_data,"T49b-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",Loreau = FALSE,Gross=TRUE)
+# 
+# # with dataset of Coralie juste Heron Egret et cormoran
+# temp_data = subset(summed_abundances,summed_abundances$Nom_latin=='HeronEgret' | summed_abundances$Nom_latin=='Cormorant')
+# temp_data=subset(temp_data, select=c("Nom_latin", "Date","Nombre"))
+# temp_data$Date=as.Date(as.character(temp_data$Date),format="%Y-%m-%d")
+# Annee = format(temp_data$Date,format = "%Y")
+# temp_data =cbind(temp_data,Annee)
+# temp_data$Annee=as.numeric(as.character(temp_data$Annee))
+# temp_data$Nom_latin=as.character(temp_data$Nom_latin)
+# temp_data$Nombre=as.numeric(as.character(temp_data$Nombre))
+# SynchronySeason2(matrice = temp_matrice,"T49b-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species__same_date_for_Phalacrocorax.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\nSame Dates for Phalacrocorax",Loreau = FALSE,Gross=TRUE)
+
 # Mean abundance, for hot and cold seasons for 2015
-# sum(as.numeric(as.character(temp_matrice$Nombre[temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])))/length(temp_matrice$Nombre[temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])
-# 
-# sum(as.numeric(as.character(temp_matrice$Nombre[temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])))/length(temp_matrice$Nombre[temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])
-# 
-# sum(as.numeric(as.character(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2014 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])))/length(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2014 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])
-# 
-# sum(as.numeric(as.character(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2014 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])))/length(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2014 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])
-# 
-# t = subset (DBt, (DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Ardea cinerea' ) & DBt$Annee==2015 & as.numeric(format(DBt$Date, format = "%m")) %in% c(5,6,7,8) )
-# t<-t[colnames(t) %in% c("Nom_latin","Date","Nombre")]
+#  sum(as.numeric(as.character(temp_matrice$Nombre[temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])))/length(temp_matrice$Nombre[temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])
+# # 
+#  sum(as.numeric(as.character(temp_matrice$Nombre[temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])))/length(temp_matrice$Nombre[temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])
+# # 
+# sum(as.numeric(as.character(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2016 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])))/length(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Phalacrocorax carbo' & temp_matrice$Annee==2016 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])
+# # 
+#  sum(as.numeric(as.character(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2016 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])))/length(temp_matrice$Nombre[( temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin=='Heron+Egret' & temp_matrice$Annee==2015 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])
+# # 
+#  t = subset (DBt, (DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Ardea cinerea' ) & DBt$Annee==2015 & as.numeric(format(DBt$Date, format = "%m")) %in% c(5,6,7,8) )
+#  t<-t[colnames(t) %in% c("Nom_latin","Date","Nombre")]
+
+
+verification_abondance = function(temp_matrice){
+  species = as.character(unique(temp_matrice$Nom_latin))
+  min = min(temp_matrice$Annee)
+  max = max(temp_matrice$Annee)
+  for (s in 1:length(species)){
+    print ("Saison froide")
+    for (y in min:(max-1)){
+      hiver = sum(as.numeric(as.character(temp_matrice$Nombre[( temp_matrice$Nom_latin==species[s] & temp_matrice$Annee==y & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin==species[s] & temp_matrice$Annee==y+1 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])))/length(temp_matrice$Nombre[( temp_matrice$Nom_latin==species[s] & temp_matrice$Annee==y & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(11,12)) |  (temp_matrice$Nom_latin==species[s] & temp_matrice$Annee==y+1 & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(1,2)) ])
+      print (paste(y,";",species[s],";",hiver))
+    }
+    print ("Saison Chaude")
+    for (y in min:(max-1)){
+      ete = sum(as.numeric(as.character(temp_matrice$Nombre[temp_matrice$Nom_latin==species[s]& temp_matrice$Annee==y & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])))/length(temp_matrice$Nombre[temp_matrice$Nom_latin==species[s] & temp_matrice$Annee==y & as.numeric(format(temp_matrice$Date, format = "%m")) %in% c(5,6,7,8) ])  
+      print (paste(y,";",species[s],";",ete))
+    }
+  }
+}
+verification_abondance(subset(temp_matrice,temp_matrice$Annee>=2007))
