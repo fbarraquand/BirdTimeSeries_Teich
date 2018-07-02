@@ -71,7 +71,9 @@ season2_average=function(tab){
 	        y=as.character(year(as.Date(d)))
         	mois=as.integer(month(as.Date(d)))
 		for (s in sp){
+			if(dd==1){
 			print(s)
+			}
 			 if(length(tab$Nombre[tab$Date==d&tab$Nom_latin==s])>0){
 				if(mois>=min(Nichage)&mois<=max(Nichage)){
 			               array_mean[s,"Warm",y]=array_mean[s,"Warm",y]+1/tab_yy[y,'Warm']*tab$Nombre[tab$Date==d&tab$Nom_latin==s]

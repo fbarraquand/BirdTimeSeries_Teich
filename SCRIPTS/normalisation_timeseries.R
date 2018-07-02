@@ -30,11 +30,12 @@ tab_calidris=season2_average(tmp)
 print('Waders')
 limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidris temminckii","Calidris canutus",
               "Calidris alba","Calidris alpina","Calidris minuta","Calidris maritima" ,"Gallinago gallinago",
-              "Tringa flavipes","Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
+              "Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
               "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
               "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
+#Tringa flavipes never appers with Protocol>0
 tmp=subset(DBt,DBt$Nom_latin %in% limicoles)
 tab_waders=season2_average(tmp)
 
@@ -94,12 +95,15 @@ sp_all=c()
 abundance_cold=c()
 abundance_warm=c()
 pdf("OUT/closer_look_waders.pdf")
-par(mfrow=c(6,6))
+par(mfrow=c(4,4))
 for (i in 1:length(limicoles)){
         ss=as.character(limicoles[i])
         sp_all=c(sp_all,rep(ss,length(dd)))
         abundance_cold=c(abundance_cold,tab_waders[ss,'Cold',dd])
         abundance_warm=c(abundance_warm,tab_waders[ss,'Warm',dd])
+	if(i==17){
+	par(mfrow=c(4,4))
+	}
         plot(1981:2015,tab_waders[ss,'Cold',dd],ylim=c(0,max(tab_waders[ss,,],na.rm=T)),xlim=c(1981,2015),col="blue",t="o",pch=16,ylab=ss,xlab="")
         lines(1981:2015,tab_waders[ss,'Warm',dd],col="red",t="o",pch=16)
 }
@@ -114,13 +118,15 @@ sp_all=c()
 abundance_cold=c()
 abundance_warm=c()
 pdf("OUT/closer_look_freq.pdf")
-par(mfrow=c(8,8))
 for (i in 1:length(oiseaux_Frequents_t)){
+	if(i%%12==1){
+	par(mfrow=c(4,3))
+	}
         ss=as.character(oiseaux_Frequents_t[i])
         sp_all=c(sp_all,rep(ss,length(dd)))
         abundance_cold=c(abundance_cold,tab_freq[ss,'Cold',dd])
         abundance_warm=c(abundance_warm,tab_freq[ss,'Warm',dd])
-        plot(1981:2015,tab_freq[ss,'Cold',dd],ylim=c(0,max(tab_anas[ss,,],na.rm=T)),xlim=c(1981,2015),col="blue",t="o",pch=16,ylab=ss,xlab="")
+        plot(1981:2015,tab_freq[ss,'Cold',dd],ylim=c(0,max(tab_freq[ss,,],na.rm=T)),xlim=c(1981,2015),col="blue",t="o",pch=16,ylab=ss,xlab="")
         lines(1981:2015,tab_freq[ss,'Warm',dd],col="red",t="o",pch=16)
 }
 data_frame_freq_cold=data.frame(dates,sp_all,abundance_cold)
