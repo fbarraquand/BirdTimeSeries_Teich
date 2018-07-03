@@ -66,11 +66,13 @@ season2_average=function(tab){
 		tab_yy[as.character(y),]=c(length_cold,length_warm)
 	
 	}
-	for (dd in 1:length(tab$Date)){
-        	d=tab$Date[dd]
+	dates=unique(tab$Date)
+	for (dd in 1:length(dates)){
+        	d=dates[dd]
 	        y=as.character(year(as.Date(d)))
         	mois=as.integer(month(as.Date(d)))
 		for (s in sp){
+			s=as.character(s)
 			if(dd==1){
 			print(s)
 			}

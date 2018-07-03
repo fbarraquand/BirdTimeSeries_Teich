@@ -14,8 +14,8 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
 	data_matrix=convert_to_matrix(data)
 	#sp_data_frame=sapply(colnames(data_matrix),function(x) rep(x,dim(data_matrix)[1]))
 	#adates=rep(c(data[2]),dim(data_matrix)[2])
-	dates=data[1]
-	sp_data_frame=data[2]
+	dates=data$dates
+	sp_data_frame=data$sp_data_frame
 	nr = NROW(data_matrix)
         nc = NCOL(data_matrix)
         if (!quiet) 
@@ -26,6 +26,7 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
                 lags = sample(1:nr, size = nc, replace = TRUE)
                 rand.mat = mlag(data_matrix, lags)
 		rand.mat=data.frame(sp_data_frame,dates,c(rand.mat))
+		names(rand.mat)=c("sp_data_frame","dates","abundance")
             results$rands[i] = community_sync_Gross_aux(rand.mat)
             if (!quiet) 
                 setTxtProgressBar(prog.bar, i)
@@ -46,7 +47,7 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
 
 community_sync_Gross_aux=function (data){
 	require('codyn')
-	res=synchrony(data,time.var="dates",species.var="sp_data_frame",abundance.var=dimnames(data)[[2]][3],metric="Gross")
+	res=synchrony(data,time.var="dates",species.var="sp_data_frame",abundance.var="abundance",metric="Gross")
 	return(res)
 }
 
@@ -59,7 +60,7 @@ convert_to_matrix=function(data){
 	for (s in sp){
 		for (d in adates){
 			if(length(which(data$sp_data_frame==s&data$dates==d))>0){
-			mm[as.character(d),s]=data[which(data$sp_data_frame==s&data$dates==d),3]
+			mm[as.character(d),s]=data[which(data$sp_data_frame==s&data$dates==d),"abundance"]
 			}
 		}
 	}
