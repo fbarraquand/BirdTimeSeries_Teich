@@ -68,8 +68,9 @@ limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calid
               "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
 
 
+birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis","Calidris fuscicollis","Calidris himantopus","Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus")
 
-
+DBt=subset(DBt,!DBt$Nom_latin %in% birds_to_remove)
 summed_abundances<-read.csv(file="summed_abundances.csv",header=TRUE,sep=";",dec=".") 
 setwd(paste(DIRECTORY_ORIGIN,"OUT/",sep=""))
 
@@ -188,7 +189,7 @@ SynchronyMonth=function(matrice,file_out,titre,loreau=TRUE, gross=TRUE,ymin=-1,y
 tempDBt = subset(DBt,as.character(DBt$Nom_latin)%in% oiseaux_Frequents_t )
 SynchronyMonth(tempDBt,"t38-Axe1-Teich-SynchronyComparison_byMonth_frequentSpecies.pdf","Evolution of Synchrony from Loreau and Gross by month (frequent species)")
 tempDBt = subset(DBt,as.character(DBt$Nom_latin)%in% limicoles )
-#SynchronyMonth(tempDBt,"t39-Axe1-Teich-SynchronyComparison_byMonth_onlywadingBirds_test.pdf","Evolution of Synchrony from Loreau and Gross by month (Wading Birds)")
+SynchronyMonth(tempDBt,"t39-Axe1-Teich-SynchronyComparison_byMonth_onlywadingBirds_test.pdf","Evolution of Synchrony from Loreau and Gross by month (Wading Birds)")
 
 
 # ---------------------------------------------------------------------
@@ -345,7 +346,7 @@ summer = c(7,8,9)
 autumn = c(10,11,12)
 saison2=list(winter,spring,summer,autumn)
 type =c("winter-all","spring-all","summer-all","autumn-all","winter>=2006","spring>=2006","summer>=2006","autumn>=2006","winter<2006","spring<2006","summer<2006","autumn<2006")
-#SynchronySeason(DBt,"t40-Axe1-Teich-Comparison_synchrony_4seasons_all_species.pdf","Comparison of the synchrony between the 4 seasons for all bird species",saison2,type)
+SynchronySeason(DBt,"t40-Axe1-Teich-Comparison_synchrony_4seasons_all_species.pdf","Comparison of the synchrony between the 4 seasons for all bird species",saison2,type)
 # ---------------------------------------------------------------------
 #
 #                              SCRIPT T-40 - V2
@@ -542,9 +543,9 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
   dev.off()
 }
 ## - call function
-#SynchronySeason2(DBt,"t40-Axe1-Teich-Comparison_synchrony_season_all_species_v2.pdf","Comparison Synchrony Season - All species")
-#tempDBt = subset(DBt,as.character(DBt$Nom_latin)%in% oiseaux_Frequents_t )
-#SynchronySeason2(tempDBt,"t41-Axe1-Teich-Synchrony_season_only_frequent_species.pdf","Comparison Synchrony Season - Frequent Species")
+SynchronySeason2(DBt,"t40-Axe1-Teich-Comparison_synchrony_season_all_species_v2.pdf","Comparison Synchrony Season - All species")
+tempDBt = subset(DBt,as.character(DBt$Nom_latin)%in% oiseaux_Frequents_t )
+SynchronySeason2(tempDBt,"t41-Axe1-Teich-Synchrony_season_only_frequent_species.pdf","Comparison Synchrony Season - Frequent Species")
 
 ##################################################################
 # TEST manual verification of values, to compare with coralie results
@@ -1301,3 +1302,23 @@ verification_abondance = function(temp_matrice){
   }
 }
 verification_abondance(subset(temp_matrice,temp_matrice$Annee>=2007))
+
+###################################################################################################################
+# Ratio abundance for each group  relative to total abundance !
+# calidris
+
+abondance_calidris = subset(DBt,grepl("^Calidris",DBt$Nom_latin,ignore.case = TRUE) & DBt$Annee>=1981)
+print (paste("Ratio abundance Calidris : ",sum(abondance_calidris$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
+# anas
+abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE)& DBt$Annee>=1981)
+print (paste("Ratio abundance Anas : ",sum(abondance_anas$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
+# waders
+abondance_waders = subset(DBt,as.character(DBt$Nom_latin)%in% limicoles & DBt$Annee>=1981)
+print (paste("Ratio abundance waders : ",sum(abondance_waders$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
+# frequent
+abondance_frequent = subset(DBt,as.character(DBt$Nom_latin)%in% oiseaux_Frequents_t & DBt$Annee>=1981)
+print (paste("Ratio abundance frequent : ",sum(abondance_frequent$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
+# list of sparow (passereaux in french), complete ?
+sparows = c("Alauda arvensis","Lullula arborea","Plectrophenax nivalis","Emberiza schoeniclus","Emberiza citrinella","Emberiza hortulana","Emberiza calandra","Carduelis carduelis","Sturnus vulgaris","Sylvia atricapilla","Sylvia borin","Sylvia communis","Sylvia undata","Garrulus glandarius","Muscicapa striata","Ficedula hypoleuca","Luscinia svecica","Luscinia svecica cyanecula / namnetum","Luscinia svecica cyanecula","Luscinia svecica namnetum","Delichon urbicum","Riparia riparia","Cecropis daurica","Hirundo rustica","Oriolus oriolus","Passer domesticus","Passer montanus","Lanius senator","Lanius collurio","Fringilla coelebs","Fringilla montifringilla","Anthus trivialis","Anthus pratensis","Anthus petrosus","Anthus campestris","Anthus spinoletta","Sitta europaea","Carduelis flammea")
+abondance_sparows = subset(DBt,as.character(DBt$Nom_latin)%in% sparows & DBt$Annee>=1981)
+print (paste("Ratio abundance sparow : ",sum(abondance_sparows$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
