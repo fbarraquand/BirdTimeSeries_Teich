@@ -7,19 +7,19 @@ source("SCRIPTS/test_synchrony_Gross.r")
 
 thresh=0.05
 #Anas and Calidris
-db_warm=read.csv("IN/warmseason_abundances_asdataframe.csv",sep=";",header=T)
-db_cold=read.csv("IN/coldseason_abundances_asdataframe.csv",sep=";",header=T)
+db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
+db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",header=T)
 
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 
-db_warm_all=subset(db_warm,sp_data_frame %in% c("Anas","Calidris"))
+db_warm_all=subset(db_warm,sp_data_frame %in% c("Anas","Calidris")&dates<2016)
 db_warm_pre_2006=subset(db_warm,sp_data_frame %in% c("Anas","Calidris")&dates<=2006)
-db_warm_post_2006=subset(db_warm,sp_data_frame %in% c("Anas","Calidris")&dates>2006)
-db_cold_all=subset(db_cold,sp_data_frame %in% c("Anas","Calidris"))
+db_warm_post_2006=subset(db_warm,sp_data_frame %in% c("Anas","Calidris")&dates>2006&dates<2016)
+db_cold_all=subset(db_cold,sp_data_frame %in% c("Anas","Calidris")&dates<2016)
 db_cold_pre_2006=subset(db_cold,sp_data_frame %in% c("Anas","Calidris")&dates<=2006)
-db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Anas","Calidris")&dates>2006)
+db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Anas","Calidris")&dates>2006&dates<2016)
 
 #Compute synchrony values
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=100)
@@ -54,12 +54,12 @@ for (v in 1:6){
 abline(h=0.0,lty=2,lwd=2)
 legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
 
-db_warm_all=subset(db_warm,sp_data_frame %in% c("Waders","Ducks"))
+db_warm_all=subset(db_warm,sp_data_frame %in% c("Waders","Ducks")&dates<2016)
 db_warm_pre_2006=subset(db_warm,sp_data_frame %in% c("Waders","Ducks")&dates<=2006)
-db_warm_post_2006=subset(db_warm,sp_data_frame %in% c("Waders","Ducks")&dates>2006)
-db_cold_all=subset(db_cold,sp_data_frame %in% c("Waders","Ducks"))
+db_warm_post_2006=subset(db_warm,sp_data_frame %in% c("Waders","Ducks")&dates>2006&dates<2016)
+db_cold_all=subset(db_cold,sp_data_frame %in% c("Waders","Ducks")&dates<2016)
 db_cold_pre_2006=subset(db_cold,sp_data_frame %in% c("Waders","Ducks")&dates<=2006)
-db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Waders","Ducks")&dates>2006)
+db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Waders","Ducks")&dates>2006&dates<2016) #Because there is a problem for 2016 (na values)
 
 #Compute synchrony values
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=100)
@@ -73,7 +73,7 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 #Plot everything
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 color=rep(c("Black","Lightblue","Darkblue"),2)
-plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="")
+plot(0,0,t="n",ylim=c(-.75,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="")
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs

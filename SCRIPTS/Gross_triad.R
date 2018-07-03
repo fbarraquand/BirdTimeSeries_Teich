@@ -10,19 +10,19 @@ thresh=0.05
 # Héron cendré Ardea cinerea
 # Aigrette garzette Egretta garzetta
 
-db_warm=read.csv("IN/warmseason_abundances_asdataframe_summedgroups.csv",sep=";",header=T)
-db_cold=read.csv("IN/coldseason_abundances_asdataframe_summedgroups.csv",sep=";",header=T)
+db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
+db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",header=T)
 
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 
-db_warm_all=subset(db_warm,sp_data_frame %in% c("Cormorant","HeronEgret"))
+db_warm_all=subset(db_warm,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<2016)
 db_warm_pre_2006=subset(db_warm,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<=2006)
-db_warm_post_2006=subset(db_warm,sp_data_frame %in% c("Cormorant","HeronEgret")&dates>2006)
-db_cold_all=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret"))
+db_warm_post_2006=subset(db_warm,sp_data_frame %in% c("Cormorant","HeronEgret")&dates>2006&dates<2016)#Because using the NA for 2016 makes results wrong
+db_cold_all=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<2016)
 db_cold_pre_2006=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<=2006)
-db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret")&dates>2006)
+db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret")&dates>2006&dates<2016)
 
 #Compute synchrony values
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=100)
