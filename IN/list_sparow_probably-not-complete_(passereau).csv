@@ -1,0 +1,283 @@
+;"Nom latin";"Nom commun ";"Passereau"
+"1";"Prunella modularis";"Accenteur mouchet";
+"2";"Aquila pennata";"Aigle botté";
+"3";"Aquila clanga";"Aigle criard";
+"4";"Egretta garzetta";"Aigrette garzette";
+"5";"Alauda arvensis";"Alouette des champs";"x"
+"6";"Lullula arborea";"Alouette lulu";"x"
+"7";"Accipiter gentilis";"Autour des palombes";
+"8";"Recurvirostra avosetta";"Avocette élégante";
+"9";"Pandion haliaetus";"Balbuzard pêcheur";
+"10";"Limosa limosa";"Barge à queue noire";
+"11";"Limosa lapponica";"Barge rousse";
+"12";"Calidris ruficollis";"Bécasseau à cou roux";
+"13";"Calidris ferruginea";"Bécasseau cocorli";
+"14";"Calidris fuscicollis";"Bécasseau de Bonaparte";
+"15";"Calidris temminckii";"Bécasseau de Temminck";
+"16";"Calidris himantopus";"Bécasseau échasse";
+"17";"Limicola falcinellus";"Bécasseau falcinelle";
+"18";"Calidris canutus";"Bécasseau maubèche";
+"19";"Calidris minuta";"Bécasseau minute";
+"20";"Tryngites subruficollis";"Bécasseau rousset";
+"21";"Calidris alba";"Bécasseau sanderling";
+"22";"Calidris pusilla";"Bécasseau semipalmé";
+"23";"Calidris melanotos";"Bécasseau tacheté";
+"24";"Calidris alpina";"Bécasseau variable";
+"25";"Calidris maritima";"Bécasseau violet";
+"26";"Scolopax rusticola";"Bécasse des bois";
+"27";"Limnodromus scolopaceus";"Bécassin à long bec";
+"28";"Gallinago gallinago";"Bécassine des marais";
+"29";"Gallinago media";"Bécassine double";
+"30";"Lymnocryptes minimus";"Bécassine sourde";
+"31";"Loxia curvirostra";"Bec-croisé des sapins";
+"32";"Motacilla cinerea";"Bergeronnette des ruisseaux";
+"33";"Motacilla alba yarrellii";"Bergeronnette de Yarrell";
+"34";"Motacilla flava cinereocapilla";"Bergeronnette d'Italie (M.f.cinereocapilla)";
+"35";"Motacilla flava flavissima";"Bergeronnette flavéole (M.f.flavissima)";
+"36";"Motacilla alba";"Bergeronnette grise";
+"37";"Motacilla flava iberiae";"Bergeronnette ibérique (M.f.iberiae)";
+"38";"Motacilla flava thunbergi";"Bergeronnette nordique (M.f.thunbergi)";
+"39";"Motacilla flava";"Bergeronnette printanière";
+"40";"Motacilla flava flava";"Bergeronnette printanière (M.f.flava)";
+"41";"Branta bernicla";"Bernache cravant";
+"42";"Branta canadensis";"Bernache du Canada";
+"43";"Branta leucopsis";"Bernache nonnette";
+"44";"Nycticorax nycticorax";"Bihoreau gris";
+"45";"Ixobrychus minutus";"Blongios nain";
+"46";"Pernis apivorus";"Bondrée apivore";
+"47";"Cettia cetti";"Bouscarle de Cetti";
+"48";"Pyrrhula pyrrhula";"Bouvreuil pivoine";
+"49";"Plectrophenax nivalis";"Bruant des neiges";"x"
+"50";"Emberiza schoeniclus";"Bruant des roseaux";"x"
+"51";"Emberiza citrinella";"Bruant jaune";"x"
+"52";"Emberiza hortulana";"Bruant ortolan";"x"
+"53";"Emberiza calandra";"Bruant proyer";"x"
+"54";"Circus pygargus";"Busard cendré";
+"55";"Circus aeruginosus";"Busard des roseaux";
+"56";"Circus cyaneus";"Busard Saint-Martin";
+"57";"Buteo buteo";"Buse variable";
+"58";"Botaurus stellaris";"Butor étoilé";
+"59";"Coturnix coturnix";"Caille des blés";
+"60";"Nymphicus hollandicus";"Calopsitte élégante";
+"61";"Anas americana";"Canard à front blanc";
+"62";"Anas strepera";"Canard chipeau";
+"63";"Anas platyrhynchos";"Canard colvert";
+"64";"Aix galericulata";"Canard mandarin";
+"65";"Anas acuta";"Canard pilet";
+"66";"Anas penelope";"Canard siffleur";
+"67";"Anas clypeata";"Canard souchet";
+"68";"Carduelis carduelis";"Chardonneret élégant";"x"
+"69";"Tringa nebularia";"Chevalier aboyeur";
+"70";"Tringa erythropus";"Chevalier arlequin";
+"71";"Xenus cinereus";"Chevalier bargette";
+"72";"Tringa ochropus";"Chevalier culblanc";
+"73";"Tringa totanus";"Chevalier gambette";
+"74";"Actitis hypoleucos";"Chevalier guignette";
+"75";"Tringa stagnatilis";"Chevalier stagnatile";
+"76";"Tringa glareola";"Chevalier sylvain";
+"77";"Strix aluco";"Chouette hulotte";
+"78";"Ciconia ciconia";"Cigogne blanche";
+"79";"Ciconia nigra";"Cigogne noire";
+"80";"Circaetus gallicus";"Circaète Jean-le-Blanc";
+"81";"Cisticola juncidis";"Cisticole des joncs";
+"82";"Philomachus pugnax";"Combattant varié";
+"83";"Corvus corone";"Corneille noire";
+"84";"Clamator glandarius";"Coucou geai";
+"85";"Cuculus canorus";"Coucou gris";
+"86";"Numenius arquata";"Courlis cendré";
+"87";"Numenius phaeopus";"Courlis corlieu";
+"88";"Ardeola ralloides";"Crabier chevelu";
+"89";"Cygnus cygnus";"Cygne chanteur";
+"90";"Cygnus atratus";"Cygne noir";
+"91";"Cygnus olor";"Cygne tuberculé";
+"92";"Himantopus himantopus";"Échasse blanche";
+"93";"Tyto alba";"Effraie des clochers";
+"94";"Elanus caeruleus";"Élanion blanc";
+"95";"Caprimulgus europaeus";"Engoulevent d'Europe";
+"96";"Accipiter nisus";"Épervier d'Europe";
+"97";"Sturnus vulgaris";"Étourneau sansonnet";"x"
+"98";"Phasianus colchicus";"Faisan de Colchide";
+"99";"Falco tinnunculus";"Faucon crécerelle";
+"100";"Falco eleonorae";"Faucon d'Eléonore";
+"101";"Falco columbarius";"Faucon émerillon";
+"102";"Falco subbuteo";"Faucon hobereau";
+"103";"Falco vespertinus";"Faucon kobez";
+"104";"Falco peregrinus";"Faucon pèlerin";
+"105";"Sylvia atricapilla";"Fauvette à tête noire";"x"
+"106";"Sylvia borin";"Fauvette des jardins";"x"
+"107";"Sylvia communis";"Fauvette grisette";"x"
+"108";"Sylvia undata";"Fauvette pitchou";"x"
+"109";"Morus bassanus";"Fou de Bassan";
+"110";"Fulica atra";"Foulque macroule";
+"111";"Aythya ferina";"Fuligule milouin";
+"112";"Aythya marila";"Fuligule milouinan";
+"113";"Aythya fuligula";"Fuligule morillon";
+"114";"Aythya nyroca";"Fuligule nyroca";
+"115";"Gallinula chloropus";"Gallinule poule-d'eau";
+"116";"Bucephala clangula";"Garrot à oeil dor";
+"117";"Garrulus glandarius";"Geai des chênes";"x"
+"118";"Glareola pratincola";"Glaréole à collier";
+"119";"Muscicapa striata";"Gobemouche gris";"x"
+"120";"Ficedula hypoleuca";"Gobemouche noir";"x"
+"121";"Larus delawarensis";"Goéland à bec cerclé";
+"122";"Larus argentatus";"Goéland argenté";
+"123";"Larus argentatus / cachinanns / michahellis";"Goéland argenté, pontique ou leucophée";
+"124";"Larus fuscus";"Goéland brun";
+"125";"Larus canus";"Goéland cendré";
+"126";"Larus audouinii";"Goéland d'Audouin";
+"127";"Larus glaucoides kumlieni";"Goéland de Kumlien";
+"128";"Larus sp.";"Goéland indéterminé";
+"129";"Larus michahellis";"Goéland leucophée";
+"130";"Larus marinus";"Goéland marin";
+"131";"Chroicocephalus genei";"Goéland railleur";
+"132";"Luscinia svecica";"Gorgebleue à miroir";"x"
+"133";"Luscinia svecica cyanecula / namnetum";"Gorgebleue à miroir blanc / de Nantes";"x"
+"134";"Luscinia svecica cyanecula";"Gorgebleue à miroir blanc (L.s.cyanecula)";"x"
+"135";"Luscinia svecica namnetum";"Gorgebleue de Nantes (L.s.namnetum)";"x"
+"136";"Corvus corax";"Grand Corbeau";
+"137";"Phalacrocorax carbo";"Grand Cormoran";
+"138";"Casmerodius albus";"Grande Aigrette";
+"139";"Charadrius hiaticula";"Grand Gravelot";
+"140";"Stercorarius skua";"Grand Labbe";
+"141";"Charadrius alexandrinus";"Gravelot à collier interrompu";
+"142";"Podiceps nigricollis";"Grèbe à cou noir";
+"143";"Tachybaptus ruficollis";"Grèbe castagneux";
+"144";"Podiceps auritus";"Grèbe esclavon";
+"145";"Podiceps cristatus";"Grèbe huppé";
+"146";"Certhia brachydactyla";"Grimpereau des jardins";
+"147";"Turdus viscivorus";"Grive draine";
+"148";"Turdus pilaris";"Grive litorne";
+"149";"Turdus iliacus";"Grive mauvis";
+"150";"Turdus philomelos";"Grive musicienne";
+"151";"Coccothraustes coccothraustes";"Grosbec casse-noyaux";
+"152";"Grus grus";"Grue cendrée";
+"153";"Merops apiaster";"Guêpier d'Europe";
+"154";"Chlidonias leucopterus";"Guifette leucoptère";
+"155";"Chlidonias hybrida";"Guifette moustac";
+"156";"Chlidonias niger";"Guifette noire";
+"157";"Clangula hyemalis";"Harelde boréale";
+"158";"Mergus merganser";"Harle bièvre";
+"159";"Mergus serrator";"Harle huppé";
+"160";"Ardea cinerea";"Héron cendré";
+"161";"Bubulcus ibis";"Héron garde-boeufs";
+"162";"Ardea purpurea";"Héron pourpré";
+"163";"Asio flammeus";"Hibou des marais";
+"164";"Asio otus";"Hibou moyen-duc";
+"165";"Delichon urbicum";"Hirondelle de fenêtre";"x"
+"166";"Riparia riparia";"Hirondelle de rivage";"x"
+"167";"Cecropis daurica";"Hirondelle rousseline";"x"
+"168";"Hirundo rustica";"Hirondelle rustique";"x"
+"169";"Haematopus ostralegus";"Huîtrier pie";
+"170";"Upupa epops";"Huppe fasciée";
+"171";"Hippolais polyglotta";"Hypolaïs polyglotte";
+"172";"Plegadis falcinellus";"Ibis falcinelle";
+"173";"Threskiornis aethiopicus";"Ibis sacré";
+"174";"Stercorarius parasiticus";"Labbe parasite";
+"175";"Carduelis cannabina";"Linotte mélodieuse";
+"176";"Locustella fluviatilis";"Locustelle fluviatile";
+"177";"Locustella luscinioides";"Locustelle luscinioïde";
+"178";"Locustella naevia";"Locustelle tachetée";
+"179";"Oriolus oriolus";"Loriot d'Europe";"x"
+"180";"Melanitta nigra";"Macreuse noire";
+"181";"Porzana pusilla";"Marouette de Baillon";
+"182";"Porzana porzana";"Marouette ponctuée";
+"183";"Apus apus";"Martinet noir";
+"184";"Apus pallidus";"Martinet pâle";
+"185";"Alcedo atthis";"Martin-pêcheur d'Europe";
+"186";"Turdus torquatus";"Merle à plastron";
+"187";"Turdus merula";"Merle noir";
+"188";"Aegithalos caudatus";"Mésange à longue queue";
+"189";"Cyanistes caeruleus";"Mésange bleue";
+"190";"Parus major";"Mésange charbonnière";
+"191";"Periparus ater";"Mésange noire";
+"192";"Milvus migrans";"Milan noir";
+"193";"Milvus milvus";"Milan royal";
+"194";"Passer domesticus";"Moineau domestique";"x"
+"195";"Passer montanus";"Moineau friquet";"x"
+"196";"Chroicocephalus philadelphia";"Mouette de Bonaparte";
+"197";"Larus melanocephalus";"Mouette mélanocéphale";
+"198";"Hydrocoloeus minutus";"Mouette pygmée";
+"199";"Chroicocephalus ridibundus";"Mouette rieuse";
+"200";"Rissa tridactyla";"Mouette tridactyle";
+"201";"Netta rufina";"Nette rousse";
+"202";"Oceanodroma leucorhoa";"Océanite culblanc";
+"203";"Burhinus oedicnemus";"Oedicnème criard";
+"204";"Anser brachyrhynchus";"Oie à bec court";
+"205";"Anser anser";"Oie cendrée";
+"206";"Anser fabalis";"Oie des moissons";
+"207";"Anser albifrons";"Oie rieuse";
+"208";"Alopochen aegyptiaca";"Ouette d'Egypte";
+"209";"Charadrius dubius";"Petit Gravelot";
+"210";"Phalaropus lobatus";"Phalarope à bec étroit";
+"211";"Phalaropus fulicarius";"Phalarope à bec large";
+"212";"Phalaropus tricolor";"Phalarope de Wilson";
+"213";"Acrocephalus schoenobaenus";"Phragmite des joncs";
+"214";"Dendrocopos major";"Pic épeiche";
+"215";"Dendrocopos minor";"Pic épeichette";
+"216";"Dryocopus martius";"Pic noir";
+"217";"Picus viridis";"Pic vert";
+"218";"Pica pica";"Pie bavarde";
+"219";"Lanius senator";"Pie-grièche à tête rousse";"x"
+"220";"Lanius collurio";"Pie-grièche écorcheur";"x"
+"221";"Columba livia f. domestica";"Pigeon biset domestique";
+"222";"Columba oenas";"Pigeon colombin";
+"223";"Columba palumbus";"Pigeon ramier";
+"224";"Fringilla coelebs";"Pinson des arbres";"x"
+"225";"Fringilla montifringilla";"Pinson du Nord";"x"
+"226";"Anthus trivialis";"Pipit des arbres";"x"
+"227";"Anthus pratensis";"Pipit farlouse";"x"
+"228";"Anthus petrosus";"Pipit maritime";"x"
+"229";"Anthus campestris";"Pipit rousseline";"x"
+"230";"Anthus spinoletta";"Pipit spioncelle";"x"
+"231";"Pluvialis squatarola";"Pluvier argenté";
+"232";"Pluvialis apricaria";"Pluvier doré";
+"233";"Pluvialis fulva";"Pluvier fauve";
+"234";"Pluvialis sp.";"Pluvier (Pluvialis) indéterminé";
+"235";"Phylloscopus inornatus";"Pouillot à grands sourcils";
+"236";"Phylloscopus bonelli";"Pouillot de Bonelli";
+"237";"Phylloscopus trochilus";"Pouillot fitis";
+"238";"Phylloscopus sp.";"Pouillot indéterminé";
+"239";"Phylloscopus sibilatrix";"Pouillot siffleur";
+"240";"Phylloscopus collybita";"Pouillot véloce";
+"241";"Rallus aquaticus";"Râle d'eau";
+"242";"Remiz pendulinus";"Rémiz penduline";
+"243";"Regulus ignicapilla";"Roitelet à triple bandeau";
+"244";"Regulus regulus";"Roitelet huppé";
+"245";"Luscinia megarhynchos";"Rossignol philomèle";
+"246";"Erithacus rubecula";"Rougegorge familier";
+"247";"Phoenicurus phoenicurus";"Rougequeue à front blanc";
+"248";"Phoenicurus ochruros";"Rougequeue noir";
+"249";"Acrocephalus scirpaceus";"Rousserolle effarvatte";
+"250";"Acrocephalus arundinaceus";"Rousserolle turdoïde";
+"251";"Anas discors";"Sarcelle à ailes bleues";
+"252";"Anas querquedula";"Sarcelle d'été";
+"253";"Anas crecca";"Sarcelle d'hiver";
+"254";"Serinus serinus";"Serin cini";
+"255";"Sitta europaea";"Sittelle torchepot";"x"
+"256";"Carduelis flammea";"Sizerin flammé";"x"
+"257";"Platalea leucorodia";"Spatule blanche";
+"258";"Sterna paradisaea";"Sterne arctique";
+"259";"Hydroprogne caspia";"Sterne caspienne";
+"260";"Sterna sandvicensis";"Sterne caugek";
+"261";"Sterna dougallii";"Sterne de Dougall";
+"262";"Gelochelidon nilotica";"Sterne hansel";
+"263";"Sternula albifrons";"Sterne naine";
+"264";"Sterna hirundo";"Sterne pierregarin";
+"265";"Tadorna ferruginea";"Tadorne casarca";
+"266";"Tadorna tadorna";"Tadorne de Belon";
+"267";"Porphyrio porphyrio";"Talève sultane";
+"268";"Saxicola rubetra";"Tarier des prés";
+"269";"Saxicola rubicola";"Tarier pâtre";
+"270";"Carduelis spinus";"Tarin des aulnes";
+"271";"Jynx torquilla";"Torcol fourmilier";
+"272";"Arenaria interpres";"Tournepierre à collier";
+"273";"Streptopelia turtur";"Tourterelle des bois";
+"274";"Streptopelia decaocto";"Tourterelle turque";
+"275";"Oenanthe oenanthe leucorhoa";"Traquet du Groenland";
+"276";"Oenanthe oenanthe";"Traquet motteux";
+"277";"Troglodytes troglodytes";"Troglodyte mignon";
+"278";"Vanellus vanellus";"Vanneau huppé";
+"279";"Vanellus gregarius";"Vanneau sociable";
+"280";"Gyps fulvus";"Vautour fauve";
+"281";"Carduelis chloris";"Verdier d'Europe";
+"281";;;
