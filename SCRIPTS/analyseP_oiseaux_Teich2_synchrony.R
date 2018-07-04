@@ -72,6 +72,7 @@ birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris
 
 DBt=subset(DBt,!DBt$Nom_latin %in% birds_to_remove)
 summed_abundances<-read.csv(file="summed_abundances.csv",header=TRUE,sep=";",dec=".") 
+calidris_summed_abundances<-read.csv(file="coldseason_calidris_detailed.txt",header=TRUE,sep=",",dec=".") 
 setwd(paste(DIRECTORY_ORIGIN,"OUT/",sep=""))
 
 # ---------------------------------------------------------------------
@@ -354,11 +355,11 @@ SynchronySeason(DBt,"t40-Axe1-Teich-Comparison_synchrony_4seasons_all_species.pd
 # ---------------------------------------------------------------------
 ###### SYNCHRONy BY SEASON, other way of calculating, using the overlap of winter over two years.
 #### T40 V2  
-SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
+SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE,max_value = 1,min_value=-1){
   # saison=list(c(11,12,1,2,3),c(5,6,7,8,9))
   # saison =  list(hiver_n=c(11, 12), hiver_n1=c(1,2,3),ete=c(5,6,7,8,9))
   saison = list(hiver_n=c(11,12),hiver_n1=c(1,2),ete=c(5,6,7,8))
-  
+  all_species = unique(as.character(matrice$Nom_latin))
   vec_synchrony_Loreau=rep(0,6) #6 for 2season by 3 periods (all,before 2006 and from 2006)
   vec_synchrony_Gross=rep(0,6)
   abondance_ete=c()
@@ -370,26 +371,49 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
   for(y in min(matrice$Annee):(max(matrice$Annee)-1)){
       subdata_ete = subset(matrice,as.numeric(format(matrice$Date, format = "%m")) %in% saison[['ete']] & as.numeric(format(matrice$Date, format = "%Y"))==y)
       subdata_hiver = subset(matrice,(as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n']] & as.numeric(format(matrice$Date, format = "%Y"))==y) | (as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n1']] & as.numeric(format(matrice$Date, format = "%Y"))==y+1))
-      
+      #print (paste("y",y,dim(subdata_ete)[1]))
+      #print (paste("y",y,dim(subdata_hiver)[1]))
       if(dim(subdata_ete)[1]>0){
         species_en_cours = c(unique(as.character(subdata_ete$Nom_latin)))
         for (e in 1:length(species_en_cours)){
           #print (paste("sepcies",species_en_cours[e]))
           #print (paste("mean",mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
-          abondance_ete=c(abondance_ete,c(mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+          #abondance_ete=c(abondance_ete,c(mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+          moyenne = sum(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])/4
+          abondance_ete=c(abondance_ete,c(moyenne))
           date_ete=c(date_ete,c(as.Date(as.character(subdata_ete$Date[1]),format="%Y-%m-%d"))) 
           species_ete =c(species_ete,c(species_en_cours[e]))
         }
       }
+      if(dim(subdata_ete)[1]==0){
+        for (s in 1:length(all_species)){
+          date = as.Date(paste(y,"-07-15",sep=""))
+          abondance_ete=c(abondance_ete,c(0))
+          date_ete=c(date_ete,c(date)) 
+          species_ete =c(species_ete,c(all_species[s]))
+        }
+        
+      }
       if(dim(subdata_hiver)[1]>0){
         species_en_cours = c(unique(as.character(subdata_hiver$Nom_latin)))
         for (e in 1:length(species_en_cours)){
-          print (paste("sepcies",species_en_cours[e]))
-          print (paste("mean",mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
-          abondance_hiver=c(abondance_hiver,c(mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+          #print (paste("sepcies",species_en_cours[e]))
+          #print (paste("mean",mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+          #abondance_hiver=c(abondance_hiver,c(mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+          moyenne = sum(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])/4
+          abondance_hiver=c(abondance_hiver,c(moyenne))
           date_hiver=c(date_hiver,c(as.Date(as.character(subdata_hiver$Date[1]),format="%Y-%m-%d"))) 
           species_hiver =c(species_hiver,c(species_en_cours[e]))
         }
+      }
+      if(dim(subdata_hiver)[1]==0){  # I create inputs to 0 artificially when there is 0 data for one year, otherwise it impacts the calculation of synchrony
+        for (s in 1:length(all_species)){
+          date = as.Date(paste(y,"-12-15",sep=""))
+          abondance_hiver=c(abondance_hiver,c(0))
+          date_hiver=c(date_hiver,c(date)) 
+          species_hiver =c(species_hiver,c(all_species[s]))
+        }
+        
       }
   }
   date      = c(as.numeric(date_ete))
@@ -422,21 +446,43 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
     if(dim(subdata_ete)[1]>0){
       species_en_cours = c(unique(as.character(subdata_ete$Nom_latin)))
       for (e in 1:length(species_en_cours)){
-        print (paste("sepcies",species_en_cours[e]))
-        print (paste("mean",mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
-        abondance_ete=c(abondance_ete,c(mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+        #print (paste("sepcies",species_en_cours[e]))
+        #print (paste("mean",mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+        #abondance_ete=c(abondance_ete,c(mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+        moyenne = sum(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])/4
+        abondance_ete=c(abondance_ete,c(moyenne))
         date_ete=c(date_ete,c(as.Date(as.character(subdata_ete$Date[1]),format="%Y-%m-%d"))) 
         species_ete =c(species_ete,c(species_en_cours[e]))
       }
     }
+    if(dim(subdata_ete)[1]==0){
+      for (s in 1:length(all_species)){
+        date = as.Date(paste(y,"-07-15",sep=""))
+        abondance_ete=c(abondance_ete,c(0))
+        date_ete=c(date_ete,c(date)) 
+        species_ete =c(species_ete,c(all_species[s]))
+      }
+      
+    }
     if(dim(subdata_hiver)[1]>0){
       species_en_cours = c(unique(as.character(subdata_hiver$Nom_latin)))
       for (e in 1:length(species_en_cours)){
-        print (paste("sepcies",species_en_cours[e]))
-        print (paste("mean",mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
-        abondance_hiver=c(abondance_hiver,c(mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+        #print (paste("sepcies",species_en_cours[e]))
+        #print (paste("mean",mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+        #abondance_hiver=c(abondance_hiver,c(mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+        moyenne = sum(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])/4
+        abondance_hiver=c(abondance_hiver,c(moyenne))
         date_hiver=c(date_hiver,c(as.Date(as.character(subdata_hiver$Date[1]),format="%Y-%m-%d"))) 
         species_hiver =c(species_hiver,c(species_en_cours[e]))
+      }
+
+    }
+    if(dim(subdata_hiver)[1]==0){ # I create inputs to 0 artificially when there is 0 data for one year, otherwise it impacts the calculation of synchrony
+      for (s in 1:length(all_species)){
+        date = as.Date(paste(y,"-12-15",sep=""))
+        abondance_hiver=c(abondance_hiver,c(0))
+        date_hiver=c(date_hiver,c(date)) 
+        species_hiver =c(species_hiver,c(all_species[s]))
       }
     }
   }
@@ -465,25 +511,46 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
   for(y in min(matrice$Annee):2006){
     subdata_ete = subset(matrice,as.numeric(format(matrice$Date, format = "%m")) %in% saison[['ete']] & as.numeric(format(matrice$Date, format = "%Y"))==y)
     subdata_hiver = subset(matrice,(as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n']] & as.numeric(format(matrice$Date, format = "%Y"))==y) | (as.numeric(format(matrice$Date, format = "%m")) %in% saison[['hiver_n1']] & as.numeric(format(matrice$Date, format = "%Y"))==y+1))
-    
+    #print (paste("y",y,dim(subdata_hiver)[1]))
     if(dim(subdata_ete)[1]>0){
       species_en_cours = c(unique(as.character(subdata_ete$Nom_latin)))
       for (e in 1:length(species_en_cours)){
-        print (paste("sepcies",species_en_cours[e]))
-        print (paste("mean",mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
-        abondance_ete=c(abondance_ete,c(mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+        #print (paste("sepcies",species_en_cours[e]))
+        #print (paste("mean",mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+        #abondance_ete=c(abondance_ete,c(mean(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])))
+        moyenne = sum(subdata_ete$Nombre[subdata_ete$Nom_latin==species_en_cours[e]])/4
+        abondance_ete=c(abondance_ete,c(moyenne))
         date_ete=c(date_ete,c(as.Date(as.character(subdata_ete$Date[1]),format="%Y-%m-%d"))) 
         species_ete =c(species_ete,c(species_en_cours[e]))
       }
     }
+    if(dim(subdata_ete)[1]==0){
+      for (s in 1:length(all_species)){
+        date = as.Date(paste(y,"-07-15",sep=""))
+        abondance_ete=c(abondance_ete,c(0))
+        date_ete=c(date_ete,c(date)) 
+        species_ete =c(species_ete,c(all_species[s]))
+      }
+      
+    }
     if(dim(subdata_hiver)[1]>0){
       species_en_cours = c(unique(as.character(subdata_hiver$Nom_latin)))
       for (e in 1:length(species_en_cours)){
-        print (paste("sepcies",species_en_cours[e]))
-        print (paste("mean",mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
-        abondance_hiver=c(abondance_hiver,c(mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+        #print (paste("sepcies",species_en_cours[e]))
+        #print (paste("mean",mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+        #abondance_hiver=c(abondance_hiver,c(mean(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])))
+        moyenne = sum(subdata_hiver$Nombre[subdata_hiver$Nom_latin==species_en_cours[e]])/4
+        abondance_hiver=c(abondance_hiver,c(moyenne))
         date_hiver=c(date_hiver,c(as.Date(as.character(subdata_hiver$Date[1]),format="%Y-%m-%d"))) 
         species_hiver =c(species_hiver,c(species_en_cours[e]))
+      }
+    }
+    if(dim(subdata_hiver)[1]==0){  # I create inputs to 0 artificially when there is 0 data for one year, otherwise it impacts the calculation of synchrony
+      for (s in 1:length(all_species)){
+        date = as.Date(paste(y,"-12-15",sep=""))
+        abondance_hiver=c(abondance_hiver,c(0))
+        date_hiver=c(date_hiver,c(date)) 
+        species_hiver =c(species_hiver,c(all_species[s]))
       }
     }
   }
@@ -508,11 +575,12 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE){
   }
   if(Loreau ==TRUE & Gross ==FALSE){data_synchro =c(vec_synchrony_Loreau)}
   if(Loreau ==FALSE & Gross ==TRUE){data_synchro =c(vec_synchrony_Gross)
-  print ("Gross : Sum.-All,Wint.-All,Sum.>=2007,Wint.>=2007,Sum.<2007,wint.<2007")
+  print ("Gross :")
+  print ("Sum.-All    Wint.-All   Sum.>=2007    Wint.>=2007   Sum.<2007    wint.<2007")
   print (vec_synchrony_Gross)}
   if(Loreau == FALSE & Gross ==FALSE){exit()}
-  max_value = max(data_synchro,na.rm=TRUE)+0.1
-  min_value = min(data_synchro,na.rm=TRUE)-0.1
+  #max_value = max(data_synchro,na.rm=TRUE)+0.1
+  #min_value = min(data_synchro,na.rm=TRUE)-0.1
   data_synchro = matrix(data_synchro,nc=6, byrow=T)
   type =c("Summer-all","winter-all","summer>=2007","winter>=2007","summer<2007","winter<2007")
   colnames(data_synchro) = type
@@ -1211,8 +1279,8 @@ temp_matrice$Nombre=as.numeric(as.character(temp_matrice$Nombre))
 
 #----- T49
 
-SynchronyMonth(matrice = temp_matrice,file_out = "T48c-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
-SynchronySeason2(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",Loreau = FALSE,Gross=TRUE)
+#SynchronyMonth(matrice = temp_matrice,file_out = "T48c-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
+SynchronySeason2(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
 
 #-------- 
 # Sum of values of Heron and Aigrette, I create my own dataset for check
@@ -1231,7 +1299,7 @@ temp_matrice = rbind(df_Cormoran,df_HeronEgret)
 temp_matrice= as.data.frame(temp_matrice)
 temp_matrice$Date=as.Date(as.character(temp_matrice$Date),format="%Y-%m-%d")
 temp_matrice$Nombre=as.numeric(as.character(temp_matrice$Nombre))
-SynchronyMonth(matrice = temp_matrice,file_out = "T48d-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
+#SynchronyMonth(matrice = temp_matrice,file_out = "T48d-Axe1-Teich_Synchrony_for_the_3_competing_species_with_HeronEgret_summed.pdf",titre = "Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\n",loreau = FALSE,ymin = -0.5,ymax=1)
 
 
 # TEST BY SEASON FOR THE SAME SPECIES.
@@ -1244,7 +1312,7 @@ temp_matrice$Annee=as.numeric(as.character(temp_matrice$Annee))
 temp_matrice$Nom_latin=as.character(temp_matrice$Nom_latin)
 temp_matrice$Nombre=as.numeric(as.character(temp_matrice$Nombre))
 
-SynchronySeason2(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species__same_date_for_Phalacrocorax.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\nSame Dates for Phalacrocorax",Loreau = FALSE,Gross=TRUE)
+SynchronySeason2(matrice = temp_matrice,"T49-Axe1-Teich_Synchrony_by_season_for_the_3_competing_species__same_date_for_Phalacrocorax.pdf",titre ="Gross synchrony calculation between \nPhalacrocorax carbo and sum of Ardea cinerea and Egretta garzetta\nSame Dates for Phalacrocorax",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
 
 # # with dataset of Coralie juste Heron Egret
 # HeronEgret = subset(summed_abundances,summed_abundances$Nom_latin=='HeronEgret')
@@ -1322,3 +1390,30 @@ print (paste("Ratio abundance frequent : ",sum(abondance_frequent$Nombre)/sum(DB
 sparows = c("Alauda arvensis","Lullula arborea","Plectrophenax nivalis","Emberiza schoeniclus","Emberiza citrinella","Emberiza hortulana","Emberiza calandra","Carduelis carduelis","Sturnus vulgaris","Sylvia atricapilla","Sylvia borin","Sylvia communis","Sylvia undata","Garrulus glandarius","Muscicapa striata","Ficedula hypoleuca","Luscinia svecica","Luscinia svecica cyanecula / namnetum","Luscinia svecica cyanecula","Luscinia svecica namnetum","Delichon urbicum","Riparia riparia","Cecropis daurica","Hirundo rustica","Oriolus oriolus","Passer domesticus","Passer montanus","Lanius senator","Lanius collurio","Fringilla coelebs","Fringilla montifringilla","Anthus trivialis","Anthus pratensis","Anthus petrosus","Anthus campestris","Anthus spinoletta","Sitta europaea","Carduelis flammea")
 abondance_sparows = subset(DBt,as.character(DBt$Nom_latin)%in% sparows & DBt$Annee>=1981)
 print (paste("Ratio abundance sparow : ",sum(abondance_sparows$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
+
+###################################################################################################################
+# synchrony with selected species T50
+# calidris
+abondance_calidris = subset(DBt,grepl("^Calidris",DBt$Nom_latin,ignore.case = TRUE) & DBt$Annee>=1981)
+SynchronySeason2(matrice = abondance_calidris,"T50-Axe1-Teich_Synchrony_by_season_for_Calidris_without_species_with_low_abondance.pdf",titre ="Gross synchrony for Calidris \nwithout_species_with_low_abondance",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
+
+abondance_calidris = subset(DBt,DBt$Nom_latin %in% c("Calidris canutus","Calidris alpina", "Calidris ferruginea","Calidris minuta")& DBt$Annee>=1981)
+SynchronySeason2(matrice = abondance_calidris,"T50-Axe1-Teich_Synchrony_by_season_for_Calidris_with_only_canutus_alpina_ferruginea_minuta.pdf",titre ="Gross synchrony for Calidris \nwith only canutus Alpina ferruginea et minuta",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
+
+#as.Date(dataF_ete$date,origin="1970-01-01") #pour passer du numéric
+### coco matrice
+
+
+#abondance_calidris_coco = subset(calidris_summed_abundances,calidris_summed_abundances$sp_all %in% c("Calidris canutus","Calidris alpina", "Calidris ferruginea","Calidris minuta"))
+#colnames(abondance_calidris_coco)=c("X","Annee","Nom_latin","Nombre")
+#Annee = format(abondance_calidris_coco$Date,format = "%Y")
+#abondance_calidris_coco =cbind(abondance_calidris_coco,Annee)
+
+# abondance_calidris_coco$Annee=as.numeric(as.character(abondance_calidris_coco$Annee))
+# abondance_calidris_coco$Nom_latin=as.character(abondance_calidris_coco$Nom_latin)
+# abondance_calidris_coco$Nombre=as.numeric(as.character(abondance_calidris_coco$Nombre))
+#SynchronySeason2(matrice = abondance_calidris_coco,"T50-Axe1-Teich_Synchrony_by_season_for_Calidris_with_only_canutus_alpina_ferruginea_minuta_cocoVersion.pdf",titre ="Gross synchrony for Calidris \nwith only canutus Alpina ferruginea et minuta\nCoco version",Loreau = FALSE,Gross=TRUE)
+
+# anas
+abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE)& DBt$Annee>=1981)
+SynchronySeason2(matrice = abondance_anas,"T50-Axe1-Teich_Synchrony_by_season_for_anas_without_species_with_low_abondance.pdf",titre ="Gross synchrony for Anas\nwithout_species_with_low_abondance",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
