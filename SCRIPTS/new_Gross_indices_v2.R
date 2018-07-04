@@ -34,8 +34,8 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 color=rep(c("Black","Lightblue","Darkblue"),2)
 pdf("OUT/gross_anascalidris_wader_duck.pdf",width=11,height=7)
-par(mfrow=c(1,2),mar=c(3,2,1,.5))
-plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="")
+par(mfrow=c(1,2),mar=c(3,4.5,1,.25))
+plot(0,0,t="n",ylim=c(-.75,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=2,cex.axis=2)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs
@@ -73,7 +73,7 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 #Plot everything
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 color=rep(c("Black","Lightblue","Darkblue"),2)
-plot(0,0,t="n",ylim=c(-.75,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="")
+plot(0,0,t="n",ylim=c(-.75,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n")
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs
@@ -82,7 +82,7 @@ for (v in 1:6){
         x=v+(v>3)
         yHigh=as.numeric(obs)+as.numeric(ic)
         yLow=as.numeric(obs)-as.numeric(ic)
-        points(x,obs,pch=21,col=color[v],bg=color[v],cex=2)
+        points(x,obs,pch=22,col=color[v],bg=color[v],cex=2)
         arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=color[v],lwd=2)
         if (p_s<thresh){
                 points(x,as.numeric(obs),pch='*',col="red",cex=2)
@@ -90,6 +90,6 @@ for (v in 1:6){
 
         }
 abline(h=0.0,lty=2,lwd=2)
-legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+legend("topleft",c("Anas/Calidris","Waders/Ducks"),pch=c(21,22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 dev.off()
 

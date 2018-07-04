@@ -28,6 +28,8 @@ limicoles = sort(c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burrhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
               "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus"))
+sp_to_ignore=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima")
+limicoles=limicoles[!(limicoles %in% sp_to_ignore)]
 
 #############################
 

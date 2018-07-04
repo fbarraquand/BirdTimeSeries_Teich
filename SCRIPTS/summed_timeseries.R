@@ -52,7 +52,7 @@ for (i in 1:length(sp_all)){
   vec_n_obs_oiseaux_t[i]=sum(as.character(DBt$Nom_latin)==sp_all[i],na.rm = TRUE)
 }
 oiseaux_Frequents_t=sp_all[vec_n_obs_oiseaux_t>75]
-
+oiseaux_Frequents_t=oiseaux_Frequents_t[!(oiseaux_Frequents_t %in% limicoles)]
 freq_sum=sum_of_species(DBt,oiseaux_Frequents_t,'Freq')
 freq_season=season2_average(freq_sum)
 

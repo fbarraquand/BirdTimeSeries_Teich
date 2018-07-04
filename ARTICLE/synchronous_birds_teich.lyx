@@ -77,6 +77,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -365,7 +366,7 @@ status open
 
 \change_inserted -666822487 1527518668
 \begin_inset Graphics
-	filename /home/frederic/Documents/Close_collabs/BirdTimeSeries_Teich/OUT/T45-Axe1-Teich-Abondance_of_waders_anas_and_calidris_vers2.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T45-Axe1-Teich-Abondance_of_waders_anas_and_calidris_vers2.pdf
 	width 15cm
 
 \end_inset
@@ -937,12 +938,48 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\change_deleted -2100369821 1530706470
 \begin_inset Graphics
 	filename ../OUT/tmp_figure2.pdf
 	width 95text%
 
 \end_inset
 
+
+\change_inserted -2100369821 1530706477
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1530709108
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/gross_inside_groups.pdf
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1530709150
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/gross_anascalidris_wader_duck.pdf
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1530706500
 
 \end_layout
 
@@ -953,14 +990,24 @@ status open
 Gross' synchrony index as a function of the season (
 \change_deleted -666822487 1527520085
 official season
-\change_inserted -666822487 1527520124
-quarters
+\change_deleted -2100369821 1530708114
+quarters, left, or 
 \change_unchanged
-, left, or cold and warm season
+cold and warm season
 \change_inserted -666822487 1527520121
 s
 \change_unchanged
-, right), calculated on different functional 
+, 
+\change_deleted -2100369821 1530708120
+right
+\change_unchanged
+), calculated 
+\change_deleted -2100369821 1530709222
+on
+\change_inserted -2100369821 1530709230
+among (top) and between (bottom)
+\change_unchanged
+ different functional 
 \change_inserted -666822487 1527520134
 groups 
 \change_unchanged
@@ -979,6 +1026,13 @@ status open
 \change_inserted -666822487 1527520226
 is this all frequent birds except waders? This would make sense but not
  including waders...
+
+\change_inserted -2100369821 1530709338
+ Changed it.
+ Now, it is frequent birds without waders.
+ Bottom is ducks, not frequent birds ; and I'm wondering if we should also
+ show the synchrony inside the duck group instead of the synchrony inside
+ the frequent bird groups
 \change_unchanged
 
 \end_layout
@@ -987,11 +1041,25 @@ is this all frequent birds except waders? This would make sense but not
 
 
 \change_unchanged
-, waders, bottom) or taxonomic
+, waders, 
+\change_deleted -2100369821 1530708145
+bott
+\change_inserted -2100369821 1530708145
+right
+\change_deleted -2100369821 1530708153
+om
+\change_unchanged
+) or taxonomic
 \change_inserted -666822487 1527520137
  groups
 \change_unchanged
- (Anas, Calidris, top) groups.
+ (Anas, Calidris, 
+\change_deleted -2100369821 1530708148
+top
+\change_inserted -2100369821 1530708149
+leftf
+\change_unchanged
+) groups.
  Indices were computed on the whole dataset (black) or with the same dataset
  separated in two periods: before and after 2006 (light and dark blue),
  when a management change occurred.
@@ -1023,6 +1091,14 @@ parasites
 
  en fait, puisqu'on va du chiffre global à pre-2006 et à post-2006.
  Autant les enlever, sauf peut-être entre pré- et post-2006.
+
+\change_inserted -2100369821 1530709559
+ J'ai remis les lignes entre pré et post 2006 dans le premier et pas dans
+ le deuxième pour pouvoir comparer ; je trouve que ça permet de mieux suivre
+ les évolutions au sein des groupes quand il y en a plusieurs sur le même
+ graphe.
+ Qu'en pensez-vous ?
+\change_inserted -666822487 1527520362
  
 \change_unchanged
 
@@ -1086,6 +1162,73 @@ name "fig:Wavelet-modulus-ratio"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1530710847
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1530711038
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/gross_triad.pdf
+	lyxscale 70
+	width 55text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1530711037
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/wavelet_triad.png
+	width 70text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1530710847
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1530711574
+Time and frequency-based synchrony analysis of the group formed by Cormorant,
+ Egret and Heron
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 

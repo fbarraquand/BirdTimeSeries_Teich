@@ -33,7 +33,7 @@ mm=mvcwt(x,tab,min.scale=0.2,max.scale=10.0)
 mr = wmr.boot(mm, smoothing = 1,reps=100)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
-png('OUT/wavelet_Driad.png',width=800)
+png('OUT/wavelet_triad.png',width=800)
 image_mvcwt(mr,reset.par=F,cex.axis=4,z.fun="Mod")
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
