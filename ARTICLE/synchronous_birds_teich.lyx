@@ -215,8 +215,33 @@ They say the Ernest papers for small mammals in drylands are some of the
  Most datasets used to evaluate temporal compensation vs synchrony involve
  planktonic organisms (REFs) or terrestrial plants ( ; though see).
  Here, we take advantage of a long-term bird time series record at the monthly
- scale (XX years), in a natural reserve, that allows us to dig deeper into
- patterns of synchrony between species at 
+ scale (
+\change_deleted -2100369821 1531143543
+XX
+\change_inserted -2100369821 1531143544
+for 35
+\change_unchanged
+ years
+\change_inserted -2100369821 1531143552
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531143853
+If we consider only the years we use.
+ Otherwise, the dataset begins in 1973
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+), in a natural reserve, that allows us to dig deeper into patterns of synchrony
+ between species at 
 \change_deleted -666822487 1527518426
 various
 \change_inserted -666822487 1527518427
@@ -314,11 +339,29 @@ Data
 
 \begin_layout Standard
 The monthly time series used for the statistical analyses have been collected
- at the Teich Ornithological Reserve, Arcachon Bay, France ([coordinates
- here]).
- The reserve is constituted of XX ha of wetlands , and the data have been
- aggregated at the reserve scale by using for each species the maximum observed
- abundance over a month, which provide a 
+ at the Teich Ornithological Reserve, Arcachon Bay, France (
+\change_deleted -2100369821 1531143685
+[coordinates here]
+\change_inserted -2100369821 1531143703
+44.64°N / -1.02°E
+\change_unchanged
+).
+ The reserve is constituted of 
+\change_deleted -2100369821 1531143885
+XX
+\change_inserted -2100369821 1531143885
+120
+\change_unchanged
+ ha of wetlands
+\change_deleted -2100369821 1531143889
+ 
+\change_unchanged
+, and the data have been aggregated at the reserve scale by using for each
+ species the maximum observed abundance over a month, which provide
+\change_inserted -2100369821 1531143896
+s
+\change_unchanged
+ a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -329,8 +372,21 @@ monthly snapshot
  of the bird community.
  In the statistical analyses, we use both the monthly data and aggregates
  at the seasonal scale.
- We defined two seasons in the following manner XXXX (see Appendix S1 for
- alternative choices of season definition).
+ We defined two seasons
+\change_inserted -2100369821 1531144014
+ based on observations of bird presence related to temperature.
+ We defined a 'cold season' as the months between November and February
+ of the following year, and a 'warm season', from May to August.
+ This makes sense from an ecological viewpoint, as we separate wintering
+ birds from summer residents, and these two communities have different needs
+ and a shifting composition (though they partially overlap).
+
+\change_unchanged
+ 
+\change_deleted -2100369821 1531143980
+in the following manner XXXX
+\change_unchanged
+ (see Appendix S1 for alternative choices of season definition).
 \change_inserted -666822487 1527518558
 
 \end_layout
@@ -393,8 +449,12 @@ Anas
 Calidris
 \emph default
  genus), and all waders (c, including calidrids).
- The filled black lines represents trends in summed abundances for each
- guild, thin dotted lines putative trends (when some species are absent).
+ The filled black lines represent
+\change_deleted -2100369821 1531144082
+s
+\change_inserted -666822487 1527519093
+ trends in summed abundances for each guild, thin dotted lines putative
+ trends (when some species are absent).
  The coloured symbols below the curves represent each species abundances,
  with species composition on the right side on the donut plots for the most
  abundant species.
@@ -448,8 +508,13 @@ literal "false"
 \change_deleted -666822487 1527519123
  writes
 \change_inserted -666822487 1527519162
- is defined as a cross-correlation between each species and the rest of
- the community (eq.
+ is defined as 
+\change_deleted -2100369821 1531144057
+a
+\change_inserted -2100369821 1531144058
+the mean
+\change_inserted -666822487 1527519162
+ cross-correlation between each species and the rest of the community (eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -534,78 +599,68 @@ literal "false"
 \end_inset
 
 .
+
+\change_deleted -2100369821 1531143936
  We used two definitions 
 \change_deleted -666822487 1527519249
 of
-\change_inserted -666822487 1527519249
-for
-\change_unchanged
- the season
-\change_inserted -666822487 1527519304
-, to ensure the results' robustness
-\change_unchanged
-.
+\change_deleted -2100369821 1531143936
+for the season, to ensure the results' robustness.
  
 \change_deleted -666822487 1527519267
 The first one
-\change_inserted -666822487 1527519270
-Our first definition
-\change_unchanged
- was based on 
+\change_deleted -2100369821 1531143936
+Our first definition was based on 
 \change_deleted -666822487 1527519274
 official months
-\change_inserted -666822487 1527519277
-the calendar months
-\change_unchanged
-: winter corresponded to 
+\change_deleted -2100369821 1531143936
+the calendar months: winter corresponded to 
 \change_deleted -666822487 1527519318
 the three months between 
-\change_unchanged
+\change_deleted -2100369821 1531143936
 January 
 \change_deleted -666822487 1527519324
 and
-\change_inserted -666822487 1527519324
-to
-\change_unchanged
- March, 
-\change_inserted -666822487 1527519410
-then Spring (3 months) and Summer (July-August-September) 
-\change_unchanged
-until 
-\change_inserted -666822487 1527519356
-A
+\change_deleted -2100369821 1531143936
+to March, then Spring (3 months) and Summer (July-August-September) until
+ A
 \change_deleted -666822487 1527519356
 a
-\change_unchanged
+\change_deleted -2100369821 1531143936
 utumn 
 \change_deleted -666822487 1527519364
 which was defined as the months between
-\change_inserted -666822487 1527519364
-in
-\change_unchanged
- October
+\change_deleted -2100369821 1531143936
+in October
 \change_deleted -666822487 1527519367
  and 
-\change_inserted -666822487 1527519376
- to 
+\change_deleted -2100369821 1531143966
+ to December.
+ The second definition
 \change_unchanged
-December.
- The second definition was based on observations of bird presence related
- to temperature: we defined a 'cold season' as the months between November
- of the previous year and February, and a 'warm season', from May to August.
-\change_inserted -666822487 1527520061
-This makes sense from an ecological viewpoint, as we separate wintering
- birds from summer residents, and these two communities have different needs
- and a shifting composition (though they partially overlap).
  
+\change_deleted -2100369821 1531143958
+was based on observations of bird presence related to temperature: we defined
+ a 'cold season' as the months between November of the previous year and
+ February, and a 'warm season', from May to August.This makes sense from
+ an ecological viewpoint, as we separate wintering birds from summer residents,
+ and these two communities have different needs and a shifting composition
+ (though they partially overlap).
+ 
+\change_inserted -666822487 1527520061
+
 \end_layout
 
 \begin_layout Standard
 
 \change_deleted -666822487 1527519936
  
+\change_deleted -2100369821 1531144176
+In both cases, w
+\change_inserted -2100369821 1531144176
+W
 \change_unchanged
-In both cases, we averaged 
+e averaged 
 \change_inserted -666822487 1527519442
 monthly 
 \change_unchanged
@@ -659,6 +714,24 @@ curred
 and a period including all years, ignoring the change in 2006.
 
 \change_unchanged
+ 
+\change_inserted -2100369821 1531144596
+We considered both the synchrony inside a given group (e.g., among the 
+\shape italic
+Anas
+\shape default
+ genus) or between groups (e.g., between 
+\shape italic
+Anas
+\shape default
+ and 
+\shape italic
+Calidris
+\shape default
+).
+ In the latter case, we summed species together before seasonal averaging.
+ We also examined the specific case of Cormorant, Egret and Heron, the first
+ one displaying dynamics opposed to the later two.
  
 \change_inserted -666822487 1527519553
 
@@ -720,7 +793,11 @@ literal "false"
  We then compared the observed values to the values obtained with the randomized
  time-series.
  Independence of species was rejected at the 5% threshold.
- threshold
+ 
+\change_deleted -2100369821 1531144285
+threshold
+\change_unchanged
+
 \begin_inset Note Comment
 status open
 
@@ -1214,9 +1291,9 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1530711574
-Time and frequency-based synchrony analysis of the group formed by Cormorant,
- Egret and Heron
+\change_inserted -2100369821 1531144235
+Time (top) and frequency (bottom) -based synchrony analysis of the group
+ formed by Cormorant, Egret and Heron
 \change_unchanged
 
 \end_layout
