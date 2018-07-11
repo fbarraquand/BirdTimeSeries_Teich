@@ -135,3 +135,36 @@ write.csv(data_frame_freq_cold,"IN/coldseason_freq_detailed.txt")
 write.csv(data_frame_freq_warm,"IN/warmseason_freq_detailed.txt")
 dev.off()
 
+print('Ducks')
+tab_tmp=read.csv(file="./IN/Initial_files/data_ROT20160324.csv",header=TRUE,sep="\t")
+sp_all=tab_tmp$Nom_latin
+fam=tab_tmp$Famille
+sp_duck=c(as.character(unique(sp_all[fam=="Anatidae"])),"Fulica atra")
+sp_duck=intersect(sp_duck,DBt$Nom_latin)
+tmp=subset(DBt,DBt$Nom_latin %in% sp_duck)
+tab_duck=season2_average(tmp)
+
+dates=rep(dd,length(sp_duck))
+sp_all=c()
+abundance_cold=c()
+abundance_warm=c()
+pdf("OUT/closer_look_ducks.pdf")
+for (i in 1:length(sp_duck)){
+        if(i%%12==1){
+        par(mfrow=c(4,3))
+        }
+        ss=as.character(sp_duck[i])
+        sp_all=c(sp_all,rep(ss,length(dd)))
+        abundance_cold=c(abundance_cold,tab_duck[ss,'Cold',dd])
+        abundance_warm=c(abundance_warm,tab_duck[ss,'Warm',dd])
+        plot(1981:2015,tab_duck[ss,'Cold',dd],ylim=c(0,max(tab_duck[ss,,],na.rm=T)),xlim=c(1981,2015),col="blue",t="o",pch=16,ylab=ss,xlab="")
+        lines(1981:2015,tab_duck[ss,'Warm',dd],col="red",t="o",pch=16)
+}
+data_frame_duck_cold=data.frame(dates,sp_all,abundance_cold)
+data_frame_duck_warm=data.frame(dates,sp_all,abundance_warm)
+write.csv(data_frame_freq_cold,"IN/coldseason_duck_detailed.txt")
+write.csv(data_frame_freq_warm,"IN/warmseason_duck_detailed.txt")
+dev.off()
+
+
+

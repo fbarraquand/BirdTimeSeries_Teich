@@ -923,6 +923,44 @@ ected, threshold by 100 phase-randomizations of each species time series,
 
 \begin_layout Section
 Results 
+\change_inserted -2100369821 1531323911
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1531323917
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531323923
+Parmi ce qu'on a noté :
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531323986
+- fig.
+ 5 : synchrony plus faible au début de la série temporelle.
+ On note une périodicité à 6 ans, qui expriment les tendances sur le long
+ terme
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531324062
+- à l'échelle mensuelle, la synchronie Cormorant vs Héron+Aigrette = -0.10
+ pour toute la série temporelle ; -0.20 pour avant 2006 ; 0.28 après 2007.
+ Aucune des valeurs n'est significative
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_inserted -666822487 1527520433
 
 \end_layout
@@ -1031,10 +1069,30 @@ status open
 \begin_layout Plain Layout
 \align center
 
-\change_inserted -2100369821 1530709108
+\change_inserted -2100369821 1531324094
 \begin_inset Graphics
 	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/gross_inside_groups.pdf
 	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531324097
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531324125
+A noter que les pentes ne sont pas tout à fait égales entre avant 2006 et
+ après 2006, pour Waders et Ducks, mais le presque-parallélisme est frappant
+\change_unchanged
+
+\end_layout
 
 \end_inset
 
@@ -1089,12 +1147,10 @@ among (top) and between (bottom)
 groups 
 \change_unchanged
 (
-\change_inserted -666822487 1527520189
-all 
-\change_unchanged
-frequent birds
-\change_inserted -666822487 1527520202
-
+\change_inserted -2100369821 1531323855
+ducks
+\change_deleted -2100369821 1531323850
+all frequent birds
 \begin_inset Note Note
 status open
 
@@ -1358,10 +1414,6 @@ Time (top) and frequency (bottom) -based synchrony analysis of the group
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1410,6 +1462,61 @@ We therefore suggest that compensation should be searched for more often
  between rather within functional groups, and on relatively long timescales
  above that of the dominant driver (e.g., seasonality).
  
+\change_inserted -2100369821 1531323695
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+
+\change_inserted -2100369821 1531323739
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1531323766
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/Gross_freq.pdf
+	width 65text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531323739
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531323876
+Gross synchrony index for frequent birds, not including waders
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard

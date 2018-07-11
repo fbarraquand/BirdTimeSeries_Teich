@@ -8,6 +8,18 @@ db=read.csv("IN/summed_abundances.csv",sep=";",header=T)
 db$Date=as.Date(db$Date)
 
 db=subset(db,Nom_latin %in% c("Cormorant","HeronEgret"))
+db_tmp=db
+names(db_tmp)=c("sp_data_frame","dates","abundance")
+db_av=subset(db_tmp,dates<as.Date("2007-01-01"))
+db_ap=subset(db_tmp,dates>=as.Date("2007-01-01"))
+db_tmp$dates=as.numeric(db_tmp$dates)
+db_av$dates=as.numeric(db_av$dates)
+db_ap$dates=as.numeric(db_ap$dates)
+
+synch_all=community_sync_Gross(db_tmp,nrands=100) #-0.09735, p=0.74
+synch_av=community_sync_Gross(db_av,nrands=100) #-0.2028886, p=0.34
+synch_ap=community_sync_Gross(db_ap,nrands=100) #0.2758426, p=0.11
+
 
 dates=unique(db$Date)
 tab=matrix(0,nrow=length(dates),ncol=2)

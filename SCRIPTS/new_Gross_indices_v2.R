@@ -31,12 +31,14 @@ synch_cold_pre_2006=community_sync_Gross(db_cold_pre_2006,nrands=100)
 synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 
 #Plot everything
+upsi=0.05
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 color=rep(c("Black","Lightblue","Darkblue"),2)
 pdf("OUT/gross_anascalidris_wader_duck.pdf",width=11,height=7,family="Times")
-par(mfrow=c(1,2),mar=c(3,4.5,1,.25))
-plot(0,0,t="n",ylim=c(-.75,.7),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=2,cex.axis=2)
+par(mfrow=c(1,2),mar=c(3,4.5,1,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
+plot(0,0,t="n",ylim=c(-.75,.66),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=2,cex.axis=2)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
+mtext("Between",side=2,line=0.5,outer=T,cex=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs
         ic=2*sd(essai_taxo[[v]]$rands[1:100])/sqrt(100)
@@ -47,11 +49,11 @@ for (v in 1:6){
         points(x,obs,pch=21,col=color[v],bg=color[v],cex=2)
         arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=color[v],lwd=2)
         if (p_s<thresh){
-                points(x,as.numeric(obs),pch='*',col="red",cex=2)
+                points(x,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
         }
-abline(h=0.0,lty=2,lwd=2)
+lines(c(0.0,7.5),c(0,0),lty=2,lwd=2)
 ll=c(essai_taxo[[2]]$obs,essai_taxo[[3]]$obs)
 lines(2:3,ll,col="black",lwd=2,lty=1)
 ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
@@ -79,7 +81,7 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 #Plot everything
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 color=rep(c("Black","Lightblue","Darkblue"),2)
-plot(0,0,t="n",ylim=c(-.75,.7),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n")
+plot(0,0,t="n",ylim=c(-.75,.66),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n")
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs
@@ -91,11 +93,11 @@ for (v in 1:6){
         points(x,obs,pch=22,col=color[v],bg=color[v],cex=2)
         arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=color[v],lwd=2)
         if (p_s<thresh){
-                points(x,as.numeric(obs),pch='*',col="red",cex=2)
+                points(x,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
         }
-abline(h=0.0,lty=2,lwd=2)
+lines(c(0.0,7.5),c(0,0),lty=2,lwd=2)
 ll=c(essai_taxo[[2]]$obs,essai_taxo[[3]]$obs)
 lines(2:3,ll,col="black",lwd=2,lty=1)
 ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
