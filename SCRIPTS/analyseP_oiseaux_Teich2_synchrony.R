@@ -15,7 +15,7 @@ DIRECTORY_ORIGIN = "/home/caluome/git/BirdTimeSeries_Teich/"
 setwd(paste(DIRECTORY_ORIGIN,"IN/",sep=""))
 options(nwarnings = 300) #nb de messages de warnings conservés
 
-
+#update.packages(ask = F) #update all packages
 
 ##################################################################################
 # -- importation des données du Teich
@@ -421,16 +421,27 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE,ma
   species   = c(as.character(species_ete))
   dataF_ete = data.frame(date,abundance,species) #Codyn need dataframe
   colnames(dataF_ete)=c("date","abundance","species") 
-  vec_synchrony_Loreau[1]= synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
-  vec_synchrony_Gross[1]=synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  if(length(dataF_ete$abundance[dataF_ete$abundance>0])>0){
+    vec_synchrony_Loreau[1]= synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
+    vec_synchrony_Gross[1]=synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  }
+  else{
+    vec_synchrony_Loreau[1]=NA
+    vec_synchrony_Gross[1]=NA
+  }
   date      = c(as.numeric(date_hiver))
   abundance = c(as.numeric(abondance_hiver))
   species   = c(as.character(species_hiver))
   dataF_hiver = data.frame(date,abundance,species) 
   colnames(dataF_hiver)=c("date","abundance","species") 
-  vec_synchrony_Loreau[2]= synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
-  vec_synchrony_Gross[2]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
-  
+  if(length(dataF_hiver$abundance[dataF_hiver$abundance>0])>0){
+    vec_synchrony_Loreau[2]= synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
+    vec_synchrony_Gross[2]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  }
+  else{
+    vec_synchrony_Loreau[2]=NA
+    vec_synchrony_Gross[2]=NA
+  }
   #-----------------------
   # PERIODE >= 2007
   abondance_ete=c()
@@ -491,15 +502,27 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE,ma
   species   = c(as.character(species_ete))
   dataF_ete = data.frame(date,abundance,species) #Codyn need dataframe
   colnames(dataF_ete)=c("date","abundance","species") 
-  vec_synchrony_Loreau[3]= synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
-  vec_synchrony_Gross[3]=synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  if(length(dataF_ete$abundance[dataF_ete$abundance>0])>0){
+    vec_synchrony_Loreau[3]= synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
+    vec_synchrony_Gross[3]=synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  }
+  else{
+    vec_synchrony_Loreau[3]=NA
+    vec_synchrony_Gross[3]=NA
+  }
   date      = c(as.numeric(date_hiver))
   abundance = c(as.numeric(abondance_hiver))
   species   = c(as.character(species_hiver))
   dataF_hiver = data.frame(date,abundance,species)
   colnames(dataF_hiver)=c("date","abundance","species") 
-  vec_synchrony_Loreau[4]= synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
-  vec_synchrony_Gross[4]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  if(length(dataF_hiver$abundance[dataF_hiver$abundance>0])>0){
+    vec_synchrony_Loreau[4]= synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
+    vec_synchrony_Gross[4]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  }
+  else{
+    vec_synchrony_Loreau[4]=NA
+    vec_synchrony_Gross[4]=NA
+  }
   #-----------------------
   # PERIODE < 2006
   abondance_ete=c()
@@ -559,16 +582,28 @@ SynchronySeason2 = function(matrice,file_out,titre,Loreau = TRUE, Gross =TRUE,ma
   species   = c(as.character(species_ete))
   dataF_ete = data.frame(date,abundance,species) #Codyn need dataframe
   colnames(dataF_ete)=c("date","abundance","species") 
-  vec_synchrony_Loreau[5]= synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
-  vec_synchrony_Gross[5]=synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  if(length(dataF_ete$abundance[dataF_ete$abundance>0])>0){
+    vec_synchrony_Loreau[5]= synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
+    vec_synchrony_Gross[5]=synchrony(dataF_ete, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  }
+  else{
+    vec_synchrony_Loreau[5]=NA
+    vec_synchrony_Gross[5]=NA
+  }
   date      = c(as.numeric(date_hiver))
   abundance = c(as.numeric(abondance_hiver))
   species   = c(as.character(species_hiver))
   dataF_hiver = data.frame(date,abundance,species)
   colnames(dataF_hiver)=c("date","abundance","species") 
-  vec_synchrony_Loreau[6]= synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
-  vec_synchrony_Gross[6]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
   
+  if(length(dataF_hiver$abundance[dataF_hiver$abundance>0])>0){
+    vec_synchrony_Loreau[6]= synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Loreau")
+    vec_synchrony_Gross[6]=synchrony(dataF_hiver, abundance.var = "abundance",species.var = "species",time.var = "date",metric="Gross")
+  }
+  else{
+    vec_synchrony_Loreau[6]=NA
+    vec_synchrony_Gross[6]=NA
+  }
   data_synchro=c()
   
   if (Loreau == TRUE & Gross == TRUE){data_synchro =c(c(vec_synchrony_Loreau),c(vec_synchrony_Gross))
@@ -1387,9 +1422,9 @@ print (paste("Ratio abundance waders : ",sum(abondance_waders$Nombre)/sum(DBt$No
 abondance_frequent = subset(DBt,as.character(DBt$Nom_latin)%in% oiseaux_Frequents_t & DBt$Annee>=1981)
 print (paste("Ratio abundance frequent : ",sum(abondance_frequent$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
 # list of sparow (passereaux in french), complete ?
-sparows = c("Alauda arvensis","Lullula arborea","Plectrophenax nivalis","Emberiza schoeniclus","Emberiza citrinella","Emberiza hortulana","Emberiza calandra","Carduelis carduelis","Sturnus vulgaris","Sylvia atricapilla","Sylvia borin","Sylvia communis","Sylvia undata","Garrulus glandarius","Muscicapa striata","Ficedula hypoleuca","Luscinia svecica","Luscinia svecica cyanecula / namnetum","Luscinia svecica cyanecula","Luscinia svecica namnetum","Delichon urbicum","Riparia riparia","Cecropis daurica","Hirundo rustica","Oriolus oriolus","Passer domesticus","Passer montanus","Lanius senator","Lanius collurio","Fringilla coelebs","Fringilla montifringilla","Anthus trivialis","Anthus pratensis","Anthus petrosus","Anthus campestris","Anthus spinoletta","Sitta europaea","Carduelis flammea")
-abondance_sparows = subset(DBt,as.character(DBt$Nom_latin)%in% sparows & DBt$Annee>=1981)
-print (paste("Ratio abundance sparow : ",sum(abondance_sparows$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
+sparrows = c("Alauda arvensis","Lullula arborea","Plectrophenax nivalis","Emberiza schoeniclus","Emberiza citrinella","Emberiza hortulana","Emberiza calandra","Carduelis carduelis","Sturnus vulgaris","Sylvia atricapilla","Sylvia borin","Sylvia communis","Sylvia undata","Garrulus glandarius","Muscicapa striata","Ficedula hypoleuca","Luscinia svecica","Luscinia svecica cyanecula / namnetum","Luscinia svecica cyanecula","Luscinia svecica namnetum","Delichon urbicum","Riparia riparia","Cecropis daurica","Hirundo rustica","Oriolus oriolus","Passer domesticus","Passer montanus","Lanius senator","Lanius collurio","Fringilla coelebs","Fringilla montifringilla","Anthus trivialis","Anthus pratensis","Anthus petrosus","Anthus campestris","Anthus spinoletta","Sitta europaea","Carduelis flammea")
+abondance_sparrows = subset(DBt,as.character(DBt$Nom_latin)%in% sparrows & DBt$Annee>=1981)
+print (paste("Ratio abundance sparrow : ",sum(abondance_sparrows$Nombre)/sum(DBt$Nombre)*100," %",sep=""))
 
 ###################################################################################################################
 # synchrony with selected species T50
@@ -1410,10 +1445,20 @@ SynchronySeason2(matrice = abondance_calidris,"T50-Axe1-Teich_Synchrony_by_seaso
 #abondance_calidris_coco =cbind(abondance_calidris_coco,Annee)
 
 # abondance_calidris_coco$Annee=as.numeric(as.character(abondance_calidris_coco$Annee))
-# abondance_calidris_coco$Nom_latin=as.character(abondance_calidris_coco$Nom_latin)
+# abondance_calidris_coco$Nom_latin=as.character(abondance_calidris_coco$Nom_latin)marcel-plenacoste-la-legende-des-filles-de-la-mer-d-irlande
 # abondance_calidris_coco$Nombre=as.numeric(as.character(abondance_calidris_coco$Nombre))
 #SynchronySeason2(matrice = abondance_calidris_coco,"T50-Axe1-Teich_Synchrony_by_season_for_Calidris_with_only_canutus_alpina_ferruginea_minuta_cocoVersion.pdf",titre ="Gross synchrony for Calidris \nwith only canutus Alpina ferruginea et minuta\nCoco version",Loreau = FALSE,Gross=TRUE)
 
 # anas
 abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE)& DBt$Annee>=1981)
 SynchronySeason2(matrice = abondance_anas,"T50-Axe1-Teich_Synchrony_by_season_for_anas_without_species_with_low_abondance.pdf",titre ="Gross synchrony for Anas\nwithout_species_with_low_abondance",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
+
+print ("Abondance waders")
+# waders
+abondance_waders = subset(DBt,as.character(DBt$Nom_latin)%in% limicoles & DBt$Annee>=1981)
+SynchronySeason2(matrice = abondance_waders,"T50-Axe1-Teich_Synchrony_by_season_for_waders_without_species_with_low_abondance.pdf",titre ="Gross synchrony for Waders\nwithout_species_with_low_abondance",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
+
+print ("Abondance sparrows")
+#sparrows
+abondance_sparrows = subset(DBt,as.character(DBt$Nom_latin)%in% sparrows & DBt$Annee>=1981)
+SynchronySeason2(matrice = abondance_sparrows,file_out ="T50-Axe1-Teich_Synchrony_by_season_for_sparrows_without_species_with_low_abondance.pdf",titre ="Gross synchrony for Sparrows",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
