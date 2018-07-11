@@ -13,7 +13,6 @@ dates=unique(db$Date)
 tab=matrix(0,nrow=length(dates),ncol=2)
 colnames(tab)=c("Cormorant","HeronEgret")
 rownames(tab)=dates
-
 for(id in 1:length(dates)){
         for (s in c('Cormorant',"HeronEgret")){
                 id_d=which(db$Date==dates[id]&db$Nom_latin==s)

@@ -24,6 +24,14 @@ db_cold_all=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<
 db_cold_pre_2006=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<=2006)
 db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Cormorant","HeronEgret")&dates>2006&dates<2016)
 
+id_c=db_warm$sp_data_frame=="Cormorant"
+plot(db_warm$dates[id_c],db_warm$abundance[id_c],col="red",lty=1,lwd=1.5,t="l",ylim=c(0,1000))
+id_c=db_warm$sp_data_frame=="HeronEgret"
+lines(db_warm$dates[id_c],db_warm$abundance[id_c],col="red",lty=2)
+id_c=db_cold$sp_data_frame=="Cormorant"
+lines(db_cold$dates[id_c],db_cold$abundance[id_c],col="blue",lty=1,lwd=1.5)
+id_c=db_cold$sp_data_frame=="HeronEgret"
+lines(db_cold$dates[id_c],db_cold$abundance[id_c],col="blue",lty=2)
 #Compute synchrony values
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=100)
 synch_warm_pre_2006=community_sync_Gross(db_warm_pre_2006,nrands=100)
@@ -37,9 +45,9 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 print(essai_taxo)
 color=rep(c("Black","Lightblue","Darkblue"),2)
-pdf("OUT/gross_triad.pdf")
-par(mfrow=c(1,1),mar=c(3,2,1,.5))
-plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="")
+pdf("OUT/gross_triad.pdf",family="Times")
+par(mfrow=c(1,1),mar=c(3,4.5,1,.5))
+plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony Index",cex.lab=2,cex.axis=2)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs

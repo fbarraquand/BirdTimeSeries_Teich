@@ -125,9 +125,9 @@ list_freq=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_war
 
 #PLOT
 color=rep(c("Black","Lightblue","Darkblue"),2)
-pdf("OUT/gross_inside_groups.pdf",width=11,height=7)
-par(mfrow=c(1,2),mar=c(3,4.5,1,.25))
-plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2)
+pdf("OUT/gross_inside_groups.pdf",width=11,height=7,family="Times")
+par(mfrow=c(1,2),mar=c(3,4.5,3,.25))
+plot(0,0,t="n",ylim=c(-.75,.7),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="Taxonomic groups",cex.main=2)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
 	essai_taxo=list_anas
@@ -169,9 +169,10 @@ lines(6:7,ll,col="black",lwd=2,lty=2)
 
 
 abline(h=0.0,lty=2,lwd=2)
-legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+legend("bottomright",c("Anas","Calidris"),pch=c(21,22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 
-plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n")
+plot(0,0,t="n",ylim=c(-.75,.7),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n",main='Functional groups',cex.main=2)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         essai_taxo=list_waders
@@ -213,5 +214,5 @@ ll=c(list_freq[[5]]$obs,list_freq[[6]]$obs)
 lines(6:7,ll,col="black",lwd=2,lty=2)
 
 abline(h=0.0,lty=2,lwd=2)
-legend("topleft",c("Anas","Calidris","Waders","Freq"),pch=c(21,22,23,24),pt.bg="black",pt.cex=2,bty="n",cex=2)
+legend("bottomright",c("Waders","Freq"),pch=c(23,24),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
