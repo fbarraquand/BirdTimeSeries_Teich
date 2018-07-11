@@ -1270,9 +1270,41 @@ lines(abondance_ardea$Date,log(abondance_ardea$Nombre),col="darkblue",type='o',l
 lines(abondance_ardea$Date,log(abondance_ardea$Nombre+1),col="darkblue",lwd =1,lty=3)
 axis(1, at=d_ticks, labels=nameTicks,cex.axis=1.5)
 legend("topright",legend = c("Egretta garzetta",'Phalacrocorax carbo','Ardea cinerea'),col=c('darkgreen','darkred','darkblue'),pch=19,lwd=1)
+#dev.off()
+
+#pdf("T47B-Axe1-Teich-les_3_especes_Heron+Aigrette.pdf",width=20,height=6,family = 'Times')
+HeronEgret =subset(DBt,((DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Ardea cinerea') &DBt$Annee>=1981))
+matHeronEgret = create_somme(HeronEgret$Date,HeronEgret$Nombre)
+temp_date = expand.grid(15,colnames(matHeronEgret),rownames(matHeronEgret)) #15 because i need a day for build complete date.
+temp_date = c(paste(temp_date[,1],temp_date[,2],temp_date[,3],sep='-'))
+temp_date = as.Date(temp_date,format="%d-%m-%Y")
+temp_value = c(t(matHeronEgret))
+temp_species = rep("Heron+Egret",length(temp_date))
+df_HeronEgret = cbind(as.character(temp_date),temp_value,temp_species)
+colnames(df_HeronEgret)=c("Date","Nombre","Nom_latin")
+df_HeronEgret=as.data.frame(df_HeronEgret)
+df_HeronEgret$Nombre = as.numeric(as.character(df_HeronEgret$Nombre))
+df_HeronEgret$Date = as.Date(as.character(df_HeronEgret$Date))
+df_HeronEgret$Nom_latin = as.character(df_HeronEgret$Nom_latin)
+par(mar=c(4,5,3,1))
+d_ticks = date(paste(unique(as.numeric(format(unique(DBt$Date), format = "%Y"))),"-01-01",sep=""))
+d_ticks = d_ticks[seq(1,length(d_ticks),by = 2)]
+nameTicks=unique(as.numeric(format(unique(DBt$Date), format = "%Y")))
+nameTicks = nameTicks[seq(1,length(nameTicks),by = 2)]
+abondance_phalacrocorax = subset(DBt,DBt$Nom_latin=='Phalacrocorax carbo' & DBt$Annee>=1981)
+ymin = 0
+ymax = max(df_HeronEgret$Nombre,abondance_phalacrocorax$Nombre,na.rm=TRUE)
+ymax = log(max(df_HeronEgret$Nombre,abondance_phalacrocorax$Nombre,na.rm=TRUE))
+xmin = date("1981-01-01")
+xmax = date("2016-04-01")
+plot(df_HeronEgret$Date,log(df_HeronEgret$Nombre),col="darkgreen",xlab="Year",ylab="Log abundance",xlim=c(xmin,xmax),cex.lab=1.8,cex.axis=1.5,xaxt="n",pch=19,ylim=c(ymin,ymax),type="o",lwd =1.8,cex=0.9)
+lines(df_HeronEgret$Date,log(df_HeronEgret$Nombre+1),col="darkgreen",lwd =1,lty=3)
+lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre),col="darkred",type='o',lwd=1.8,pch=19,cex=0.9)
+lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre+1),col="darkred",lwd =1,lty=3)
+
+axis(1, at=d_ticks, labels=nameTicks,cex.axis=1.5)
+legend("topright",legend = c("Sum Egretta garzetta + Ardea cinerea",'Phalacrocorax carbo'),col=c('darkgreen','darkred'),pch=19,lwd=1)
 dev.off()
-
-
 
 #----- T48
 # test rapide 
