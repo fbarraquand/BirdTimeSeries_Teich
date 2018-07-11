@@ -1249,6 +1249,59 @@ name "fig:Wavelet-modulus-ratio"
 
 \begin_layout Standard
 
+\change_inserted -2100369821 1531309940
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1531309967
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T47-Axe1-Teich-les_3_especes.pdf
+	width 95text%
+	special page=2
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531309940
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531309999
+Time series of Cormoran, Heron and Egret
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \change_inserted -2100369821 1530710847
 \begin_inset Float figure
 wide false
