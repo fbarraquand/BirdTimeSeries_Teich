@@ -1270,9 +1270,9 @@ lines(abondance_ardea$Date,log(abondance_ardea$Nombre),col="darkblue",type='o',l
 lines(abondance_ardea$Date,log(abondance_ardea$Nombre+1),col="darkblue",lwd =1,lty=3)
 axis(1, at=d_ticks, labels=nameTicks,cex.axis=1.5)
 legend("topright",legend = c("Egretta garzetta",'Phalacrocorax carbo','Ardea cinerea'),col=c('darkgreen','darkred','darkblue'),pch=19,lwd=1)
-#dev.off()
+dev.off()
 
-#pdf("T47B-Axe1-Teich-les_3_especes_Heron+Aigrette.pdf",width=20,height=6,family = 'Times')
+pdf("T47B-Axe1-Teich-les_3_especes_Heron+Aigrette.pdf",width=20,height=6,family = 'Times')
 HeronEgret =subset(DBt,((DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Ardea cinerea') &DBt$Annee>=1981))
 matHeronEgret = create_somme(HeronEgret$Date,HeronEgret$Nombre)
 temp_date = expand.grid(15,colnames(matHeronEgret),rownames(matHeronEgret)) #15 because i need a day for build complete date.
