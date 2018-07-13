@@ -133,18 +133,59 @@ Early investigations of synchronous vs compensatory dynamics focused on
  the variance ratio, that is, the variance of the sum of the community biomass
  divided by the sum of the variance of the component species biomasses.
  Unfortunately, this approach is not appropriate for communities subjected
- to community-wide environmental forcing (Ranta et al.), because one main
- environmental driver (e.g., temperature or light) may synchronize species
- abundances or growth rates.
+ to community-wide environmental forcing (
+\change_deleted -2100369821 1531388477
+Ranta et al.
+\change_inserted -2100369821 1531388477
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ranta_detecting_2008"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+), because one main environmental driver (e.g., temperature or light) may
+ synchronize species abundances or growth rates.
  Further research has therefore focused on specific timeframes where compensator
 y dynamics may be found (e.g., below the seasonal scale where temperature
- fluctuation tends to synchronize species, Vasseur 2014 ref).
+ fluctuation tends to synchronize species, 
+\change_deleted -2100369821 1531388592
+Vasseur 2014 ref
+\change_inserted -2100369821 1531388592
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "vasseur_synchronous_2014"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+).
  
 \end_layout
 
 \begin_layout Standard
 Despite this effort to look for more meaningful temporal scales, temporal
- compensation has been surprinsingly elusive in the field (REFs)
+ compensation has been surprinsingly elusive in the field (
+\change_deleted -2100369821 1531388698
+REFs
+\change_inserted -2100369821 1531388698
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "houlahan_compensatory_2007"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+)
 \begin_inset Note Note
 status open
 
@@ -177,7 +218,11 @@ If we consider only the years we use.
 
 \begin_layout Standard
 Indeed, taxonomic scale should be a main modulator of synchrony/compensation,
- a factor of variation that has been somewhat negelected for now.
+ a factor of variation that has been somewhat neg
+\change_deleted -2100369821 1531388956
+e
+\change_unchanged
+lected for now.
  On the one hand, one could argue that compensation should be higher between
  similar species, because functional and phylogenetic differences are generally
  correlated.
@@ -213,7 +258,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Our dataset is ideally suited to tackle how synchronous are bird communities
+Our dataset is ideally suited to tackle how synchronous 
+\change_deleted -2100369821 1531389008
+are 
+\change_unchanged
+bird communities
+\change_inserted -2100369821 1531389010
+ are
+\change_unchanged
  at different temporal and taxonomic scale given that (i) it is a highly
  temporally resolved time series with respect to the species typical generation
  times and (ii) the reserve where the data has been collected was subjected
@@ -255,7 +307,11 @@ monthly snapshot
  This makes sense from an ecological viewpoint, as we separate wintering
  birds from summer residents, and these two communities have different needs
  and a shifting composition (though they partially overlap).
- (see Appendix S1 for alternative choices of season definition).
+ 
+\change_deleted -2100369821 1531389060
+(see Appendix S1 for alternative choices of season definition).
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -278,7 +334,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -295,20 +351,78 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Temporal trends for ducks (a, 
+Temporal trends
+\change_inserted -2100369821 1531389076
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531389127
+Is the word 'trends' really suitable for what we show? They are not only
+ 'trends', they are 'real' time series.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ for 
+\change_deleted -2100369821 1531389154
+ducks (a, 
+\change_unchanged
+
 \emph on
 Anas
 \emph default
- genus), calidrids (b, 
+ 
+\change_deleted -2100369821 1531389158
+genus
+\change_inserted -2100369821 1531389166
+(a
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1531389192
+After, we have a different definition of ducks, corresponding the whole
+ Anatidae family, not only the genus Anas
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+), calidrids (b, 
 \emph on
 Calidris
 \emph default
  genus), and all waders (c, including calidrids).
- The filled black lines represent trends in summed abundances for each guild,
- thin dotted lines putative trends (when some species are absent).
+ The 
+\change_deleted -2100369821 1531389239
+filled
+\change_inserted -2100369821 1531389240
+solid
+\change_unchanged
+ black lines represent trends in summed abundances for each guild, thin
+ dotted lines
+\change_inserted -2100369821 1531389247
+ represent
+\change_unchanged
+ putative trends (when some species are absent).
  The coloured symbols below the curves represent each species abundances,
  with species composition on the right side on the donut plots for the most
- abundant species.
+ abundant species
+\change_inserted -2100369821 1531389339
+ (over 1% of the community we consider)
+\change_unchanged
+.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -422,15 +536,29 @@ literal "false"
  We averaged monthly bird abundances, for each species, over the season
  duration, and computed the synchrony index using the year as our statistical
  unit.
- We also differentiated before and after 2006, given that a management change
- occurred within the reserve in 2006.
- We considered both the synchrony inside a given group (e.g., among species
- of the 
+ We also differentiated 
+\change_inserted -2100369821 1531389407
+periods 
+\change_unchanged
+before and after 2006, given that a management change occurred within the
+ reserve in 2006.
+ We considered both the synchrony inside a given group (e.g., 
+\change_deleted -2100369821 1531389431
+among
+\change_inserted -2100369821 1531389432
+within
+\change_unchanged
+ species of the 
 \shape italic
 Anas
 \shape default
- genus) or between groups (e.g., between the summed abondances of all species
- of genus 
+ genus) or between groups (e.g., between the summed ab
+\change_deleted -2100369821 1531389436
+o
+\change_inserted -2100369821 1531389436
+u
+\change_unchanged
+ndances of all species of genus 
 \shape italic
 Anas
 \shape default
@@ -462,7 +590,7 @@ zoomed in
 \shape italic
 (Phalacrocorax carbo)
 \shape default
-, the , the little Egret (
+, the little Egret (
 \shape italic
 Egretta garzetta
 \shape default
@@ -523,6 +651,12 @@ Do we Bonferronni-correct? In this case, 5/16 for the 4 seasons? (4 groups/4
  makes sense if we do it below? In any case we don't need to mention more
  here if we add the codes to the GitHub repo.
  
+\change_inserted -2100369821 1531389726
+I don't Bonferroni-correct for now.
+ Thinking about it, wouldn't it be 5/(3*6*2) (3 periods of time, 6 groups,
+ 2 seasons) ? 
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -536,7 +670,11 @@ In addition to the time-domain analyses above, we performed
  
 \change_unchanged
  frequency-domain analyses, in particular for analyzing synchrony within
- the rich wader community.
+ the rich wader community
+\change_inserted -2100369821 1531389807
+ and the group formed by the cormorant, heron and egret
+\change_unchanged
+.
  Based on the work by Keitt 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -630,10 +768,17 @@ Parmi ce qu'on a noté :
 \end_layout
 
 \begin_layout Standard
-Using a taxonomic classification (Calidris and Anas), we can see that within-gen
-us synchrony indices at the seasonal scale are always positive whenever
- significantly different from the null (no temporal correlation between
- species), i.e.
+Using a taxonomic classification (
+\shape italic
+Calidris
+\shape default
+ and 
+\shape italic
+Anas
+\shape default
+), we can see that within-genus synchrony indices at the seasonal scale
+ are always positive whenever significantly different from the null (no
+ temporal correlation between species), i.e.
  there is no compensation within a genus (Fig.
  
 \begin_inset CommandInset ref
@@ -801,7 +946,7 @@ There is therefore relatively contrasted results regarding the effect of
 \begin_layout Standard
 More clear-cut can be found when we examine the synchrony vs.
  compensation between functional groups (Fig.
- 2d [ADD LABELS to multipanel figures]).
+ 2d).
  Since we consider only two functional groups, the Gross index is a simple
  correlation.
  Waders and ducks are negatively correlated during the cold season and positivel
@@ -873,7 +1018,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../OUT/T47-Axe1-Teich-les_3_especes.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/T47B-Axe1-Teich-les_3_especes_Heron+Aigrette.pdf
 	width 95text%
 	special page=2
 
@@ -886,25 +1031,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time series of 
-\change_inserted -2100369821 1531386418
-Great 
-\change_unchanged
-Cormoran,
-\change_inserted -2100369821 1531386421
- Grey
-\change_unchanged
- Heron and 
-\change_inserted -2100369821 1531386429
-Little 
-\change_unchanged
-Egret
-\change_inserted -666822487 1531327647
- [F: Correct names here + wasn't this constituted of only two time series?
- Something must have happened when I refer to the local repo].
- 
-\change_unchanged
-
+Time series of Great Cormoran, Grey Heron and Little Egret
 \end_layout
 
 \end_inset
