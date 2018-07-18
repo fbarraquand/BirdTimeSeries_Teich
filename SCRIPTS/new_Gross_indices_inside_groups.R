@@ -103,12 +103,20 @@ db_cold=db_cold[,c(2,3,4)]
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 
-db_warm_all=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates<2016)
-db_warm_pre_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)   &dates<=2006)
-db_warm_post_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates>2006&dates<2016)
-db_cold_all=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates<2016)
-db_cold_pre_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles) &dates<=2006)
-db_cold_post_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles) &dates>2006&dates<2016)
+#db_warm_all=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates<2016)
+#db_warm_pre_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)   &dates<=2006)
+#db_warm_post_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates>2006&dates<2016)
+#db_cold_all=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates<2016)
+#db_cold_pre_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles) &dates<=2006)
+#db_cold_post_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles) &dates>2006&dates<2016)
+
+db_warm_all=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)  &dates<2016)
+db_warm_pre_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)   &dates<=2006)
+db_warm_post_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)  &dates>2006&dates<2016)
+db_cold_all=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)  &dates<2016)
+db_cold_pre_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore) &dates<=2006)
+db_cold_post_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore) &dates>2006&dates<2016)
+
 
 #Compute synchrony values
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=100)
@@ -152,6 +160,7 @@ list_duck=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_war
 #PLOT
 upsi=0.05
 color=rep(c("Black","Lightblue","Darkblue"),2)
+if(1==0){
 pdf("OUT/gross_inside_groups.pdf",width=11,height=7,family="Times")
 par(mfrow=c(1,2),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-.75,.66),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="Taxonomic groups",cex.main=2)
@@ -244,12 +253,12 @@ lines(6:7,ll,col="black",lwd=2,lty=2)
 lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
 legend("bottomright",c("Waders","Ducks"),pch=c(23,24),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
-
+}
 
 upsi=0.02
-pdf("OUT/Gross_freq.pdf",width=11,height=7,family="Times")
+pdf("OUT/Gross_freq_including_waders.pdf",width=11,height=7,family="Times")
 par(mfrow=c(1,1),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-plot(0,0,t="n",ylim=c(0.15,0.35),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
+plot(0,0,t="n",ylim=c(-0.125,0.425),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
 mtext("Within",side=2,line=0.5,outer=T,cex=2)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
@@ -267,6 +276,7 @@ for (v in 1:6){
                 }
 
         }
+lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
 legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
 legend("bottomright",c("Freq"),pch=c(21),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
