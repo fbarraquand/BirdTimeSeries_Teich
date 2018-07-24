@@ -16,9 +16,9 @@ db_tmp$dates=as.numeric(db_tmp$dates)
 db_av$dates=as.numeric(db_av$dates)
 db_ap$dates=as.numeric(db_ap$dates)
 
-synch_all=community_sync_Gross(db_tmp,nrands=100) #-0.09735, p=0.74
-synch_av=community_sync_Gross(db_av,nrands=100) #-0.2028886, p=0.34
-synch_ap=community_sync_Gross(db_ap,nrands=100) #0.2758426, p=0.11
+#synch_all=community_sync_Gross(db_tmp,nrands=100) #-0.09735, p=0.74
+#synch_av=community_sync_Gross(db_av,nrands=100) #-0.2028886, p=0.34
+#synch_ap=community_sync_Gross(db_ap,nrands=100) #0.2758426, p=0.11
 
 
 dates=unique(db$Date)
@@ -45,6 +45,7 @@ mr = wmr.boot(mm, smoothing = 1,reps=100)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
 png('OUT/wavelet_triad.png',width=800)
+
 image_mvcwt(mr,reset.par=F,cex.axis=4,z.fun="Mod")
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management

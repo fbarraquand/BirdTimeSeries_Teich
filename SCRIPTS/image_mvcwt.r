@@ -14,7 +14,8 @@ image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...)
         for (i in 1:nvar) {
             image(x, y, z.fun(z[, , i]), log = "y", col = pal, 
                 axes = FALSE, xlab="",ylab="",...)
-		abline(v=2006,lwd=2,col="black") 
+#		mtext("b)",side=2,line=-2,at=0.975,cex=2,outer=T,las=1)
+#		lines(c(2006,2006),c(0.2,20),lwd=2,col="black") 
             if (i%%2) 
                 axis(2,cex.axis=1.8)
             else axis(4)
@@ -24,7 +25,7 @@ image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...)
 #                  add = TRUE, drawlabels = FALSE)
                 zb = p.adjust(as.vector(z.boot), method = "BY")
                 dim(zb) = dim(z.boot)
-                contour(x, y, zb[, , i], levels = 0.05, lwd = 0.5,lty=1, 
+                contour(x, y, zb[, , i], levels = 0.1, lwd = 0.5,lty=1, 
                   add = TRUE, drawlabels = FALSE)
             }
             if (is.finite(bound)) {

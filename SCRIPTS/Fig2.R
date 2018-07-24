@@ -3,7 +3,7 @@ graphics.off()
 
 source("SCRIPTS/test_synchrony_Gross.r")
 
-thresh=0.05
+thresh=0.1/(3*2) #There are two seasons and three periods considered
 
 sp_to_ignore=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser barchyrhynchus")
 #I think there are more species we should ignore, have a closer look with CHristelle
@@ -102,12 +102,12 @@ db_cold=db_cold[,c(2,3,4)]
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 
-db_warm_all=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates<2016)
-db_warm_pre_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)   &dates<=2006)
-db_warm_post_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates>2006&dates<2016)
-db_cold_all=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles)  &dates<2016)
-db_cold_pre_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles) &dates<=2006)
-db_cold_post_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&!(sp_data_frame %in%limicoles) &dates>2006&dates<2016)
+db_warm_all=subset(db_warm,!(sp_data_frame %in%sp_to_ignore) &dates<2016)
+db_warm_pre_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)  &dates<=2006)
+db_warm_post_2006=subset(db_warm,!(sp_data_frame %in%sp_to_ignore)  &dates>2006&dates<2016)
+db_cold_all=subset(db_cold,!(sp_data_frame %in%sp_to_ignore) &dates<2016)
+db_cold_pre_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore) &dates<=2006)
+db_cold_post_2006=subset(db_cold,!(sp_data_frame %in%sp_to_ignore)&dates>2006&dates<2016)
 #Compute synchrony values
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=100)
 synch_warm_pre_2006=community_sync_Gross(db_warm_pre_2006,nrands=100)
@@ -152,7 +152,8 @@ upsi=0.02
 color=rep(c("Black","Lightblue","Darkblue"),2)
 pdf("OUT/Gross_freq.pdf",width=11,height=7,family="Times")
 par(mfrow=c(1,1),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-plot(0,0,t="n",ylim=c(0.15,0.35),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
+plot(0,0,t="n",,ylim=c(-.75,.66),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
+#ylim=c(0.15,0.35),
 #mtext("Within",side=2,line=0.5,outer=T,cex=2)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
@@ -170,6 +171,7 @@ for (v in 1:6){
                 }
 
         }
+lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
 legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
 legend("bottomright",c("Freq"),pch=c(21),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
@@ -325,6 +327,7 @@ lines(c(0.0,7.5),c(0,0),lty=2,lwd=2)
 ll=c(essai_taxo[[2]]$obs,essai_taxo[[3]]$obs)
 lines(2:3,ll,col="black",lwd=2,lty=1)
 ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
+lines(6:7,ll,col="black",lwd=2,lty=1)
 legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
 legend("topleft",c("Anas/Calidris"),pch=21,pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 

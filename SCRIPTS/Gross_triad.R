@@ -4,7 +4,9 @@ rm(list=ls())
 graphics.off()
 source("SCRIPTS/test_synchrony_Gross.r")
 
-thresh=0.05
+thresh=0.1/(3*2) #There are two seasons and three periods considered
+
+log_b=FALSE
 
 # Grand Cormoran Phalacrocorax carbo
 # Héron cendré Ardea cinerea
@@ -16,6 +18,11 @@ db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",heade
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
+
+if(log_b){
+	db_warm$abundance=log(db_warm$abundance+1)
+	db_cold$abundance=log(db_cold$abundance+1)
+}
 
 db_warm_all=subset(db_warm,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<2016)
 db_warm_pre_2006=subset(db_warm,sp_data_frame %in% c("Cormorant","HeronEgret")&dates<=2006)
@@ -46,8 +53,9 @@ essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_wa
 print(essai_taxo)
 color=rep(c("Black","Lightblue","Darkblue"),2)
 pdf("OUT/gross_triad.pdf",family="Times")
-par(mfrow=c(1,1),mar=c(3,4.5,1,.5))
+par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony Index",cex.lab=2,cex.axis=2)
+mtext("a)",side=2,line=-4,at=0.99,cex=2,outer=T,las=1)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs
@@ -64,6 +72,10 @@ for (v in 1:6){
                 }
 
         }
-abline(h=0.0,lty=2,lwd=2)
-legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+lines(c(0,7.5),c(0,0),lty=2,lwd=2)
+ll=c(essai_taxo[[2]]$obs,essai_taxo[[3]]$obs)
+lines(2:3,ll,col="black",lwd=2,lty=1)
+ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
+lines(6:7,ll,col="black",lwd=2,lty=1)
+legend("topright",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
 dev.off()
