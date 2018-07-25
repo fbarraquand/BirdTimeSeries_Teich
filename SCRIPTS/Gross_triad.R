@@ -6,7 +6,7 @@ source("SCRIPTS/test_synchrony_Gross.r")
 
 thresh=0.1/(3*2) #There are two seasons and three periods considered
 
-log_b=FALSE
+log_b=TRUE
 
 # Grand Cormoran Phalacrocorax carbo
 # Héron cendré Ardea cinerea
@@ -52,10 +52,10 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 print(essai_taxo)
 color=rep(c("Black","Lightblue","Darkblue"),2)
-pdf("OUT/gross_triad.pdf",family="Times")
+pdf("OUT/gross_triad_log.pdf",family="Times")
 par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-.5,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony Index",cex.lab=2,cex.axis=2)
-mtext("a)",side=2,line=-4,at=0.99,cex=2,outer=T,las=1)
+#mtext("a)",side=2,line=-4,at=0.99,cex=2,outer=T,las=1)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs

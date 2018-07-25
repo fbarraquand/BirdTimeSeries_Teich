@@ -2230,7 +2230,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../OUT/Gross_freq_including_waders.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/Gross_freq.pdf
 	width 65text%
 
 \end_inset
@@ -2314,6 +2314,216 @@ cold
 \end_inset
 
 
+\change_inserted -2100369821 1532499890
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532500085
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532500101
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1532499938
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/gross_triad_log.pdf
+	width 65text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1532499913
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1532500005
+Gross' synchrony index as a function of the season (cold and warm seasons),
+ calculated on log-transformed abundance data for the two groups formed
+ by cormorant and heron+egret.
+ The index was computed in each panel on the whole dataset (black) or using
+ two periods: before and after 2006 (light and dark blue), the year of the
+ change in water level management.
+ No value was deemed significant.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532501581
+We noted on Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Time-series-of"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that cormorants, herons and egrets seemed to compensate each other, at
+ least for the first period of the time series.
+ This compensation was even more conspicuous on a log scale.
+ We thus wondered if log-transforming the abundance would affect the values
+ of the synchrony index observed for this group.
+ It appears that synchrony values are higher with log-transformed abundances.
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -2100369821 1532501680
+\begin_inset Newpage newpage
+\end_inset
+
+Variation of 
+\begin_inset Formula $\eta$
+\end_inset
+
+ for an environmentally driven community
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532501902
+Starting from the model developped by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+, we explored the effect of a common environmental driver on a community
+ formed by two groups reacting oppositely to this driver.
+ Keeping the same number of species per group, we also increased the total
+ size of the community to examine the evolution of 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532504913
+Assuming that the environmental driver 
+\begin_inset Formula $U(t)$
+\end_inset
+
+ is an autocorrelated signal
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1532513435
+U_t=arima.sim(model=list(ar=c(0.1, 0.2, 0.1,0.5,-0.1)), n=n_time,sd=sqrt(0.5) )+0.05*seq
+(1:n_time) ? Fred, is that ok for you ?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ with a deterministic trend (as would be, for instance, the temperature),
+ the dynamics of the species follow the equation:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532504898
+\begin_inset Formula 
+\begin{equation}
+x_{i}(t+1)=x_{i}(t)\exp\left(r_{i}\left(1-\frac{x_{i}(t)+\sum_{i\neq j}^{n}\alpha x_{j}(t)}{K}\right)+b_{i}U(t)+\epsilon_{i}(t)\right)\label{eq:dynamics}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532512260
+where the community is formed by 
+\begin_inset Formula $N=2n$
+\end_inset
+
+ species, with 2 groups of 
+\begin_inset Formula $n$
+\end_inset
+
+ species who have exactly opposite reaction to the environmental driver,
+ that is 
+\begin_inset Formula $\forall i\in[1,n],\exists j\in[1,n],b_{j}=-b_{i}=$
+\end_inset
+
+.
+ The growth rate 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ follows a normal distribution with mean 1 and standard deviation 0.25.
+ All interaction coefficients 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ are set to 0.5 and 
+\begin_inset Formula $K=\frac{1+\alpha(N-1)}{N}$
+\end_inset
+
+.
+ The noise 
+\begin_inset Formula $\epsilon_{i}(t)$
+\end_inset
+
+ is normally distributed, centered on 0 with a standard deviation of 0.1.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532520316
+We compared results for time series of length 35 (the length of our data
+ set), 100 and 500, to represent realistic time series, and for a community
+ richness set at 10, 30, 60 and 100.
+ For each combination of parameters, we computed 100 repetitions.
+ 
 \end_layout
 
 \end_body
