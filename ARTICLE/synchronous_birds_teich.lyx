@@ -2406,7 +2406,7 @@ noprefix "false"
 
 \begin_layout Subsection*
 
-\change_inserted -2100369821 1532501680
+\change_inserted -2100369821 1532622462
 \begin_inset Newpage newpage
 \end_inset
 
@@ -2415,6 +2415,60 @@ Variation of
 \end_inset
 
  for an environmentally driven community
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532622469
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1532622498
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/times_series_esm.pdf
+	width 95text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1532622469
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1532622703
+Time series for community size=10, b=0.75 and length of the time series=35
+ or 500.
+ Cold colors indicate species which react positively to the environmental
+ signal and warm colors indicate species which have a negative reaction
+ to this signal.
+ The environmental signal is shown in black and indexed on the right axis.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2445,23 +2499,8 @@ Assuming that the environmental driver
 \begin_inset Formula $U(t)$
 \end_inset
 
- is an autocorrelated signal
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1532513435
-U_t=arima.sim(model=list(ar=c(0.1, 0.2, 0.1,0.5,-0.1)), n=n_time,sd=sqrt(0.5) )+0.05*seq
-(1:n_time) ? Fred, is that ok for you ?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
- with a deterministic trend (as would be, for instance, the temperature),
- the dynamics of the species follow the equation:
+ is an autocorrelated signal with a deterministic trend (as would be, for
+ instance, the temperature), the dynamics of the species follow the equation:
 \end_layout
 
 \begin_layout Standard
