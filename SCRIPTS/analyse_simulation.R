@@ -3,6 +3,9 @@
 
 rm(list=ls())
 graphics.off()
+
+subsample=TRUE
+
 source("SCRIPTS/test_synchrony_Gross.r")
 
 #Parameters which change
@@ -25,27 +28,38 @@ for(n_time in n_time_series){
 		for(b in b_series){
 		l=l+1
 		print(paste(n_time,n_species,b))
-		tab=read.table(paste("OUT/MockBirdsTimeSeries_species",n_species,"_time",n_time,"_b",b,".csv",sep=""),header=T,sep=",",dec=".")
+		if(subsample){		
+			tab=read.table(paste("OUT/MockBirdsTimeSeries_species",n_species,"_time500_b",b,"_withtrend_withburnin.csv",sep=""),header=T,sep=",",dec=".")
+			id=floor(seq(1,500,length.out=n_time))
+			tab=subset(tab,Time_index %in% id)
+			
+		}else{
+			tab=read.table(paste("OUT/MockBirdsTimeSeries_species",n_species,"_time",n_time,"_b",b,"_withtrend_withburnin.csv",sep=""),header=T,sep=",",dec=".")
+		}
 		#nb_repeats=unique(tab$Repeat)
-		tmp_synch=c()
 		for(k in nb_repeats){
 			data=subset(tab,Repeat==k)
 			dates=as.numeric(sort(rep(1:n_time,2*n_species)))
 			sp_data_frame=rep(paste("X",1:(2*n_species),sep=""),n_time)
 			abundance=as.vector(t(data[,4:(4+n_species*2-1)]))
 			community=data.frame(dates,sp_data_frame,abundance)
-			tab_synch[i,j,l,k]=c(tmp_synch,community_sync_Gross(community,nrands=0)$obs)
+			tab_synch[i,j,l,k]=community_sync_Gross(community,nrands=0)$obs
 		}
 #		boxplot(at=i,x=tab_synch[i,j,],add=T)
 	}
 }
 }
 #dev.off()
-save(tab_synch,file="tab_synch.RData")
-stop()
-#load OUT/tab_synch (for 10)
-pdf("OUT/analyse_simulation_varyingb_v2.pdf",height=12,width=11)
 
+
+#load OUT/tab_synch (for 10)
+if(subsample){
+pdf("OUT/analyse_simulation_varyingb_v2_subsample_withtrend_withburnin.pdf",height=12,width=11)
+save(tab_synch,file="tab_synch_subsample_withtrend_withburnin.RData")
+}else{
+pdf("OUT/analyse_simulation_varyingb_withtrend_withburnin.pdf",height=12,width=11)
+save(tab_synch,file="tab_synch_withtrend_withburnin.RData")
+}
 colors=c("lightblue","blue","darkblue")
 par(mfrow=c(3,1),mar=c(4,6,3,1))
 i=0
