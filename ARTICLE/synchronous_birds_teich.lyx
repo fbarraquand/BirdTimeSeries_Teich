@@ -35,6 +35,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -2003,63 +2004,7 @@ How does the whole community synchrony index vary with the number of species,
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1532622469
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\change_inserted -2100369821 1532622498
-\begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/times_series_esm.pdf
-	width 95text%
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1532622469
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1532700306
-Time series for community size=10, b=0.75 and length of the time series=500.
- Open circles represent all points of the time series while filled circles
- correspond to the sub-sampling of the time series to keep only 35 points.
- Cold colors indicate species which react positively to the environmental
- signal and warm colors indicate species which have a negative reaction
- to this signal.
- The environmental signal is shown in black and indexed on the right axis.
- This signal either follows an increasing trend (a), or no trend (b).
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -2100369821 1532501902
+\change_inserted -2100369821 1532933819
 Starting from the model developped by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -2068,14 +2013,78 @@ literal "false"
 
 \end_inset
 
-, we explored the effect of a common environmental driver on a community
- formed by two groups reacting oppositely to this driver.
+ (Appendix D), we explored the effect of a common environmental driver on
+ a community formed by two groups reacting oppositely to this driver.
  Keeping the same number of species per group, we also increased the total
  size of the community to examine the evolution of 
 \begin_inset Formula $\eta$
 \end_inset
 
-.
+ with the overall richness.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1532933819
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1532933819
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/times_series_esm.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1532933819
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1532933819
+Time series for a community of 10 species, a strong effect of the environment
+ (b=0.75, see eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dynamics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and a time series of 500 time steps.
+ Open circles represent all points of the time series while filled circles
+ correspond to the sub-sampling of the time series to keep only 35 points.
+ Cold colors indicate species which react positively to the environmental
+ signal and warm colors indicate species which have a negative reaction
+ to the same signal.
+ The environmental signal is shown in black, dashed lines, and indexed on
+ the right axis.
+ This signal either follows an increasing trend (a), or just an autocorrelated
+ signal (b).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2142,21 +2151,22 @@ where the community is formed by
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1532700593
+\change_inserted -2100369821 1532933777
 We compared results for time series of length 35 (the length of our data
  set), 100 and 500, to represent realistic time series.
+ For all experiments, dynamics are first run for 500 time steps as a burn-in.
  To take into account different experimental design, we either take the
- first 35 or 100 time steps of a 500-time steps series, or subsample this
- time series to have the right amount of data.
+ first 35 or 100 time steps of the following 500-time steps series, or subsample
+ this time series to have the right amount of data.
  We also considered different community richness (10, 30, 60 and 100 species),
- and different strength of the environmental signal (b=[0.1, 0.5, 0.75].
+ and different strength of the environmental signal (b=[0.1, 0.5, 0.75]).
  For each combination of parameters, we computed 10 repetitions.
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1532700599
-We considered different ases
+\change_inserted -2100369821 1532933165
+We considered different type of environmental driver
 \end_layout
 
 \begin_layout Itemize
@@ -2196,7 +2206,12 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1532700852
+\change_inserted -2100369821 1532933258
+Evolution of Gross' synhrony index for different time series length and
+ number of species in the community, in simulations where there is no trend
+ in the environmental signal and the data is not subsampled, keeping the
+ autocorrelation of the environment in the dynamics of the species.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:notrend"
@@ -2258,7 +2273,13 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1532700843
+\change_inserted -2100369821 1532933296
+Evolution of Gross' synhrony index for different time series length and
+ number of species in the community, in simulations where there is no trend
+ in the environmental signal and the data is subsampled (for 35 or 100 time
+ steps), removing the autocorrelation of the environment in the dynamics
+ of the species.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:notrend_subsample"
@@ -2313,7 +2334,12 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1532700832
+\change_inserted -2100369821 1532933417
+Evolution of Gross' synhrony index for different time series length and
+ number of species in the community, in simulations where there is an increasing
+ trend in the environmental signal and the data is subsampled (for 35 or
+ 100 time steps), removing part of the autocorrelation of the environment
+ in the dynamics of the species
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:withtrend_subsample"
@@ -2335,9 +2361,9 @@ name "fig:withtrend_subsample"
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1532701029
-Results draft: unless there is a high autocorrelation in the driver (as
- in Fig.
+\change_inserted -2100369821 1532933597
+We first confirm that unless there is a high autocorrelation in the driver
+ (as in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2351,8 +2377,8 @@ noprefix "false"
 ), if we consider two groups which have opposite reactions to the same driver,
  the Gross index is not sensitive to the length of the time series or the
  number of species in the community.
- However, for larger communities (over 10 species), synchrony is higher
- when the response to the driver is stronger).
+ For larger communities (over 10 species), synchrony is higher when the
+ response to the driver is stronger.
  For our data, we can assume that the more the birds are sensitive to the
  change in management, the less we can expect compensation in the community
  due to this change.
@@ -2361,9 +2387,9 @@ noprefix "false"
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1532701054
-We can also assume that an index close to 0 indicates that species share
- the same response to the environment.
+\change_inserted -2100369821 1532933725
+The negative or low positive values we obtain in our data set may indicate
+ that species share the same response to the environment.
  
 \end_layout
 
