@@ -98,7 +98,7 @@ Synchronous or compensatory community dynamics? Insights from a long-term
 
 \begin_layout Author
 
-\size large
+\size larger
 Frédéric Barraquand
 \begin_inset Formula $^{1,2,*}$
 \end_inset
@@ -111,7 +111,15 @@ Frédéric Barraquand
 \begin_inset Formula $^{1,3}$
 \end_inset
 
-, Laure Carassou
+, 
+\change_inserted -666822487 1533192621
+
+\begin_inset Newline newline
+\end_inset
+
+
+\change_unchanged
+Laure Carassou
 \begin_inset Formula $^{1,4}$
 \end_inset
 
@@ -1362,8 +1370,13 @@ status collapsed
 
 \begin_layout Plain Layout
 It should be noted that with more species, the 
+\change_inserted -666822487 1533192537
+Gross et al.
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citealp
 key "gross2013species"
 literal "false"
 
@@ -2497,15 +2510,9 @@ s
 \end_inset
 
  where 
-\change_deleted -666822487 1533191257
-u_t
-\change_inserted -666822487 1533191257
-
 \begin_inset Formula $u_{t}$
 \end_inset
 
-
-\change_unchanged
  is an autocorrelated signal ; and we do not subsample the data
 \end_layout
 
@@ -2628,11 +2635,11 @@ name "fig:notrend_subsample"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $U_{t}=u_{t}+x_{t}$
+\begin_inset Formula $U_{t}=U_{\text{min}}+(U_{\text{max}}-U_{\text{min}})(u_{t}+x_{t})/2$
 \end_inset
 
  where 
-\begin_inset Formula $x_{t}$
+\begin_inset Formula $x_{t}\in[0,1]$
 \end_inset
 
  follows an increasing trend ; and we subsample the data
