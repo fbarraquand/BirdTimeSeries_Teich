@@ -2033,6 +2033,16 @@ arabic{figure}}
 \end_inset
 
 
+\change_inserted -666822487 1533190650
+
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -666822487 1533190680
+ESM 1 - Gross synchrony index at the whole community level
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2094,6 +2104,14 @@ Note: Previously not including waders because presented as compared to synchrony
 \end_inset
 
 
+\change_inserted -666822487 1533190581
+
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -666822487 1533190718
+ESM 2 - Correlation in log-scale betwen cormorant and heron+egret
 \end_layout
 
 \begin_layout Standard
@@ -2163,27 +2181,34 @@ noprefix "false"
 \begin_inset Newpage newpage
 \end_inset
 
-How does the whole community synchrony index vary with the number of species,
- richness of the community, and effect of the environment?
+ESM 3 - Properties of the Gross whole community synchrony index when two
+ groups react in opposite ways 
 \end_layout
 
 \begin_layout Standard
-Starting from the model developped by 
+Here, we make 
+\begin_inset Formula $\eta$
+\end_inset
+
+ vary with the number of species, richness of the community, and the strength
+ of the effect of the environment.
+ Starting from the model developped by 
+\change_inserted -666822487 1533190888
+Gross et al.
+ 
+\change_unchanged
+
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "gross2013species"
 literal "false"
 
 \end_inset
 
- (Appendix D), we explored the effect of a common environmental driver on
- a community formed by two groups reacting oppositely to this driver.
- Keeping the same number of species per group, we also increased the total
- size of the community to examine the evolution of 
-\begin_inset Formula $\eta$
-\end_inset
-
- with the overall richness.
+ (developed in their Appendix D), we explored the effect of a common environment
+al driver on a community formed by two groups reacting oppositely to this
+ driver.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2207,8 +2232,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time series for a community of 10 species, a strong effect of the environment
- (b=0.75, see eq.
+Time series for a community of 10 species, 
+\change_inserted -666822487 1533190902
+with 
+\change_unchanged
+a strong effect of the environment (b=0.75, see eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2220,8 +2248,23 @@ noprefix "false"
 \end_inset
 
 ) and a time series of 500 time steps.
- Open circles represent all points of the time series while filled circles
- correspond to the sub-sampling of the time series to keep only 35 points.
+ Open circles represent all points of the time series while 
+\change_inserted -666822487 1533190920
+large 
+\change_unchanged
+filled circles correspond to the sub-sampling of the time series 
+\change_inserted -666822487 1533190929
+(
+\change_deleted -666822487 1533190938
+to keep
+\change_inserted -666822487 1533190939
+keeping
+\change_unchanged
+ only 35 points
+\change_inserted -666822487 1533190932
+)
+\change_unchanged
+.
  Cold colors indicate species which react positively to the environmental
  signal and warm colors indicate species which have a negative reaction
  to the same signal.
@@ -2243,11 +2286,65 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Assuming that the environmental driver 
+
+\change_deleted -666822487 1533190986
+Assuming 
+\change_inserted -666822487 1533190989
+We assume 
+\change_unchanged
+that the environmental driver 
 \begin_inset Formula $U(t)$
 \end_inset
 
- is an autocorrelated signal, the dynamics of the species follow the equation:
+ is an autocorrelated signal
+\change_inserted -666822487 1533191242
+ (see below for details).
+\change_deleted -666822487 1533190994
+,
+\change_unchanged
+ 
+\change_inserted -666822487 1533190998
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1533190996
+T
+\change_deleted -666822487 1533190995
+t
+\change_unchanged
+he dynamics of 
+\change_deleted -666822487 1533191003
+the 
+\change_unchanged
+species 
+\change_inserted -666822487 1533191014
+
+\begin_inset Formula $i$
+\end_inset
+
+ then 
+\change_unchanged
+follow
+\change_inserted -666822487 1533191009
+s
+\change_unchanged
+ the equation
+\change_inserted -666822487 1533191030
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dynamics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+:
 \end_layout
 
 \begin_layout Standard
@@ -2262,7 +2359,11 @@ x_{i}(t+1)=x_{i}(t)\exp\left(r_{i}\left(1-\frac{x_{i}(t)+\sum_{i\neq j}^{n}\alph
 \end_layout
 
 \begin_layout Standard
-where the community is formed by 
+where the 
+\change_inserted -666822487 1533191039
+whole 
+\change_unchanged
+community is formed by 
 \begin_inset Formula $N=2n$
 \end_inset
 
@@ -2289,6 +2390,19 @@ where the community is formed by
 \begin_inset Formula $K=\frac{1+\alpha(N-1)}{N}$
 \end_inset
 
+
+\change_inserted -666822487 1533191085
+, to keep the model in other ways exactly similar to Gross et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
 .
  The noise 
 \begin_inset Formula $\epsilon_{i}(t)$
@@ -2300,29 +2414,99 @@ where the community is formed by
 
 \begin_layout Standard
 We compared results for time series of length 35 (the length of our data
- set), 100 and 500, to represent realistic time series.
- For all experiments, dynamics are first run for 500 time steps as a burn-in.
- To take into account different experimental design, we either take the
- first 35 or 100 time steps of the following 500-time steps series, or subsample
- this time series to have the right amount of data.
- We also considered different community richness (10, 30, 60 and 100 species),
- and different strength of the environmental signal (
+ set), 100 and 500
+\change_deleted -666822487 1533191111
+, to represent realistic time series
+\change_unchanged
+.
+ For all 
+\change_inserted -666822487 1533191124
+simulation 
+\change_unchanged
+experiments, dynamics are first run for 500 time steps as a burn-in.
+ To take into account different 
+\change_deleted -666822487 1533191139
+experimental 
+\change_inserted -666822487 1533191141
+observational 
+\change_unchanged
+design
+\change_inserted -666822487 1533191131
+s
+\change_unchanged
+, we either take the first 35 or 100 time steps of the following 500-time
+ steps series, or subsample th
+\change_deleted -666822487 1533191153
+is
+\change_inserted -666822487 1533191153
+e
+\change_unchanged
+ time series 
+\change_inserted -666822487 1533191159
+after burn-in
+\change_deleted -666822487 1533191162
+to have the right amount of data
+\change_unchanged
+.
+ We also considered 
+\change_deleted -666822487 1533191192
+different
+\change_inserted -666822487 1533191193
+several
+\change_unchanged
+ community richness (10, 30, 60 and 100 species), and 
+\change_deleted -666822487 1533191198
+different 
+\change_inserted -666822487 1533191200
+several 
+\change_unchanged
+strength
+\change_inserted -666822487 1533191202
+s
+\change_unchanged
+ of the 
+\change_inserted -666822487 1533191208
+response to the 
+\change_unchanged
+environmental signal (
 \begin_inset Formula $b=$
 \end_inset
 
 [0.1, 0.5, 0.75]).
- For each combination of parameters, we computed 10 repetitions.
+ For each combination of parameters, we computed 10 repetitions
+\change_inserted -666822487 1533191223
+ (i.e., replicates)
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
-We considered different type of environmental driver
+We considered different type
+\change_inserted -666822487 1533191249
+s
+\change_unchanged
+ of environmental driver
+\change_inserted -666822487 1533191315
+, crossed with subsampling / no subsampling: 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $U_{t}=u_{t}$
 \end_inset
 
- where u_t is an autocorrelated signal ; and we do not subsample the data
+ where 
+\change_deleted -666822487 1533191257
+u_t
+\change_inserted -666822487 1533191257
+
+\begin_inset Formula $u_{t}$
+\end_inset
+
+
+\change_unchanged
+ is an autocorrelated signal ; and we do not subsample the data
 \end_layout
 
 \begin_layout Standard
@@ -2349,7 +2533,11 @@ status open
 Evolution of Gross' synhrony index for different time series length and
  number of species in the community, in simulations where there is no trend
  in the environmental signal and the data is not subsampled, keeping the
- autocorrelation of the environment in the dynamics of the species.
+ autocorrelation of the environment
+\change_deleted -666822487 1533191399
+ in the dynamics of the species
+\change_unchanged
+.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2398,11 +2586,27 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of Gross' synhrony index for different time series length and
- number of species in the community, in simulations where there is no trend
- in the environmental signal and the data is subsampled (for 35 or 100 time
- steps), removing the autocorrelation of the environment in the dynamics
- of the species.
+
+\change_deleted -666822487 1533191330
+Evolution of 
+\change_unchanged
+Gross' synhrony index for different time series length and number of species
+ in the community, in simulations where there is no trend in the environmental
+ signal and the data is subsampled (
+\change_deleted -666822487 1533191343
+for
+\change_inserted -666822487 1533191344
+keeping
+\change_unchanged
+ 35 or 100 time steps), removing 
+\change_inserted -666822487 1533191359
+in effect 
+\change_unchanged
+the autocorrelation of the environment
+\change_deleted -666822487 1533191378
+ in the dynamics of the species
+\change_unchanged
+.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2455,11 +2659,18 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of Gross' synhrony index for different time series length and
- number of species in the community, in simulations where there is an increasing
- trend in the environmental signal and the data is subsampled (for 35 or
- 100 time steps), removing part of the autocorrelation of the environment
- in the dynamics of the species
+
+\change_deleted -666822487 1533191269
+Evolution of 
+\change_unchanged
+Gross' syn
+\change_inserted -666822487 1533191272
+c
+\change_unchanged
+hrony index for different time series length and number of species in the
+ community, in simulations where there is an increasing trend in the environment
+al signal and the data is subsampled (for 35 or 100 time steps), removing
+ part of the autocorrelation of the environment in the dynamics of the species
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:withtrend_subsample"
@@ -2493,20 +2704,55 @@ noprefix "false"
 \end_inset
 
 ), if we consider two groups which have opposite reactions to the same driver,
- the Gross index is not sensitive to the length of the time series or the
- number of species in the community.
+ the Gross index is not sensitive to the length of the time series or
+\change_inserted -666822487 1533191512
+ to
+\change_unchanged
+ the number of species in the community.
  For larger communities (over 10 species), synchrony is higher when the
  response to the driver is stronger.
- For our data, we can assume that the more the birds are sensitive to the
- change in management, the less we can expect compensation in the community
- due to this change.
+ For our data, 
+\change_deleted -666822487 1533191526
+we can assume 
+\change_inserted -666822487 1533191527
+this means 
+\change_unchanged
+that the more 
+\change_deleted -666822487 1533191464
+the 
+\change_unchanged
+birds are sensitive to the 
+\change_deleted -666822487 1533191473
+change in management
+\change_inserted -666822487 1533191478
+water level
+\change_unchanged
+, the less we can expect compensation 
+\change_deleted -666822487 1533191535
+in the
+\change_inserted -666822487 1533191537
+at the whole
+\change_unchanged
+ community
+\change_inserted -666822487 1533191541
+ level
+\change_deleted -666822487 1533191493
+ due to this change
+\change_unchanged
+.
  
+\change_deleted -666822487 1533191546
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1533191554
 The negative or low positive values we obtain in our data set may indicate
  that species share the same response to the environment.
  
+\change_unchanged
+
 \end_layout
 
 \end_body
