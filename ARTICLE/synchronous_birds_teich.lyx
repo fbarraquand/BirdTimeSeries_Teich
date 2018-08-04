@@ -65,9 +65,9 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 3cm
+\leftmargin 2.5cm
 \topmargin 3cm
-\rightmargin 3cm
+\rightmargin 2.5cm
 \bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
@@ -85,7 +85,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -112,13 +111,9 @@ Frédéric Barraquand
 \end_inset
 
 , 
-\change_inserted -666822487 1533192621
-
 \begin_inset Newline newline
 \end_inset
 
-
-\change_unchanged
 Laure Carassou
 \begin_inset Formula $^{1,4}$
 \end_inset
@@ -289,6 +284,7 @@ status open
 
 \begin_layout Plain Layout
 We could perhaps go for a more informative title too.
+ I am also considering putting `functional' into the title.
 \end_layout
 
 \end_inset
@@ -341,18 +337,19 @@ Compensatory dynamics, during which community composition shifts despite
  We find that compensatory dynamics are still rare, likely due to the synchroniz
 ing influence of climate on birds, even after considering several temporal
  scales of covariation (during cold or warm seasons, above or below the
- season).
- Negative covariation in abundance at the community level did appear, however,
- but only after a management change in the reserve, and at the scale of
- a few months or several years.
+ seasonal scale).
+ Negative covariation in abundance at the whole community level did only
+ appear after a management change in the reserve, and at the scale of a
+ few months or several years.
  Although a lot of attention has been focused on the temporal scale of compensat
-ion, we remark the potential for compensation to vary with taxonomic and
- functional scale too: compensation appears here more frequently between
- guilds rather than within guilds, and it does so at long temporal scales
+ion, we remarked the potential for compensation to vary with taxonomic and
+ functional scale too: compensation appeared here more frequently between
+ guilds rather than within guilds, and it did so at long temporal scales
  (several years).
  This suggests that, in contrast to suggestions to search for very fine-grained
- compensation within communities, perhaps compensation has more potential
- to emerge between classes, families or broad functional groups.
+ compensation within communities organised as species list, perhaps compensation
+ has more potential to emerge between classes, families or broad functional
+ groups.
 \end_layout
 
 \begin_layout Abstract
@@ -420,8 +417,12 @@ literal "false"
 
 .
  Compensation occurs when individuals of some species replace individuals
- of another species, either because of explicit competitive processes or
- shifts in some environmental driver that change selection pressures.
+ of 
+\change_deleted -666822487 1533363848
+an
+\change_unchanged
+other species, either because of explicit competitive processes or shifts
+ in some environmental driver that change selection pressures.
  This is particularly likely to occur when there is a space or resource
  constraint combined with temporal environmental variability.
  Which species 
@@ -433,8 +434,13 @@ win
 \end_inset
 
  at any particular point in time may then depend on the fine-grained temporal
- environmental variation, or just on random exclusion processes (i.e., who
- gets there first).
+ environmental variation, or just on 
+\change_deleted -666822487 1533363862
+random exclusion processes
+\change_inserted -666822487 1533363866
+priority effects
+\change_unchanged
+ (i.e., who gets there first).
  Whatever the cause of compensatory dynamics, its main consequences for
  ecosystem functioning is therefore that the community as a whole exhibits
  lower biomass variation than its constituent species 
@@ -448,8 +454,11 @@ literal "false"
 .
  Compensation is therefore intertwined with community-level stability, at
  least when stability is understood as the reciprocal of variability.
- By contrast, another very frequent outcome on biodiversity time series
- is synchrony 
+ By contrast, another very frequent 
+\change_inserted -666822487 1533363948
+observed 
+\change_unchanged
+outcome on biodiversity time series is synchrony 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bush_fourier_2017,usinowicz_temporal_2017"
@@ -513,7 +522,7 @@ literal "false"
 
 \end_inset
 
-, ; but see 
+; but see 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ernest2008zero,christensen2018long"
@@ -539,7 +548,7 @@ literal "false"
 
 \end_inset
 
- ; though see 
+; though see 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bell_stability_2014"
@@ -593,19 +602,47 @@ literal "false"
 \end_inset
 
 ), and priority effects could dominate.
- On the other hand, it could be argued that the two similar duck species
- will precisely respond in similar ways to environmental variables, and
- although they might compete, this might be visible in their dynamics only
- at some specific times or places.
+ On the other hand, it could be argued that the
+\change_inserted -666822487 1533364054
+se
+\change_unchanged
+ two similar duck species will precisely respond in similar ways to environmenta
+l variables,
+\change_inserted -666822487 1533364093
+ which tends to obfuscate compensation
+\change_deleted -666822487 1533364083
+ and although they might compete, this might be visible in their dynamics
+ only at some specific times or places
+\change_unchanged
+.
  Under the latter scenario, more dissimilar species or groups of species
  - within the same trophic level nonetheless - could compensate each other
- within the whole community, exactly because they have different environmental
- preferences and the environment varies over time (e.g., groups of species
- preferring more open vs more closed habitats replacing each other as a
- function of changes in vegetation height).
- Surprisingly, this aspect - compensation between guilds - has been less
- well explored, even though there is some empirical evidence for compensation
- between dissimilar guilds 
+ within the whole community, 
+\change_deleted -666822487 1533364185
+exactly
+\change_inserted -666822487 1533364187
+precisely
+\change_unchanged
+ because they have different environmental preferences and the environment
+ varies over time (e.g., groups of species preferring more open vs more closed
+ habitats replacing each other as a function of changes in vegetation height).
+ Surprisingly,
+\change_deleted -666822487 1533364219
+ this aspect - 
+\change_unchanged
+compensation between guilds
+\change_deleted -666822487 1533364233
+ -
+\change_unchanged
+ has been less well explored
+\change_inserted -666822487 1533364260
+ than within guilds
+\change_unchanged
+, even though there is
+\change_inserted -666822487 1533364266
+ actually
+\change_unchanged
+ some empirical evidence for compensation between dissimilar guilds 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "sinclair2013asynchronous"
@@ -614,28 +651,33 @@ literal "false"
 \end_inset
 
 .
- We therefore explore different ways to cluster the bird community, along
- either taxonomic or functional classifications.
+ We therefore explore different ways to cluster the bird community, 
+\change_inserted -666822487 1533364292
+within or between guilds, 
+\change_unchanged
+along either taxonomic or functional classifications.
  
 \end_layout
 
 \begin_layout Standard
-Our dataset is ideally suited to tackle how synchronous bird communities
- are at different temporal and taxonomic/functional scales given that (i)
- it is a highly temporally resolved time series with respect to the species
- typical generation times
-\change_inserted -666822487 1533141141
-, but it also extends well beyond these
+Our dataset is ideally suited to tackle how synchronous
+\change_inserted -666822487 1533364335
+/compensatory
+\change_unchanged
+ bird communities are at different temporal and taxonomic/functional scales
+ given that (i) it is a highly temporally resolved time series with respect
+ to the species typical generation times
+\change_inserted -666822487 1533364316
+, but it also extends well beyond generation time (35 years)
 \change_unchanged
  and (ii) the reserve where the data has been collected was subjected to
  a major management change c.
  2006 (change in water levels), favouring different types of wetland birds
- (so that over long timescales, there is a potential for changes in community
- composition
-\change_inserted -666822487 1533141188
- in species respond differently
+ (so that over long timescales, there is a
+\change_inserted -666822487 1533364345
+ real
 \change_unchanged
-).
+ potential for changes in community composition).
  
 \end_layout
 
@@ -756,7 +798,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../OUT/T45-Axe1-Teich-Abondance_of_waders_anas_and_calidris_vers2.pdf
-	width 15cm
+	width 18cm
 
 \end_inset
 
@@ -784,7 +826,19 @@ Calidris
  thin dotted lines represent putative trends (when some species are absent).
  The coloured symbols below the curves represent each species abundances,
  with species composition on the right side on the donut plots for the most
- abundant species (over 1% of the community we consider).
+ abundant species (over 1% of 
+\change_inserted -666822487 1533364386
+relative abundance in 
+\change_unchanged
+the 
+\change_deleted -666822487 1533364400
+community
+\change_inserted -666822487 1533364404
+group considered
+\change_deleted -666822487 1533364400
+ we consider
+\change_unchanged
+).
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -810,7 +864,15 @@ Statistical Analyses
 \end_layout
 
 \begin_layout Standard
-We used for yearly analyses the synchrony index defined by Gross et al.
+We used for yearly analyses the synchrony index 
+\change_inserted -666822487 1533364468
+
+\begin_inset Formula $\eta$
+\end_inset
+
+ 
+\change_unchanged
+defined by Gross et al.
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -819,8 +881,21 @@ literal "false"
 
 \end_inset
 
-, which is defined as the mean cross-correlation between each species and
- the rest of the community (eq.
+, which is 
+\change_deleted -666822487 1533364476
+defined
+\change_inserted -666822487 1533364478
+constructed
+\change_unchanged
+ as the mean cross-correlation between each species 
+\change_inserted -666822487 1533364549
+biomass 
+\change_unchanged
+and the 
+\change_inserted -666822487 1533364558
+summed biomasses of the 
+\change_unchanged
+rest of the community (eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -864,7 +939,17 @@ where
  species.
  
 \change_unchanged
-The index described in eq.
+Th
+\change_inserted -666822487 1533364492
+is
+\change_deleted -666822487 1533364488
+e
+\change_unchanged
+ 
+\change_inserted -666822487 1533364506
+synchrony 
+\change_unchanged
+index described in eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -875,8 +960,16 @@ noprefix "false"
 
 \end_inset
 
- varies between -1 (compensation, total biomass is constant) and 1 (synchrony),
- while 0 represents a case where all populations fluctuate independently.
+ varies between -1 (
+\change_inserted -666822487 1533364513
+perfect 
+\change_unchanged
+compensation, total biomass is constant) and 1 (
+\change_inserted -666822487 1533364520
+complete 
+\change_unchanged
+synchrony), while 0 represents a case where all populations fluctuate independen
+tly.
  Contrary to previous indices (see, for instance, Loreau and de Mazancourt
 \change_inserted -666822487 1533141544
  
@@ -893,8 +986,11 @@ literal "false"
 
 \end_inset
 
-), this index is independent from the richness of the community and its
- overall stability 
+), this index is independent from the richness of the community 
+\change_inserted -666822487 1533364604
+(or more generally the number of system components) 
+\change_unchanged
+and its overall stability 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bluthgen_land_2016,hallett_codyn_2016"
@@ -904,7 +1000,28 @@ literal "false"
 
 .
  This is important here, as we will perform analyses at different taxonomic
- scales and therefore with a different number of groups.
+ scales and therefore with a different 
+\change_deleted -666822487 1533364626
+number of groups
+\change_inserted -666822487 1533364641
+
+\begin_inset Formula $n$
+\end_inset
+
+ in eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Gross"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+.
  
 \end_layout
 
@@ -966,15 +1083,23 @@ Calidris
 \shape default
  species).
  In the latter case of between-groups comparisons, we summed species together
- before seasonal averaging, to consider seasonal averages of the group density.
+ before seasonal averaging, to consider seasonal averages of the 
+\change_inserted -666822487 1533364660
+monthly 
+\change_unchanged
+group density.
  
 \end_layout
 
 \begin_layout Standard
-We used both taxonomic classifications of the species (between and within
- genera) and functional classifications of the species (e.g., 30 species of
- waders versus 34 species of ducks) as we suspected that a functional classifica
-tion may allow to partition better the abiotic requirements of the species.
+We used both taxonomic classifications of the species (
+\change_inserted -666822487 1533364667
+i.e., 
+\change_unchanged
+between and within genera) and functional classifications of the species
+ (e.g., 30 species of waders versus 34 species of ducks) as we suspected that
+ a functional classification may allow to partition better the abiotic requireme
+nts of the species.
  
 \end_layout
 
@@ -988,7 +1113,13 @@ zoomed in
 \end_inset
 
  on a group of species that were known to exhibit potentially compensatory
- dynamics (through competition for nesting sites): the great cormorant 
+ dynamics (through competition for 
+\change_deleted -666822487 1533364680
+nesting
+\change_inserted -666822487 1533364681
+roosting
+\change_unchanged
+ sites): the great cormorant 
 \shape italic
 (Phalacrocorax carbo)
 \shape default
@@ -1075,6 +1206,19 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -666822487 1533364716
+ and follow-up by Vasseur et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "vasseur_synchronous_2014"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
 , we used the wavelet transform of the time series to measure the coherency
  between time series
 \end_layout
@@ -1256,7 +1400,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../OUT/Fig2.pdf
-	width 75text%
+	width 85text%
 
 \end_inset
 
@@ -1376,7 +1520,7 @@ Gross et al.
 \change_unchanged
 
 \begin_inset CommandInset citation
-LatexCommand citealp
+LatexCommand citep
 key "gross2013species"
 literal "false"
 
@@ -1470,7 +1614,7 @@ status open
 \begin_inset Graphics
 	filename ../OUT/T47B-Axe1-Teich-les_3_especes_Heron+Aigrette.pdf
 	lyxscale 50
-	width 100text%
+	width 110text%
 
 \end_inset
 
@@ -1481,49 +1625,29 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time series of 
-\change_inserted -666822487 1533142036
-g
-\change_deleted -666822487 1533142036
-G
-\change_unchanged
-reat 
-\change_inserted -666822487 1533142038
-c
-\change_deleted -666822487 1533142038
-C
-\change_unchanged
-ormoran abundance, as well as summed abundances of 
-\change_inserted -666822487 1533142042
-g
-\change_deleted -666822487 1533142041
-G
-\change_unchanged
-rey 
-\change_inserted -666822487 1533142043
-h
-\change_deleted -666822487 1533142043
-H
-\change_unchanged
-eron and 
-\change_inserted -666822487 1533142046
-l
-\change_deleted -666822487 1533142045
-L
-\change_unchanged
-ittle 
-\change_inserted -666822487 1533142048
-e
-\change_deleted -666822487 1533142048
-E
-\change_unchanged
-gret (logarithmic scale).
+Time series of great cormoran abundance, as well as summed abundances of
+ grey heron and little egret (logarithmic scale).
  
-\change_inserted -2100369821 1531930767
-
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Time-series-of"
+
+\end_inset
+
+
+\change_inserted -666822487 1533364934
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1533364949
+We should use more color-blind friendly colors...
+ 
+\change_unchanged
+
+\end_layout
 
 \end_inset
 
@@ -1575,36 +1699,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time-domain (top) and frequency-domain (bottom) synchrony analyses of the
- group formed by 
-\change_deleted -2100369821 1531930773
-C
-\change_inserted -2100369821 1531930775
-c
-\change_unchanged
-ormorant, 
-\change_deleted -2100369821 1531930777
-E
-\change_inserted -2100369821 1531930777
-e
-\change_unchanged
-gret and 
-\change_deleted -2100369821 1531930779
-H
-\change_inserted -2100369821 1531930779
-h
-\change_unchanged
-eron
-\change_inserted -2100369821 1531930830
-
+Time-domain (a) and frequency-domain (b) synchrony analyses of the group
+ formed by cormorant, egret and heron
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Time-domain-(top)-and"
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -1653,13 +1755,16 @@ noprefix "false"
 \end_inset
 
  that synchrony
-\change_inserted -666822487 1533142101
-, when computed,
+\change_deleted -666822487 1533364965
+ 
+\change_inserted -666822487 1533364966
+ 
 \change_unchanged
- is in fact the rule
-\change_inserted -666822487 1533142828
- around the annual scale and below.
- We wonder if the patterns in 
+is in fact the rule
+\change_inserted -666822487 1533365010
+ around the annual scale and below, when considering the wavelet index.
+ We wondered if the patterns in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Time-series-of"
@@ -1669,19 +1774,15 @@ noprefix "false"
 
 \end_inset
 
- were caused by the use of a log scale, but in fact the correlation is higher
- rather than lower on the log scale (ESM 2)
+ were caused by the use of a log scale, but we found that in fact the correlatio
+n was higher rather than lower on the log scale (ESM 2)
 \change_unchanged
 .
- However,
-\change_inserted -666822487 1533142793
- 
-\change_unchanged
-over long temporal scales (
+ However, over long temporal scales (
 \begin_inset Formula $\sim$
 \end_inset
 
-6 years) there seems to be some compensation, traducing a progressive change
+ 6 years) there seems to be some compensation, traducing a progressive change
  in composition within this small community module, that was already visible
  on the time series plot (Fig.
  
@@ -1696,20 +1797,9 @@ noprefix "false"
 
 ).
  There might be some compensation over very short timescale as well (within
- the season), but 
-\change_deleted -666822487 1533142147
-this is less obvious
-\change_inserted -666822487 1533142793
-at very specific times
-\change_unchanged
- and the biological mechanisms for this are unclear since these species
- compete for roost sites 
-\change_deleted -666822487 1533142169
-(and the choice of the roost site usually last through a season)
-\change_inserted -666822487 1533142793
-, a process that it unlikely to manifest at such very short timescales
-\change_unchanged
-.
+ the season), but at very specific times and the biological mechanisms for
+ this are unclear since these species compete for roost sites, a process
+ that it unlikely to manifest at such very short timescales.
  
 \end_layout
 
@@ -1793,10 +1883,10 @@ Calidris
 
 \begin_layout Standard
 
-\change_inserted -666822487 1533143431
+\change_inserted -666822487 1533365289
 Given that we compare the level of synchrony/compensation within guilds
- (with many species) and between guilds (with a handful of groups), we checked
- in ESM 3 whether changing the number of 
+ (with many species) and between guilds (with only a handful of groups),
+ we checked in ESM 3 whether changing the number of 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1804,21 +1894,27 @@ compartments
 \begin_inset Quotes erd
 \end_inset
 
- in the Gross 
+ (
+\begin_inset Formula $n$
+\end_inset
+
+) in the Gross 
 \begin_inset Formula $\eta$
 \end_inset
 
  index could affect its value: it did not.
- However, if two groups respond in opposite ways to a shared driver, we
- found nonetheless that the stronger the response to the driver, the lesser
- the compensation using 
+ However, we found that if two groups respond in opposite ways to a shared
+ driver, the stronger the response to the driver, the lesser the compensation
+ indicated by 
 \begin_inset Formula $\eta$
 \end_inset
 
- at the community level.
+ at the whole community level.
  This might explain the low levels of compensation that we found at the
- overall wetland bird community level (ESM 1), in spite of the presence
- of two groups reacting in opposite way to shared driver (here, water level).
+ overall wetland bird community level (ESM 1), in spite of the clear presence
+ of two groups reacting in opposite way to shared driver (here, water levels).
+ Analyses at several taxonomic/functional scales are therefore warranted
+ to be conclusive about compensation.
  
 \end_layout
 
@@ -1885,7 +1981,11 @@ literal "false"
  due to birth and deaths.
  However, despite the importance of movements and habitat preference to
  the local community dynamics, there is certainly also an influence of the
- regional changes in births and deaths on the local dynamics.
+ regional changes in births and deaths on the
+\change_inserted -666822487 1533365322
+se
+\change_unchanged
+ local dynamics.
  
 \end_layout
 
@@ -1908,7 +2008,7 @@ Overall, our results suggest to search for compensation more often
 within
 \emph default
  functional groups, and over relatively long timescales above that of the
- dominant driver (e.g., seasonality).
+ dominant driver (e.g., above 5 years if the main driver is a seasonal climate).
  This goes against calls to search for compensation at very short timescales
  
 \begin_inset CommandInset citation
@@ -1919,17 +2019,48 @@ literal "false"
 \end_inset
 
 
-\change_inserted -666822487 1533142327
- in order to filter our the main seasonal driver
+\change_inserted -666822487 1533365401
+ in order to filter out the effect of the main seasonal driver
 \change_unchanged
 .
  Although searching for compensation at temporal scales below the seasonal
  abiotic driver (e.g., temperature) was partly motivated by studies on plankton
  whose community dynamics are much faster, we could have expected compensation
- to manifest also that scale here (e.g., monthly): movement of birds reacting
- to food availability can certainly occur that fast.
- We suspect instead that because many species share common abiotic drivers
- at short temporal scales 
+ to manifest also that scale here 
+\change_inserted -666822487 1533365422
+as well 
+\change_unchanged
+(e.g., monthly)
+\change_inserted -666822487 1533365433
+.
+\change_deleted -666822487 1533365433
+:
+\change_unchanged
+ 
+\change_inserted -666822487 1533365435
+M
+\change_deleted -666822487 1533365434
+m
+\change_unchanged
+ovement of birds reacting to food availability can certainly occur that
+ fast
+\change_inserted -666822487 1533365508
+, and wetlands certainly have a carrying capacity, which could promote short-ter
+m compensation
+\change_unchanged
+.
+ We suspect
+\change_inserted -666822487 1533365464
+ 
+\change_deleted -666822487 1533365463
+ instead 
+\change_unchanged
+that
+\change_inserted -666822487 1533365470
+ instead,
+\change_unchanged
+ because many species share common abiotic drivers at short temporal scales
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "loreau_species_2008"
@@ -1937,8 +2068,13 @@ literal "false"
 
 \end_inset
 
-, compensation is bound to be very rare below the dominant temporal scale
- of the environment.
+, compensation is bound to be 
+\change_deleted -666822487 1533365566
+very
+\change_inserted -666822487 1533365566
+quite
+\change_unchanged
+ rare below the dominant temporal scale of the environment.
  
 \begin_inset Note Note
 status collapsed
@@ -1981,9 +2117,12 @@ literal "false"
 
 .
  Although the knowledge of specific biological mechanisms increasing the
- densities of some species at the expense of others can help , synchrony
- will likely dominate community-level time series data for closely related
- species, even in species that compete strongly 
+ densities of some species at the expense of others can help
+\change_deleted -666822487 1533365602
+ 
+\change_unchanged
+, synchrony will likely dominate community-level time series data for closely
+ related species, even in species that compete strongly 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ranta_detecting_2008"
@@ -2069,7 +2208,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../OUT/Gross_freq.pdf
-	width 65text%
+	width 85text%
 
 \end_inset
 
@@ -2086,7 +2225,13 @@ Gross' synchrony index as a function of the season (cold and warm seasons),
  two periods: before and after 2006 (light and dark blue), the year of the
  change in water level management.
  Red stars correspond to synchrony values significantly different from the
- null model (independent species), at the 5% threshold.
+ null model (independent species), at the 
+\change_inserted -666822487 1533365638
+Bonferroni-corrected 10
+\change_deleted -666822487 1533365627
+5
+\change_unchanged
+% threshold.
  
 \begin_inset Note Note
 status collapsed
@@ -2154,8 +2299,24 @@ Gross' synchrony index as a function of the season (cold and warm seasons),
  The index was computed in each panel on the whole dataset (black) or using
  two periods: before and after 2006 (light and dark blue), the year of the
  change in water level management.
- No value was deemed significant.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No value was deemed statistically significant.
+ 
+\change_inserted -666822487 1533365734
+[F: I removed this because either we mention the Bonferroni correction or
+ we don't mention the absence of significance].
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2182,7 +2343,17 @@ noprefix "false"
 
  that cormorants, herons and egrets seemed to compensate each other, at
  least for the first period of the time series.
- This compensation was seen on a log scale, and found conspicuous.
+ This compensation was seen on a log scale, and 
+\change_deleted -666822487 1533365751
+found
+\change_inserted -666822487 1533365752
+seemed
+\change_unchanged
+ conspicuous
+\change_inserted -666822487 1533365757
+ on that scale
+\change_unchanged
+.
  We thus wondered if log-transforming the abundance would affect the values
  of the synchrony index observed for this group, and make compensation more
  likely.
@@ -2499,13 +2670,20 @@ We considered different type
 s
 \change_unchanged
  of environmental driver
-\change_inserted -666822487 1533191315
-, crossed with subsampling / no subsampling: 
+\change_inserted -666822487 1533365825
+, crossed with subsampling / no subsampling.
+ We considered in total three scenarios, and present below the results for
+ all three: 
 \change_unchanged
 
 \end_layout
 
 \begin_layout Itemize
+
+\change_inserted -666822487 1533365836
+Scenario 1: 
+\change_unchanged
+
 \begin_inset Formula $U_{t}=u_{t}$
 \end_inset
 
@@ -2513,7 +2691,11 @@ s
 \begin_inset Formula $u_{t}$
 \end_inset
 
- is an autocorrelated signal ; and we do not subsample the data
+ is an autocorrelated signal
+\change_inserted -666822487 1533365989
+ (standardized)
+\change_unchanged
+; no subsampling of the data
 \end_layout
 
 \begin_layout Standard
@@ -2566,10 +2748,15 @@ name "fig:notrend"
 \end_layout
 
 \begin_layout Itemize
+
+\change_inserted -666822487 1533365887
+Scenario 2: 
+\change_unchanged
+
 \begin_inset Formula $U_{t}=u_{t}$
 \end_inset
 
- and we subsample the data
+; data subsampling
 \end_layout
 
 \begin_layout Standard
@@ -2635,6 +2822,11 @@ name "fig:notrend_subsample"
 \end_layout
 
 \begin_layout Itemize
+
+\change_inserted -666822487 1533365934
+Scenario 3: 
+\change_unchanged
+
 \begin_inset Formula $U_{t}=U_{\text{min}}+(U_{\text{max}}-U_{\text{min}})(u_{t}+x_{t})/2$
 \end_inset
 
@@ -2642,7 +2834,7 @@ name "fig:notrend_subsample"
 \begin_inset Formula $x_{t}\in[0,1]$
 \end_inset
 
- follows an increasing trend ; and we subsample the data
+ follows an increasing trend; data subsampling
 \end_layout
 
 \begin_layout Standard
@@ -2666,18 +2858,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_deleted -666822487 1533191269
-Evolution of 
-\change_unchanged
-Gross' syn
-\change_inserted -666822487 1533191272
-c
-\change_unchanged
-hrony index for different time series length and number of species in the
- community, in simulations where there is an increasing trend in the environment
-al signal and the data is subsampled (for 35 or 100 time steps), removing
- part of the autocorrelation of the environment in the dynamics of the species
+Gross' synchrony index for different time series length and number of species
+ in the community, in simulations where there is an increasing trend in
+ the environmental signal and the data is subsampled (for 35 or 100 time
+ steps), removing part of the autocorrelation of the environment in the
+ dynamics of the species
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:withtrend_subsample"
@@ -2711,55 +2896,13 @@ noprefix "false"
 \end_inset
 
 ), if we consider two groups which have opposite reactions to the same driver,
- the Gross index is not sensitive to the length of the time series or
-\change_inserted -666822487 1533191512
- to
-\change_unchanged
+ the Gross index is not sensitive to the length of the time series or to
  the number of species in the community.
  For larger communities (over 10 species), synchrony is higher when the
  response to the driver is stronger.
- For our data, 
-\change_deleted -666822487 1533191526
-we can assume 
-\change_inserted -666822487 1533191527
-this means 
-\change_unchanged
-that the more 
-\change_deleted -666822487 1533191464
-the 
-\change_unchanged
-birds are sensitive to the 
-\change_deleted -666822487 1533191473
-change in management
-\change_inserted -666822487 1533191478
-water level
-\change_unchanged
-, the less we can expect compensation 
-\change_deleted -666822487 1533191535
-in the
-\change_inserted -666822487 1533191537
-at the whole
-\change_unchanged
- community
-\change_inserted -666822487 1533191541
- level
-\change_deleted -666822487 1533191493
- due to this change
-\change_unchanged
-.
+ For our data, this means that the more birds are sensitive to the water
+ level, the less we can expect compensation at the whole community level.
  
-\change_deleted -666822487 1533191546
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -666822487 1533191554
-The negative or low positive values we obtain in our data set may indicate
- that species share the same response to the environment.
- 
-\change_unchanged
-
 \end_layout
 
 \end_body
