@@ -85,6 +85,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -1441,7 +1442,13 @@ Calidris
  two periods: before and after 2006 (light and dark blue), the year of the
  change in water level management.
  Red stars correspond to synchrony values significantly different from the
- null model (independent species), at the 5% threshold.
+ null model (independent species), at the 
+\change_deleted -2100369821 1536216289
+5
+\change_inserted -2100369821 1536216289
+10
+\change_unchanged
+% threshold.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1582,7 +1589,19 @@ status open
 Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
  blue color) to 1 (synchrony, red color).
  Dashed black lines delineate regions significantly different from the null
- model with a false discovery rate controlled at the 5% level.
+ model with a false discovery rate controlled at the 
+\change_inserted -2100369821 1536216327
+10
+\change_deleted -2100369821 1536216326
+5
+\change_unchanged
+% 
+\change_deleted -2100369821 1536216331
+level
+\change_inserted -2100369821 1536216332
+threshold
+\change_unchanged
+.
  
 \begin_inset CommandInset label
 LatexCommand label
