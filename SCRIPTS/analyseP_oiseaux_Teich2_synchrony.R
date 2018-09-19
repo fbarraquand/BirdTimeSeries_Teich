@@ -1540,7 +1540,7 @@ mtext("Log abundance",side=4,outer = TRUE)
 #légende
 par(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)
 plot(0, 0, type = "n", bty = "n", xaxt = "n", yaxt = "n")
-legend("bottom",c("Ratio waders",'All birds','Waders',"Ducks",'All others birds'),
+legend("bottom",c("Ratio waders",'All birds','Waders',"Ducks",'All other birds'),
        col=c("black","deepskyblue","darkorchid",'olivedrab','salmon'),xpd = TRUE, 
        ncol=5 , bty = "n",cex=1,pch=c(15,19,19,19,19),lty=c(2,1,1,1,1),lwd=c(2,1,1,1,1))
 dev.off()
