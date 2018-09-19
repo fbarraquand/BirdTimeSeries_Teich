@@ -1526,12 +1526,12 @@ for (y in minAnnee:maxAnnee){
 pdf("t30-Axe1-ProportionsLimicoles.pdf",width=12,height=8)
 par(mar=c(4,4,3,3))
 par(oma = c(3,1,0,1))
-plot(minAnnee:maxAnnee,vec_abondance_all,type="o",xlab="Year",ylab="Ratio",
+plot(minAnnee:maxAnnee,vec_ratio_limicoles,type="o",xlab="Year",ylab="Ratio",
      col="black",lwd=2,cex=1.5,pch=15,lty=2,main="") #main =evolution of abundance of shorebirds, ducks and other species
 abline(v=2006,col="black",lwd=2,lty=3)
 par(new=TRUE)
 plot(minAnnee:maxAnnee,log(vec_abondance_all),type="o",
-     xlab="Year",ylab="",xaxt="n",yaxt="n",pch=19,col="deepskyblue",ylim=c(5,log(max(vec_abondance_all))))
+     xlab="Year",ylab="",xaxt="n",yaxt="n",pch=19,col="deepskyblue",ylim=c(4,log(max(vec_abondance_all))))
 lines(minAnnee:maxAnnee,log(vec_abondance_waders),type="o",col="darkorchid",pch=19)
 lines(minAnnee:maxAnnee,log(vec_abondance_ducks),type="o",col="olivedrab",pch=19)
 lines(minAnnee:maxAnnee,log(vec_abondance_all_others),type="o",col="salmon",pch=19)
