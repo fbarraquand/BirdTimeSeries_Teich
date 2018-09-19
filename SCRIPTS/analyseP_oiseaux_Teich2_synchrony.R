@@ -1494,3 +1494,55 @@ print ("Abondance sparrows")
 #sparrows
 abondance_sparrows = subset(DBt,as.character(DBt$Nom_latin)%in% sparrows & DBt$Annee>=1981)
 SynchronySeason2(matrice = abondance_sparrows,file_out ="T50-Axe1-Teich_Synchrony_by_season_for_sparrows_without_species_with_low_abondance.pdf",titre ="Gross synchrony for Sparrows",Loreau = FALSE,Gross=TRUE,max_value=0.8,min_value=-0.4)
+
+
+#### T30
+minAnnee = 1981
+vec_abondance_waders      = rep(0,(maxAnnee-minAnnee+1)) # abondances des limicoles
+vec_abondance_ducks       = rep(0,(maxAnnee-minAnnee+1)) # abondances des limicoles
+vec_abondance_all_others  = rep(0,(maxAnnee-minAnnee+1)) # abondances des autres oiseaux.
+vec_abondance_all         = rep(0,(maxAnnee-minAnnee+1)) # abondances de tous les oiseaux
+vec_ratio_limicoles       = rep(0,(maxAnnee-minAnnee+1)) # vecteur qui stocke l'information ratio entre les limicoles et les non limicoles.
+
+#Define Ducks : All Anatidae + Fulica atra
+tab_tmp=read.csv(file="../IN/Initial_files/data_ROT20160324.csv",header=TRUE,sep="\t")
+sp=tab_tmp$Nom_latin
+fam=tab_tmp$Famille
+
+ducks=c(as.character(unique(sp[fam=="Anatidae"])),"Fulica atra") #Other Rallidae do not dive to feed, I considered this feature as a definition of ducks
+
+
+# on fait les calculs pour toutes les années
+
+for (y in minAnnee:maxAnnee){
+  vec_abondance_all[y-minAnnee+1] = sum(DBt$Nombre[DBt$Annee==y],na.rm = TRUE)
+  vec_abondance_waders[y-minAnnee+1] = sum(DBt$Nombre[DBt$Annee == y & DBt$Nom_latin %in% limicoles])
+  vec_abondance_ducks[y-minAnnee+1] = sum(DBt$Nombre[DBt$Annee == y & DBt$Nom_latin %in% ducks])
+  vec_abondance_all_others[y-minAnnee+1]=vec_abondance_all[y-minAnnee+1]-( vec_abondance_waders[y-minAnnee+1] +vec_abondance_ducks[y-minAnnee+1]  )
+  vec_ratio_limicoles[y-minAnnee+1]  = vec_abondance_waders[y-minAnnee+1]/vec_abondance_all[y-minAnnee+1]
+}
+
+# on superpose les 3 courbes sur le graphe : abondance des limicoles, des non-limicoles et ratio.
+pdf("t30-Axe1-ProportionsLimicoles.pdf",width=12,height=8)
+par(mar=c(4,4,3,3))
+par(oma = c(3,1,0,1))
+plot(minAnnee:maxAnnee,vec_abondance_all,type="o",xlab="Year",ylab="Ratio",
+     col="black",lwd=2,cex=1.5,pch=15,lty=2,main="") #main =evolution of abundance of shorebirds, ducks and other species
+abline(v=2006,col="black",lwd=2,lty=3)
+par(new=TRUE)
+plot(minAnnee:maxAnnee,log(vec_abondance_all),type="o",
+     xlab="Year",ylab="",xaxt="n",yaxt="n",pch=19,col="deepskyblue",ylim=c(5,log(max(vec_abondance_all))))
+lines(minAnnee:maxAnnee,log(vec_abondance_waders),type="o",col="darkorchid",pch=19)
+lines(minAnnee:maxAnnee,log(vec_abondance_ducks),type="o",col="olivedrab",pch=19)
+lines(minAnnee:maxAnnee,log(vec_abondance_all_others),type="o",col="salmon",pch=19)
+axis(4,col="black")
+mtext("Log abundance",side=4,outer = TRUE)
+#légende
+par(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)
+plot(0, 0, type = "n", bty = "n", xaxt = "n", yaxt = "n")
+legend("bottom",c("Ratio waders",'All birds','Waders',"Ducks",'All others birds'),
+       col=c("black","deepskyblue","darkorchid",'olivedrab','salmon'),xpd = TRUE, 
+       ncol=5 , bty = "n",cex=1,pch=c(15,19,19,19,19),lty=c(2,1,1,1,1),lwd=c(2,1,1,1,1))
+dev.off()
+
+# -> oui les limicoles augmentent.
