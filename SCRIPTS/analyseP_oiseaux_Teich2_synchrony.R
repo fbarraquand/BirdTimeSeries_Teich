@@ -1297,13 +1297,13 @@ ymax = max(df_HeronEgret$Nombre,abondance_phalacrocorax$Nombre,na.rm=TRUE)
 ymax = log(max(df_HeronEgret$Nombre,abondance_phalacrocorax$Nombre,na.rm=TRUE))
 xmin = date("1981-01-01")
 xmax = date("2016-04-01")
-plot(df_HeronEgret$Date,log(df_HeronEgret$Nombre),col="darkgreen",xlab="Year",ylab="Log abundance",xlim=c(xmin,xmax),cex.lab=1.8,cex.axis=1.5,xaxt="n",pch=19,ylim=c(ymin,ymax),type="o",lwd =1.8,cex=0.9)
-lines(df_HeronEgret$Date,log(df_HeronEgret$Nombre+1),col="darkgreen",lwd =1,lty=3)
-lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre),col="darkred",type='o',lwd=1.8,pch=19,cex=0.9)
-lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre+1),col="darkred",lwd =1,lty=3)
+plot(df_HeronEgret$Date,log(df_HeronEgret$Nombre),col="orange",xlab="Year",ylab="Log abundance",xlim=c(xmin,xmax),cex.lab=1.8,cex.axis=1.5,xaxt="n",pch=19,ylim=c(ymin,ymax),type="o",lwd =1.8,cex=0.9)
+lines(df_HeronEgret$Date,log(df_HeronEgret$Nombre+1),col="orange",lwd =1,lty=3)
+lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre),col="black",type='o',lwd=1.8,pch=19,cex=0.9)
+lines(abondance_phalacrocorax$Date,log(abondance_phalacrocorax$Nombre+1),col="black",lwd =1,lty=3)
 
 axis(1, at=d_ticks, labels=nameTicks,cex.axis=1.5)
-legend("topright",legend = c("Sum Egretta garzetta + Ardea cinerea",'Phalacrocorax carbo'),col=c('darkgreen','darkred'),pch=19,lwd=1)
+legend("topright",legend = c("Grey heron and little egret",'Great cormoran'),col=c('orange','black'),pch=19,lwd=1,cex=1.2)
 dev.off()
 
 #----- T48
