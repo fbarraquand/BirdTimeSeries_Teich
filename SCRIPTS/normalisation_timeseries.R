@@ -162,8 +162,8 @@ for (i in 1:length(sp_duck)){
 }
 data_frame_duck_cold=data.frame(dates,sp_all,abundance_cold)
 data_frame_duck_warm=data.frame(dates,sp_all,abundance_warm)
-write.csv(data_frame_freq_cold,"IN/coldseason_duck_detailed.txt")
-write.csv(data_frame_freq_warm,"IN/warmseason_duck_detailed.txt")
+write.csv(data_frame_duck_cold,"IN/coldseason_duck_detailed.txt")
+write.csv(data_frame_duck_warm,"IN/warmseason_duck_detailed.txt")
 dev.off()
 
 

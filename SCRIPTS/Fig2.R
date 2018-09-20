@@ -179,7 +179,7 @@ dev.off()
 print('Actual Figure 2, within groups')
 #PLOT
 upsi=0.05
-pdf("OUT/Fig2.pdf",width=11,height=14,family="Times")
+pdf("OUT/Fig2_new2.pdf",width=11,height=14,family="Times")
 par(mfrow=c(2,2),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-.75,.66),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="Taxonomic groups",cex.main=2)
 mtext("Within",side=2,line=0.3,outer=T,cex=2,font=2,at=0.75)

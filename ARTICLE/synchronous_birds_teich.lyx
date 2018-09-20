@@ -1164,8 +1164,29 @@ Calidris
 Anas
 \shape default
  exhibit opposite trends in synchrony in response to the management change
- in 2006, but these are not statistically significant.
- However, for the warm season, the management change, which consisted in
+ in 2006, 
+\change_deleted -2100369821 1537425811
+but these are not statistically significant.
+ 
+\change_inserted -2100369821 1537425811
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1537425811
+but these are not statistically significant.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+However, for the warm season, the management change, which consisted in
  lowering the water levels, created more synchronous communities of species
  within the
 \emph on
@@ -1183,8 +1204,27 @@ genera.
 This increase in synchrony after 2006 is matched by the functional group
  classification.
  Using the functional group classification, we see that pre-2006, there
- was some compensation within the waders, though not very pronounced and
- not significant statistically, which later disappeared.
+ was some compensation within the waders, though not very pronounced
+\change_deleted -2100369821 1537425847
+ and not significant statistically, which later disappeared
+\change_inserted -2100369821 1537425847
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1537425847
+ and not significant statistically, which later disappeared
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
  
 \end_layout
 
@@ -1221,7 +1261,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../OUT/Fig2.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/Fig2_new2.pdf
 	width 85text%
 
 \end_inset
