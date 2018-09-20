@@ -1845,8 +1845,9 @@ zooming out
  that will inevitably manifest if the community-level abundance is maintained
  within bounds.
  
-\change_inserted -666822487 1537459638
-
+\change_inserted -666822487 1537461385
+hese included Ricker-based Lotka-Volterra (LV) competition (Ives et al.
+ 1999b)
 \end_layout
 
 \begin_layout Subsection*
@@ -1862,7 +1863,7 @@ We thank the birdwatchers and staff of the Teich Reserve/PNR Landes Gascogne
  who contributed to data collection [add more Claude], as well as LPO Aquitaine
  for helping us retrieve the raw data.
  The data collection was funded by PNR Landes Gascogne [others?] and the
- data analysis by financed by LabEx COTE (ANR-10-LABX-45).
+ data analysis by LabEx COTE (ANR-10-LABX-45).
  
 \begin_inset Newline newline
 \end_inset
