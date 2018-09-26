@@ -1546,3 +1546,117 @@ legend("bottom",c("Ratio waders",'All birds','Waders',"Ducks",'All other birds')
 dev.off()
 
 # -> oui les limicoles augmentent.
+
+
+## graphes tendances
+
+#fonction qui organise els données de manière annuelle : 1 colonne = 1 année pour afficher des plot annuel
+CreateMatAn=function(colonneDate,colonneResultats){
+  minAnnee = as.numeric(format(min(colonneDate), format = "%Y"))
+  maxAnnee = as.numeric(format(max(colonneDate), format = "%Y"))
+  nb = (maxAnnee-minAnnee)+1
+  mat <- matrix(data=0:0,nrow=nb, ncol=4)
+  mat[,1]=minAnnee:maxAnnee
+  for (i in 1:length(colonneDate)){
+    annee = format(colonneDate[i], format = "%Y") #extraire un mois d'une date
+    annee = as.numeric(annee)
+    #mat[(annee-minAnnee)+1,1]=annee #premiere colonne l'année
+    if(!is.na(colonneResultats[i])){
+      mat[(annee-minAnnee)+1,2]=mat[(annee-minAnnee)+1,2]+colonneResultats[i] #2ieme colonne la somme de toutes les années
+      mat[(annee-minAnnee)+1,3]=mat[(annee-minAnnee)+1,3]+1 #3ieme colonne le nombre d'item
+    }
+  }
+  
+  #calcul de la moyenne
+  for (j in 1: length(mat[,1])){
+    mat[j,4]=mat[j,2]/mat[j,3] # 4ième colonne : le calcul de la moyenne.
+  }
+  return(mat)
+  
+}
+
+saison =  list(hiver_n=c(11, 12), hiver_n1=c(1,2,3),ete=c(5,6,7,8,9))
+
+CreateMatSeason=function(colonneDate,colonneResultats){ ## attention pour l'hiver : un hiver = mois 11-12 d'une année + 1-2-3 de l'année suivante.
+  minAnnee = as.numeric(format(min(colonneDate), format = "%Y"))
+  maxAnnee = as.numeric(format(max(colonneDate), format = "%Y"))
+  nb = (maxAnnee-minAnnee)+1
+  mat <- matrix(data=0:0,nrow=nb, ncol=7) # colonne 2 = somme été, colonne 3 = somme hiver, colonne 4:nombre item été, colonne 5=nombre item hiver, colonne 6 : moyenne été, colonne 7 moyenne hiver
+  mat[,1]=minAnnee:maxAnnee # colonne 1 : les années
+  for (i in 1:length(colonneDate)){
+    annee = format(colonneDate[i], format = "%Y") #extraire un mois d'une date
+    annee = as.numeric(annee)
+    mois  = format(colonneDate[i], format = "%m")
+    mois  = as.numeric(mois)
+    #mat[(annee-minAnnee)+1,1]=annee #premiere colonne l'année
+    if(!is.na(colonneResultats[i])){
+      if (mois %in% saison$ete){
+        mat[(annee-minAnnee)+1,2]=mat[(annee-minAnnee)+1,2]+colonneResultats[i] #2ieme colonne somme été 
+        mat[(annee-minAnnee)+1,4]=mat[(annee-minAnnee)+1,4]+1 #4ieme colonne le nombre d'item été
+      }
+      if (mois %in% saison$hiver_n){
+        mat[(annee-minAnnee)+1,3]=mat[(annee-minAnnee)+1,3]+colonneResultats[i] #2ieme colonne somme hiver
+        mat[(annee-minAnnee)+1,5]=mat[(annee-minAnnee)+1,5]+1 #5ieme colonne le nombre d'item hiver
+      }
+      if (mois %in% saison$hiver_n1 & minAnnee!=annee){ # condition minAnnee!=annee c'est pour la première année, et éviter le out of range.
+         mat[(annee-minAnnee),3]=mat[(annee-minAnnee),3]+colonneResultats[i] #2ieme colonne somme hiver, mais on ajoute à l'année précédente.
+         mat[(annee-minAnnee),5]=mat[(annee-minAnnee),5]+1 #5ieme colonne le nombre d'item hiver, ici aussi, on ajoute à l'année précédente.
+      }
+    }
+  }
+  
+  #calcul de la moyenne
+  for (j in 1: length(mat[,1])){
+    mat[j,6]=mat[j,2]/mat[j,4] # 6ième colonne : le calcul de la moyenne été
+    mat[j,7]=mat[j,3]/mat[j,5] # 7ième colonne : le calcul de la moyenne hiver
+    
+  
+    
+  }
+ 
+  return(mat)
+  
+}
+# -- pour les espèces fréquentes
+pdf("t51-Axe1-Teich-MoyenneAnuelleetseason_ParEspeceFrequente.pdf",width=12,height=6)
+minAnnee = as.numeric(format(min(DBt$Date), format = "%Y"))
+maxAnnee = as.numeric(format(max(DBt$Date), format = "%Y"))
+for(i in 1: length(oiseaux_Frequents_t)){
+  par(mar=c(4,4,3,3))
+  par(oma = c(3,1,0,1))
+  print (paste(i,"/",length(oiseaux_Frequents_t),"Param en cours",oiseaux_Frequents_t[i],sep=" " ))
+  data = subset(DBt,as.character(DBt$Nom_latin)==oiseaux_Frequents_t[i])
+  colonneResultats = data$Nombre
+  colonneDate = data$Date
+  mat = CreateMatAn(colonneDate,colonneResultats) # création de la matrice qui servira au plot
+  matseason = CreateMatSeason(colonneDate,colonneResultats) # création de la matrice qui servira au plot
+ 
+  matseason[is.nan(matseason)] <- NA  # replace NaN by na
+  matseason[is.infinite(matseason)] <- NA  # replace inf by na
+  ymax=max(matseason[,6],matseason[,7],mat[,4],na.rm=TRUE)
+  plot(mat[,1],mat[,4],type="o",xlim=c(1973,2016),pch=16,col="darkorchid2",xlab="Année",ylab="Mean Abundance",
+       main=paste("Moyenne Annuelle de",oiseaux_Frequents_t[i],"(",oiseaux_Frequents_t_F[i],")"),ylim=c(0,ymax),xaxt="n" )
+  lines(matseason[,1],matseason[,6],col="red",type="o",pch=16)
+  lines(matseason[,1],matseason[,7],col="blue",type="o",pch=16)
+  par(new=TRUE)
+  plot(mat[,1],mat[,3],type="l", lty=5,xlim=c(1973,2016),col="black",xaxt = "n",yaxt = "n",ylab="",xlab="",ylim=c(0,12))
+  axis(1, at=seq(minAnnee,maxAnnee,by=2), labels=as.character(seq(minAnnee,maxAnnee,by=2)))
+  axis(4, col = "black", col.axis = "black", lwd = 2)
+  mtext("number of months with data",side=4,line=2,col="black",cex.lab=1.2)
+  #légende
+  par(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)
+  plot(0, 0, type = "n", bty = "n", xaxt = "n", yaxt = "n")
+  legend("bottom",c("Number month",'Mean abundance, year','Mean abundance, Warn season',"Mean abundance, Cold season"),
+         col=c("black","darkorchid2","red",'blue'),xpd = TRUE, 
+         ncol=2 , bty = "n",cex=1,pch=c(NA,16,16,16),lty=c(5,1,1,1,1))
+}
+dev.off()
+
+# verification script on "Alcedo atthis" year 2007.
+# été 2007 = "2007-06-17" "2007-07-12" "2007-08-16" "2007-09-15", valeur : 1  2  6 16 soit 25/4 = 6.25 (mean abundance warn season)
+# hiver 2007 =
+# "2007-11-18" "2008-01-15" "2008-02-18" "2008-03-13", valeur : 14  5  4  4 soit 27/4=6.75 (mean abundance cold season)
+# > matseason
+# [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+# [1,] 2007   25   27    4    4 6.25 6.75
+# -> OK
