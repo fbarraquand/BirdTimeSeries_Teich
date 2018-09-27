@@ -1624,7 +1624,7 @@ maxAnnee = as.numeric(format(max(DBt$Date), format = "%Y"))
 for(i in 1: length(oiseaux_Frequents_t)){
   par(mar=c(4,4,3,3))
   par(oma = c(3,1,0,1))
-  print (paste(i,"/",length(oiseaux_Frequents_t),"Param en cours",oiseaux_Frequents_t[i],sep=" " ))
+  #print (paste(i,"/",length(oiseaux_Frequents_t),"Param en cours",oiseaux_Frequents_t[i],sep=" " ))
   data = subset(DBt,as.character(DBt$Nom_latin)==oiseaux_Frequents_t[i])
   colonneResultats = data$Nombre
   colonneDate = data$Date
@@ -1634,15 +1634,15 @@ for(i in 1: length(oiseaux_Frequents_t)){
   matseason[is.nan(matseason)] <- NA  # replace NaN by na
   matseason[is.infinite(matseason)] <- NA  # replace inf by na
   ymax=max(matseason[,6],matseason[,7],mat[,4],na.rm=TRUE)
-  plot(mat[,1],mat[,4],type="o",xlim=c(1973,2016),pch=16,col="darkorchid2",xlab="Année",ylab="Mean Abundance",
-       main=paste("Moyenne Annuelle de",oiseaux_Frequents_t[i],"(",oiseaux_Frequents_t_F[i],")"),ylim=c(0,ymax),xaxt="n" )
+  plot(mat[,1],mat[,4],type="o",xlim=c(1973,2016),pch=16,col="darkorchid2",xlab="Year",ylab="Mean Abundance",
+       main=paste("Mean abundance : ",oiseaux_Frequents_t[i],"(",oiseaux_Frequents_t_F[i],")"),ylim=c(0,ymax),xaxt="n" )
   lines(matseason[,1],matseason[,6],col="red",type="o",pch=16)
   lines(matseason[,1],matseason[,7],col="blue",type="o",pch=16)
   par(new=TRUE)
   plot(mat[,1],mat[,3],type="l", lty=5,xlim=c(1973,2016),col="black",xaxt = "n",yaxt = "n",ylab="",xlab="",ylim=c(0,12))
   axis(1, at=seq(minAnnee,maxAnnee,by=2), labels=as.character(seq(minAnnee,maxAnnee,by=2)))
   axis(4, col = "black", col.axis = "black", lwd = 2)
-  mtext("number of months with data",side=4,line=2,col="black",cex.lab=1.2)
+  mtext("number of month with data",side=4,line=2,col="black",cex.lab=1.2)
   #légende
   par(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)
   plot(0, 0, type = "n", bty = "n", xaxt = "n", yaxt = "n")
