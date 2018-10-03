@@ -1635,7 +1635,7 @@ for(i in 1: length(oiseaux_Frequents_t)){
   matseason[is.infinite(matseason)] <- NA  # replace inf by na
   ymax=max(matseason[,6],matseason[,7],mat[,4],na.rm=TRUE)
   plot(mat[,1],mat[,4],type="o",xlim=c(1973,2016),pch=16,col="darkorchid2",xlab="Year",ylab="Abondance moyenne",
-       main=paste(oiseaux_Frequents_t_F[i],"(",oiseaux_Frequents_t[i],")"),ylim=c(0,ymax),xaxt="n" )
+       main=paste(oiseaux_Frequents_t_F[i]," (",oiseaux_Frequents_t[i],")",sep=''),ylim=c(0,ymax),xaxt="n" )
   lines(matseason[,1],matseason[,6],col="red",type="o",pch=16)
   lines(matseason[,1],matseason[,7],col="blue",type="o",pch=16)
   par(new=TRUE)
