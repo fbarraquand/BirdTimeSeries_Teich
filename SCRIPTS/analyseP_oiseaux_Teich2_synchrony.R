@@ -1575,7 +1575,7 @@ CreateMatAn=function(colonneDate,colonneResultats){
   
 }
 
-saison =  list(hiver_n=c(11, 12), hiver_n1=c(1,2,3),ete=c(5,6,7,8,9))
+saison =  list(hiver_n=c(11, 12), hiver_n1=c(1,2),ete=c(5,6,7,8))
 
 CreateMatSeason=function(colonneDate,colonneResultats){ ## attention pour l'hiver : un hiver = mois 11-12 d'une année + 1-2-3 de l'année suivante.
   minAnnee = as.numeric(format(min(colonneDate), format = "%Y"))
