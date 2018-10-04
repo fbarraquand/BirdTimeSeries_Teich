@@ -85,14 +85,12 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
 
 \begin_layout Title
-Synchronous or compensatory community dynamics? Insights from a long-term
- wetland bird study at multiple temporal and taxonomic scales
+Looking for compensation at multiple scales in a wetland bird community
 \end_layout
 
 \begin_layout Author
@@ -273,20 +271,6 @@ PNR Landes Gascognes, Teich Ornithological Reserve, Rue du Port BP 11 33470
 
 \size large
 \begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-We could perhaps go for a more informative title too.
- I am also considering putting `functional' into the title.
-\end_layout
-
 \end_inset
 
 
@@ -920,9 +904,7 @@ We used both taxonomic classifications of the species (i.e., between and within
  genera) and functional classifications of the species (e.g., 30 species of
  waders versus 34 species of ducks) as we suspected that a functional classifica
 tion may allow to partition better the abiotic requirements of the species.
- 
-\change_inserted -666822487 1537459463
-We use 
+ We use 
 \begin_inset Quotes eld
 \end_inset
 
@@ -939,8 +921,6 @@ duck
 \emph default
 , an abundant species here).
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -1581,7 +1561,7 @@ functional compensation
 
  (sensu 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "gonzalez2009causes"
 literal "false"
 
@@ -1707,13 +1687,9 @@ literal "false"
 \end_inset
 
  as the observed long-term changes in species composition (more waders,
- 
-\change_inserted -666822487 1537458550
-proportionally 
-\change_unchanged
-less ducks; ESM4) might be due to an increased inflow of birds preferring
- low water levels, and outflow of birds preferring high water levels, under
- an overall space constraint.
+ proportionally less ducks; ESM4) might be due to an increased inflow of
+ birds preferring low water levels, and outflow of birds preferring high
+ water levels, under an overall space constraint.
  In other words, the shift in community dynamics is likely not directly
  due to birth and deaths.
  However, despite the importance of movements and habitat preference to
@@ -1727,13 +1703,9 @@ Zooming in on the cormorant-heron-egret module, we find that compensation
  mostly occurs above the annual temporal scale, and predominantly in summer
  as well as before 2006.
  This occurs because of a long-term shift due to competition for resting/roostin
-g sites in the summer season
-\change_inserted -666822487 1537297487
- (C.
+g sites in the summer season (C.
  Feigné, pers.
- obs.)
-\change_unchanged
-, which mostly occurred before 2006.
+ obs.), which mostly occurred before 2006.
  
 \end_layout
 
@@ -1845,25 +1817,19 @@ zooming out
  that will inevitably manifest if the community-level abundance is maintained
  within bounds.
  
-\change_inserted -666822487 1537461385
-hese included Ricker-based Lotka-Volterra (LV) competition (Ives et al.
- 1999b)
 \end_layout
 
 \begin_layout Subsection*
-
-\change_inserted -666822487 1537459662
 Acknowledgements
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -666822487 1537460000
-We thank the birdwatchers and staff of the Teich Reserve/PNR Landes Gascogne
- who contributed to data collection [add more Claude], as well as LPO Aquitaine
- for helping us retrieve the raw data.
- The data collection was funded by PNR Landes Gascogne [others?] and the
- data analysis by LabEx COTE (ANR-10-LABX-45).
+We thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
+ regional park who contributed to data collection over the years, as well
+ as LPO Aquitaine for helping us retrieve the raw data.
+ The data collection was supported by the Landes Gascogne regional park
+ as well as the Teich commune, while data analysis was funded by LabEx COTE
+ (ANR-10-LABX-45).
  
 \begin_inset Newline newline
 \end_inset
@@ -1880,619 +1846,6 @@ options "prsb"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Section*
-\start_of_appendix
-Supplementary Material
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{figure}{0} 
-\backslash
-renewcommand{
-\backslash
-thefigure}{A
-\backslash
-arabic{figure}} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-ESM 1 - Gross synchrony index at the whole community level
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../OUT/Gross_freq.pdf
-	width 85text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Gross' synchrony index as a function of the season (cold and warm seasons),
- calculated among the 60 most frequent species in the Teich reserve.
- The index was computed in each panel on the whole dataset (black) or using
- two periods: before and after 2006 (light and dark blue), the year of the
- change in water level management.
- Red stars correspond to synchrony values significantly different from the
- null model (independent species), at the Bonferroni-corrected 10% threshold.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Note: Previously not including waders because presented as compared to synchrony
- within waders – at that time there was no compensation.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-ESM 2 - Correlation in log-scale betwen cormorant and heron+egret
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../OUT/gross_triad_log.pdf
-	width 65text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Gross' synchrony index as a function of the season (cold and warm seasons),
- calculated on log-transformed abundance data for the two groups formed
- by cormorant and heron+egret.
- The index was computed in each panel on the whole dataset (black) or using
- two periods: before and after 2006 (light and dark blue), the year of the
- change in water level management.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-No value was deemed statistically significant.
- [F: I removed this because either we mention the Bonferroni correction
- or we don't mention the absence of significance].
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We noted on Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Time-series-of"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- that cormorants, herons and egrets seemed to compensate each other, at
- least for the first period of the time series.
- This compensation was seen on a log scale, and seemed conspicuous on that
- scale.
- We thus wondered if log-transforming the abundance would affect the values
- of the synchrony index observed for this group, and make compensation more
- likely.
- It appears to be the reverse: synchrony values are higher with log-transformed
- abundances.
-\end_layout
-
-\begin_layout Subsection*
-\begin_inset Newpage newpage
-\end_inset
-
-ESM 3 - Properties of the Gross whole community synchrony index when two
- groups react in opposite ways 
-\end_layout
-
-\begin_layout Standard
-Here, we make 
-\begin_inset Formula $\eta$
-\end_inset
-
- vary with the number of species, richness of the community, and the strength
- of the effect of the environment.
- Starting from the model developped by Gross et al.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "gross2013species"
-literal "false"
-
-\end_inset
-
- (developed in their Appendix D), we explored the effect of a common environment
-al driver on a community formed by two groups reacting oppositely to this
- driver.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../OUT/times_series_esm.pdf
-	width 95text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time series for a community of 10 species, with a strong effect of the environme
-nt (b=0.75, see eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:dynamics"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) and a time series of 500 time steps.
- Open circles represent all points of the time series while large filled
- circles correspond to the sub-sampling of the time series (keeping only
- 35 points).
- Cold colors indicate species which react positively to the environmental
- signal and warm colors indicate species which have a negative reaction
- to the same signal.
- The environmental signal is shown in black, dashed lines, and indexed on
- the right axis.
- This signal either follows an increasing trend (a), or just an autocorrelated
- signal (b).
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We assume that the environmental driver 
-\begin_inset Formula $U(t)$
-\end_inset
-
- is an autocorrelated signal (see below for details).
- 
-\end_layout
-
-\begin_layout Standard
-The dynamics of species 
-\begin_inset Formula $i$
-\end_inset
-
- then follows the equation 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:dynamics"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-x_{i}(t+1)=x_{i}(t)\exp\left(r_{i}\left(1-\frac{x_{i}(t)+\sum_{i\neq j}^{n}\alpha x_{j}(t)}{K}\right)+b_{i}U(t)+\epsilon_{i}(t)\right)\label{eq:dynamics}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where the whole community is formed by 
-\begin_inset Formula $N=2n$
-\end_inset
-
- species, with 2 groups of 
-\begin_inset Formula $n$
-\end_inset
-
- species who have exactly opposite reaction to the environmental driver,
- that is 
-\begin_inset Formula $\forall i\in[1,n],\exists j\in[1,n],b_{j}=-b_{i}=b$
-\end_inset
-
-.
- The growth rate 
-\begin_inset Formula $r_{i}$
-\end_inset
-
- follows a normal distribution with mean 1 and standard deviation 0.25.
- All interaction coefficients 
-\begin_inset Formula $\alpha$
-\end_inset
-
- are set to 0.5 and 
-\begin_inset Formula $K=\frac{1+\alpha(N-1)}{N}$
-\end_inset
-
-, to keep the model in other ways exactly similar to Gross et al.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "gross2013species"
-literal "false"
-
-\end_inset
-
-.
- The noise 
-\begin_inset Formula $\epsilon_{i}(t)$
-\end_inset
-
- is normally distributed, centered on 0 with a standard deviation of 0.1.
- 
-\end_layout
-
-\begin_layout Standard
-We compared results for time series of length 35 (the length of our data
- set), 100 and 500.
- For all simulation experiments, dynamics are first run for 500 time steps
- as a burn-in.
- To take into account different observational designs, we either take the
- first 35 or 100 time steps of the following 500-time steps series, or subsample
- the time series after burn-in.
- We also considered several community richness (10, 30, 60 and 100 species),
- and several strengths of the response to the environmental signal (
-\begin_inset Formula $b=$
-\end_inset
-
-[0.1, 0.5, 0.75]).
- For each combination of parameters, we computed 10 repetitions (i.e., replicates).
-\end_layout
-
-\begin_layout Standard
-We considered different types of environmental driver, crossed with subsampling
- / no subsampling.
- We considered in total three scenarios, and present below the results for
- all three: 
-\end_layout
-
-\begin_layout Itemize
-Scenario 1: 
-\begin_inset Formula $U_{t}=u_{t}$
-\end_inset
-
- where 
-\begin_inset Formula $u_{t}$
-\end_inset
-
- is an autocorrelated signal (standardized); no subsampling of the data
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../OUT/simulated_gross_values_notrend.pdf
-	width 80text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Evolution of Gross' synhrony index for different time series length and
- number of species in the community, in simulations where there is no trend
- in the environmental signal and the data is not subsampled, keeping the
- autocorrelation of the environment.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:notrend"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Scenario 2: 
-\begin_inset Formula $U_{t}=u_{t}$
-\end_inset
-
-; data subsampling
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../OUT/simulated_gross_values_subsample_notrend.pdf
-	width 80text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Gross' synhrony index for different time series length and number of species
- in the community, in simulations where there is no trend in the environmental
- signal and the data is subsampled (keeping 35 or 100 time steps), removing
- in effect the autocorrelation of the environment.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:notrend_subsample"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Scenario 3: 
-\begin_inset Formula $U_{t}=U_{\text{min}}+(U_{\text{max}}-U_{\text{min}})(u_{t}+x_{t})/2$
-\end_inset
-
- where 
-\begin_inset Formula $x_{t}\in[0,1]$
-\end_inset
-
- follows an increasing trend; data subsampling
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../OUT/simulated_gross_values_subsample_withtrend.pdf
-	width 80text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Gross' synchrony index for different time series length and number of species
- in the community, in simulations where there is an increasing trend in
- the environmental signal and the data is subsampled (for 35 or 100 time
- steps), removing part of the autocorrelation of the environment in the
- dynamics of the species
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:withtrend_subsample"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We first confirm that unless there is a high autocorrelation in the driver
- (as in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:notrend"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), if we consider two groups which have opposite reactions to the same driver,
- the Gross index is not sensitive to the length of the time series or to
- the number of species in the community.
- For larger communities (over 10 species), synchrony is higher when the
- response to the driver is stronger.
- For our data, this means that the more birds are sensitive to the water
- level, the less we can expect compensation at the whole community level.
- 
-\change_inserted -666822487 1537458982
-
-\end_layout
-
-\begin_layout Subsection*
-
-\change_inserted -666822487 1537459009
-ESM 4 - Temporal patterns of functional groups in the Teich bird community
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -666822487 1537458983
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\change_inserted -666822487 1537458983
-\begin_inset Graphics
-	filename /home/frederic/Documents/Close_collabs/BirdTimeSeries_Teich/OUT/t30-Axe1-ProportionsLimicoles.pdf
-	width 110text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1537458983
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1537459620
-Temporal trends in the abundance of all birds and the main functional groups
- (waders and ducks).
- The duck category actually includes all species functionally similar to
- ducks (i.e., anatids and the common coot).
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
