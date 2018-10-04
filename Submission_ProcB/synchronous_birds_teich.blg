@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: synchronous_birds_teich.aux
+The style file: prsb.bst
+Database file #1: BiblioTeich.bib
+You've used 18 entries,
+            2427 wiz_defined-function locations,
+            662 strings with 9480 characters,
+and the built_in function-call counts, 9296 in all, are:
+= -- 643
+> -- 436
+< -- 0
++ -- 400
+- -- 109
+* -- 581
+:= -- 1051
+add.period$ -- 57
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 833
+empty$ -- 775
+format.name$ -- 126
+if$ -- 1946
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 251
+newline$ -- 99
+num.names$ -- 18
+pop$ -- 340
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 204
+stack$ -- 0
+substring$ -- 478
+swap$ -- 578
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 51
+width$ -- 20
+write$ -- 227
