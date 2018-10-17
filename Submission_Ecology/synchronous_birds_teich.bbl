@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{16}
 
 \bibitem[Bell et~al.(2014)Bell, Fogarty, and Collie]{bell_stability_2014}
 Bell, R., M.~Fogarty, and J.~Collie, 2014.
@@ -14,14 +14,6 @@ Bl\"{u}thgen, N., N.~K. Simons, K.~Jung, D.~Prati, S.~C. Renner, S.~Boch,
 \newblock Land use imperils plant and animal community stability through
   changes in asynchrony rather than diversity.
 \newblock \emph{Nature Communications} \textbf{7}:10697.
-
-\bibitem[Bush et~al.(2017)Bush, Abernethy, Jeffery, Tutin, White, Dimoto,
-  Dikangadissi, Jump, and Bunnefeld]{bush_fourier_2017}
-Bush, E.~R., K.~A. Abernethy, K.~Jeffery, C.~Tutin, L.~White, E.~Dimoto, J.-T.
-  Dikangadissi, A.~S. Jump, and N.~Bunnefeld, 2017.
-\newblock Fourier analysis to detect phenological cycles using long-term
-  tropical field data and simulations.
-\newblock \emph{Methods in Ecology and Evolution} \textbf{8}:530--540.
 
 \bibitem[Christensen et~al.(2018)Christensen, Harris, and
   Ernest]{christensen2018long}
@@ -106,17 +98,6 @@ Sinclair, A., K.~L. Metzger, J.~M. Fryxell, C.~Packer, A.~E. Byrom, M.~E.
 \newblock Asynchronous food-web pathways could buffer the response of serengeti
   predators to el ni{\~n}o southern oscillation.
 \newblock \emph{Ecology} \textbf{94}:1123--1130.
-
-\bibitem[Usinowicz et~al.(2017)Usinowicz, Chang-Yang, Chen, Clark, Fletcher,
-  Garwood, Hao, Johnstone, Lin, Metz, Masaki, Nakashizuka, Sun, Valencia, Wang,
-  Zimmerman, Ives, and Wright]{usinowicz_temporal_2017}
-Usinowicz, J., C.-H. Chang-Yang, Y.-Y. Chen, J.~S. Clark, C.~Fletcher, N.~C.
-  Garwood, Z.~Hao, J.~Johnstone, Y.~Lin, M.~R. Metz, T.~Masaki, T.~Nakashizuka,
-  I.-F. Sun, R.~Valencia, Y.~Wang, J.~K. Zimmerman, A.~R. Ives, and S.~J.
-  Wright, 2017.
-\newblock Temporal coexistence mechanisms contribute to the latitudinal
-  gradient in forest diversity.
-\newblock \emph{Nature} .
 
 \bibitem[Vasseur et~al.(2014)Vasseur, Fox, Gonzalez, Adrian, Beisner, Helmus,
   Johnson, Kratina, Kremer, de~Mazancourt, Miller, Nelson, Paterson, Rusak,

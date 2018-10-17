@@ -147,13 +147,13 @@ species will precisely respond in similar ways to environmental variables,
 which tends to obfuscate compensation. Under the latter scenario,
 more dissimilar species, or groups of species (within the same trophic
 level nonetheless), could compensate each other within the whole community.
-This should occur because more dissimilar species are more likely to have different environmental preferences and
+This should occur because they have different environmental preferences and
 the environment varies over time (e.g., groups of species preferring
 more open vs more closed habitats replacing each other as a function
-of changes in vegetation height). Surprisingly, such compensation \textit{between}
+of changes in vegetation height). Surprisingly, compensation between
 guilds has been less well explored than within guilds, even though
 there is actually some empirical evidence for compensation between
-dissimilar guilds \citep[e.g.][]{sinclair2013asynchronous}. In this paper, we
+dissimilar guilds \citep{sinclair2013asynchronous}. We therefore
 explore different ways to cluster the bird community, within or between
 guilds, along either taxonomic or functional classifications. 
 
@@ -175,7 +175,7 @@ composition).
 The monthly time series used for the statistical analyses have been
 collected at the Teich Ornithological Reserve, Arcachon Bay, France
 (44.64°N / -1.02°E), by the staff of the Teich reserve. The reserve
-comprises 120 ha of wetlands, and the counts have been aggregated at
+comprises 120 ha of wetlands, and the data have been aggregated at
 the reserve scale. We use for each species the maximum observed abundance
 over a month, which provides a ``monthly snapshot'' of the bird
 abundance. In the statistical analyses, we use both the original monthly
@@ -226,7 +226,7 @@ of $n$ species. This synchrony index described in eq. \ref{eq:Gross}
 varies between -1 (perfect compensation, total biomass is constant)
 and 1 (complete synchrony), while 0 represents a case where all populations
 fluctuate independently. Contrary to other indices (e.g.,
-\citet{loreau_species_2008}'s $\phi$),
+\citealt{loreau_species_2008}'s $\phi$),
 this index is independent from the richness $n$ of the community (or more
 generally the number of system components) and its overall stability
 \citep{bluthgen_land_2016,hallett_codyn_2016}. This is particularly important here
@@ -310,8 +310,7 @@ significance of each value was tested at the 10\%, Bonferroni-corrected,
 threshold by 100 phase-randomizations of each species time series,
 and computation of the corresponding $\rho$ values.
 
-All datasets and statistical analyses are available in a GitHub repository 
-\url{https://github.com/fbarraquand/BirdTimeSeries_Teich}\footnote{Made public upon acceptance and archived in Zenodo}.
+All datasets and statistical analyses are available in a GitHub repository \url{https://github.com/fbarraquand/BirdTimeSeries_Teich} \footnote{Made public upon acceptance and archived in Zenodo}.
 
 \section*{Results}
 
