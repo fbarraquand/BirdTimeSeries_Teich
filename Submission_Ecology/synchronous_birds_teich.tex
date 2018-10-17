@@ -1,6 +1,6 @@
 %% LyX 2.3.0 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[english]{article}
+\documentclass[english,12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{geometry}
@@ -12,7 +12,8 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{esint}
-\usepackage[numbers]{natbib}
+\usepackage[authoryear]{natbib}
+\usepackage{url}
 
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
@@ -72,39 +73,16 @@ Teich Ornithological Reserve, Rue du Port BP 11 33470 Le Teich, France}{\large\p
 \pagebreak{}
 
 \linenumbers
+\doublespacing
+
 \begin{abstract}
-Compensatory dynamics, during which community composition shifts despite
-a near-constant total community size, are usually rare: synchronous
-dynamics prevail in natural communities. This is a puzzle for ecologists,
-because of the key role of compensation to explain the relation between
-biodiversity and ecosystem functioning. Early studies suggested that
-this rarity may be due to the use of temporal scales at which a main
-abiotic driver such as temperature can synchronize the whole community.
-New ideas and techniques have then been put forward to look at compensation
-vs synchrony at varied temporal scales, which we apply here. We take
-advantage of a long-term wetland bird community time series of 35
-years in a natural reserve, where we suspected that compensation might
-occur due to changes in water levels and known trends in some species.
-We find that compensatory dynamics are still rare, likely due to the
-synchronizing influence of climate on birds, even after considering
-several temporal scales of covariation (during cold or warm seasons,
-above or below the seasonal scale). Negative covariation in abundance
-at the whole community level did only appear after a management change
-in the reserve, and at the scale of a few months or several years.
-Although a lot of attention has been focused on the temporal scale
-of compensation, we remarked the potential for compensation to vary
-with taxonomic and functional scale too: compensation appeared here
-more frequently between guilds rather than within guilds, and it did
-so at long temporal scales (several years). This suggests that, in
-contrast to suggestions to search for very fine-grained compensation
-within communities organised as species list, perhaps compensation
-has more potential to emerge between classes, families or broad functional
-groups.
+Compensatory dynamics, during which community composition shifts despite a near-constant total community size, are usually rare: synchronous
+dynamics prevail in natural communities. This is a puzzle for ecologists, because of the key role of compensation to explain the relation between biodiversity and ecosystem functioning. We take advantage of a long-term wetland bird community time series of 35 years, where we suspected that compensation might occur due to changes in water levels and known trends. We find that compensatory dynamics are still rare, likely due to the synchronizing influence of climate on birds, even after considering several temporal scales of covariation (during cold or warm seasons, above or below the seasonal scale). Negative covariation in abundance at the whole community level did only appear after a management change in the reserve, and at the scale of a few months or several years. Although most research has focused on the temporal scale of compensation vs. synchrony, we found that compensation varies with taxonomic and functional scale too: compensation appeared more frequently between rather than within guilds. This suggests that compensation has more potential to emerge between broad functional groups rather between species. 
 
 \end{abstract}
 \newpage{}
 
-\section{Introduction}
+\section*{Introduction}
 
 Ecological theory suggests that within rich communities, where a number
 of species can have similar functions due to their proximity in morphological
@@ -138,19 +116,19 @@ synchronize species abundances or growth rates at some scale, creating
 large variance in community-wide biomass, in spite of strongly competitive
 dynamics. Further research has therefore focused on specific timeframes
 where compensatory dynamics may be found (e.g., below the seasonal
-scale where temperature fluctuations tend to synchronize species dynamics,
-\citep{vasseur_synchronous_2014}). 
+scale where temperature fluctuations tend to synchronize species dynamics
+\citealp{vasseur_synchronous_2014}). 
 
 Despite this effort to look for more meaningful temporal scales in
 community-level time series, temporal compensation has remained surprinsingly
 elusive in the field \citep{houlahan_compensatory_2007,vasseur_synchronous_2014};
-but see \citep{ernest2008zero,christensen2018long}. Most datasets
+but see \citet{ernest2008zero,christensen2018long}. Most datasets
 used so far to evaluate temporal compensation vs synchrony involve
 planktonic organisms \citep{vasseur2007spectral,vasseur_synchronous_2014}
-or terrestrial plants (\citep{houlahan_compensatory_2007,gross2013species};
-though see \citep{bell_stability_2014}. Here, we take advantage
+or terrestrial plants (\citealp{houlahan_compensatory_2007,gross2013species};
+though see \citealt{bell_stability_2014}. Here, we take advantage
 of a long-term bird time series record at the monthly scale (over
-35 years\footnote{Considering only the years used in our analysis. Otherwise, the dataset
+35 years \footnote{Considering only the years used in our analysis. Otherwise, the dataset
 begins in 1973.}), in a natural reserve, that allows us to dig deeper into patterns
 of synchrony, at several temporal and taxonomic or functional scales. 
 
@@ -162,7 +140,7 @@ are generally correlated. For example, if species A and B are two
 duck species that share almost the same food niche as well as many
 traits, it makes little difference to the rest of the community whether
 one species gets replaced by the other (functional compensation,\emph{
-sensu} Gonzalez and Loreau \citep{gonzalez2009causes}), and priority effects could dominate.
+sensu} \citealt{gonzalez2009causes}), and priority effects could dominate.
 On the other hand, it could be argued that these two similar duck
 species will precisely respond in similar ways to environmental variables,
 which tends to obfuscate compensation. Under the latter scenario,
@@ -189,9 +167,9 @@ levels), favouring different types of wetland birds (so that over
 long timescales, there is a real potential for changes in community
 composition). 
 
-\section{Material and Methods}
+\section*{Material and Methods}
 
-\subsection{Data}
+\subsection*{Data}
 
 The monthly time series used for the statistical analyses have been
 collected at the Teich Ornithological Reserve, Arcachon Bay, France
@@ -231,10 +209,10 @@ abundance in the group considered). \label{fig:Temporal-trends}}
 \end{figure}
 
 
-\subsection{Statistical Analyses}
+\subsection*{Statistical Analyses}
 
 We used for yearly analyses the synchrony index $\eta$ defined by
-Gross et al. \citep{gross2013species}, which is constructed as the
+\citet{gross2013species}, which is constructed as the
 mean cross-correlation between each species biomass and the summed
 biomasses of the rest of the community (eq. \ref{eq:Gross}). 
 
@@ -247,7 +225,7 @@ of $n$ species. This synchrony index described in eq. \ref{eq:Gross}
 varies between -1 (perfect compensation, total biomass is constant)
 and 1 (complete synchrony), while 0 represents a case where all populations
 fluctuate independently. Contrary to other indices (e.g.,
-Loreau and de Mazancourt's $\phi$ \citep{loreau_species_2008,hallett_codyn_2016}),
+\citealt{loreau_species_2008}'s $\phi$),
 this index is independent from the richness $n$ of the community (or more
 generally the number of system components) and its overall stability
 \citep{bluthgen_land_2016,hallett_codyn_2016}. This is particularly important here
@@ -312,8 +290,8 @@ on the Appendix.
 In addition to the time-domain analyses above, we performed frequency-domain
 analyses, in particular for analyzing synchrony within the rich wader
 community, as well as the group formed by the great cormorant, grey
-heron and little egret. Based on the work by Keitt \citep{keitt_coherent_2008}
-and follow-up by Vasseur et al. \citep{vasseur_synchronous_2014},
+heron and little egret. Based on the work by \citet{keitt_coherent_2008}
+and follow-up by \citet{vasseur_synchronous_2014},
 we used the wavelet transform of the time series to measure the coherency
 between time series
 
@@ -331,7 +309,9 @@ significance of each value was tested at the 10\%, Bonferroni-corrected,
 threshold by 100 phase-randomizations of each species time series,
 and computation of the corresponding $\rho$ values.
 
-\section{Results}
+All datasets and statistical analyses are available in a GitHub repository \url{https://github.com/fbarraquand/BirdTimeSeries_Teich} \footnote{Made public upon acceptance and archived in Zenodo}.
+
+\section*{Results}
 
 Using a taxonomic classification of the community (\textit{\emph{focusing
 on the genera}} \textit{Calidris} and \textit{Anas} as two key examples
@@ -340,7 +320,7 @@ at the seasonal scale are always positive whenever significantly different
 from the null (no temporal correlation between species), i.e. there
 is no compensation within a genus (Fig. \ref{fig:Gross-synchrony-index}).
 This matches the patterns obtained within the entire wetland bird
-community (Fig A1 in ESM 1). 
+community (Fig A1 in Appendix 1). 
 
 For the cold season, \textit{Calidris} and \textit{Anas} exhibit opposite
 trends in synchrony in response to the management change in 2006.
@@ -386,7 +366,7 @@ decrease it.
 
 More clear-cut results can be found when we examine the synchrony
 vs. compensation between functional groups (Fig. 2d). Since we consider
-only two functional groups, the Gross index reduces to a simple correlation\footnote{It should be noted that with more species, the Gross et al. \citep{gross2013species}
+only two functional groups, the Gross index reduces to a simple correlation\footnote{It should be noted that with more species, the \citet{gross2013species}
 index has been specifically designed so as to be able to take the
 value -1 when there is a zero-sum dynamics, i.e., perfect compensation,
 unlike the classical correlation coefficient. }. Waders and ducks are negatively correlated during the cold season
@@ -430,7 +410,7 @@ that synchrony is in fact the rule around the annual scale and below,
 when considering the wavelet index. We wondered if the patterns in
 Fig. \ref{fig:Time-series-of} were caused by the use of a log scale,
 but we found that in fact the correlation was higher rather than lower
-on the log scale (ESM 2). However, over long temporal scales ($\sim$
+on the log scale (Appendix 2). However, over long temporal scales ($\sim$
 6 years) there seems to be some compensation, traducing a progressive
 change in composition within this small community module, that was
 already visible on the time series plot (Fig. \ref{fig:Time-series-of}).
@@ -439,14 +419,14 @@ There might be some compensation over very short timescale as well
 mechanisms for this are unclear, since these species compete for roost
 sites, a process that it unlikely to manifest at such very short timescales. 
 
-\section{Discussion}
+\section*{Discussion}
 
 Compensation was overall very rare at the yearly timescale (differentiating
 between the cold and warm season). At short timescales (below the
 season), and among taxonomically or functionally close species, some
 compensation could be found but only at certain periods. In other
-words, there was no widespread ``functional compensation'' (sensu
-Gonzalez and Loreau \cite{gonzalez2009causes}) \emph{within} genera or guilds at the
+words, there was no widespread ``functional compensation'' (\textit{sensu}
+\citealt{gonzalez2009causes}) \emph{within} genera or guilds at the
 annual scale or below. 
 
 Yet, summing species abundances within a guild and comparing the ``biomass
@@ -456,13 +436,13 @@ frequency in the long run; in other words, there was some compensation
 
 Given that we compare the level of synchrony/compensation within guilds
 (with many species) and between guilds (with only a handful of groups),
-we checked in ESM 3 if changing the number of ``compartments''
+we checked in Appendix 3 if changing the number of ``compartments''
 ($n$) in the Gross $\eta$ index could affect its value: it did not.
 However, we found that if two groups respond in opposite ways to a
 shared driver, the stronger the response to the driver, the lesser
 the compensation indicated by $\eta$ at the whole community level.
 This might explain the low levels of compensation that we found at
-the overall wetland bird community level (ESM 1), in spite of the
+the overall wetland bird community level (Appendix 1), in spite of the
 clear presence of two groups reacting in opposite way to shared driver
 (here, water levels). Analyses at several taxonomic/functional scales
 are therefore warranted to be conclusive about compensation. 
@@ -483,7 +463,7 @@ explanations are possible).
 It may be better to say that we detected ``compensation'' rather
 than ``compensatory dynamics'' between bird species \citep{gonzalez2009causes}
 as the observed long-term changes in species composition (more waders,
-proportionally less ducks; ESM 4) might be due to an increased inflow
+proportionally less ducks; Appendix 4) might be due to an increased inflow
 of birds preferring low water levels, and outflow of birds preferring
 high water levels, under an overall space constraint. In other words,
 the shift in community dynamics is likely not directly due to birth
@@ -538,10 +518,10 @@ We thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
 regional park who contributed to data collection over the years, as
 well as LPO Aquitaine for helping us retrieve the raw data. The data
 collection was supported by the Landes Gascogne regional park as well
-as the Teich commune, while data analysis was funded by LabEx COTE
+as the Teich municipality, while data analysis was funded by LabEx COTE
 (ANR-10-LABX-45). \\
 
-\bibliographystyle{prsb}
+\bibliographystyle{ecology}
 \bibliography{BiblioTeich}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.13)  6 OCT 2018 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.13)  17 OCT 2018 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 31 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -222,6 +222,10 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count92
 )
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/ae/ae.sty
 Package: ae 2001/02/12 1.3 Almost European Computer Modern
 
@@ -281,32 +285,28 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 (./synchronous_birds_teich.aux)
 \openout1 = `synchronous_birds_teich.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
-
-Package geometry Warning: The marginal notes overrun the paper.
-     Add 4.86812pt and more to the right margin.
-
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
 * paper: <default>
@@ -324,12 +324,12 @@ Package geometry Warning: The marginal notes overrun the paper.
 * \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -396,124 +396,135 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 36.
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esint on input line 36.
+LaTeX Font Info:    Try loading font information for U+esint on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+aess on input line 75.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 78.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
-) [2] [3]
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 198.
+) [2] [3] [4]
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 176.
 
 
 (/usr/share/texmf/tex/latex/R/tex/latex/ts1aer.fd
 File: ts1aer.fd 
 )
-LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 198.
- [4]
-<Fig1.pdf, id=29, 1084.05pt x 722.7pt>
+LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <12> not available
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 176.
+ [5]
+<Fig1.pdf, id=30, 1084.05pt x 722.7pt>
 File: Fig1.pdf Graphic file (type pdf)
  <use Fig1.pdf>
-Package pdftex.def Info: Fig1.pdf used on input line 221.
+Package pdftex.def Info: Fig1.pdf used on input line 199.
 (pdftex.def)             Requested size: 512.1496pt x 341.44447pt.
 
-Overfull \hbox (40.11836pt too wide) in paragraph at lines 221--222
+Overfull \hbox (40.11836pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
-[5 <./Fig1.pdf>] [6] [7] <Fig2_new2.pdf, id=54, 794.97pt x 1011.78pt>
+[6 <./Fig1.pdf>] [7] [8]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 312.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+Overfull \hbox (0.81056pt too wide) in paragraph at lines 312--313
+[]\T1/aer/m/n/12 All datasets and sta-tis-ti-cal anal-y-ses are avail-able in a
+ GitHub repos-i-tory $\T1/aett/m/n/12 https : / / github .
+ []
+
+[9] <Fig2_new2.pdf, id=59, 794.97pt x 1011.78pt>
 File: Fig2_new2.pdf Graphic file (type pdf)
-
-<use Fig2_new2.pdf>
-Package pdftex.def Info: Fig2_new2.pdf used on input line 365.
+ <use Fig2_new2.pdf>
+Package pdftex.def Info: Fig2_new2.pdf used on input line 345.
 (pdftex.def)             Requested size: 401.22942pt x 510.6747pt.
- [8] [9 <./Fig2_new2.pdf>]
-<Figure3.png, id=68, 803.0pt x 481.8pt>
-File: Figure3.png Graphic file (type png)
- <use Figure3.png>
-Package pdftex.def Info: Figure3.png used on input line 398.
-(pdftex.def)             Requested size: 448.42822pt x 269.06363pt.
+ [10]
+Overfull \vbox (0.92123pt too high) has occurred while \output is active []
 
-<Fig4.pdf, id=69, 1445.4pt x 433.62pt>
+
+[11 <./Fig2_new2.pdf>] <Figure3.png, id=73, 803.0pt x 481.8pt>
+File: Figure3.png Graphic file (type png)
+
+<use Figure3.png>
+Package pdftex.def Info: Figure3.png used on input line 378.
+(pdftex.def)             Requested size: 448.42822pt x 269.06363pt.
+ <Fig4.pdf, id=74, 1445.4pt x 433.62pt>
 File: Fig4.pdf Graphic file (type pdf)
  <use Fig4.pdf>
-Package pdftex.def Info: Fig4.pdf used on input line 408.
+Package pdftex.def Info: Fig4.pdf used on input line 388.
 (pdftex.def)             Requested size: 519.23723pt x 155.77225pt.
 
-Overfull \hbox (47.206pt too wide) in paragraph at lines 408--409
+Overfull \hbox (47.206pt too wide) in paragraph at lines 388--389
  [][] 
  []
 
-[10 <./Figure3.png (PNG copy)>] <gross_triad.pdf, id=73, 505.89pt x 505.89pt>
+[12 <./Figure3.png (PNG copy)>] <gross_triad.pdf, id=78, 505.89pt x 505.89pt>
 File: gross_triad.pdf Graphic file (type pdf)
 
 <use gross_triad.pdf>
-Package pdftex.def Info: gross_triad.pdf used on input line 416.
+Package pdftex.def Info: gross_triad.pdf used on input line 396.
 (pdftex.def)             Requested size: 259.6186pt x 259.62152pt.
- <wavelet_triad.png, id=74, 803.0pt x 481.8pt>
+ <wavelet_triad.png, id=79, 803.0pt x 481.8pt>
 File: wavelet_triad.png Graphic file (type png)
 
 <use wavelet_triad.png>
-Package pdftex.def Info: wavelet_triad.png used on input line 419.
+Package pdftex.def Info: wavelet_triad.png used on input line 399.
 (pdftex.def)             Requested size: 330.42041pt x 198.25238pt.
- [11 <./Fig4.pdf>] [12 <./gross_triad.pdf> <./wavelet_triad.png (PNG copy)>] [1
-3] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 537--543
+ [13 <./Fig4.pdf>] [14 <./gross_triad.pdf> <./wavelet_triad.png (PNG copy)>] [1
+5] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
 
  []
 
-(./synchronous_birds_teich.bbl [15] [16]) [17] (./synchronous_birds_teich.aux) 
-) 
+[17] (./synchronous_birds_teich.bbl [18] [19]) [20]
+(./synchronous_birds_teich.aux) ) 
 Here is how much of TeX's memory you used:
- 4399 strings out of 494351
- 61202 string characters out of 6163905
- 122562 words of memory out of 5000000
- 7552 multiletter control sequences out of 15000+600000
- 51620 words of font info for 119 fonts, out of 8000000 for 9000
+ 4502 strings out of 494351
+ 62627 string characters out of 6163905
+ 123052 words of memory out of 5000000
+ 7646 multiletter control sequences out of 15000+600000
+ 54035 words of font info for 129 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 38i,8n,28p,761b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/frederic/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb>
-Output written on synchronous_birds_teich.pdf (17 pages, 824718 bytes).
+ 38i,8n,32p,1162b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/frederic/.texmf-var/fonts/pk/ljfour/jk
+nappen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on synchronous_birds_teich.pdf (20 pages, 795244 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 186 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
