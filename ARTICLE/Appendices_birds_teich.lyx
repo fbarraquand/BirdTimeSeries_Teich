@@ -85,6 +85,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -517,10 +518,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of Gross' synhrony index for different time series length and
- number of species in the community, in simulations where there is no trend
- in the environmental signal and the data is not subsampled, keeping the
- autocorrelation of the environment.
+Evolution of Gross' syn
+\change_inserted -2100369821 1539867534
+c
+\change_unchanged
+hrony index for different time series length and number of species in the
+ community, in simulations where there is no trend in the environmental
+ signal and the data is not subsampled, keeping the autocorrelation of the
+ environment.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -687,7 +692,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/frederic/Documents/Close_collabs/BirdTimeSeries_Teich/OUT/t30-Axe1-ProportionsLimicoles.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t30-Axe1-ProportionsLimicoles.pdf
 	width 110text%
 
 \end_inset
@@ -704,6 +709,11 @@ Temporal trends in the abundance of all birds and the main functional groups
  The duck category actually includes all species functionally similar to
  ducks (i.e., anatids and the common coot).
  
+\change_inserted -2100369821 1539867692
+The dashed line presents the ratio of wader individuals in the whole community,
+ which changes over time.
+\change_unchanged
+
 \end_layout
 
 \end_inset

@@ -32,14 +32,14 @@
 
 \author{{\Large{}Frédéric Barraquand$^{1,2,*}$, Coralie Picoche$^{1}$,
 Christelle Aluome$^{1,3}$, }\\
-{\Large{}Laure Carassou$^{1,4}$\& Claude Feigné$^{5}$}}
+{\Large{}Laure Carassou$^{1,4}$ \& Claude Feigné$^{5}$}}
 
 \maketitle
 {\large{}\bigskip{}
 }{\large\par}
 
 {\large{}}\textsuperscript{{\large{}1}}{\large{}~University of
-Bordeaux, Integrative and Theoretical Ecology, LabEx COTE Bât. B2
+Bordeaux, Integrative and Theoretical Ecology, LabEx COTE, Bât. B2
 - Allée Geoffroy St-Hilaire, 33615 Pessac, France \bigskip{}
 }{\large\par}
 
@@ -51,7 +51,7 @@ France}{\large\par}
 }{\large\par}
 
 {\large{}}\textsuperscript{{\large{}3}}{\large{}~ISPA, Bordeaux
-Sciences Agro, INRA, 33140, Villenave d\textquoteright Ornon, France}{\large\par}
+Sciences Agro, INRA, 33140 Villenave d\textquoteright Ornon, France}{\large\par}
 
 {\large{}\bigskip{}
 }{\large\par}
@@ -100,7 +100,7 @@ the community as a whole exhibits lower biomass variation than its
 constituent species \citep{gross2013species}. Compensation is therefore
 intertwined with community-level stability, at least when stability
 is understood as the reciprocal of variability. By contrast, another
-very frequent observed outcome on biodiversity time series is synchrony
+very frequently observed outcome on biodiversity time series is synchrony
 \citep{vasseur_synchronous_2014}. Synchrony occurs
 when all species fluctuate in phase, and therefore the biomass of
 the community may not fluctuate less than its constituent parts. 
@@ -147,13 +147,13 @@ species will precisely respond in similar ways to environmental variables,
 which tends to obfuscate compensation. Under the latter scenario,
 more dissimilar species, or groups of species (within the same trophic
 level nonetheless), could compensate each other within the whole community.
-This should occur because they have different environmental preferences and
+This should occur because more dissimilar species are more likely to have different environmental preferences and
 the environment varies over time (e.g., groups of species preferring
 more open vs more closed habitats replacing each other as a function
-of changes in vegetation height). Surprisingly, compensation between
+of changes in vegetation height). Surprisingly, such compensation \textit{between}
 guilds has been less well explored than within guilds, even though
 there is actually some empirical evidence for compensation between
-dissimilar guilds \citep{sinclair2013asynchronous}. We therefore
+dissimilar guilds \citep[e.g.][]{sinclair2013asynchronous}. In this paper, we
 explore different ways to cluster the bird community, within or between
 guilds, along either taxonomic or functional classifications. 
 
@@ -164,7 +164,7 @@ is a highly temporally resolved time series with respect to the species
 typical generation times, but it also extends well beyond generation
 time (35 years) and (ii) the reserve where the data has been collected
 was subjected to a major management change c. 2006 (change in water
-levels), favouring different types of wetland birds (so that over
+levels), favoring different types of wetland birds (so that over
 long timescales, there is a real potential for changes in community
 composition). 
 
@@ -175,7 +175,7 @@ composition).
 The monthly time series used for the statistical analyses have been
 collected at the Teich Ornithological Reserve, Arcachon Bay, France
 (44.64°N / -1.02°E), by the staff of the Teich reserve. The reserve
-comprises 120 ha of wetlands, and the data have been aggregated at
+comprises 120 ha of wetlands, and the counts have been aggregated at
 the reserve scale. We use for each species the maximum observed abundance
 over a month, which provides a ``monthly snapshot'' of the bird
 abundance. In the statistical analyses, we use both the original monthly
@@ -226,7 +226,7 @@ of $n$ species. This synchrony index described in eq. \ref{eq:Gross}
 varies between -1 (perfect compensation, total biomass is constant)
 and 1 (complete synchrony), while 0 represents a case where all populations
 fluctuate independently. Contrary to other indices (e.g.,
-\citealt{loreau_species_2008}'s $\phi$),
+\citet{loreau_species_2008}'s $\phi$),
 this index is independent from the richness $n$ of the community (or more
 generally the number of system components) and its overall stability
 \citep{bluthgen_land_2016,hallett_codyn_2016}. This is particularly important here
@@ -249,7 +249,7 @@ to consider seasonal averages of the monthly group density.
 
 We used both taxonomic classifications of the species (i.e., between
 and within genera) and functional classifications of the species (e.g.,
-30 species of waders versus 34 species of ducks) as we suspected that
+30 species of waders vs 34 species of ducks) as we suspected that
 a functional classification may allow to partition better the abiotic
 requirements of the species. We use ``duck'' as a shorthand for
 the larger functional group of herbivorous divers, because the birds
@@ -268,25 +268,13 @@ group).
 We computed statistical significance of synchrony index values using
 Monte Carlo randomizations \citep{gouhier_synchrony_2014}. For each
 set of time series (each combination year $\times$ season), we kept
-the auto-correlation of the species time-series, but removed the cross-correlation
+the auto-correlation of the species time series, but removed the cross-correlation
 between species by shifting each time series by a random lag \citep{purves_fine-scale_2002}.
 We obtained 100 sets of randomized time series for each season and
 period of time considered and computed the corresponding synchrony
 index. We then compared the observed values of $\eta$ to the values
 obtained with the randomized time-series. Independence of species
 was rejected at the Bonferroni-corrected 10\% threshold.%
-\begin{comment}
-Do we Bonferronni-correct? In this case, 5/16 for the 4 seasons? (4
-groups/4 season?)Do we add the equation for the p-value? Doesn't feel
-necessary to me but what do you think? We'll discuss for the Bonferroni,
-but that makes sense if we do it below? In any case we don't need
-to mention more here if we add the codes to the GitHub repo. I don't
-Bonferroni-correct for now. Thinking about it, wouldn't it be 5/(3{*}6{*}2)
-(3 periods of time, 6 groups, 2 seasons) ? Bonferroni corrections
-might be too strong in this context, let's discuss that together.
-F: Perhaps we should Bonferroni correct after all, see my comments
-on the Appendix.
-\end{comment}
 
 In addition to the time-domain analyses above, we performed frequency-domain
 analyses, in particular for analyzing synchrony within the rich wader
@@ -310,7 +298,8 @@ significance of each value was tested at the 10\%, Bonferroni-corrected,
 threshold by 100 phase-randomizations of each species time series,
 and computation of the corresponding $\rho$ values.
 
-All datasets and statistical analyses are available in a GitHub repository \url{https://github.com/fbarraquand/BirdTimeSeries_Teich} \footnote{Made public upon acceptance and archived in Zenodo}.
+All datasets and statistical analyses are available in a GitHub repository 
+\url{https://github.com/fbarraquand/BirdTimeSeries_Teich}\footnote{Made public upon acceptance and archived in Zenodo}.
 
 \section*{Results}
 
@@ -318,7 +307,7 @@ Using a taxonomic classification of the community (\textit{\emph{focusing
 on the genera}} \textit{Calidris} and \textit{Anas} as two key examples
 of contrasted birds), we can see that within-genus synchrony indices
 at the seasonal scale are always positive whenever significantly different
-from the null (no temporal correlation between species), i.e. there
+from the null hypothesis (no temporal correlation between species), i.e. there
 is no compensation within a genus (Fig. \ref{fig:Gross-synchrony-index}).
 This matches the patterns obtained within the entire wetland bird
 community (Fig A1 in Appendix 1). 
@@ -334,9 +323,9 @@ classification.
 Even though there is no widespread community-wide or genus-wide compensation
 at the yearly timescale (differentiating the seasons), there could
 be compensation at finer temporal scales, e.g. a month or two, or
-coarser scales, over several years. The wavelet plot (Fig. \ref{fig:Wavelet-modulus-ratio}),
-that allows to consider a time-varying and scale-dependent strength
-of synchrony, suggests that there is synchrony even at a fine temporal
+coarser scales, over several years. When we consider the wavelet plot (Fig. \ref{fig:Wavelet-modulus-ratio}),
+that is a time-varying and scale-dependent strength
+of synchrony, we can see that there is synchrony even at a fine temporal
 scale throughout most of the time series. However, post-2006, there
 seems to be a possibility for overcompensation on a scale around 5
 years or around 3-4 months. 
@@ -367,10 +356,7 @@ decrease it.
 
 More clear-cut results can be found when we examine the synchrony
 vs compensation between functional groups (Fig. 2d). Since we consider
-only two functional groups, the Gross index reduces to a simple correlation\footnote{It should be noted that with more species, the \citet{gross2013species}
-index has been specifically designed so as to be able to take the
-value -1 when there is a zero-sum dynamics, i.e., perfect compensation,
-unlike the classical correlation coefficient. }. Waders and ducks are negatively correlated during the cold season
+only two functional groups, the Gross index reduces to a simple correlation. Waders and ducks are negatively correlated during the cold season
 and positively correlated during the warm season. These patterns are
 in contrast unclear when using a taxonomic classification (no compensation,
 Fig. 2c).
@@ -380,7 +366,7 @@ Fig. 2c).
 \par\end{centering}
 \caption{Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
 blue color) to 1 (synchrony, red color). Dashed black lines delineate
-regions significantly different from the null model with a false discovery
+regions significantly different from the null model (independently fluctuating species) with a false discovery
 rate controlled at the 10\% threshold. \label{fig:Wavelet-modulus-ratio}}
 \end{figure}
 
