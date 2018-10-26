@@ -143,7 +143,7 @@ Laure Carassou
 \begin_inset Formula $^{1,4}$
 \end_inset
 
-& Claude Feigné
+ & Claude Feigné
 \begin_inset Formula $^{5}$
 \end_inset
 
@@ -231,7 +231,7 @@ status collapsed
 
 \end_inset
 
-University of Bordeaux, Integrative and Theoretical Ecology, LabEx COTE Bât. B2 - Allée Geoffroy St-Hilaire, 33615 Pessac, France 
+University of Bordeaux, Integrative and Theoretical Ecology, LabEx COTE, Bât. B2 - Allée Geoffroy St-Hilaire, 33615 Pessac, France 
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -383,7 +383,7 @@ status collapsed
 
 \end_inset
 
-ISPA, Bordeaux Sciences Agro, INRA, 33140, Villenave d
+ISPA, Bordeaux Sciences Agro, INRA, 33140 Villenave d
 \begin_inset Quotes ers
 \end_inset
 
@@ -675,7 +675,7 @@ literal "true"
 
 \end_inset
 
-. Compensation is therefore intertwined with community-level stability, at least when stability is understood as the reciprocal of variability. By contrast, another very frequent observed outcome on biodiversity time series is synchrony 
+. Compensation is therefore intertwined with community-level stability, at least when stability is understood as the reciprocal of variability. By contrast, another very frequently observed outcome on biodiversity time series is synchrony 
 \begin_inset CommandInset citation
 LatexCommand citep
 after ""
@@ -820,7 +820,7 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-Our objective is therefore to examine how synchronous or compensatory bird communities are at different temporal and taxonomic (or functional) scales. Our dataset is ideally suited to the task given that (i) it is a highly temporally resolved time series with respect to the species typical generation times, but it also extends well beyond generation time (35 years) and (ii) the reserve where the data has been collected was subjected to a major management change c. 2006 (change in water levels), favouring different types of wetland birds (so that over long timescales, there is a real potential for changes in community composition).
+Our objective is therefore to examine how synchronous or compensatory bird communities are at different temporal and taxonomic (or functional) scales. Our dataset is ideally suited to the task given that (i) it is a highly temporally resolved time series with respect to the species typical generation times, but it also extends well beyond generation time (35 years) and (ii) the reserve where the data has been collected was subjected to a major management change c. 2006 (change in water levels), favoring different types of wetland birds (so that over long timescales, there is a real potential for changes in community composition).
 \end_layout
 
 \begin_layout Section*
@@ -1068,7 +1068,7 @@ Calidris
 \end_layout
 
 \begin_layout Standard
-We used both taxonomic classifications of the species (i.e., between and within genera) and functional classifications of the species (e.g., 30 species of waders versus 34 species of ducks) as we suspected that a functional classification may allow to partition better the abiotic requirements of the species. We use 
+We used both taxonomic classifications of the species (i.e., between and within genera) and functional classifications of the species (e.g., 30 species of waders vs 34 species of ducks) as we suspected that a functional classification may allow to partition better the abiotic requirements of the species. We use 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1122,7 +1122,7 @@ literal "true"
 \begin_inset Formula $\times$
 \end_inset
 
- season), we kept the auto-correlation of the species time-series, but removed the cross-correlation between species by shifting each time series by a random lag 
+ season), we kept the auto-correlation of the species time series, but removed the cross-correlation between species by shifting each time series by a random lag 
 \begin_inset CommandInset citation
 LatexCommand citep
 after ""
@@ -1136,21 +1136,7 @@ literal "true"
 \begin_inset Formula $\eta$
 \end_inset
 
- to the values obtained with the randomized time-series. Independence of species was rejected at the Bonferroni-corrected 10% threshold.
-\begin_inset Note Comment
-status open
-
-\begin_layout Standard
-Do we Bonferronni-correct? In this case, 5/16 for the 4 seasons? (4 groups/4 season?)Do we add the equation for the p-value? Doesn't feel necessary to me but what do you think? We'll discuss for the Bonferroni, but that makes sense if we do it below? In any case we don't need to mention more here if we add the codes to the GitHub repo. I don't Bonferroni-correct for now. Thinking about it, wouldn't it be 5/(3*6*2) (3 periods of time, 6 groups, 2 seasons) ? Bonferroni corrections might be too strong in this context, let's discuss that together. F: Perhaps we should Bonferroni correct after all, see my comments on the Appendix. 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In addition to the time-domain analyses above, we performed frequency-domain analyses, in particular for analyzing synchrony within the rich wader community, as well as the group formed by the great cormorant, grey heron and little egret. Based on the work by 
+ to the values obtained with the randomized time-series. Independence of species was rejected at the Bonferroni-corrected 10% threshold.In addition to the time-domain analyses above, we performed frequency-domain analyses, in particular for analyzing synchrony within the rich wader community, as well as the group formed by the great cormorant, grey heron and little egret. Based on the work by 
 \begin_inset CommandInset citation
 LatexCommand citet
 after ""
@@ -1261,7 +1247,7 @@ Calidris
 \shape italic
 Anas
 \shape default
- as two key examples of contrasted birds), we can see that within-genus synchrony indices at the seasonal scale are always positive whenever significantly different from the null (no temporal correlation between species), i.e. there is no compensation within a genus (Fig. 
+ as two key examples of contrasted birds), we can see that within-genus synchrony indices at the seasonal scale are always positive whenever significantly different from the null hypothesis (no temporal correlation between species), i.e. there is no compensation within a genus (Fig. 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Gross-synchrony-index"
@@ -1295,7 +1281,7 @@ Calidris
 \end_layout
 
 \begin_layout Standard
-Even though there is no widespread community-wide or genus-wide compensation at the yearly timescale (differentiating the seasons), there could be compensation at finer temporal scales, e.g. a month or two, or coarser scales, over several years. The wavelet plot (Fig. 
+Even though there is no widespread community-wide or genus-wide compensation at the yearly timescale (differentiating the seasons), there could be compensation at finer temporal scales, e.g. a month or two, or coarser scales, over several years. When we consider the wavelet plot (Fig. 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Wavelet-modulus-ratio"
@@ -1305,7 +1291,7 @@ noprefix "false"
 
 \end_inset
 
-), that allows to consider a time-varying and scale-dependent strength of synchrony, suggests that there is synchrony even at a fine temporal scale throughout most of the time series. However, post-2006, there seems to be a possibility for overcompensation on a scale around 5 years or around 3-4 months.
+), that is a time-varying and scale-dependent strength of synchrony, we can see that there is synchrony even at a fine temporal scale throughout most of the time series. However, post-2006, there seems to be a possibility for overcompensation on a scale around 5 years or around 3-4 months.
 \end_layout
 
 \begin_layout Standard
@@ -1371,28 +1357,7 @@ There are therefore relatively contrasted results regarding the effect of the ma
 \end_layout
 
 \begin_layout Standard
-More clear-cut results can be found when we examine the synchrony vs compensation between functional groups (Fig. 2d). Since we consider only two functional groups, the Gross index reduces to a simple correlation
-\begin_inset Foot
-status collapsed
-
-
-\begin_layout Standard
-It should be noted that with more species, the 
-\begin_inset CommandInset citation
-LatexCommand citet
-after ""
-before ""
-key "gross2013species"
-literal "true"
-
-\end_inset
-
- index has been specifically designed so as to be able to take the value -1 when there is a zero-sum dynamics, i.e., perfect compensation, unlike the classical correlation coefficient. 
-\end_layout
-
-\end_inset
-
-. Waders and ducks are negatively correlated during the cold season and positively correlated during the warm season. These patterns are in contrast unclear when using a taxonomic classification (no compensation, Fig. 2c). 
+More clear-cut results can be found when we examine the synchrony vs compensation between functional groups (Fig. 2d). Since we consider only two functional groups, the Gross index reduces to a simple correlation. Waders and ducks are negatively correlated during the cold season and positively correlated during the warm season. These patterns are in contrast unclear when using a taxonomic classification (no compensation, Fig. 2c). 
 \begin_inset Float figure
 placement H
 wide false
@@ -1417,7 +1382,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Wavelet modulus ratio for the wader community, scaling from 0 (compensation, blue color) to 1 (synchrony, red color). Dashed black lines delineate regions significantly different from the null model with a false discovery rate controlled at the 10% threshold. 
+Wavelet modulus ratio for the wader community, scaling from 0 (compensation, blue color) to 1 (synchrony, red color). Dashed black lines delineate regions significantly different from the null model (independently fluctuating species) with a false discovery rate controlled at the 10% threshold. 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Wavelet-modulus-ratio"
@@ -1521,7 +1486,27 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time-domain (a) and frequency-domain (b) synchrony analyses of the group formed by cormorant, egret and heron
+Time-domain (a) and frequency-domain (b) synchrony analyses of the group formed by cormorant, egret and heron (see the captions of Fig. 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gross-synchrony-index"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and Fig. 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Wavelet-modulus-ratio"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for symbol interpretation) 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Time-domain-(top)-and"
@@ -1576,7 +1561,7 @@ noprefix "false"
 \begin_inset Formula $\sim$
 \end_inset
 
- 6 years) there seems to be some compensation, traducing a progressive change in composition within this small community module, that was already visible on the time series plot (Fig. 
+ 6 years) there seems to be some compensation, which may indicate a progressive change in composition within this small community module, that was already visible on the time series plot (Fig. 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Time-series-of"
