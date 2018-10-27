@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: synchronous_birds_teich.aux
 The style file: ecology.bst
 Database file #1: BiblioTeich.bib
-You've used 16 entries,
+You've used 15 entries,
             2685 wiz_defined-function locations,
-            703 strings with 8497 characters,
-and the built_in function-call counts, 10603 in all, are:
-= -- 898
-> -- 926
+            698 strings with 8076 characters,
+and the built_in function-call counts, 9662 in all, are:
+= -- 835
+> -- 805
 < -- 6
-+ -- 306
-- -- 288
-* -- 1094
-:= -- 1946
-add.period$ -- 48
-call.type$ -- 16
-change.case$ -- 175
-chr.to.int$ -- 16
-cite$ -- 16
-duplicate$ -- 288
-empty$ -- 516
-format.name$ -- 314
-if$ -- 1996
++ -- 266
+- -- 249
+* -- 987
+:= -- 1766
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 157
+chr.to.int$ -- 15
+cite$ -- 15
+duplicate$ -- 270
+empty$ -- 487
+format.name$ -- 274
+if$ -- 1824
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 83
-num.names$ -- 64
-pop$ -- 111
+missing$ -- 15
+newline$ -- 78
+num.names$ -- 60
+pop$ -- 97
 preamble$ -- 1
-purify$ -- 159
+purify$ -- 142
 quote$ -- 0
-skip$ -- 189
+skip$ -- 178
 stack$ -- 0
-substring$ -- 631
-swap$ -- 65
+substring$ -- 605
+swap$ -- 61
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 144
+type$ -- 135
 warning$ -- 0
-while$ -- 79
+while$ -- 75
 width$ -- 0
-write$ -- 210
+write$ -- 197

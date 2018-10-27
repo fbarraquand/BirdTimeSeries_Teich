@@ -14,6 +14,7 @@
 \usepackage{esint}
 \usepackage[authoryear]{natbib}
 \usepackage{url}
+\usepackage{caption}
 
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
@@ -195,20 +196,19 @@ Fig. \ref{fig:Temporal-trends} shows the patterns in abundance for
 key groups in the Teich reserve bird community, showing the marked
 signature of seasonality.
 
-\begin{figure}[H]
-\begin{centering}
-\includegraphics[width=18cm]{Fig1.pdf}
-\par\end{centering}
-\caption{Time series of counts for\emph{ }ducks of the genus\emph{ Anas} (a),
-calidrids (b, \emph{Calidris} genus), and all waders (c, including
-calidrids). The solid black lines represent trends in summed abundances
-for each guild, thin dotted lines represent putative trends (when
-some species are absent). The coloured symbols below the curves represent
-each species abundances, with species composition on the right side
-on the donut plots for the most abundant species (over 1\% of relative
-abundance in the group considered). \label{fig:Temporal-trends}}
-\end{figure}
-
+% \begin{figure}[H]
+% \begin{centering}
+% \includegraphics[width=18cm]{Fig1.pdf}
+% \par\end{centering}
+% \caption{Time series of counts for\emph{ }ducks of the genus\emph{ Anas} (a),
+% calidrids (b, \emph{Calidris} genus), and all waders (c, including
+% calidrids). The solid black lines represent trends in summed abundances
+% for each guild, thin dotted lines represent putative trends (when
+% some species are absent). The coloured symbols below the curves represent
+% each species abundances, with species composition on the right side
+% on the donut plots for the most abundant species (over 1\% of relative
+% abundance in the group considered). \label{fig:Temporal-trends}}
+% \end{figure}
 
 \subsection*{Statistical Analyses}
 
@@ -216,11 +216,9 @@ We used for yearly analyses the synchrony index $\eta$ defined by
 \citet{gross2013species}, which is constructed as the
 mean cross-correlation between each species biomass and the summed
 biomasses of the rest of the community (eq. \ref{eq:Gross}). 
-
 \begin{equation}
 \text{\ensuremath{\eta}}=\frac{1}{n}\sum_{i}\text{Corr}(P_{i},\sum_{j\neq i}P_{j})\label{eq:Gross}
 \end{equation}
-
 where $P_{i}$ is the abundance or biomass of species $i$ in a community
 of $n$ species. This synchrony index described in eq. \ref{eq:Gross}
 varies between -1 (perfect compensation, total biomass is constant)
@@ -229,7 +227,7 @@ fluctuate independently. Contrary to other indices (e.g.,
 \citet{loreau_species_2008}'s $\phi$),
 this index is independent from the richness $n$ of the community (or more
 generally the number of system components) and its overall stability
-\citep{bluthgen_land_2016,hallett_codyn_2016}. This is particularly important here
+\citep{hallett_codyn_2016}. This is particularly important here
 as we perform analyses at different taxonomic scales, and
 therefore with a different $n$ in eq. \ref{eq:Gross}. 
 
@@ -255,9 +253,7 @@ requirements of the species. We use ``duck'' as a shorthand for
 the larger functional group of herbivorous divers, because the birds
 in that category are mostly ducks: this group includes nonetheless
 all anatids (geese and swans in particular) as well as the common
-coot \emph{(Fulica atra}, an abundant species here). 
-
-We also ``zoomed in'' on a group of species that were known to exhibit
+coot \emph{(Fulica atra}, an abundant species here). We also ``zoomed in'' on a group of species that were known to exhibit
 potentially compensatory dynamics (through competition for roosting
 sites): the great cormorant \textit{(Phalacrocorax carbo)}, the little
 egret (\textit{Egretta garzetta}) and the grey heron (\textit{Ardea
@@ -274,9 +270,7 @@ We obtained 100 sets of randomized time series for each season and
 period of time considered and computed the corresponding synchrony
 index. We then compared the observed values of $\eta$ to the values
 obtained with the randomized time-series. Independence of species
-was rejected at the Bonferroni-corrected 10\% threshold.%
-
-In addition to the time-domain analyses above, we performed frequency-domain
+was rejected at the Bonferroni-corrected 10\% threshold. In addition to the time-domain analyses above, we performed frequency-domain
 analyses, in particular for analyzing synchrony within the rich wader
 community, as well as the group formed by the great cormorant, grey
 heron and little egret. Based on the work by \citet{keitt_coherent_2008}
@@ -310,9 +304,7 @@ at the seasonal scale are always positive whenever significantly different
 from the null hypothesis (no temporal correlation between species), i.e. there
 is no compensation within a genus (Fig. \ref{fig:Gross-synchrony-index}).
 This matches the patterns obtained within the entire wetland bird
-community (Fig A1 in Appendix 1). 
-
-For the cold season, \textit{Calidris} and \textit{Anas} exhibit opposite
+community (Fig A1 in Appendix 1). For the cold season, \textit{Calidris} and \textit{Anas} exhibit opposite
 trends in synchrony in response to the management change in 2006.
 However, for the warm season, the management change, which consisted
 in lowering the water levels, created more synchronous communities
@@ -329,23 +321,23 @@ of synchrony, we can see that there is synchrony even at a fine temporal
 scale throughout most of the time series. However, post-2006, there
 seems to be a possibility for overcompensation on a scale around 5
 years or around 3-4 months. 
-
-\begin{figure}[H]
-\begin{centering}
-\includegraphics[width=0.85\textwidth]{Fig2_new2}
-\par\end{centering}
-
-\caption{Gross' synchrony index ($\eta$) as a function of the season (cold
-and warm seasons), calculated within (top, a-b) and between (bottom,
-c-d) groups. The groups considered were different functional groups
-(ducks vs waders, right b-d) or taxonomic groups (\emph{Anas} genus,
-\emph{Calidris} genus, left a-b) groups. The index was computed in
-each panel on the whole dataset (black) or using two periods: before
-and after 2006 (light and dark blue), the year of the change in water
-level management. Red stars correspond to synchrony values significantly
-different from the null model (independent species), at the 10\% threshold.
-\label{fig:Gross-synchrony-index}}
-\end{figure}
+% 
+% \begin{figure}[H]
+% \begin{centering}
+% \includegraphics[width=0.85\textwidth]{Fig2_new2}
+% \par\end{centering}
+% 
+% \caption{Gross' synchrony index ($\eta$) as a function of the season (cold
+% and warm seasons), calculated within (top, a-b) and between (bottom,
+% c-d) groups. The groups considered were different functional groups
+% (ducks vs waders, right b-d) or taxonomic groups (\emph{Anas} genus,
+% \emph{Calidris} genus, left a-b) groups. The index was computed in
+% each panel on the whole dataset (black) or using two periods: before
+% and after 2006 (light and dark blue), the year of the change in water
+% level management. Red stars correspond to synchrony values significantly
+% different from the null model (independent species), at the 10\% threshold.
+% \label{fig:Gross-synchrony-index}}
+% \end{figure}
 
 There are therefore relatively contrasted results regarding the effect
 of the management change on short-term synchrony within the wader
@@ -360,34 +352,35 @@ only two functional groups, the Gross index reduces to a simple correlation. Wad
 and positively correlated during the warm season. These patterns are
 in contrast unclear when using a taxonomic classification (no compensation,
 Fig. 2c).
-\begin{figure}[H]
-\begin{centering}
-\includegraphics[width=0.95\textwidth]{Figure3}
-\par\end{centering}
-\caption{Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
-blue color) to 1 (synchrony, red color). Dashed black lines delineate
-regions significantly different from the null model (independently fluctuating species) with a false discovery
-rate controlled at the 10\% threshold. \label{fig:Wavelet-modulus-ratio}}
-\end{figure}
 
-\begin{figure}[H]
-\begin{centering}
-\includegraphics[width=1.1\textwidth]{Fig4}
-\par\end{centering}
-\caption{Time series of great cormoran abundance, as well as summed abundances
-of grey heron and little egret (logarithmic scale). \label{fig:Time-series-of}}
-\end{figure}
-
-\begin{figure}[H]
-\begin{centering}
-\includegraphics[width=0.55\textwidth]{gross_triad}
-\par\end{centering}
-\begin{centering}
-\includegraphics[width=0.7\textwidth]{wavelet_triad}
-\par\end{centering}
-\caption{Time-domain (a) and frequency-domain (b) synchrony analyses of the
-group formed by cormorant, egret and heron (see the captions of Fig. \ref{fig:Gross-synchrony-index} and Fig. \ref{fig:Wavelet-modulus-ratio} for symbol interpretation) \label{fig:Time-domain-(top)-and}}
-\end{figure}
+% \begin{figure}[H]
+% \begin{centering}
+% \includegraphics[width=0.95\textwidth]{Figure3}
+% \par\end{centering}
+% \caption{Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
+% blue color) to 1 (synchrony, red color). Dashed black lines delineate
+% regions significantly different from the null model (independently fluctuating species) with a false discovery
+% rate controlled at the 10\% threshold. \label{fig:Wavelet-modulus-ratio}}
+% \end{figure}
+% 
+% \begin{figure}[H]
+% \begin{centering}
+% \includegraphics[width=1.1\textwidth]{Fig4}
+% \par\end{centering}
+% \caption{Time series of great cormoran abundance, as well as summed abundances
+% of grey heron and little egret (logarithmic scale). \label{fig:Time-series-of}}
+% \end{figure}
+% 
+% \begin{figure}[H]
+% \begin{centering}
+% \includegraphics[width=0.55\textwidth]{gross_triad}
+% \par\end{centering}
+% \begin{centering}
+% \includegraphics[width=0.7\textwidth]{wavelet_triad}
+% \par\end{centering}
+% \caption{Time-domain (a) and frequency-domain (b) synchrony analyses of the
+% group formed by cormorant, egret and heron (see the captions of Fig. \ref{fig:Gross-synchrony-index} and Fig. \ref{fig:Wavelet-modulus-ratio} for symbol interpretation) \label{fig:Time-domain-(top)-and}}
+% \end{figure}
 
 While compensation could be expected upon visual inspection of the
 time series of the two groups formed by cormorant on the one hand,
@@ -414,9 +407,7 @@ season), and among taxonomically or functionally close species, some
 compensation could be found but only at certain periods. In other
 words, there was no widespread ``functional compensation'' (\textit{sensu}
 \citealt{gonzalez2009causes}) \emph{within} genera or guilds at the
-annual scale or below. 
-
-Yet, summing species abundances within a guild and comparing the ``biomass
+annual scale or below. Yet, summing species abundances within a guild and comparing the ``biomass
 sums'' of contrasted guilds, community composition did change in
 frequency in the long run; in other words, there was some compensation
 \emph{between} guilds. 
@@ -457,9 +448,7 @@ the shift in community dynamics is likely not directly due to birth
 and deaths. However, despite the importance of movements and habitat
 preference to the local community dynamics, there is certainly also
 an influence of the regional changes in births and deaths on these
-local dynamics. 
-
-Zooming in on the cormorant-heron-egret module, we find that compensation
+local dynamics. Zooming in on the cormorant-heron-egret module, we find that compensation
 mostly occurs above the annual temporal scale, and predominantly in
 summer as well as before 2006. This occurs because of a slow
 replacement of species due to competition for resting/roosting sites in the summer
@@ -506,9 +495,157 @@ regional park who contributed to data collection over the years, as
 well as LPO Aquitaine for helping us retrieve the raw data. The data
 collection was supported by the Landes Gascogne regional park as well
 as the Teich municipality, while data analysis was funded by LabEx COTE
-(ANR-10-LABX-45). \\
+(ANR-10-LABX-45).
 
 \bibliographystyle{ecology}
 \bibliography{BiblioTeich}
 
+\newpage
+
+\subsection*{Figure legends}
+
+\begin{figure}[H]
+\begin{centering}
+%\includegraphics[width=18cm]{Fig1.pdf}
+\par\end{centering}
+\caption{Time series of counts for\emph{ }ducks of the genus\emph{ Anas} (a),
+calidrids (b, \emph{Calidris} genus), and all waders (c, including
+calidrids). The solid black lines represent trends in summed abundances
+for each guild, thin dotted lines represent putative trends (when
+some species are absent). The coloured symbols below the curves represent
+each species abundances, with species composition on the right side
+on the donut plots for the most abundant species (over 1\% of relative
+abundance in the group considered). \label{fig:Temporal-trends}}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{centering}
+%\includegraphics[width=0.85\textwidth]{Fig2_new2}
+\par\end{centering}
+
+\caption{Gross' synchrony index ($\eta$) as a function of the season (cold
+and warm seasons), calculated within (top, a-b) and between (bottom,
+c-d) groups. The groups considered were different functional groups
+(ducks vs waders, right b-d) or taxonomic groups (\emph{Anas} genus,
+\emph{Calidris} genus, left a-b) groups. The index was computed in
+each panel on the whole dataset (black) or using two periods: before
+and after 2006 (light and dark blue), the year of the change in water
+level management. Red stars correspond to synchrony values significantly
+different from the null model (independent species), at the 10\% threshold.
+\label{fig:Gross-synchrony-index}}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+%\includegraphics[width=0.95\textwidth]{Figure3}
+\par\end{centering}
+\caption{Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
+blue color) to 1 (synchrony, red color). Dashed black lines delineate
+regions significantly different from the null model (independently fluctuating species) with a false discovery
+rate controlled at the 10\% threshold. \label{fig:Wavelet-modulus-ratio}}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+%\includegraphics[width=1.1\textwidth]{Fig4}
+\par\end{centering}
+\caption{Time series of great cormoran abundance, as well as summed abundances
+of grey heron and little egret (logarithmic scale). \label{fig:Time-series-of}}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+%\includegraphics[width=0.55\textwidth]{gross_triad}
+\par\end{centering}
+\begin{centering}
+%\includegraphics[width=0.7\textwidth]{wavelet_triad}
+\par\end{centering}
+\caption{Time-domain (a) and frequency-domain (b) synchrony analyses of the
+group formed by cormorant, egret and heron (see the captions of Fig. \ref{fig:Gross-synchrony-index} and Fig. \ref{fig:Wavelet-modulus-ratio} for symbol interpretation) \label{fig:Time-domain-(top)-and}}
+\end{figure}
+
+\subsection*{Figures}
+
+\setcounter{figure}{0}    
+
+\begin{figure}[H]
+\hspace{-1cm}
+%\begin{centering}
+\includegraphics[width=20cm]{Fig1.pdf}
+%\par\end{centering}
+\caption{}
+% \caption{Time series of counts for\emph{ }ducks of the genus\emph{ Anas} (a),
+% calidrids (b, \emph{Calidris} genus), and all waders (c, including
+% calidrids). The solid black lines represent trends in summed abundances
+% for each guild, thin dotted lines represent putative trends (when
+% some species are absent). The coloured symbols below the curves represent
+% each species abundances, with species composition on the right side
+% on the donut plots for the most abundant species (over 1\% of relative
+% abundance in the group considered). \label{fig:Temporal-trends}}
+\end{figure}
+
+\newpage
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=1\textwidth]{Fig2_new2}
+\par\end{centering}
+\caption{}
+% \caption{Gross' synchrony index ($\eta$) as a function of the season (cold
+% and warm seasons), calculated within (top, a-b) and between (bottom,
+% c-d) groups. The groups considered were different functional groups
+% (ducks vs waders, right b-d) or taxonomic groups (\emph{Anas} genus,
+% \emph{Calidris} genus, left a-b) groups. The index was computed in
+% each panel on the whole dataset (black) or using two periods: before
+% and after 2006 (light and dark blue), the year of the change in water
+% level management. Red stars correspond to synchrony values significantly
+% different from the null model (independent species), at the 10\% threshold.
+% \label{fig:Gross-synchrony-index}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{Figure3}
+\par\end{centering}
+\caption{}
+% \caption{Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
+% blue color) to 1 (synchrony, red color). Dashed black lines delineate
+% regions significantly different from the null model (independently fluctuating species) with a false discovery
+% rate controlled at the 10\% threshold. \label{fig:Wavelet-modulus-ratio}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+%\begin{centering}
+\hspace{-2.5cm}
+\includegraphics[width=1.3\textwidth]{Fig4}
+%\par\end{centering}
+\caption{}
+% \caption{Time series of great cormoran abundance, as well as summed abundances
+% of grey heron and little egret (logarithmic scale). \label{fig:Time-series-of}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=0.55\textwidth]{gross_triad}
+\par\end{centering}
+\begin{centering}
+\includegraphics[width=0.8\textwidth]{wavelet_triad}
+\par\end{centering}
+\vspace{1cm}
+\caption{}
+% \caption{Time-domain (a) and frequency-domain (b) synchrony analyses of the
+% group formed by cormorant, egret and heron (see the captions of Fig. \ref{fig:Gross-synchrony-index} and Fig. \ref{fig:Wavelet-modulus-ratio} for symbol interpretation) \label{fig:Time-domain-(top)-and}}
+\end{figure}
+
+
 \end{document}
+
+
