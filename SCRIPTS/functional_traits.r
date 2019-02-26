@@ -25,7 +25,8 @@ for (i in 1:length(SpeciesL)){
 oiseaux_Frequents_t=SpeciesL[vec_n_obs_oiseaux_t>75] #60/279
 
 
-tmp<-read.table(file="/home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/IN/BirdFuncDat.txt",header=TRUE,sep="\t",dec=".") #Hamish Wilman, Jonathan Belmaker, Jennifer Simpson, Carolina de la Rosa, Marcelo M. Rivadeneira, and Walter Jetz. 2014. EltonTraits 1.0: Species-level foraging attributes of the world's birds and mammals. Ecology 95:2027. http://dx.doi.org/10.1890/13-1917.1
+tmp<-read.csv(file="/home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/IN/BirdFuncDat.csv",header=TRUE,sep=";",dec=".")
+#tmp<-read.table(file="/home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/IN/BirdFuncDat.txt",header=TRUE,sep="\t",dec=".") #Hamish Wilman, Jonathan Belmaker, Jennifer Simpson, Carolina de la Rosa, Marcelo M. Rivadeneira, and Walter Jetz. 2014. EltonTraits 1.0: Species-level foraging attributes of the world's birds and mammals. Ecology 95:2027. http://dx.doi.org/10.1890/13-1917.1
 
 sok=0
 stot=0
@@ -35,5 +36,33 @@ for (s in SpeciesL){
 		sok=sok+1
 	}
 }
+print(paste("For all birds",sok/stot))
 
-#128/281 are in the DB
+sok=0
+stot=0
+for (s in oiseaux_Frequents_t){
+        stot=stot+1
+        if(s %in% tmp$Scientific){
+                sok=sok+1
+        }
+}
+print(paste("For frequent birds",sok/stot))
+
+limicoles = sort(c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidris temminckii","Calidris canutus",
+              "Calidris alba","Calidris alpina","Calidris minuta","Calidris maritima" ,"Gallinago gallinago",
+              "Tringa flavipes","Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
+              "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
+              "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
+              "Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
+              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus"))
+
+sok=0
+stot=0
+for (s in limicoles){
+        stot=stot+1
+        if(s %in% tmp$Scientific){
+                sok=sok+1
+        }
+}
+print(paste("For waders",sok/stot))
+
