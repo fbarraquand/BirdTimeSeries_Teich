@@ -10,7 +10,8 @@ library("lubridate")
 library("stringr")
 library("codyn")
 library ("pracma")
-DIRECTORY_ORIGIN = "/home/caluome/git/BirdTimeSeries_Teich/"
+#DIRECTORY_ORIGIN = "/home/caluome/git/BirdTimeSeries_Teich/"
+DIRECTORY_ORIGIN = "./"
 #DIRECTORY_ORIGIN = "/home/caluome/Documents/LabExCOTE/DATA/Graphes/Axe1/TRANSFERT_LIMICOLES"
 setwd(paste(DIRECTORY_ORIGIN,"IN/",sep=""))
 options(nwarnings = 300) #nb de messages de warnings conservés
@@ -1272,7 +1273,7 @@ axis(1, at=d_ticks, labels=nameTicks,cex.axis=1.5)
 legend("topright",legend = c("Egretta garzetta",'Phalacrocorax carbo','Ardea cinerea'),col=c('darkgreen','darkred','darkblue'),pch=19,lwd=1)
 dev.off()
 
-pdf("T47B-Axe1-Teich-les_3_especes_Heron+Aigrette.pdf",width=20,height=6,family = 'Times')
+pdf("T47B-Axe1-Teich-les_3_especes_Heron+Aigrette.pdf",width=20,height=6)#,family = 'Times') #CP changed this
 HeronEgret =subset(DBt,((DBt$Nom_latin=='Egretta garzetta' | DBt$Nom_latin=='Ardea cinerea') &DBt$Annee>=1981))
 matHeronEgret = create_somme(HeronEgret$Date,HeronEgret$Nombre)
 temp_date = expand.grid(15,colnames(matHeronEgret),rownames(matHeronEgret)) #15 because i need a day for build complete date.

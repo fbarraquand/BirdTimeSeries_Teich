@@ -83,10 +83,11 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes true
-\output_changes true
+\output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -711,7 +712,11 @@ Compensation
 \change_unchanged
 combined with temporal environmental variability
 \change_inserted -666822487 1553009576
- that makes some species fitter for specific periods of time 
+ that makes some species fitter for specific periods of time
+\change_deleted -2100369821 1553073474
+ 
+\change_inserted -666822487 1553009576
+
 \begin_inset Note Note
 status collapsed
 
@@ -757,13 +762,41 @@ fine-grained temporal environmental variation
 \change_deleted -666822487 1553009637
 , or just on priority effects (i.e., who gets there first)
 \change_inserted -666822487 1553009932
-(which can manifest as priority effects [REF]), and interaction thereof
+(which can manifest as priority effects
+\change_inserted -2100369821 1553094204
+, 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "fukami_historical_2015"
+literal "false"
+
+\end_inset
+
+
+\change_deleted -2100369821 1553094189
+ [REF]
+\change_inserted -666822487 1553009932
+), and interaction thereof
+\change_inserted -2100369821 1553074139
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g., storage effect,"
+key "chesson_multispecies_1994,ellner_how_2016"
+literal "false"
+
+\end_inset
+
+
+\change_deleted -2100369821 1553074143
  [Storage effect REFs]
 \change_unchanged
 .
  
 \change_inserted -666822487 1553009985
 Compensatory dynamics can therefore arise from a variety of ecological processes.
+
+\change_deleted -2100369821 1553070388
  
 \change_unchanged
 Whatever the cause
@@ -909,11 +942,16 @@ literal "true"
  Here, we take advantage of a long-term bird time series record at the monthly
  scale (over 35 years
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Considering only the years used in our analysis.
  Otherwise, the dataset begins in 1973.
+
+\change_inserted -2100369821 1553074703
+ [[CP : Can't we remove this footnote?]]
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -986,7 +1024,21 @@ literal "true"
  appealing, it is important to keep in mind that our description of functions
  through traits (e.g., body size, feeding relations) are necessarily partial
  and imperfect, so that a taxonomic description can sometimes yield a better
- explanation of performances [REF Clark].
+ explanation of performances
+\change_inserted -2100369821 1553074776
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "clark_why_2016"
+literal "false"
+
+\end_inset
+
+
+\change_deleted -2100369821 1553074766
+ [REF Clark]
+\change_inserted -666822487 1553010522
+.
 \change_unchanged
 
 \end_layout
@@ -1023,8 +1075,27 @@ The monthly time series used for the statistical analyses have been collected
  The reserve comprises 120 ha of wetlands, and the counts have been aggregated
  at the reserve scale
 \change_inserted -666822487 1553010970
- (summed over XX sectors where the counts are actually performed using binocular
-s)
+ (summed over 
+\change_deleted -2100369821 1553075204
+XX
+\change_inserted -2100369821 1553075213
+18
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1553075227
+I used the list of USN within the reserve
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1553010970
+ sectors where the counts are actually performed using binoculars)
 \change_unchanged
 .
  We use for each species the maximum observed abundance over a month, which
@@ -1123,6 +1194,8 @@ status open
 \change_inserted -666822487 1553012495
 Perhaps we should mention that the season-averaged abundances are never
  zero there?
+\change_inserted -2100369821 1553075729
+ Or maybe we should just show the averaged abundances?
 \change_unchanged
 
 \end_layout
@@ -1461,6 +1534,11 @@ status open
 
 \change_inserted -666822487 1553011958
 Coralie check that out
+\change_inserted -2100369821 1553076853
+.
+ Maybe I was wrong here, but I took into account 2 seasons and 3 periods,
+ not the taxonomic/functional scales.
+ Should we?
 \change_unchanged
 
 \end_layout
@@ -1496,7 +1574,11 @@ in particular for analyzing synchrony within the rich wader community, as
 \change_deleted -666822487 1553012206
  
 \change_inserted -666822487 1553012227
-All wavelet analyses take as input the montly time series data.
+All wavelet analyses take as input the mont
+\change_inserted -2100369821 1553076876
+h
+\change_inserted -666822487 1553012227
+ly time series data.
 \end_layout
 
 \begin_layout Standard
@@ -1585,10 +1667,18 @@ https://github.com/fbarraquand/BirdTimeSeries_Teich
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Made public upon acceptance and archived in Zenodo
+
+\change_inserted -2100369821 1553076886
+Will be 
+\change_deleted -2100369821 1553076887
+M
+\change_inserted -2100369821 1553076887
+m
+\change_unchanged
+ade public upon acceptance and archived in Zenodo
 \end_layout
 
 \end_inset
@@ -1694,7 +1784,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Fig2_new2.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/Fig2_new2_JAE.pdf
 	width 85text%
 
 \end_inset
@@ -1867,12 +1957,16 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename gross_triad.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/gross_triad_JAE.pdf
 	width 55text%
 
 \end_inset
 
+
+\change_deleted -2100369821 1553076986
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2155,9 +2249,15 @@ despite the importance of movements and habitat preference to the local
  community dynamics, there is certainly also an influence of the regional
  changes in births and deaths on these local dynamics.
 \change_inserted -666822487 1553013034
-which species are present in the reserve affects access their reproductive
- success, which feeds back into regional-scale dynamics, and in turn, regional-s
-cale dynamics influences which species are locally settling and competing.
+which species are present in the reserve affects access
+\change_inserted -2100369821 1553077389
+ [?? missing a word ??]
+\change_deleted -2100369821 1553077380
+ 
+\change_inserted -666822487 1553013034
+their reproductive success, which feeds back into regional-scale dynamics,
+ and in turn, regional-scale dynamics influences which species are locally
+ settling and competing.
 \change_unchanged
 
 \end_layout
