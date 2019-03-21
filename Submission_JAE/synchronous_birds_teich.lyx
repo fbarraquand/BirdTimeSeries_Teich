@@ -1112,8 +1112,23 @@ monthly snapshot
 , that has been used to monitor the reserve since its inception
 \change_unchanged
 .
- In the statistical analyses, we use both the original monthly data and
- seasonal averages.
+ 
+\change_inserted -2100369821 1553187344
+When values are missing for certain species and months, we replace them
+ by 0s.
+ Given the sustained observation effort, we consider that the absence of
+ information proves that the species was indeed missing in the reserve.
+ Reconstructing time series based on the assumption that birds are always
+ present in the region and that abundances should not be null, as would
+ be done with Bayesian methods[REF] or GLM [REF], might hide local changes
+ in the behaviour (e.g., specific avoidance) of these species.
+ Moreover, the timescale that we analyse (seasons or long-term trends) is
+ barely affected by monthly missing values [[Do we talk about ESM5 here
+ or in the wavelet part?]].
+ 
+\change_unchanged
+In the statistical analyses, we use both the original monthly data and seasonal
+ averages.
  We defined two seasons based on observations of bird presence.
  We defined a `warm season', from May to August, and a `cold season' as
  the months between November and February of the following year.
@@ -1152,19 +1167,31 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Fig1.pdf
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/average_abundance_timeseries.pdf
 	width 18cm
 
 \end_inset
 
+
+\change_deleted -2100369821 1553165134
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time series of counts for
+Time series of 
+\change_deleted -2100369821 1553187673
+counts
+\change_inserted -2100369821 1553187677
+seasonal average abundance
+\change_deleted -2100369821 1553187674
+ 
+\change_unchanged
+for
 \emph on
  
 \emph default
@@ -1177,14 +1204,28 @@ ducks of the genus
 Calidris
 \emph default
  genus), and all waders (c, including calidrids).
- The solid black lines represent trends in summed abundances for each guild
-\change_inserted -666822487 1553012448
- when abundances are strictly positive
+ The solid black lines represent 
+\change_deleted -2100369821 1553187689
+trends
+\change_inserted -2100369821 1553187689
+the
+\change_deleted -2100369821 1553187692
+ in
 \change_unchanged
-, thin dotted lines 
+ summed 
+\change_inserted -2100369821 1553187695
+average 
+\change_unchanged
+abundances for each guild
+\change_inserted -2100369821 1553187752
+, dotted lines represent average abundance for each species.
+ Circles represent the cold season and diamonds, the warm season.
+
+\change_deleted -2100369821 1553187707
+ when abundances are strictly positive, thin dotted lines 
 \change_deleted -666822487 1553012405
 represent putative trends (when some species are absent)
-\change_inserted -666822487 1553012475
+\change_deleted -2100369821 1553187729
 connect positive to zero abundances
 \begin_inset Note Note
 status open

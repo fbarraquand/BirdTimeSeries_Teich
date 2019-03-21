@@ -104,8 +104,10 @@ limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calid
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
               "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
-listColor = c('darkgreen','red','blue','#F0C300','pink','lightgreen','violet','lightblue','darkred','#6600FF','orange','#BABABA','#40826D','#3A9D23','#C71585','#F88E55','#00ffff','yellow','darkgrey','royalblue1','chocolate','antiquewhite1','black','deeppink','lightcoral','mediumorchid1','mediumaquamarine','olivedrab1','orangered','springgreen1','thistle1')
+listColor = c('darkorchid','#F0C300','pink','lightgreen','darkgreen','lightblue','darkred','#6600FF','orange','#BABABA','#40826D','#3A9D23','#C71585','#F88E55','#00ffff','yellow','darkgrey','royalblue1','chocolate','antiquewhite1','black','deeppink','lightcoral','mediumorchid1','mediumaquamarine','olivedrab1','orangered','springgreen1','thistle1')
+#listColor = c('darkgreen','red','blue','#F0C300','pink','lightgreen','violet','lightblue','darkred','#6600FF','orange','#BABABA','#40826D','#3A9D23','#C71585','#F88E55','#00ffff','yellow','darkgrey','royalblue1','chocolate','antiquewhite1','black','deeppink','lightcoral','mediumorchid1','mediumaquamarine','olivedrab1','orangered','springgreen1','thistle1')
 minimal_percent = 1.00001
+pdf("OUT/average_abundance_timeseries.pdf",width=15,height=10)
 par(mfrow=c(3,2))
 layout(matrix(c(1,2,3,4,5,6), 3, 2, byrow = TRUE),heights = c(1,1,1),widths = c(3,1))
 #Prepare doughnuts
@@ -121,8 +123,11 @@ abondance_tot_waders = sum(abondance_waders$Nombre,na.rm=TRUE)
 
 # matrice percent abondance without seasonality
 mat_percent_abondance_tot_anas     = create_mat_percent(abondance_anas,abondance_tot_anas)
+mat_percent_abondance_tot_anas=mat_percent_abondance_tot_anas[order(mat_percent_abondance_tot_anas[,'somme'],decreasing=T),]
 mat_percent_abondance_tot_calidris = create_mat_percent(abondance_calidris,abondance_tot_calidris)
+mat_percent_abondance_tot_calidris=mat_percent_abondance_tot_calidris[order(mat_percent_abondance_tot_calidris[,'somme'],decreasing=T),]
 mat_percent_abondance_tot_waders   = create_mat_percent(abondance_waders,abondance_tot_waders)
+mat_percent_abondance_tot_waders=mat_percent_abondance_tot_waders[order(mat_percent_abondance_tot_waders[,'somme'],decreasing=T),]
 
 
 db_warm_tot=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
@@ -132,50 +137,64 @@ db_cold_tot=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",h
 #ANAS
 db_warm=read.csv("IN/warmseason_anas_detailed.txt",sep=",",header=T)
 db_cold=read.csv("IN/coldseason_anas_detailed.txt",sep=",",header=T)
-temp_species=unique(c(unique(as.character(db_warm$sp_all))),c(unique(as.character(db_cold$sp_all))))
+temp_species=rownames(mat_percent_abondance_tot_anas)
 
-idc=which(db_cold_tot$Species=="Anas")
-idw=which(db_warm_tot$Species=="Anas")
 dd=unique(db_cold_tot$Date)
+dd=dd[1:(length(dd)-1)]
 plou=c()
 temp=c()
 for(d in dd){
-	plou=c(plou,db_cold_tot$Abundance[idc][db_cold_tot$Date[idc]==d],db_warm_tot$Abundance[idw][db_warm_tot$Date[idw]==d])
+	temp=c(temp,d,d+0.5)
+	plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Anas"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Anas"&db_warm_tot$Date==d])
 }
-ymax=max(db_cold_tot$Abundance[idc],c(db_warm_tot$Abundance[idw]))
-plot(db_cold_tot$Date[id],db_cold_tot$Abundance[id],col="black",xlab="",ylab="Average abundance",cex.lab=2,cex.axis=1.8,xaxt="n",pch=19,ylim=c(0,max(db_cold_tot$Abundance[id],na.rm=T)),type="p",lwd =2)
-points(db_warm_tot$Date[id]+0.5,db_warm_tot$Abundance[id],col="black",pch=17,ylim=c(0,max(db_warm_tot$Abundance[id],na.rm=T)),type="p",lwd =2)
+par(mar=c(1.9,4.75,0.1,0.1))
+plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=2,cex.axis=1.8,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"))
+#points(db_warm_tot$Date[idw]+0.5,db_warm_tot$Abundance[idw],col="black",pch=17,ylim=c(0,max(db_warm_tot$Abundance[idw],na.rm=T)),type="p",lwd =2)
 for (s in 1:length(temp_species)){
-  points(db_cold$dates[as.character(db_cold$sp_all) == temp_species[s]],db_cold$abundance_cold[db_cold$sp_all==temp_species[s]],col=listColor[s],pch=19)
-  points(db_warm$dates[as.character(db_warm$sp_all) == temp_species[s]]+0.5,db_warm$abundance_warm[db_warm$sp_all==temp_species[s]],col=listColor[s],pch=17)
+	temp=c()
+	plou=c()
+	for(d in dd){
+        	temp=c(temp,d,d+0.5)
+        	plou=c(plou,db_cold$abundance_cold[db_cold$sp_all == temp_species[s]&db_cold$dates==d],db_warm$abundance_warm[db_warm$sp_all == temp_species[s]&db_warm$dates==d])
+	}
+	points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,23),lty=2,t="o")
+#  points(db_cold$dates[as.character(db_cold$sp_all) == temp_species[s]],log10(db_cold$abundance_cold[db_cold$sp_all==temp_species[s]]),col=listColor[s],bg=listColor[s],pch=21,t="o",lty=2)
+#  points(db_warm$dates[as.character(db_warm$sp_all) == temp_species[s]]+0.5,log10(db_warm$abundance_warm[db_warm$sp_all==temp_species[s]]),col=listColor[s],bg=listColor[s],pch=23)
 }
 #text(c(0,1), "a)",cex = 2)
 mtext("\n (a)",side=3,cex = 1.5, adj = 0,padj=1)
 
 par(mar=c(0.1,0.1,0.1,0.1))
-mat_percent_abondance_tot_anas = mat_percent_abondance_tot_anas[ order(row.names(mat_percent_abondance_tot_anas)), ]
-
-doughnut( c(mat_percent_abondance_tot_anas[,'percent'][round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.3,coord.x=c(-0.5,1) )
+doughnut( c(mat_percent_abondance_tot_anas[,'percent'][round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.3,coord.x=c(-0.5,1), init.angle=140)
 
 
 #CALIDRIS
 db_warm=read.csv("IN/warmseason_calidris_detailed.txt",sep=",",header=T)
 db_cold=read.csv("IN/coldseason_calidris_detailed.txt",sep=",",header=T)
+temp_species=rownames(mat_percent_abondance_tot_calidris)
 
-temp_species=unique(c(unique(as.character(db_warm$sp_all))),c(unique(as.character(db_cold$sp_all))))
-
-id=which(db_cold_tot$Species=="Calidris")
-plot(db_cold_tot$Date[id],db_cold_tot$Abundance[id],col="black",xlab="",ylab="Average abundance",cex.lab=2,cex.axis=1.8,xaxt="n",pch=19,ylim=c(0,max(db_cold_tot$Abundance[id],na.rm=T)),type="o",lwd =2)
+plou=c()
+temp=c()
+for(d in dd){
+        temp=c(temp,d,d+0.5)
+        plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Calidris"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Calidris"&db_warm_tot$Date==d])
+}
+par(mar=c(1.9,4.75,0.1,0.1))
+plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=2,cex.axis=1.8,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"))
 for (s in 1:length(temp_species)){
-  points(db_cold$dates[as.character(db_cold$sp_all) == temp_species[s]],db_cold$abundance_cold[db_cold$sp_all==temp_species[s]],col=listColor[s],pch=19)
+        temp=c()
+        plou=c()
+        for(d in dd){
+                temp=c(temp,d,d+0.5)
+                plou=c(plou,db_cold$abundance_cold[db_cold$sp_all == temp_species[s]&db_cold$dates==d],db_warm$abundance_warm[db_warm$sp_all == temp_species[s]&db_warm$dates==d])
+        }
+        points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,23),lty=2,t="o")
 }
 #text(c(0,1), "a)",cex = 2)
-mtext("\n (a)",side=3,cex = 1.5, adj = 0,padj=1)
+mtext("\n (b)",side=3,cex = 1.5, adj = 0,padj=1)
 
 
 par(mar=c(0.1,0.1,0.1,0.1))
-mat_percent_abondance_tot_calidris = mat_percent_abondance_tot_calidris[ order(row.names(mat_percent_abondance_tot_calidris)), ]
-
 
 doughnut( c(mat_percent_abondance_tot_calidris[,'percent'][round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent]) , inner.radius=0.145, col=listColor[which(round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.7,1) )
 
@@ -184,17 +203,30 @@ doughnut( c(mat_percent_abondance_tot_calidris[,'percent'][round(mat_percent_abo
 #WADERS
 db_warm=read.csv("IN/warmseason_waders_detailed.txt",sep=",",header=T)
 db_cold=read.csv("IN/coldseason_waders_detailed.txt",sep=",",header=T)
-temp_species=unique(c(unique(as.character(db_warm$sp_all))),c(unique(as.character(db_cold$sp_all))))
+temp_species=rownames(mat_percent_abondance_tot_waders)
 
-id=which(db_cold_tot$Species=="Waders")
-plot(db_cold_tot$Date[id],db_cold_tot$Abundance[id],col="black",xlab="",ylab="Average abundance",cex.lab=2,cex.axis=1.8,xaxt="n",pch=19,ylim=c(0,max(db_cold_tot$Abundance[id],na.rm=T)),type="o",lwd =2)
+
+plou=c()
+temp=c()
+for(d in dd){
+        temp=c(temp,d,d+0.5)
+        plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Waders"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Waders"&db_warm_tot$Date==d])
+}
+par(mar=c(1.9,4.75,0.1,0.1))
+plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=2,cex.axis=1.8,pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"))
 for (s in 1:length(temp_species)){
-  points(db_cold$dates[as.character(db_cold$sp_all) == temp_species[s]],db_cold$abundance_cold[db_cold$sp_all==temp_species[s]],col=listColor[s],pch=19)
+        temp=c()
+        plou=c()
+        for(d in dd){
+                temp=c(temp,d,d+0.5)
+                plou=c(plou,db_cold$abundance_cold[db_cold$sp_all == temp_species[s]&db_cold$dates==d],db_warm$abundance_warm[db_warm$sp_all == temp_species[s]&db_warm$dates==d])
+        }
+        points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,23),lty=2,t="o")
 }
 #text(c(0,1), "a)",cex = 2)
-mtext("\n (a)",side=3,cex = 1.5, adj = 0,padj=1)
+mtext("\n (c)",side=3,cex = 1.5, adj = 0,padj=1)
 
-mat_percent_abondance_tot_waders = mat_percent_abondance_tot_waders[ order(row.names(mat_percent_abondance_tot_waders)), ]
 par(mar=c(0.1,0.1,0.1,0.1))
-
-doughnut( c(mat_percent_abondance_tot_waders[,'percent'][round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.5,1),lty=1 )
+rownames(mat_percent_abondance_tot_waders)[1]="C. alpina"
+doughnut( c(mat_percent_abondance_tot_waders[,'percent'][round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_waders[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.5,1),lty=1)
+dev.off()
