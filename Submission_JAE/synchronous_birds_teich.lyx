@@ -83,7 +83,7 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes true
-\output_changes false
+\output_changes true
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
@@ -660,16 +660,27 @@ cold or warm seasons, above or below the seasonal scale).
  Negative covariation in abundance at the whole community level did only
  appear after a management change in the reserve, and at the scale of a
  few months or several years.
+
+\change_inserted -666822487 1553248339
+ We also found that compensation varies with taxonomic and functional scale:
+ compensation appeared more frequently between rather than within guilds.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Abstract
 5.
  Although most research has focused on the temporal scale of compensation
- vs synchrony, we found that compensation varies with taxonomic and functional
- scale too: compensation appeared more frequently between rather than within
- guilds.
- This suggests that compensation has more potential to emerge between broad
- functional groups rather between species.
+ vs synchrony, 
+\change_inserted -666822487 1553248363
+our results suggest that 
+\change_deleted -666822487 1553248366
+we found that compensation varies with taxonomic and functional scale too:
+ compensation appeared more frequently between rather than within guilds.
+ This suggests that 
+\change_unchanged
+compensation has more potential to emerge between broad functional groups
+ rather between species.
 \end_layout
 
 \begin_layout Standard
@@ -698,107 +709,172 @@ literal "true"
  Compensation occurs when individuals of some species replace individuals
  of other species, either because of explicit competitive processes or shifts
  in some environmental driver that change selection pressures.
- 
-\change_deleted -666822487 1553009302
-This
-\change_inserted -666822487 1553009315
-Compensation
-\change_unchanged
- is particularly likely to occur when there is a space or resource constraint
-\change_inserted -666822487 1553009882
-, which generates competition between species, 
-\change_deleted -666822487 1553009290
- 
-\change_unchanged
-combined with temporal environmental variability
-\change_inserted -666822487 1553009576
- that makes some species fitter for specific periods of time
-\change_deleted -2100369821 1553073474
- 
-\change_inserted -666822487 1553009576
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1553009607
-Somehow the storage effect combines both, I just realize – so the comments
- of the referee might be a little less useful than what we initially realized....
-\change_unchanged
+\change_inserted -666822487 1553257527
 
 \end_layout
 
-\end_inset
+\begin_layout Standard
 
-
-\change_unchanged
-.
- Which species 
-\begin_inset Quotes eld
-\end_inset
-
-win
-\begin_inset Quotes erd
-\end_inset
-
- at any particular point in time
-\change_inserted -666822487 1553009702
-, dominating the community, 
-\change_deleted -666822487 1553009808
- may
-\change_inserted -666822487 1553009808
-will
-\change_unchanged
- then depend on the
-\change_inserted -666822487 1553009950
- balance of 
-\change_deleted -666822487 1553009899
- 
-\change_unchanged
-fine-grained temporal environmental variation
-\change_inserted -666822487 1553009735
- [REF], competitive forces 
-\change_deleted -666822487 1553009637
-, or just on priority effects (i.e., who gets there first)
-\change_inserted -666822487 1553009932
-(which can manifest as priority effects
-\change_inserted -2100369821 1553094204
-, 
+\change_inserted -666822487 1553258296
+Understanding why environmental variation may lead to compensation is relatively
+ easy, provided species performances respond to that environmental variation:
+ if species have some environmental preference (e.g.
+ thermal optima), and the environment changes over time, different species
+ will be most fit at different points in time.
+ As a consequence, relative abundances will shift over time even though
+ the community biomass as a whole may remain relatively stable 
 \begin_inset CommandInset citation
-LatexCommand citealp
-key "fukami_historical_2015"
+LatexCommand citep
+key "gonzalez2009causes"
 literal "false"
 
 \end_inset
 
+.
+ However, the conditions for compensation to happen depend on the particulars
+ of the interactions between and within species in the community.
+\end_layout
 
-\change_deleted -2100369821 1553094189
- [REF]
-\change_inserted -666822487 1553009932
-), and interaction thereof
-\change_inserted -2100369821 1553074139
+\begin_layout Standard
+
+\change_deleted -666822487 1553257479
+ This
+\change_inserted -666822487 1553009315
+Compensation
+\change_unchanged
+ is particularly likely to occur when 
+\change_inserted -666822487 1553257901
+such temporal environmental variation combines 
+\change_deleted -666822487 1553257904
+there is
+\change_inserted -666822487 1553257905
+with 
+\change_deleted -666822487 1553257905
+ 
+\change_unchanged
+a space or 
+\change_inserted -666822487 1553258312
+strongly limiting 
+\change_unchanged
+resource constraint
+\change_inserted -666822487 1553258354
+, so that individuals compete in a zero-sum game (sensu Hubbell, 2001 or
+ lottery-style models, 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "chesson_multispecies_1994"
+literal "false"
+
+\end_inset
+
+).
+ When the total community size is constant over time, and the composition
+ fluctuates, negative covariation between abundances then emerges by design
  
 \begin_inset CommandInset citation
 LatexCommand citep
-before "e.g., storage effect,"
+key "loreau_species_2008"
+literal "false"
+
+\end_inset
+
+ since no species can increase without another species decreasing in abundance.
+ Outside of this zero-sum scenario, in models where Lotka-Volterra competition
+ is 
+\change_deleted -666822487 1553009290
+ 
+\change_unchanged
+combined with temporal environmental variability
+\change_inserted -666822487 1553258381
+, theoretical research has revealed that increased interspecific competition
+ might not increase species compensation (Ives et al.
+ 1999) and might even decrease it 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "i.e., increase species synchrony instead,"
+key "loreau_species_2008"
+literal "false"
+
+\end_inset
+
+, though this depends on the fluctuation regime
+\change_unchanged
+.
+
+\change_inserted -666822487 1553258488
+ Thus, in a world where total community size varies, predicting whether
+ compensatpry (asynchronous) dynamics can occur is intrinsically difficult.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1553261102
+Some scenarios with either zero-sum (lottery-style) or Lotka-Volterra competitio
+n are, however, likely to always yield compensatory dynamics, such as a
+ dependence of the strength of competition itself on the value of the environmen
+tal signal: a negative covariance between competitive strength and environmental
+ variation is at the heart of the temporal storage effect 
+\begin_inset CommandInset citation
+LatexCommand citep
 key "chesson_multispecies_1994,ellner_how_2016"
 literal "false"
 
 \end_inset
 
+, which is essentially a temporal partitioning of the niche.
+ Although rarely the only driver of coexistence, the temporal storage effect
+ is though to be common 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g.,"
+key "usinowicz_temporal_2017"
+literal "false"
 
-\change_deleted -2100369821 1553074143
- [Storage effect REFs]
-\change_unchanged
+\end_inset
+
+ and lead to compensatory dynamics 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gonzalez2009causes"
+literal "false"
+
+\end_inset
+
 .
- 
-\change_inserted -666822487 1553009985
-Compensatory dynamics can therefore arise from a variety of ecological processes.
+ Other ways to create compensation arise when considering the regional dynamics,
+ which creates interaction between temporal environmental variation, competition
+, and dispersal.
+ Dispersal can then create a spatial insurance effect, generating asynchrony
+ at the regional level (Loreau et al.
+ 2003), or generate compensation locally, e.g., by re-colonization after disturban
+ces combined with priority effects 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fukami_historical_2015"
+literal "false"
+
+\end_inset
+
+, which allows one of several near-equivalent species to 
+\begin_inset Quotes eld
+\end_inset
+
+take over
+\begin_inset Quotes erd
+\end_inset
+
+, but with temporal variation in the identity of the winner.
+ Compensatory dynamics can therefore arise from a variety of ecological
+ processes combining to different degrees competition and diverging responses
+ to environmental variables.
 
 \change_deleted -2100369821 1553070388
  
-\change_unchanged
+\change_inserted -666822487 1553256932
+
+\end_layout
+
+\begin_layout Standard
 Whatever the cause
 \change_inserted -666822487 1553010027
 (s)
@@ -816,8 +892,15 @@ literal "true"
 .
  Compensation is therefore intertwined with community-level stability, at
  least when stability is understood as the reciprocal of variability.
- By contrast, another very frequently observed outcome on biodiversity time
- series is 
+ By contrast, 
+\change_deleted -666822487 1553261144
+another very frequently
+\change_inserted -666822487 1553261149
+the most frequently 
+\change_deleted -666822487 1553261145
+ 
+\change_unchanged
+observed outcome on biodiversity time series is 
 \change_inserted -666822487 1553010046
 community-level 
 \change_unchanged
@@ -829,9 +912,21 @@ literal "true"
 
 \end_inset
 
+
+\change_deleted -666822487 1553261181
 .
- Synchrony occurs when all species fluctuate in phase, and therefore the
- biomass of the community may not fluctuate less than its constituent parts.
+ Synchrony occurs when
+\change_unchanged
+ 
+\change_inserted -666822487 1553261187
+with 
+\change_unchanged
+all species 
+\change_inserted -666822487 1553261190
+that 
+\change_unchanged
+fluctuate in phase, and therefore the biomass of the community may not fluctuate
+ less than its constituent parts.
 \end_layout
 
 \begin_layout Standard
@@ -1094,8 +1189,8 @@ I used the list of USN within the reserve
 \end_inset
 
 
-\change_inserted -666822487 1553010970
- sectors where the counts are actually performed using binoculars)
+\change_inserted -666822487 1553261277
+ sectors where the counts are actually performed, using binoculars)
 \change_unchanged
 .
  We use for each species the maximum observed abundance over a month, which
@@ -1114,21 +1209,117 @@ monthly snapshot
 .
  
 \change_inserted -2100369821 1553187344
-When values are missing for certain species and months, we replace them
- by 0s.
- Given the sustained observation effort, we consider that the absence of
- information proves that the species was indeed missing in the reserve.
- Reconstructing time series based on the assumption that birds are always
+When 
+\change_inserted -666822487 1553261619
+abundance 
+\change_inserted -2100369821 1553187344
+values are missing for certain species and months, we replace them by 0s.
+ Given the sustained observation effort
+\change_inserted -666822487 1553261670
+ (all sectors are patrolled multiple times throughout the month by the staff,
+ amateur ornithologists visiting the reserve daily and signalling their
+ findings to the reserve staff)
+\change_inserted -2100369821 1553187344
+, we consider that the absence of 
+\change_deleted -666822487 1553261404
+information proves that the
+\change_inserted -666822487 1553261410
+counts for a given 
+\change_deleted -666822487 1553261404
+ 
+\change_inserted -2100369821 1553187344
+species
+\change_inserted -666822487 1553261707
+ 
+\change_deleted -666822487 1553261702
+ was indeed missing in the reserve
+\change_inserted -666822487 1553261607
+signals its true absence from the reserve
+\change_inserted -2100369821 1553187344
+.
+ 
+\change_inserted -666822487 1553261806
+This creates some zero abundances for rare species at the monthly scale.
+ We have not attempted to 
+\begin_inset Quotes eld
+\end_inset
+
+correct
+\begin_inset Quotes erd
+\end_inset
+
+ those zeroes (e.g., inferring the 
+\begin_inset Quotes eld
+\end_inset
+
+missing
+\begin_inset Quotes erd
+\end_inset
+
+ data with a model assuming that our reserve is a subsample of a regional
+ population) because doing so would have compromised the patterns of local
+ synchrony/compensation.
+ However, we do check below that having such zeroes in the monthly time
+ series cannot affect our conclusions.
+ 
+\change_deleted -666822487 1553261488
+Reconstructing time series based on the assumption that birds are always
  present in the region and that abundances should not be null, as would
  be done with Bayesian methods[REF] or GLM [REF], might hide local changes
  in the behaviour (e.g., specific avoidance) of these species.
  Moreover, the timescale that we analyse (seasons or long-term trends) is
  barely affected by monthly missing values [[Do we talk about ESM5 here
- or in the wavelet part?]].
+ or in the wavelet part?]]
+\change_inserted -666822487 1553261495
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1553261516
+I would do it later, otherwise it will become Appendix S1
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -2100369821 1553187344
+.
  
 \change_unchanged
-In the statistical analyses, we use both the original monthly data and seasonal
- averages.
+In the statistical analyses, we use 
+\change_deleted -666822487 1553262007
+both the original monthly data and
+\change_unchanged
+ seasonal
+\change_inserted -666822487 1553262011
+ly 
+\change_deleted -666822487 1553262010
+ 
+\change_unchanged
+average
+\change_inserted -666822487 1553262019
+d abundances
+\change_deleted -666822487 1553262013
+s
+\change_inserted -666822487 1553262037
+ (plotted in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Temporal-trends"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), as well as the original monthly data (presented in Appendix S1)
+\change_unchanged
+.
  We defined two seasons based on observations of bird presence.
  We defined a `warm season', from May to August, and a `cold season' as
  the months between November and February of the following year.
@@ -1167,15 +1358,11 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/average_abundance_timeseries.pdf
+	filename ../OUT/average_abundance_timeseries.pdf
 	width 18cm
 
 \end_inset
 
-
-\change_deleted -2100369821 1553165134
- 
-\change_unchanged
 
 \end_layout
 
@@ -1183,12 +1370,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time series of 
-\change_deleted -2100369821 1553187673
-counts
-\change_inserted -2100369821 1553187677
-seasonal average abundance
-\change_deleted -2100369821 1553187674
+Time series of seasonal
+\change_deleted -666822487 1553261889
+ average
+\change_inserted -666822487 1553261897
+ly averaged 
+\change_unchanged
+abundance
+\change_inserted -666822487 1553261880
  
 \change_unchanged
 for
@@ -1204,48 +1393,9 @@ ducks of the genus
 Calidris
 \emph default
  genus), and all waders (c, including calidrids).
- The solid black lines represent 
-\change_deleted -2100369821 1553187689
-trends
-\change_inserted -2100369821 1553187689
-the
-\change_deleted -2100369821 1553187692
- in
-\change_unchanged
- summed 
-\change_inserted -2100369821 1553187695
-average 
-\change_unchanged
-abundances for each guild
-\change_inserted -2100369821 1553187752
-, dotted lines represent average abundance for each species.
+ The solid black lines represent the summed average abundances for each
+ guild, dotted lines represent average abundance for each species.
  Circles represent the cold season and diamonds, the warm season.
-
-\change_deleted -2100369821 1553187707
- when abundances are strictly positive, thin dotted lines 
-\change_deleted -666822487 1553012405
-represent putative trends (when some species are absent)
-\change_deleted -2100369821 1553187729
-connect positive to zero abundances
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1553012495
-Perhaps we should mention that the season-averaged abundances are never
- zero there?
-\change_inserted -2100369821 1553075729
- Or maybe we should just show the averaged abundances?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-.
  The coloured symbols below the curves represent each species abundances,
  with species composition on the right side on the donut plots for the most
  abundant species (over 1% of relative abundance in the group considered).
@@ -1564,12 +1714,12 @@ literal "true"
 
  to the values obtained with the randomized time-series.
  Independence of species was rejected at the Bonferroni-corrected 10% threshold
-\change_inserted -666822487 1553012137
- (a Bonferroni correction is needed here because multiple comparisons between
- seasons, taxonomic and functional scales).
+\change_inserted -666822487 1553262131
+ (a Bonferroni correction is needed here because multiple comparisons across
+ 2 seasons and 3 periods).
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1580,6 +1730,8 @@ Coralie check that out
  Maybe I was wrong here, but I took into account 2 seasons and 3 periods,
  not the taxonomic/functional scales.
  Should we?
+\change_inserted -666822487 1553262108
+ I think you're OK, anyway Bonferroni is a very strong correction
 \change_unchanged
 
 \end_layout
@@ -1825,12 +1977,16 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/Fig2_new2_JAE.pdf
+	filename ../OUT/Fig2_new2_JAE.pdf
 	width 85text%
 
 \end_inset
 
+
+\change_deleted -666822487 1553262147
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1998,7 +2154,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/gross_triad_JAE.pdf
+	filename ../OUT/gross_triad_JAE.pdf
 	width 55text%
 
 \end_inset
@@ -2290,8 +2446,8 @@ despite the importance of movements and habitat preference to the local
  community dynamics, there is certainly also an influence of the regional
  changes in births and deaths on these local dynamics.
 \change_inserted -666822487 1553013034
-which species are present in the reserve affects access
-\change_inserted -2100369821 1553077389
+which species are present in the reserve affects 
+\change_deleted -666822487 1553262204
  [?? missing a word ??]
 \change_deleted -2100369821 1553077380
  
@@ -2478,7 +2634,11 @@ We thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1553262213
  
+\change_unchanged
+
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "BiblioTeich"
