@@ -663,23 +663,65 @@ cold or warm seasons, above or below the seasonal scale).
 
 \change_inserted -666822487 1553248339
  We also found that compensation varies with taxonomic and functional scale:
- compensation appeared more frequently between rather than within guilds.
+ compensation appeared more frequently 
+\emph on
+between
+\emph default
+ rather than 
+\emph on
+within
+\emph default
+ guilds.
 \change_unchanged
 
 \end_layout
 
 \begin_layout Abstract
 5.
- Although most research has focused on the temporal scale of compensation
- vs synchrony, 
-\change_inserted -666822487 1553248363
-our results suggest that 
+ Although most research has focused on 
+\change_deleted -666822487 1553449649
+the temporal scale
+\change_unchanged
+ 
+\change_inserted -666822487 1553449659
+viewing
+\change_deleted -666822487 1553449657
+of
+\change_unchanged
+ compensation vs synchrony
+\change_inserted -666822487 1553449674
+ across temporal scales
+\change_unchanged
+, 
+\change_inserted -666822487 1553449778
+because synchrony is guaranteed by environmental forcing at some temporal
+ scales, our results suggest that compensation can be masked as well at
+ some taxonomic scales (e.g., when measuring synchrony only at the species
+ level).
+ 
 \change_deleted -666822487 1553248366
 we found that compensation varies with taxonomic and functional scale too:
  compensation appeared more frequently between rather than within guilds.
  This suggests that 
+\change_inserted -666822487 1553449791
+We suggest that 
 \change_unchanged
-compensation has more potential to emerge between broad functional groups
+compensation 
+\change_deleted -666822487 1553449321
+has
+\change_inserted -666822487 1553449323
+may have 
+\change_deleted -666822487 1553449322
+ 
+\change_unchanged
+more potential to emerge between broad 
+\change_inserted -666822487 1553449305
+taxonomic units or 
+\change_unchanged
+functional groups
+\change_inserted -666822487 1553449316
+,
+\change_unchanged
  rather between species.
 \end_layout
 
@@ -757,9 +799,16 @@ a space or
 strongly limiting 
 \change_unchanged
 resource constraint
-\change_inserted -666822487 1553258354
-, so that individuals compete in a zero-sum game (sensu Hubbell, 2001 or
- lottery-style models, 
+\change_inserted -666822487 1553449935
+, so that individuals compete in a zero-sum game (sensu 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "hubbell2001unified"
+literal "false"
+
+\end_inset
+
+ or lottery-style models, 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "chesson_multispecies_1994"
@@ -808,7 +857,7 @@ literal "false"
 
 \begin_layout Standard
 
-\change_inserted -666822487 1553261102
+\change_inserted -666822487 1553450003
 Some scenarios with either zero-sum (lottery-style) or Lotka-Volterra competitio
 n are, however, likely to always yield compensatory dynamics, such as a
  dependence of the strength of competition itself on the value of the environmen
@@ -845,9 +894,16 @@ literal "false"
  which creates interaction between temporal environmental variation, competition
 , and dispersal.
  Dispersal can then create a spatial insurance effect, generating asynchrony
- at the regional level (Loreau et al.
- 2003), or generate compensation locally, e.g., by re-colonization after disturban
-ces combined with priority effects 
+ at the regional level 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "loreau2003biodiversity"
+literal "false"
+
+\end_inset
+
+ or generate compensation locally, e.g., by re-colonization after disturbances
+ combined with priority effects 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "fukami_historical_2015"
@@ -1036,16 +1092,21 @@ literal "true"
 ).
  Here, we take advantage of a long-term bird time series record at the monthly
  scale (over 35 years
-\begin_inset Foot
+\begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+\begin_inset Foot
+status collapsed
 
 \begin_layout Plain Layout
 Considering only the years used in our analysis.
  Otherwise, the dataset begins in 1973.
-
-\change_inserted -2100369821 1553074703
  [[CP : Can't we remove this footnote?]]
-\change_unchanged
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2344,7 +2405,13 @@ between
 \begin_layout Standard
 Given that we compare the level of synchrony/compensation within guilds
  (with many species) and between guilds (with only a handful of groups),
- we checked in Appendix 3 if changing the number of 
+ we checked in Appendix 
+\change_deleted -666822487 1553449174
+3
+\change_inserted -666822487 1553449174
+S4
+\change_unchanged
+ if changing the number of 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2369,9 +2436,14 @@ compartments
 
  at the whole community level.
  This might explain the low levels of compensation that we found at the
- overall wetland bird community level (Appendix 1), in spite of the clear
- presence of two groups reacting in opposite way to shared driver (here,
- water levels).
+ overall wetland bird community level (Appendix 
+\change_inserted -666822487 1553449212
+S2
+\change_deleted -666822487 1553449211
+1
+\change_unchanged
+), in spite of the clear presence of two groups reacting in opposite way
+ to shared driver (here, water levels).
  Analyses at several taxonomic/functional scales are therefore warranted
  to be conclusive about compensation.
 \end_layout
@@ -2592,7 +2664,7 @@ literal "true"
  species, even in species that compete strongly 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "ranta_detecting_2008"
+key "ranta_detecting_2008,loreau_species_2008"
 literal "true"
 
 \end_inset
@@ -2611,8 +2683,13 @@ zooming out
  taxonomically or functionally (considering summed abondances of dissimilar
  functional groups) and temporally (considering temporal scales well above
  the dominant driver) may often be the best strategy to see the compensation
- that will inevitably manifest if the community-level abundance is maintained
- within bounds.
+ that will inevitably manifest if the community-level 
+\change_inserted -666822487 1553449574
+biomass
+\change_deleted -666822487 1553449578
+abundance
+\change_unchanged
+ is maintained within bounds.
 \end_layout
 
 \begin_layout Subsection*
@@ -2634,11 +2711,6 @@ We thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -666822487 1553262213
- 
-\change_unchanged
-
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "BiblioTeich"
