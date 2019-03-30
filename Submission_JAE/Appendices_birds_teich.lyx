@@ -85,8 +85,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -218,11 +216,7 @@ status open
 
 \begin_layout Plain Layout
 Temporal trends in the abundance of all birds and the main functional groups
- (waders and ducks)
-\change_inserted -666822487 1553247246
-, with one point per year
-\change_unchanged
-.
+ (waders and ducks), with one point per year.
  The duck category actually includes all species functionally similar to
  ducks (i.e., anatids and the common coot).
  The dashed line presents the ratio of wader individuals in the whole community,
@@ -343,11 +337,6 @@ status collapsed
 No value was deemed statistically significant.
  [F: I removed this because either we mention the Bonferroni correction
  or we don't mention the absence of significance].
-
-\change_deleted -666822487 1553244038
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -383,14 +372,10 @@ We noted on Fig.
 \end_inset
 
 Appendix S4 - Properties of the Gross whole community synchrony index 
-\change_inserted -666822487 1553247313
-
 \begin_inset Formula $\eta$
 \end_inset
 
- 
-\change_unchanged
-when two groups react in opposite ways
+ when two groups react in opposite ways
 \end_layout
 
 \begin_layout Standard
@@ -409,19 +394,9 @@ literal "false"
 
 \end_inset
 
- (developed in their Appendix D), we explored the effect of a 
-\change_deleted -666822487 1553247328
-common
-\change_inserted -666822487 1553247329
-shared
-\change_unchanged
- environmental driver on a community formed by two groups reacting oppositely
- to this driver.
-
-\change_deleted -666822487 1553247324
- 
-\change_unchanged
-
+ (developed in their Appendix D), we explored the effect of a shared environment
+al driver on a community formed by two groups reacting oppositely to this
+ driver.
 \end_layout
 
 \begin_layout Standard
@@ -487,11 +462,6 @@ We assume that the environmental driver
 \end_inset
 
  is an autocorrelated signal (see below for details).
-
-\change_deleted -666822487 1553247380
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -566,39 +536,21 @@ literal "false"
 \end_inset
 
  is normally distributed, centered on 0 with a standard deviation of 0.1.
-
-\change_deleted -666822487 1553247383
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
 We compared results for time series of length 35 (the length of our data
- set
-\change_inserted -666822487 1553247425
- when computing 
+ set when computing 
 \begin_inset Formula $\eta$
 \end_inset
 
-
-\change_unchanged
 ), 100 and 500.
- For all simulation experiments, 
-\change_inserted -666822487 1553247435
-the 
-\change_unchanged
-dynamics are first run for 500 time steps as a burn-in.
+ For all simulation experiments, the dynamics are first run for 500 time
+ steps as a burn-in.
  To take into account different observational designs, we either take the
  first 35 or 100 time steps of the following 500-time steps series, or subsample
- the time series 
-\change_deleted -666822487 1553247466
-after burn-in
-\change_inserted -666822487 1553247493
-in order to get 35 or 100 time points (which removes some autocorrelation
- in the dynamics)
-\change_unchanged
-.
+ the time series in order to get 35 or 100 time points (which removes some
+ autocorrelation in the dynamics).
  We also considered several community richness (10, 30, 60 and 100 species),
  and several strengths of the response to the environmental signal (
 \begin_inset Formula $b=$
@@ -609,29 +561,11 @@ in order to get 35 or 100 time points (which removes some autocorrelation
 \end_layout
 
 \begin_layout Standard
-We considered different types of environmental driver
-\change_inserted -666822487 1553247579
- (simply autocorrelated or with a linear trend)
-\change_unchanged
-, crossed with subsampling / no subsampling
-\change_inserted -666822487 1553247589
- as described above
-\change_unchanged
-.
- We considered in total three scenarios, and present below 
-\change_deleted -666822487 1553247626
-the results
-\change_inserted -666822487 1553247646
-how an increasing strength of response to the environment changes expectations
- 
-\change_deleted -666822487 1553247627
- 
-\change_unchanged
-for all three:
-\change_deleted -666822487 1553247546
- 
-\change_unchanged
-
+We considered different types of environmental driver (simply autocorrelated
+ or with a linear trend), crossed with subsampling / no subsampling as described
+ above.
+ We considered in total three scenarios, and present below how an increasing
+ strength of response to the environment changes expectations for all three:
 \end_layout
 
 \begin_layout Itemize
@@ -667,14 +601,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of Gross' syn
-\change_inserted -2100369821 1539867534
-c
-\change_unchanged
-hrony index for different time series length and number of species in the
- community, in simulations where there is no trend in the environmental
- signal and the data is not subsampled, keeping the autocorrelation of the
- environment.
+Evolution of Gross' synchrony index for different time series length and
+ number of species in the community, in simulations where there is no trend
+ in the environmental signal and the data is not subsampled, keeping the
+ autocorrelation of the environment.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -806,15 +736,8 @@ name "fig:withtrend_subsample"
 \end_layout
 
 \begin_layout Standard
-We first confirm that unless there is a 
-\change_inserted -666822487 1553247739
-very 
-\change_unchanged
-high 
-\change_inserted -666822487 1553247743
-temporal 
-\change_unchanged
-autocorrelation in the driver (as in Fig.
+We first confirm that unless there is a very high temporal autocorrelation
+ in the driver (as in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -827,82 +750,32 @@ noprefix "false"
 
 ), if we consider two groups which have opposite reactions to the same driver,
  the Gross index is not sensitive to the length of the time series or to
- the number of species in the community
-\change_inserted -666822487 1553247965
-, in the sense that it will not indicate falsely synchrony
-\change_unchanged
-.
- 
-\change_inserted -666822487 1553248067
-The main finding of these analyses, aside from the robustness of the 
+ the number of species in the community, in the sense that it will not indicate
+ falsely synchrony.
+ The main finding of these analyses, aside from the robustness of the 
 \begin_inset Formula $\eta$
 \end_inset
 
- index, is that f
-\change_deleted -666822487 1553248066
-F
-\change_unchanged
-or large
-\change_deleted -666822487 1553247973
-r
-\change_unchanged
- communities (over 10 species), synchrony is 
-\change_inserted -666822487 1553247989
-always 
-\change_unchanged
-higher when the response to the driver is stronger.
- 
-\change_deleted -666822487 1553248085
-For our
-\change_inserted -666822487 1553248103
-Coming back to the interpretation of our 
-\change_deleted -666822487 1553248106
- data
-\change_inserted -666822487 1553248140
-results in the Teich reserve case
-\change_unchanged
-, this means that the more bird
-\change_deleted -666822487 1553248166
-s are sensitive
-\change_inserted -666822487 1553248177
- population growth rates respond 
-\change_deleted -666822487 1553248166
- 
-\change_unchanged
-to 
-\change_inserted -666822487 1553248184
-changes in 
-\change_unchanged
-the water level
-\change_inserted -666822487 1553248186
-s
-\change_unchanged
-, the less we can expect compensation at the whole community level
-\change_inserted -666822487 1553248241
-, even though compensation may be manifest at the functional group level
- (here, the group of species responding similarly to the environmental variable)
-\change_unchanged
-.
-\change_inserted -666822487 1553247847
-
+ index, is that for large communities (over 10 species), synchrony is always
+ higher when the response to the driver is stronger.
+ Coming back to the interpretation of our results in the Teich reserve case,
+ this means that the more bird population growth rates respond to changes
+ in the water levels, the less we can expect compensation at the whole community
+ level, even though compensation may be manifest at the functional group
+ level (here, the group of species responding similarly to the environmental
+ variable).
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1553248125
 I think the problem was that we did not describe enough the results actually
  - the presentation of the methods was OK but we needed to explain what
  we found.
  I therefore tried to do that a little bit.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -916,13 +789,9 @@ missing
 \end_inset
 
  values on wavelet analyses
-\change_inserted -666822487 1553242173
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -666822487 1553242358
 We investigate here if exactly-zero abundances can distort the compensation
  patterns evidenced by the wavelet coherence.
  We chose a 
@@ -933,33 +802,18 @@ worst case
 \begin_inset Quotes erd
 \end_inset
 
- simulation with 
-\change_deleted -666822487 1553242269
- 
-\change_inserted -2100369821 1553187617
-10% missing values for all species, and few species 
-\change_deleted -666822487 1553242294
--10)
-\change_inserted -666822487 1553242376
-below that 10% level
+ simulation with 10% missing values for all species, and few species below
+ that 10% level
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1553242384
 Can we say something more precise?
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 .
-
-\change_inserted -666822487 1553247027
  The results show that while the statistical significance of the values
  can change (i.e., the data is more compatible with the null hypothesis of
  time series uncorrelated between species, assuming the null is true), the
@@ -976,8 +830,6 @@ noprefix "false"
 ) does not.
  The wavelet coherence index is therefore robust to the presence of zeroes
  in the time series.
-\change_inserted -2100369821 1553187617
-
 \end_layout
 
 \begin_layout Standard
@@ -1008,11 +860,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1553247135
 Without missing data
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1060,23 +908,8 @@ With missing data
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Wavelet coherence 
-\change_inserted -666822487 1553247165
-for a community with compensatory dynamics, 
-\change_unchanged
-without (
-\change_deleted -666822487 1553247143
-left
-\change_inserted -666822487 1553247143
-a
-\change_unchanged
-) and with (
-\change_deleted -666822487 1553247147
-right
-\change_inserted -666822487 1553247147
-b
-\change_unchanged
-) missing data
+Wavelet coherence for a community with compensatory dynamics, without (a)
+ and with (b) missing data
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Wavelets-missing-data"
@@ -1097,8 +930,6 @@ name "fig:Wavelets-missing-data"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -666822487 1538640340
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
@@ -1107,8 +938,6 @@ options "../ARTICLE/prsb"
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
