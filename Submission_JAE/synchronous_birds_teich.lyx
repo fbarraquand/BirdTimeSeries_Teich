@@ -87,6 +87,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -548,6 +549,24 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1554546724
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -556,11 +575,11 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 linenumbers
 \end_layout
@@ -638,7 +657,17 @@ within
  can be masked as well at some taxonomic scales (e.g., when measuring synchrony
  only at the species level).
  We suggest that compensation may have more potential to emerge between
- broad taxonomic units or functional groups, rather between species.
+ broad taxonomic units or functional groups, rather between 
+\series bold
+species.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Keywords: 
+\series default
+compensation; synchrony; biodiversity; birds; time series; wavelets
 \end_layout
 
 \begin_layout Standard
