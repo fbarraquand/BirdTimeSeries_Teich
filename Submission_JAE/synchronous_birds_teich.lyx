@@ -87,7 +87,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -1099,11 +1098,8 @@ I would do it later, otherwise it will become Appendix S1
 \end_inset
 
 .
- In the statistical analyses, we use 
-\change_deleted -666822487 1553966560
- 
-\change_unchanged
-seasonally averaged abundances (plotted in Fig.
+ In the statistical analyses, we use seasonally averaged abundances (plotted
+ in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2176,52 +2172,19 @@ literal "true"
  in order to filter out its synchronizing effect.
  Although searching for compensation at temporal scales below the seasonal
  abiotic driver (e.g., temperature) was partly motivated by studies on plankton
- whose community dynamics are much faster
-\change_deleted -666822487 1553967578
- and 
-\change_inserted -666822487 1553967585
-, with much shorter 
-\change_unchanged
-generation times
-\change_deleted -666822487 1553967589
- are much lower
-\change_unchanged
-, we could have expected compensation to manifest also that scale here as
- well (e.g., monthly).
+ whose community dynamics are much faster, with much shorter generation
+ times, we could have expected compensation to manifest also that scale
+ here as well (e.g., monthly).
  Indeed, movement of birds reacting to food availability can certainly occur
- within the season, and wetlands have a finite carrying capacity, 
-\change_inserted -666822487 1553967091
-so that there is competition for space, 
-\change_unchanged
-which could promote 
-\change_deleted -666822487 1553967103
-such 
-\change_unchanged
-short-term compensation.
+ within the season, and wetlands have a finite carrying capacity, so that
+ there is competition for space, which could promote short-term compensation.
  We suspect that instead, because many species share common abiotic and
- biotic drivers 
-\change_inserted -666822487 1553967430
-(e.g., disturbances due to nearby hunting) 
-\change_unchanged
-even below
-\change_inserted -666822487 1553967380
- 
-\change_deleted -666822487 1553967370
- the dominant temporal scale of the environment, 
-\change_inserted -666822487 1553968622
-the yearly timescale, their dynamics are bound to be synchronized to some
- degree even below the yearly scale.
- 
-\change_deleted -666822487 1553968625
-compensation is bound to be quite rare below the dominant temporal scale
- of the environment.
-\change_inserted -666822487 1553966772
-
+ biotic drivers (e.g., disturbances due to nearby hunting) even below the
+ yearly timescale, their dynamics are bound to be synchronized to some degree
+ even below the yearly scale.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -666822487 1553968795
 The attractor of community dynamics, i.e., the shape of community trajectories
  in phase space, seems to be more or less an annual cycle here: the dominant
  species fluctuate seasonally, but even though there are shifts in some
@@ -2268,8 +2231,6 @@ literal "false"
  timescale.
  Whether or not these findings have some generality remains to be investigated
  by examining multi-species synchrony for more varied animal taxa.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -2298,20 +2259,10 @@ literal "true"
 \end_inset
 
 .
- This is true even in cases of known mechanisms of competition 
-\change_inserted -666822487 1553966896
-for space 
-\change_unchanged
-or shifts in community composition due to abiotic changes 
-\change_inserted -666822487 1553968895
-affecting differentially species preferences, 
-\change_unchanged
-as in this study.
- We 
-\change_inserted -666822487 1553968908
-therefore 
-\change_unchanged
-suggest that 
+ This is true even in cases of known mechanisms of competition for space
+ or shifts in community composition due to abiotic changes affecting differentia
+lly species preferences, as in this study.
+ We therefore suggest that 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2321,20 +2272,9 @@ zooming out
 
  taxonomically or functionally (considering summed abondances of dissimilar
  functional groups) and temporally (considering temporal scales well above
- the 
-\change_inserted -666822487 1553966932
-periodicity of the 
-\change_unchanged
-dominant 
-\change_inserted -666822487 1553968924
-abiotic 
-\change_unchanged
-driver) may often be the best strategy to see the compensation that will
- inevitably manifest if the community-level biomass is 
-\change_inserted -666822487 1553966948
-to be 
-\change_unchanged
-maintained within bounds.
+ the periodicity of the dominant abiotic driver) may often be the best strategy
+ to see the compensation that will inevitably manifest if the community-level
+ biomass is to be maintained within bounds.
 \end_layout
 
 \begin_layout Subsection*

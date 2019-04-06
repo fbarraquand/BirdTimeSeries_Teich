@@ -1,0 +1,9 @@
+1. Compensatory dynamics, during which community composition shifts despite a near-constant total community size, are usually rare: synchronous dynamics prevail in natural communities. This is a puzzle for ecologists, because of the key role of compensation to explain the relation between biodiversity and ecosystem functioning. 
+
+2. However, most studies so far have considered compensation in either plants or planktonic organisms, so that evidence for the generality of such synchrony is limited. Here, we extend analyses of community-level synchrony to wetland birds.
+
+3. Taking advantage of a monthly survey for 35 years, in a bird community where we suspected that compensation might occur - due to changes in water levels and known trends -, we perform both yearly and monthly analyses of community synchrony, applying yearly indices and wavelet-based synchrony measures to time series.
+
+4. We find that compensatory dynamics are still rare, likely due to the synchronizing influence of climate on birds, even after considering several temporal scales of covariation (during either cold or warm seasons, above or below the seasonal scale). Negative covariation in abundance at the whole community level did only appear after a management change in the reserve, and at the scale of a few months or several years. We also found that compensation varies with taxonomic and functional scale: compensation appeared more frequently between rather than within guilds.
+
+5. Although most research has focused on viewing compensation vs synchrony across temporal scales, because synchrony is guaranteed by environmental forcing at some temporal scales, our results suggest that compensation can be masked as well at some taxonomic scales (e.g., when measuring synchrony only at the species level). We suggest that compensation may have more potential to emerge between broad taxonomic units or functional groups, rather between species.
