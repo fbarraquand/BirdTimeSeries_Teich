@@ -1,0 +1,17 @@
+Dear Editor, 
+
+I would like to submit to Journal of Animal Ecology, for consideration as a Report, our manuscript entitled "Looking for compensation at multiple scales in a wetland bird community". 
+
+Community-level compensation occurs when decreases in the density of some species are offset by increases in the density of other species, so that total community size (or total biomass) fluctuates less than its constituent species population sizes. It is believed to be a key mechanism promoting ecosystem stability, which underpins much of the biodiversity - ecosystem functioning research field. 
+
+However, this phenomenon has proven to be very elusive in field data, as synchrony in climate drivers often induces synchrony in species densities, with most species going up and down collectively. This influence of the environment requires to look for compensation at various temporal scales (zooming in or out), which has been a technically challenging yet important development of previous research. 
+
+In this manuscript, we study the joint dynamics of a wetland bird community that has been counted for 35 years, building on this thread of scale-dependent research on compensation. We not only investigate whether the dynamics are synchronous or compensatory at several temporal scales, but also several organizational scales (taxonomic and functional). This is, to the best of our knowledge, a novel feature in this research field. While compensation has often been searched for within guilds made of similar species (i.e., negative correlations between species abundances), we show that it has a strong potential to emerge instead between different guilds (e.g., in our case, negative correlation between total wader population size and total duck population size). 
+
+We believe that our results can be of broad interest to both empiricists and theoreticians, as our case study extends previous empirical analyses of synchrony/compensation to a new group (birds), for which we confirm the rarity of compensation and ubiquity of synchrony at the species level which was previously found in plants, zooplankton and some mammals. However, we propose that despite this rarity of compensation within functional groups, compensation can still emerge between functional groups: one may need to "zoom out" taxonomically or functionally to see compensation. This result could, we hope, open new perspectives for theoretical research on the interplay between community dynamics and ecosystem functioning.  
+
+We look forward to hearing from you, 
+
+On behalf of all co-authors, 
+
+Frederic Barraquand

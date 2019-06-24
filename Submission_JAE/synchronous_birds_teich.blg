@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: synchronous_birds_teich.aux
+The style file: ../Submission_Ecology/ecology.bst
+Database file #1: BiblioTeich.bib
+You've used 25 entries,
+            2685 wiz_defined-function locations,
+            756 strings with 10351 characters,
+and the built_in function-call counts, 15393 in all, are:
+= -- 1313
+> -- 1287
+< -- 11
++ -- 428
+- -- 399
+* -- 1540
+:= -- 2843
+add.period$ -- 75
+call.type$ -- 25
+change.case$ -- 255
+chr.to.int$ -- 25
+cite$ -- 25
+duplicate$ -- 445
+empty$ -- 779
+format.name$ -- 434
+if$ -- 2901
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 27
+newline$ -- 128
+num.names$ -- 100
+pop$ -- 169
+preamble$ -- 1
+purify$ -- 232
+quote$ -- 0
+skip$ -- 294
+stack$ -- 0
+substring$ -- 903
+swap$ -- 89
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 219
+warning$ -- 0
+while$ -- 118
+width$ -- 0
+write$ -- 325

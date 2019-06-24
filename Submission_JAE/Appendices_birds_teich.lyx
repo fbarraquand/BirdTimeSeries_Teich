@@ -81,24 +81,16 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes true
-\output_changes false
+\output_changes true
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
 
 \begin_layout Section*
-
-\change_deleted -666822487 1539770405
-Electronic 
-\change_inserted -666822487 1539770408
-Online 
-\change_unchanged
-Supplementary Material
+Online Supplementary Material
 \end_layout
 
 \begin_layout Standard
@@ -127,7 +119,7 @@ setcounter{figure}{0}
 \backslash
 renewcommand{
 \backslash
-thefigure}{A
+thefigure}{S
 \backslash
 arabic{figure}} 
 \end_layout
@@ -138,19 +130,111 @@ arabic{figure}}
 \end_layout
 
 \begin_layout Subsection*
+Appendix S1 - Temporal patterns of in the Teich bird community
+\end_layout
 
-\change_deleted -666822487 1539770397
-ESM
-\change_inserted -2100369821 1553187382
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Fig1.pdf
+	width 18cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Time series of counts for
+\emph on
+ 
+\emph default
+ducks of the genus
+\emph on
+ Anas
+\emph default
+ (a), calidrids (b, 
+\emph on
+Calidris
+\emph default
+ genus), and all waders (c, including calidrids).
+ The solid black lines represent trends in summed abundances for each guild
+ when abundances are strictly positive, thin dotted lines connect positive
+ to zero abundances.
+ The coloured symbols below the curves represent each species abundances,
+ with species composition on the right side on the donut plots for the most
+ abundant species (over 1% of relative abundance in the group considered).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Temporal-trends"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename ../OUT/t30-Axe1-ProportionsLimicoles.pdf
+	width 110text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Temporal trends in the abundance of all birds and the main functional groups
+ (waders and ducks), with one point per year.
+ The duck category actually includes all species functionally similar to
+ ducks (i.e., anatids and the common coot).
+ The dashed line presents the ratio of wader individuals in the whole community,
+ which changes over time.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Subsection*
-
-\change_inserted -666822487 1539770399
-Appendix
-\change_unchanged
- 1 - Gross synchrony index at the whole community level
+Appendix S2 - Gross synchrony index at the whole community level
 \end_layout
 
 \begin_layout Standard
@@ -215,13 +299,7 @@ Note: Previously not including waders because presented as compared to synchrony
 \end_layout
 
 \begin_layout Subsection*
-
-\change_deleted -666822487 1539770414
-ESM
-\change_inserted -666822487 1539770416
-Appendix
-\change_unchanged
- 2 - Correlation in log-scale betwen cormorant and heron+egret
+Appendix S3 - Correlation in log-scale betwen cormorant and heron+egret
 \end_layout
 
 \begin_layout Standard
@@ -253,13 +331,12 @@ Gross' synchrony index as a function of the season (cold and warm seasons),
  change in water level management.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 No value was deemed statistically significant.
  [F: I removed this because either we mention the Bonferroni correction
  or we don't mention the absence of significance].
- 
 \end_layout
 
 \end_inset
@@ -294,14 +371,11 @@ We noted on Fig.
 \begin_inset Newpage newpage
 \end_inset
 
+Appendix S4 - Properties of the Gross whole community synchrony index 
+\begin_inset Formula $\eta$
+\end_inset
 
-\change_deleted -666822487 1539770426
-ESM
-\change_inserted -666822487 1539770427
-Appendix
-\change_unchanged
- 3 - Properties of the Gross whole community synchrony index when two groups
- react in opposite ways 
+ when two groups react in opposite ways
 \end_layout
 
 \begin_layout Standard
@@ -320,10 +394,9 @@ literal "false"
 
 \end_inset
 
- (developed in their Appendix D), we explored the effect of a common environment
+ (developed in their Appendix D), we explored the effect of a shared environment
 al driver on a community formed by two groups reacting oppositely to this
  driver.
- 
 \end_layout
 
 \begin_layout Standard
@@ -389,7 +462,6 @@ We assume that the environmental driver
 \end_inset
 
  is an autocorrelated signal (see below for details).
- 
 \end_layout
 
 \begin_layout Standard
@@ -464,17 +536,21 @@ literal "false"
 \end_inset
 
  is normally distributed, centered on 0 with a standard deviation of 0.1.
- 
 \end_layout
 
 \begin_layout Standard
 We compared results for time series of length 35 (the length of our data
- set), 100 and 500.
- For all simulation experiments, dynamics are first run for 500 time steps
- as a burn-in.
+ set when computing 
+\begin_inset Formula $\eta$
+\end_inset
+
+), 100 and 500.
+ For all simulation experiments, the dynamics are first run for 500 time
+ steps as a burn-in.
  To take into account different observational designs, we either take the
  first 35 or 100 time steps of the following 500-time steps series, or subsample
- the time series after burn-in.
+ the time series in order to get 35 or 100 time points (which removes some
+ autocorrelation in the dynamics).
  We also considered several community richness (10, 30, 60 and 100 species),
  and several strengths of the response to the environmental signal (
 \begin_inset Formula $b=$
@@ -485,10 +561,11 @@ We compared results for time series of length 35 (the length of our data
 \end_layout
 
 \begin_layout Standard
-We considered different types of environmental driver, crossed with subsampling
- / no subsampling.
- We considered in total three scenarios, and present below the results for
- all three: 
+We considered different types of environmental driver (simply autocorrelated
+ or with a linear trend), crossed with subsampling / no subsampling as described
+ above.
+ We considered in total three scenarios, and present below how an increasing
+ strength of response to the environment changes expectations for all three:
 \end_layout
 
 \begin_layout Itemize
@@ -524,14 +601,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of Gross' syn
-\change_inserted -2100369821 1539867534
-c
-\change_unchanged
-hrony index for different time series length and number of species in the
- community, in simulations where there is no trend in the environmental
- signal and the data is not subsampled, keeping the autocorrelation of the
- environment.
+Evolution of Gross' synchrony index for different time series length and
+ number of species in the community, in simulations where there is no trend
+ in the environmental signal and the data is not subsampled, keeping the
+ autocorrelation of the environment.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -663,8 +736,8 @@ name "fig:withtrend_subsample"
 \end_layout
 
 \begin_layout Standard
-We first confirm that unless there is a high autocorrelation in the driver
- (as in Fig.
+We first confirm that unless there is a very high temporal autocorrelation
+ in the driver (as in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -677,90 +750,169 @@ noprefix "false"
 
 ), if we consider two groups which have opposite reactions to the same driver,
  the Gross index is not sensitive to the length of the time series or to
- the number of species in the community.
- For larger communities (over 10 species), synchrony is higher when the
- response to the driver is stronger.
- For our data, this means that the more birds are sensitive to the water
- level, the less we can expect compensation at the whole community level.
- 
-\end_layout
+ the number of species in the community, in the sense that it will not indicate
+ falsely synchrony.
+ The main finding of these analyses, aside from the robustness of the 
+\begin_inset Formula $\eta$
+\end_inset
 
-\begin_layout Subsection*
-ESM 4 - Temporal patterns of 
-\change_deleted -2100369821 1553187458
-functional groups 
-\change_unchanged
-in the Teich bird community
-\change_inserted -2100369821 1553187407
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -2100369821 1553187452
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
+ index, is that for large communities (over 10 species), synchrony is always
+ higher when the response to the driver is stronger.
+ Coming back to the interpretation of our results in the Teich reserve case,
+ this means that the more bird population growth rates respond to changes
+ in the water levels, the less we can expect compensation at the whole community
+ level, even though compensation may be manifest at the functional group
+ level (here, the group of species responding similarly to the environmental
+ variable).
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
-\align center
-
-\change_inserted -2100369821 1553187452
-\begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/Submission_JAE/Fig1.pdf
-	width 18cm
+I think the problem was that we did not describe enough the results actually
+ - the presentation of the methods was OK but we needed to explain what
+ we found.
+ I therefore tried to do that a little bit.
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Subsection*
+Appendix S5 - Effect of 
+\begin_inset Quotes eld
+\end_inset
 
-\change_inserted -2100369821 1553187452
-\begin_inset Caption Standard
+missing
+\begin_inset Quotes erd
+\end_inset
 
-\begin_layout Plain Layout
+ values on wavelet analyses
+\end_layout
 
-\change_inserted -2100369821 1553187452
-Time series of counts for
-\emph on
- 
-\emph default
-ducks of the genus
-\emph on
- Anas
-\emph default
- (a), calidrids (b, 
-\emph on
-Calidris
-\emph default
- genus), and all waders (c, including calidrids).
- The solid black lines represent trends in summed abundances for each guild
- when abundances are strictly positive, thin dotted lines connect positive
- to zero abundances
+\begin_layout Standard
+We investigate here if exactly-zero abundances can distort the compensation
+ patterns evidenced by the wavelet coherence.
+ We chose a 
+\begin_inset Quotes eld
+\end_inset
+
+worst case
+\begin_inset Quotes erd
+\end_inset
+
+ simulation with 10% missing values for all species, and few species below
+ that 10% level
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1553187452
-Perhaps we should mention that the season-averaged abundances are never
- zero there? Or maybe we should just show the averaged abundances?
+Can we say something more precise?
 \end_layout
 
 \end_inset
 
 .
- The coloured symbols below the curves represent each species abundances,
- with species composition on the right side on the donut plots for the most
- abundant species (over 1% of relative abundance in the group considered).
- 
+ The results show that while the statistical significance of the values
+ can change (i.e., the data is more compatible with the null hypothesis of
+ time series uncorrelated between species, assuming the null is true), the
+ occurrence of compensation (blue values in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Wavelets-missing-data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) does not.
+ The wavelet coherence index is therefore robust to the presence of zeroes
+ in the time series.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../OUT/wavelets_simulation_1.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Without missing data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../OUT/wavelets_simulation_missingdata.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+With missing data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet coherence for a community with compensatory dynamics, without (a)
+ and with (b) missing data
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Temporal-trends"
+name "fig:Wavelets-missing-data"
 
 \end_inset
 
@@ -769,133 +921,6 @@ name "fig:Temporal-trends"
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/t30-Axe1-ProportionsLimicoles.pdf
-	width 110text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Temporal trends in the abundance of all birds and the main functional groups
- (waders and ducks).
- The duck category actually includes all species functionally similar to
- ducks (i.e., anatids and the common coot).
- 
-\change_inserted -2100369821 1539867692
-The dashed line presents the ratio of wader individuals in the whole community,
- which changes over time.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\change_inserted -666822487 1538640338
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -666822487 1538640340
-
-\end_layout
-
-\begin_layout Subsection*
-
-\change_inserted -2100369821 1553187523
-Appendix 5 - Effect of missing values on wavelet analyses [[TO WRITE PROPERLY]]
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -2100369821 1553187617
-In the worst case scenario (ie 10% missing values for all species, and few
- species -10), we have : (assuming that missing values are missing at random)
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -2100369821 1553187534
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-
-\change_inserted -2100369821 1553187588
-\begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/wavelets_simulation_1.png
-	width 45text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/wavelets_simulation_missingdata.png
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1553187534
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1553187602
-Without (left) and with (right) missing data
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -905,8 +930,6 @@ Without (left) and with (right) missing data
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -666822487 1538640340
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
@@ -915,8 +938,6 @@ options "../ARTICLE/prsb"
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
