@@ -1,1 +1,8 @@
 *~
+*.aux
+*.dvi
+*.bbl
+*.blg
+*.log
+OUT/*.csv
+#.*#
