@@ -1,7 +1,10 @@
 ##CP 16/05/2018
 #Using the synchrony package, and more particularly the community.sync function from Gouhier and Guichard (2014) to compute confidence intervals for Gross index
+#CP 26/06/2019: Maybe there was an error in the way we computed pval=rands<obs/(nrands+1). Is the +1 ok?
 
-community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"), 
+source("SCRIPTS/iaaft.R")
+
+community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"),method=c("shift","iaaft"), 
     quiet = FALSE, ...) 
 {
 	alternative="two-tailed" #Because I'm lazy
@@ -21,25 +24,37 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
         if (!quiet) 
             prog.bar = txtProgressBar(min = 0, max = nrands, 
                 style = 3)
-        results$rands = numeric(length = nrands + 1) * NA
-        for (i in 1:nrands) {
-                lags = sample(1:nr, size = nc, replace = TRUE)
-                rand.mat = mlag(data_matrix, lags)
-		rand.mat=data.frame(sp_data_frame,dates,c(rand.mat))
+        results$rands = numeric(length = nrands) * NA
+	for (i in 1:nrands) {
+		if(method=="shift"){
+                	lags = sample(1:nr, size = nc, replace = TRUE)
+                	rand.mat = mlag(data_matrix, lags)
+			rand.mat=data.frame(sp_data_frame,dates,c(rand.mat))
+		}else if(method=="iaaft"){
+			rand.mat=matrix(NA,nr,nc)
+			iter=0
+			for(sp in unique(as.character(sp_data_frame))){
+				iter=iter+1
+				sp_tmp=data_matrix[,sp]
+				rand.mat[,iter]=iaaft_surrogate(sp_tmp)
+				
+			}
+			rand.mat=data.frame(sp_data_frame,dates,c(rand.mat))
+		}
 		names(rand.mat)=c("sp_data_frame","dates","abundance")
             results$rands[i] = community_sync_Gross_aux(rand.mat)
             if (!quiet) 
                 setTxtProgressBar(prog.bar, i)
         }
-        results$rands[nrands + 1] = results$obs
         if (alternative == "two-tailed") {
-            results$pval = sum(abs(results$rands) >= abs(results$obs))/(nrands + 
-                1)
+            results$pval = sum(abs(results$rands) >= abs(results$obs))/(nrands) 
+               # +1)
         }else if (alternative == "greater"){
-            results$pval = sum(results$rands >= results$obs)/(nrands + 
-                1)
-        }else{results$pval = sum(results$rands <= results$obs)/(nrands + 
-            1)}
+            results$pval = sum(results$rands >= results$obs)/(nrands)
+               # 1)
+        }else{results$pval = sum(results$rands <= results$obs)/(nrands) }
+           # 1)}
+#        results$rands[nrands + 1] = results$obs #I guess this came from a previously written function (not by me), but this does not make sense à rands and obs may not represent the same hypothesis.
         results$alternative = alternative
     }
     return(results)
