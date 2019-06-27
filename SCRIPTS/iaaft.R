@@ -1,5 +1,5 @@
 #### CP 2019/06/26
-### This function computes iaaft surrogate for time series. It is a copy-paste of kahaaga/tstools. Hower, tstools package requires the pacman library which can only be installed on version >= 3.5.0 of R, which I currently don't have. 
+### This function computes iaaft and ebisuzaki surrogate for time series. It is a copy-paste of kahaaga/tstools. Hower, tstools package requires the pacman library which can only be installed on version >= 3.5.0 of R, which I currently don't have. 
 
 iaaft_surrogate <- function(series, n.max.iter = 150) {
 #  if (!is_valid_input(series)) {
@@ -64,4 +64,14 @@ iaaft_surrogate <- function(series, n.max.iter = 150) {
     iteration <- iteration + 1
   }
   return(surrogate)
+}
+
+ebisuzaki_surrogate <- function(series) {
+
+	require(rEDM)
+
+  surrogate <- make_surrogate_data(ts = series,
+                            method = "ebisuzaki",
+                            num_surr = 1)
+  return(as.numeric(surrogate))
 }

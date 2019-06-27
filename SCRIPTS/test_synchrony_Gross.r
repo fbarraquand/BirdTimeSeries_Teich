@@ -4,7 +4,7 @@
 
 source("SCRIPTS/iaaft.R")
 
-community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"),method=c("shift","iaaft"), 
+community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"),method=c("shift","iaaft","ebisuzaki"), 
     quiet = FALSE, ...) 
 {
 	alternative="two-tailed" #Because I'm lazy
@@ -30,13 +30,17 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
                 	lags = sample(1:nr, size = nc, replace = TRUE)
                 	rand.mat = mlag(data_matrix, lags)
 			rand.mat=data.frame(sp_data_frame,dates,c(rand.mat))
-		}else if(method=="iaaft"){
+		}else{
 			rand.mat=matrix(NA,nr,nc)
 			iter=0
 			for(sp in unique(as.character(sp_data_frame))){
 				iter=iter+1
 				sp_tmp=data_matrix[,sp]
-				rand.mat[,iter]=iaaft_surrogate(sp_tmp)
+				if(method=="iaaft"){
+					rand.mat[,iter]=iaaft_surrogate(sp_tmp)
+				}else if(method=="ebisuzaki"){
+					rand.mat[,iter]=ebisuzaki_surrogate(sp_tmp)
+				 }
 				
 			}
 			rand.mat=data.frame(sp_data_frame,dates,c(rand.mat))

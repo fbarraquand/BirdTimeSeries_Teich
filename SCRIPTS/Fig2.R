@@ -1,15 +1,17 @@
 ####CP: original script was written in 2018 to compute the Gross index for synchrony (Gross et al. 2014) on taxonomic and functional groups of birds, and to assess their significance. 
 #### 2019/06/25: Corrected an error on standard deviation. They were computed under H0 (on shifted time series) and were associated to the observed value (errobars were built around the observed value with the sd from rands)
-
+### 2019/06/27: Added BH p-val correction. Tried IAAFT and ebisuzaki surogates for the "between" case.
 
 rm(list=ls())
 graphics.off()
 
-box_index=T #If box_index is true, draw boxplots for the whole distribution for the Gross index with shifted time series. Otherwise, we just show a line for the 5%-95% percentiles
+box_index=F #If box_index is true, draw boxplots for the whole distribution for the Gross index with shifted time series. Otherwise, we just show a line for the 5%-95% percentiles
+type_correct="BH" #Was bonferroni before
+
 
 source("SCRIPTS/test_synchrony_Gross.r")
 set.seed(42)
-thresh=0.1/(3*2) #There are two seasons and three periods considered
+thresh=0.1
 
 sp_to_ignore=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser barchyrhynchus")
 #I think there are more species we should ignore, have a closer look with CHristelle
@@ -41,6 +43,15 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 
 list_anas=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 
+mat=rep(NA,length(list_anas))
+for(v in 1:length(list_anas)){
+	mat[v]=list_anas[[v]]$pval
+}
+mat_adj=p.adjust(mat,method=type_correct)
+for(v in 1:length(list_anas)){
+	list_anas[[v]]$pval=mat_adj[v]
+}
+
 print("Calidris")
 #We look at only 6 species for the Calidris, we could also look at only 4
 db_warm=read.csv("IN/warmseason_calidris_detailed.txt",sep=",",header=T)
@@ -69,6 +80,16 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 
 list_calidris=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 	
+mat=rep(NA,length(list_calidris))
+for(v in 1:length(list_calidris)){
+        mat[v]=list_calidris[[v]]$pval
+}
+mat_adj=p.adjust(mat,method=type_correct)
+for(v in 1:length(list_calidris)){
+        list_calidris[[v]]$pval=mat_adj[v]
+}
+
+
 print("Waders")
 db_warm=read.csv("IN/warmseason_waders_detailed.txt",sep=",",header=T)
 db_cold=read.csv("IN/coldseason_waders_detailed.txt",sep=",",header=T)
@@ -99,6 +120,16 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 
 list_waders=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 
+mat=rep(NA,length(list_waders))
+for(v in 1:length(list_waders)){
+        mat[v]=list_waders[[v]]$pval
+}
+mat_adj=p.adjust(mat,method=type_correct)
+for(v in 1:length(list_waders)){
+        list_waders[[v]]$pval=mat_adj[v]
+}
+
+
 print("Freq")
 db_warm=read.csv("IN/warmseason_freq_detailed.txt",sep=",",header=T)
 db_cold=read.csv("IN/coldseason_freq_detailed.txt",sep=",",header=T)
@@ -124,6 +155,15 @@ synch_cold_pre_2006=community_sync_Gross(db_cold_pre_2006,nrands=100)
 synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 
 list_freq=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
+
+mat=rep(NA,length(list_freq))
+for(v in 1:length(list_freq)){
+        mat[v]=list_freq[[v]]$pval
+}
+mat_adj=p.adjust(mat,method=type_correct)
+for(v in 1:length(list_freq)){
+        list_freq[[v]]$pval=mat_adj[v]
+}
 
 print("Ducks")
 db_warm=read.csv("IN/warmseason_duck_detailed.txt",sep=",",header=T)
@@ -152,15 +192,24 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100)
 
 list_duck=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 
+mat=rep(NA,length(list_duck))
+for(v in 1:length(list_duck)){
+        mat[v]=list_duck[[v]]$pval
+}
+mat_adj=p.adjust(mat,method=type_correct)
+for(v in 1:length(list_duck)){
+        list_duck[[v]]$pval=mat_adj[v]
+}
+
 
 print('Freq birds output')
 upsi=0.02
 color=rep(c("Black","Lightblue","Darkblue"),2)
 #pdf("OUT/Gross_freq.pdf",width=11,height=7,family="Times")
 if(box_index){
-pdf("Submission_JAE/Revisions/Gross_freq_boxplot_nrandsonly.pdf",width=11,height=7,family="Times")
+pdf("Submission_JAE/Revisions/Gross_freq_boxplot_BH_ebi.pdf",width=11,height=7,family="Times")
 }else{
-pdf("Submission_JAE/Revisions/Gross_freq_line_nrandsonly.pdf",width=11,height=7,family="Times")
+pdf("Submission_JAE/Revisions/Gross_freq_line_BH_ebi.pdf",width=11,height=7,family="Times")
 }
 par(mfrow=c(1,1),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",,ylim=c(-.75,.66),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
@@ -199,9 +248,9 @@ upsi=0.05
 #pdf("OUT/Fig2_new2.pdf",width=11,height=14,family="Times")
 #pdf("OUT/Fig2_new2_JAE.pdf",width=11,height=14)
 if(box_index){
-pdf("Submission_JAE/Revisions/Fig2_new2_JAE_boxplot_iaaftbetween.pdf",width=11,height=14)
+pdf("Submission_JAE/Revisions/Fig2_new2_JAE_boxplot_ebibetween_BH.pdf",width=11,height=14)
 }else{
-pdf("Submission_JAE/Revisions/Fig2_new2_JAE_line_iaaftbetween.pdf",width=11,height=14)
+pdf("Submission_JAE/Revisions/Fig2_new2_JAE_line_ebibetween_BH.pdf",width=11,height=14)
 }
 par(mfrow=c(2,2),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-.75,.67),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="Taxonomic groups",cex.main=2)
@@ -338,17 +387,28 @@ db_cold_pre_2006=subset(db_cold,sp_data_frame %in% c("Anas","Calidris")&dates<=2
 db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Anas","Calidris")&dates>2006&dates<2016)
 
 #Compute synchrony values
-synch_warm_all=community_sync_Gross(db_warm_all,nrands=100,method="iaaft")
-synch_warm_pre_2006=community_sync_Gross(db_warm_pre_2006,nrands=100,method="iaaft")
-synch_warm_post_2006=community_sync_Gross(db_warm_post_2006,nrands=100,method="iaaft")
+synch_warm_all=community_sync_Gross(db_warm_all,nrands=100,method="ebisuzaki")
+synch_warm_pre_2006=community_sync_Gross(db_warm_pre_2006,nrands=100,method="ebisuzaki")
+synch_warm_post_2006=community_sync_Gross(db_warm_post_2006,nrands=100,method="ebisuzaki")
 
-synch_cold_all=community_sync_Gross(db_cold_all,nrands=100,method="iaaft")
-synch_cold_pre_2006=community_sync_Gross(db_cold_pre_2006,nrands=100,method="iaaft")
-synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100,method="iaaft")
+synch_cold_all=community_sync_Gross(db_cold_all,nrands=100,method="ebisuzaki")
+synch_cold_pre_2006=community_sync_Gross(db_cold_pre_2006,nrands=100,method="ebisuzaki")
+synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100,method="ebisuzaki")
 
 #Plot everything
 upsi=0.05
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
+
+mat=rep(NA,length(essai_taxo))
+for(v in 1:length(essai_taxo)){
+        mat[v]=essai_taxo[[v]]$pval
+}
+mat_adj=p.adjust(mat,method=type_correct)
+for(v in 1:length(essai_taxo)){
+        essai_taxo[[v]]$pval=mat_adj[v]
+}
+
+
 color=rep(c("Black","Lightblue","Darkblue"),2)
 #par(mfrow=c(1,2),mar=c(3,4.5,1,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-.75,.67),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=2,cex.axis=2)
@@ -392,16 +452,27 @@ db_cold_pre_2006=subset(db_cold,sp_data_frame %in% c("Waders","Ducks")&dates<=20
 db_cold_post_2006=subset(db_cold,sp_data_frame %in% c("Waders","Ducks")&dates>2006&dates<2016) #Because there is a problem for 2016 (na values)
 
 #Compute synchrony values
-synch_warm_all=community_sync_Gross(db_warm_all,nrands=100,method="iaaft")
-synch_warm_pre_2006=community_sync_Gross(db_warm_pre_2006,nrands=100,method="iaaft")
-synch_warm_post_2006=community_sync_Gross(db_warm_post_2006,nrands=100,method="iaaft")
+synch_warm_all=community_sync_Gross(db_warm_all,nrands=100,method="ebisuzaki")
+synch_warm_pre_2006=community_sync_Gross(db_warm_pre_2006,nrands=100,method="ebisuzaki")
+synch_warm_post_2006=community_sync_Gross(db_warm_post_2006,nrands=100,method="ebisuzaki")
 
-synch_cold_all=community_sync_Gross(db_cold_all,nrands=100,method="iaaft")
-synch_cold_pre_2006=community_sync_Gross(db_cold_pre_2006,nrands=100,method="iaaft")
-synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100,method="iaaft")
+synch_cold_all=community_sync_Gross(db_cold_all,nrands=100,method="ebisuzaki")
+synch_cold_pre_2006=community_sync_Gross(db_cold_pre_2006,nrands=100,method="ebisuzaki")
+synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=100,method="ebisuzaki")
 
 #Plot everything
 essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
+
+mat=rep(NA,length(essai_taxo))
+for(v in 1:length(essai_taxo)){
+        mat[v]=essai_taxo[[v]]$pval
+}
+mat_adj=p.adjust(mat,method=type_correct)
+for(v in 1:length(essai_taxo)){
+        essai_taxo[[v]]$pval=mat_adj[v]
+}
+
+
 color=rep(c("Black","Lightblue","Darkblue"),2)
 plot(0,0,t="n",ylim=c(-.75,.67),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n")
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
