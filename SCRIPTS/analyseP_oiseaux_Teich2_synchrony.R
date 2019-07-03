@@ -69,7 +69,10 @@ limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calid
               "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
 
 
-birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis","Calidris fuscicollis","Calidris himantopus","Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus")
+#birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis","Calidris fuscicollis","Calidris himantopus","Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus")
+
+birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser barchyrhynchus")
+#I think there are more species we should ignore, have a closer look with CHristelle
 
 DBt=subset(DBt,!DBt$Nom_latin %in% birds_to_remove)
 summed_abundances<-read.csv(file="summed_abundances.csv",header=TRUE,sep=";",dec=".") 
@@ -1661,3 +1664,47 @@ dev.off()
 # [,1] [,2] [,3] [,4] [,5] [,6] [,7]
 # [1,] 2007   25   27    4    4 6.25 6.75
 # -> OK
+
+# abondance relative.
+# 
+anas = c("Anas platyrhynchos","Anas acuta","Anas strepera","Anas penelope","Anas clypeata","Anas crecca","Aythya ferina","Aythya fuligula","Aythya marila","Tadorna tadorna","Anas querquedula","Cygnus olor","Anser anser","Netta rufina","Branta bernicla","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Anas discors","Alopochen aegyptiaca","Branta canadensis","Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Melanitta fusca","Somateria mollissima","Branta bernicla hrota"," Anser fabalis","Anser albifrons","Cygnus cygnus","Branta bernicla nigricans","Mergus merganser","Anser brachyrhynchus","Anas americana","Fulica atra"); 
+
+total_bird = sum(DBt$Nombre,na.rm=TRUE)
+#abondance_anas = subset(DBt,grepl("^Anas",DBt$Nom_latin,ignore.case = TRUE))
+abondance_anas = subset(DBt, DBt$Nom_latin %in% anas)
+abondance_calidris = subset(DBt,grepl("^Calidris",DBt$Nom_latin,ignore.case = TRUE))
+abondance_waders = subset(DBt, DBt$Nom_latin %in% limicoles)
+abondance_frequents_birds = subset(DBt, DBt$Nom_latin %in% oiseaux_Frequents_t)
+
+# ANAS
+unique_anas =unique(as.character(abondance_anas$Nom_latin))
+unique_anas= unique_anas[order(unique_anas)]
+tab_abondance_anas= matrix(data = NA,ncol = 1,nrow=length(unique_anas))
+rownames(tab_abondance_anas)=c(unique_anas)
+for (i in 1:length(unique_anas)){
+  tab_abondance_anas[as.character(unique_anas[i]),] = round((sum(abondance_anas$Nombre[abondance_anas$Nom_latin==unique_anas[i]],na.rm=TRUE)/total_bird)*100,3)
+}
+#CALIDRIS
+# unique_calidris =unique(as.character(abondance_calidris$Nom_latin))
+# tab_abondance_calidris= matrix(data = NA,nrow = 1,ncol=length(unique_calidris))
+# colnames(tab_abondance_calidris)=c(unique_calidris)
+# for (i in 1:length(unique_calidris)){
+#   tab_abondance_calidris[,as.character(unique_calidris[i])] = sum(abondance_calidris$Nombre[abondance_calidris$Nom_latin==unique_calidris[i]],na.rm=TRUE)/total_bird
+# }
+#WADERS
+unique_waders =unique(as.character(abondance_waders$Nom_latin))
+unique_waders = unique_waders[order(unique_waders)]
+tab_abondance_waders= matrix(data = NA,ncol = 1,nrow=length(unique_waders))
+rownames(tab_abondance_waders)=c(unique_waders)
+for (i in 1:length(unique_waders)){
+  tab_abondance_waders[as.character(unique_waders[i]),] = round((sum(abondance_waders$Nombre[abondance_waders$Nom_latin==unique_waders[i]],na.rm=TRUE)/total_bird)*100,3)
+}
+# frequents birds
+unique_frequents_birds =unique(as.character(abondance_frequents_birds$Nom_latin))
+unique_frequents_birds = unique_frequents_birds[order(unique_frequents_birds)]
+tab_abondance_frequents_birds= matrix(data = NA,ncol = 1,nrow=length(unique_frequents_birds))
+rownames(tab_abondance_frequents_birds)=c(unique_frequents_birds)
+for (i in 1:length(unique_frequents_birds)){
+  tab_abondance_frequents_birds[as.character(unique_frequents_birds[i]),] = round((sum(abondance_frequents_birds$Nombre[abondance_frequents_birds$Nom_latin==unique_frequents_birds[i]],na.rm=TRUE)/total_bird)*100,3)
+}
+
