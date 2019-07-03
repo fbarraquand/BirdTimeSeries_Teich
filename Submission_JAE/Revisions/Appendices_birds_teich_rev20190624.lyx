@@ -152,8 +152,9 @@ status open
 
 \change_inserted -2100369821 1561468369
 \begin_inset Tabular
-<lyxtabular version="3" rows="57" columns="4">
+<lyxtabular version="3" rows="61" columns="5">
 <features tabularvalignment="middle">
+<column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -173,6 +174,17 @@ Frequent birds
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152685
+Frequence
 \end_layout
 
 \end_inset
@@ -219,6 +231,17 @@ Eurasian sparrowhawk
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152940
+0.003
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -257,6 +280,17 @@ Actitis hypoleucos
 Common sandpiper
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152943
+0.054
 \end_layout
 
 \end_inset
@@ -303,6 +337,17 @@ Common kingfisher
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152948
+0.017
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -341,6 +386,17 @@ Anas acuta
 Northern pintail
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152956
+1.708
 \end_layout
 
 \end_inset
@@ -387,6 +443,17 @@ Northern shoveler
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152960
+1.580
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -425,6 +492,17 @@ Anas crecca
 Eurasian teal
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152965
+6.613
 \end_layout
 
 \end_inset
@@ -471,6 +549,17 @@ Eurasian wigeon
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152969
+0.055
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -509,6 +598,17 @@ Anas platyrhynchos
 Mallard
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152973
+3.388
 \end_layout
 
 \end_inset
@@ -555,6 +655,17 @@ Garganey
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152977
+0.032
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -593,6 +704,17 @@ Anas strepera
 Gadwall
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152984
+0.308
 \end_layout
 
 \end_inset
@@ -639,6 +761,17 @@ Greylag goose
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562152988
+1.135
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -677,6 +810,17 @@ Ardea cinerea
 Grey heron
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153000
+2.476
 \end_layout
 
 \end_inset
@@ -723,6 +867,17 @@ Ruddy turnstone
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153004
+0.020
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -761,6 +916,17 @@ Aythya ferina
 Common pochard
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153009
+1.053
 \end_layout
 
 \end_inset
@@ -807,6 +973,17 @@ Tufted duck
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153012
+0.467
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -845,6 +1022,17 @@ Bubulcus ibis
 Western cattle egret
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153016
+0.381
 \end_layout
 
 \end_inset
@@ -891,6 +1079,17 @@ Dunlin
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153034
+23.396
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -929,6 +1128,17 @@ Calidris canutus
 Red knot
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153037
+0.406
 \end_layout
 
 \end_inset
@@ -975,6 +1185,17 @@ Curlew sandpiper
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153041
+0.067
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1013,6 +1234,17 @@ Calidris minuta
 Little stint
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153044
+0.129
 \end_layout
 
 \end_inset
@@ -1059,6 +1291,17 @@ Great egret
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153047
+0.150
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1097,6 +1340,17 @@ Charadrius dubius
 Little ringed plover
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153054
+0.040
 \end_layout
 
 \end_inset
@@ -1143,6 +1397,17 @@ Common ringed plover
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153061
+0.921
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1181,6 +1446,17 @@ Chroicocephalus ridibundus
 Black-headed gull
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153068
+9.646
 \end_layout
 
 \end_inset
@@ -1227,6 +1503,17 @@ White stork
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153078
+0.905
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1265,6 +1552,17 @@ Circus aeruginosus
 Western marsh harrier
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153083
+0.017
 \end_layout
 
 \end_inset
@@ -1311,6 +1609,17 @@ Mute swan
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153087
+0.618
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1353,6 +1662,17 @@ Little egret
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153092
+6.511
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1366,6 +1686,234 @@ Little egret
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153470
+Falco perigrinus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153557
+Peregrine falcon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153520
+0.003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153453
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153453
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153482
+Fulica atra
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153570
+Eurasian coot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153525
+16.008
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153473
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153473
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153497
+Gallinago gallinago
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153583
+Common snipe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153529
+0.184
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153485
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153485
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153514
+Gallinula chloropus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153594
+Common moorhen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153533
+1.106
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153505
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153505
 
 \end_layout
 
@@ -1391,6 +1939,17 @@ Himantopus himantopus
 Black-winged stilt
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153239
+0.079
 \end_layout
 
 \end_inset
@@ -1437,6 +1996,17 @@ European herring gull
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153254
+3.414
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1475,6 +2045,17 @@ Larus fuscus
 Lesser black-backed gull
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153259
+0.088
 \end_layout
 
 \end_inset
@@ -1521,6 +2102,17 @@ Great black-backed gull
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153267
+0.039
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1559,6 +2151,17 @@ Larus michahellis
 Yellow-legged gull
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153274
+0.210
 \end_layout
 
 \end_inset
@@ -1605,6 +2208,17 @@ Bar-tailed godwit
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153278
+0.327
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1643,6 +2257,17 @@ Limosa limosa
 Black-tailed godwit
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153286
+1.802
 \end_layout
 
 \end_inset
@@ -1689,6 +2314,17 @@ Black kite
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153290
+0.106
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1727,6 +2363,17 @@ Netta rufina
 Red-crested pochard
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153300
+0.030
 \end_layout
 
 \end_inset
@@ -1773,6 +2420,17 @@ Eurasian curlew
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153306
+1.167
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1811,6 +2469,17 @@ Numenius phaeopus
 Whimbrel
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153311
+0.102
 \end_layout
 
 \end_inset
@@ -1857,6 +2526,17 @@ Black-crowned night heron
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153319
+0.160
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1895,6 +2575,17 @@ Phalacrocorax carbo
 Great cormorant
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153323
+3.616
 \end_layout
 
 \end_inset
@@ -1941,6 +2632,17 @@ Ruff
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153329
+0.010
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1979,6 +2681,17 @@ Platalea leucorodia
 Eurasian spoonbill
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153334
+0.721
 \end_layout
 
 \end_inset
@@ -2025,6 +2738,17 @@ Grey plover
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153339
+0.669
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2063,6 +2787,17 @@ Podiceps cristatus
 Great crested grebe
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153348
+0.033
 \end_layout
 
 \end_inset
@@ -2109,6 +2844,17 @@ Black-necked grebe
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153351
+0.008
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2147,6 +2893,17 @@ Rallus aquaticus
 Water rail
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153368
+0.594
 \end_layout
 
 \end_inset
@@ -2193,6 +2950,17 @@ Pied avocet
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153374
+0.775
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2231,6 +2999,17 @@ Tachybaptus ruficollis
 Little grebe
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153382
+0.403
 \end_layout
 
 \end_inset
@@ -2277,6 +3056,17 @@ Common shelduck
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153386
+0.870
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2315,6 +3105,17 @@ Threskiornis aethiopicus
 African sacred ibis
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153392
+0.019
 \end_layout
 
 \end_inset
@@ -2361,6 +3162,17 @@ Spotted redshank
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153400
+0.133
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2399,6 +3211,17 @@ Tringa nebularia
 Common greenshank
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153404
+0.173
 \end_layout
 
 \end_inset
@@ -2445,6 +3268,17 @@ Green sandpiper
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153407
+0.014
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2487,6 +3321,17 @@ Common redshank
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153415
+0.670
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="none" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -2525,6 +3370,17 @@ Vanellus vanellus
 Northern lapwing
 \change_unchanged
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562153418
+0.265
 \end_layout
 
 \end_inset
