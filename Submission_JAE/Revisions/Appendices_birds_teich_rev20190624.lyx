@@ -2591,8 +2591,9 @@ status open
 
 \change_inserted -2100369821 1561468369
 \begin_inset Tabular
-<lyxtabular version="3" rows="35" columns="4">
+<lyxtabular version="3" rows="35" columns="5">
 <features tabularvalignment="middle">
+<column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -2605,6 +2606,17 @@ status open
 
 \change_inserted -2100369821 1561468816
 Waders
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139255
+
 \end_layout
 
 \end_inset
@@ -2660,6 +2672,17 @@ Actitis hypoleucos
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139274
+Common sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -2697,6 +2720,17 @@ Aix galericulata
 
 \change_inserted -2100369821 1561468369
 Arenaria interpres
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139289
+Ruddy turnstone
 \end_layout
 
 \end_inset
@@ -2752,6 +2786,17 @@ Burhinus oedicnemus
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139297
+Eurasian stone-curlew
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -2789,6 +2834,17 @@ Anas acuta
 
 \change_inserted -2100369821 1561468369
 Calidris alba
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139306
+Sanderling
 \end_layout
 
 \end_inset
@@ -2844,6 +2900,17 @@ Calidris alpina
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139315
+Dunlin
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -2881,6 +2948,17 @@ Anas clypeata
 
 \change_inserted -2100369821 1561468369
 Calidris canutus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139324
+Red knot
 \end_layout
 
 \end_inset
@@ -2936,6 +3014,17 @@ Calidris maritima
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139336
+Purple sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -2973,6 +3062,17 @@ Anas discors
 
 \change_inserted -2100369821 1561468369
 Calidris minuta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139345
+Little stint
 \end_layout
 
 \end_inset
@@ -3028,6 +3128,17 @@ Calidris temminckii
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139355
+Temminck's stint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3065,6 +3176,17 @@ Anas platyrhynchos
 
 \change_inserted -2100369821 1561468369
 Charadrius alexandrinus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139364
+Kentish plover
 \end_layout
 
 \end_inset
@@ -3120,6 +3242,17 @@ Charadrius dubius
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139380
+Little ringed plover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3157,6 +3290,17 @@ Anas strepera
 
 \change_inserted -2100369821 1561468369
 Charadrius hiaticula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139389
+Common ringed plover
 \end_layout
 
 \end_inset
@@ -3212,6 +3356,17 @@ Gallinago gallinago
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139401
+Common snipe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3249,6 +3404,17 @@ Anser anser
 
 \change_inserted -2100369821 1561468369
 Haematopus ostralegus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139413
+Eurasian oystercatcher
 \end_layout
 
 \end_inset
@@ -3304,6 +3470,17 @@ Himantopus himantopus
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139423
+Black-winged stilt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3341,6 +3518,17 @@ Anser fabalis
 
 \change_inserted -2100369821 1561468369
 Limosa lapponica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139434
+Bar-tailed godwit
 \end_layout
 
 \end_inset
@@ -3396,6 +3584,17 @@ Limosa limosa
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139443
+Black-tailed godwit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3433,6 +3632,17 @@ Aythya fuligula
 
 \change_inserted -2100369821 1561468369
 Numenius arquata
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139454
+Eurasian curlew
 \end_layout
 
 \end_inset
@@ -3488,6 +3698,17 @@ Numenius phaeopus
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139463
+Whimbrel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3525,6 +3746,17 @@ Aythya nyroca
 
 \change_inserted -2100369821 1561468369
 Phalaropus lobatus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139473
+Red-necked phalarope
 \end_layout
 
 \end_inset
@@ -3580,6 +3812,17 @@ Philomachus pugnax
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139484
+Ruff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3617,6 +3860,17 @@ Branta canadensis
 
 \change_inserted -2100369821 1561468369
 Pluvialis apricaria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139496
+European golden plover
 \end_layout
 
 \end_inset
@@ -3672,6 +3926,17 @@ Pluvialis squatarola
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139505
+Grey plover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3709,6 +3974,17 @@ Bucephala clangula
 
 \change_inserted -2100369821 1561468369
 Recurvirostra avosetta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139514
+Pied avocet
 \end_layout
 
 \end_inset
@@ -3764,6 +4040,17 @@ Tringa erythropus
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139527
+Spotted redshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3801,6 +4088,17 @@ Cygnus atratus
 
 \change_inserted -2100369821 1561468369
 Tringa glareola
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139538
+Wood sandpiper
 \end_layout
 
 \end_inset
@@ -3856,6 +4154,17 @@ Tringa nebularia
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139548
+Common greenshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3893,6 +4202,17 @@ Cygnus olor
 
 \change_inserted -2100369821 1561468369
 Tringa ochropus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139565
+Green sandpiper
 \end_layout
 
 \end_inset
@@ -3948,6 +4268,17 @@ Tringa totanus
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139577
+Common redshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -3994,6 +4325,17 @@ Vanellus vanellus
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139587
+Northern lapwing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -4030,6 +4372,17 @@ Mergus merganser
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561468809
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139255
 
 \end_layout
 
@@ -4086,6 +4439,17 @@ Mergus serrator
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139255
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -4132,6 +4496,17 @@ Netta rufina
 
 \begin_layout Plain Layout
 
+\change_inserted -1297226133 1562139255
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \change_inserted -2100369821 1561481337
 
 \end_layout
@@ -4168,6 +4543,17 @@ Tadorna ferruginea
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561468806
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -1297226133 1562139255
 
 \end_layout
 
