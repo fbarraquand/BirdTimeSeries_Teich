@@ -1,4 +1,7 @@
-#graphics.off()
+### 2018 CPicoche: This script computes the wavelet-based synchrony index (Keitt 2008) for the wader community
+### 2019/07/03: CP Relaunched with BH-correction 
+
+graphics.off()
 rm(list=ls())
 library('mvcwt')
 source("SCRIPTS/image_mvcwt.r") #Add to change the image function to have a nice Color Bar
@@ -62,9 +65,10 @@ mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0)
 mr = wmr.boot(mm, smoothing = 1,reps=100)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
-png('OUT/Figure3.png',width=800)
+#png('OUT/Figure3.png',width=800)
+png("Submission_JAE/Revisions/Figure3_BH.png",width=800)
 image_mvcwt(mr,reset.par=F,cex.axis=4,z.fun="Mod")
 
-abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
+#abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
 print(Sys.time())
 dev.off()

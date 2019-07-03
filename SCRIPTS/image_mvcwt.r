@@ -1,3 +1,6 @@
+#### First used by CP (2018) from Keitt's package mvcwt
+#### 2019/07/03 Corrected BY to BH correction for homogeneity reeaon
+
 image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...) 
 {
     z.fun = match.fun(z.fun)
@@ -23,7 +26,7 @@ image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...)
                 z.boot = 1 - abs(1 - 2 * z.boot)
 #                contour(x, y, z.boot[, , i], levels = 0.05, lty = 3,  #Removing the uncorrected p-values
 #                  add = TRUE, drawlabels = FALSE)
-                zb = p.adjust(as.vector(z.boot), method = "BY")
+                zb = p.adjust(as.vector(z.boot), method = "BH")
                 dim(zb) = dim(z.boot)
                 contour(x, y, zb[, , i], levels = 0.1, lwd = 0.5,lty=1, 
                   add = TRUE, drawlabels = FALSE)

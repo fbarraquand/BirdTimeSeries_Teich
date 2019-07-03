@@ -54,6 +54,9 @@ iaaft_surrogate <- function(series, n.max.iter = 150) {
     # Check for convergence
     acf.diff.new <- sqrt(sum((stats::acf(series, n - 1, plot = F)$acf -
                     stats::acf(surrogate, n - 1, plot = F)$acf)^2))
+	#print(acf.diff.new)
+	#print("old")
+	#print(acf.diff.old)
 
     if (abs(acf.diff.old - acf.diff.new) < tolerance) {
         #cat("\nConvergence achieved after ", iteration, " iterations.\n")

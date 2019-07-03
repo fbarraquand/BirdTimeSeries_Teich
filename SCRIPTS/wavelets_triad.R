@@ -1,4 +1,6 @@
-#graphics.off()
+### 2018 This code allows us to plot the wavelet figure for Cormorant/Egret/Heron
+
+graphics.off()
 rm(list=ls())
 library('mvcwt')
 source("SCRIPTS/image_mvcwt.r") #Add to change the image function to have a nice Color Bar
@@ -44,7 +46,7 @@ mm=mvcwt(x,tab,min.scale=0.2,max.scale=10.0)
 mr = wmr.boot(mm, smoothing = 1,reps=100)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
-png('OUT/wavelet_triad.png',width=800)
+png('Submission_JAE/Revisions/wavelet_triad_BH.png',width=800) #Was BY before, image_mvcwt has been changed on 2019/07/03
 
 image_mvcwt(mr,reset.par=F,cex.axis=4,z.fun="Mod")
 
