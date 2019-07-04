@@ -1708,3 +1708,18 @@ for (i in 1:length(unique_frequents_birds)){
   tab_abondance_frequents_birds[as.character(unique_frequents_birds[i]),] = round((sum(abondance_frequents_birds$Nombre[abondance_frequents_birds$Nom_latin==unique_frequents_birds[i]],na.rm=TRUE)/total_bird)*100,3)
 }
 
+
+##Nombre d'occurence 
+#minimum of observation to keep a species = Frequent Species
+SpeciesL_order =SpeciesL[order(SpeciesL)] 
+mat_n_obs_oiseaux_t=matrix(data=NA,nrow=length(SpeciesL),ncol=1)
+rownames(mat_n_obs_oiseaux_t)=c(SpeciesL_order)
+
+for (i in 1:length(SpeciesL_order)){
+  mat_n_obs_oiseaux_t[as.character(SpeciesL_order[i]),]=sum(as.character(DBt$Nom_latin)==SpeciesL_order[i],na.rm = TRUE)
+}
+
+# anas
+subset(mat_n_obs_oiseaux_t,rownames(mat_n_obs_oiseaux_t) %in% anas)
+subset(mat_n_obs_oiseaux_t,rownames(mat_n_obs_oiseaux_t) %in% limicoles)
+subset(mat_n_obs_oiseaux_t,rownames(mat_n_obs_oiseaux_t) %in% unique_frequents_birds)
