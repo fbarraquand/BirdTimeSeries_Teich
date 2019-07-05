@@ -1,7 +1,7 @@
 ####CP: original script was written in 2018 to compute the Gross index for synchrony (Gross et al. 2014) on taxonomic and functional groups of birds, and to assess their significance. 
 #### 2019/06/25: Corrected an error on standard deviation. They were computed under H0 (on shifted time series) and were associated to the observed value (errobars were built around the observed value with the sd from rands)
 ### 2019/06/27: Added BH p-val correction. Tried IAAFT and Ebisuzaki surrogates for the "between" case, and proposed to also use them for the "within" case.
-### 2019/07/03: Corrected the way rare species were ignored (not taken into account the right way before). This actually does not change anything as the Gross function already removed them, but this is cleaner (and removes the warnings).
+### 2019/07/03: Corrected the way rare species were ignored (not taken into account the right way before). This does not change anything, actually, as the Gross function already removed them, but this is cleaner (and removes the warnings).
 
 rm(list=ls())
 graphics.off()
@@ -213,7 +213,6 @@ if(box_index){
 pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=7)
 }else{
 pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=7) 
-#forall means that we use iaaft for both "between" and "within". When not said, we just do it for between (but consistence is good for you)
 }
 par(mfrow=c(1,1),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
@@ -236,7 +235,7 @@ for (v in 1:6){
         plou=quantile(essai_taxo[[v]]$rands[1:100],c(0.05,0.95))
         arrows(x,plou[1],x,plou[2],angle=90,length=0.1,code=3,col=color[v],lwd=2)
 	}
-        if (p_s<thresh){
+        if (p_s<=thresh){
                 points(x,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
@@ -254,7 +253,7 @@ upsi=0.05
 if(box_index){
 pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=14)
 }else{
-pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod,"line.pdf",sep="_"),width=11,height=14)
+pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=14)
 }
 par(mfrow=c(2,2),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="Taxonomic groups",cex.main=2)
@@ -277,7 +276,7 @@ for (v in 1:6){
         plou=quantile(essai_taxo[[v]]$rands[1:100],c(0.05,0.95))
         arrows(x,plou[1],x,plou[2],angle=90,length=0.1,code=3,col=color[v],lwd=2)
 	}
-        if (p_s<thresh){
+        if (p_s<=thresh){
                 points(x,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
@@ -296,7 +295,7 @@ for (v in 1:6){
         plou=quantile(essai_taxo[[v]]$rands[1:100],c(0.05,0.95))
         arrows(x+0.2,plou[1],x+0.2,plou[2],angle=90,length=0.1,code=3,col=color[v],lwd=2)
 	}
-        if (p_s<thresh){
+        if (p_s<=thresh){
                 points(x+0.2,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
@@ -336,7 +335,7 @@ for (v in 1:6){
 	plou=quantile(essai_taxo[[v]]$rands[1:100],c(0.05,0.95))
         arrows(x,plou[1],x,plou[2],angle=90,length=0.1,code=3,col=color[v],lwd=2)
 	}
-        if (p_s<thresh){
+        if (p_s<=thresh){
                 points(x,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
@@ -355,7 +354,7 @@ for (v in 1:6){
         plou=quantile(essai_taxo[[v]]$rands[1:100],c(0.05,0.95))
         arrows(x+0.2,plou[1],x+0.2,plou[2],angle=90,length=0.1,code=3,col=color[v],lwd=2)
 	}
-        if (p_s<thresh){
+        if (p_s<=thresh){
                 points(x+0.2,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
@@ -435,7 +434,7 @@ for (v in 1:6){
         plou=quantile(essai_taxo[[v]]$rands[1:100],c(0.05,0.95))
         arrows(x,plou[1],x,plou[2],angle=90,length=0.1,code=3,col=color[v],lwd=2)
 	}
-        if (p_s<thresh){
+        if (p_s<=thresh){
                 points(x,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 
@@ -496,7 +495,7 @@ for (v in 1:6){
 	plou=quantile(essai_taxo[[v]]$rands[1:100],c(0.05,0.95)) 
         arrows(x,plou[1],x,plou[2],angle=90,length=0.1,code=3,col=color[v],lwd=2)
 	}
-        if (p_s<thresh){
+        if (p_s<=thresh){
                 points(x,as.numeric(obs)+upsi,pch='*',col="red",cex=2)
                 }
 

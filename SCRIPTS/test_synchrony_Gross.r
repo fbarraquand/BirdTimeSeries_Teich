@@ -1,7 +1,6 @@
 ##CP 16/05/2018
 #Using the synchrony package, and more particularly the community.sync function from Gouhier and Guichard (2014) to compute confidence intervals for Gross index
-#CP 26/06/2019: Maybe there was an error in the way we computed pval=rands<obs/(nrands+1). Is the +1 ok?
-
+#CP 04/07/2019: p-value is now relying on quantile. But we wan't compute FDR-correction if we only have the corresponding boolean. Back to the very first formulation we had: https://stats.stackexchange.com/questions/25927/doubling-the-tails-in-two-sample-permutation-test (answer from caracal)  (but removed the abs() because I'm not sure it doesn't assume symmetrical distribution)
 source("SCRIPTS/iaaft.R")
 
 community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"),method=c("shift","iaaft","ebisuzaki"), 
@@ -50,15 +49,17 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
             if (!quiet) 
                 setTxtProgressBar(prog.bar, i)
         }
+        results$rands[nrands + 1] = results$obs #CP: See North et al. (2002) and answers (2003). CP & FB agreed to keep North et al.'s formula (and Gouhier et al. too BTW). 
         if (alternative == "two-tailed") {
-            results$pval = sum(abs(results$rands) >= abs(results$obs))/(nrands) 
-               # +1)
-        }else if (alternative == "greater"){
-            results$pval = sum(results$rands >= results$obs)/(nrands)
-               # 1)
-        }else{results$pval = sum(results$rands <= results$obs)/(nrands) }
-           # 1)}
-#        results$rands[nrands + 1] = results$obs #I guess this came from a previously written function (not by me), but this does not make sense à rands and obs may not represent the same hypothesis.
+#		results$pval = sum(abs(results$rands) >= abs(results$obs))/(nrands+1) ##Wondering if abs() assumes symmetry around 0
+		results$pval= 2*min(sum(results$rands >= results$obs),sum(results$rands <= results$obs))/(nrands+1) 
+        }else if(alternative=="greater"){
+		results$pval = sum(results$rands >= results$obs)/(nrands+1)
+	}else if(alternative=="less"){
+		results$pval = sum(results$rands <= results$obs)/(nrands+1)
+	}else{
+		stop("Change your alternative")
+	}
         results$alternative = alternative
     }
     return(results)
