@@ -1,0 +1,691 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{algpseudocode}
+\usepackage{ae,aecompl}
+\usepackage{amsmath}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+About surrogates
+\end_layout
+
+\begin_layout Standard
+For many test of significance, we need to build surrogates.
+ For time-series, most of the time, we want to destroy the potential cross-corre
+lation between time-series but to keep the autocorrelation within the time
+ series to avoid artefacts.
+ This can be done in the spectral domain.
+ The simplest method is the so-called caterpillar procedure to these methods
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gouhier_synchrony:_2014"
+literal "false"
+
+\end_inset
+
+, which only consist in shifting each time series by a different random
+ lag.
+ Among the more complicated methods used to build surrogates, we will present
+ the Iterative Amplitude Adapted Fourier Transform method (IAAFT, 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "schreiber_surrogate_2000"
+literal "false"
+
+\end_inset
+
+) and Ebisuzaki's method 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ebisuzaki_method_1997"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+IAAFT
+\end_layout
+
+\begin_layout Standard
+We have access to the codes from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "detto_multivariate_2013"
+literal "false"
+
+\end_inset
+
+ and Kristian Haaga from the tstools R package 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/kahaaga/tstools
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+algsetblock[Name]{Option}{EndOption}{8}{1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State Compute surrogates 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State [surr]=
+\backslash
+Call{iaaft}{x, maxiter, threshold}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 
+\backslash
+Function{iaaft}{plou}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Input}: x is the time series
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+maxiter is the maximum number of iterations for the aaft 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+threshold is the maximum difference between the surrogate and the time series
+ to accept convergence
+\end_layout
+
+\begin_layout Plain Layout
+
+	  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Output}: surr is the surrogate
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State ModObs=amplitude(spectrum(x)) 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* spectrum and spectrum$^{-1}$ correspond to Fourier transform and inverse
+ Fourier transform, respectively */
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State OrderObs=sorted indices of x
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State Shuffle x
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Option
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+State /*K.
+ Haaga*/ 1 Gaussian re-ordering: surr=x[sort($
+\backslash
+mathcal{N}$(0,2))] 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+State /*M.
+ Detto*/ 2 Random permutation: surr=x[permutation]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndOption 
+\backslash
+
+\backslash
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Init */ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Option
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/*K.
+ Haaga*/
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 1 acfObs=autocorrelation(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 2 acfTmp=autocorrelation(surr)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 3 diffOld=$
+\backslash
+sqrt{
+\backslash
+sum_
+\backslash
+text{l}(
+\backslash
+text{acfObs}_
+\backslash
+text{l}-
+\backslash
+text{acfTmp}_
+\backslash
+text{l})^2)}$=f(x,surr)  /*l is the lag*/
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 4 diffNew=diffOld+2thresh /* could be anything for diffNew-diffOld>thresh
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/*M.
+ Detto*/
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 5 corrObs=cross-correlation(x,surr)=g(x,surr)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 6 corrTmp=corrObs
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndOption
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State iter=0 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Start iteration */
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Option
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 1 convergence=|diffOld-diffNew|>thresh.AND.iter<maxiter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 2 convergence=(1-corrObs$^2$)>thresh.AND.corrTmp<1.AND.iter<maxiter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndOption
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+While {.NOT.convergence}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State iter=iter+1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State phaseTmp = phase(spectrum(surr))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State surrNew = spectrum$^{-1}$(ModObs*exp(phaseTmp))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State surrNew=surrNew[OrderObs]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Option
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 1 diffOld=diffNew; diffNew=f(surr,surrNew)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 2 corrObs=g(x,surr); corrTmp=g(surr,surrNew)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndOption
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State surr=surrNew
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndWhile
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+return surr
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State 
+\backslash
+EndFunction
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bases for the IAAFT sequence with variations from M.
+ Detto and K.
+ Haaga
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Some notes on the different algorithms I have seen:
+\end_layout
+
+\begin_layout Itemize
+I am not sure what the
+\end_layout
+
+\begin_layout Subsection*
+Ebisuzaki
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "bib_surrogates"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
