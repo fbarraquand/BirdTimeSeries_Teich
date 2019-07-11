@@ -149,12 +149,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \change_inserted -2100369821 1561468369
+
+\size tiny
 \begin_inset Tabular
-<lyxtabular version="3" rows="61" columns="6">
+<lyxtabular version="3" rows="61" columns="5">
 <features tabularvalignment="middle">
-<column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -165,7 +167,13 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -2100369821 1562819460
+
+\size tiny
 Frequent birds 
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -175,20 +183,11 @@ Frequent birds
 
 \begin_layout Plain Layout
 
-\end_layout
+\change_inserted -2100369821 1562819468
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_deleted -2100369821 1562159590
-Frequence
-\change_inserted -2100369821 1562159598
-Relative abundance
-\change_inserted -1297226133 1562152685
+\size tiny
+En
+\change_unchanged
 
 \end_layout
 
@@ -199,8 +198,16 @@ Relative abundance
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818222
+
+\size tiny
+Number of 
+\change_deleted -2100369821 1562818229
+O
+\change_inserted -2100369821 1562818229
+o
 \change_inserted -1297226133 1562225873
-Occurence
+ccurence
 \end_layout
 
 \end_inset
@@ -210,6 +217,10 @@ Occurence
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818244
+
+\size tiny
+Relative abundance
 \end_layout
 
 \end_inset
@@ -219,6 +230,10 @@ Occurence
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818267
+
+\size tiny
+Relative number of occurrence
 \end_layout
 
 \end_inset
@@ -229,6 +244,8 @@ Occurence
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Accipiter nisus 
 \end_layout
 
@@ -240,6 +257,8 @@ Accipiter nisus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136479
+
+\size tiny
 Eurasian sparrowhawk
 \change_unchanged
 
@@ -252,18 +271,9 @@ Eurasian sparrowhawk
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152940
-0.003
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225877
+
+\size tiny
 100
 \end_layout
 
@@ -274,6 +284,10 @@ Eurasian sparrowhawk
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.003 
 \end_layout
 
 \end_inset
@@ -283,6 +297,10 @@ Eurasian sparrowhawk
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+12.7 
 \end_layout
 
 \end_inset
@@ -293,6 +311,8 @@ Eurasian sparrowhawk
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Actitis hypoleucos 
 \end_layout
 
@@ -304,6 +324,8 @@ Actitis hypoleucos
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136511
+
+\size tiny
 Common sandpiper
 \change_unchanged
 
@@ -316,18 +338,9 @@ Common sandpiper
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152943
-0.054
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225880
+
+\size tiny
 198
 \end_layout
 
@@ -338,6 +351,10 @@ Common sandpiper
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.054 
 \end_layout
 
 \end_inset
@@ -347,6 +364,10 @@ Common sandpiper
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+25.2 
 \end_layout
 
 \end_inset
@@ -357,6 +378,8 @@ Common sandpiper
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Alcedo atthis 
 \end_layout
 
@@ -368,6 +391,8 @@ Alcedo atthis
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136547
+
+\size tiny
 Common kingfisher
 \change_unchanged
 
@@ -380,18 +405,9 @@ Common kingfisher
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152948
-0.017
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225882
+
+\size tiny
 95
 \end_layout
 
@@ -402,6 +418,10 @@ Common kingfisher
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.017 
 \end_layout
 
 \end_inset
@@ -411,6 +431,10 @@ Common kingfisher
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+12.1 
 \end_layout
 
 \end_inset
@@ -421,6 +445,8 @@ Common kingfisher
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anas acuta 
 \end_layout
 
@@ -432,6 +458,8 @@ Anas acuta
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136545
+
+\size tiny
 Northern pintail
 \change_unchanged
 
@@ -444,18 +472,9 @@ Northern pintail
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152956
-1.708
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225885
+
+\size tiny
 470
 \end_layout
 
@@ -466,6 +485,10 @@ Northern pintail
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+1.708 
 \end_layout
 
 \end_inset
@@ -475,6 +498,10 @@ Northern pintail
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+59.9 
 \end_layout
 
 \end_inset
@@ -485,6 +512,8 @@ Northern pintail
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anas clypeata 
 \end_layout
 
@@ -496,6 +525,8 @@ Anas clypeata
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136561
+
+\size tiny
 Northern shoveler
 \change_unchanged
 
@@ -508,18 +539,9 @@ Northern shoveler
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152960
-1.580
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225890
+
+\size tiny
 498
 \end_layout
 
@@ -530,6 +552,10 @@ Northern shoveler
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+1.580 
 \end_layout
 
 \end_inset
@@ -539,6 +565,10 @@ Northern shoveler
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+63.4 
 \end_layout
 
 \end_inset
@@ -549,6 +579,8 @@ Northern shoveler
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anas crecca 
 \end_layout
 
@@ -560,6 +592,8 @@ Anas crecca
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136573
+
+\size tiny
 Eurasian teal
 \change_unchanged
 
@@ -572,18 +606,9 @@ Eurasian teal
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152965
-6.613
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225895
+
+\size tiny
 502
 \end_layout
 
@@ -594,6 +619,10 @@ Eurasian teal
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+6.613 
 \end_layout
 
 \end_inset
@@ -603,6 +632,10 @@ Eurasian teal
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+63.9 
 \end_layout
 
 \end_inset
@@ -613,6 +646,8 @@ Eurasian teal
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anas penelope 
 \end_layout
 
@@ -624,6 +659,8 @@ Anas penelope
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136611
+
+\size tiny
 Eurasian wigeon
 \change_unchanged
 
@@ -636,18 +673,9 @@ Eurasian wigeon
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152969
-0.055
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225898
+
+\size tiny
 286
 \end_layout
 
@@ -658,6 +686,10 @@ Eurasian wigeon
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.055 
 \end_layout
 
 \end_inset
@@ -667,6 +699,10 @@ Eurasian wigeon
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+36.4 
 \end_layout
 
 \end_inset
@@ -677,6 +713,8 @@ Eurasian wigeon
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anas platyrhynchos 
 \end_layout
 
@@ -688,6 +726,8 @@ Anas platyrhynchos
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136632
+
+\size tiny
 Mallard
 \change_unchanged
 
@@ -700,18 +740,9 @@ Mallard
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152973
-3.388
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225902
+
+\size tiny
 500
 \end_layout
 
@@ -722,6 +753,10 @@ Mallard
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+3.388 
 \end_layout
 
 \end_inset
@@ -731,6 +766,10 @@ Mallard
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+63.7 
 \end_layout
 
 \end_inset
@@ -741,6 +780,8 @@ Mallard
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anas querquedula 
 \end_layout
 
@@ -752,6 +793,8 @@ Anas querquedula
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136650
+
+\size tiny
 Garganey
 \change_unchanged
 
@@ -764,18 +807,9 @@ Garganey
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152977
-0.032
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225966
+
+\size tiny
 203
 \end_layout
 
@@ -786,6 +820,10 @@ Garganey
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.032 
 \end_layout
 
 \end_inset
@@ -795,6 +833,10 @@ Garganey
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+25.9 
 \end_layout
 
 \end_inset
@@ -805,6 +847,8 @@ Garganey
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anas strepera 
 \end_layout
 
@@ -816,6 +860,8 @@ Anas strepera
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136666
+
+\size tiny
 Gadwall
 \change_unchanged
 
@@ -828,18 +874,9 @@ Gadwall
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152984
-0.308
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225971
+
+\size tiny
 382
 \end_layout
 
@@ -850,6 +887,10 @@ Gadwall
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.308 
 \end_layout
 
 \end_inset
@@ -859,6 +900,10 @@ Gadwall
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+48.7 
 \end_layout
 
 \end_inset
@@ -869,6 +914,8 @@ Gadwall
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Anser anser 
 \end_layout
 
@@ -880,6 +927,8 @@ Anser anser
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136682
+
+\size tiny
 Greylag goose
 \change_unchanged
 
@@ -892,18 +941,9 @@ Greylag goose
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562152988
-1.135
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225973
+
+\size tiny
 371
 \end_layout
 
@@ -914,6 +954,10 @@ Greylag goose
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+1.135 
 \end_layout
 
 \end_inset
@@ -923,6 +967,10 @@ Greylag goose
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+47.3 
 \end_layout
 
 \end_inset
@@ -933,6 +981,8 @@ Greylag goose
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Ardea cinerea 
 \end_layout
 
@@ -944,6 +994,8 @@ Ardea cinerea
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136693
+
+\size tiny
 Grey heron
 \change_unchanged
 
@@ -956,18 +1008,9 @@ Grey heron
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153000
-2.476
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225976
+
+\size tiny
 494
 \end_layout
 
@@ -978,6 +1021,10 @@ Grey heron
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+2.476 
 \end_layout
 
 \end_inset
@@ -987,6 +1034,10 @@ Grey heron
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+62.9 
 \end_layout
 
 \end_inset
@@ -997,6 +1048,8 @@ Grey heron
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Arenaria interpres 
 \end_layout
 
@@ -1008,6 +1061,8 @@ Arenaria interpres
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136706
+
+\size tiny
 Ruddy turnstone
 \change_unchanged
 
@@ -1020,18 +1075,9 @@ Ruddy turnstone
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153004
-0.020
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225979
+
+\size tiny
 115
 \end_layout
 
@@ -1042,6 +1088,10 @@ Ruddy turnstone
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.020 
 \end_layout
 
 \end_inset
@@ -1051,6 +1101,10 @@ Ruddy turnstone
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+14.6 
 \end_layout
 
 \end_inset
@@ -1061,6 +1115,8 @@ Ruddy turnstone
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Aythya ferina 
 \end_layout
 
@@ -1072,6 +1128,8 @@ Aythya ferina
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136720
+
+\size tiny
 Common pochard
 \change_unchanged
 
@@ -1084,18 +1142,9 @@ Common pochard
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153009
-1.053
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225981
+
+\size tiny
 448
 \end_layout
 
@@ -1106,6 +1155,10 @@ Common pochard
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+1.053 
 \end_layout
 
 \end_inset
@@ -1115,6 +1168,10 @@ Common pochard
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+57.1 
 \end_layout
 
 \end_inset
@@ -1125,6 +1182,8 @@ Common pochard
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Aythya fuligula 
 \end_layout
 
@@ -1136,6 +1195,8 @@ Aythya fuligula
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136734
+
+\size tiny
 Tufted duck
 \change_unchanged
 
@@ -1148,18 +1209,9 @@ Tufted duck
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153012
-0.467
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225984
+
+\size tiny
 359
 \end_layout
 
@@ -1170,6 +1222,10 @@ Tufted duck
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.467 
 \end_layout
 
 \end_inset
@@ -1179,6 +1235,10 @@ Tufted duck
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+45.7 
 \end_layout
 
 \end_inset
@@ -1189,6 +1249,8 @@ Tufted duck
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Bubulcus ibis 
 \end_layout
 
@@ -1200,6 +1262,8 @@ Bubulcus ibis
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136746
+
+\size tiny
 Western cattle egret
 \change_unchanged
 
@@ -1212,18 +1276,9 @@ Western cattle egret
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153016
-0.381
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225990
+
+\size tiny
 297
 \end_layout
 
@@ -1234,6 +1289,10 @@ Western cattle egret
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.381 
 \end_layout
 
 \end_inset
@@ -1243,6 +1302,10 @@ Western cattle egret
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+37.8 
 \end_layout
 
 \end_inset
@@ -1253,6 +1316,8 @@ Western cattle egret
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Calidris alpina 
 \end_layout
 
@@ -1264,6 +1329,8 @@ Calidris alpina
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136757
+
+\size tiny
 Dunlin
 \change_unchanged
 
@@ -1276,18 +1343,9 @@ Dunlin
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153034
-23.396
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225992
+
+\size tiny
 292
 \end_layout
 
@@ -1298,6 +1356,10 @@ Dunlin
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+26.395 
 \end_layout
 
 \end_inset
@@ -1307,6 +1369,10 @@ Dunlin
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+37.2 
 \end_layout
 
 \end_inset
@@ -1317,6 +1383,8 @@ Dunlin
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Calidris canutus 
 \end_layout
 
@@ -1328,6 +1396,8 @@ Calidris canutus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136768
+
+\size tiny
 Red knot
 \change_unchanged
 
@@ -1340,18 +1410,9 @@ Red knot
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153037
-0.406
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562225995
+
+\size tiny
 177
 \end_layout
 
@@ -1362,6 +1423,10 @@ Red knot
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.406 
 \end_layout
 
 \end_inset
@@ -1371,6 +1436,10 @@ Red knot
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+22.5 
 \end_layout
 
 \end_inset
@@ -1381,6 +1450,8 @@ Red knot
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Calidris ferruginea 
 \end_layout
 
@@ -1392,6 +1463,8 @@ Calidris ferruginea
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136786
+
+\size tiny
 Curlew sandpiper
 \change_unchanged
 
@@ -1404,18 +1477,9 @@ Curlew sandpiper
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153041
-0.067
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226005
+
+\size tiny
 116
 \end_layout
 
@@ -1426,6 +1490,10 @@ Curlew sandpiper
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.067 
 \end_layout
 
 \end_inset
@@ -1435,6 +1503,10 @@ Curlew sandpiper
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+14.8 
 \end_layout
 
 \end_inset
@@ -1445,6 +1517,8 @@ Curlew sandpiper
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Calidris minuta 
 \end_layout
 
@@ -1456,6 +1530,8 @@ Calidris minuta
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136796
+
+\size tiny
 Little stint
 \change_unchanged
 
@@ -1468,18 +1544,9 @@ Little stint
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153044
-0.129
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226008
+
+\size tiny
 197
 \end_layout
 
@@ -1490,6 +1557,10 @@ Little stint
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.129 
 \end_layout
 
 \end_inset
@@ -1499,6 +1570,10 @@ Little stint
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+25.1 
 \end_layout
 
 \end_inset
@@ -1509,6 +1584,8 @@ Little stint
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Casmerodius albus 
 \end_layout
 
@@ -1520,6 +1597,8 @@ Casmerodius albus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136831
+
+\size tiny
 Great egret
 \change_unchanged
 
@@ -1532,18 +1611,9 @@ Great egret
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153047
-0.150
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226012
+
+\size tiny
 235
 \end_layout
 
@@ -1554,6 +1624,10 @@ Great egret
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.150 
 \end_layout
 
 \end_inset
@@ -1563,6 +1637,10 @@ Great egret
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+29.9 
 \end_layout
 
 \end_inset
@@ -1573,6 +1651,8 @@ Great egret
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Charadrius dubius 
 \end_layout
 
@@ -1584,6 +1664,8 @@ Charadrius dubius
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136858
+
+\size tiny
 Little ringed plover
 \change_unchanged
 
@@ -1596,18 +1678,9 @@ Little ringed plover
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153054
-0.040
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226016
+
+\size tiny
 143
 \end_layout
 
@@ -1618,6 +1691,10 @@ Little ringed plover
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.040 
 \end_layout
 
 \end_inset
@@ -1627,6 +1704,10 @@ Little ringed plover
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+18.2 
 \end_layout
 
 \end_inset
@@ -1637,6 +1718,8 @@ Little ringed plover
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Charadrius hiaticula 
 \end_layout
 
@@ -1648,6 +1731,8 @@ Charadrius hiaticula
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136867
+
+\size tiny
 Common ringed plover
 \change_unchanged
 
@@ -1660,18 +1745,9 @@ Common ringed plover
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153061
-0.921
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226018
+
+\size tiny
 268
 \end_layout
 
@@ -1682,6 +1758,10 @@ Common ringed plover
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.921 
 \end_layout
 
 \end_inset
@@ -1691,6 +1771,10 @@ Common ringed plover
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+34.1 
 \end_layout
 
 \end_inset
@@ -1701,6 +1785,8 @@ Common ringed plover
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Chroicocephalus ridibundus 
 \end_layout
 
@@ -1712,6 +1798,8 @@ Chroicocephalus ridibundus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136883
+
+\size tiny
 Black-headed gull
 \change_unchanged
 
@@ -1724,18 +1812,9 @@ Black-headed gull
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153068
-9.646
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226020
+
+\size tiny
 402
 \end_layout
 
@@ -1746,6 +1825,10 @@ Black-headed gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+9.645 
 \end_layout
 
 \end_inset
@@ -1755,6 +1838,10 @@ Black-headed gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+51.2 
 \end_layout
 
 \end_inset
@@ -1765,6 +1852,8 @@ Black-headed gull
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Ciconia ciconia 
 \end_layout
 
@@ -1776,6 +1865,8 @@ Ciconia ciconia
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136895
+
+\size tiny
 White stork
 \change_unchanged
 
@@ -1788,18 +1879,9 @@ White stork
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153078
-0.905
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226022
+
+\size tiny
 402
 \end_layout
 
@@ -1810,6 +1892,10 @@ White stork
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.905 
 \end_layout
 
 \end_inset
@@ -1819,6 +1905,10 @@ White stork
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+51.2 
 \end_layout
 
 \end_inset
@@ -1829,6 +1919,8 @@ White stork
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Circus aeruginosus 
 \end_layout
 
@@ -1840,6 +1932,8 @@ Circus aeruginosus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136907
+
+\size tiny
 Western marsh harrier
 \change_unchanged
 
@@ -1852,18 +1946,9 @@ Western marsh harrier
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153083
-0.017
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226025
+
+\size tiny
 183
 \end_layout
 
@@ -1874,6 +1959,10 @@ Western marsh harrier
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.017 
 \end_layout
 
 \end_inset
@@ -1883,6 +1972,10 @@ Western marsh harrier
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+23.3 
 \end_layout
 
 \end_inset
@@ -1893,6 +1986,8 @@ Western marsh harrier
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Cygnus olor 
 \end_layout
 
@@ -1904,6 +1999,8 @@ Cygnus olor
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136917
+
+\size tiny
 Mute swan
 \change_unchanged
 
@@ -1916,18 +2013,9 @@ Mute swan
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153087
-0.618
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226036
+
+\size tiny
 392
 \end_layout
 
@@ -1938,6 +2026,10 @@ Mute swan
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.618 
 \end_layout
 
 \end_inset
@@ -1947,6 +2039,10 @@ Mute swan
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+49.9 
 \end_layout
 
 \end_inset
@@ -1957,6 +2053,8 @@ Mute swan
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Egretta garzetta 
 \end_layout
 
@@ -1968,6 +2066,8 @@ Egretta garzetta
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136927
+
+\size tiny
 Little egret
 \change_unchanged
 
@@ -1980,18 +2080,9 @@ Little egret
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153092
-6.511
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226041
+
+\size tiny
 432
 \end_layout
 
@@ -2002,6 +2093,10 @@ Little egret
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+6.511 
 \end_layout
 
 \end_inset
@@ -2011,6 +2106,10 @@ Little egret
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+55.0 
 \end_layout
 
 \end_inset
@@ -2023,6 +2122,8 @@ Little egret
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153470
+
+\size tiny
 Falco perigrinus
 \end_layout
 
@@ -2034,6 +2135,8 @@ Falco perigrinus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153557
+
+\size tiny
 Peregrine falcon
 \end_layout
 
@@ -2044,18 +2147,9 @@ Peregrine falcon
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153520
-0.003
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226051
+
+\size tiny
 108
 \end_layout
 
@@ -2066,8 +2160,10 @@ Peregrine falcon
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153453
+\change_inserted -2100369821 1562818199
 
+\size tiny
+0.003 
 \end_layout
 
 \end_inset
@@ -2077,8 +2173,10 @@ Peregrine falcon
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153453
+\change_inserted -2100369821 1562818199
 
+\size tiny
+13.8 
 \end_layout
 
 \end_inset
@@ -2091,6 +2189,8 @@ Peregrine falcon
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153482
+
+\size tiny
 Fulica atra
 \end_layout
 
@@ -2102,6 +2202,8 @@ Fulica atra
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153570
+
+\size tiny
 Eurasian coot
 \end_layout
 
@@ -2112,18 +2214,9 @@ Eurasian coot
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153525
-16.008
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226063
+
+\size tiny
 504
 \end_layout
 
@@ -2134,8 +2227,10 @@ Eurasian coot
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153473
+\change_inserted -2100369821 1562818199
 
+\size tiny
+16.008 
 \end_layout
 
 \end_inset
@@ -2145,8 +2240,10 @@ Eurasian coot
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153473
+\change_inserted -2100369821 1562818199
 
+\size tiny
+64.2 
 \end_layout
 
 \end_inset
@@ -2159,6 +2256,8 @@ Eurasian coot
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153497
+
+\size tiny
 Gallinago gallinago
 \end_layout
 
@@ -2170,6 +2269,8 @@ Gallinago gallinago
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153583
+
+\size tiny
 Common snipe
 \end_layout
 
@@ -2180,18 +2281,9 @@ Common snipe
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153529
-0.184
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226065
+
+\size tiny
 181
 \end_layout
 
@@ -2202,8 +2294,10 @@ Common snipe
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153485
+\change_inserted -2100369821 1562818199
 
+\size tiny
+0.184 
 \end_layout
 
 \end_inset
@@ -2213,8 +2307,10 @@ Common snipe
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153485
+\change_inserted -2100369821 1562818199
 
+\size tiny
+23.1 
 \end_layout
 
 \end_inset
@@ -2227,6 +2323,8 @@ Common snipe
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153514
+
+\size tiny
 Gallinula chloropus
 \end_layout
 
@@ -2238,6 +2336,8 @@ Gallinula chloropus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562153594
+
+\size tiny
 Common moorhen
 \end_layout
 
@@ -2248,18 +2348,9 @@ Common moorhen
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153533
-1.106
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226066
+
+\size tiny
 331
 \end_layout
 
@@ -2270,8 +2361,10 @@ Common moorhen
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153505
+\change_inserted -2100369821 1562818199
 
+\size tiny
+1.106 
 \end_layout
 
 \end_inset
@@ -2281,8 +2374,10 @@ Common moorhen
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153505
+\change_inserted -2100369821 1562818199
 
+\size tiny
+42.2 
 \end_layout
 
 \end_inset
@@ -2293,6 +2388,8 @@ Common moorhen
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Himantopus himantopus 
 \end_layout
 
@@ -2304,6 +2401,8 @@ Himantopus himantopus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136939
+
+\size tiny
 Black-winged stilt
 \change_unchanged
 
@@ -2316,18 +2415,9 @@ Black-winged stilt
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153239
-0.079
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226068
+
+\size tiny
 95
 \end_layout
 
@@ -2338,6 +2428,10 @@ Black-winged stilt
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.079 
 \end_layout
 
 \end_inset
@@ -2347,6 +2441,10 @@ Black-winged stilt
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+12.1 
 \end_layout
 
 \end_inset
@@ -2357,6 +2455,8 @@ Black-winged stilt
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Larus argentatus 
 \end_layout
 
@@ -2368,6 +2468,8 @@ Larus argentatus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136950
+
+\size tiny
 European herring gull
 \change_unchanged
 
@@ -2380,18 +2482,9 @@ European herring gull
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153254
-3.414
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226069
+
+\size tiny
 285
 \end_layout
 
@@ -2402,6 +2495,10 @@ European herring gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+3.414 
 \end_layout
 
 \end_inset
@@ -2411,6 +2508,10 @@ European herring gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+36.3 
 \end_layout
 
 \end_inset
@@ -2421,6 +2522,8 @@ European herring gull
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Larus fuscus 
 \end_layout
 
@@ -2432,6 +2535,8 @@ Larus fuscus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136960
+
+\size tiny
 Lesser black-backed gull
 \change_unchanged
 
@@ -2444,18 +2549,9 @@ Lesser black-backed gull
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153259
-0.088
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226071
+
+\size tiny
 252
 \end_layout
 
@@ -2466,6 +2562,10 @@ Lesser black-backed gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.088 
 \end_layout
 
 \end_inset
@@ -2475,6 +2575,10 @@ Lesser black-backed gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+32.1 
 \end_layout
 
 \end_inset
@@ -2485,6 +2589,8 @@ Lesser black-backed gull
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Larus marinus 
 \end_layout
 
@@ -2496,6 +2602,8 @@ Larus marinus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136971
+
+\size tiny
 Great black-backed gull
 \change_unchanged
 
@@ -2508,18 +2616,9 @@ Great black-backed gull
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153267
-0.039
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226075
+
+\size tiny
 305
 \end_layout
 
@@ -2530,6 +2629,10 @@ Great black-backed gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.039 
 \end_layout
 
 \end_inset
@@ -2539,6 +2642,10 @@ Great black-backed gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+38.9 
 \end_layout
 
 \end_inset
@@ -2549,6 +2656,8 @@ Great black-backed gull
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Larus michahellis 
 \end_layout
 
@@ -2560,6 +2669,8 @@ Larus michahellis
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136980
+
+\size tiny
 Yellow-legged gull
 \change_unchanged
 
@@ -2572,18 +2683,9 @@ Yellow-legged gull
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153274
-0.210
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226086
+
+\size tiny
 137
 \end_layout
 
@@ -2594,6 +2696,10 @@ Yellow-legged gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.210 
 \end_layout
 
 \end_inset
@@ -2603,6 +2709,10 @@ Yellow-legged gull
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+17.5 
 \end_layout
 
 \end_inset
@@ -2613,6 +2723,8 @@ Yellow-legged gull
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Limosa lapponica 
 \end_layout
 
@@ -2624,6 +2736,8 @@ Limosa lapponica
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562136990
+
+\size tiny
 Bar-tailed godwit
 \change_unchanged
 
@@ -2636,18 +2750,9 @@ Bar-tailed godwit
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153278
-0.327
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226088
+
+\size tiny
 144
 \end_layout
 
@@ -2658,6 +2763,10 @@ Bar-tailed godwit
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.327 
 \end_layout
 
 \end_inset
@@ -2667,6 +2776,10 @@ Bar-tailed godwit
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+18.3 
 \end_layout
 
 \end_inset
@@ -2677,6 +2790,8 @@ Bar-tailed godwit
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Limosa limosa 
 \end_layout
 
@@ -2688,6 +2803,8 @@ Limosa limosa
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137006
+
+\size tiny
 Black-tailed godwit
 \change_unchanged
 
@@ -2700,18 +2817,9 @@ Black-tailed godwit
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153286
-1.802
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226092
+
+\size tiny
 233
 \end_layout
 
@@ -2722,6 +2830,10 @@ Black-tailed godwit
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+1.802 
 \end_layout
 
 \end_inset
@@ -2731,6 +2843,10 @@ Black-tailed godwit
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+29.7 
 \end_layout
 
 \end_inset
@@ -2741,6 +2857,8 @@ Black-tailed godwit
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Milvus migrans 
 \end_layout
 
@@ -2752,6 +2870,8 @@ Milvus migrans
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137015
+
+\size tiny
 Black kite
 \change_unchanged
 
@@ -2764,18 +2884,9 @@ Black kite
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153290
-0.106
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226094
+
+\size tiny
 100
 \end_layout
 
@@ -2786,6 +2897,10 @@ Black kite
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.106 
 \end_layout
 
 \end_inset
@@ -2795,6 +2910,10 @@ Black kite
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+12.7 
 \end_layout
 
 \end_inset
@@ -2805,6 +2924,8 @@ Black kite
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Netta rufina 
 \end_layout
 
@@ -2816,6 +2937,8 @@ Netta rufina
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137027
+
+\size tiny
 Red-crested pochard
 \change_unchanged
 
@@ -2828,18 +2951,9 @@ Red-crested pochard
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153300
-0.030
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226096
+
+\size tiny
 212
 \end_layout
 
@@ -2850,6 +2964,10 @@ Red-crested pochard
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.030 
 \end_layout
 
 \end_inset
@@ -2859,6 +2977,10 @@ Red-crested pochard
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+27.0 
 \end_layout
 
 \end_inset
@@ -2869,6 +2991,8 @@ Red-crested pochard
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Numenius arquata 
 \end_layout
 
@@ -2880,6 +3004,8 @@ Numenius arquata
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137036
+
+\size tiny
 Eurasian curlew
 \change_unchanged
 
@@ -2892,18 +3018,9 @@ Eurasian curlew
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153306
-1.167
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226098
+
+\size tiny
 133
 \end_layout
 
@@ -2914,6 +3031,10 @@ Eurasian curlew
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+1.167 
 \end_layout
 
 \end_inset
@@ -2923,6 +3044,10 @@ Eurasian curlew
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+16.9 
 \end_layout
 
 \end_inset
@@ -2933,6 +3058,8 @@ Eurasian curlew
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Numenius phaeopus 
 \end_layout
 
@@ -2944,6 +3071,8 @@ Numenius phaeopus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137048
+
+\size tiny
 Whimbrel
 \change_unchanged
 
@@ -2956,18 +3085,9 @@ Whimbrel
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153311
-0.102
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226100
+
+\size tiny
 87
 \end_layout
 
@@ -2978,6 +3098,10 @@ Whimbrel
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.102 
 \end_layout
 
 \end_inset
@@ -2987,6 +3111,10 @@ Whimbrel
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+11.1 
 \end_layout
 
 \end_inset
@@ -2997,6 +3125,8 @@ Whimbrel
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Nycticorax nycticorax 
 \end_layout
 
@@ -3008,6 +3138,8 @@ Nycticorax nycticorax
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137060
+
+\size tiny
 Black-crowned night heron
 \change_unchanged
 
@@ -3020,18 +3152,9 @@ Black-crowned night heron
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153319
-0.160
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226102
+
+\size tiny
 458
 \end_layout
 
@@ -3042,6 +3165,10 @@ Black-crowned night heron
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.160 
 \end_layout
 
 \end_inset
@@ -3051,6 +3178,10 @@ Black-crowned night heron
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+58.3 
 \end_layout
 
 \end_inset
@@ -3061,6 +3192,8 @@ Black-crowned night heron
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Phalacrocorax carbo 
 \end_layout
 
@@ -3072,6 +3205,8 @@ Phalacrocorax carbo
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137071
+
+\size tiny
 Great cormorant
 \change_unchanged
 
@@ -3084,18 +3219,9 @@ Great cormorant
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153323
-3.616
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226104
+
+\size tiny
 452
 \end_layout
 
@@ -3106,6 +3232,10 @@ Great cormorant
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+3.616 
 \end_layout
 
 \end_inset
@@ -3115,6 +3245,10 @@ Great cormorant
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+57.6 
 \end_layout
 
 \end_inset
@@ -3125,6 +3259,8 @@ Great cormorant
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Philomachus pugnax 
 \end_layout
 
@@ -3136,6 +3272,8 @@ Philomachus pugnax
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137082
+
+\size tiny
 Ruff
 \change_unchanged
 
@@ -3148,18 +3286,9 @@ Ruff
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153329
-0.010
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226106
+
+\size tiny
 89
 \end_layout
 
@@ -3170,6 +3299,10 @@ Ruff
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.010 
 \end_layout
 
 \end_inset
@@ -3179,6 +3312,10 @@ Ruff
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+11.3 
 \end_layout
 
 \end_inset
@@ -3189,6 +3326,8 @@ Ruff
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Platalea leucorodia 
 \end_layout
 
@@ -3200,6 +3339,8 @@ Platalea leucorodia
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137093
+
+\size tiny
 Eurasian spoonbill
 \change_unchanged
 
@@ -3212,18 +3353,9 @@ Eurasian spoonbill
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153334
-0.721
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226111
+
+\size tiny
 378
 \end_layout
 
@@ -3234,6 +3366,10 @@ Eurasian spoonbill
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.721 
 \end_layout
 
 \end_inset
@@ -3243,6 +3379,10 @@ Eurasian spoonbill
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+48.2 
 \end_layout
 
 \end_inset
@@ -3253,6 +3393,8 @@ Eurasian spoonbill
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Pluvialis squatarola 
 \end_layout
 
@@ -3264,6 +3406,8 @@ Pluvialis squatarola
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137105
+
+\size tiny
 Grey plover
 \change_unchanged
 
@@ -3276,18 +3420,9 @@ Grey plover
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153339
-0.669
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226116
+
+\size tiny
 258
 \end_layout
 
@@ -3298,6 +3433,10 @@ Grey plover
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.669 
 \end_layout
 
 \end_inset
@@ -3307,6 +3446,10 @@ Grey plover
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+32.9 
 \end_layout
 
 \end_inset
@@ -3317,6 +3460,8 @@ Grey plover
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Podiceps cristatus 
 \end_layout
 
@@ -3328,6 +3473,8 @@ Podiceps cristatus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137117
+
+\size tiny
 Great crested grebe
 \change_unchanged
 
@@ -3340,18 +3487,9 @@ Great crested grebe
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153348
-0.033
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226123
+
+\size tiny
 224
 \end_layout
 
@@ -3362,6 +3500,10 @@ Great crested grebe
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.033 
 \end_layout
 
 \end_inset
@@ -3371,6 +3513,10 @@ Great crested grebe
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+28.5 
 \end_layout
 
 \end_inset
@@ -3381,6 +3527,8 @@ Great crested grebe
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Podiceps nigricollis 
 \end_layout
 
@@ -3392,6 +3540,8 @@ Podiceps nigricollis
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137128
+
+\size tiny
 Black-necked grebe
 \change_unchanged
 
@@ -3404,18 +3554,9 @@ Black-necked grebe
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153351
-0.008
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226125
+
+\size tiny
 94
 \end_layout
 
@@ -3426,6 +3567,10 @@ Black-necked grebe
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.008 
 \end_layout
 
 \end_inset
@@ -3435,6 +3580,10 @@ Black-necked grebe
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+12.0 
 \end_layout
 
 \end_inset
@@ -3445,6 +3594,8 @@ Black-necked grebe
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Rallus aquaticus 
 \end_layout
 
@@ -3456,6 +3607,8 @@ Rallus aquaticus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137138
+
+\size tiny
 Water rail
 \change_unchanged
 
@@ -3468,18 +3621,9 @@ Water rail
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153368
-0.594
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226127
+
+\size tiny
 317
 \end_layout
 
@@ -3490,6 +3634,10 @@ Water rail
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.594 
 \end_layout
 
 \end_inset
@@ -3499,6 +3647,10 @@ Water rail
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+40.4 
 \end_layout
 
 \end_inset
@@ -3509,6 +3661,8 @@ Water rail
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Recurvirostra avosetta 
 \end_layout
 
@@ -3520,6 +3674,8 @@ Recurvirostra avosetta
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137159
+
+\size tiny
 Pied avocet
 \change_unchanged
 
@@ -3532,18 +3688,9 @@ Pied avocet
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153374
-0.775
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226133
+
+\size tiny
 196
 \end_layout
 
@@ -3554,6 +3701,10 @@ Pied avocet
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.775 
 \end_layout
 
 \end_inset
@@ -3563,6 +3714,10 @@ Pied avocet
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+25.0 
 \end_layout
 
 \end_inset
@@ -3573,6 +3728,8 @@ Pied avocet
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Tachybaptus ruficollis 
 \end_layout
 
@@ -3584,6 +3741,8 @@ Tachybaptus ruficollis
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137182
+
+\size tiny
 Little grebe
 \change_unchanged
 
@@ -3596,18 +3755,9 @@ Little grebe
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153382
-0.403
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226135
+
+\size tiny
 351
 \end_layout
 
@@ -3618,6 +3768,10 @@ Little grebe
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.403 
 \end_layout
 
 \end_inset
@@ -3627,6 +3781,10 @@ Little grebe
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+44.7 
 \end_layout
 
 \end_inset
@@ -3637,6 +3795,8 @@ Little grebe
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Tadorna tadorna 
 \end_layout
 
@@ -3648,6 +3808,8 @@ Tadorna tadorna
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137193
+
+\size tiny
 Common shelduck
 \change_unchanged
 
@@ -3660,18 +3822,9 @@ Common shelduck
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153386
-0.870
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226138
+
+\size tiny
 416
 \end_layout
 
@@ -3682,6 +3835,10 @@ Common shelduck
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.870 
 \end_layout
 
 \end_inset
@@ -3691,6 +3848,10 @@ Common shelduck
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+53.0 
 \end_layout
 
 \end_inset
@@ -3701,6 +3862,8 @@ Common shelduck
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Threskiornis aethiopicus 
 \end_layout
 
@@ -3712,6 +3875,8 @@ Threskiornis aethiopicus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137206
+
+\size tiny
 African sacred ibis
 \change_unchanged
 
@@ -3724,18 +3889,9 @@ African sacred ibis
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153392
-0.019
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226140
+
+\size tiny
 98
 \end_layout
 
@@ -3746,6 +3902,10 @@ African sacred ibis
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.019 
 \end_layout
 
 \end_inset
@@ -3755,6 +3915,10 @@ African sacred ibis
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+12.5 
 \end_layout
 
 \end_inset
@@ -3765,6 +3929,8 @@ African sacred ibis
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Tringa erythropus 
 \end_layout
 
@@ -3776,6 +3942,8 @@ Tringa erythropus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137217
+
+\size tiny
 Spotted redshank
 \change_unchanged
 
@@ -3788,18 +3956,9 @@ Spotted redshank
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153400
-0.133
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226144
+
+\size tiny
 187
 \end_layout
 
@@ -3810,6 +3969,10 @@ Spotted redshank
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.133 
 \end_layout
 
 \end_inset
@@ -3819,6 +3982,10 @@ Spotted redshank
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+23.8 
 \end_layout
 
 \end_inset
@@ -3829,6 +3996,8 @@ Spotted redshank
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Tringa nebularia 
 \end_layout
 
@@ -3840,6 +4009,8 @@ Tringa nebularia
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137226
+
+\size tiny
 Common greenshank
 \change_unchanged
 
@@ -3852,18 +4023,9 @@ Common greenshank
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153404
-0.173
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226149
+
+\size tiny
 196
 \end_layout
 
@@ -3874,6 +4036,10 @@ Common greenshank
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.173 
 \end_layout
 
 \end_inset
@@ -3883,6 +4049,10 @@ Common greenshank
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+25.0 
 \end_layout
 
 \end_inset
@@ -3893,6 +4063,8 @@ Common greenshank
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Tringa ochropus 
 \end_layout
 
@@ -3904,6 +4076,8 @@ Tringa ochropus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137236
+
+\size tiny
 Green sandpiper
 \change_unchanged
 
@@ -3916,18 +4090,9 @@ Green sandpiper
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153407
-0.014
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226154
+
+\size tiny
 121
 \end_layout
 
@@ -3938,6 +4103,10 @@ Green sandpiper
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.014 
 \end_layout
 
 \end_inset
@@ -3947,6 +4116,10 @@ Green sandpiper
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+15.4 
 \end_layout
 
 \end_inset
@@ -3957,6 +4130,8 @@ Green sandpiper
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Tringa totanus 
 \end_layout
 
@@ -3968,6 +4143,8 @@ Tringa totanus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137248
+
+\size tiny
 Common redshank
 \change_unchanged
 
@@ -3980,18 +4157,9 @@ Common redshank
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153415
-0.670
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226156
+
+\size tiny
 254
 \end_layout
 
@@ -4002,6 +4170,10 @@ Common redshank
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.670 
 \end_layout
 
 \end_inset
@@ -4011,6 +4183,10 @@ Common redshank
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+32.4 
 \end_layout
 
 \end_inset
@@ -4021,6 +4197,8 @@ Common redshank
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size tiny
 Vanellus vanellus 
 \end_layout
 
@@ -4032,6 +4210,8 @@ Vanellus vanellus
 \begin_layout Plain Layout
 
 \change_inserted -1297226133 1562137261
+
+\size tiny
 Northern lapwing
 \change_unchanged
 
@@ -4044,18 +4224,9 @@ Northern lapwing
 
 \begin_layout Plain Layout
 
-\change_inserted -1297226133 1562153418
-0.265
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \change_inserted -1297226133 1562226158
+
+\size tiny
 179
 \end_layout
 
@@ -4066,6 +4237,10 @@ Northern lapwing
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+0.265 
 \end_layout
 
 \end_inset
@@ -4075,6 +4250,10 @@ Northern lapwing
 
 \begin_layout Plain Layout
 
+\change_inserted -2100369821 1562818199
+
+\size tiny
+22.8 
 \end_layout
 
 \end_inset
@@ -4085,12 +4264,14 @@ Northern lapwing
 \end_inset
 
 
+\size default
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1561468945
-60 most frequent species (observed more than 75 times over the whole monitoring)
+\change_inserted -2100369821 1562819525
+Definition of the 60 most frequent species in the community
 \end_layout
 
 \end_inset
@@ -4121,10 +4302,11 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1561468369
+\change_inserted -2100369821 1562818962
 \begin_inset Tabular
-<lyxtabular version="3" rows="35" columns="9">
+<lyxtabular version="3" rows="35" columns="10">
 <features tabularvalignment="middle">
+<column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -4189,6 +4371,17 @@ Occurence
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -4299,6 +4492,17 @@ Common sandpiper
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -4397,6 +4601,17 @@ Ruddy turnstone
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -4505,6 +4720,17 @@ Eurasian stone-curlew
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -4603,6 +4829,17 @@ Sanderling
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -4711,6 +4948,17 @@ Dunlin
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -4809,6 +5057,17 @@ Red knot
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -4917,6 +5176,17 @@ Purple sandpiper
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -5015,6 +5285,17 @@ Little stint
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -5123,6 +5404,17 @@ Temminck's stint
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -5221,6 +5513,17 @@ Kentish plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -5329,6 +5632,17 @@ Little ringed plover
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -5427,6 +5741,17 @@ Common ringed plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -5535,6 +5860,17 @@ Common snipe
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -5633,6 +5969,17 @@ Eurasian oystercatcher
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -5741,6 +6088,17 @@ Black-winged stilt
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -5839,6 +6197,17 @@ Bar-tailed godwit
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -5947,6 +6316,17 @@ Black-tailed godwit
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -6045,6 +6425,17 @@ Eurasian curlew
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -6153,6 +6544,17 @@ Whimbrel
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -6251,6 +6653,17 @@ Red-necked phalarope
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -6359,6 +6772,17 @@ Ruff
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -6457,6 +6881,17 @@ European golden plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -6565,6 +7000,17 @@ Grey plover
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -6663,6 +7109,17 @@ Pied avocet
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -6771,6 +7228,17 @@ Spotted redshank
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -6869,6 +7337,17 @@ Wood sandpiper
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -6977,6 +7456,17 @@ Common greenshank
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -7075,6 +7565,17 @@ Green sandpiper
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -7183,6 +7684,17 @@ Common redshank
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -7281,6 +7793,17 @@ Northern lapwing
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -7389,6 +7912,17 @@ Common merganser
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -7487,6 +8021,17 @@ Red-breasted merganser
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1561481337
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
 
 \end_layout
 
@@ -7595,6 +8140,17 @@ Red-crested pochard
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -7698,6 +8254,17 @@ Ruddy shelduck
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818343
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -7740,6 +8307,2550 @@ Common shelduck
 
 \change_inserted -1297226133 1562225123
 416
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="26" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Waders
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818574
+Number of occurrences
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818899
+Relative abundances (%)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818894
+Relative number of occurrences (%)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Actitis hypoleucos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Common sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+198
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.054 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+25.2 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Arenaria interpres
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Ruddy turnstone
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+115
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.020 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+14.6 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Calidris alba
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Sanderling
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.004 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+4.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Calidris alpina
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Dunlin
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+292
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+26.395 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+37.2 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Calidris canutus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Red knot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+177
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.406 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+22.5 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Calidris minuta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Little stint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+197
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.129 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+25.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Calidris temminckii
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Temminck's stint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.001 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+4.6 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Charadrius dubius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Little ringed plover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+143
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.040 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+18.2 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Charadrius hiaticula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Common ringed plover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+268
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.921 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+34.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Gallinago gallinago
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Common snipe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+181
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.184 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+23.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Himantopus himantopus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Black-winged stilt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+95
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.079 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+12.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Limosa lapponica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Bar-tailed godwit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+144
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.327 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+18.3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Limosa limosa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Black-tailed godwit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+233
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+1.802 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+29.7 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Numenius arquata
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Eurasian curlew
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+133
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+1.167 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+16.9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Numenius phaeopus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Whimbrel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+87
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.102 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+11.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Philomachus pugnax
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Ruff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+89
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.010 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+11.3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Pluvialis apricaria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+European golden plover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.002 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+5.0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Pluvialis squatarola
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Grey plover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+258
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.669 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+32.9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Recurvirostra avosetta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Pied avocet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+196
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.775 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+25.0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Tringa erythropus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Spotted redshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+187
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.133 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+23.8 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Tringa glareola
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Wood sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.008 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+9.6 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Tringa nebularia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Common greenshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+196
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.173 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+25.0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Tringa ochropus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Green sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+121
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.014 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+15.4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Tringa totanus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Common redshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+254
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.670 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+32.4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Vanellus vanellus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818527
+Northern lapwing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818575
+179
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+0.265 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818801
+22.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="18" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818989
+Ducks
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819342
+Number of occurrences
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819354
+Relative abundance (%)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819364
+Relative number of occurrences (%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anas acuta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Northern pintail
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+470
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+1.708 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+59.9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anas clypeata
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Northern shoveler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+498
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+1.580 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+63.4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anas crecca
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Eurasian teal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+502
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+6.613 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+63.9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anas penelope
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Eurasian wigeon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+286
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.055 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+36.4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anas platyrhynchos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Mallard
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+3.388 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+63.7 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anas querquedula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Garganey
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+203
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.032 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+25.9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anas strepera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Gadwall
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+382
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.308 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+48.7 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Anser anser
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Greylag goose
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+371
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+1.135 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+47.3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Aythya ferina
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Common pochard
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+448
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+1.053 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+57.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Aythya fuligula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Tufted duck
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+359
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.467 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+45.7 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Aythya marila
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Greater scaup
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+51
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.005 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+6.5 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Branta bernicla
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Brant
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.001 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+2.3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Branta canadensis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Canada goose
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.002 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+5.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Cygnus olor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Mute swan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+392
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.618 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+49.9 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Fulica atra
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Eurasian coot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+504
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+16.008 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+64.2 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Netta rufina
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Red-crested pochard
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+212
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.030 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+27.0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Tadorna tadorna
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+Common shelduck
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562818971
+416
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+0.870 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1562819274
+53.0 
 \end_layout
 
 \end_inset

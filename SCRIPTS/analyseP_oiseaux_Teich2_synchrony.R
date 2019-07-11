@@ -1723,3 +1723,18 @@ for (i in 1:length(SpeciesL_order)){
 subset(mat_n_obs_oiseaux_t,rownames(mat_n_obs_oiseaux_t) %in% anas)
 subset(mat_n_obs_oiseaux_t,rownames(mat_n_obs_oiseaux_t) %in% limicoles)
 subset(mat_n_obs_oiseaux_t,rownames(mat_n_obs_oiseaux_t) %in% unique_frequents_birds)
+
+######## Small modif by CP (11/07/19) to have relative number of occurrences and print abundance and occurrence in a tex formatted table
+#For relative frequency
+occ_anas=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_obs_oiseaux_t) %in% anas)
+occ_waders=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_obs_oiseaux_t) %in% limicoles)
+occ_freq=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_obs_oiseaux_t) %in% unique_frequents_birds)
+
+library(xtable)
+tab=cbind(tab_abondance_frequents_birds,occ_freq*100)
+print.xtable(xtable(tab,digits=c(1,3,1)),"../OUT/abundance_occurrence_freq.tex" ,type="latex")
+tab=cbind(tab_abondance_anas,occ_anas*100)
+print.xtable(xtable(tab,digits=c(1,3,1)),"../OUT/abundance_occurrence_ducks.tex" ,type="latex")
+tab=cbind(tab_abondance_waders,occ_waders*100)
+print.xtable(xtable(tab,digits=c(1,3,1)),"../OUT/abundance_occurrence_waders.tex" ,type="latex")
+
