@@ -87,7 +87,11 @@ P-values
 
 \begin_layout Standard
 We consider a non-parametric test with an unknown distribution of values
- (in our case, the distribution of 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+It all came from questions on the distribution of 
 \begin_inset Formula $\eta$
 \end_inset
 
@@ -99,11 +103,20 @@ literal "false"
 
 \end_inset
 
-), under the assumption that time series are not cross-correlated.
+, but this applies to more complex distributions
+\end_layout
+
+\end_inset
+
+.
  We don't want to assume that the distribution is symmetric around its mean,
  nor that it is centered on 0.
- We don't know if there is compensation or synchrony, so we want a two-tailed
- test.
+ We also want a two-tailed test.
+\end_layout
+
+\begin_layout Standard
+We compute the distribution of the value under H0, and then use it to compute
+ p-values.
 \end_layout
 
 \begin_layout Standard
@@ -112,15 +125,21 @@ There are two methodological questions associated with this analysis (even
 \end_layout
 
 \begin_layout Itemize
-How to write the p-value exactly?
+How to write the p-value properly?
 \end_layout
 
 \begin_layout Itemize
-How to compare them to the Type I error rate?
+How to compare them to the Type I error rate? (possibly with a FDR-correction
+ for multiple testing so we can't directly look at quantiles)
 \end_layout
 
 \begin_layout Subsection*
 P-value definition
+\end_layout
+
+\begin_layout Standard
+There are different ways to define the p-value with a non-parametric method
+ and an unknown distribution.
 \end_layout
 
 \begin_layout Standard
@@ -152,15 +171,15 @@ where
 \begin_inset Formula $\eta*$
 \end_inset
 
- are the values of the Gross index under 
+ are the values of the index under 
 \begin_inset Formula $H_{0}$
 \end_inset
 
- (uncorrelated surrogates) and
+ and
 \begin_inset Formula $\eta_{emp}$
 \end_inset
 
- is the observed value/
+ is the observed value.
 \end_layout
 
 \begin_layout Standard
@@ -213,7 +232,51 @@ Test
 \end_layout
 
 \begin_layout Standard
-We use a Beta(2,5) distribution which we shift to the left by 0.6 (Fig 
+We assume that 
+\begin_inset Formula $\eta_{H0}$
+\end_inset
+
+ follows a Beta(2,5) distribution which we shift to the left by 0.4 (eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:beta"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Before, it was 0.6 but it was deemed too unrealistic.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{H0}\sim\text{Beta}(2,5)-0.4\label{eq:beta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We build the distribution of 
+\begin_inset Formula $\eta_{H0}$
+\end_inset
+
+ with 10 000 draws, corresponding to Fig 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Distribution"
@@ -223,8 +286,28 @@ noprefix "false"
 
 \end_inset
 
-).
- It seems that 
+.
+ We first compared fixed potential values of the observed index to see if
+ H0 is kept or rejected.
+ In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Distribution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the thick black line indicates the position of 0 while the dotted lines
+ correspond to the 5th and 95th percentile of the distribution.
+ Two possible observed values are also shown in the plot: the blue line
+ corresponds to a case where H0 should not be rejected (and is not with
+ either pval1 or pval2) while the red line corresponds to a case where H0
+ should be rejected as it is above the 95th percentile.
+ However, pval1>0.05 (keep H0) while pval2<0.05 (reject H0).
+ For now, it seems that 
 \begin_inset Formula $p_{2}$
 \end_inset
 
@@ -252,11 +335,18 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Distribution of the beta law and examples of pvalues associated with potential
- values of 
-\begin_inset Formula $\eta$
+Distribution of the studied index under H0 (eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:beta"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
+) with possible observed values in blue and red (see text for more details)
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -286,6 +376,27 @@ name "fig:Distribution"
 \end_layout
 
 \begin_layout Standard
+Then, we drew 1000 possible observed values from the H0 distribution and
+ compute the two p-values for each of them.
+ We first note that both p-values are uniformly distributed between 0 and
+ 1 and that the FDR is kept at 5% for both pvalues (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ However, pval1 is shifted towards 0 compared to the mode of the distrbution,
+ which means that there can be a bias in the estimate of the pvalue.
+ This is not the case with the 2nd computation of the pvalue.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -306,7 +417,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Comparison between pvalues and a 5% threshold
+Comparison between the two different pvalues and a 5% threshold: both pvalues
+ lead to a 5% FDR.
+ In the center and right panels, the distribution of the p-values according
+ to the possibly observed index under H0 is shown with lines while dots
+ indicate the real distribution of this index.
+ There is a mode shift and possibly a bias with pval1.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparison"
