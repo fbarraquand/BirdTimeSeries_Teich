@@ -713,6 +713,13 @@ literal "false"
  Detto.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Ebisuzaki
 \end_layout
@@ -734,7 +741,7 @@ literal "false"
 
 \end_inset
 
- (vervsion 0.7.1), which is also the one used by K.
+ (version 0.7.1), which is also the one used by K.
  Haaga.
  It is basically a random phase test and does not involve iterations.
  In this case, a random vector of phases (of the same length 

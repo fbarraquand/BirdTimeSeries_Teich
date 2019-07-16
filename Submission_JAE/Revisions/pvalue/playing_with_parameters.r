@@ -19,11 +19,11 @@ pval2=function(obs,plou){
 	return(pval)
 }
 
-obs=rbeta(1000,shape1=2,shape2=5)-0.6
+obs=rbeta(1000,shape1=2,shape2=5)-0.4
 obs[1]=0.25 #Should be rejected
 obs[2]=-0.25 #Should be kept under H0
 
-plou=rbeta(10000,shape1=2,shape2=5)-0.6
+plou=rbeta(10000,shape1=2,shape2=5)-0.4 #0.6
 pdf("distrib.pdf")
 dens=density(plou)
 plot(dens,main="",xlab=expression(eta))
