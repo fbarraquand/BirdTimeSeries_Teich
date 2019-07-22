@@ -208,12 +208,12 @@ for(v in 1:length(list_duck)){
 print('Freq birds output')
 upsi=0.02
 color=rep(c("Black","Lightblue","Darkblue"),2)
-#pdf("OUT/Gross_freq.pdf",width=11,height=7,family="Times")
-if(box_index){
-pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=7)
-}else{
-pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=7) 
-}
+pdf("OUT/Gross_freq_new.pdf",width=11,height=7,family="Times")
+#if(box_index){
+#pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=7)
+#}else{
+#pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=7) 
+#}
 par(mfrow=c(1,1),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
 #ylim=c(0.15,0.35),
@@ -249,12 +249,14 @@ print('Actual Figure 2, within groups')
 #PLOT
 upsi=0.05
 #pdf("OUT/Fig2_new2.pdf",width=11,height=14,family="Times")
-#pdf("OUT/Fig2_new2_JAE.pdf",width=11,height=14)
-if(box_index){
-pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=14)
-}else{
-pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=14)
-}
+pdf("OUT/Fig2_new2_JAE.pdf",width=11,height=14)
+
+#if(box_index){
+#pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=14)
+#}else{
+#pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=14)
+#}
+
 par(mfrow=c(2,2),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="Taxonomic groups",cex.main=2)
 mtext("Within",side=2,line=0.3,outer=T,cex=2,font=2,at=0.75)

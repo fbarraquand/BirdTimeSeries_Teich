@@ -93,5 +93,5 @@ lines(c(0,7.5),c(0,0),lty=2,lwd=2)
 #ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
 #lines(6:7,ll,col="black",lwd=2,lty=1)
 
-legend("topright",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=1.5)
 dev.off()
