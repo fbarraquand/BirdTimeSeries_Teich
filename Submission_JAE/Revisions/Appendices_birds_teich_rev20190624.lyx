@@ -150,7 +150,7 @@ status open
 
 \change_inserted -2100369821 1563810942
 \begin_inset Tabular
-<lyxtabular version="3" rows="42" columns="5">
+<lyxtabular version="3" rows="34" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -196,7 +196,7 @@ English name
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863719
 % occurrence
 \end_layout
 
@@ -207,7 +207,7 @@ English name
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863723
 % abundance
 \end_layout
 
@@ -279,31 +279,7 @@ Eurasian sparrowhawk
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.003
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -318,6 +294,30 @@ Eurasian sparrowhawk
 \noun off
 \color none
 12.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.003
 \end_layout
 
 \end_inset
@@ -388,31 +388,7 @@ Common sandpiper
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.054
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -427,6 +403,30 @@ Common sandpiper
 \noun off
 \color none
 25.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.054
 \end_layout
 
 \end_inset
@@ -497,31 +497,7 @@ Common kingfisher
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.017
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -536,6 +512,30 @@ Common kingfisher
 \noun off
 \color none
 12.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.017
 \end_layout
 
 \end_inset
@@ -606,31 +606,7 @@ Northern pintail
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1.708
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -645,6 +621,30 @@ Northern pintail
 \noun off
 \color none
 59.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.708
 \end_layout
 
 \end_inset
@@ -715,31 +715,7 @@ Northern shoveler
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1.580
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -754,6 +730,30 @@ Northern shoveler
 \noun off
 \color none
 63.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.580
 \end_layout
 
 \end_inset
@@ -824,31 +824,7 @@ Eurasian teal
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-6.613
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -863,6 +839,30 @@ Eurasian teal
 \noun off
 \color none
 63.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+6.613
 \end_layout
 
 \end_inset
@@ -933,31 +933,7 @@ Eurasian wigeon
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.055
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -972,6 +948,30 @@ Eurasian wigeon
 \noun off
 \color none
 36.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.055
 \end_layout
 
 \end_inset
@@ -1042,31 +1042,7 @@ Mallard
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-3.388
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1081,6 +1057,30 @@ Mallard
 \noun off
 \color none
 63.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.388
 \end_layout
 
 \end_inset
@@ -1151,31 +1151,7 @@ Garganey
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.032
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1190,6 +1166,30 @@ Garganey
 \noun off
 \color none
 25.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.032
 \end_layout
 
 \end_inset
@@ -1260,31 +1260,7 @@ Gadwall
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.308
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1299,6 +1275,30 @@ Gadwall
 \noun off
 \color none
 48.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.308
 \end_layout
 
 \end_inset
@@ -1369,31 +1369,7 @@ Greylag goose
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1.135
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1408,6 +1384,30 @@ Greylag goose
 \noun off
 \color none
 47.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.135
 \end_layout
 
 \end_inset
@@ -1478,31 +1478,7 @@ Grey heron
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-2.476
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1517,6 +1493,30 @@ Grey heron
 \noun off
 \color none
 62.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+2.476
 \end_layout
 
 \end_inset
@@ -1587,31 +1587,7 @@ Ruddy turnstone
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.020
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1626,6 +1602,30 @@ Ruddy turnstone
 \noun off
 \color none
 14.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.020
 \end_layout
 
 \end_inset
@@ -1696,31 +1696,7 @@ Common pochard
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1.053
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1735,6 +1711,30 @@ Common pochard
 \noun off
 \color none
 57.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.053
 \end_layout
 
 \end_inset
@@ -1805,31 +1805,7 @@ Tufted duck
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.467
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1844,6 +1820,30 @@ Tufted duck
 \noun off
 \color none
 45.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.467
 \end_layout
 
 \end_inset
@@ -1914,31 +1914,7 @@ Western cattle egret
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.381
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -1953,6 +1929,30 @@ Western cattle egret
 \noun off
 \color none
 37.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.381
 \end_layout
 
 \end_inset
@@ -2023,31 +2023,7 @@ Dunlin
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-26.395
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2062,6 +2038,30 @@ Dunlin
 \noun off
 \color none
 37.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+26.395
 \end_layout
 
 \end_inset
@@ -2132,31 +2132,7 @@ Red knot
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.406
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2171,6 +2147,30 @@ Red knot
 \noun off
 \color none
 22.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.406
 \end_layout
 
 \end_inset
@@ -2241,31 +2241,7 @@ Curlew sandpiper
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.067
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2280,6 +2256,30 @@ Curlew sandpiper
 \noun off
 \color none
 14.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.067
 \end_layout
 
 \end_inset
@@ -2350,31 +2350,7 @@ Little stint
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.129
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2389,6 +2365,30 @@ Little stint
 \noun off
 \color none
 25.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.129
 \end_layout
 
 \end_inset
@@ -2459,31 +2459,7 @@ Great egret
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.150
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2498,6 +2474,30 @@ Great egret
 \noun off
 \color none
 29.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.150
 \end_layout
 
 \end_inset
@@ -2568,31 +2568,7 @@ Little ringed plover
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.040
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2607,6 +2583,30 @@ Little ringed plover
 \noun off
 \color none
 18.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.040
 \end_layout
 
 \end_inset
@@ -2677,31 +2677,7 @@ Common ringed plover
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.921
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2716,6 +2692,30 @@ Common ringed plover
 \noun off
 \color none
 34.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.921
 \end_layout
 
 \end_inset
@@ -2786,31 +2786,7 @@ Black-headed gull
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-9.645
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2825,6 +2801,30 @@ Black-headed gull
 \noun off
 \color none
 51.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+9.645
 \end_layout
 
 \end_inset
@@ -2895,31 +2895,7 @@ White stork
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.905
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -2934,6 +2910,30 @@ White stork
 \noun off
 \color none
 51.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.905
 \end_layout
 
 \end_inset
@@ -3004,31 +3004,7 @@ Western marsh harrier
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.017
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3043,6 +3019,30 @@ Western marsh harrier
 \noun off
 \color none
 23.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.017
 \end_layout
 
 \end_inset
@@ -3113,31 +3113,7 @@ Mute swan
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.618
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3152,6 +3128,30 @@ Mute swan
 \noun off
 \color none
 49.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.618
 \end_layout
 
 \end_inset
@@ -3222,31 +3222,7 @@ Little egret
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-6.511
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3261,6 +3237,30 @@ Little egret
 \noun off
 \color none
 55.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+6.511
 \end_layout
 
 \end_inset
@@ -3331,31 +3331,7 @@ Peregrine falcon
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.003
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3370,6 +3346,30 @@ Peregrine falcon
 \noun off
 \color none
 13.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.003
 \end_layout
 
 \end_inset
@@ -3440,31 +3440,7 @@ Eurasian coot
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-16.008
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3479,6 +3455,30 @@ Eurasian coot
 \noun off
 \color none
 64.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+16.008
 \end_layout
 
 \end_inset
@@ -3549,31 +3549,7 @@ Common snipe
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.184
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3588,6 +3564,30 @@ Common snipe
 \noun off
 \color none
 23.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.184
 \end_layout
 
 \end_inset
@@ -3658,31 +3658,7 @@ Common moorhen
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1.106
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3701,9 +3677,33 @@ Common moorhen
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863713
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.106
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3714,7 +3714,7 @@ Common moorhen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3738,7 +3738,7 @@ Himantopus himantopus
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3762,36 +3762,12 @@ Black-winged stilt
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.079
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -3810,860 +3786,12 @@ Black-winged stilt
 
 \end_inset
 </cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Larus argentatus
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-European herring gull
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-3.414
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-36.3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Larus fuscus
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Lesser black-backed gull
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.088
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-32.1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Larus marinus
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Great black-backed gull
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.039
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-38.9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Larus michahellis
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Yellow-legged gull
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.210
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-17.5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Limosa lapponica
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Bar-tailed godwit
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.327
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-18.3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Limosa limosa
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Black-tailed godwit
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1.802
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-29.7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Milvus migrans
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Black kite
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.106
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-12.7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Netta rufina
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Red-crested pochard
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-0.030
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563863713
 
 \family roman
 \series medium
@@ -4677,7 +3805,7 @@ Red-crested pochard
 \uwave off
 \noun off
 \color none
-27.0
+0.079
 \end_layout
 
 \end_inset
@@ -4723,7 +3851,7 @@ status open
 
 \change_inserted -2100369821 1563810942
 \begin_inset Tabular
-<lyxtabular version="3" rows="45" columns="5">
+<lyxtabular version="3" rows="48" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4804,7 +3932,879 @@ English name
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864256
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Larus argentatus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864256
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+European herring gull
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864256
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+36.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864256
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+3.414
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864209
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Larus fuscus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Lesser black-backed gull
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+32.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.088
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864209
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Larus marinus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Great black-backed gull
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+38.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.039
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864208
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Larus michahellis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Yellow-legged gull
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+17.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.210
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864208
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Limosa lapponica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Bar-tailed godwit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+18.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.327
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864207
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Limosa limosa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Black-tailed godwit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+29.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.802
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864207
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Milvus migrans
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Black kite
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+12.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.106
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864206
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Netta rufina
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Red-crested pochard
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+27.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864218
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+0.030
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864221
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864227
 
 \family roman
 \series medium
@@ -4828,7 +4828,7 @@ Numenius arquata
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864227
 
 \family roman
 \series medium
@@ -4852,7 +4852,7 @@ Eurasian curlew
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864227
 
 \family roman
 \series medium
@@ -4876,7 +4876,7 @@ Eurasian curlew
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864227
 
 \family roman
 \series medium
@@ -6876,6 +6876,8 @@ WADERS
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Actitis hypoleucos
 \end_layout
 
@@ -6887,6 +6889,8 @@ Actitis hypoleucos
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Common sandpiper
 \end_layout
 
@@ -6898,6 +6902,8 @@ Common sandpiper
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 25.2
 \end_layout
 
@@ -6909,6 +6915,8 @@ Common sandpiper
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.054
 \end_layout
 
@@ -6933,6 +6941,8 @@ Common sandpiper
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Arenaria interpres
 \end_layout
 
@@ -6944,6 +6954,8 @@ Arenaria interpres
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Ruddy turnstone
 \end_layout
 
@@ -6955,6 +6967,8 @@ Ruddy turnstone
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 14.6
 \end_layout
 
@@ -6966,6 +6980,8 @@ Ruddy turnstone
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.020
 \end_layout
 
@@ -7047,6 +7063,8 @@ Sanderling
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Calidris alpina
 \end_layout
 
@@ -7058,6 +7076,8 @@ Calidris alpina
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Dunlin
 \end_layout
 
@@ -7069,6 +7089,8 @@ Dunlin
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 37.2
 \end_layout
 
@@ -7080,6 +7102,8 @@ Dunlin
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 26.395
 \end_layout
 
@@ -7104,6 +7128,8 @@ Dunlin
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Calidris canutus
 \end_layout
 
@@ -7115,6 +7141,8 @@ Calidris canutus
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Red knot
 \end_layout
 
@@ -7126,6 +7154,8 @@ Red knot
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 22.5
 \end_layout
 
@@ -7137,7 +7167,74 @@ Red knot
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.406
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863853
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863869
+
+\series bold
+Calidris ferruginea
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863869
+
+\series bold
+Curlew sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863869
+
+\series bold
+14.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563863869
+
+\series bold
+0.067
 \end_layout
 
 \end_inset
@@ -7161,6 +7258,8 @@ Red knot
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Calidris minuta
 \end_layout
 
@@ -7172,6 +7271,8 @@ Calidris minuta
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Little stint
 \end_layout
 
@@ -7183,6 +7284,8 @@ Little stint
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 25.1
 \end_layout
 
@@ -7194,6 +7297,8 @@ Little stint
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.129
 \end_layout
 
@@ -7275,6 +7380,8 @@ Temminck's stint
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Charadrius dubius
 \end_layout
 
@@ -7286,6 +7393,8 @@ Charadrius dubius
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Little ringed plover
 \end_layout
 
@@ -7297,6 +7406,8 @@ Little ringed plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 18.2
 \end_layout
 
@@ -7332,6 +7443,8 @@ Little ringed plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Charadrius hiaticula
 \end_layout
 
@@ -7343,6 +7456,8 @@ Charadrius hiaticula
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Common ringed plover
 \end_layout
 
@@ -7354,6 +7469,8 @@ Common ringed plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 34.1
 \end_layout
 
@@ -7389,6 +7506,8 @@ Common ringed plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Gallinago gallinago
 \end_layout
 
@@ -7400,6 +7519,8 @@ Gallinago gallinago
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Common snipe
 \end_layout
 
@@ -7411,6 +7532,8 @@ Common snipe
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 23.1
 \end_layout
 
@@ -7422,6 +7545,8 @@ Common snipe
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.184
 \end_layout
 
@@ -7446,6 +7571,8 @@ Common snipe
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Himantopus himantopus
 \end_layout
 
@@ -7457,6 +7584,8 @@ Himantopus himantopus
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Black-winged stilt
 \end_layout
 
@@ -7468,6 +7597,8 @@ Black-winged stilt
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 12.1
 \end_layout
 
@@ -7479,6 +7610,8 @@ Black-winged stilt
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.079
 \end_layout
 
@@ -7503,6 +7636,8 @@ Black-winged stilt
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Limosa lapponica
 \end_layout
 
@@ -7514,6 +7649,8 @@ Limosa lapponica
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Bar-tailed godwit
 \end_layout
 
@@ -7525,6 +7662,8 @@ Bar-tailed godwit
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 18.3
 \end_layout
 
@@ -7536,6 +7675,8 @@ Bar-tailed godwit
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.327
 \end_layout
 
@@ -7560,6 +7701,8 @@ Bar-tailed godwit
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Limosa limosa
 \end_layout
 
@@ -7571,6 +7714,8 @@ Limosa limosa
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Black-tailed godwit
 \end_layout
 
@@ -7582,6 +7727,8 @@ Black-tailed godwit
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 29.7
 \end_layout
 
@@ -7593,6 +7740,8 @@ Black-tailed godwit
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 1.802
 \end_layout
 
@@ -7617,6 +7766,8 @@ Black-tailed godwit
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Numenius arquata
 \end_layout
 
@@ -7628,6 +7779,8 @@ Numenius arquata
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Eurasian curlew
 \end_layout
 
@@ -7639,6 +7792,8 @@ Eurasian curlew
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 16.9
 \end_layout
 
@@ -7650,6 +7805,8 @@ Eurasian curlew
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 1.167
 \end_layout
 
@@ -7674,6 +7831,8 @@ Eurasian curlew
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Numenius phaeopus
 \end_layout
 
@@ -7685,6 +7844,8 @@ Numenius phaeopus
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Whimbrel
 \end_layout
 
@@ -7696,6 +7857,8 @@ Whimbrel
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 11.1
 \end_layout
 
@@ -7707,6 +7870,8 @@ Whimbrel
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.102
 \end_layout
 
@@ -7731,6 +7896,8 @@ Whimbrel
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Philomachus pugnax
 \end_layout
 
@@ -7742,6 +7909,8 @@ Philomachus pugnax
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Ruff
 \end_layout
 
@@ -7753,6 +7922,8 @@ Ruff
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 11.3
 \end_layout
 
@@ -7764,6 +7935,8 @@ Ruff
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.010
 \end_layout
 
@@ -7845,6 +8018,8 @@ European golden plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Pluvialis squatarola
 \end_layout
 
@@ -7856,6 +8031,8 @@ Pluvialis squatarola
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Grey plover
 \end_layout
 
@@ -7867,6 +8044,8 @@ Grey plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 32.9
 \end_layout
 
@@ -7878,6 +8057,8 @@ Grey plover
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 0.669
 \end_layout
 
@@ -7885,7 +8066,7 @@ Grey plover
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7896,377 +8077,41 @@ Grey plover
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Recurvirostra avosetta
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 Pied avocet
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
+
+\series bold
 25.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-0.775
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Tringa erythropus
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Spotted redshank
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-23.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-0.133
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Tringa glareola
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Wood sandpiper
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-9.6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-0.008
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Tringa nebularia
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Common greenshank
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-25.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-0.173
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Tringa ochropus
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Green sandpiper
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-15.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-0.014
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Tringa totanus
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Common redshank
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-32.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-0.670
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Vanellus vanellus
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-Northern lapwing
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563810942
-22.8
 \end_layout
 
 \end_inset
@@ -8277,7 +8122,9 @@ Northern lapwing
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1563810942
-0.265
+
+\series bold
+0.775
 \end_layout
 
 \end_inset
@@ -8297,8 +8144,10 @@ Northern lapwing
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810992
-Composition of the functional groups considered in the study
+\change_inserted -2100369821 1563864720
+Composition of the functional groups considered in the study.
+ Species that are present in both frequent and wader/duck groups are in
+ bold type.
 \end_layout
 
 \end_inset
@@ -8323,7 +8172,7 @@ status open
 
 \change_inserted -2100369821 1563810942
 \begin_inset Tabular
-<lyxtabular version="3" rows="18" columns="5">
+<lyxtabular version="3" rows="24" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -8393,7 +8242,389 @@ English name
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810957
+\change_inserted -2100369821 1563864316
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Tringa erythropus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Spotted redshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+23.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+0.133
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864315
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+Tringa glareola
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+Wood sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+9.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+0.008
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864315
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Tringa nebularia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Common greenshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+25.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+0.173
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864314
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Tringa ochropus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Green sandpiper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+15.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+0.014
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864314
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Tringa totanus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Common redshank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+32.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+0.670
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864313
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Vanellus vanellus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+Northern lapwing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+22.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864321
+
+\series bold
+0.265
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563864334
 
 \family roman
 \series medium
@@ -8417,20 +8648,9 @@ DUCKS
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864334
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anas acuta
 \end_layout
 
@@ -8441,20 +8661,9 @@ Anas acuta
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864334
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Northern pintail
 \end_layout
 
@@ -8465,20 +8674,9 @@ Northern pintail
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864334
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 59.9
 \end_layout
 
@@ -8489,20 +8687,9 @@ Northern pintail
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1563810942
+\change_inserted -2100369821 1563864334
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1.708
 \end_layout
 
@@ -8528,18 +8715,7 @@ Northern pintail
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anas clypeata
 \end_layout
 
@@ -8552,18 +8728,7 @@ Anas clypeata
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Northern shoveler
 \end_layout
 
@@ -8576,18 +8741,7 @@ Northern shoveler
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 63.4
 \end_layout
 
@@ -8600,18 +8754,7 @@ Northern shoveler
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1.580
 \end_layout
 
@@ -8637,18 +8780,7 @@ Northern shoveler
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anas crecca
 \end_layout
 
@@ -8661,18 +8793,7 @@ Anas crecca
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Eurasian teal
 \end_layout
 
@@ -8685,18 +8806,7 @@ Eurasian teal
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 63.9
 \end_layout
 
@@ -8709,18 +8819,7 @@ Eurasian teal
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 6.613
 \end_layout
 
@@ -8746,18 +8845,7 @@ Eurasian teal
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anas penelope
 \end_layout
 
@@ -8770,18 +8858,7 @@ Anas penelope
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Eurasian wigeon
 \end_layout
 
@@ -8794,18 +8871,7 @@ Eurasian wigeon
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 36.4
 \end_layout
 
@@ -8818,18 +8884,7 @@ Eurasian wigeon
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.055
 \end_layout
 
@@ -8855,18 +8910,7 @@ Eurasian wigeon
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anas platyrhynchos
 \end_layout
 
@@ -8879,18 +8923,7 @@ Anas platyrhynchos
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Mallard
 \end_layout
 
@@ -8903,18 +8936,7 @@ Mallard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 63.7
 \end_layout
 
@@ -8927,18 +8949,7 @@ Mallard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 3.388
 \end_layout
 
@@ -8964,18 +8975,7 @@ Mallard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anas querquedula
 \end_layout
 
@@ -8988,18 +8988,7 @@ Anas querquedula
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Garganey
 \end_layout
 
@@ -9012,18 +9001,7 @@ Garganey
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 25.9
 \end_layout
 
@@ -9036,18 +9014,7 @@ Garganey
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.032
 \end_layout
 
@@ -9073,18 +9040,7 @@ Garganey
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anas strepera
 \end_layout
 
@@ -9097,18 +9053,7 @@ Anas strepera
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Gadwall
 \end_layout
 
@@ -9121,18 +9066,7 @@ Gadwall
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 48.7
 \end_layout
 
@@ -9145,18 +9079,7 @@ Gadwall
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.308
 \end_layout
 
@@ -9182,18 +9105,7 @@ Gadwall
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Anser anser
 \end_layout
 
@@ -9206,18 +9118,7 @@ Anser anser
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Greylag goose
 \end_layout
 
@@ -9230,18 +9131,7 @@ Greylag goose
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 47.3
 \end_layout
 
@@ -9254,18 +9144,7 @@ Greylag goose
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1.135
 \end_layout
 
@@ -9291,18 +9170,7 @@ Greylag goose
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Aythya ferina
 \end_layout
 
@@ -9315,18 +9183,7 @@ Aythya ferina
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Common pochard
 \end_layout
 
@@ -9339,18 +9196,7 @@ Common pochard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 57.1
 \end_layout
 
@@ -9363,18 +9209,7 @@ Common pochard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 1.053
 \end_layout
 
@@ -9400,18 +9235,7 @@ Common pochard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Aythya fuligula
 \end_layout
 
@@ -9424,18 +9248,7 @@ Aythya fuligula
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Tufted duck
 \end_layout
 
@@ -9448,18 +9261,7 @@ Tufted duck
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 45.7
 \end_layout
 
@@ -9472,18 +9274,7 @@ Tufted duck
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.467
 \end_layout
 
@@ -9509,18 +9300,7 @@ Tufted duck
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Aythya marila
 \end_layout
 
@@ -9533,18 +9313,7 @@ Aythya marila
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Greater scaup
 \end_layout
 
@@ -9557,18 +9326,7 @@ Greater scaup
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 6.5
 \end_layout
 
@@ -9581,18 +9339,7 @@ Greater scaup
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.005
 \end_layout
 
@@ -9836,18 +9583,7 @@ Canada goose
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Cygnus olor
 \end_layout
 
@@ -9860,18 +9596,7 @@ Cygnus olor
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Mute swan
 \end_layout
 
@@ -9884,18 +9609,7 @@ Mute swan
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 49.9
 \end_layout
 
@@ -9908,18 +9622,7 @@ Mute swan
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.618
 \end_layout
 
@@ -9945,18 +9648,7 @@ Mute swan
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Fulica atra
 \end_layout
 
@@ -9969,18 +9661,7 @@ Fulica atra
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Eurasian coot
 \end_layout
 
@@ -9993,18 +9674,7 @@ Eurasian coot
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 64.2
 \end_layout
 
@@ -10017,18 +9687,7 @@ Eurasian coot
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 16.008
 \end_layout
 
@@ -10054,18 +9713,7 @@ Eurasian coot
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Netta rufina
 \end_layout
 
@@ -10078,18 +9726,7 @@ Netta rufina
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Red-crested pochard
 \end_layout
 
@@ -10102,18 +9739,7 @@ Red-crested pochard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 27.0
 \end_layout
 
@@ -10126,18 +9752,7 @@ Red-crested pochard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.030
 \end_layout
 
@@ -10163,18 +9778,7 @@ Red-crested pochard
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Tadorna tadorna
 \end_layout
 
@@ -10187,18 +9791,7 @@ Tadorna tadorna
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Common shelduck
 \end_layout
 
@@ -10211,18 +9804,7 @@ Common shelduck
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 53.0
 \end_layout
 
@@ -10235,18 +9817,7 @@ Common shelduck
 
 \change_inserted -2100369821 1563810942
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 0.870
 \end_layout
 

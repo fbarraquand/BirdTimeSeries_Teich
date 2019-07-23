@@ -1469,15 +1469,10 @@ Ardea cinerea
 \end_layout
 
 \begin_layout Standard
-We computed statistical significance of synchrony index values
-\change_inserted -2100369821 1563807773
- by computing surrogates, i.e.
- randomized time series under the null hypothesis of independence between
- species
-\change_deleted -2100369821 1563807747
- using Monte Carlo randomizations 
-\change_unchanged
 
+\change_deleted -2100369821 1563868783
+We computed statistical significance of synchrony index values using Monte
+ Carlo randomizations 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gouhier_synchrony_2014"
@@ -1491,23 +1486,8 @@ literal "true"
 \end_inset
 
  season), we kept the auto-correlation of the species time series, but removed
- the cross-correlation between species
-\change_inserted -2100369821 1563807867
-.
- Depending on the resolution of the community considered, surrogates were
- computed in two ways.
- Within communities, as there were potentially too much missing values for
- certain species to compute their spectrum, we used a 'caterpillar method'
-\change_deleted -2100369821 1563807605
- 
-\change_unchanged
-by shifting each time series by a random lag
-\change_inserted -2100369821 1563807883
- after seasonal averaging
-\change_deleted -2100369821 1563807876
- 
-\change_unchanged
-
+ the cross-correlation between species by shifting each time series by a
+ random lag 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "purves_fine-scale_2002"
@@ -1516,56 +1496,16 @@ literal "true"
 \end_inset
 
 .
- 
-\change_inserted -2100369821 1563808233
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563808335
-CP: Here, I need to explain that this method is not enough when you have
- only 2 time-series, because of the auto-correlation, and that is why we
- use IAAFT.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-Between communities, we also removed the cross-correlation effects but kept
- the frequency spectrum of the time series with a Iterated Amplitude-Adjusted
- Fourier Transform (IAAFT, see 
-\begin_inset CommandInset citation
-LatexCommand citealp
-key "schreiber_surrogate_2000"
-literal "false"
-
-\end_inset
-
-).
- 
-\change_unchanged
-We obtained 100 sets of randomized time series for each season and period
+ We obtained 100 sets of randomized time series for each season and period
  of time considered and computed the corresponding synchrony index.
  We then compared the observed values of 
 \begin_inset Formula $\eta$
 \end_inset
 
  to the values obtained with the randomized time-series.
- Independence of species was rejected at the 
-\change_deleted -2100369821 1563807311
-Bonferroni-corrected 
-\change_unchanged
-10% threshold 
-\change_deleted -2100369821 1563807316
-(a Bonferroni correction is needed here because multiple comparisons across
- 2 seasons and 3 periods)
-\change_inserted -2100369821 1563807329
-with a Beverton-Holt correction as we compare across 2 seasons and 3 periods
-\change_unchanged
-.
+ Independence of species was rejected at the Bonferroni-corrected 10% threshold
+ (a Bonferroni correction is needed here because multiple comparisons across
+ 2 seasons and 3 periods).
  
 \begin_inset Note Note
 status collapsed
@@ -1579,6 +1519,113 @@ Coralie check that out.
 
 \end_inset
 
+
+\change_inserted -2100369821 1563865608
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1563868609
+We computed statistical significance of the synchrony index by comparing
+ the observed values to the distribution of 
+\begin_inset Formula $\eta$
+\end_inset
+
+ under the null hypothesis 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gouhier_synchrony_2014"
+literal "true"
+
+\end_inset
+
+, i.e.
+ the absence of interactions between species or groups of species.
+ For each set of time series (each combination year 
+\begin_inset Formula $\times$
+\end_inset
+
+ season for a given community), we constructed 100 surrogates in which we
+ kept the auto-correlation within observations, but removed the cross-correlatio
+n between time series.
+ There are multiple ways to erase the cross-correlation depending on the
+ resolution of the considered community.
+ Within communities, we shifted the time-series 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "purves_fine-scale_2002"
+literal "true"
+
+\end_inset
+
+ while between communities, we used a frequency-based approach (Iterated
+ Amplitude-Adjusted Fourier Transform or IAAFT, see 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "schreiber_surrogate_2000"
+literal "false"
+
+\end_inset
+
+).
+ The shift was made by displacing each time-series by a different random
+ lag after seasonal averaging.
+ At the boundary, remaining points are displaced towards the beginning of
+ the time-series (toroidal shift).
+ However, when there were only few time series (there are only two groups
+ when the synchrony index is computed between communities), such shift was
+ not enough to completely remove the cross-correlation.
+ Indeed, there is only a one-lag difference between time series.
+ In this case, the two parts of the time series framing the shifted boundary
+ retain part of the cross-correlation with the other time series.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563868491
+We either need a plot or another person to write this...
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ Therefore, between communities, we used the more refined IAAFT method,
+ which is built to keep the frequency spectrum of the time series while
+ randomizing it.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1563868751
+We obtained 100 sets of randomized time series for each season and period
+ of time considered and computed the corresponding synchrony index.
+ We then compared the number of 
+\begin_inset Formula $\eta_{H0}$
+\end_inset
+
+ values which exceeded or were inferior to the observed value to compute
+ the p-value
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1563868776
+Write the p-value formul along with North ref?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+ Independence of species was rejected at the 10% threshold with a Beverton-Holt
+ correction as we compare across 2 seasons and 3 periods.
+\change_unchanged
 
 \end_layout
 
