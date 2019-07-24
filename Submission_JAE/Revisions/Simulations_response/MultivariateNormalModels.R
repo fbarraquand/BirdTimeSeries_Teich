@@ -9,7 +9,7 @@ rm(list=ls())
 
 library(MASS)
 library(Matrix)
-#library(synchrony)
+library(synchrony)
 library(codyn)
 
 source("../../../SCRIPTS/iaaft.R")
@@ -206,7 +206,7 @@ eta_mean=apply(eta_list,2,mean)
 eta_sd=apply(eta_list,2,sd)
 eta_min=eta_mean-eta_sd
 eta_max=eta_mean+eta_sd
-plot( seq_sp,eta_mean,t="p",xlab="",ylab="",pch=16,xaxt="n",ylim=c(-0.85,0.5),main="eta")
+plot( seq_sp,eta_mean,t="p",xlab="nspecies",ylab="",pch=16,ylim=c(-0.85,0.5),main="eta")
  arrows(seq_sp,eta_min,seq_sp,eta_max,angle=90,length=0.1,code=3)
 mtext("Beta",side=2,las=3,line=3,font=2)
 
@@ -215,7 +215,7 @@ rho_mean=apply(rhomean_list,2,mean)
 rho_sd=apply(rhomean_list,2,sd)
 rho_min=rho_mean-rho_sd
 rho_max=rho_mean+rho_sd
-plot( seq_sp,rho_mean,t="o",xlab="",ylab="",pch=16,xaxt="n",ylim=c(-0.85,0.5),main="rhomean")
+plot( seq_sp,rho_mean,t="o",xlab="nspecies",ylab="",pch=16,ylim=c(-0.85,0.5),main="rhomean")
  arrows(seq_sp,rho_min,seq_sp,rho_max,angle=90,length=0.1,code=3)
 
 dev.off()
