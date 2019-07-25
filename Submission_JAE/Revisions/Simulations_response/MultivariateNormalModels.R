@@ -81,22 +81,26 @@ eta_list[r,sp]=synch_x$obs
 }
 }
 
-par(mar=c(3.5,5,3,1))
+par(mar=c(3,5,2.5,1))
 eta_mean=apply(eta_list,2,mean)
 eta_sd=apply(eta_list,2,sd)
 eta_min=eta_mean-eta_sd
 eta_max=eta_mean+eta_sd
-plot( seq_sp,eta_mean,t="p",xlab="",ylab="",pch=16,xaxt="n",ylim=c(-0.85,0.65),main="eta")
+#plot( seq_sp,eta_mean,t="p",xlab="",ylab="",pch=16,xaxt="n",ylim=c(-0.85,0.65),main="eta")
+plot( seq_sp,eta_mean,t="p",xlab="",ylab="",pch=16,xaxt="n",ylim=c(min(eta_min),max(eta_max)),main=expression(eta))
  arrows(seq_sp,eta_min,seq_sp,eta_max,angle=90,length=0.1,code=3)
 mtext("Paircorr",side=2,las=3,line=3,font=2)
+abline(h=0.0,col="red")
 
-par(mar=c(3.5,5,3,1))
+par(mar=c(3,5,2.5,1))
 rho_mean=apply(rhomean_list,2,mean)
 rho_sd=apply(rhomean_list,2,sd)
 rho_min=rho_mean-rho_sd
 rho_max=rho_mean+rho_sd
-plot( seq_sp,rho_mean,t="o",xlab="",ylab="",pch=16,xaxt="n",ylim=c(-0.85,0.65),main="rhomean")
+#plot( seq_sp,rho_mean,t="o",xlab="",ylab="",pch=16,xaxt="n",ylim=c(-0.85,0.65),main="rhomean")
+plot( seq_sp,rho_mean,t="o",xlab="",ylab="",pch=16,xaxt="n",ylim=c(min(rho_min),max(rho_max)),main=expression(bar(rho)))
 arrows(seq_sp,rho_min,seq_sp,rho_max,angle=90,length=0.1,code=3)
+abline(h=0.0,col="red")
 
 ### 2. Modified Beta distributed rho entries, with a skew towards positive (skew towards negative, Beta(2,4) does not work)
 
@@ -212,27 +216,33 @@ eta_sd=apply(eta_list,2,sd)
 eta_min=eta_mean-eta_sd
 eta_max=eta_mean+eta_sd
 if(t_sigma==length(alpha)){
-par(mar=c(4,5,1,1))
+par(mar=c(3,5,2.5,1))
 ax="nspecies"
-plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65))
+#plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65))
+plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(min(eta_min),max(eta_max)))
 }else{
-par(mar=c(3.5,5,.5,1))
+par(mar=c(3,5,2.5,1))
 ax=""
-plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65),xaxt="n")
+#plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65),xaxt="n")
+plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(min(eta_min),max(eta_max)),xaxt="n")
 }
  arrows(seq_sp,eta_min,seq_sp,eta_max,angle=90,length=0.1,code=3)
 mtext(type_dist[t_sigma+1],side=2,las=3,line=3,font=2)
+abline(h=0.0,col="red")
 
 rho_mean=apply(rhomean_list,2,mean)
 rho_sd=apply(rhomean_list,2,sd)
 rho_min=rho_mean-rho_sd
 rho_max=rho_mean+rho_sd
 if(t_sigma==length(alpha)){
-plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65))
+#plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65))
+plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(min(rho_min),max(rho_max)))
 }else{
-plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65),xaxt="n")
+#plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65),xaxt="n")
+plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(min(rho_min),max(rho_max)),xaxt="n")
 }
  arrows(seq_sp,rho_min,seq_sp,rho_max,angle=90,length=0.1,code=3)
+abline(h=0.0,col="red")
 }
 
 dev.off()
