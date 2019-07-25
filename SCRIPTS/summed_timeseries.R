@@ -1,3 +1,6 @@
+##CP July 2018
+##CP 25/07/19 There was a pb in wader def. It should also contain Calidris ferruginea
+
 rm(list=ls())
 graphics.off()
 
@@ -22,13 +25,13 @@ calidris_sum=sum_of_species(DBt,sp_calidris,"Calidris")
 calidris_season=season2_average(calidris_sum)
 
 print('Waders')
-limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidris temminckii","Calidris canutus",
+limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidiris temminckii","Calidris canutus",
               "Calidris alba","Calidris alpina","Calidris minuta","Calidris maritima" ,"Gallinago gallinago",
               "Tringa flavipes","Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
               "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
-              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
+              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus","Calidris ferruginea")
 wader_sum=sum_of_species(DBt,limicoles,"Waders")
 wader_season=season2_average(wader_sum)
 
