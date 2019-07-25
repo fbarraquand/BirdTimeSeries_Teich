@@ -3,7 +3,7 @@
 #We want the synchrony values inside the groups of Anas, Calidris, waders and frequent birds
 #I'm relaunching this to (a) have 'readable' tables and values of synchronys ignoring the values before 1981 and b) have all birds counted at the same time
 
-#UNFINISHED : need to put evtg in a dataframe
+#CP 25/07/2019 Added "Calidris ferruginea" to waders
 
 rm(list=ls())
 graphics.off()
@@ -34,7 +34,7 @@ limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calid
               "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
-              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
+              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus","Calidris ferruginea")
 #Tringa flavipes never appers with Protocol>0
 tmp=subset(DBt,DBt$Nom_latin %in% limicoles)
 tab_waders=season2_average(tmp)

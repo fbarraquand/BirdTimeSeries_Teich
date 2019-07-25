@@ -8,7 +8,7 @@ source("SCRIPTS/test_synchrony_Gross.r")
 
 thresh=0.1 
 type_correct="BH" #was Bonferroni before
-log_b=FALSE
+log_b=TRUE
 amethod="iaaft"
 anrands=100
 
@@ -66,7 +66,7 @@ for(v in 1:length(essai_taxo)){
 
 
 color=rep(c("Black","Lightblue","Darkblue"),2)
-pdf("Submission_JAE/Revisions/gross_triad_JAE.pdf")
+pdf("Submission_JAE/Revisions/gross_triad_JAE_log.pdf")
 par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony Index",cex.lab=2,cex.axis=2)
 mtext("a)",side=2,line=-4,at=0.99,cex=2,outer=T,las=1)

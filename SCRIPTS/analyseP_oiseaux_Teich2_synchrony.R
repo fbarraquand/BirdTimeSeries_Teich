@@ -1701,6 +1701,7 @@ for (i in 1:length(unique_waders)){
 }
 # frequents birds
 unique_frequents_birds =unique(as.character(abondance_frequents_birds$Nom_latin))
+unique_frequent_birds=unique_frequent_birds[!(unique_frequent_birds %in% unique_anas) & !(unique_frequent_birds %in% unique_waders)] 
 unique_frequents_birds = unique_frequents_birds[order(unique_frequents_birds)]
 tab_abondance_frequents_birds= matrix(data = NA,ncol = 1,nrow=length(unique_frequents_birds))
 rownames(tab_abondance_frequents_birds)=c(unique_frequents_birds)
@@ -1731,10 +1732,12 @@ occ_waders=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_ob
 occ_freq=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_obs_oiseaux_t) %in% unique_frequents_birds)
 
 library(xtable)
-tab=cbind(tab_abondance_frequents_birds,occ_freq*100)
+tab=cbind(occ_freq*100,tab_abondance_frequents_birds)
 print.xtable(xtable(tab,digits=c(1,3,1)),"../OUT/abundance_occurrence_freq.tex" ,type="latex")
-tab=cbind(tab_abondance_anas,occ_anas*100)
+
+tab=cbind(occ_anas*100,tab_abondance_anas)
 print.xtable(xtable(tab,digits=c(1,3,1)),"../OUT/abundance_occurrence_ducks.tex" ,type="latex")
-tab=cbind(tab_abondance_waders,occ_waders*100)
+
+tab=cbind(occ_waders*100,tab_abondance_waders)
 print.xtable(xtable(tab,digits=c(1,3,1)),"../OUT/abundance_occurrence_waders.tex" ,type="latex")
 

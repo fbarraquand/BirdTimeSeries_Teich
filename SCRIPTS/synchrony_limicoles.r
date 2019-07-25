@@ -1,5 +1,6 @@
 ### 2018 CPicoche: This script computes the wavelet-based synchrony index (Keitt 2008) for the wader community
 ### 2019/07/03: CP Relaunched with BH-correction 
+### 2019/07/25: CP Relaunched adding Calidris 
 
 graphics.off()
 rm(list=ls())
@@ -30,7 +31,7 @@ limicoles = sort(c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","
               "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burrhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
-              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus"))
+              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus","Calidris ferruginea"))
 sp_to_ignore=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima")
 limicoles=limicoles[!(limicoles %in% sp_to_ignore)]
 
