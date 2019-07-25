@@ -1527,8 +1527,12 @@ Coralie check that out.
 \begin_layout Standard
 
 \change_inserted -2100369821 1563868609
-We computed statistical significance of the synchrony index by comparing
- the observed values to the distribution of 
+We computed 
+\change_inserted -666822487 1563990441
+the 
+\change_inserted -2100369821 1563868609
+statistical significance of the synchrony index by comparing the observed
+ values to the distribution of 
 \begin_inset Formula $\eta$
 \end_inset
 
@@ -1541,14 +1545,47 @@ literal "true"
 \end_inset
 
 , i.e.
- the absence of interactions between species or groups of species.
- For each set of time series (each combination year 
+\change_inserted -666822487 1563990460
+,
+\change_inserted -2100369821 1563868609
+ 
+\change_deleted -666822487 1563990487
+the absence of interactions 
+\change_inserted -666822487 1563990497
+which amounts to zero cross-correlations 
+\change_inserted -2100369821 1563868609
+between species or groups of species.
+ 
+\change_inserted -666822487 1563990576
+The challenge to construct such null hypothesis is to remove all cross-correlati
+ons while keeping the exact same autocorrelation in each individual time
+ series.
+ Therefore, f
+\change_deleted -666822487 1563990575
+F
+\change_inserted -2100369821 1563868609
+or each set of time series (each combination year 
 \begin_inset Formula $\times$
 \end_inset
 
- season for a given community), we constructed 100 surrogates in which we
- kept the auto-correlation within observations, but removed the cross-correlatio
-n between time series.
+ season for a given community), we constructed 100 
+\change_inserted -666822487 1563990599
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\change_inserted -2100369821 1563868609
+surrogates
+\change_inserted -666822487 1563990601
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_inserted -2100369821 1563868609
+ in which we kept the auto-correlation within observations, but removed
+ the cross-correlation between time series.
  There are multiple ways to erase the cross-correlation depending on the
  resolution of the considered community.
  Within communities, we shifted the time-series 
@@ -1569,13 +1606,84 @@ literal "false"
 \end_inset
 
 ).
- The shift was made by displacing each time-series by a different random
- lag after seasonal averaging.
- At the boundary, remaining points are displaced towards the beginning of
- the time-series (toroidal shift).
- However, when there were only few time series (there are only two groups
- when the synchrony index is computed between communities), such shift was
- not enough to completely remove the cross-correlation.
+ 
+\change_inserted -666822487 1563990712
+We first explain the shift-based approach: 
+\change_deleted -666822487 1563990746
+The shift was made by displacing each
+\change_inserted -666822487 1563990744
+the suite of
+\change_deleted -666822487 1563990750
+ time-series
+\change_inserted -666822487 1563990762
+ abundance
+\change_unchanged
+ 
+\change_inserted -666822487 1563990739
+values (after seasonal averaging) is displaced 
+\change_inserted -2100369821 1563868609
+by a 
+\change_deleted -666822487 1563990774
+different
+\change_inserted -2100369821 1563868609
+ random 
+\change_inserted -666822487 1563990777
+temporal 
+\change_inserted -2100369821 1563868609
+lag
+\change_inserted -666822487 1563990804
+ 
+\begin_inset Formula $\tau$
+\end_inset
+
+
+\change_deleted -666822487 1563990735
+ after seasonal averaging
+\change_inserted -666822487 1563990858
+, so that a value 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ is now found at 
+\begin_inset Formula $y_{t+\tau}$
+\end_inset
+
+
+\change_inserted -2100369821 1563868609
+.
+ At the boundary
+\change_inserted -666822487 1563990878
+ (the end of the time series)
+\change_inserted -2100369821 1563868609
+, remaining points are displaced towards the beginning of the time-series
+\change_inserted -666822487 1563990895
+, which implements a
+\change_deleted -666822487 1563990887
+ (
+\change_inserted -2100369821 1563868609
+toroidal shift
+\change_deleted -666822487 1563990898
+)
+\change_inserted -2100369821 1563868609
+.
+ 
+\change_inserted -666822487 1563990921
+This methods works well with many times series.
+ 
+\change_inserted -2100369821 1563868609
+However, when there were only few time series 
+\change_deleted -666822487 1563990933
+(there are only
+\change_inserted -666822487 1563990934
+e.g.,
+\change_inserted -2100369821 1563868609
+ two groups
+\change_inserted -666822487 1563990942
+,
+\change_inserted -2100369821 1563868609
+ when the synchrony index is computed between communities), 
+\change_deleted -666822487 1563990974
+such shift was not enough to completely remove the cross-correlation.
  Indeed, there is only a one-lag difference between time series.
  In this case, the two parts of the time series framing the shifted boundary
  retain part of the cross-correlation with the other time series.
@@ -1593,16 +1701,56 @@ We either need a plot or another person to write this...
 
 \end_inset
 
- Therefore, between communities, we used the more refined IAAFT method,
- which is built to keep the frequency spectrum of the time series while
- randomizing it.
+
+\change_inserted -666822487 1563990989
+spurious cross-correlations could emerge.
+ 
+\change_deleted -666822487 1563990978
+ 
+\change_inserted -2100369821 1563868609
+Therefore, 
+\change_inserted -666822487 1563990999
+to test for synchrony 
+\change_inserted -2100369821 1563868609
+between 
+\change_inserted -666822487 1563991047
+summed abundances of 
+\change_deleted -666822487 1563991022
+communities
+\change_inserted -666822487 1563991057
+each guild or taxonomic unit
+\change_inserted -2100369821 1563868609
+, we used the more refined IAAFT method
+\change_inserted -666822487 1563991085
+ (REF)
+\change_inserted -2100369821 1563868609
+, which 
+\change_deleted -666822487 1563991078
+is built to keep
+\change_inserted -666822487 1563991088
+retains 
+\change_deleted -666822487 1563991079
+ 
+\change_inserted -2100369821 1563868609
+the frequency spectrum of the time series while randomizing it
+\change_inserted -666822487 1563991094
+s values
+\change_inserted -2100369821 1563868609
+.
 \end_layout
 
 \begin_layout Standard
 
 \change_inserted -2100369821 1563868751
-We obtained 100 sets of randomized time series for each season and period
- of time considered and computed the corresponding synchrony index.
+We obtained 100 sets of randomized time series for each 
+\change_deleted -666822487 1563991128
+season and period of time considered and 
+\change_inserted -2100369821 1563868751
+computed
+\change_deleted -666822487 1563991133
+ the corresponding
+\change_inserted -2100369821 1563868751
+ synchrony index.
  We then compared the number of 
 \begin_inset Formula $\eta_{H0}$
 \end_inset
@@ -1616,6 +1764,8 @@ status open
 
 \change_inserted -2100369821 1563868776
 Write the p-value formul along with North ref?
+\change_inserted -666822487 1563991155
+ YES
 \change_unchanged
 
 \end_layout
@@ -1623,8 +1773,35 @@ Write the p-value formul along with North ref?
 \end_inset
 
 .
- Independence of species was rejected at the 10% threshold with a Beverton-Holt
- correction as we compare across 2 seasons and 3 periods.
+ Independence of species was rejected at the 10% threshold with a 
+\change_deleted -666822487 1563991175
+Beverton-Holt
+\change_inserted -666822487 1563991194
+Benjamini-Hochberg
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1563991201
+same initials, different dudes ;)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -2100369821 1563868751
+ correction
+\change_inserted -666822487 1563991216
+,
+\change_inserted -2100369821 1563868751
+ as we compare across 2 seasons and 3 periods
+\change_inserted -666822487 1563991252
+, with partially overlapping data
+\change_inserted -2100369821 1563868751
+.
 \change_unchanged
 
 \end_layout
@@ -1707,8 +1884,12 @@ where
  As before, the significance of each value was tested at the 10%, 
 \change_deleted -2100369821 1563807337
 Bonferroni-corrected
+\change_deleted -666822487 1563991260
+Beverton-Holt
+\change_inserted -666822487 1563991266
+Benjamini-Hochberg
 \change_inserted -2100369821 1563807344
-Beverton-Holt corrected
+ corrected
 \change_unchanged
 , threshold by 100 phase-randomizations of each species time series, and
  computation of the corresponding 
@@ -1875,12 +2056,23 @@ Calidris
  change in water level management.
  
 \change_inserted -2100369821 1563807523
-Boxplot indicate the distribution of 
+Boxplot
+\change_inserted -666822487 1563991288
+s
+\change_inserted -2100369821 1563807523
+ indicate the distribution of 
 \begin_inset Formula $\eta$
 \end_inset
 
- under the null hypothesis (independent species) and dots correspond to
- the observed values.
+ under the null hypothesis (independent species) and 
+\change_deleted -666822487 1563991307
+dots
+\change_inserted -666822487 1563991312
+filled symbols 
+\change_deleted -666822487 1563991308
+ 
+\change_inserted -2100369821 1563807523
+correspond to the observed values.
  
 \change_unchanged
 Red stars correspond to synchrony values significantly different from the
@@ -1890,7 +2082,13 @@ Red stars correspond to synchrony values significantly different from the
 \change_unchanged
 , at the 10% threshold
 \change_inserted -2100369821 1563807480
- with a Beverton-Holt correction
+ with a 
+\change_deleted -666822487 1563991320
+Beverton-Holt
+\change_inserted -666822487 1563991325
+Benjamini-Hochberg
+\change_inserted -2100369821 1563807480
+ correction
 \change_unchanged
 .
  
@@ -2103,6 +2301,12 @@ We need to do stg about it: either put the two figures in separate space
  or adding them together before submitting.
  Problem is: I have no handle on wavelet.png, i cannot -or haven't found
  the way to- use it in a multipanel figure
+\change_inserted -666822487 1563991441
+.
+ What about Alix subplots? There must be a technical solution to this, let's
+ see.
+ As a first fix, you can use a subfigure in Latex / Lyx which allows you
+ most of the time to add (a) and (b).
 \change_unchanged
 
 \end_layout
