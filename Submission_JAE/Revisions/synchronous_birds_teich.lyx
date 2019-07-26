@@ -1566,6 +1566,28 @@ We obtained 100 sets of randomized time series for each computed synchrony
 
  values which exceeded or were inferior to the observed value to compute
  the p-value
+\change_inserted -2100369821 1564142770
+ according to
+\begin_inset CommandInset citation
+LatexCommand citet
+key "north_note_2002"
+literal "false"
+
+\end_inset
+
+ (using the ratio (r+1)/(n+1) where r is the number of surrogate values
+ that are 
+\begin_inset Formula $\ge\eta_{obs}$
+\end_inset
+
+ (respectively 
+\begin_inset Formula $\le\eta_{obs}$
+\end_inset
+
+) and n is the number of surrogates).
+ 
+\change_deleted -2100369821 1564153290
+
 \begin_inset Note Note
 status open
 
@@ -1580,18 +1602,10 @@ Write the p-value formul along with North ref? YES
 \end_inset
 
 .
- Independence of species was rejected at the 10% threshold with a Benjamini-Hoch
-berg
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-same initials, different dudes ;)
-\end_layout
-
-\end_inset
-
- correction, as we compare across 2 seasons and 3 periods, with partially
+ 
+\change_unchanged
+Independence of species was rejected at the 10% threshold with a Benjamini-Hochb
+erg correction, as we compare across 2 seasons and 3 periods, with partially
  overlapping data.
 \end_layout
 
@@ -1985,24 +1999,17 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\change_inserted -2100369821 1564153205
 \begin_inset Graphics
-	filename gross_triad_JAE.pdf
-	width 55text%
+	filename triad_synchrony_2panels.pdf
+	width 99text%
 
 \end_inset
 
 
-\end_layout
+\change_unchanged
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename wavelet_triad_BH.png
-	width 70text%
-
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2039,33 +2046,6 @@ name "fig:Time-domain-(top)-and"
 
 \end_inset
 
-
-\change_inserted -2100369821 1563808590
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563808678
-We need to do stg about it: either put the two figures in separate space
- or adding them together before submitting.
- Problem is: I have no handle on wavelet.png, i cannot -or haven't found
- the way to- use it in a multipanel figure
-\change_inserted -666822487 1563991441
-.
- What about Alix subplots? There must be a technical solution to this, let's
- see.
- As a first fix, you can use a subfigure in Latex / Lyx which allows you
- most of the time to add (a) and (b).
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
