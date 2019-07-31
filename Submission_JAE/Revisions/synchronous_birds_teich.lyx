@@ -658,10 +658,10 @@ within
  can be masked as well at some taxonomic scales (e.g., when measuring synchrony
  only at the species level).
  We suggest that compensation may have more potential to emerge between
- broad taxonomic units or functional groups, rather between 
-\series bold
-species
+ broad taxonomic units or functional groups, rather between species
 \change_inserted -2100369821 1563808440
+
+\series bold
 
 \begin_inset Note Note
 status open
@@ -672,6 +672,8 @@ status open
 
 \series bold
 Why is this in bold?
+\change_inserted -666822487 1564552781
+Corrected
 \change_unchanged
 
 \end_layout
@@ -742,7 +744,17 @@ literal "false"
 \begin_layout Standard
 Compensation is particularly likely to occur when such temporal environmental
  variation combines with a space or strongly limiting resource constraint,
- so that individuals compete in a zero-sum game (sensu 
+ so that individuals 
+\change_inserted -666822487 1564552897
+are close to 
+\change_unchanged
+compet
+\change_inserted -666822487 1564552899
+ing
+\change_deleted -666822487 1564552898
+e
+\change_unchanged
+ in a zero-sum game (sensu 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "hubbell2001unified"
@@ -774,7 +786,25 @@ literal "false"
  is combined with temporal environmental variability, theoretical research
  has revealed that increased interspecific competition might not increase
  species compensation (Ives et al.
- 1999) and might even decrease it 
+ 1999)
+\change_inserted -666822487 1564552938
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1564552940
+ADD REF
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ and might even decrease it 
 \begin_inset CommandInset citation
 LatexCommand citep
 before "i.e., increase species synchrony instead,"
@@ -789,6 +819,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1564552833
 Some scenarios with either zero-sum (lottery-style) or Lotka-Volterra competitio
 n are, however, likely to always yield compensatory dynamics, such as a
  dependence of the strength of competition itself on the value of the environmen
@@ -854,6 +886,8 @@ take over
  Compensatory dynamics can therefore arise from a variety of ecological
  processes combining to different degrees competition and diverging responses
  to environmental variables.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -994,11 +1028,48 @@ Considering only the years used in our analysis.
 \end_layout
 
 \begin_layout Standard
-Indeed, taxonomic scale should be a main modulator of synchrony/compensation,
- and this explanatory factor that has been somewhat neglected for now.
+Indeed, taxonomic 
+\change_inserted -666822487 1564552997
+and functional 
+\change_unchanged
+scale
+\change_inserted -666822487 1564552999
+s
+\change_unchanged
+ should be 
+\change_deleted -666822487 1564553001
+a 
+\change_unchanged
+main modulator
+\change_inserted -666822487 1564553003
+s
+\change_unchanged
+ of synchrony/compensation
+\change_deleted -666822487 1564552991
+, and this explanatory factor that has been somewhat neglected for now
+\change_unchanged
+.
  On the one hand, one could argue that compensation should be higher between
  closely related species, because functional and phylogenetic differences
- are generally correlated.
+ are generally correlated
+\change_inserted -666822487 1564553027
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1564553036
+Check refs provided by ref 2
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
  For example, if species A and B are two duck species that share almost
  the same food niche as well as many traits, it makes little difference
  to the rest of the community whether one species gets replaced by the other
@@ -1015,18 +1086,51 @@ literal "true"
 \end_inset
 
 ) so that individuals from species A or B would experience similar competition.
- Priority effects and chance events could then determine whether duck species
- A or B dominates.
+ Priority effects 
+\change_inserted -666822487 1564553060
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fukami_historical_2015"
+literal "false"
+
+\end_inset
+
+ 
+\change_unchanged
+and chance
+\change_inserted -666822487 1564553095
+ due to dispersal events
+\change_unchanged
+ could then determine whether duck species A or B dominates
+\change_inserted -666822487 1564553127
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "loreau2003biodiversity"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
  On the other hand, it could be argued that these two similar duck species
  will precisely respond in similar ways to environmental variables, which
  tends to obfuscate compensation.
  Under the latter scenario, more dissimilar species, or groups of species
  (within the same trophic level nonetheless), could compensate each other
  within the whole community.
- This should occur because more dissimilar species are more likely to have
- different environmental preferences and the environment varies over time
- (e.g., groups of species preferring more open vs more closed habitats replacing
- each other as a function of changes in vegetation height).
+ This 
+\change_deleted -666822487 1564553161
+should
+\change_inserted -666822487 1564553162
+can
+\change_unchanged
+ occur because more dissimilar species are more likely to have different
+ environmental preferences and the environment varies over time (e.g., groups
+ of species preferring more open vs more closed habitats replacing each
+ other as a function of changes in vegetation height).
  Surprisingly, such compensation 
 \shape italic
 between
@@ -1036,7 +1140,7 @@ between
  guilds 
 \begin_inset CommandInset citation
 LatexCommand citep
-before "e.g."
+before "e.g.,"
 key "sinclair2013asynchronous"
 literal "true"
 
@@ -1071,6 +1175,24 @@ Our objective is therefore to examine how synchronous or compensatory bird
  2006 (change in water levels), favoring different types of wetland birds
  (so that over long timescales, there is a real potential for changes in
  community composition).
+\change_inserted -666822487 1564553294
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1564553302
+Still 150 words to suppress.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section*
@@ -1135,8 +1257,34 @@ missing
  data with a model assuming that our reserve is a subsample of a regional
  population) because doing so would have compromised the patterns of local
  synchrony/compensation.
- However, we do check below that having such zeroes in the monthly time
- series cannot affect our conclusions.
+ However, we d
+\change_inserted -666822487 1564554410
+id
+\change_deleted -666822487 1564554408
+o
+\change_unchanged
+ check below that having such zeroes in the monthly time series cannot affect
+ our conclusions
+\change_inserted -666822487 1564554415
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1564554429
+Do we include this in the Appendix?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+
+\change_deleted -666822487 1564554405
  
 \begin_inset Note Note
 status open
@@ -1148,6 +1296,8 @@ I would do it later, otherwise it will become Appendix S1
 \end_inset
 
 .
+
+\change_unchanged
  In the statistical analyses, we use seasonally averaged abundances (plotted
  in Fig.
  
@@ -1248,6 +1398,47 @@ name "fig:Temporal-trends"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -666822487 1564553373
+Bird taxonomic and functional groups
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1564554198
+The reserve is dominated by waders and ducks or more generally waterfowl
+ (i.e., ducks, geese and swans, which we hereafter as 
+\begin_inset Quotes eld
+\end_inset
+
+ducks
+\begin_inset Quotes erd
+\end_inset
+
+ because the latter numerically dominate).
+ These two functional groups collectively represent XX% of the total number
+ of observed birds over the years.
+ Two fairly common genera, both in abundance and occurrence, which we use
+ for taxonomic analyses, are members of the 
+\emph on
+Anas
+\emph default
+ genus in ducks and members of the 
+\emph on
+Calidris
+\emph default
+ genus in waders.
+ Waders and ducks have different environmental preferences, with ducks preferrin
+g water levels allowing them to dive and and waders usually foraging on
+ mudflats.
+ A list is presented in Appendix S1; other frequent species includes herons,
+ egrets and cormorants, who share a similar niche and whose potential compensati
+on is also examined later on.
+ Among the fish eaters, grebes and gulls we also found to be present; some
+ raptors are found as well.
 \end_layout
 
 \begin_layout Subsection*
@@ -1466,6 +1657,24 @@ Ardea cinerea
 ).
  The little egret and the grey heron abundances were summed because of their
  similar requirements (i.e., they form a small functional group).
+\change_inserted -666822487 1564554267
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1564554276
+We need to edit this based on the above.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
