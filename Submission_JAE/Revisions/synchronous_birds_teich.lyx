@@ -705,6 +705,8 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1565351151
 Ecological theory suggests that within rich communities, where a number
  of species can have similar functions due to their proximity in morphological
  or phylogenetic space, they might exhibit compensatory dynamics 
@@ -716,15 +718,66 @@ literal "true"
 \end_inset
 
 .
- Compensation occurs when individuals of some species replace individuals
- of other species, either because of explicit competitive processes or shifts
- in some environmental driver that change selection pressures.
+ 
+\change_unchanged
+C
+\change_inserted -666822487 1565351289
+ommunity-level c
+\change_unchanged
+ompensation occurs when individuals of 
+\change_deleted -666822487 1565351261
+some
+\change_inserted -666822487 1565351262
+a given 
+\change_deleted -666822487 1565351261
+ 
+\change_unchanged
+species replace individuals of other species, either because of explicit
+ competitive processes or shifts in some environmental driver that change
+ selection pressures
+\change_inserted -666822487 1565351165
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gonzalez2009causes"
+literal "true"
+
+\end_inset
+
+
+\change_unchanged
+.
+
+\change_inserted -666822487 1565352642
+ The community as a whole then exhibits lower biomass variation than its
+ constituent species 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gross2013species"
+literal "true"
+
+\end_inset
+
+: some degree of compensation is therefore a prerequisite to stabilization
+ at the community level (Loreau and De Mazancourt 2013 – [CHECK this is
+ an OK REF for this]).
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Understanding why environmental variation may lead to compensation is relatively
- easy, provided species performances respond to that environmental variation:
- if species have some environmental preference (e.g.
+ easy,
+\change_deleted -666822487 1565352539
+ provided species performances respond to that environmental variation
+\change_unchanged
+: if species have 
+\change_deleted -666822487 1565352543
+some
+\change_inserted -666822487 1565352544
+different
+\change_unchanged
+ environmental preference (e.g.
  thermal optima), and the environment changes over time, different species
  will be most fit at different points in time.
  As a consequence, relative abundances will shift over time even though
@@ -737,8 +790,12 @@ literal "false"
 \end_inset
 
 .
- However, the conditions for compensation to happen depend on the particulars
- of the interactions between and within species in the community.
+ However, the conditions for compensation to happen 
+\change_inserted -666822487 1565352572
+also 
+\change_unchanged
+depend on the particulars of the interactions between and within species
+ in the community.
 \end_layout
 
 \begin_layout Standard
@@ -815,12 +872,17 @@ literal "false"
 
 , though this depends on the fluctuation regime.
  Thus, in a world where total community size varies, predicting whether
- compensatory (asynchronous) dynamics can occur is intrinsically difficult.
+ compensatory (asynchronous) dynamics can occur is intrinsically difficult
+\change_inserted -666822487 1565350776
+ (van Klink et al.
+ 2019)
+\change_deleted -666822487 1565350774
+.
 \end_layout
 
 \begin_layout Standard
 
-\change_deleted -666822487 1564552833
+\change_deleted -666822487 1565350858
 Some scenarios with either zero-sum (lottery-style) or Lotka-Volterra competitio
 n are, however, likely to always yield compensatory dynamics, such as a
  dependence of the strength of competition itself on the value of the environmen
@@ -886,11 +948,11 @@ take over
  Compensatory dynamics can therefore arise from a variety of ecological
  processes combining to different degrees competition and diverging responses
  to environmental variables.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1565350858
 Whatever the cause(s) of compensatory dynamics, its main consequences for
  ecosystem functioning is that the community as a whole exhibits lower biomass
  variation than its constituent species 
@@ -915,6 +977,8 @@ literal "true"
 
  with all species that fluctuate in phase, and therefore the biomass of
  the community may not fluctuate less than its constituent parts.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1000,6 +1064,10 @@ literal "true"
 
 \end_inset
 
+
+\change_inserted -666822487 1565351823
+ & van Klink [add REF]
+\change_unchanged
 ).
  Here, we take advantage of a long-term bird time series record at the monthly
  scale (over 35 years
@@ -1049,31 +1117,42 @@ s
 , and this explanatory factor that has been somewhat neglected for now
 \change_unchanged
 .
- On the one hand, one could argue that compensation should be higher between
- closely related species, because functional and phylogenetic differences
- are generally correlated
-\change_inserted -666822487 1564553027
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1564553036
-Check refs provided by ref 2
+ On the one hand, 
+\change_deleted -666822487 1565352094
+one could argue that
 \change_unchanged
-
-\end_layout
-
-\end_inset
-
-
+ compensation 
+\change_deleted -666822487 1565352099
+should be higher
+\change_inserted -666822487 1565352103
+can be high 
+\change_deleted -666822487 1565352099
+ 
+\change_unchanged
+between 
+\change_deleted -666822487 1565352127
+closely related species, because functional and phylogenetic differences
+ are generally correlated
+\change_inserted -666822487 1565352172
+similar and closely related species
 \change_unchanged
 .
- For example, if species A and B are two duck species that share almost
- the same food niche as well as many traits, it makes little difference
- to the rest of the community whether one species gets replaced by the other
- (functional compensation,
+ 
+\change_deleted -666822487 1565351858
+For example, if species A and B are two duck species that
+\change_inserted -666822487 1565351866
+If two species of ducks A and B 
+\change_deleted -666822487 1565351859
+ 
+\change_unchanged
+share almost the same 
+\change_deleted -666822487 1565351467
+food 
+\change_unchanged
+niche
+\change_deleted -666822487 1565351501
+ as well as many traits, it makes little difference to the rest of the community
+ whether one species gets replaced by the other (functional compensation,
 \emph on
  sensu
 \emph default
@@ -1085,9 +1164,30 @@ literal "true"
 
 \end_inset
 
-) so that individuals from species A or B would experience similar competition.
- Priority effects 
-\change_inserted -666822487 1564553060
+) so that 
+\change_inserted -666822487 1565351557
+, 
+\change_unchanged
+individuals
+\change_deleted -666822487 1565351894
+ from species A or B would 
+\change_inserted -666822487 1565352192
+from either species 
+\change_unchanged
+experience similar competition
+\change_inserted -666822487 1565352248
+ from species A or B, and should feel the effects of other species in the
+ community identically
+\change_unchanged
+.
+ 
+\change_deleted -666822487 1565352005
+P
+\change_inserted -666822487 1565352011
+This tends to favor p
+\change_unchanged
+riority effects 
+\change_inserted -666822487 1565351900
 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1096,15 +1196,41 @@ literal "false"
 
 \end_inset
 
+
+\change_deleted -666822487 1565352043
+and
+\change_inserted -666822487 1565352045
+, with 
+\change_deleted -666822487 1565352043
  
 \change_unchanged
-and chance
-\change_inserted -666822487 1564553095
- due to dispersal events
+chance
+\change_inserted -666822487 1565351900
+ due to movement events
 \change_unchanged
- could then determine whether duck species A or B dominates
-\change_inserted -666822487 1564553127
  
+\change_deleted -666822487 1565352052
+could then 
+\change_unchanged
+determin
+\change_inserted -666822487 1565352056
+ing
+\change_deleted -666822487 1565352054
+e 
+\change_inserted -666822487 1565352265
+ 
+\change_unchanged
+whether 
+\change_deleted -666822487 1565352267
+duck 
+\change_unchanged
+species A or B 
+\change_inserted -666822487 1565351900
+locally 
+\change_unchanged
+dominates
+\change_inserted -666822487 1565351900
+, which can then provide compensation at the landscape level 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "loreau2003biodiversity"
@@ -1118,13 +1244,31 @@ literal "false"
  On the other hand, it could be argued that these two similar duck species
  will precisely respond in similar ways to environmental variables, which
  tends to obfuscate compensation.
- Under the latter scenario, more dissimilar species, or groups of species
- (within the same trophic level nonetheless), could compensate each other
- within the whole community.
+ Under the latter scenario, more dissimilar species
+\change_deleted -666822487 1565351661
+,
+\change_unchanged
+ or groups
+\change_inserted -666822487 1565351900
+ 
+\change_deleted -666822487 1565351669
+ of species 
+\change_unchanged
+(within the same trophic level nonetheless)
+\change_deleted -666822487 1565351683
+,
+\change_unchanged
+ could 
+\change_deleted -666822487 1565352328
+compensate each other within the whole community
+\change_inserted -666822487 1565352340
+exhibit compensation (von Klink)
+\change_unchanged
+.
  This 
 \change_deleted -666822487 1564553161
 should
-\change_inserted -666822487 1564553162
+\change_inserted -666822487 1565351900
 can
 \change_unchanged
  occur because more dissimilar species are more likely to have different
@@ -1146,14 +1290,42 @@ literal "true"
 
 \end_inset
 
+
+\change_inserted -666822487 1565351900
+ (add REFs: Roeschel et al.
+ , van Klink et al.
+ )
+\change_unchanged
 .
- In this paper, we explore different ways to cluster the bird community,
- within or between guilds, along either taxonomic or functional classifications.
+ In this paper, we explore 
+\change_deleted -666822487 1565352774
+different ways to cluster the bird community, 
+\change_inserted -666822487 1565352386
+ the level of compensation/synchrony 
+\change_unchanged
+within or between guilds, along either taxonomic or functional classifications.
  Although a functional classification might appear intuitively more appealing,
- it is important to keep in mind that our description of functions through
- traits (e.g., body size, feeding relations) are necessarily partial and imperfect
-, so that a taxonomic description can sometimes yield a better explanation
- of performances 
+ 
+\change_deleted -666822487 1565352800
+it is important to keep in mind that our description of functions through
+ traits (e.g., body size, feeding relations) are
+\change_inserted -666822487 1565352813
+our knowledge of functional traits is
+\change_deleted -666822487 1565352800
+ 
+\change_unchanged
+necessarily partial and imperfect, so that a taxonomic description can sometimes
+ 
+\change_inserted -666822487 1565352844
+be preferable 
+\change_deleted -666822487 1565352830
+yield a better explanation of
+\change_unchanged
+ 
+\change_deleted -666822487 1565352834
+performances 
+\change_unchanged
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "clark_why_2016"
@@ -1182,8 +1354,8 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -666822487 1564553302
-Still 150 words to suppress.
+\change_inserted -666822487 1565352897
+Still 50 words to suppress - 854.
 \change_unchanged
 
 \end_layout
