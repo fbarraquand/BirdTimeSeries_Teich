@@ -706,7 +706,7 @@ Introduction
 
 \begin_layout Standard
 
-\change_deleted -666822487 1565351151
+\change_deleted -666822487 1566202391
 Ecological theory suggests that within rich communities, where a number
  of species can have similar functions due to their proximity in morphological
  or phylogenetic space, they might exhibit compensatory dynamics 
@@ -718,11 +718,9 @@ literal "true"
 \end_inset
 
 .
- 
-\change_unchanged
-C
-\change_inserted -666822487 1565351289
-ommunity-level c
+ C
+\change_inserted -666822487 1566202392
+Density c
 \change_unchanged
 ompensation occurs when individuals of 
 \change_deleted -666822487 1565351261
@@ -732,9 +730,19 @@ a given
 \change_deleted -666822487 1565351261
  
 \change_unchanged
-species replace individuals of other species, either because of explicit
- competitive processes or shifts in some environmental driver that change
- selection pressures
+species replace individuals of other species
+\change_inserted -666822487 1566202415
+ within a community
+\change_unchanged
+, either because of explicit competitive processes or shifts in 
+\change_deleted -666822487 1566202461
+some 
+\change_unchanged
+environmental driver
+\change_inserted -666822487 1566202463
+s
+\change_unchanged
+ that change selection pressures
 \change_inserted -666822487 1565351165
  
 \begin_inset CommandInset citation
@@ -778,6 +786,9 @@ some
 different
 \change_unchanged
  environmental preference (e.g.
+\change_inserted -666822487 1566202527
+,
+\change_unchanged
  thermal optima), and the environment changes over time, different species
  will be most fit at different points in time.
  As a consequence, relative abundances will shift over time even though
@@ -1437,22 +1448,8 @@ o
 \change_unchanged
  check below that having such zeroes in the monthly time series cannot affect
  our conclusions
-\change_inserted -666822487 1564554415
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1564554429
-Do we include this in the Appendix?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
+\change_inserted -666822487 1566202280
+ [REF to Appendix]
 \change_unchanged
 .
 
@@ -1580,25 +1577,33 @@ Bird taxonomic and functional groups
 
 \begin_layout Standard
 
-\change_inserted -666822487 1564554198
-The reserve is dominated by waders and ducks or more generally waterfowl
- (i.e., ducks, geese and swans, which we hereafter as 
-\begin_inset Quotes eld
-\end_inset
-
-ducks
-\begin_inset Quotes erd
-\end_inset
-
- because the latter numerically dominate).
+\change_inserted -666822487 1566203052
+The reserve is dominated by waders and ducks (or more generally waterfowl,
+ including geese and swans).
  These two functional groups collectively represent XX% of the total number
  of observed birds over the years.
- Two fairly common genera, both in abundance and occurrence, which we use
- for taxonomic analyses, are members of the 
+ Two fairly common genera, both in abundance and occurrence, are members
+ of the 
 \emph on
 Anas
 \emph default
- genus in ducks and members of the 
+ genus in ducks
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1566202824
+Actually, we do have an issue here given the new genus 
+\emph on
+Spatula
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+ and members of the 
 \emph on
 Calidris
 \emph default
@@ -1606,11 +1611,73 @@ Calidris
  Waders and ducks have different environmental preferences, with ducks preferrin
 g water levels allowing them to dive and and waders usually foraging on
  mudflats.
- A list is presented in Appendix S1; other frequent species includes herons,
- egrets and cormorants, who share a similar niche and whose potential compensati
-on is also examined later on.
- Among the fish eaters, grebes and gulls we also found to be present; some
- raptors are found as well.
+ A list of all birds found frequently in the reserve is presented in Appendix
+ S1; other common species includes herons, egrets and cormorants (see below).
+ Among the fish eaters, grebes and gulls we also found to be present; a
+ few raptors as well.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1566203124
+To examine compensation between and within the waders and duck categories,
+ we contrasted analyses using a taxonomic classification of the species
+ (i.e., between and within genera) and a functional classification of the
+ species (30 species of waders vs 34 species of 
+\begin_inset Quotes eld
+\end_inset
+
+ducks
+\begin_inset Quotes erd
+\end_inset
+
+).
+ We use 
+\begin_inset Quotes eld
+\end_inset
+
+duck
+\begin_inset Quotes erd
+\end_inset
+
+ as a shorthand for the larger functional group of herbivorous divers, because
+ the birds in that category are (numerically) mostly ducks: the group includes
+ nonetheless all anatids (geese and swans in particular) as well as the
+ common coot 
+\emph on
+(Fulica atra
+\emph default
+, an abundant species here, which is a Rallidae but as all coots, resembling
+ a duck in morphology and foraging habits).
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1566203146
+Outside of our main analyses on waders and ducks, we also 
+\begin_inset Quotes eld
+\end_inset
+
+zoomed in
+\begin_inset Quotes erd
+\end_inset
+
+ on a group of species that were known to exhibit potentially compensatory
+ dynamics through competition for roosting sites: the great cormorant 
+\shape italic
+(Phalacrocorax carbo)
+\shape default
+, the little egret (
+\shape italic
+Egretta garzetta
+\shape default
+) and the grey heron (
+\shape italic
+Ardea cinerea
+\shape default
+).
+ The little egret and the grey heron abundances were summed because of their
+ similar requirements (i.e., they form a small functional group).
 \end_layout
 
 \begin_layout Subsection*
@@ -1781,6 +1848,8 @@ Calidris
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1566202613
 We considered taxonomic classifications of the species (i.e., between and
  within genera) and functional classifications of the species (e.g., 30 species
  of waders vs 34 species of ducks) as we suspected that a functional classificat
@@ -1804,6 +1873,8 @@ duck
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1566202613
 We also 
 \begin_inset Quotes eld
 \end_inset
@@ -1829,22 +1900,6 @@ Ardea cinerea
 ).
  The little egret and the grey heron abundances were summed because of their
  similar requirements (i.e., they form a small functional group).
-\change_inserted -666822487 1564554267
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1564554276
-We need to edit this based on the above.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
 \change_unchanged
 
 \end_layout
@@ -1956,8 +2011,17 @@ literal "false"
 
 \end_inset
 
- (using the ratio (r+1)/(n+1) where r is the number of surrogate values
- that are 
+ (using the ratio 
+\change_deleted -666822487 1566203224
+(r+1)/(n+1)
+\change_inserted -666822487 1566203225
+
+\begin_inset Formula $(r+1)/(n+1)$
+\end_inset
+
+
+\change_inserted -2100369821 1564142770
+ where r is the number of surrogate values that are 
 \begin_inset Formula $\ge\eta_{obs}$
 \end_inset
 
@@ -1966,23 +2030,6 @@ literal "false"
 \end_inset
 
 ) and n is the number of surrogates).
- 
-\change_deleted -2100369821 1564153290
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Write the p-value formul along with North ref? YES
-\change_inserted -2100369821 1564070545
- TO DO
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-.
  
 \change_unchanged
 Independence of species was rejected at the 10% threshold with a Benjamini-Hochb
