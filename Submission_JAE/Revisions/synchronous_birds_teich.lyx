@@ -659,29 +659,7 @@ within
  only at the species level).
  We suggest that compensation may have more potential to emerge between
  broad taxonomic units or functional groups, rather between species
-\change_inserted -2100369821 1563808440
-
 \series bold
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1563808503
-
-\series bold
-Why is this in bold?
-\change_inserted -666822487 1564552781
-Corrected
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 .
 \end_layout
 
@@ -705,11 +683,10 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -666822487 1566202391
-Ecological theory suggests that within rich communities, where a number
- of species can have similar functions due to their proximity in morphological
- or phylogenetic space, they might exhibit compensatory dynamics 
+Density compensation occurs when individuals of a given species replace
+ individuals of other species within a community, either because of explicit
+ competitive processes or shifts in environmental drivers that change selection
+ pressures 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gonzalez2009causes"
@@ -718,45 +695,6 @@ literal "true"
 \end_inset
 
 .
- C
-\change_inserted -666822487 1566202392
-Density c
-\change_unchanged
-ompensation occurs when individuals of 
-\change_deleted -666822487 1565351261
-some
-\change_inserted -666822487 1565351262
-a given 
-\change_deleted -666822487 1565351261
- 
-\change_unchanged
-species replace individuals of other species
-\change_inserted -666822487 1566202415
- within a community
-\change_unchanged
-, either because of explicit competitive processes or shifts in 
-\change_deleted -666822487 1566202461
-some 
-\change_unchanged
-environmental driver
-\change_inserted -666822487 1566202463
-s
-\change_unchanged
- that change selection pressures
-\change_inserted -666822487 1565351165
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "gonzalez2009causes"
-literal "true"
-
-\end_inset
-
-
-\change_unchanged
-.
-
-\change_inserted -666822487 1565352642
  The community as a whole then exhibits lower biomass variation than its
  constituent species 
 \begin_inset CommandInset citation
@@ -767,30 +705,23 @@ literal "true"
 \end_inset
 
 : some degree of compensation is therefore a prerequisite to stabilization
- at the community level (Loreau and De Mazancourt 2013 – [CHECK this is
- an OK REF for this]).
+ at the community level (Loreau and De Mazancourt 2013 – 
+\change_inserted -666822487 1565352642
+[CHECK this is an OK REF for this
+\change_inserted -2100369821 1567431093
+.
+ It's part of their discussion, not really of their results.
+\change_inserted -666822487 1565352642
+]).
 \change_unchanged
 
 \end_layout
 
 \begin_layout Standard
 Understanding why environmental variation may lead to compensation is relatively
- easy,
-\change_deleted -666822487 1565352539
- provided species performances respond to that environmental variation
-\change_unchanged
-: if species have 
-\change_deleted -666822487 1565352543
-some
-\change_inserted -666822487 1565352544
-different
-\change_unchanged
- environmental preference (e.g.
-\change_inserted -666822487 1566202527
-,
-\change_unchanged
- thermal optima), and the environment changes over time, different species
- will be most fit at different points in time.
+ easy,: if species have different environmental preference (e.g., thermal
+ optima), and the environment changes over time, different species will
+ be most fit at different points in time.
  As a consequence, relative abundances will shift over time even though
  the community biomass as a whole may remain relatively stable 
 \begin_inset CommandInset citation
@@ -801,28 +732,14 @@ literal "false"
 \end_inset
 
 .
- However, the conditions for compensation to happen 
-\change_inserted -666822487 1565352572
-also 
-\change_unchanged
-depend on the particulars of the interactions between and within species
- in the community.
+ However, the conditions for compensation to happen also depend on the particula
+rs of the interactions between and within species in the community.
 \end_layout
 
 \begin_layout Standard
 Compensation is particularly likely to occur when such temporal environmental
  variation combines with a space or strongly limiting resource constraint,
- so that individuals 
-\change_inserted -666822487 1564552897
-are close to 
-\change_unchanged
-compet
-\change_inserted -666822487 1564552899
-ing
-\change_deleted -666822487 1564552898
-e
-\change_unchanged
- in a zero-sum game (sensu 
+ so that individuals are close to competing in a zero-sum game (sensu 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "hubbell2001unified"
@@ -853,26 +770,15 @@ literal "false"
  Outside of this zero-sum scenario, in models where Lotka-Volterra competition
  is combined with temporal environmental variability, theoretical research
  has revealed that increased interspecific competition might not increase
- species compensation (Ives et al.
- 1999)
-\change_inserted -666822487 1564552938
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1564552940
-ADD REF
-\change_unchanged
-
-\end_layout
+ species compensation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ives_stability_1999"
+literal "false"
 
 \end_inset
 
-
-\change_unchanged
- and might even decrease it 
+and might even decrease it 
 \begin_inset CommandInset citation
 LatexCommand citep
 before "i.e., increase species synchrony instead,"
@@ -884,111 +790,14 @@ literal "false"
 , though this depends on the fluctuation regime.
  Thus, in a world where total community size varies, predicting whether
  compensatory (asynchronous) dynamics can occur is intrinsically difficult
-\change_inserted -666822487 1565350776
- (van Klink et al.
- 2019)
-\change_deleted -666822487 1565350774
-.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -666822487 1565350858
-Some scenarios with either zero-sum (lottery-style) or Lotka-Volterra competitio
-n are, however, likely to always yield compensatory dynamics, such as a
- dependence of the strength of competition itself on the value of the environmen
-tal signal: a negative covariance between competitive strength and environmental
- variation is at the heart of the temporal storage effect 
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "chesson_multispecies_1994,ellner_how_2016"
+key "klink_functional_2019"
 literal "false"
 
 \end_inset
 
-, which is essentially a temporal partitioning of the niche.
- Although rarely the only driver of coexistence, the temporal storage effect
- is though to be common 
-\begin_inset CommandInset citation
-LatexCommand citep
-before "e.g.,"
-key "usinowicz_temporal_2017"
-literal "false"
-
-\end_inset
-
- and lead to compensatory dynamics 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "gonzalez2009causes"
-literal "false"
-
-\end_inset
-
-.
- Other ways to create compensation arise when considering the regional dynamics,
- which creates interaction between temporal environmental variation, competition
-, and dispersal.
- Dispersal can then create a spatial insurance effect, generating asynchrony
- at the regional level 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "loreau2003biodiversity"
-literal "false"
-
-\end_inset
-
- or generate compensation locally, e.g., by re-colonization after disturbances
- combined with priority effects 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "fukami_historical_2015"
-literal "false"
-
-\end_inset
-
-, which allows one of several near-equivalent species to 
-\begin_inset Quotes eld
-\end_inset
-
-take over
-\begin_inset Quotes erd
-\end_inset
-
-, but with temporal variation in the identity of the winner.
- Compensatory dynamics can therefore arise from a variety of ecological
- processes combining to different degrees competition and diverging responses
- to environmental variables.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -666822487 1565350858
-Whatever the cause(s) of compensatory dynamics, its main consequences for
- ecosystem functioning is that the community as a whole exhibits lower biomass
- variation than its constituent species 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "gross2013species"
-literal "true"
-
-\end_inset
-
-.
- Compensation is therefore intertwined with community-level stability, at
- least when stability is understood as the reciprocal of variability.
- By contrast, the most frequently observed outcome on biodiversity time
- series is community-level synchrony 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "vasseur_synchronous_2014"
-literal "true"
-
-\end_inset
-
- with all species that fluctuate in phase, and therefore the biomass of
- the community may not fluctuate less than its constituent parts.
-\change_unchanged
 
 \end_layout
 
@@ -1076,7 +885,17 @@ literal "true"
 \end_inset
 
 
-\change_inserted -666822487 1565351823
+\change_inserted -2100369821 1567431721
+ and 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "klink_functional_2019"
+literal "false"
+
+\end_inset
+
+
+\change_deleted -2100369821 1567431728
  & van Klink [add REF]
 \change_unchanged
 ).
@@ -1107,99 +926,17 @@ Considering only the years used in our analysis.
 \end_layout
 
 \begin_layout Standard
-Indeed, taxonomic 
-\change_inserted -666822487 1564552997
-and functional 
-\change_unchanged
-scale
-\change_inserted -666822487 1564552999
-s
-\change_unchanged
- should be 
-\change_deleted -666822487 1564553001
-a 
-\change_unchanged
-main modulator
-\change_inserted -666822487 1564553003
-s
-\change_unchanged
- of synchrony/compensation
-\change_deleted -666822487 1564552991
-, and this explanatory factor that has been somewhat neglected for now
-\change_unchanged
-.
+Indeed, taxonomic and functional scales should be main modulators of synchrony/c
+ompensation.
  On the one hand, 
-\change_deleted -666822487 1565352094
-one could argue that
-\change_unchanged
- compensation 
-\change_deleted -666822487 1565352099
-should be higher
-\change_inserted -666822487 1565352103
-can be high 
-\change_deleted -666822487 1565352099
+\change_deleted -2100369821 1567431811
  
 \change_unchanged
-between 
-\change_deleted -666822487 1565352127
-closely related species, because functional and phylogenetic differences
- are generally correlated
-\change_inserted -666822487 1565352172
-similar and closely related species
-\change_unchanged
-.
- 
-\change_deleted -666822487 1565351858
-For example, if species A and B are two duck species that
-\change_inserted -666822487 1565351866
-If two species of ducks A and B 
-\change_deleted -666822487 1565351859
- 
-\change_unchanged
-share almost the same 
-\change_deleted -666822487 1565351467
-food 
-\change_unchanged
-niche
-\change_deleted -666822487 1565351501
- as well as many traits, it makes little difference to the rest of the community
- whether one species gets replaced by the other (functional compensation,
-\emph on
- sensu
-\emph default
- 
-\begin_inset CommandInset citation
-LatexCommand citealt
-key "gonzalez2009causes"
-literal "true"
-
-\end_inset
-
-) so that 
-\change_inserted -666822487 1565351557
-, 
-\change_unchanged
-individuals
-\change_deleted -666822487 1565351894
- from species A or B would 
-\change_inserted -666822487 1565352192
-from either species 
-\change_unchanged
-experience similar competition
-\change_inserted -666822487 1565352248
- from species A or B, and should feel the effects of other species in the
- community identically
-\change_unchanged
-.
- 
-\change_deleted -666822487 1565352005
-P
-\change_inserted -666822487 1565352011
-This tends to favor p
-\change_unchanged
-riority effects 
-\change_inserted -666822487 1565351900
-
+compensation can be high between similar and closely related species.
+ If two species of ducks A and B share almost the same niche, individualsfrom
+ either species experience similar competition from species A or B, and
+ should feel the effects of other species in the community identically.
+ This tends to favor priority effects 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "fukami_historical_2015"
@@ -1207,41 +944,9 @@ literal "false"
 
 \end_inset
 
-
-\change_deleted -666822487 1565352043
-and
-\change_inserted -666822487 1565352045
-, with 
-\change_deleted -666822487 1565352043
- 
-\change_unchanged
-chance
-\change_inserted -666822487 1565351900
- due to movement events
-\change_unchanged
- 
-\change_deleted -666822487 1565352052
-could then 
-\change_unchanged
-determin
-\change_inserted -666822487 1565352056
-ing
-\change_deleted -666822487 1565352054
-e 
-\change_inserted -666822487 1565352265
- 
-\change_unchanged
-whether 
-\change_deleted -666822487 1565352267
-duck 
-\change_unchanged
-species A or B 
-\change_inserted -666822487 1565351900
-locally 
-\change_unchanged
-dominates
-\change_inserted -666822487 1565351900
-, which can then provide compensation at the landscape level 
+, with chance due to movement events determining whether species A or B
+ locally dominates, which can then provide compensation at the landscape
+ level 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "loreau2003biodiversity"
@@ -1249,43 +954,30 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
  On the other hand, it could be argued that these two similar duck species
  will precisely respond in similar ways to environmental variables, which
  tends to obfuscate compensation.
- Under the latter scenario, more dissimilar species
-\change_deleted -666822487 1565351661
-,
-\change_unchanged
- or groups
-\change_inserted -666822487 1565351900
- 
-\change_deleted -666822487 1565351669
- of species 
-\change_unchanged
-(within the same trophic level nonetheless)
-\change_deleted -666822487 1565351683
-,
-\change_unchanged
- could 
-\change_deleted -666822487 1565352328
-compensate each other within the whole community
-\change_inserted -666822487 1565352340
-exhibit compensation (von Klink)
+ Under the latter scenario, more dissimilar species or groups (within the
+ same trophic level nonetheless) could exhibit compensation 
+\change_deleted -2100369821 1567431832
+(von Klink)
+\change_inserted -2100369821 1567431832
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "klink_functional_2019"
+literal "false"
+
+\end_inset
+
+
 \change_unchanged
 .
- This 
-\change_deleted -666822487 1564553161
-should
-\change_inserted -666822487 1565351900
-can
-\change_unchanged
- occur because more dissimilar species are more likely to have different
- environmental preferences and the environment varies over time (e.g., groups
- of species preferring more open vs more closed habitats replacing each
- other as a function of changes in vegetation height).
+ This can occur because more dissimilar species are more likely to have
+ different environmental preferences and the environment varies over time
+ (e.g., groups of species preferring more open vs more closed habitats replacing
+ each other as a function of changes in vegetation height).
  Surprisingly, such compensation 
 \shape italic
 between
@@ -1296,47 +988,23 @@ between
 \begin_inset CommandInset citation
 LatexCommand citep
 before "e.g.,"
-key "sinclair2013asynchronous"
+key "roscher_identifying_2011,sinclair2013asynchronous,klink_functional_2019"
 literal "true"
 
 \end_inset
 
 
-\change_inserted -666822487 1565351900
+\change_deleted -2100369821 1567432612
  (add REFs: Roeschel et al.
  , van Klink et al.
  )
 \change_unchanged
 .
- In this paper, we explore 
-\change_deleted -666822487 1565352774
-different ways to cluster the bird community, 
-\change_inserted -666822487 1565352386
- the level of compensation/synchrony 
-\change_unchanged
-within or between guilds, along either taxonomic or functional classifications.
+ In this paper, we explore the level of compensation/synchrony within or
+ between guilds, along either taxonomic or functional classifications.
  Although a functional classification might appear intuitively more appealing,
- 
-\change_deleted -666822487 1565352800
-it is important to keep in mind that our description of functions through
- traits (e.g., body size, feeding relations) are
-\change_inserted -666822487 1565352813
-our knowledge of functional traits is
-\change_deleted -666822487 1565352800
- 
-\change_unchanged
-necessarily partial and imperfect, so that a taxonomic description can sometimes
- 
-\change_inserted -666822487 1565352844
-be preferable 
-\change_deleted -666822487 1565352830
-yield a better explanation of
-\change_unchanged
- 
-\change_deleted -666822487 1565352834
-performances 
-\change_unchanged
-
+ our knowledge of functional traits isnecessarily partial and imperfect,
+ so that a taxonomic description can sometimes be preferable 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "clark_why_2016"
@@ -1440,14 +1108,8 @@ missing
  data with a model assuming that our reserve is a subsample of a regional
  population) because doing so would have compromised the patterns of local
  synchrony/compensation.
- However, we d
-\change_inserted -666822487 1564554410
-id
-\change_deleted -666822487 1564554408
-o
-\change_unchanged
- check below that having such zeroes in the monthly time series cannot affect
- our conclusions
+ However, we did check below that having such zeroes in the monthly time
+ series cannot affect our conclusions
 \change_inserted -666822487 1566202280
  [REF to Appendix]
 \change_unchanged
@@ -1848,63 +1510,6 @@ Calidris
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -666822487 1566202613
-We considered taxonomic classifications of the species (i.e., between and
- within genera) and functional classifications of the species (e.g., 30 species
- of waders vs 34 species of ducks) as we suspected that a functional classificat
-ion may allow to partition better the abiotic requirements of the species.
- We use 
-\begin_inset Quotes eld
-\end_inset
-
-duck
-\begin_inset Quotes erd
-\end_inset
-
- as a shorthand for the larger functional group of herbivorous divers, because
- the birds in that category are mostly ducks: this group includes nonetheless
- all anatids (geese and swans in particular) as well as the common coot
- 
-\emph on
-(Fulica atra
-\emph default
-, an abundant species here).
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted -666822487 1566202613
-We also 
-\begin_inset Quotes eld
-\end_inset
-
-zoomed in
-\begin_inset Quotes erd
-\end_inset
-
- on a group of species that were known to exhibit potentially compensatory
- dynamics (through competition for roosting sites): the great cormorant
- 
-\shape italic
-(Phalacrocorax carbo)
-\shape default
-, the little egret (
-\shape italic
-Egretta garzetta
-\shape default
-) and the grey heron (
-\shape italic
-Ardea cinerea
-\shape default
-).
- The little egret and the grey heron abundances were summed because of their
- similar requirements (i.e., they form a small functional group).
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
 We computed the statistical significance of the synchrony index by comparing
  the observed values to the distribution of 
 \begin_inset Formula $\eta$
@@ -2001,9 +1606,7 @@ We obtained 100 sets of randomized time series for each computed synchrony
 \end_inset
 
  values which exceeded or were inferior to the observed value to compute
- the p-value
-\change_inserted -2100369821 1564142770
- according to
+ the p-value according to
 \begin_inset CommandInset citation
 LatexCommand citet
 key "north_note_2002"
@@ -2012,15 +1615,9 @@ literal "false"
 \end_inset
 
  (using the ratio 
-\change_deleted -666822487 1566203224
-(r+1)/(n+1)
-\change_inserted -666822487 1566203225
-
 \begin_inset Formula $(r+1)/(n+1)$
 \end_inset
 
-
-\change_inserted -2100369821 1564142770
  where r is the number of surrogate values that are 
 \begin_inset Formula $\ge\eta_{obs}$
 \end_inset
@@ -2030,10 +1627,8 @@ literal "false"
 \end_inset
 
 ) and n is the number of surrogates).
- 
-\change_unchanged
-Independence of species was rejected at the 10% threshold with a Benjamini-Hochb
-erg correction, as we compare across 2 seasons and 3 periods, with partially
+ Independence of species was rejected at the 10% threshold with a Benjamini-Hoch
+berg correction, as we compare across 2 seasons and 3 periods, with partially
  overlapping data.
 \end_layout
 
