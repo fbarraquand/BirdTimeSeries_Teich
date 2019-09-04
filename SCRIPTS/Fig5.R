@@ -13,14 +13,19 @@ type_correct="BH" #was Bonferroni before
 log_b=TRUE
 amethod="iaaft"
 anrands=100
+biomass=T
 
 # Grand Cormoran Phalacrocorax carbo
 # Héron cendré Ardea cinerea
 # Aigrette garzette Egretta garzetta
 
+if(biomass){
+        db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
+        db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
+        }else{
 db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
 db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",header=T)
-
+}
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
@@ -68,7 +73,11 @@ for(v in 1:length(essai_taxo)){
 
 
 color=rep(c("Black","Lightblue","Darkblue"),2)
+if(biomass){
+        pdf("Submission_JAE/Revisions/triad_synchrony_2panels_biomasses.pdf")  
+}else{
 pdf("Submission_JAE/Revisions/triad_synchrony_2panels.pdf")
+}
 layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,1))
 
 #par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)

@@ -1,5 +1,6 @@
 ##CP July 2018
 ##CP 25/07/19 There was a pb in wader def. It should also contain Calidris ferruginea
+##CP 04/09/2019: Added Tringa, to compare them to Calidris and removed the "not wader" category that we don't use anymore
 
 rm(list=ls())
 graphics.off()
@@ -24,6 +25,11 @@ sp_calidris=sp[grep("Calidris",sp)]
 calidris_sum=sum_of_species(DBt,sp_calidris,"Calidris")
 calidris_season=season2_average(calidris_sum)
 
+print('Tringa')
+sp_tringa=sp[grep("Tringa",sp)]
+tringa_sum=sum_of_species(DBt,sp_tringa,"Tringa")
+tringa_season=season2_average(tringa_sum)
+
 print('Waders')
 limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidiris temminckii","Calidris canutus",
               "Calidris alba","Calidris alpina","Calidris minuta","Calidris maritima" ,"Gallinago gallinago",
@@ -44,10 +50,12 @@ sp_duck=c(as.character(unique(sp_all[fam=="Anatidae"])),"Fulica atra")
 duck_sum=sum_of_species(DBt,sp_duck,"Ducks")
 duck_season=season2_average(duck_sum)
 
+if(1==0){
 print('Other birds than waders') ##This will be the longest one
 sp_other=setdiff(sp_all,limicoles)
 other_than_wader_sum=sum_of_species(DBt,sp_other,"Not-waders")
 other_than_wader_season=season2_average(other_than_wader_sum)
+}
 
 print('Frequent birds')
 vec_n_obs_oiseaux_t=rep(0,length(sp_all))
@@ -68,17 +76,20 @@ print('Finally Heron+Egret')
 heregr_sum=sum_of_species(DBt,c("Ardea cinerea","Egretta garzetta"),'HeronEgret')
 heregr_season=season2_average(heregr_sum)
 
-all_sum=rbind(anas_sum,calidris_sum,wader_sum,duck_sum,other_than_wader_sum,freq_sum,cormorant_sum,heregr_sum)
-write.table(all_sum,'IN/summed_abundances.csv',sep=";")
+#all_sum=rbind(anas_sum,calidris_sum,wader_sum,duck_sum,other_than_wader_sum,freq_sum,cormorant_sum,heregr_sum)
+all_sum=rbind(anas_sum,calidris_sum,wader_sum,duck_sum,tringa_sum,freq_sum,cormorant_sum,heregr_sum)
+write.table(all_sum,'IN/summed_abundances_vnew.csv',sep=";")
 
 table_seasonal_cold=matrix(NA,nrow=length(anas_season[,"Cold",]),ncol=8)
 rownames(table_seasonal_cold)=dimnames(anas_season)[[3]]
-colnames(table_seasonal_cold)=c('Anas','Calidris','Waders','Ducks','Not-waders','Freq','Cormorant','HeronEgret')
+#colnames(table_seasonal_cold)=c('Anas','Calidris','Waders','Ducks','Not-waders','Freq','Cormorant','HeronEgret')
+colnames(table_seasonal_cold)=c('Anas','Calidris','Waders','Ducks','Tringa','Freq','Cormorant','HeronEgret')
 table_seasonal_cold[,'Anas']=anas_season[,'Cold',]
 table_seasonal_cold[,'Calidris']=calidris_season[,'Cold',]
 table_seasonal_cold[,'Waders']=wader_season[,'Cold',]
 table_seasonal_cold[,'Ducks']=duck_season[,'Cold',]
-table_seasonal_cold[,'Not-waders']=other_than_wader_season[,'Cold',]
+#table_seasonal_cold[,'Not-waders']=other_than_wader_season[,'Cold',]
+table_seasonal_cold[,'Tringa']=tringa_season[,'Cold',]
 table_seasonal_cold[,'Freq']=freq_season[,'Cold',]
 table_seasonal_cold[,'Cormorant']=cormorant_season[,'Cold',]
 table_seasonal_cold[,'HeronEgret']=heregr_season[,'Cold',]
@@ -86,12 +97,14 @@ write.table(table_seasonal_cold,"IN/coldseason_abundances_summed.csv",sep=";")
 
 table_seasonal_warm=matrix(NA,nrow=length(anas_season[,"Warm",]),ncol=8)
 rownames(table_seasonal_warm)=dimnames(anas_season)[[3]]
-colnames(table_seasonal_warm)=c('Anas','Calidris','Waders','Ducks','Not-waders','Freq','Cormorant','HeronEgret')
+#colnames(table_seasonal_warm)=c('Anas','Calidris','Waders','Ducks','Not-waders','Freq','Cormorant','HeronEgret')
+colnames(table_seasonal_warm)=c('Anas','Calidris','Waders','Ducks','Tringa','Freq','Cormorant','HeronEgret')
 table_seasonal_warm[,'Anas']=anas_season[,'Warm',]
 table_seasonal_warm[,'Calidris']=calidris_season[,'Warm',]
 table_seasonal_warm[,'Waders']=wader_season[,'Warm',]
 table_seasonal_warm[,'Ducks']=duck_season[,'Warm',]
-table_seasonal_warm[,'Not-waders']=other_than_wader_season[,'Warm',]
+#table_seasonal_warm[,'Not-waders']=other_than_wader_season[,'Warm',]
+table_seasonal_warm[,'Tringa']=tringa_season[,'Warm',]
 table_seasonal_warm[,'Freq']=freq_season[,'Warm',]
 table_seasonal_warm[,'Cormorant']=cormorant_season[,'Warm',]
 table_seasonal_warm[,'HeronEgret']=heregr_season[,'Warm',]
@@ -106,7 +119,7 @@ building_line=substr(building_line,1,nchar(building_line)-1)
 building_line=paste(building_line,')',sep="")
 eval(parse(text=building_line))
 data_frame_cold=cbind(rownames(data_frame_cold),data_frame_cold)
-write.table(data_frame_cold,"IN/coldseason_abundances_asdataframe_summed.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
+write.table(data_frame_cold,"IN/coldseason_abundances_asdataframe_summed_vnew.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
 
 #Produce data frames and not table
 building_line='data_frame_warm=rbind('
@@ -117,5 +130,5 @@ building_line=substr(building_line,1,nchar(building_line)-1)
 building_line=paste(building_line,')',sep="")
 eval(parse(text=building_line))
 data_frame_warm=cbind(rownames(data_frame_warm),data_frame_warm)
-write.table(data_frame_warm,"IN/warmseason_abundances_asdataframe_summed.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
+write.table(data_frame_warm,"IN/warmseason_abundances_asdataframe_summed_vnew.csv",sep=";",col.names=c("Date","Species","Abundance"),row.names=F)
 

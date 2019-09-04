@@ -22,6 +22,7 @@ DBt=subset(DBt,!DBt$Nom_latin %in% sp_to_ignore)
 db_warm=read.csv("IN/warmseason_waders_detailed.txt",sep=",",header=T)
 db_warm=db_warm[,c(2,3,4)]
 names(db_warm)=c("dates","sp_data_frame","abundance")
+db_warm$sp_data_frame=as.character(db_warm$sp_data_frame)
 limicoles=unique(db_warm$sp_data_frame)
 limicoles=limicoles[!(limicoles %in%sp_to_ignore)]
 
@@ -30,6 +31,7 @@ limicoles=limicoles[!(limicoles %in%sp_to_ignore)]
 db_warm=read.csv("IN/warmseason_duck_detailed.txt",sep=",",header=T)
 db_warm=db_warm[,c(2,3,4)]
 names(db_warm)=c("dates","sp_data_frame","abundance")
+db_warm$sp_data_frame=as.character(db_warm$sp_data_frame)
 ducks=unique(db_warm$sp_data_frame)
 ducks=ducks[!(ducks %in%sp_to_ignore)]
 
@@ -37,6 +39,7 @@ ducks=ducks[!(ducks %in%sp_to_ignore)]
 db_warm=read.csv("IN/warmseason_freq_detailed.txt",sep=",",header=T)
 db_warm=db_warm[,c(2,3,4)]
 names(db_warm)=c("dates","sp_data_frame","abundance")
+db_warm$sp_data_frame=as.character(db_warm$sp_data_frame)
 freq=unique(db_warm$sp_data_frame)
 freq=freq[!(freq %in%sp_to_ignore)]
 

@@ -1,6 +1,7 @@
 # Script by CPicoche 2018
 #The aim is to compare synchrony indices at different taxonomic levels
 #2019/07/03 CP: using BH instead of Bonferroni; removing the lines and using boxplot instead of the CI which were actually wrong
+#2019/09/04 CP: using biomasses
 
 rm(list=ls())
 graphics.off()
@@ -8,17 +9,21 @@ source("SCRIPTS/test_synchrony_Gross.r")
 
 thresh=0.1 
 type_correct="BH" #was Bonferroni before
-log_b=TRUE
+log_b=F
 amethod="iaaft"
 anrands=100
+biomass=T
 
 # Grand Cormoran Phalacrocorax carbo
 # Héron cendré Ardea cinerea
 # Aigrette garzette Egretta garzetta
-
+if(biomass){
+        db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
+        db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)        
+}else{
 db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
 db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",header=T)
-
+}
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
@@ -66,7 +71,11 @@ for(v in 1:length(essai_taxo)){
 
 
 color=rep(c("Black","Lightblue","Darkblue"),2)
-pdf("Submission_JAE/Revisions/gross_triad_JAE_log.pdf")
+if(biomass){
+pdf("Submission_JAE/Revisions/gross_triad_JAE_biomasses.pdf")
+}else{
+        pdf("Submission_JAE/Revisions/gross_triad_JAE.pdf")
+}
 par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony Index",cex.lab=2,cex.axis=2)
 mtext("a)",side=2,line=-4,at=0.99,cex=2,outer=T,las=1)
