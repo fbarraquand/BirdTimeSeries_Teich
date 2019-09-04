@@ -1196,9 +1196,21 @@ Time series of seasonally averaged abundance for
 \emph on
  
 \emph default
-ducks of the genus
+ducks of the 
+\change_deleted -2100369821 1567610358
+genus
+\change_inserted -2100369821 1567610359
+tribe
+\change_unchanged
+
 \emph on
- Anas
+ Ana
+\change_inserted -2100369821 1567610344
+tini
+\change_deleted -2100369821 1567610346
+s
+\change_unchanged
+
 \emph default
  (a), calidrids (b, 
 \emph on

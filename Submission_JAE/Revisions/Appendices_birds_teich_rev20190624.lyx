@@ -317,8 +317,14 @@ Northern pintail
 
 \begin_layout Plain Layout
 
+\change_deleted -2100369821 1567602971
+
 \color blue
-Anas clypeata
+Anas
+\change_inserted -2100369821 1567602972
+Spatula
+\change_unchanged
+ clypeata
 \end_layout
 
 \end_inset
@@ -441,8 +447,14 @@ Eurasian teal
 
 \begin_layout Plain Layout
 
+\change_deleted -2100369821 1567602982
+
 \color blue
-Anas penelope
+Anas
+\change_inserted -2100369821 1567602982
+Mareca
+\change_unchanged
+ penelope
 \end_layout
 
 \end_inset
@@ -565,8 +577,14 @@ Mallard
 
 \begin_layout Plain Layout
 
+\change_deleted -2100369821 1567602991
+
 \color blue
-Anas querquedula
+Anas
+\change_inserted -2100369821 1567602994
+Spatula
+\change_unchanged
+ querquedula
 \end_layout
 
 \end_inset
@@ -627,8 +645,14 @@ Garganey
 
 \begin_layout Plain Layout
 
+\change_deleted -2100369821 1567602996
+
 \color blue
-Anas strepera
+Anas
+\change_inserted -2100369821 1567602997
+Mareca
+\change_unchanged
+ strepera
 \end_layout
 
 \end_inset
@@ -2195,7 +2219,13 @@ Whimbrel
 \begin_inset Text
 
 \begin_layout Plain Layout
-Philomachus pugnax
+
+\change_deleted -2100369821 1567604324
+Philomachus
+\change_inserted -2100369821 1567604325
+Calidris
+\change_unchanged
+ pugnax
 \end_layout
 
 \end_inset
@@ -3117,6 +3147,10 @@ Western cattle egret
 
 \begin_layout Plain Layout
 Casmerodius albus
+\change_inserted -2100369821 1567604684
+ [[Ardea alba???]]
+\change_unchanged
+
 \end_layout
 
 \end_inset
