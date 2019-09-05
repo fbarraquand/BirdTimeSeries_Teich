@@ -13,19 +13,20 @@ type_correct="BH" #was Bonferroni before
 log_b=TRUE
 amethod="iaaft"
 anrands=100
-biomass=T
+biomass=F
+if(biomass){
+end_bio="biomasses"
+}else{
+end_bio="abundances"
+}
 
 # Grand Cormoran Phalacrocorax carbo
 # Héron cendré Ardea cinerea
 # Aigrette garzette Egretta garzetta
 
-if(biomass){
-        db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
-        db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
-        }else{
-db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
-db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",header=T)
-}
+db_warm=read.csv(paste("IN/warmseason_",end_bio,"_asdataframe_summed_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
+db_cold=read.csv(paste("IN/coldseason_",end_bio,"_asdataframe_summed_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
+
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
@@ -114,7 +115,7 @@ lines(c(0,7.5),c(0,0),lty=2,lwd=2)
 legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=1.5)
 ############################################ WAVELETS ########################################
 
-db=read.csv("IN/summed_abundances.csv",sep=";",header=T)
+db=read.csv(paste("IN/summed_",end_bio,"_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
 db$Date=as.Date(db$Date)
 
 db=subset(db,Nom_latin %in% c("Cormorant","HeronEgret"))

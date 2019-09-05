@@ -1,5 +1,6 @@
 #### First used by CP (2018) from Keitt's package mvcwt
 #### 2019/07/03 Corrected BY to BH correction for homogeneity reeaon
+#### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
 
 image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...) 
 {
@@ -20,7 +21,7 @@ image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,..
 #		mtext("b)",side=2,line=-2,at=0.975,cex=2,outer=T,las=1)
 #		lines(c(2006,2006),c(0.2,20),lwd=2,col="black") 
             if (i%%2) 
-                axis(2,cex.axis=1.5)
+                axis(2,cex.axis=1.5,las=1)
             else axis(4)
             if (exists("z.boot") && !is.null(z.boot)) {
                 z.boot = 1 - abs(1 - 2 * z.boot)
@@ -53,7 +54,7 @@ image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,..
 	par(mar=c(2,.5,2,2))
 	seqi=seq(min(z.fun(x$z[, , 1]),na.rm=T),max(z.fun(x$z[, , 1]),na.rm=T),length.out=1024)
 	image(x=1,y=seqi,matrix(seqi,nrow=1,ncol=1024),col=pal,axes=FALSE,xlab="",ylab="")
-axis(4,cex.axis=1.5)
+axis(4,cex.axis=1.5,las=1)
 box()
 
     return(invisible(x))

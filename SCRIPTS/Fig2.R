@@ -3,6 +3,7 @@
 ### 2019/06/27: Added BH p-val correction. Tried IAAFT and Ebisuzaki surrogates for the "between" case, and proposed to also use them for the "within" case.
 ### 2019/07/03: Corrected the way rare species were ignored (not taken into account the right way before). This does not change anything, actually, as the Gross function already removed them, but this is cleaner (and removes the warnings).
 ### 2019/09/04: Changed the script to adapt to biomasses
+### 2019/09/05: Presentation details (las=1, Anas-> Anatini, etc.)
 
 rm(list=ls())
 graphics.off()
@@ -12,7 +13,12 @@ type_correct="BH" #Was bonferroni before
 amethod_b="iaaft" #Could also be shift or ebisuzaki. Was shift before.
 amethod_w="shift"
 anrands=100 #Number of surrogates we want to test the significance. Up to now (2019/07/03), 100.
-biomass=T
+biomass=F
+if(biomass){
+end_bio="biomasses"
+}else{
+end_bio="abundances"
+}
 
 source("SCRIPTS/test_synchrony_Gross.r")
 set.seed(42)
@@ -21,13 +27,8 @@ thresh=0.1
 sp_to_ignore=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser brachyrhynchus")
 
 print("Anas")
-if(biomass){
-db_warm=read.csv("IN/warmseason_anas_detailed_biomasses.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_anas_detailed_biomasses.txt",sep=",",header=T)
-}else{
-  db_warm=read.csv("IN/warmseason_anas_detailed.txt",sep=",",header=T)
-  db_cold=read.csv("IN/coldseason_anas_detailed.txt",sep=",",header=T)
-}
+db_warm=read.csv(paste("IN/warmseason_anas_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
+db_cold=read.csv(paste("IN/coldseason_anas_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_warm=db_warm[,c(2,3,4)]
 db_cold=db_cold[,c(2,3,4)]
 #Right format for synchrony scripts
@@ -63,13 +64,8 @@ for(v in 1:length(list_anas)){
 
 print("Calidris")
 #We look at only 6 species for the Calidris, we could also look at only 4
-if(biomass){
-  db_warm=read.csv("IN/warmseason_calidris_detailed_biomasses.txt",sep=",",header=T)
-  db_cold=read.csv("IN/coldseason_calidris_detailed_biomasses.txt",sep=",",header=T)  
-}else{
-db_warm=read.csv("IN/warmseason_calidris_detailed.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_calidris_detailed.txt",sep=",",header=T)
-}
+db_warm=read.csv(paste("IN/warmseason_calidris_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
+db_cold=read.csv(paste("IN/coldseason_calidris_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 
 db_warm=db_warm[,c(2,3,4)]
 db_cold=db_cold[,c(2,3,4)]
@@ -106,13 +102,8 @@ for(v in 1:length(list_calidris)){
 
 
 print("Waders")
-if(biomass){
-  db_warm=read.csv("IN/warmseason_waders_detailed_biomasses.txt",sep=",",header=T)
-  db_cold=read.csv("IN/coldseason_waders_detailed_biomasses.txt",sep=",",header=T)
-  }else{
-db_warm=read.csv("IN/warmseason_waders_detailed.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_waders_detailed.txt",sep=",",header=T)
-}
+db_warm=read.csv(paste("IN/warmseason_waders_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
+db_cold=read.csv(paste("IN/coldseason_waders_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 
 db_warm=db_warm[,c(2,3,4)]
 db_cold=db_cold[,c(2,3,4)]
@@ -150,13 +141,8 @@ for(v in 1:length(list_waders)){
 
 
 print("Freq")
-if(biomass){
-  db_warm=read.csv("IN/warmseason_freq_detailed_biomasses.txt",sep=",",header=T)
-  db_cold=read.csv("IN/coldseason_freq_detailed_biomasses.txt",sep=",",header=T)  
-}else{
-db_warm=read.csv("IN/warmseason_freq_detailed.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_freq_detailed.txt",sep=",",header=T)
-}
+db_warm=read.csv(paste("IN/warmseason_freq_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
+db_cold=read.csv(paste("IN/coldseason_freq_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_warm=db_warm[,c(2,3,4)]
 db_cold=db_cold[,c(2,3,4)]
 #Right format for synchrony scripts
@@ -190,13 +176,8 @@ for(v in 1:length(list_freq)){
 }
 
 print("Ducks")
-if(biomass){
-db_warm=read.csv("IN/warmseason_duck_detailed_biomasses.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_duck_detailed_biomasses.txt",sep=",",header=T)
-}else{
-  db_warm=read.csv("IN/warmseason_duck_detailed.txt",sep=",",header=T)
-  db_cold=read.csv("IN/coldseason_duck_detailed.txt",sep=",",header=T)
-}
+db_warm=read.csv(paste("IN/warmseason_ducks_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
+db_cold=read.csv(paste("IN/coldseason_ducks_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_warm=db_warm[,c(2,3,4)]
 db_cold=db_cold[,c(2,3,4)]
 #Right format for synchrony scripts
@@ -234,21 +215,19 @@ for(v in 1:length(list_duck)){
 print('Freq birds output')
 upsi=0.02
 color=rep(c("Black","Lightblue","Darkblue"),2)
-if(biomass){
-pdf("OUT/Gross_freq_new_biomasses.pdf",width=11,height=7,family="Times")
-}else{
-  pdf("OUT/Gross_freq_new.pdf",width=11,height=7,family="Times")
-}
+filename_pdf=paste("Gross_freq_new_",end_bio,".pdf",sep="")
+pdf(paste("OUT/",filename_pdf,sep=""),width=11,height=7,family="Times")
+system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
   #if(box_index){
 #pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=7)
 #}else{
 #pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=7) 
 #}
 par(mfrow=c(1,1),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="",cex.main=2)
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=1.8,cex.lab=1.8,main="",cex.main=2,las=1)
 #ylim=c(0.15,0.35),
 #mtext("Within",side=2,line=0.5,outer=T,cex=2)
-axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
+axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=1.8)
 for (v in 1:6){
         essai_taxo=list_freq
         obs=essai_taxo[[v]]$obs
@@ -279,11 +258,8 @@ print('Actual Figure 2, within groups')
 #PLOT
 upsi=0.05
 #pdf("OUT/Fig2_new2.pdf",width=11,height=14,family="Times")
-if(biomass){
-pdf("OUT/Fig2_new2_JAE_biomasses.pdf",width=11,height=14)
-}else{
-  pdf("OUT/Fig2_new2_JAE.pdf",width=11,height=14)
-}
+filename_pdf=paste("Fig2_new3_JAE_",end_bio,".pdf",sep="")
+pdf(paste("OUT/",filename_pdf,sep=""),width=11,height=14)
 #if(box_index){
 #pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=14)
 #}else{
@@ -291,10 +267,10 @@ pdf("OUT/Fig2_new2_JAE_biomasses.pdf",width=11,height=14)
 #}
 
 par(mfrow=c(2,2),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=2,cex.lab=2,main="Taxonomic groups",cex.main=2)
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=1.8,cex.lab=1.8,main="Taxonomic groups",cex.main=2,las=1)
 mtext("Within",side=2,line=0.3,outer=T,cex=2,font=2,at=0.75)
 mtext("a)",side=2,line=-4,at=0.99,cex=2,outer=T,las=1)
-axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
+axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=1.8)
 for (v in 1:6){
         essai_taxo=list_anas
         obs=essai_taxo[[v]]$obs
@@ -348,12 +324,12 @@ for (v in 1:6){
 
 lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
 legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
-legend("bottomright",c("Anas","Calidris"),pch=c(21,22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
+legend("bottomright",c("Anatini","Calidris"),pch=c(21,22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n",main='Functional groups',cex.main=2)
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n",main='Functional groups',cex.main=2,las=1)
 mtext("b)",side=2,line=-35,at=0.99,cex=2,outer=T,las=1)
 
-axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
+axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=1.8)
 for (v in 1:6){
         essai_taxo=list_waders
         obs=essai_taxo[[v]]$obs
@@ -410,8 +386,10 @@ legend("bottomright",c("Waders","Ducks"),pch=c(23,24),pt.bg="black",pt.cex=2,bty
 
 print('Now computing between groups')
 #Anas and Calidris
-db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
-db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
+db_warm=read.csv(paste("IN/warmseason_",end_bio,"_asdataframe_summed_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
+db_cold=read.csv(paste("IN/coldseason_",end_bio,"_asdataframe_summed_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
+#db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
+#db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed_biomasses.csv",sep=";",header=T)
 
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
@@ -449,8 +427,8 @@ for(v in 1:length(essai_taxo)){
 
 color=rep(c("Black","Lightblue","Darkblue"),2)
 #par(mfrow=c(1,2),mar=c(3,4.5,1,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=2,cex.axis=2)
-axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=1.8,cex.axis=1.8,las=1)
+axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=1.8)
 mtext("Between",side=2,line=0.3,outer=T,cex=2,font=2,at=0.25)
 mtext("c)",side=2,line=-4,at=0.49,cex=2,outer=T,las=1)
 
@@ -480,7 +458,7 @@ ll=c(essai_taxo[[2]]$obs,essai_taxo[[3]]$obs)
 #ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
 #lines(6:7,ll,col="black",lwd=2,lty=1)
 legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
-legend("topleft",c("Anas/Calidris"),pch=21,pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
+legend("topleft",c("Anatini/Calidris"),pch=21,pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 
 db_warm_all=subset(db_warm,sp_data_frame %in% c("Waders","Ducks")&dates<2016)
 db_warm_pre_2006=subset(db_warm,sp_data_frame %in% c("Waders","Ducks")&dates<=2006)
@@ -512,7 +490,7 @@ for(v in 1:length(essai_taxo)){
 
 
 color=rep(c("Black","Lightblue","Darkblue"),2)
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n")
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n",las=1)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 mtext("d)",side=2,line=-35,at=0.49,cex=2,outer=T,las=1)
 for (v in 1:6){
@@ -544,3 +522,4 @@ lines(c(0.0,7.5),c(0,0),lty=2,lwd=2)
 legend("topleft",c("Ducks/Waders"),pch=c(22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 dev.off()
 
+system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))

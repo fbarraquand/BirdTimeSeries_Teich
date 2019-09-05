@@ -3,13 +3,14 @@
 ### Edited 01/07/2016 - Production of the "monthly photograph" = max of summed abondance over all LDs per month
 #################################################################################################################################
 ### EDITED 27/04/2018 - Production of the "monthly photograph" with added of new data (2007-2008)
+### EDITED 05/09/2019 - Removed hard-coded paths
 #################################################################################################################################
 
 rm(list=ls())
 graphics.off()
 library("lattice")
 
-DIRECTORY_ORIGIN = "/home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/"
+DIRECTORY_ORIGIN = "."
 setwd(DIRECTORY_ORIGIN)
 #setwd(paste(DIRECTORY_ORIGIN,"IN/",sep=""))
 

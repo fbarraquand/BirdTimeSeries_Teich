@@ -19,7 +19,7 @@ iaaft_surrogate <- function(series, n.max.iter = 150) {
 
   # Sort the original series according to the sorted Gaussian. After a number
   # of iterations, this will be our final surrogate series.
-  series.randsorted <- series[gaussian]
+  series.randsorted <- series[gaussian] ###CP. If I've understood the algorithm well enough, we should have series=series[gaussian]. If we don't, we forget this distribution after a few steps, as we change series.randsorted to surrogate AND use the sorting of series instead of the gaussian sorting for surrogate
 
   # Iterate until autocorrelation functions match sufficiently.
   iteration <- 0

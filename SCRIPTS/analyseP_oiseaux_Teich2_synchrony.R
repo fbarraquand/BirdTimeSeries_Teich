@@ -1,6 +1,8 @@
 #### ATTENTION 
 #FAUT METTRE A JOUR "DIRECTORY_ORIGIN" POUR UTILISER CE SCRIPT
 #analyse des données après la création de la photo mensuelle.
+####CP 05/09/2019 : Corrected waders and birds_to_remove lists
+
 rm(list=ls())
 graphics.off()
 library("lattice")
@@ -62,16 +64,17 @@ oiseaux_Frequents_t_F = SpeciesF[vec_n_obs_oiseaux_t>75] #60/279 #same thing but
 # wader birds
 limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidris temminckii","Calidris canutus",
               "Calidris alba","Calidris alpina","Calidris minuta","Calidris maritima" ,"Gallinago gallinago",
-              "Tringa flavipes","Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
+              "Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
               "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
-              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
+              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus","Calidris ferruginea")
+#Tringa flavipes never appers with Protocol>0
 
 
 #birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis","Calidris fuscicollis","Calidris himantopus","Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus")
 
-birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser barchyrhynchus")
+birds_to_remove=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser brachyrhynchus")
 #I think there are more species we should ignore, have a closer look with CHristelle
 
 DBt=subset(DBt,!DBt$Nom_latin %in% birds_to_remove)

@@ -1,3 +1,5 @@
+### Deprecated
+
 rm(list=ls())
 graphics.off()
 library("R.utils")

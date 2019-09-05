@@ -6,3 +6,7 @@
 *.log
 OUT/*.csv
 #.*#
+
+IN/*.txt
+IN/*.csv
+*.RData

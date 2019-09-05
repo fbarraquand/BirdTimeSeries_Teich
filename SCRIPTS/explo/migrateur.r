@@ -1,7 +1,7 @@
 rm(list=ls())
 graphics.off()
 
-DBt<-read.csv(file="/home/cpicoche/Documents/Data_to_treat/TRANSFERT_LIMICOLES/IN/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
+DBt<-read.csv(file="IN/DBWithMonthlyPhotoTeich.csv",header=TRUE,sep=",",dec=".")
 DBt = subset(DBt,(DBt$Protocol==1 | DBt$Protocol==2) & DBt$Lieu_dit=="USN00-Réserve ornithologique (générique)")
 DBt<-DBt[!colnames(DBt) %in% c("X","Ref")] #edit du 14/04/2017 : vu qu'il y a 3 doublons
 DBt = unique.matrix(DBt) # élimination de cette manière, mais il faudrait aller regarder dans la photo mensuelle 
@@ -18,7 +18,7 @@ for (i in 1:length(SpeciesL)){
 oiseaux_Frequents_t=SpeciesL[vec_n_obs_oiseaux_t>75]
 
 
-data_migration=read.table('/home/cpicoche/Documents/Data_to_treat/TRANSFERT_LIMICOLES/IN/oiseaux.csv',header=TRUE,sep=";")
+data_migration=read.table('IN/oiseaux.csv',header=TRUE,sep=";")
 Species_migration=as.character(unique(data_migration$Nom_Latin))
 data_migration$TYPE=gsub("Nicheur","Breeding",data_migration$TYPE)
 data_migration$TYPE=gsub("Hivernant","Wintering",data_migration$TYPE)

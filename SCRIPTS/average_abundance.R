@@ -102,16 +102,17 @@ DBt<-DBt[!colnames(DBt) %in% c("X","Ref")] #edit du 14/04/2017 : there are 3 dup
 DBt = unique.matrix(DBt) 
 limicoles = c("Recurvirostra avosetta","Limosa limosa","Limosa lapponica","Calidris temminckii","Calidris canutus",
               "Calidris alba","Calidris alpina","Calidris minuta","Calidris maritima" ,"Gallinago gallinago",
-              "Tringa flavipes","Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
+              "Tringa nebularia","Tringa erythropus","Tringa ochropus","Tringa totanus",
               "Tringa glareola","Actitis hypoleucos","Philomachus pugnax","Numenius arquata","Numenius phaeopus",
               "Himantopus himantopus","Charadrius hiaticula","Charadrius alexandrinus","Haematopus ostralegus",
               "Burhinus oedicnemus","Charadrius dubius","Phalaropus lobatus","Pluvialis squatarola",
-              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus")
+              "Pluvialis apricaria","Arenaria interpres","Vanellus vanellus","Calidris ferruginea")
+#Tringa flavipes never appers with Protocol>0
 listColor = c('darkorchid','#F0C300','pink','lightgreen','darkgreen','lightblue','darkred','#6600FF','orange','#BABABA','#40826D','#3A9D23','#C71585','#F88E55','#00ffff','yellow','darkgrey','royalblue1','chocolate','antiquewhite1','black','deeppink','lightcoral','mediumorchid1','mediumaquamarine','olivedrab1','orangered','springgreen1','thistle1')
 #listColor = c('darkgreen','red','blue','#F0C300','pink','lightgreen','violet','lightblue','darkred','#6600FF','orange','#BABABA','#40826D','#3A9D23','#C71585','#F88E55','#00ffff','yellow','darkgrey','royalblue1','chocolate','antiquewhite1','black','deeppink','lightcoral','mediumorchid1','mediumaquamarine','olivedrab1','orangered','springgreen1','thistle1')
 minimal_percent = 1.00001
 
-filename_pdf="average_abundance_timeseries.pdf"
+filename_pdf="average_abundance_timeseries_v2.pdf"
 pdf(paste("OUT/",filename_pdf,sep=""),width=15,height=10)
 par(mfrow=c(3,2))
 layout(matrix(c(1,2,3,4,5,6), 3, 2, byrow = TRUE),heights = c(1,1,1),widths = c(3,1))
@@ -135,13 +136,18 @@ mat_percent_abondance_tot_waders   = create_mat_percent(abondance_waders,abondan
 mat_percent_abondance_tot_waders=mat_percent_abondance_tot_waders[order(mat_percent_abondance_tot_waders[,'somme'],decreasing=T),]
 
 
-db_warm_tot=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
-db_cold_tot=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",header=T)
+#db_warm_tot=read.csv("IN/warmseason_abundances_asdataframe_summed.csv",sep=";",header=T)
+#db_cold_tot=read.csv("IN/coldseason_abundances_asdataframe_summed.csv",sep=";",header=T)
+db_warm_tot=read.csv("IN/warmseason_abundances_asdataframe_summed_v2_wrarespecies.csv",sep=";",header=T)
+db_cold_tot=read.csv("IN/coldseason_abundances_asdataframe_summed_v2_wrarespecies.csv",sep=";",header=T)
 
 
 #ANAS
-db_warm=read.csv("IN/warmseason_anas_detailed.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_anas_detailed.txt",sep=",",header=T)
+#db_warm=read.csv("IN/warmseason_anas_detailed.txt",sep=",",header=T)
+#db_cold=read.csv("IN/coldseason_anas_detailed.txt",sep=",",header=T)
+db_warm=read.csv("IN/warmseason_anas_detailed_v2_abundances_wrarespecies.txt",sep=",",header=T)
+db_cold=read.csv("IN/coldseason_anas_detailed_v2_abundances_wrarespecies.txt",sep=",",header=T)
+
 temp_species=rownames(mat_percent_abondance_tot_anas)
 
 dd=unique(db_cold_tot$Date)
@@ -182,8 +188,10 @@ doughnut( c(mat_percent_abondance_tot_anas[,'percent'][round(mat_percent_abondan
 
 
 #CALIDRIS
-db_warm=read.csv("IN/warmseason_calidris_detailed.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_calidris_detailed.txt",sep=",",header=T)
+#db_warm=read.csv("IN/warmseason_calidris_detailed.txt",sep=",",header=T)
+#db_cold=read.csv("IN/coldseason_calidris_detailed.txt",sep=",",header=T)
+db_warm=read.csv("IN/warmseason_calidris_detailed_v2_abundances_wrarespecies.txt",sep=",",header=T)
+db_cold=read.csv("IN/coldseason_calidris_detailed_v2_abundances_wrarespecies.txt",sep=",",header=T)
 temp_species=rownames(mat_percent_abondance_tot_calidris)
 
 plou=c()
@@ -214,8 +222,10 @@ doughnut( c(mat_percent_abondance_tot_calidris[,'percent'][round(mat_percent_abo
 
 
 #WADERS
-db_warm=read.csv("IN/warmseason_waders_detailed.txt",sep=",",header=T)
-db_cold=read.csv("IN/coldseason_waders_detailed.txt",sep=",",header=T)
+#db_warm=read.csv("IN/warmseason_waders_detailed.txt",sep=",",header=T)
+#db_cold=read.csv("IN/coldseason_waders_detailed.txt",sep=",",header=T)
+db_warm=read.csv("IN/warmseason_waders_detailed_v2_abundances_wrarespecies.txt",sep=",",header=T)
+db_cold=read.csv("IN/coldseason_waders_detailed_v2_abundances_wrarespecies.txt",sep=",",header=T)
 temp_species=rownames(mat_percent_abondance_tot_waders)
 
 
