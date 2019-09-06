@@ -1180,7 +1180,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../OUT/average_abundance_timeseries.pdf
+	filename average_abundance_timeseries_v2.pdf
 	width 18cm
 
 \end_inset
@@ -1256,12 +1256,37 @@ The reserve is dominated by waders and ducks (or more generally waterfowl,
  including geese and swans).
  These two functional groups collectively represent XX% of the total number
  of observed birds over the years.
- Two fairly common genera, both in abundance and occurrence, are members
- of the 
+ Two fairly common 
+\change_deleted -2100369821 1567777146
+genera
+\change_inserted -2100369821 1567777148
+groups of species
+\change_inserted -666822487 1566203052
+, both in abundance and occurrence, are members of the 
+\change_deleted -2100369821 1567777150
+
 \emph on
 Anas
+\change_inserted -2100369821 1567777152
+Anatini tribe
+\change_deleted -2100369821 1567777156
+
 \emph default
- genus in ducks
+ genus
+\change_inserted -2100369821 1567777173
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gonzalez_phylogenetic_2009"
+literal "false"
+
+\end_inset
+
+
+\change_inserted -666822487 1566203052
+ in ducks
+\change_deleted -2100369821 1567777144
+
 \begin_inset Note Note
 status open
 
@@ -1277,6 +1302,8 @@ Spatula
 
 \end_inset
 
+
+\change_inserted -666822487 1566203052
  and members of the 
 \emph on
 Calidris
@@ -1285,7 +1312,13 @@ Calidris
  Waders and ducks have different environmental preferences, with ducks preferrin
 g water levels allowing them to dive and and waders usually foraging on
  mudflats.
- A list of all birds found frequently in the reserve is presented in Appendix
+ 
+\change_inserted -2100369821 1567777247
+We chose to work at two slightly different taxonomic levels to compare similarly
+ sized groups.
+ 
+\change_inserted -666822487 1566203052
+A list of all birds found frequently in the reserve is presented in Appendix
  S1; other common species includes herons, egrets and cormorants (see below).
  Among the fish eaters, grebes and gulls we also found to be present; a
  few raptors as well.
@@ -1296,8 +1329,14 @@ g water levels allowing them to dive and and waders usually foraging on
 \change_inserted -666822487 1566203124
 To examine compensation between and within the waders and duck categories,
  we contrasted analyses using a taxonomic classification of the species
- (i.e., between and within genera) and a functional classification of the
- species (30 species of waders vs 34 species of 
+ (i.e., between and within 
+\change_deleted -2100369821 1567777267
+genera
+\change_inserted -2100369821 1567777282
+phylogenetically close species
+\change_inserted -666822487 1566203124
+) and a functional classification of the species (30 species of waders vs
+ 34 species of 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1852,7 +1891,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Fig2_new2_JAE.pdf
+	filename Fig2_new3_JAE_abundances.pdf
 	width 85text%
 
 \end_inset
@@ -1991,7 +2030,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Fig4.pdf
+	filename abundance_3species.pdf
 	width 110text%
 
 \end_inset
@@ -2003,8 +2042,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time series of great cormoran abundance, as well as summed abundances of
- grey heron and little egret (logarithmic scale).
+Time series of great cormoran
+\change_inserted -2100369821 1567776232
+t
+\change_unchanged
+ abundance, as well as summed abundances of grey heron and little egret
+ (logarithmic scale).
  
 \begin_inset CommandInset label
 LatexCommand label

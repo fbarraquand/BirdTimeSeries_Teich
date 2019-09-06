@@ -15,8 +15,8 @@ set.seed(42)
 thresh=0.1
 
 #Anas and Calidris
-db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed_vnew.csv",sep=";",header=T)
-db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed_vnew.csv",sep=";",header=T)
+db_warm=read.csv("IN/warmseason_abundances_asdataframe_summed_v2_wtoutrarespecies.csv",sep=";",header=T)
+db_cold=read.csv("IN/coldseason_abundances_asdataframe_summed_v2_wtoutrarespecies.csv",sep=";",header=T)
 
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
@@ -54,7 +54,7 @@ for(v in 1:length(essai_taxo)){
 pdf("OUT/Synchrony_Calidris_Tringa.pdf")
 color=rep(c("Black","Lightblue","Darkblue"),2)
 #par(mfrow=c(1,2),mar=c(3,4.5,1,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=2,cex.axis=2)
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=2,cex.axis=2,las=1)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 mtext("Between",side=2,line=0.3,outer=T,cex=2,font=2,at=0.25)
 mtext("c)",side=2,line=-4,at=0.49,cex=2,outer=T,las=1)

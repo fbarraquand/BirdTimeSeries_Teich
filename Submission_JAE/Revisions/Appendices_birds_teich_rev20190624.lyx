@@ -135,16 +135,16 @@ arabic{figure}}
 
 \begin_layout Subsection*
 
-\change_inserted -2100369821 1564067976
-Appendix 1 - List of species
+\change_inserted -2100369821 1567775215
+Appendix S1 - List of species
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1564069773
+\change_inserted -2100369821 1567777548
 Among the 279 bird species which were observed throughout the monitoring,
- we focused on 2 functional groups (ducks and waders) and 2 genera (Anas,
- Calidris) described in Table 
+ we focused on 2 functional groups (ducks and waders) and 2 groups of phylogenet
+ically close species (Anatini, Calidris) described in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Composition-functional_groups"
@@ -2827,14 +2827,15 @@ Northern lapwing
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1564068108
+\change_inserted -2100369821 1567775159
 Composition of the two functional groups considered in the manuscript.
- The genera on which we focused inside these functional groups are colourd
+ The genera on which we focused inside these functional groups are coloured
  in the table.
- The % of occurrences correspond to the number of times a species was observed,
- compared to the total number of observation dates.
- The % of abundances correspond to the ratio of abundance of a given species
- on the total abundance of all birds observed during the whole site monitoring
+ The percentage of occurrences correspond to the number of dates when a
+ species was observed, compared to the total number of observation dates.
+ The percentage of abundances correspond to the ratio of the abundance of
+ a given species on the total abundance of all birds observed during the
+ monitoring
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Composition-functional_groups"
@@ -2845,7 +2846,7 @@ name "tab:Composition-functional_groups"
 \change_inserted -666822487 1566203906
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3146,9 +3147,11 @@ Western cattle egret
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -2100369821 1567750985
 Casmerodius albus
 \change_inserted -2100369821 1567604684
- [[Ardea alba???]]
+Ardea alba
 \change_unchanged
 
 \end_layout
@@ -4090,9 +4093,10 @@ African sacred ibis
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1564068134
+\change_inserted -2100369821 1567775200
 Most frequent birds (observed more than 75 times during the monitoring)
- which are not described in the previous functional groups.
+ which are not described in the previous functional groups (see previous
+ legend for more details on the column signification).
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Most-frequent-birds"
@@ -4121,7 +4125,13 @@ name "tab:Most-frequent-birds"
 \end_layout
 
 \begin_layout Subsection*
-Appendix S1 - Temporal patterns of in the Teich bird community
+Appendix S
+\change_deleted -2100369821 1567775220
+1
+\change_inserted -2100369821 1567775220
+2
+\change_unchanged
+ - Temporal patterns of in the Teich bird community
 \end_layout
 
 \begin_layout Standard
@@ -4134,7 +4144,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Fig1.pdf
+	filename abundance_not_averaged.pdf
 	width 18cm
 
 \end_inset
@@ -4150,9 +4160,21 @@ Time series of counts for
 \emph on
  
 \emph default
-ducks of the genus
+ducks of the 
+\change_deleted -2100369821 1567775394
+genus
+\change_inserted -2100369821 1567775394
+tribe
+\change_unchanged
+
 \emph on
- Anas
+ Ana
+\change_deleted -2100369821 1567775397
+s
+\change_inserted -2100369821 1567775398
+tini
+\change_unchanged
+
 \emph default
  (a), calidrids (b, 
 \emph on
@@ -4164,7 +4186,11 @@ Calidris
  to zero abundances.
  The coloured symbols below the curves represent each species abundances,
  with species composition on the right side on the donut plots for the most
- abundant species (over 1% of relative abundance in the group considered).
+ abundant species (over 1% of relative abundance in the group considered)
+\change_inserted -2100369821 1567775440
+, and total number of species taken into account in the group
+\change_unchanged
+.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4192,9 +4218,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align left
+\align center
 \begin_inset Graphics
-	filename ../../OUT/t30-Axe1-ProportionsLimicoles.pdf
+	filename ProportionsLimicoles.pdf
 	width 110text%
 
 \end_inset
@@ -4225,7 +4251,13 @@ Temporal trends in the abundance of all birds and the main functional groups
 \end_layout
 
 \begin_layout Subsection*
-Appendix S2 - Gross synchrony index at the whole community level
+Appendix S
+\change_deleted -2100369821 1567775579
+2
+\change_inserted -2100369821 1567775579
+3
+\change_unchanged
+ - Gross synchrony index at the whole community level
 \end_layout
 
 \begin_layout Standard
@@ -4290,7 +4322,17 @@ Note: Previously not including waders because presented as compared to synchrony
 \end_layout
 
 \begin_layout Subsection*
-Appendix S3 - Correlation in log-scale betwen cormorant and heron+egret
+Appendix S
+\change_deleted -2100369821 1567775645
+3
+\change_inserted -2100369821 1567775645
+4
+\change_unchanged
+ - Correlation in log-scale betw
+\change_inserted -2100369821 1567776325
+e
+\change_unchanged
+en cormorant and heron+egret
 \end_layout
 
 \begin_layout Standard
@@ -4356,13 +4398,182 @@ We noted on Fig.
  likely.
  It appears to be the reverse: synchrony values are higher with log-transformed
  abundances.
+\change_inserted -2100369821 1567775653
+
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -2100369821 1567775678
+Appendix S5 - Synchrony indices using biomasses
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1567776010
+We used the mean mass of each species to compute the variation of observed
+ biomasses and the corresponding synchrony indices.
+ This did not change our conclusions.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1567775754
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1567777435
+\begin_inset Graphics
+	filename Fig2_new3_JAE_biomasses.pdf
+	width 95text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1567775754
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1567775892
+Gross' synchrony index (
+\begin_inset Formula $\eta$
+\end_inset
+
+) as a function of the season (cold and warm seasons), calculated within
+ (top, a-b) and between (bottom, c-d) groups, using biomasses instead of
+ abundances.
+ The groups considered were different functional groups (ducks vs waders,
+ right b-d) or taxonomic groups (
+\emph on
+Anas
+\emph default
+ genus, 
+\emph on
+Calidris
+\emph default
+ genus, left a-b) groups.
+ The index was computed in each panel on the whole dataset (black) or using
+ two periods: before and after 2006 (light and dark blue), the year of the
+ change in water level management.
+ Boxplots indicate the distribution of 
+\begin_inset Formula $\eta$
+\end_inset
+
+ under the null hypothesis (independent species) and filled symbols correspond
+ to the observed values.
+ Red stars correspond to synchrony values significantly different from the
+ null model, at the 10% threshold with a Benjamini-Hochberg correction
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1567775911
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1567775929
+\begin_inset Graphics
+	filename Figure3_BH_biomasses.png
+	width 95text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1567775911
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1567776001
+Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
+ blue color) to 1 (synchrony, red color), using the masses instead of the
+ abundances of each species.
+ Dashed black lines delineate regions significantly different from the null
+ model (independently fluctuating species) with a false discovery rate controlle
+d at the 10% threshold.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Wavelet-modulus-ratio"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
 \begin_inset Newpage newpage
 \end_inset
 
-Appendix S4 - Properties of the Gross whole community synchrony index 
+Appendix S
+\change_inserted -2100369821 1567777064
+6
+\change_deleted -2100369821 1567777063
+4
+\change_unchanged
+ - Properties of the Gross whole community synchrony index 
 \begin_inset Formula $\eta$
 \end_inset
 
@@ -4596,6 +4807,11 @@ Evolution of Gross' synchrony index for different time series length and
  number of species in the community, in simulations where there is no trend
  in the environmental signal and the data is not subsampled, keeping the
  autocorrelation of the environment.
+
+\change_inserted -2100369821 1567777712
+ The parameter b is the effect strength of the environmental variable.
+
+\change_unchanged
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4649,6 +4865,11 @@ Gross' synchrony index for different time series length and number of species
  in the community, in simulations where there is no trend in the environmental
  signal and the data is subsampled (keeping 35 or 100 time steps), removing
  in effect the autocorrelation of the environment.
+
+\change_inserted -2100369821 1567777691
+ The parameter b is the effect strength of the environmental variable.
+
+\change_unchanged
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4707,6 +4928,11 @@ Gross' synchrony index for different time series length and number of species
  the environmental signal and the data is subsampled (for 35 or 100 time
  steps), removing part of the autocorrelation of the environment in the
  dynamics of the species
+\change_inserted -2100369821 1567777701
+.
+ The parameter b is the effect strength of the environmental variable.
+\change_unchanged
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:withtrend_subsample"
@@ -4771,7 +4997,13 @@ I think the problem was that we did not describe enough the results actually
 \end_layout
 
 \begin_layout Subsection*
-Appendix S5 - Effect of 
+Appendix S
+\change_deleted -2100369821 1567777072
+5
+\change_inserted -2100369821 1567777072
+7
+\change_unchanged
+ - Effect of 
 \begin_inset Quotes eld
 \end_inset
 

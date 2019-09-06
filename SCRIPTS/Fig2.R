@@ -13,7 +13,7 @@ type_correct="BH" #Was bonferroni before
 amethod_b="iaaft" #Could also be shift or ebisuzaki. Was shift before.
 amethod_w="shift"
 anrands=100 #Number of surrogates we want to test the significance. Up to now (2019/07/03), 100.
-biomass=F
+biomass=T
 if(biomass){
 end_bio="biomasses"
 }else{

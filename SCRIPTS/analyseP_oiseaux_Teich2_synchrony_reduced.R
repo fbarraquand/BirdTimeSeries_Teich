@@ -239,7 +239,7 @@ id_1=which(rownames(mat_percent_abondance_tot_anas)=="Anas querquedula")
 rownames(mat_percent_abondance_tot_anas)[id_1]="Spatula querquedula"
 id_1=which(rownames(mat_percent_abondance_tot_anas)=="Anas strepera")
 rownames(mat_percent_abondance_tot_anas)[id_1]="Mareca strepera"
-doughnut( c(mat_percent_abondance_tot_anas[,'percent'][round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.3,coord.x=c(-0.5,1))
+doughnut( c(mat_percent_abondance_tot_anas[,'percent'][round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent]) , inner.radius=0.15, col=listColor[which(round(mat_percent_abondance_tot_anas[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.3,coord.x=c(-0.5,1),init.angle=50)
 mtext(paste(nrow(mat_percent_abondance_tot_anas)," species",sep=""),1,line=-5)
 
 # next Calidris
@@ -266,7 +266,7 @@ par(mar=c(0.1,0.1,0.1,0.1))
 mat_percent_abondance_tot_calidris = mat_percent_abondance_tot_calidris[ order(row.names(mat_percent_abondance_tot_calidris)), ]
 
 
-doughnut( c(mat_percent_abondance_tot_calidris[,'percent'][round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent]) , inner.radius=0.145, col=listColor[which(round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.7,1) )
+doughnut( c(mat_percent_abondance_tot_calidris[,'percent'][round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent]) , inner.radius=0.145, col=listColor[which(round(mat_percent_abondance_tot_calidris[,'percent'])>=minimal_percent)],outer.radius =0.45,label.cex=1.28,coord.x=c(-0.7,1) ,init.angle=25)
 mtext(paste(nrow(mat_percent_abondance_tot_calidris)," species",sep=""),1,line=-5)
 
 # next waders
@@ -295,7 +295,6 @@ mtext(paste(nrow(mat_percent_abondance_tot_waders)," species",sep=""),1,line=-5)
 
 dev.off()
 system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
-
 
 #pdf("T47-Axe1-Teich-les_3_especes.pdf",width=20,height=6,family = 'Times')
 par(mar=c(4,5,3,1))
@@ -354,7 +353,7 @@ lines(abondance_phalacrocorax$Date,log10(abondance_phalacrocorax$Nombre),col="bl
 lines(abondance_phalacrocorax$Date,log10(abondance_phalacrocorax$Nombre+1),col="blue",lwd =1,lty=3)
 
 axis(1, at=d_ticks, labels=nameTicks,cex.axis=1.5)
-legend("topright",legend = c("Grey heron + little egret",'Great cormorant'),col=c('darkorchid','cyan'),pch=19,lwd=1,cex=1.5,bty="n")
+legend("topright",legend = c("Grey heron + little egret",'Great cormorant'),col=c('darkorchid','blue'),pch=19,lwd=1,cex=1.5,bty="n")
 dev.off()
 system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
 
@@ -414,11 +413,11 @@ plot(minAnnee:maxAnnee,vec_ratio_limicoles,type="o",xlab="Year",ylab="Ratio",
 abline(v=2006,col="black",lwd=2,lty=3)
 par(new=TRUE)
 plot(minAnnee:maxAnnee,log10(vec_abondance_all),type="o",
-     xlab="Year",ylab="",xaxt="n",yaxt="n",pch=19,col="deepskyblue",ylim=c(1,log10(max(vec_abondance_all))),las=1)
+     xlab="Year",ylab="",xaxt="n",yaxt="n",pch=19,col="deepskyblue",ylim=c(1,log10(max(vec_abondance_all))))
 lines(minAnnee:maxAnnee,log10(vec_abondance_waders),type="o",col="darkorchid",pch=19)
 lines(minAnnee:maxAnnee,log10(vec_abondance_ducks),type="o",col="olivedrab",pch=19)
 lines(minAnnee:maxAnnee,log10(vec_abondance_all_others),type="o",col="salmon",pch=19)
-axis(4,col="black")
+axis(4,col="black",las=1)
 mtext("Log10(abundance)",side=4,outer = TRUE)
 #légende
 par(fig = c(0, 1, 0, 1), oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)
