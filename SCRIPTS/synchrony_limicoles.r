@@ -10,7 +10,7 @@ source("SCRIPTS/image_mvcwt.r") #Add to change the image function to have a nice
 library("lubridate")
 library("RColorBrewer")
 
-biomass=F
+biomass=T
 
 ##################################################################################
 # -- importation des données du Teich

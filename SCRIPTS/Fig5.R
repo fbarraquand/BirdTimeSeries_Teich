@@ -75,17 +75,14 @@ for(v in 1:length(essai_taxo)){
 
 color=rep(c("Black","Lightblue","Darkblue"),2)
 if(biomass){
-        pdf("Submission_JAE/Revisions/triad_synchrony_2panels_biomasses.pdf")  
+        pdf("Submission_JAE/Revisions/triad_synchrony_2panels_biomasses.pdf") 
 }else{
 pdf("Submission_JAE/Revisions/triad_synchrony_2panels.pdf")
 }
-layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,1))
+layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 
 #par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-par(mar=c(4,5,2,1))
-
-
-
+par(mar=c(4,5,2,3))
 
 plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony Index",cex.lab=1.5,cex.axis=1.5)
 mtext("a)",side=2,line=-2,at=0.96,cex=1.5,outer=T,las=1)
@@ -113,6 +110,7 @@ lines(c(0,7.5),c(0,0),lty=2,lwd=2)
 #lines(6:7,ll,col="black",lwd=2,lty=1)
 
 legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=1.5)
+
 ############################################ WAVELETS ########################################
 
 db=read.csv(paste("IN/summed_",end_bio,"_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
@@ -155,7 +153,6 @@ mm=mvcwt(x,tab,min.scale=0.2,max.scale=10.0)
 mr = wmr.boot(mm, smoothing = 1,reps=anrands)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
-#png('OUT/wavelet_triad.png',width=800)
 image_mvcwt_two_panels(mr,reset.par=F,cex.axis=4,z.fun="Mod")
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management

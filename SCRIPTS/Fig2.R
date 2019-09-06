@@ -217,7 +217,6 @@ upsi=0.02
 color=rep(c("Black","Lightblue","Darkblue"),2)
 filename_pdf=paste("Gross_freq_new_",end_bio,".pdf",sep="")
 pdf(paste("OUT/",filename_pdf,sep=""),width=11,height=7,family="Times")
-system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
   #if(box_index){
 #pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=7)
 #}else{
@@ -253,6 +252,7 @@ lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
 legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
 legend("bottomright",c("Freq"),pch=c(21),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
+system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
 
 print('Actual Figure 2, within groups')
 #PLOT

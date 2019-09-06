@@ -1,4 +1,4 @@
-###CP
+###CP Just extracting part of the code of analyseP_oiseaux... entirely written by CAluome, just for efficiency
 ###CP 04/09/2019: Adding las=1 to have horizontal y-axis tick labels and updating taxonomy
 
 rm(list=ls())

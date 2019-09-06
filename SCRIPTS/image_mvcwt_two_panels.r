@@ -51,7 +51,7 @@ image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,..
 
 
     })
-	par(mar=c(2,.5,2,2))
+	par(mar=c(2,.5,2,3))
 	seqi=seq(min(z.fun(x$z[, , 1]),na.rm=T),max(z.fun(x$z[, , 1]),na.rm=T),length.out=1024)
 	image(x=1,y=seqi,matrix(seqi,nrow=1,ncol=1024),col=pal,axes=FALSE,xlab="",ylab="")
 axis(4,cex.axis=1.5,las=1)
