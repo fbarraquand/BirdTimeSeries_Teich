@@ -158,8 +158,8 @@ for(d in dd){
 	temp=c(temp,d,d+0.5)
 	plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Anas"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Anas"&db_warm_tot$Date==d])
 }
-par(mar=c(1.9,4.75,0.1,0.1))
-plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.8,cex.axis=1.8,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
+par(mar=c(3.9,4.75,0.1,0.1))
+plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
 #points(db_warm_tot$Date[idw]+0.5,db_warm_tot$Abundance[idw],col="black",pch=17,ylim=c(0,max(db_warm_tot$Abundance[idw],na.rm=T)),type="p",lwd =2)
 for (s in 1:length(temp_species)){
 	temp=c()
@@ -200,8 +200,8 @@ for(d in dd){
         temp=c(temp,d,d+0.5)
         plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Calidris"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Calidris"&db_warm_tot$Date==d])
 }
-par(mar=c(1.9,4.8,0.1,0.1))
-plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.8,cex.axis=1.8,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
+par(mar=c(3.9,4.8,0.1,0.1))
+plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
 for (s in 1:length(temp_species)){
         temp=c()
         plou=c()
@@ -235,8 +235,8 @@ for(d in dd){
         temp=c(temp,d,d+0.5)
         plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Waders"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Waders"&db_warm_tot$Date==d])
 }
-par(mar=c(1.9,4.75,0.1,0.1))
-plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.8,cex.axis=1.8,pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
+par(mar=c(3.9,4.75,0.1,0.1))
+plot(temp,log10(plou+1),col="black",xlab="Year",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
 for (s in 1:length(temp_species)){
         temp=c()
         plou=c()

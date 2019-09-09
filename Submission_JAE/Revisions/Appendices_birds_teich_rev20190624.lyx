@@ -2827,15 +2827,15 @@ Northern lapwing
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1567775159
+\change_inserted -2100369821 1568039188
 Composition of the two functional groups considered in the manuscript.
  The genera on which we focused inside these functional groups are coloured
  in the table.
- The percentage of occurrences correspond to the number of dates when a
+ The percentage of occurrences corresponds to the number of dates when a
  species was observed, compared to the total number of observation dates.
- The percentage of abundances correspond to the ratio of the abundance of
- a given species on the total abundance of all birds observed during the
- monitoring
+ The percentage of abundances corresponds to the ratio of the abundance
+ of a given species on the total abundance of all birds observed during
+ the monitoring
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Composition-functional_groups"
@@ -4288,7 +4288,15 @@ Gross' synchrony index as a function of the season (cold and warm seasons),
  two periods: before and after 2006 (light and dark blue), the year of the
  change in water level management.
  Red stars correspond to synchrony values significantly different from the
- null model (independent species), at the Bonferroni-corrected 10% threshold.
+ null model (independent species), at the 
+\change_deleted -2100369821 1568037934
+Bonferroni-corrected
+\change_unchanged
+ 10% threshold
+\change_inserted -2100369821 1568039336
+, with the Benjamini-Hochberg correction
+\change_unchanged
+.
  
 \begin_inset Note Note
 status collapsed
@@ -4447,7 +4455,7 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1567775892
+\change_inserted -2100369821 1568039246
 Gross' synchrony index (
 \begin_inset Formula $\eta$
 \end_inset
@@ -4475,7 +4483,7 @@ Calidris
  under the null hypothesis (independent species) and filled symbols correspond
  to the observed values.
  Red stars correspond to synchrony values significantly different from the
- null model, at the 10% threshold with a Benjamini-Hochberg correction
+ null model, at the 10% threshold with a Benjamini-Hochberg correction.
 \change_unchanged
 
 \end_layout
@@ -4528,13 +4536,13 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1567776001
+\change_inserted -2100369821 1568039262
 Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
  blue color) to 1 (synchrony, red color), using the masses instead of the
  abundances of each species.
  Dashed black lines delineate regions significantly different from the null
  model (independently fluctuating species) with a false discovery rate controlle
-d at the 10% threshold.
+d at the 10% threshold with a Benjamini-Hochberg correction.
  
 \begin_inset CommandInset label
 LatexCommand label

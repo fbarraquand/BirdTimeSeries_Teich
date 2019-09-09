@@ -29,7 +29,7 @@ type_dist=c("Pair","Quasi-normal","Compensation","Synchrony")
 
 set.seed(42)
 
-pdf("res_simulations_different_distributions.pdf")
+pdf("res_simulations_different_distributions_v2.pdf")
 par(mfrow=c(4,2))
 
 ### 1. 10 pairs with -0.8 correlation, unit variance, no correlation outside pairs
@@ -217,9 +217,10 @@ eta_min=eta_mean-eta_sd
 eta_max=eta_mean+eta_sd
 if(t_sigma==length(alpha)){
 par(mar=c(3,5,2.5,1))
-ax="nspecies"
+ax=""
 #plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65))
 plot( seq_sp,eta_mean,t="p",xlab=ax,ylab="",pch=16,ylim=c(min(eta_min),max(eta_max)))
+mtext("Nb species",1,2,cex=0.75)
 }else{
 par(mar=c(3,5,2.5,1))
 ax=""
@@ -237,6 +238,7 @@ rho_max=rho_mean+rho_sd
 if(t_sigma==length(alpha)){
 #plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65))
 plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(min(rho_min),max(rho_max)))
+mtext("Nb species",1,2,cex=0.75)
 }else{
 #plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(-0.85,0.65),xaxt="n")
 plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(min(rho_min),max(rho_max)),xaxt="n")

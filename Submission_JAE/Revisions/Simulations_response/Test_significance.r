@@ -13,9 +13,7 @@ source("../../../SCRIPTS/test_synchrony_Gross.r")
 nsamples = 35
 anrands=100
 amethod="shift"
-type_correct="BH"
 nspecies_list = c(2,6,10,20,30,40)
-nrep=1
 thresh=0.1
 
 alpha=c(15,2,4)
@@ -25,12 +23,12 @@ type_dist=c("Pair","Quasi-normal","Compensation","Synchrony")
 set.seed(42)
 
 pdf("test_for_significance.pdf")
-par(mfrow=c(2,2))
+par(mfrow=c(2,2),mar=c(4,4,3,2))
 
 #####Pairwise
 rho = -0.8
 sp=0
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(1,length(nspecies_list)),xlab="",ylab="eta",main=type_dist[1],xaxt="n")
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(1,length(nspecies_list)),xlab="",ylab=expression(eta),main=type_dist[1],xaxt="n")
 for(nspecies in nspecies_list){
 sp=sp+1
 
@@ -70,7 +68,17 @@ points(sp,as.numeric(obs)+0.1,pch='*',col="red",cex=2)
 
 for(t_sigma in 1:length(alpha)){
 sp=0
-plot(0,0,t="n",ylim=c(-1,1),xlim=c(1,length(nspecies_list)),xlab="",ylab="eta",main=type_dist[t_sigma+1],xaxt="n")
+if(t_sigma>1){
+	xl="Nb species"
+}else{
+	xl=""
+}
+if(t_sigma==2){
+	yl=expression(eta)
+}else{
+	yl=""
+}
+plot(0,0,t="n",ylim=c(-1,1),xlim=c(1,length(nspecies_list)),xlab=xl,ylab=yl,main=type_dist[t_sigma+1],xaxt="n")
 if(t_sigma>1){
 	axis(1,at=1:length(nspecies_list),nspecies_list)
 }
