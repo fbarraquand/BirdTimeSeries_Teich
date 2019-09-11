@@ -99,6 +99,22 @@ occ_ducks=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_obs
 occ_waders=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_obs_oiseaux_t) %in% limicoles)
 occ_freq=subset(mat_n_obs_oiseaux_t/length(unique(DBt$Date)),rownames(mat_n_obs_oiseaux_t) %in% unique_frequents_birds)
 
+#Occurrence per group
+dates=unique(DBt$Date)
+gp_ducks_occ=0
+gp_waders_occ=0
+for (d in dates){
+	mat_date=subset(DBt,DBt$Date==d)
+	if(length(intersect(DBt$Nom_latin,ducks)>0)){
+		gp_ducks_occ=gp_ducks_occ+1
+	}
+	if(length(intersect(DBt$Nom_latin,unique_waders)>0)){
+		gp_waders_occ=gp_waders_occ+1
+	}
+}
+
+
+stop()
 library(xtable)
 tab=cbind(occ_freq*100,tab_abondance_frequents_birds)
 print.xtable(xtable(tab,digits=c(1,1,3)),"OUT/abundance_occurrence_freq.tex" ,type="latex")

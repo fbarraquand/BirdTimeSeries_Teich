@@ -427,3 +427,15 @@ legend("bottom",c("Ratio waders",'All birds','Waders',"Ducks",'All other birds')
        ncol=5 , bty = "n",cex=1,pch=c(15,19,19,19,19),lty=c(2,1,1,1,1),lwd=c(2,1,1,1,1))
 dev.off()
 system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
+
+#### Just checking Cormorant and HeronEgret when they are averaged
+w1=read.table("IN/warmseason_abundances_summed_v2_wtoutrarespecies.csv",header=T,sep=";")
+c2=read.table("IN/coldseason_abundances_summed_v2_wtoutrarespecies.csv",header=T,sep=";")
+
+pdf("OUT/averaged_CorHerEgr.pdf",width=10)
+par(mfrow=c(1,2))
+plot(1:nrow(w1),w1$HeronEgret,col="grey",t="l",xlab="Year",ylab="Abundance",lwd=2,main="Warm")
+lines(1:nrow(w1),w1$Cormorant,col="black",lty=2,lwd=2)
+plot(1:nrow(c2),c2$Cormorant,col="black",lty=2,t="l",ylim=c(0,max(c2$HeronEgret,na.rm=T)),ylab="Abundance",xlab="Year",lwd=2,main="Cold")
+lines(1:nrow(c2),c2$HeronEgret,col="grey",lwd=2)
+dev.off()

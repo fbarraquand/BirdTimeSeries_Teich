@@ -1300,8 +1300,31 @@ Bird taxonomic and functional groups
 \change_inserted -666822487 1566203052
 The reserve is dominated by waders and ducks (or more generally waterfowl,
  including geese and swans).
- These two functional groups collectively represent XX% of the total number
- of observed birds over the years.
+ These two functional groups collectively represent 
+\change_deleted -2100369821 1568193860
+XX
+\change_inserted -2100369821 1568193860
+68
+\change_inserted -666822487 1566203052
+% of the total number of observed birds over the years
+\change_inserted -2100369821 1568193916
+ and are always present onsite
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1568193922
+Occurrence=100% for both groups
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1566203052
+.
  Two fairly common 
 \change_deleted -2100369821 1567777146
 genera
