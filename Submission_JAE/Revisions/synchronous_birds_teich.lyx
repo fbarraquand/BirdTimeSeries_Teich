@@ -1667,10 +1667,34 @@ surrogates
 \begin_inset Quotes erd
 \end_inset
 
- in which we kept the auto-correlation within observations, but removed
- the cross-correlation between time series.
- There are multiple ways to erase the cross-correlation depending on the
- resolution of the considered community.
+ in which we kept 
+\change_deleted -666822487 1568188371
+the 
+\change_unchanged
+auto-correlation
+\change_inserted -666822487 1568188373
+s
+\change_deleted -666822487 1568188375
+ within observations,
+\change_unchanged
+ but removed 
+\change_deleted -666822487 1568188378
+the 
+\change_unchanged
+cross-correlation
+\change_inserted -666822487 1568188381
+s
+\change_unchanged
+ between time series.
+ There are multiple ways to erase 
+\change_deleted -666822487 1568188393
+the 
+\change_unchanged
+cross-correlation
+\change_inserted -666822487 1568188394
+s
+\change_unchanged
+ depending on the resolution of the considered community.
  Within communities, we shifted the time-series 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1749,8 +1773,9 @@ between guilds
 when the synchrony index is computed between communities)
 \change_unchanged
 , spurious cross-correlations could emerge
-\change_inserted -666822487 1568134335
- with a shift-based approach as the number of combinations is more limited
+\change_inserted -666822487 1568188443
+ with a shift-based approach as the number of possible combinations is more
+ limited
 \change_unchanged
 .
  Therefore, to test for synchrony between 
@@ -2345,7 +2370,7 @@ Fig.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2444,7 +2469,7 @@ name "fig:Time-series-of"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2620,9 +2645,13 @@ Compensation was overall very rare at the yearly timescale (differentiating
 , with synchrony between species being the rule
 \change_unchanged
 .
- At short timescales (below the season), and among taxonomically or functionally
+ 
+\change_deleted -666822487 1568189279
+At short timescales (below the season), and among taxonomically or functionally
  close species, some compensation could be found but only at certain periods.
- In other words, there was no widespread 
+ 
+\change_unchanged
+In other words, there was no widespread 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2676,8 +2705,25 @@ between
 
 \change_deleted -666822487 1568137197
  
-\change_inserted -666822487 1568137033
+\change_inserted -666822487 1568188859
+A zoom on a module of three species with known competition also revealed
+ compensation at scales above 5 years.
+ We elaborate below on these findings.
+ 
+\end_layout
 
+\begin_layout Subsection*
+
+\change_inserted -666822487 1568188929
+Synchrony 
+\emph on
+within
+\emph default
+ or 
+\emph on
+between
+\emph default
+ guilds
 \end_layout
 
 \begin_layout Standard
@@ -2865,20 +2911,63 @@ S1
  present in the reserve affects their reproductive success, which feeds
  back into regional-scale dynamics, and in turn, regional-scale dynamics
  influences which species are locally settling and competing.
+\change_inserted -666822487 1568189041
+
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -666822487 1568189372
+Effect of the change in management on synchrony
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1568190018
+Although we performed analyses throughout the whole time series, in which
+ there is a progressive change in composition (Appendix S1), a marked change
+ in management occured around 2006, after which the water levels were kept
+ at a lower level.
+ We have therefore also performed yearly analyses pre- and post-2006.
+ These showed very little differences during either the warm or cold season.
+ However, in the wavelet analyses, we clearly see at monthly or multi-year
+ timescales more compensation after 2006.
+ Since the water levels are on average more appropriate for waders and their
+ overall proportion has increased, it may be tempting to interpret this
+ as a consequence of the community becoming saturated with waders, but we
+ caution that it is difficult to make any strong conclusion based on a single
+ synchrony index.
+ We now describe a case where the biological processes at hand are better
+ understood.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -666822487 1568188981
+Synchrony in a small module with known competition
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Zooming in on the cormorant-heron-egret module, 
-\change_inserted -666822487 1568138007
+\change_inserted -666822487 1568189839
 for which we knew beforehand that competition for resting/roosting sites
- in the summer season occurs (C.
+ in the summer season occurs between on the one hand, cormorants, and on
+ the other hand, little egrets and gre herons (C.
  Feigné, pers.
- obs.) and abundance time series suggested some negative correlation, 
+ obs.).
+ Abundance time series suggested some negative correlation, but it was not
+ found on the annual scale for which synchrony (or an absence of relation)
+ dominates.
+ Instead, 
 \change_unchanged
 we find that compensation mostly occurs above the annual temporal scale
-\change_inserted -666822487 1568137981
-, approximatively on a scale of 6 years, much above the annual scale for
- which synchrony dominates (or an absence of relation) dominates.
+\change_inserted -666822487 1568189839
+, approximatively on a scale of 6 years, much above the annual scale.
  
 \change_deleted -666822487 1568137855
 , and predominantly in summer as well as before 2006
@@ -2890,8 +2979,17 @@ This occurs because of a slow replacement of species due to competition
  for resting/roosting sites in the summer season (C.
  Feigné, pers.
  obs.), which mostly occurred before 2006.
-\change_unchanged
 
+\change_inserted -666822487 1568189903
+ This may indeed be a consequence of the slow shift in frequencies cormorants
+ and little egrets / grey herons.
+ 
+\end_layout
+
+\begin_layout Subsection*
+
+\change_inserted -666822487 1568189927
+Conclusion and perspectives for theory
 \end_layout
 
 \begin_layout Standard
