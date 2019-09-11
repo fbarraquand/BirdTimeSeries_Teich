@@ -2167,8 +2167,12 @@ values
 \change_unchanged
 in response to the management change in 2006
 \change_inserted -666822487 1568135851
-, with species within Anatini becoming less synchronous over time, although
- we should mention that these changes are not statistically significant
+, with species within 
+\emph on
+Anatini
+\emph default
+ becoming less synchronous over time, although we should mention that these
+ changes are not statistically significant
 \change_unchanged
 .
  
@@ -2177,8 +2181,13 @@ However, f
 \change_inserted -666822487 1568135316
 F
 \change_unchanged
-or the warm season, the management change, which consisted in lowering the
- water levels, created 
+or the warm season, the management change, which consisted 
+\change_deleted -666822487 1568222209
+in
+\change_inserted -666822487 1568222209
+of
+\change_unchanged
+ lowering the water levels, created 
 \change_deleted -666822487 1568135894
 more
 \change_inserted -666822487 1568135897
@@ -2211,8 +2220,12 @@ Calidris
  genera
 \change_unchanged
 .
+
+\change_deleted -666822487 1568222961
  This increase in synchrony after 2006 is matched by the functional group
  classification.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2325,12 +2338,112 @@ name "fig:Gross-synchrony-index"
 \end_layout
 
 \begin_layout Standard
-There are therefore relatively contrasted results regarding the effect of
- the management change on short-term synchrony within the wader community.
- At the yearly (season) timescale, it seems to increase the synchrony (though
- the Gross index and wavelets provide slightly different answers).
- At even shorter timescales though, it seems to decrease it.
-\change_inserted -666822487 1568136437
+There are therefore 
+\change_deleted -666822487 1568223067
+relatively 
+\change_unchanged
+contrasted results regarding the effect of the management change on 
+\change_deleted -666822487 1568223078
+short-term
+\change_unchanged
+ synchrony within 
+\change_deleted -666822487 1568223097
+the wader community
+\change_inserted -666822487 1568223121
+guilds or within the whole bird community
+\change_unchanged
+.
+ At the yearly (season) timescale, 
+\change_deleted -666822487 1568223036
+it seems to increase the synchrony (though the Gross index and wavelets
+ provide slightly different answers)
+\change_inserted -666822487 1568223138
+the results are unclear for both guilds
+\change_unchanged
+.
+ At 
+\change_deleted -666822487 1568222733
+even 
+\change_unchanged
+shorter
+\change_inserted -666822487 1568222766
+ (a few months) and longer (several years)
+\change_unchanged
+ timescales though, 
+\change_deleted -666822487 1568222699
+it
+\change_inserted -666822487 1568222699
+the management change
+\change_unchanged
+ 
+\change_deleted -666822487 1568223048
+seems to
+\change_inserted -666822487 1568223051
+may
+\change_unchanged
+ decrease 
+\change_inserted -666822487 1568222718
+synchrony
+\change_deleted -666822487 1568222715
+it
+\change_inserted -666822487 1568222780
+ and even promote compensation
+\change_unchanged
+.
+
+\change_inserted -666822487 1568223214
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -666822487 1568223214
+\begin_inset Graphics
+	filename Figure3_BH.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1568223214
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1568223214
+Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
+ blue color) to 1 (synchrony, red color).
+ Dashed black lines delineate regions significantly different from the null
+ model (independently fluctuating species) with a false discovery rate controlle
+d at the 10% threshold.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Wavelet-modulus-ratio"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
@@ -2388,174 +2501,6 @@ with either zero correlation or synchrony (
 \change_unchanged
 Fig.
  2c).
- 
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figure3_BH.png
-	width 95text%
-
-\end_inset
-
-
-\change_deleted -2100369821 1563806425
- 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
- blue color) to 1 (synchrony, red color).
- Dashed black lines delineate regions significantly different from the null
- model (independently fluctuating species) with a false discovery rate controlle
-d at the 10% threshold.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Wavelet-modulus-ratio"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename abundance_3species.pdf
-	width 110text%
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time series of great cormoran
-\change_inserted -2100369821 1567776232
-t
-\change_unchanged
- abundance, as well as summed abundances of grey heron and little egret
- (logarithmic scale).
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Time-series-of"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\change_inserted -2100369821 1564153205
-\begin_inset Graphics
-	filename triad_synchrony_2panels.pdf
-	width 99text%
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time-domain (a) and frequency-domain (b) synchrony analyses of the group
- formed by cormorant, egret and heron (see the captions of Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Gross-synchrony-index"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Wavelet-modulus-ratio"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- for symbol interpretation) 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Time-domain-(top)-and"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\change_inserted -666822487 1568136485
-
 \end_layout
 
 \begin_layout Subsection*
@@ -2655,6 +2600,121 @@ noprefix "false"
  the season), but at very specific times and the biological mechanisms for
  this are unclear, since these species compete for roost sites, a process
  that it unlikely to manifest at such very short timescales.
+\change_inserted -666822487 1568223228
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename abundance_3species.pdf
+	width 110text%
+
+\end_inset
+
+
+\change_deleted -666822487 1568223968
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Time series of great cormorant abundance, as well as summed abundances of
+ grey heron and little egret (logarithmic scale).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Time-series-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename triad_synchrony_2panels.pdf
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Time-domain (a) and frequency-domain (b) synchrony analyses of the group
+ formed by cormorant, egret and heron (see the captions of Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gross-synchrony-index"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Wavelet-modulus-ratio"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for symbol interpretation) 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Time-domain-(top)-and"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -2977,10 +3037,10 @@ Synchrony in a small module with known competition
 
 \begin_layout Standard
 Zooming in on the cormorant-heron-egret module, 
-\change_inserted -666822487 1568189839
+\change_inserted -666822487 1568224218
 for which we knew beforehand that competition for resting/roosting sites
  in the summer season occurs between on the one hand, cormorants, and on
- the other hand, little egrets and gre herons (C.
+ the other hand, little egrets and grey herons (C.
  Feigné, pers.
  obs.).
  Abundance time series suggested some negative correlation, but it was not
