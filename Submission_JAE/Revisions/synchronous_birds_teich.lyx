@@ -628,36 +628,76 @@ constant total community size, are usually rare: synchronous dynamics prevail
 
 \begin_layout Abstract
 3.
- Taking advantage of a monthly survey for 35 years, in a bird community
- where we suspected that compensation might occur - due to changes in water
- levels and known trends -, we perform both yearly and monthly analyses
- of community synchrony, applying yearly indices 
-\change_inserted -666822487 1568133248
+ 
+\change_deleted -666822487 1568276612
+Taking advantage of a
+\change_inserted -666822487 1568277695
+We analyze a 35-year
+\change_unchanged
+ monthly survey 
+\change_inserted -666822487 1568276624
+of a 
+\change_deleted -666822487 1568278170
+for 35 years, in a bird
+\change_unchanged
+ community where we suspected that compensation might occur
+\change_deleted -666822487 1568276712
+ -
+\change_unchanged
+ due to changes in water levels
+\change_inserted -666822487 1568277721
+ shifting habitat preferences
+\change_unchanged
+ and 
+\change_deleted -666822487 1568277726
+known trends -,
+\change_inserted -666822487 1568276720
+potential competition.
 
-\begin_inset Note Note
-status open
+\change_unchanged
+ 
+\change_inserted -666822487 1568276741
+W
+\change_deleted -666822487 1568276739
+w
+\change_unchanged
+e perform both yearly
+\change_inserted -666822487 1568277811
+ analyses by season, using a synchrony
+\change_unchanged
+ 
+\change_inserted -666822487 1568276858
+index, 
+\change_unchanged
+and monthly analyses 
+\change_deleted -666822487 1568276828
+of community synchrony
+\change_inserted -666822487 1568277915
+using wavelet-based measures allowing for scale-dependence.
+\change_deleted -666822487 1568276840
+, applying yearly indices and wavelet-based synchrony measures to time series
+\change_unchanged
+.
 
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1568133260
-do we mention the Gross index here?
+\change_inserted -666822487 1568278279
+ We perform analyses within and between guilds, with guilds defined either
+ through phylogeny or more functional groups.
+ 
 \change_unchanged
 
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-and wavelet-based synchrony measures to time series.
 \end_layout
 
 \begin_layout Abstract
 4.
- We find that compensatory dynamics are still rare, likely due to the synchroniz
-ing influence of climate on birds, even after considering several temporal
- scales of covariation (during either cold or warm seasons, above or below
- the seasonal scale).
+ We find that 
+\change_deleted -666822487 1568277932
+compensatory dynamics are still
+\change_inserted -666822487 1568277936
+abundance compensation is
+\change_unchanged
+ rare, likely due to the synchronizing influence of climate on birds, even
+ after considering several temporal scales of covariation (during either
+ cold or warm seasons, above or below the seasonal scale).
  Negative covariation in abundance at the whole community level did only
  appear after a management change in the reserve, and at the scale of a
  few months or several years.
@@ -674,6 +714,8 @@ compensation
 the rare cases where compensation
 \change_unchanged
  appeared
+\change_inserted -666822487 1568278012
+ consistently
 \change_deleted -666822487 1568133315
  more frequently
 \change_inserted -666822487 1568135351
@@ -687,7 +729,11 @@ between
 \emph on
 within
 \emph default
- guilds.
+ guilds
+\change_inserted -666822487 1568278311
+, using functional groups
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Abstract
@@ -705,9 +751,20 @@ environmental forcing
 \change_inserted -666822487 1568133412
  or functional
 \change_unchanged
- scales (e.g., when measuring synchrony only at the species level).
- We suggest that compensation may have more potential to emerge between
- broad taxonomic units or functional groups, rather between species
+ scales
+\change_deleted -666822487 1568278060
+ (e.g., when measuring synchrony only at the species level)
+\change_unchanged
+.
+ We suggest that 
+\change_inserted -666822487 1568278076
+abundance 
+\change_unchanged
+compensation may have more potential to emerge between broad 
+\change_deleted -666822487 1568278335
+taxonomic units or 
+\change_unchanged
+functional groups, rather between species
 \series bold
 .
 \end_layout
@@ -1127,9 +1184,14 @@ monthly snapshot
  them by 0s.
  Given the sustained observation effort (all sectors are patrolled multiple
  times throughout the month by the staff, amateur ornithologists visiting
- the reserve daily and signalling their findings to the reserve staff),
- we consider that the absence of counts for a given species signals its
- true absence from the reserve.
+ the reserve daily and 
+\change_deleted -666822487 1568273983
+signalling
+\change_inserted -666822487 1568273985
+communicating
+\change_unchanged
+ their findings to the reserve staff), we consider that the absence of counts
+ for a given species signals its true absence from the reserve.
  This creates some zero abundances for rare species at the monthly scale.
  We have not attempted to 
 \begin_inset Quotes eld
@@ -1297,9 +1359,8 @@ Bird taxonomic and functional groups
 
 \begin_layout Standard
 
-\change_inserted -666822487 1566203052
-The reserve is dominated by waders and ducks (or more generally waterfowl,
- including geese and swans).
+\change_inserted -666822487 1568278377
+The reserve is dominated by waders and waterfowl (ducks, geese and swans).
  These two functional groups collectively represent 
 \change_deleted -2100369821 1568193860
 XX
@@ -1308,7 +1369,11 @@ XX
 \change_inserted -666822487 1566203052
 % of the total number of observed birds over the years
 \change_inserted -2100369821 1568193916
- and are always present onsite
+ and are always present on
+\change_inserted -666822487 1568278390
+ 
+\change_inserted -2100369821 1568193916
+site
 \begin_inset Note Note
 status open
 
@@ -1354,23 +1419,23 @@ literal "false"
 \end_inset
 
 
-\change_inserted -666822487 1568133810
+\change_inserted -666822487 1568278443
  in ducks and members of the 
 \emph on
 Calidris
 \emph default
  genus in waders.
- Waders and ducks have different environmental preferences, with ducks preferrin
-g water levels allowing them to dive and and waders usually foraging on
- mudflats.
+ Waders and ducks have different environmental preferences, with ducks (and
+ waterfowl more generally) preferring water levels allowing them to dive,
+ while waders usually forage on mudflats.
  
 \change_deleted -666822487 1568133805
 We chose to work at two slightly different taxonomic levels to compare similarly
  sized groups.
  
-\change_inserted -666822487 1568134722
+\change_inserted -666822487 1568278519
 A list of all birds found frequently in the reserve is presented in SI Appendix
- S1; aside from waders and ducks, other common species includes herons,
+ S1; aside from waders and waterfowl, other common species includes herons,
  egrets and cormorants (see below).
  Among the fish eaters, grebes and gulls we also found to be present; a
  few raptors as well.
@@ -1378,37 +1443,26 @@ A list of all birds found frequently in the reserve is presented in SI Appendix
 
 \begin_layout Standard
 
-\change_inserted -666822487 1566203124
-To examine compensation between and within the waders and duck categories,
- we contrasted analyses using a taxonomic classification of the species
- (i.e., between and within 
+\change_inserted -666822487 1568278482
+To examine compensation 
+\emph on
+between
+\emph default
+ and 
+\emph on
+within
+\emph default
+ the waders and waterfowl categories, we contrasted analyses using a taxonomic
+ classification of the species (i.e., between and within 
 \change_deleted -2100369821 1567777267
 genera
 \change_deleted -666822487 1568133883
 phylogenetically close species
-\change_inserted -666822487 1568133898
+\change_inserted -666822487 1568278562
 phylogenetic groups such as genera) and a functional classification of the
- species (30 species of waders vs 34 species of 
-\begin_inset Quotes eld
-\end_inset
-
-ducks
-\begin_inset Quotes erd
-\end_inset
-
-).
- We use 
-\begin_inset Quotes eld
-\end_inset
-
-duck
-\begin_inset Quotes erd
-\end_inset
-
- as a shorthand for the larger functional group of herbivorous divers, because
- the birds in that category are (numerically) mostly ducks: the group includes
- nonetheless all anatids (geese and swans in particular) as well as the
- common coot 
+ species (30 species of waders vs 34 species of waterfowl).
+ The waterfowl group includes all anatids (ducks, geese and swans in particular)
+ as well as the common coot 
 \emph on
 (Fulica atra
 \emph default
@@ -1418,8 +1472,8 @@ duck
 
 \begin_layout Standard
 
-\change_inserted -666822487 1568133956
-In addition to our main analyses on waders and ducks, we also 
+\change_inserted -666822487 1568278580
+In addition to our main analyses on waders and waterfowl, we also 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1953,8 +2007,19 @@ where
 \end_inset
 
  is the modulus of the complex number.
- The numerator corresponds to the total biomass variation while the denominator
- corresponds to the variations of each species.
+ The numerator corresponds to the total 
+\change_deleted -666822487 1568278825
+biomass
+\change_inserted -666822487 1568278828
+abundance
+\change_unchanged
+ variation while the denominator corresponds to the 
+\change_deleted -666822487 1568278840
+variations
+\change_inserted -666822487 1568278842
+fluctuations
+\change_unchanged
+ of each species.
  This index is close to 0 when species compensate and reaches 1 when they
  are synchronous.
  As before, the significance of each value was tested at the 10%, Benjamini-Hoch
@@ -2040,14 +2105,14 @@ Calidris
 
 \shape italic
 Anas
-\change_inserted -666822487 1568134846
+\change_inserted -666822487 1568275183
 tribe Anatini 
 \emph on
-(former 
+(formerly 
 \emph default
 Anas
 \emph on
- genera)
+)
 \change_unchanged
 
 \shape default
@@ -2062,7 +2127,7 @@ taxonomic units with contrasted preferences
 \change_inserted -666822487 1568134936
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2085,20 +2150,44 @@ indices
 dominates
 \change_unchanged
  at the seasonal scale
-\change_inserted -666822487 1568134901
-.
+\change_inserted -666822487 1568275328
+.Using functional groups (waders and waterfowl), synchrony within functional
+ groups was also prominent.
  The Gross synchrony indices
 \change_unchanged
  are 
 \change_inserted -666822487 1568134908
 indeed 
+\change_deleted -666822487 1568275379
+always
+\change_inserted -666822487 1568275382
+mostly
 \change_unchanged
-always positive whenever significantly different from the null hypothesis
- (no temporal correlation between species), i.e.
-\change_inserted -666822487 1568134916
+ positive
+\change_inserted -666822487 1568275395
+, and always positive
+\change_unchanged
+ whenever significantly different from the null hypothesis (no temporal
+ correlation between species)
+\change_inserted -666822487 1568275402
+.
+\change_deleted -666822487 1568275401
 ,
 \change_unchanged
- there is no compensation within a genus (Fig.
+ 
+\change_deleted -666822487 1568275408
+i.e.
+ t
+\change_inserted -666822487 1568275414
+Therefore, t
+\change_unchanged
+here is no compensation within 
+\change_deleted -666822487 1568275431
+a genus 
+\change_inserted -666822487 1568275433
+guilds 
+\change_unchanged
+(Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2113,14 +2202,18 @@ noprefix "false"
 \change_inserted -666822487 1568135131
 a and b
 \change_unchanged
-).
+)
+\change_inserted -666822487 1568275421
+ at the annual scale
+\change_unchanged
+.
  This matches the patterns obtained within the entire wetland bird community
  (Fig A1 in Appendix 
-\change_inserted -666822487 1568135003
+\change_inserted -666822487 1568135131
 S2
 \change_deleted -666822487 1568135002
 1
-\change_inserted -666822487 1568135012
+\change_inserted -666822487 1568135131
  [perhaps should be S3]
 \change_unchanged
 )
@@ -2294,18 +2387,44 @@ Gross' synchrony index (
 \begin_inset Formula $\eta$
 \end_inset
 
-) as a function of the season (cold and warm seasons), calculated within
- (top, a-b) and between (bottom, c-d) groups.
- The groups considered were different functional groups (ducks vs waders,
- right b-d) or taxonomic groups (
+) as a function of the season (cold and warm seasons), calculated 
 \emph on
-Anas
+within
 \emph default
- genus, 
+ (top, a-b) and 
+\emph on
+between
+\emph default
+ (bottom, c-d) groups.
+ The groups considered were different functional groups (
+\change_deleted -666822487 1568278619
+ducks vs waders
+\change_inserted -666822487 1568278626
+waders vs waterfowl
+\change_unchanged
+, right b-d) or taxonomic groups (
+\emph on
+Ana
+\change_inserted -666822487 1568275907
+tini
+\change_deleted -666822487 1568275913
+s
+\emph default
+ genus
+\change_unchanged
+, 
 \emph on
 Calidris
+\change_deleted -666822487 1568275915
+
 \emph default
- genus, left a-b) groups.
+ genus
+\change_unchanged
+, left a-b)
+\change_deleted -666822487 1568275924
+ groups
+\change_unchanged
+.
  The index was computed in each panel on the whole dataset (black) or using
  two periods: before and after 2006 (light and dark blue), the year of the
  change in water level management.
@@ -2397,7 +2516,7 @@ it
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2465,42 +2584,54 @@ More interpretable
  results can be found when we examine the synchrony vs compensation between
  functional groups (Fig.
  2d).
- Since we consider only two functional groups, the Gross index reduces to
- a simple correlation
+ Since we consider only two functional 
+\change_inserted -666822487 1568275571
+or phylogenetic 
+\change_unchanged
+groups, the Gross index reduces to a simple correlation
 \change_inserted -666822487 1568136184
  between two groups
 \change_unchanged
 .
- Waders and ducks are negatively correlated during the cold season and positivel
-y correlated during the warm season
-\change_inserted -666822487 1568136265
-.
+ 
+\change_inserted -666822487 1568275783
+
+\emph on
+Anatini
+\emph default
+ and 
+\emph on
+Calidris
+\emph default
+ are positively correlated in the warm season (for all periods), and have
+ unclear correlations during the cold season (Fig.
+ 2c).
+ In contrast, w
+\change_deleted -666822487 1568275737
+W
+\change_unchanged
+aders and 
+\change_inserted -666822487 1568275783
+waterfowl
+\change_deleted -666822487 1568275740
+ducks
+\change_unchanged
+ are negatively correlated during the cold season and positively correlated
+ during the warm season
+\change_inserted -666822487 1568275791
+ (Fig.
+ 2d).
  Although the negative correlation is not statistically significant, it
  is consistent for both pre- and post-2006 periods
 \change_unchanged
 .
  
-\change_deleted -666822487 1568136323
-These patterns are in contrast unclear w
-\change_inserted -666822487 1568136323
-W
+\change_deleted -666822487 1568275778
+These patterns are in contrast unclear when using a taxonomic classification
+ (no compensation, Fig.
+ 2c)
 \change_unchanged
-hen using
-\change_inserted -666822487 1568136328
- instead
-\change_unchanged
- a taxonomic classification
-\change_inserted -666822487 1568136357
- with the two phylogenetic groups, we find 
-\change_deleted -666822487 1568136355
- (
-\change_unchanged
-no compensation, 
-\change_inserted -666822487 1568136372
-with either zero correlation or synchrony (
-\change_unchanged
-Fig.
- 2c).
+.
 \end_layout
 
 \begin_layout Subsection*
@@ -2609,7 +2740,7 @@ noprefix "false"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2630,8 +2761,17 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Time series of great cormorant abundance, as well as summed abundances of
- grey heron and little egret (logarithmic scale).
+Time series of great cormorant abundance
+\change_inserted -666822487 1568276006
+ (dash-dotted black line)
+\change_unchanged
+, as well as summed abundances of grey heron and little egret (
+\change_deleted -666822487 1568276013
+logarithmic scale
+\change_inserted -666822487 1568276024
+solid grey line
+\change_unchanged
+).
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2845,8 +2985,8 @@ compartments
  This might explain the low levels of compensation that we found at the
  overall wetland bird community level (Appendix S2), in spite of the clear
  presence of two groups 
-\change_inserted -666822487 1568137256
-(waders and ducks) 
+\change_inserted -666822487 1568278649
+(waders and waterfowl) 
 \change_unchanged
 reacting in opposite way to shared driver (here, water levels).
  Analyses at several taxonomic/functional scales are therefore warranted
@@ -2875,7 +3015,13 @@ tribe
 Calidris
 \shape default
  genus) or the summed abundances of functionally similar species (waders
- vs ducks) to uncover compensation.
+ vs 
+\change_deleted -666822487 1568278657
+ducks
+\change_inserted -666822487 1568278659
+waterfowl
+\change_unchanged
+) to uncover compensation.
  The functional group classification produced 
 \change_deleted -666822487 1568137313
 much more clearly
@@ -2926,8 +3072,13 @@ functional
 \change_deleted -666822487 1568137624
 here 
 \change_unchanged
-waders and ducks were found to correlate negatively only during the cold
- (wintering) season.
+waders and 
+\change_deleted -666822487 1568278685
+ducks
+\change_inserted -666822487 1568278686
+waterfowl
+\change_unchanged
+ were found to correlate negatively only during the cold (wintering) season.
  This
 \change_deleted -666822487 1568137653
  may be because 
@@ -2974,7 +3125,13 @@ literal "true"
 \end_inset
 
  as the observed long-term changes in species composition (more waders,
- proportionally less ducks; 
+ proportionally less 
+\change_deleted -666822487 1568278698
+ducks
+\change_inserted -666822487 1568278699
+waterfowl
+\change_unchanged
+; 
 \change_inserted -666822487 1568137700
 SI 
 \change_unchanged
@@ -2984,9 +3141,15 @@ S1
 \change_deleted -666822487 1568137722
 4
 \change_unchanged
-) might be due to an increased inflow of birds preferring low water levels,
- and outflow of birds preferring high water levels, under an overall space
- constraint.
+) might be due to an increased inflow of birds preferring low water levels
+\change_inserted -666822487 1568278983
+ (waders)
+\change_unchanged
+, and outflow of birds preferring high water levels
+\change_inserted -666822487 1568278987
+ (waterfowl)
+\change_unchanged
+, under an overall space constraint.
  In other words, the shift in community dynamics is likely not directly
  due to birth and deaths.
  However, it would be incorrect to conclude that such local compensation
@@ -3006,20 +3169,32 @@ Effect of the change in management on synchrony
 
 \begin_layout Standard
 
-\change_inserted -666822487 1568190018
+\change_inserted -666822487 1568281702
 Although we performed analyses throughout the whole time series, in which
  there is a progressive change in composition (Appendix S1), a marked change
  in management occured around 2006, after which the water levels were kept
  at a lower level.
  We have therefore also performed yearly analyses pre- and post-2006.
  These showed very little differences during either the warm or cold season.
- However, in the wavelet analyses, we clearly see at monthly or multi-year
- timescales more compensation after 2006.
+ However, in the wavelet analyses, we see at monthly or 5-year timescales
+ more compensation after 2006.
  Since the water levels are on average more appropriate for waders and their
  overall proportion has increased, it may be tempting to interpret this
  as a consequence of the community becoming saturated with waders, but we
  caution that it is difficult to make any strong conclusion based on a single
  synchrony index.
+ Similar analyses on beetle communities by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "klink_functional_2019"
+literal "false"
+
+\end_inset
+
+ found little effect of disturbances on synchrony patterns, even though
+ in theory such disturbances should promote synchrony.
+ In fact, like us, they might have found a little less synchrony after disturban
+ce, but the results were not clear cut.
  We now describe a case where the biological processes at hand are better
  understood.
  
@@ -3087,8 +3262,29 @@ within
  functional groups, and over relatively long timescales, above the typical
  temporal autocorrelation of the dominant driver (e.g., above 5 years if the
  main driver is a seasonal climate).
- This goes against calls to search for compensation at very short timescales
  
+\change_inserted -666822487 1568281827
+This rejoins the recent findings of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "klink_functional_2019"
+literal "false"
+
+\end_inset
+
+ who found that increased functional differences between species tend to
+ decrease synchrony.
+ 
+\change_deleted -666822487 1568281833
+This
+\change_inserted -666822487 1568281836
+Our suggestion
+\change_unchanged
+ goes against calls to search for compensation 
+\change_inserted -666822487 1568281866
+within closely related species but 
+\change_unchanged
+at very short timescales 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "vasseur2007spectral,gonzalez2009causes"
@@ -3162,11 +3358,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In many ways, searching for compensation using biodiversity time series
- data is searching for needles in a haystack: only some specific temporal
- and functional/taxonomic scales allow to see compensation whilst numerous
- confounding factors make the community co-vary positively at all other
- scales 
+In many ways, searching for 
+\change_inserted -666822487 1568281922
+abundance 
+\change_unchanged
+compensation using biodiversity time series data is searching for needles
+ in a haystack: only some specific temporal and functional/taxonomic scales
+ allow to see compensation whilst numerous confounding factors make the
+ community co-vary positively at all other scales 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "vasseur_synchronous_2014"
@@ -3213,8 +3412,14 @@ Acknowledgements
 We thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
  regional park who contributed to data collection over the years, as well
  as LPO Aquitaine for helping us retrieve the raw data.
- The data collection was supported by the Landes Gascogne regional park
- as well as the Teich municipality, while data analysis was funded by LabEx
+ 
+\change_inserted -666822487 1568281964
+Constructive feedback by the two referees, Roel van Klink and Mike Fowler,
+ considerably improved the manuscript.
+ 
+\change_unchanged
+The data collection was supported by the Landes Gascogne regional park as
+ well as the Teich municipality, while data analysis was funded by LabEx
  COTE (ANR-10-LABX-45).
  
 \begin_inset Newline newline
