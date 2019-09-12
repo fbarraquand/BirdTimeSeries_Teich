@@ -1,4 +1,4 @@
-####CP 06/09/2019: This is a cleaned up version of analyseP_oiseaux_Teich2_synchrony.R (entirely written by CAluome) Sto keep only what we need and use in the article (the rest might be put in exploratory analyses) 
+####CP 06/09/2019: This is a cleaned up version of analyseP_oiseaux_Teich2_synchrony.R (entirely written by CAluome) to keep only what we need and use in the article (the rest might be put in exploratory analyses) 
 
 rm(list=ls())
 graphics.off()
@@ -434,11 +434,16 @@ c2=read.table("IN/coldseason_abundances_summed_v2_wtoutrarespecies.csv",header=T
 
 filename_pdf="averaged_CorHerEgr_log.pdf"
 pdf(paste("OUT/",filename_pdf,sep=""),width=10)
-par(mfrow=c(1,2))
-plot(minAnnee:maxAnnee,log10(w1$HeronEgret),col="grey",t="l",xlab="Year",ylab="log10(abundance)",lwd=2,main="Warm",ylim=c(0,log10(max(w1$HeronEgret,na.rm=T))))
+par(mfrow=c(2,2),mar=c(3,4,2,1))
+plot(minAnnee:maxAnnee,w1$HeronEgret,col="grey",t="l",xlab="Year",ylab="Abundance",lwd=2,main="Warm",ylim=c(0,max(w1$HeronEgret,na.rm=T)))
+lines(minAnnee:maxAnnee,w1$Cormorant,col="black",lty=2,lwd=2)
+plot(minAnnee:maxAnnee,c2$Cormorant,col="black",lty=2,t="l",ylim=c(0,max(c2$HeronEgret,na.rm=T)),ylab="",xlab="Year",lwd=2,main="Cold")
+lines(minAnnee:maxAnnee,c2$HeronEgret,col="grey",lwd=2)
+
+plot(minAnnee:maxAnnee,log10(w1$HeronEgret),col="grey",t="l",xlab="Year",ylab="log10(abundance)",lwd=2,main="",ylim=c(0,log10(max(w1$HeronEgret,na.rm=T))))
 lines(minAnnee:maxAnnee,log10(w1$Cormorant),col="black",lty=2,lwd=2)
-plot(minAnnee:maxAnnee,log10(c2$Cormorant),col="black",lty=2,t="l",ylim=c(0,log10(max(c2$HeronEgret,na.rm=T))),ylab="",xlab="Year",lwd=2,main="Cold")
+plot(minAnnee:maxAnnee,log10(c2$Cormorant),col="black",lty=2,t="l",ylim=c(0,log10(max(c2$HeronEgret,na.rm=T))),ylab="",xlab="Year",lwd=2,main="")
 lines(minAnnee:maxAnnee,log10(c2$HeronEgret),col="grey",lwd=2)
-legend('topright',c('Grey heron + little egret','Great cormorant'),pch=16,lty=c(1,2),col=c("grey","black"),bty="n")
+legend('bottomright',c('Grey heron + little egret','Great cormorant'),pch=16,lty=c(1,2),col=c("grey","black"),bty="n")
 dev.off()
 system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
