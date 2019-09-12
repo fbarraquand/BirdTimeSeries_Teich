@@ -674,14 +674,23 @@ and monthly analyses
 of community synchrony
 \change_inserted -666822487 1568277915
 using wavelet-based measures allowing for scale-dependence.
+
+\change_inserted -2100369821 1568295341
+ 
 \change_deleted -666822487 1568276840
 , applying yearly indices and wavelet-based synchrony measures to time series
-\change_unchanged
+\change_deleted -2100369821 1568295336
 .
-
+ 
 \change_inserted -666822487 1568278279
- We perform analyses within and between guilds, with guilds defined either
- through phylogeny or more functional groups.
+We 
+\change_deleted -2100369821 1568295799
+perform
+\change_inserted -2100369821 1568295799
+run
+\change_inserted -666822487 1568278279
+ analyses within and between guilds, with guilds defined either through
+ phylogeny or more functional groups.
  
 \change_unchanged
 
@@ -739,7 +748,9 @@ within
 \begin_layout Abstract
 5.
  Although most research has focused on viewing compensation vs synchrony
- across temporal scales, because synchrony is guaranteed by 
+ across temporal scales, because synchrony is guaranteed 
+\change_deleted -2100369821 1568295722
+by 
 \change_inserted -666822487 1568133370
 at the temporal scale of the dominant 
 \change_unchanged
@@ -764,9 +775,7 @@ compensation may have more potential to emerge between broad
 \change_deleted -666822487 1568278335
 taxonomic units or 
 \change_unchanged
-functional groups, rather between species
-\series bold
-.
+functional groups, rather between species.
 \end_layout
 
 \begin_layout Standard
@@ -1437,8 +1446,15 @@ We chose to work at two slightly different taxonomic levels to compare similarly
 A list of all birds found frequently in the reserve is presented in SI Appendix
  S1; aside from waders and waterfowl, other common species includes herons,
  egrets and cormorants (see below).
- Among the fish eaters, grebes and gulls we also found to be present; a
- few raptors as well.
+ Among the fish eaters, grebes and gulls we
+\change_inserted -2100369821 1568296304
+re
+\change_inserted -666822487 1568278519
+ also 
+\change_deleted -2100369821 1568296317
+found to be 
+\change_inserted -666822487 1568278519
+present; a few raptors as well.
 \end_layout
 
 \begin_layout Standard
@@ -2151,7 +2167,12 @@ dominates
 \change_unchanged
  at the seasonal scale
 \change_inserted -666822487 1568275328
-.Using functional groups (waders and waterfowl), synchrony within functional
+.
+
+\change_inserted -2100369821 1568296825
+ 
+\change_inserted -666822487 1568275328
+Using functional groups (waders and waterfowl), synchrony within functional
  groups was also prominent.
  The Gross synchrony indices
 \change_unchanged
@@ -2928,6 +2949,8 @@ between
 
 \change_deleted -666822487 1568137197
  
+\change_inserted -2100369821 1568297204
+ 
 \change_inserted -666822487 1568188859
 A zoom on a module of three species with known competition also revealed
  compensation at scales above 5 years.
@@ -3080,6 +3103,8 @@ waterfowl
 \change_unchanged
  were found to correlate negatively only during the cold (wintering) season.
  This
+\change_inserted -2100369821 1568297490
+ 
 \change_deleted -666822487 1568137653
  may be because 
 \change_inserted -666822487 1568137658
@@ -3297,8 +3322,11 @@ literal "true"
  Although searching for compensation at temporal scales below the seasonal
  abiotic driver (e.g., temperature) was partly motivated by studies on plankton
  whose community dynamics are much faster, with much shorter generation
- times, we could have expected compensation to manifest also that scale
- here as well (e.g., monthly).
+ times, we could have expected compensation to manifest also
+\change_inserted -2100369821 1568297624
+ at
+\change_unchanged
+ that scale here as well (e.g., monthly).
  Indeed, movement of birds reacting to food availability can certainly occur
  within the season, and wetlands have a finite carrying capacity, so that
  there is competition for space, which could promote short-term compensation.
