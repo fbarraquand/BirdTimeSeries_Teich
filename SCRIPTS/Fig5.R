@@ -84,7 +84,7 @@ layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 #par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 par(mar=c(4,5,2,3))
 
-plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony Index",cex.lab=1.5,cex.axis=1.5,las=1)
+plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab=expression(eta),cex.lab=1.5,cex.axis=1.5,las=1)
 mtext("a)",side=2,line=-2,at=0.96,cex=1.5,outer=T,las=1)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=1.5)
 for (v in 1:6){

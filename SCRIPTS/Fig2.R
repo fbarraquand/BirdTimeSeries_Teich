@@ -4,6 +4,7 @@
 ### 2019/07/03: Corrected the way rare species were ignored (not taken into account the right way before). This does not change anything, actually, as the Gross function already removed them, but this is cleaner (and removes the warnings).
 ### 2019/09/04: Changed the script to adapt to biomasses
 ### 2019/09/05: Presentation details (las=1, Anas-> Anatini, etc.)
+### 2019/09/12: Ducks are actually waterfowl
 
 rm(list=ls())
 graphics.off()
@@ -13,7 +14,7 @@ type_correct="BH" #Was bonferroni before
 amethod_b="iaaft" #Could also be shift or ebisuzaki. Was shift before.
 amethod_w="shift"
 anrands=100 #Number of surrogates we want to test the significance. Up to now (2019/07/03), 100.
-biomass=T
+biomass=F
 if(biomass){
 end_bio="biomasses"
 }else{
@@ -382,7 +383,7 @@ for (v in 1:6){
 #lines(6:7,ll,col="black",lwd=2,lty=2)
 
 lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
-legend("bottomright",c("Waders","Ducks"),pch=c(23,24),pt.bg="black",pt.cex=2,bty="n",cex=2)
+legend("bottomright",c("Waders","Waterfowl"),pch=c(23,24),pt.bg="black",pt.cex=2,bty="n",cex=2)
 
 print('Now computing between groups')
 #Anas and Calidris
@@ -519,7 +520,7 @@ lines(c(0.0,7.5),c(0,0),lty=2,lwd=2)
 #ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
 #lines(6:7,ll,col="black",lwd=2,lty=1)
 
-legend("topleft",c("Ducks/Waders"),pch=c(22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
+legend("topleft",c("Waterfowl/Waders"),pch=c(22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 dev.off()
 
 system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
