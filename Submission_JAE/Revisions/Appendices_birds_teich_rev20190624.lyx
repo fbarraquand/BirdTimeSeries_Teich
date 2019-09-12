@@ -5223,8 +5223,25 @@ We compared results for time series of length 35 (the length of our data
  first 35 or 100 time steps of the following 500-time steps series, or subsample
  the time series in order to get 35 or 100 time points (which removes some
  autocorrelation in the dynamics).
- We also considered several community richness (10, 30, 60 and 100 species),
- and several strengths of the response to the environmental signal (
+ We also considered several community richness (
+\change_inserted -2100369821 1568292892
+2, 
+\change_deleted -2100369821 1568292895
+10,
+\change_unchanged
+ 30
+\change_deleted -2100369821 1568292898
+,
+\change_inserted -2100369821 1568292900
+ and
+\change_unchanged
+ 60
+\change_deleted -2100369821 1568292903
+ and 100 species
+\change_inserted -2100369821 1568293459
+, to remain close to the number of species in the different groups we analysed
+\change_unchanged
+), and several strengths of the response to the environmental signal (
 \begin_inset Formula $b=$
 \end_inset
 
@@ -5261,7 +5278,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../OUT/simulated_gross_values_notrend.pdf
+	filename simulated_gross_values_notrend_20190912.pdf
 	width 80text%
 
 \end_inset
@@ -5319,7 +5336,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../OUT/simulated_gross_values_subsample_notrend.pdf
+	filename simulated_gross_values_subsample_notrend_20190912.pdf
 	width 80text%
 
 \end_inset
@@ -5381,7 +5398,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../OUT/simulated_gross_values_subsample_withtrend.pdf
+	filename simulated_gross_values_subsample_withtrend_20190912.pdf
 	width 80text%
 
 \end_inset
@@ -5439,7 +5456,18 @@ noprefix "false"
  the Gross index is not sensitive to the length of the time series or to
  the number of species in the community, in the sense that it will not indicate
  falsely synchrony.
- The main finding of these analyses, aside from the robustness of the 
+
+\change_inserted -2100369821 1568293317
+ The only contradiction to this observation appears when the driver has
+ only a small effect on the community, and
+\change_unchanged
+ 
+\change_inserted -2100369821 1568293342
+the Gross index is actually a simple correlation (the community is made
+ of 2 species).
+ 
+\change_unchanged
+The main finding of these analyses, aside from the robustness of the 
 \begin_inset Formula $\eta$
 \end_inset
 
@@ -5451,6 +5479,13 @@ noprefix "false"
  level, even though compensation may be manifest at the functional group
  level (here, the group of species responding similarly to the environmental
  variable).
+
+\change_inserted -2100369821 1568293423
+ Compensation between groups in the case of a small effect of the environment
+ can also be difficult to find.
+ 
+\change_unchanged
+
 \begin_inset Note Note
 status collapsed
 
@@ -5495,13 +5530,29 @@ worst case
 \begin_inset Quotes erd
 \end_inset
 
- simulation with 10% missing values for all species, and few species below
- that 10% level
+ simulation with
+\change_inserted -2100369821 1568292762
+ small community (10 species),
+\change_unchanged
+ 10% missing values for all species
+\change_deleted -2100369821 1568292831
+, and few species below that 10% level
+\change_inserted -2100369821 1568292872
+ 
+\change_unchanged
+
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
+
+\change_inserted -2100369821 1568292866
+I'm not sure what I/we meant here, but the last part of the sentence is
+ not supported by the code
+\change_deleted -2100369821 1568292844
 Can we say something more precise?
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -5601,8 +5652,11 @@ With missing data
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Wavelet coherence for a community with compensatory dynamics, without (a)
- and with (b) missing data
+Wavelet coherence for a 
+\change_inserted -2100369821 1568292750
+10-species 
+\change_unchanged
+community with compensatory dynamics, without (a) and with (b) missing data
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Wavelets-missing-data"

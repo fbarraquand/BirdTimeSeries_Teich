@@ -1,16 +1,17 @@
 #CP 2018 
 #Analyse_simulation
-
+#2019/09/12 Changed to c(2,10,30,60) species
 rm(list=ls())
 graphics.off()
 
-subsample=TRUE
+subsample=FALSE
 
 source("SCRIPTS/test_synchrony_Gross.r")
 
 #Parameters which change
 #pdf("OUT/analyse_simulation.pdf")
-n_species_series=c(5,15,30,50)
+#n_species_series=c(5,15,30,50)
+n_species_series=c(1,5,15,30)
 n_time_series=c(35,100,500)
 b_series=c(0.1,0.5,0.75)
 nb_repeats=1:10
@@ -29,12 +30,12 @@ for(n_time in n_time_series){
 		l=l+1
 		print(paste(n_time,n_species,b))
 		if(subsample){		
-			tab=read.table(paste("OUT/MockBirdsTimeSeries_species",n_species,"_time500_b",b,"_withtrend_withburnin.csv",sep=""),header=T,sep=",",dec=".")
+			tab=read.table(paste("OUT/MockBirdsTimeSeries_species",n_species,"_time500_b",b,"_notrend_withburnin.csv",sep=""),header=T,sep=",",dec=".")
 			id=floor(seq(1,500,length.out=n_time))
 			tab=subset(tab,Time_index %in% id)
 			
 		}else{
-			tab=read.table(paste("OUT/MockBirdsTimeSeries_species",n_species,"_time",n_time,"_b",b,"_withtrend_withburnin.csv",sep=""),header=T,sep=",",dec=".")
+			tab=read.table(paste("OUT/MockBirdsTimeSeries_species",n_species,"_time",n_time,"_b",b,"_notrend_withburnin.csv",sep=""),header=T,sep=",",dec=".")
 		}
 		#nb_repeats=unique(tab$Repeat)
 		for(k in nb_repeats){
@@ -54,11 +55,11 @@ for(n_time in n_time_series){
 
 #load OUT/tab_synch (for 10)
 if(subsample){
-pdf("OUT/analyse_simulation_varyingb_v2_subsample_withtrend_withburnin.pdf",height=12,width=11)
-save(tab_synch,file="tab_synch_subsample_withtrend_withburnin.RData")
+pdf("OUT/analyse_simulation_varyingb_v2_subsample_notrend_withburnin_20190912.pdf",height=12,width=11)
+save(tab_synch,file="tab_synch_subsample_notrend_withburnin_20190912.RData")
 }else{
-pdf("OUT/analyse_simulation_varyingb_withtrend_withburnin.pdf",height=12,width=11)
-save(tab_synch,file="tab_synch_withtrend_withburnin.RData")
+pdf("OUT/analyse_simulation_varyingb_notrend_withburnin_20190912.pdf",height=12,width=11)
+save(tab_synch,file="tab_synch_notrend_withburnin_20190912.RData")
 }
 colors=c("lightblue","blue","darkblue")
 par(mfrow=c(3,1),mar=c(4,6,3,1))

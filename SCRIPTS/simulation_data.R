@@ -1,12 +1,14 @@
 #CP 2018 
 #Simulates community with different size, and different time series length to check the evolution of the Gross synchrony index
+#2019/09/12 Added the 2-species case
 
 rm(list=ls())
 graphics.off()
 
 #Parameters which change
 burn_in=500
-n_species_series=c(5,15,30,50)
+#n_species_series=c(5,15,30,50)
+n_species_series=c(1)
 n_time_series=burn_in+c(35,100,500)
 n_repeats=10
 b_series=c(0.1,0.5,0.75)
@@ -38,8 +40,8 @@ ymin=0
 ymax=1
 y0noise=arima.sim(model=list(ar=c(0.1, 0.2, 0.1,0.5,-0.1)), n=n_time,sd=sqrt(0.1) )
 y0noise=y0noise/max(abs(y0noise))
-#y1noise=y0noise
-y1noise<-ymin+(ymax-ymin)*(0.5*y0noise+0.5*(seq(1:n_time)-1)/(n_time-1))
+y1noise=y0noise
+#y1noise<-ymin+(ymax-ymin)*(0.5*y0noise+0.5*(seq(1:n_time)-1)/(n_time-1))
 
 for (t in 1:(n_time-1))
         {
@@ -58,7 +60,7 @@ if(k.repeats==1){
 }
 
 } #end k
-write.csv(DataPlankton_all,file=paste("OUT/MockBirdsTimeSeries_species",n_species,"_time",(n_time-burn_in),"_b",b,"_withtrend_withburnin.csv",sep=""))
+write.csv(DataPlankton_all,file=paste("OUT/MockBirdsTimeSeries_species",n_species,"_time",(n_time-burn_in),"_b",b,"_notrend_withburnin.csv",sep=""))
 } #end b_series
 } #end time series
 } #end n_species

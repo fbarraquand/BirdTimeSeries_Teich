@@ -1,5 +1,6 @@
 #CP 2018 
 #This script to check some of the simulations (just plot)
+#2019/09/12: Changed the number of species to have 2, 10,30, 60
 
 rm(list=ls())
 graphics.off()
@@ -7,7 +8,8 @@ source("SCRIPTS/test_synchrony_Gross.r")
 
 
 #tab_synch=array(NA,dim=c(length(n_species_series),length(n_time_series),length(b_series),length(nb_repeats)))
-n_species_series=c(5,15,30,50)
+#n_species_series=c(5,15,30,50)
+n_species_series=c(1) ####NEW
 n_time_series=c(35,100,500)
 b_series=c(0.1,0.5,0.75)
 nb_repeats=1:10
