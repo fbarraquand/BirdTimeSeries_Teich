@@ -4761,7 +4761,7 @@ status open
 
 \change_inserted -2100369821 1568279857
 \begin_inset Graphics
-	filename averaged_CorHerEgr.pdf
+	filename averaged_CorHerEgr_log.pdf
 	width 99text%
 
 \end_inset
