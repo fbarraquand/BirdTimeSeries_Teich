@@ -646,7 +646,13 @@ for 35 years, in a bird
 \change_unchanged
  due to changes in water levels
 \change_inserted -666822487 1568277721
- shifting habitat preferences
+ 
+\change_deleted -2100369821 1568378874
+shifting
+\change_inserted -2100369821 1568378894
+favouring birds with different
+\change_inserted -666822487 1568277721
+ habitat preferences
 \change_unchanged
  and 
 \change_deleted -666822487 1568277726
@@ -686,8 +692,22 @@ using wavelet-based measures allowing for scale-dependence.
 We 
 \change_deleted -2100369821 1568295799
 perform
-\change_inserted -2100369821 1568295799
+\change_inserted -2100369821 1568378968
 run
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1568378976
+2 performs in one point
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_inserted -666822487 1568278279
  analyses within and between guilds, with guilds defined either through
  phylogeny or more functional groups.
@@ -1412,10 +1432,10 @@ phylogenetic groups, both in abundance and occurrence, are members of the
 \emph on
 Anas
 \change_inserted -2100369821 1567777152
-Anatini tribe
-\change_deleted -2100369821 1567777156
-
+Anatini 
 \emph default
+tribe
+\change_deleted -2100369821 1567777156
  genus
 \change_inserted -2100369821 1567777173
  
@@ -1476,7 +1496,19 @@ genera
 phylogenetically close species
 \change_inserted -666822487 1568278562
 phylogenetic groups such as genera) and a functional classification of the
- species (30 species of waders vs 34 species of waterfowl).
+ species (
+\change_deleted -2100369821 1568379013
+30
+\change_inserted -2100369821 1568379013
+26
+\change_inserted -666822487 1568278562
+ species of waders vs 
+\change_deleted -2100369821 1568379077
+34
+\change_inserted -2100369821 1568379077
+17
+\change_inserted -666822487 1568278562
+ species of waterfowl).
  The waterfowl group includes all anatids (ducks, geese and swans in particular)
  as well as the common coot 
 \emph on
@@ -1669,8 +1701,13 @@ Calidris
 \change_unchanged
 
 \shape default
- genus) or between groups (e.g., between the summed abundances of the 9 species
- of 
+ genus) or between groups (e.g., between the summed abundances of the 
+\change_deleted -2100369821 1568379175
+9
+\change_inserted -2100369821 1568379175
+7
+\change_unchanged
+ species of 
 \change_deleted -666822487 1568138287
 genus
 \change_inserted -666822487 1568138289
@@ -1690,7 +1727,13 @@ s
 \emph on
  
 \shape italic
-the sum of the 12 
+the sum of the 
+\change_deleted -2100369821 1568379179
+12
+\change_inserted -2100369821 1568379184
+7
+\change_unchanged
+ 
 \emph default
 Calidris
 \shape default
@@ -2997,7 +3040,13 @@ compartments
 \begin_inset Formula $\eta$
 \end_inset
 
- index could affect its value: it did not.
+ index could affect its value: it did not
+\change_inserted -2100369821 1568379424
+ have marked effects, unless the number of compartments is equal to 2, in
+ which case, significance is hard to achieve and some compensatory dynamics
+ can be missed if the environmental driver has a weak effect
+\change_unchanged
+.
  However, we found that if two groups respond in opposite ways to a shared
  driver, the stronger the response to the driver, the lesser the compensation
  indicated by 
