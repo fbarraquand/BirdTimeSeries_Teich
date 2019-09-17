@@ -645,14 +645,14 @@ for 35 years, in a bird
  -
 \change_unchanged
  due to changes in water levels
-\change_inserted -666822487 1568277721
- 
+\change_inserted -666822487 1568726347
+, 
 \change_deleted -2100369821 1568378874
 shifting
 \change_inserted -2100369821 1568378894
 favouring birds with different
-\change_inserted -666822487 1568277721
- habitat preferences
+\change_inserted -666822487 1568726351
+ habitat preferences,
 \change_unchanged
  and 
 \change_deleted -666822487 1568277726
@@ -692,7 +692,7 @@ using wavelet-based measures allowing for scale-dependence.
 We 
 \change_deleted -2100369821 1568295799
 perform
-\change_inserted -2100369821 1568378968
+\change_deleted -666822487 1568726389
 run
 \begin_inset Note Note
 status open
@@ -708,9 +708,9 @@ status open
 \end_inset
 
 
-\change_inserted -666822487 1568278279
- analyses within and between guilds, with guilds defined either through
- phylogeny or more functional groups.
+\change_inserted -666822487 1568726396
+ analyse synchrony both within and between guilds, with guilds defined either
+ through phylogeny or more functional groups.
  
 \change_unchanged
 
@@ -839,8 +839,11 @@ literal "true"
 
 \end_inset
 
-: some degree of compensation is therefore a prerequisite to stabilization
- at the community level 
+: some degree of compensation
+\change_inserted -666822487 1568726441
+ or asynchrony
+\change_unchanged
+ is therefore a prerequisite to stabilization at the community level 
 \change_inserted -666822487 1568133112
 
 \begin_inset CommandInset citation
@@ -920,7 +923,7 @@ and might even decrease it
 \begin_inset CommandInset citation
 LatexCommand citep
 before "i.e., increase species synchrony instead,"
-key "loreau_species_2008"
+key "loreau_species_2008,loreau2013biodiversity"
 literal "false"
 
 \end_inset
@@ -1024,7 +1027,11 @@ literal "true"
 
 
 \change_inserted -2100369821 1567431721
- and 
+ 
+\change_inserted -666822487 1568726494
+in fishes 
+\change_inserted -2100369821 1567431721
+and 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "klink_functional_2019"
@@ -1033,6 +1040,8 @@ literal "false"
 \end_inset
 
 
+\change_inserted -666822487 1568726500
+ in beetles
 \change_unchanged
 ).
  Here, we take advantage of a long-term bird time series record at the monthly
@@ -1069,10 +1078,25 @@ ompensation.
  
 \change_unchanged
 compensation can be high between similar and closely related species.
- If two species of ducks A and B share almost the same niche, individualsfrom
- either species experience similar competition from species A or B, and
- should feel the effects of other species in the community identically.
- This tends to favor priority effects 
+ If two species of ducks A and B share almost the same niche, individuals
+\change_inserted -666822487 1568726511
+ 
+\change_unchanged
+from either species experience similar competition from species A or B,
+ and should feel the effects of other species in the community identically.
+ This 
+\change_deleted -666822487 1568726530
+tends to 
+\change_unchanged
+favo
+\change_inserted -666822487 1568726532
+u
+\change_unchanged
+r
+\change_inserted -666822487 1568726533
+s
+\change_unchanged
+ priority effects 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "fukami_historical_2015"
@@ -1094,31 +1118,63 @@ literal "false"
  On the other hand, it could be argued that these two similar duck species
  will precisely respond in similar ways to environmental variables, which
  tends to obfuscate compensation.
- Under the latter scenario, more dissimilar species or groups (within the
- same trophic level nonetheless) could exhibit compensation 
+ 
+\change_deleted -666822487 1568726775
+Under the latter scenario
+\change_inserted -666822487 1568726776
+Hence
+\change_unchanged
+, more dissimilar species or groups (within the same trophic level nonetheless)
+ could exhibit 
+\change_inserted -666822487 1568726631
+more 
+\change_unchanged
+compensation 
 \change_inserted -2100369821 1567431832
 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "klink_functional_2019"
+key "morin2014temporal,klink_functional_2019"
 literal "false"
 
 \end_inset
 
 
+\change_inserted -666822487 1568726833
+ because they are more likely to respond to the environment in an asynchronous
+ manner (sensu 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "loreau2013biodiversity"
+literal "false"
+
+\end_inset
+
+)
 \change_unchanged
 .
- This can occur because more dissimilar species are more likely to have
- different environmental preferences and the environment varies over time
- (e.g., groups of species preferring more open vs more closed habitats replacing
- each other as a function of changes in vegetation height).
- Surprisingly, such compensation 
+ 
+\change_deleted -666822487 1568726843
+This can occur because more dissimilar species are more likely to have different
+ environmental preferences and the environment varies over time (e.g., groups
+ of species preferring more open vs more closed habitats replacing each
+ other as a function of changes in vegetation height).
+ 
+\change_unchanged
+Surprisingly, such compensation 
 \shape italic
 between
 \shape default
- guilds has been less well explored than within guilds, even though there
- is actually some empirical evidence for compensation between dissimilar
- guilds 
+ guilds has been less well explored 
+\change_inserted -666822487 1568726957
+empirically 
+\change_unchanged
+than 
+\emph on
+within
+\emph default
+ guilds, even though there is actually some empirical evidence for compensation
+ between dissimilar guilds 
 \begin_inset CommandInset citation
 LatexCommand citep
 before "e.g.,"
@@ -1129,10 +1185,18 @@ literal "true"
 
 .
  In this paper, we explore the level of compensation/synchrony within or
- between guilds, along either taxonomic or functional classifications.
+ between guilds
+\change_inserted -666822487 1568729103
+ of a wetland bird community
+\change_unchanged
+, along either taxonomic or functional classifications.
  Although a functional classification might appear intuitively more appealing,
- our knowledge of functional traits isnecessarily partial and imperfect,
- so that a taxonomic description can sometimes be preferable 
+ our knowledge of functional traits is
+\change_inserted -666822487 1568726977
+ 
+\change_unchanged
+necessarily partial and imperfect, so that a taxonomic description can sometimes
+ be preferable 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "clark_why_2016"
@@ -1186,6 +1250,25 @@ Data
 The monthly time series used for the statistical analyses have been collected
  at the Teich Ornithological Reserve, Arcachon Bay, France (44.64°N / -1.02°E),
  by the staff of the Teich reserve, over the whole study period.
+
+\change_inserted -666822487 1568729155
+ A species list of the frequent birds is provided in SI Appendix S1
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1568729163
+Have to cite it here if it's the first
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+
+\change_unchanged
  The reserve comprises 120 ha of wetlands, and the counts have been aggregated
  at the reserve scale (summed over 18
 \begin_inset Note Note
@@ -1278,7 +1361,13 @@ noprefix "false"
 \change_inserted -666822487 1568134704
 SI 
 \change_unchanged
-Appendix S1).
+Appendix S
+\change_inserted -666822487 1568729174
+2
+\change_deleted -666822487 1568729173
+1
+\change_unchanged
+).
  We defined two seasons based on observations of bird presence.
  We defined a `warm season', from May to August, and a `cold season' as
  the months between November and February of the following year.
@@ -1507,7 +1596,7 @@ phylogenetic groups such as genera) and a functional classification of the
 34
 \change_inserted -2100369821 1568379077
 17
-\change_inserted -666822487 1568278562
+\change_inserted -666822487 1568729193
  species of waterfowl).
  The waterfowl group includes all anatids (ducks, geese and swans in particular)
  as well as the common coot 
@@ -1515,7 +1604,7 @@ phylogenetic groups such as genera) and a functional classification of the
 (Fulica atra
 \emph default
 , an abundant species here, which is a Rallidae but as all coots, resembling
- a duck in morphology and foraging habits).
+ a duck in morphology and foraging habits; hence its inclusion).
 \end_layout
 
 \begin_layout Standard
@@ -2089,10 +2178,10 @@ berg corrected, threshold by 100 phase-randomizations of each species time
 
  values.
 
-\change_inserted -666822487 1568134747
+\change_inserted -666822487 1568729223
  The robustness of the wavelet approach to the presence of exactly zero
  values is tested in SI Appendix S7 [I guess we may have to change it to
- S2].
+ S2 and re-order all of them accordingly later on].
  
 \change_unchanged
 
@@ -2274,11 +2363,11 @@ a and b
  This matches the patterns obtained within the entire wetland bird community
  (Fig A1 in Appendix 
 \change_inserted -666822487 1568135131
-S2
+S
 \change_deleted -666822487 1568135002
 1
-\change_inserted -666822487 1568135131
- [perhaps should be S3]
+\change_inserted -666822487 1568729243
+3
 \change_unchanged
 )
 \change_inserted -666822487 1568135156
@@ -2731,6 +2820,10 @@ noprefix "false"
 
 \end_inset
 
+
+\change_inserted -666822487 1568729276
+, though see SI Appendix S4 for alternative representations
+\change_unchanged
 )
 \change_inserted -666822487 1568136806
 .
@@ -2994,9 +3087,11 @@ between
  
 \change_inserted -2100369821 1568297204
  
-\change_inserted -666822487 1568188859
+\change_inserted -666822487 1568729317
 A zoom on a module of three species with known competition also revealed
  compensation at scales above 5 years.
+ Similar results have been obtained using biomass in place of abundance
+ (SI Appendix S5).
  We elaborate below on these findings.
  
 \end_layout
@@ -3044,19 +3139,34 @@ compartments
 \change_inserted -2100369821 1568379424
  have marked effects, unless the number of compartments is equal to 2, in
  which case, significance is hard to achieve and some compensatory dynamics
- can be missed if the environmental driver has a weak effect
+ can be missed 
+\change_inserted -666822487 1568729374
+with weak environmental response
+\change_deleted -666822487 1568729365
+if the environmental driver has a weak effect
 \change_unchanged
 .
- However, we found that if two groups respond in opposite ways to a shared
- driver, the stronger the response to the driver, the lesser the compensation
- indicated by 
+ However, we found that if two 
+\change_deleted -666822487 1568729323
+groups
+\change_inserted -666822487 1568729324
+guilds
+\change_unchanged
+ respond in opposite ways to a shared driver, the stronger the response
+ to the driver, the lesser the compensation indicated by 
 \begin_inset Formula $\eta$
 \end_inset
 
  at the whole community level.
  This might explain the low levels of compensation that we found at the
  overall wetland bird community level (Appendix S2), in spite of the clear
- presence of two groups 
+ presence of two 
+\change_deleted -666822487 1568729330
+groups
+\change_inserted -666822487 1568729331
+guilds
+\change_unchanged
+ 
 \change_inserted -666822487 1568278649
 (waders and waterfowl) 
 \change_unchanged
@@ -3210,8 +3320,8 @@ waterfowl
 SI 
 \change_unchanged
 Appendix 
-\change_inserted -666822487 1568137723
-S1
+\change_inserted -666822487 1568729397
+S2
 \change_deleted -666822487 1568137722
 4
 \change_unchanged
@@ -3474,11 +3584,23 @@ zooming out
 \begin_inset Quotes erd
 \end_inset
 
- taxonomically or functionally (considering summed abondances of dissimilar
- functional groups) and temporally (considering temporal scales well above
- the periodicity of the dominant abiotic driver) may often be the best strategy
- to see the compensation that will inevitably manifest if the community-level
- biomass is to be maintained within bounds.
+ 
+\change_deleted -666822487 1568727189
+taxonomically or 
+\change_unchanged
+functionally (considering summed abondances of dissimilar functional groups)
+ and temporally (considering temporal scales well above the periodicity
+ of the dominant abiotic driver) may often be the best strategy to see the
+ compensation that will inevitably manifest if the community-level biomass
+ is to be maintained within bounds
+\change_deleted -666822487 1568727216
+.
+
+\change_inserted -666822487 1568727218
+ in the long run.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection*

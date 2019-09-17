@@ -3146,14 +3146,43 @@ Northern lapwing
 \begin_layout Plain Layout
 
 \change_inserted -2100369821 1568039188
-Composition of the two functional groups considered in the manuscript.
- The genera on which we focused inside these functional groups are coloured
- in the table.
- The percentage of occurrences corresponds to the number of dates when a
- species was observed, compared to the total number of observation dates.
- The percentage of abundances corresponds to the ratio of the abundance
- of a given species on the total abundance of all birds observed during
- the monitoring
+Composition of the two 
+\change_inserted -666822487 1568727347
+main 
+\change_inserted -2100369821 1568039188
+functional groups considered in the manuscript.
+ The genera on which we focused 
+\change_deleted -666822487 1568727387
+inside these functional groups 
+\change_inserted -666822487 1568727395
+for our taxonomy-based comparisons 
+\change_inserted -2100369821 1568039188
+are 
+\change_inserted -666822487 1568727378
+written in 
+\change_inserted -2100369821 1568039188
+colour
+\change_deleted -666822487 1568727374
+ed in the table
+\change_inserted -2100369821 1568039188
+.
+ The percentage of occurrence
+\change_deleted -666822487 1568727422
+s
+\change_inserted -2100369821 1568039188
+ corresponds to the number of dates when a species was observed, compared
+ to the total number of observation dates.
+ The percentage of abundance
+\change_deleted -666822487 1568727413
+s
+\change_inserted -2100369821 1568039188
+ corresponds to the ratio of the abundance of a given species 
+\change_deleted -666822487 1568727431
+on
+\change_inserted -666822487 1568727431
+to
+\change_inserted -2100369821 1568039188
+ the total abundance of all birds observed during the monitoring
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Composition-functional_groups"
@@ -4538,12 +4567,8 @@ status open
 Time series of counts for
 \emph on
  
-\change_deleted -2100369821 1568281920
-
 \emph default
-ducks of 
-\change_unchanged
-the 
+ducks of the 
 \change_deleted -2100369821 1567775394
 genus
 \change_inserted -2100369821 1567775394
@@ -4638,7 +4663,15 @@ ducks, geese and swans, i.e.
 \change_unchanged
  anatids and the common coot).
  The dashed line presents the ratio of wader individuals in the whole community,
- which changes over time.
+ 
+\change_inserted -666822487 1568727513
+i.e., their relative abundance, 
+\change_unchanged
+which changes 
+\change_inserted -666822487 1568727517
+markedly 
+\change_unchanged
+over time.
 \end_layout
 
 \end_inset
@@ -4744,65 +4777,6 @@ Correlation in log-scale betwen
 Additional plots concerning 
 \change_unchanged
 cormorant and heron+egret
-\change_inserted -2100369821 1568279834
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -2100369821 1568279837
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\change_inserted -2100369821 1568279857
-\begin_inset Graphics
-	filename averaged_CorHerEgr_log.pdf
-	width 99text%
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1568279837
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1568282192
-Time series of seasonally averaged abundances of the great cormorant (dashed
- black line) and the grey heron+little egret group (solid grey line), differenti
-ating between a warm and cold season.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -4868,6 +4842,73 @@ We noted on Fig.
  likely.
  It appears to be the reverse: synchrony values are higher with log-transformed
  abundances.
+\change_inserted -666822487 1568727854
+In fact, an annual representation of abundance (seasonal averages, Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:seasonal-averages-cormorant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) make the correlation between the two groups less obvious, which is probably
+ why it only appear at larger scales (>5 years).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1568727621
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -666822487 1568727621
+\begin_inset Graphics
+	filename averaged_CorHerEgr_log.pdf
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1568727621
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1568727836
+Time series of seasonally averaged abundances of the great cormorant (dashed
+ black line) and the grey heron plus little egret group (solid grey line),
+ differentiating between a warm and cold season.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:seasonal-averages-cormorant"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \change_inserted -2100369821 1567775653
 
 \end_layout
@@ -4881,9 +4922,28 @@ Appendix S5 - Synchrony indices using biomasses
 \begin_layout Standard
 
 \change_inserted -2100369821 1567776010
-We used the mean mass of each species to compute the variation of observed
- biomasses and the corresponding synchrony indices.
- This did not change our conclusions.
+We used the mean 
+\change_inserted -666822487 1568727866
+body 
+\change_inserted -2100369821 1567776010
+mass of each species to compute 
+\change_deleted -666822487 1568727876
+the variation of 
+\change_inserted -2100369821 1567776010
+observed biomasses 
+\change_inserted -666822487 1568727883
+from abundances 
+\change_inserted -2100369821 1567776010
+and 
+\change_inserted -666822487 1568727886
+eventually 
+\change_inserted -2100369821 1567776010
+the corresponding synchrony indices.
+ This 
+\change_inserted -666822487 1568727896
+change in the state variable 
+\change_inserted -2100369821 1567776010
+did not change our conclusions.
  
 \end_layout
 
@@ -4925,8 +4985,16 @@ Gross' synchrony index (
 ) as a function of the season (cold and warm seasons), calculated within
  (top, a-b) and between (bottom, c-d) groups, using biomasses instead of
  abundances.
- The groups considered were different functional groups (waterfowl -i.e.
- ducks, geese and swans- vs waders, right b-d) or taxonomic groups (
+ The groups considered were different functional groups (waterfowl -
+\change_inserted -666822487 1568727975
+ 
+\change_inserted -2100369821 1568282236
+i.e.
+ ducks, geese and swans
+\change_inserted -666822487 1568727977
+ 
+\change_inserted -2100369821 1568282236
+- vs waders, right b-d) or taxonomic groups (
 \emph on
 Anatini
 \emph default
@@ -4954,10 +5022,6 @@ Calidris
 
 
 \change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -5021,10 +5085,6 @@ name "fig:Wavelet-modulus-ratio"
 
 
 \change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -5354,7 +5414,23 @@ Gross' synchrony index for different time series length and number of species
  in effect the autocorrelation of the environment.
 
 \change_inserted -2100369821 1567777691
- The parameter b is the effect strength of the environmental variable.
+ The parameter 
+\change_deleted -666822487 1568728034
+b
+\change_inserted -666822487 1568728034
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\change_inserted -2100369821 1567777691
+ is t
+\change_deleted -666822487 1568728023
+he effect strength of the environmental variable
+\change_inserted -666822487 1568728023
+strength of the response to the environmental signal
+\change_inserted -2100369821 1567777691
+.
 
 \change_unchanged
  
@@ -5417,7 +5493,23 @@ Gross' synchrony index for different time series length and number of species
  dynamics of the species
 \change_inserted -2100369821 1567777701
 .
- The parameter b is the effect strength of the environmental variable.
+ The parameter 
+\change_deleted -666822487 1568728055
+b
+\change_inserted -666822487 1568728055
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\change_inserted -2100369821 1567777701
+ is 
+\change_deleted -666822487 1568728051
+the effect strength of the environmental variable
+\change_inserted -666822487 1568728051
+strength of the response to the environmental signal
+\change_inserted -2100369821 1567777701
+.
 \change_unchanged
 
 \begin_inset CommandInset label
@@ -5463,8 +5555,11 @@ noprefix "false"
 \change_unchanged
  
 \change_inserted -2100369821 1568293342
-the Gross index is actually a simple correlation (the community is made
- of 2 species).
+the Gross index is actually a simple correlation (
+\change_inserted -666822487 1568728072
+i.e., 
+\change_inserted -2100369821 1568293342
+the community is made of 2 species).
  
 \change_unchanged
 The main finding of these analyses, aside from the robustness of the 
@@ -5482,7 +5577,11 @@ The main finding of these analyses, aside from the robustness of the
 
 \change_inserted -2100369821 1568294464
  Compensation between groups in the case of a small effect of the environment
- can also be difficult to detect.
+ can also be difficult to detect
+\change_inserted -666822487 1568728143
+ if there are only two functional groups (between-guilds compensation)
+\change_inserted -2100369821 1568294464
+.
  
 \change_unchanged
 
