@@ -632,7 +632,13 @@ constant total community size, are usually rare: synchronous dynamics prevail
 \change_deleted -666822487 1568276612
 Taking advantage of a
 \change_inserted -666822487 1568277695
-We analyze a 35-year
+We analy
+\change_deleted -2100369821 1568887286
+z
+\change_inserted -2100369821 1568887286
+s
+\change_inserted -666822487 1568277695
+e a 35-year
 \change_unchanged
  monthly survey 
 \change_inserted -666822487 1568276624
@@ -744,7 +750,13 @@ the rare cases where compensation
 \change_unchanged
  appeared
 \change_inserted -666822487 1568278012
- consistently
+ 
+\change_inserted -2100369821 1568886551
+more 
+\change_inserted -666822487 1568278012
+consistently
+\change_inserted -2100369821 1568886469
+ at the annual scale
 \change_deleted -666822487 1568133315
  more frequently
 \change_inserted -666822487 1568135351
@@ -1019,7 +1031,7 @@ literal "true"
 
 ; though see 
 \begin_inset CommandInset citation
-LatexCommand citealt
+LatexCommand citealp
 key "bell_stability_2014"
 literal "true"
 
@@ -1553,8 +1565,11 @@ We chose to work at two slightly different taxonomic levels to compare similarly
  
 \change_inserted -666822487 1568278519
 A list of all birds found frequently in the reserve is presented in SI Appendix
- S1; aside from waders and waterfowl, other common species includes herons,
- egrets and cormorants (see below).
+ S1; aside from waders and waterfowl, other common species include
+\change_deleted -2100369821 1568888184
+s
+\change_inserted -666822487 1568278519
+ herons, egrets and cormorants (see below).
  Among the fish eaters, grebes and gulls we
 \change_inserted -2100369821 1568296304
 re
@@ -1675,7 +1690,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\text{\ensuremath{\eta}}=\frac{1}{n}\sum_{i}\text{Corr}(P_{i},\sum_{j\neq i}P_{j})\label{eq:Gross}
+\text{\ensuremath{\eta}}=\frac{1}{n}\sum_{i}\text{Corr}(X_{i},\sum_{j\neq i}X_{j})\label{eq:Gross}
 \end{equation}
 
 \end_inset
@@ -2694,9 +2709,15 @@ status open
 \change_inserted -666822487 1568223214
 Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
  blue color) to 1 (synchrony, red color).
- Dashed black lines delineate regions significantly different from the null
- model (independently fluctuating species) with a false discovery rate controlle
-d at the 10% threshold.
+ 
+\change_deleted -2100369821 1568888681
+Dashed b
+\change_inserted -2100369821 1568888681
+B
+\change_inserted -666822487 1568223214
+lack lines delineate regions significantly different from the null model
+ (independently fluctuating species) with a false discovery rate controlled
+ at the 10% threshold.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3224,9 +3245,13 @@ while
 .
  
 \change_inserted -666822487 1568137601
-Using functional group produced more logical results, although as we stressed
- above, the null hypothesis of no compensation at the yearly scale is still
- plausible as well.
+Using functional group
+\change_inserted -2100369821 1568886955
+s
+\change_inserted -666822487 1568137601
+ produced more logical results, although as we stressed above, the null
+ hypothesis of no compensation at the yearly scale is still plausible as
+ well.
  
 \end_layout
 
@@ -3503,7 +3528,13 @@ The attractor of community dynamics, i.e., the shape of community trajectories
  oscillations.
  If we had to describe our community mathematically, a dynamical model with
  a stable fixed point forced by seasonality and some noise would probably
- work nicely.
+ 
+\change_deleted -2100369821 1568886979
+work nicely
+\change_inserted -2100369821 1568886981
+be appropriate
+\change_unchanged
+.
  This mild fluctuation scenario somehow constrasts with the dynamics of
  other communities, such as insect pests, that have quite often multi-year
  cycles (on top of seasonal cycles, for multivoltine species), with possibly
