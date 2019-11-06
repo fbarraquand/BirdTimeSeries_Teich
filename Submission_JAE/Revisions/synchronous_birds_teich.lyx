@@ -10,7 +10,7 @@
 
 \usepackage{babel}
 
-\linenumbers
+%\linenumbers
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -80,10 +80,11 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes true
-\output_changes true
+\output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -582,6 +583,8 @@ linenumbers
 \end_inset
 
  
+\change_deleted -2100369821 1573048790
+
 \begin_inset ERT
 status collapsed
 
@@ -595,13 +598,71 @@ doublespacing
 \end_inset
 
 
+\change_inserted -2100369821 1573048746
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1573048769
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{linenumbers}{
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Abstract
 1.
  Compensatory dynamics, during which community composition shifts despite
- a more constant total community size, are usually rare: synchronous dynamics
- prevail in natural communities.
+ a more
+\change_inserted -2100369821 1573051722
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1573051821
+For me, 
+\begin_inset Quotes eld
+\end_inset
+
+more
+\begin_inset Quotes erd
+\end_inset
+
+ is difficult to understand here: more than what? (I understand it's community
+ composition vs community size, but it was not immediately obvious...
+ and it's our very first line) I liked the 
+\begin_inset Quotes eld
+\end_inset
+
+near constant
+\begin_inset Quotes erd
+\end_inset
+
+, actually.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ constant total community size, are usually rare: synchronous dynamics prevail
+ in natural communities.
  This is a puzzle for ecologists, because of the key role of compensation
  to explain the relation between biodiversity and ecosystem functioning.
 \end_layout
@@ -631,6 +692,22 @@ community where we suspected that compensation might occur due to changes
 \change_unchanged
 analyse synchrony both within and between guilds, with guilds defined either
  through phylogeny or more functional groups.
+\change_inserted -2100369821 1573051899
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1573051919
+through phylogeny or through functional traits/common traits.
+ (?)
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
 
 \change_deleted -666822487 1570026242
  
@@ -725,9 +802,16 @@ literal "false"
 
 \begin_layout Standard
 Understanding why environmental variation may lead to compensation is relatively
- easy,: if species have different environmental preference (e.g., thermal
- optima), and the environment changes over time, different species will
- be most fit at different points in time.
+ easy
+\change_deleted -2100369821 1573052053
+,
+\change_unchanged
+: if species have different environmental preference
+\change_inserted -2100369821 1573052068
+s
+\change_unchanged
+ (e.g., thermal optima), and the environment changes over time, different
+ species will be most fit at different points in time.
  As a consequence, relative abundances will shift over time even though
  the community biomass as a whole may remain relatively stable 
 \begin_inset CommandInset citation
@@ -784,6 +868,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -2100369821 1573052228
+ 
+\change_unchanged
 and might even decrease it 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -795,8 +883,34 @@ literal "false"
 
 , though this depends on the fluctuation regime.
  Thus, in a world where total community size varies, predicting whether
- compensatory (asynchronous) dynamics can occur is intrinsically difficult
+ compensatory (asynchronous)
+\change_inserted -2100369821 1573052254
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1573052289
+compensaton and asynchrony are not exactly the same to me.
+ Could we write 
+\begin_inset Quotes eld
+\end_inset
+
+(or asynchrony)
+\begin_inset Quotes erd
+\end_inset
+
+?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ dynamics can occur is intrinsically difficult 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "klink_functional_2019"
@@ -804,6 +918,10 @@ literal "false"
 
 \end_inset
 
+
+\change_inserted -2100369821 1573052314
+.
+\change_unchanged
 
 \end_layout
 
@@ -899,8 +1017,33 @@ literal "false"
 \end_inset
 
  in beetles).
- Here, we take advantage of a long-term bird time series record at the monthly
- scale (over 35 years
+ Here, we take advantage of a long-term bird
+\change_inserted -2100369821 1573052413
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1573052421
+precise bird 
+\begin_inset Quotes eld
+\end_inset
+
+abundance
+\begin_inset Quotes erd
+\end_inset
+
+ ?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ time series record at the monthly scale (over 35 years
 \begin_inset Note Note
 status open
 
@@ -1017,9 +1160,12 @@ Our objective is therefore to examine how synchronous or compensatory bird
  times, but it also extends well beyond generation time (35 years) and (ii)
  the reserve where the data has been collected was subjected to a major
  management change c.
- 2006 (change in water levels), favoring different types of wetland birds
- (so that over long timescales, there is a real potential for changes in
- community composition).
+ 2006 (change in water levels), favo
+\change_inserted -2100369821 1573052992
+u
+\change_unchanged
+ring different types of wetland birds (so that over long timescales, there
+ is a real potential for changes in community composition).
 \begin_inset Note Note
 status open
 
@@ -1285,7 +1431,16 @@ within
 \emph on
 (Fulica atra
 \emph default
-, an abundant species here, which is a Rallidae but as all coots, resembling
+, an abundant species here, which is a Rallidae but 
+\change_deleted -2100369821 1573053398
+as all coots, 
+\change_unchanged
+resembl
+\change_deleted -2100369821 1573053402
+ing
+\change_inserted -2100369821 1573053402
+es
+\change_unchanged
  a duck in morphology and foraging habits; hence its inclusion).
 \end_layout
 
@@ -1365,7 +1520,7 @@ noprefix "false"
 
 \begin_layout Standard
 where 
-\begin_inset Formula $P_{i}$
+\begin_inset Formula $X_{i}$
 \end_inset
 
  is the abundance or biomass of species 
@@ -1452,7 +1607,11 @@ literal "true"
 .
  That is, we constructed two community-level time series where each year
  is associated to a vector of species abundances, one for the cold season
- and one for warm season.
+ and one for 
+\change_inserted -2100369821 1573053662
+the 
+\change_unchanged
+warm season.
  To do so, we averaged monthly bird abundances, for each species, over the
  season duration.
  We then computed the synchrony index for both cold and warm seasons using
@@ -1566,8 +1725,12 @@ between guilds
 \begin_inset Quotes erd
 \end_inset
 
-), , spurious cross-correlations could emerge with a shift-based approach
- as the number of possible combinations is more limited.
+),
+\change_deleted -2100369821 1573054204
+ ,
+\change_unchanged
+ spurious cross-correlations could emerge with a shift-based approach as
+ the number of possible combinations is more limited.
  Therefore, to test for synchrony between the summed abundances of two guilds
  or taxonomic units, we used the more refined IAAFT method 
 \begin_inset CommandInset citation
@@ -1577,10 +1740,20 @@ literal "false"
 
 \end_inset
 
-, which retains the frequency spectrum of the time series while randomizing
- its values.
- We obtained 100 sets of randomized time series for each computed synchrony
- index.
+, which retains the frequency spectrum of the time series while 
+\change_deleted -2100369821 1573049284
+randomiz
+\change_inserted -2100369821 1573049284
+randomis
+\change_unchanged
+ing its values.
+ We obtained 100 sets of 
+\change_deleted -2100369821 1573049286
+randomiz
+\change_inserted -2100369821 1573049286
+randomis
+\change_unchanged
+ed time series for each computed synchrony index.
  We then compared the number of 
 \begin_inset Formula $\eta_{H0}$
 \end_inset
@@ -1606,11 +1779,23 @@ literal "false"
 \begin_inset Formula $\ge\eta_{obs}$
 \end_inset
 
- (respectively 
+
+\change_inserted -2100369821 1573054385
+, 
+\change_deleted -2100369821 1573054382
+ (
+\change_unchanged
+respectively 
 \begin_inset Formula $\le\eta_{obs}$
 \end_inset
 
-) and 
+
+\change_inserted -2100369821 1573054390
+,
+\change_deleted -2100369821 1573054390
+)
+\change_unchanged
+ and 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1632,8 +1817,12 @@ In addition to the time-domain analyses above, we performed frequency-domain
  analyses for a range of temporal scales ranging from a few months to years.
  This was done in particular for analyzing synchrony within the rich wader
  community, as well as the group formed by the great cormorant, grey heron
- and little egret.All wavelet analyses take as input the monthly time series
- data.
+ and little egret.
+
+\change_inserted -2100369821 1573054557
+ 
+\change_unchanged
+All wavelet analyses take as input the monthly time series data.
  Based on the work by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1696,15 +1885,25 @@ r corresponds to the fluctuations of each species.
  This index is close to 0 when species compensate and reaches 1 when they
  are synchronous.
  As before, the significance of each value was tested at the 10%, Benjamini-Hoch
-berg corrected, threshold by 100 phase-randomizations of each species time
- series, and computation of the corresponding 
+berg corrected, threshold by 100 phase-
+\change_deleted -2100369821 1573049287
+randomiz
+\change_inserted -2100369821 1573049287
+randomis
+\change_unchanged
+ations of each species time series, and computation of the corresponding
+ 
 \begin_inset Formula $\rho$
 \end_inset
 
  values.
  The robustness of the wavelet approach to the presence of exactly zero
- values is tested in SI Appendix S7 [I guess we may have to change it to
- S2 and re-order all of them accordingly later on].
+ values is tested in SI Appendix S7
+\change_deleted -2100369821 1573055015
+ [I guess we may have to change it to S2 and re-order all of them accordingly
+ later on]
+\change_unchanged
+.
 
 \change_deleted -666822487 1570026242
  
@@ -1757,9 +1956,9 @@ focusing on the genera
 \shape italic
 Calidris
 \shape default
- and 
+ and tribe 
 \shape italic
-tribe Anatini 
+Anatini 
 \emph on
 (formerly 
 \emph default
@@ -1857,7 +2056,11 @@ noprefix "false"
  can see that there is synchrony even at a fine temporal scale throughout
  most of the time series.
  However, post-2006, there seems to be a possibility for compensation on
- a temporal scale of approximatively 5 years or 
+ a temporal scale of approximat
+\change_deleted -2100369821 1573055407
+iv
+\change_unchanged
+ely 5 years or 
 \change_deleted -666822487 1570026242
  
 \change_unchanged
@@ -1900,7 +2103,11 @@ between
 \emph default
  (bottom, c-d) groups.
  The groups considered were different functional groups (waders vs waterfowl,
- right b-d) or taxonomic groups (
+ right b-d
+\change_deleted -2100369821 1573055574
+)
+\change_unchanged
+ or taxonomic groups (
 \emph on
 Anatini
 \emph default
@@ -2002,8 +2209,11 @@ Synchrony between phylogenetic or functional groups
 \end_layout
 
 \begin_layout Standard
-More interpretable results can be found when we examine the synchrony vs
- compensation between functional groups (Fig.
+More interpretable results can be found when we examine 
+\change_deleted -2100369821 1573055687
+the 
+\change_unchanged
+synchrony vs compensation between functional groups (Fig.
  2d).
  Since we consider only two functional or phylogenetic groups, the Gross
  index reduces to a simple correlation between two groups.
@@ -2023,7 +2233,11 @@ Calidris
  2d).
  Although the negative correlation is not statistically significant, it
  is consistent for both pre- and post-2006 periods.
+
+\change_deleted -2100369821 1573055721
  .
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection*
@@ -2090,10 +2304,31 @@ noprefix "false"
 \end_inset
 
 ).
- There might be some compensation over very short timescale as well (within
- the season), but at very specific times and the biological mechanisms for
- this are unclear, since these species compete for roost sites, a process
- that it unlikely to manifest at such very short timescales.
+ There might be some compensation over very short timescale
+\change_inserted -2100369821 1573055770
+s
+\change_unchanged
+ as well (within the season), but at very specific times
+\change_deleted -2100369821 1573055834
+ and
+\change_inserted -2100369821 1573055834
+.
+
+\change_unchanged
+ 
+\change_deleted -2100369821 1573055835
+t
+\change_inserted -2100369821 1573055835
+T
+\change_unchanged
+he biological mechanisms for this are unclear, since these species compete
+ for roost sites, a process that i
+\change_deleted -2100369821 1573055842
+t
+\change_inserted -2100369821 1573055842
+s
+\change_unchanged
+ unlikely to manifest at such very short timescales.
 \end_layout
 
 \begin_layout Standard
@@ -2289,10 +2524,22 @@ compartments
 \begin_inset Formula $\eta$
 \end_inset
 
- index could affect its value: it did not have marked effects, unless the
- number of compartments is equal to 2, in which case, significance is hard
- to achieve and some compensatory dynamics can be missed with weak environmental
- response.
+ index could affect its value
+\change_deleted -2100369821 1573055955
+:
+\change_inserted -2100369821 1573055955
+.
+
+\change_unchanged
+ 
+\change_deleted -2100369821 1573055956
+i
+\change_inserted -2100369821 1573055957
+I
+\change_unchanged
+t did not have marked effects, unless the number of compartments is equal
+ to 2, in which case, significance is hard to achieve and some compensatory
+ dynamics can be missed with weak environmental response.
  However, we found that if two guilds respond in opposite ways to a shared
  driver, the stronger the response to the driver, the lesser the compensation
  indicated by 
@@ -2303,7 +2550,11 @@ compartments
  This might explain the low levels of compensation that we found at the
  overall wetland bird community level (Appendix S2), in spite of the clear
  presence of two guilds (waders and waterfowl) reacting in opposite way
- to shared driver (here, water levels).
+ to
+\change_inserted -2100369821 1573056626
+ a
+\change_unchanged
+ shared driver (here, water levels).
  Analyses at several taxonomic/functional scales are therefore warranted
  to be conclusive about compensation.
 \end_layout
@@ -2383,12 +2634,20 @@ literal "true"
  inflow of birds preferring low water levels (waders), and outflow of birds
  preferring high water levels (waterfowl), under an overall space constraint.
  In other words, the shift in community dynamics is likely not directly
- due to birth and deaths.
+ due to birth
+\change_inserted -2100369821 1573056770
+s
+\change_unchanged
+ and deaths.
  However, it would be incorrect to conclude that such local compensation
  is disconnected from regional-scale community dynamics: which species are
  present in the reserve affects their reproductive success, which feeds
  back into regional-scale dynamics, and in turn, regional-scale dynamics
- influences which species are locally settling and competing.
+ influence
+\change_deleted -2100369821 1573056789
+s
+\change_unchanged
+ which species are locally settling and competing.
 \end_layout
 
 \begin_layout Subsection*
@@ -2398,8 +2657,11 @@ Effect of the change in management on synchrony
 \begin_layout Standard
 Although we performed analyses throughout the whole time series, in which
  there is a progressive change in composition (Appendix S1), a marked change
- in management occured around 2006, after which the water levels were kept
- at a lower level.
+ in management occu
+\change_inserted -2100369821 1573056849
+r
+\change_unchanged
+red around 2006, after which the water levels were kept at a lower level.
  We have therefore also performed yearly analyses pre- and post-2006.
  These showed very little differences during either the warm or cold season.
  However, in the wavelet analyses, we see at monthly or 5-year timescales
@@ -2437,8 +2699,12 @@ Synchrony in a small module with known competition
 \begin_layout Standard
 Zooming in on the cormorant-heron-egret module, for which we knew beforehand
  that competition for resting/roosting sites in the summer season occurs
- between on the one hand, cormorants, and on the other hand, little egrets
- and grey herons (C.
+ between
+\change_inserted -2100369821 1573056936
+,
+\change_unchanged
+ on the one hand, cormorants, and on the other hand, little egrets and grey
+ herons (C.
  Feigné, pers.
  obs.).
  Abundance time series suggested some negative correlation, but it was not
@@ -2446,7 +2712,9 @@ Zooming in on the cormorant-heron-egret module, for which we knew beforehand
  dominates.
  Instead, we find that compensation mostly occurs above the annual temporal
  scale, approximatively on a scale of 6 years, much above the annual scale.
- .
+ 
+\change_deleted -2100369821 1573056964
+.
  
 \change_deleted -666822487 1570026242
  
@@ -2501,14 +2769,21 @@ literal "true"
  abiotic driver (e.g., temperature) was partly motivated by studies on plankton
  whose community dynamics are much faster, with much shorter generation
  times, we could have expected compensation to manifest also at that scale
- here as well (e.g., monthly).
+ 
+\change_deleted -2100369821 1573057040
+here as well 
+\change_unchanged
+(e.g., monthly).
  Indeed, movement of birds reacting to food availability can certainly occur
  within the season, and wetlands have a finite carrying capacity, so that
  there is competition for space, which could promote short-term compensation.
  We suspect that instead, because many species share common abiotic and
  biotic drivers (e.g., disturbances due to nearby hunting) even below the
  yearly timescale, their dynamics are bound to be synchronized to some degree
- even below the yearly scale.
+\change_deleted -2100369821 1573057131
+ even below the yearly scale
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -2520,11 +2795,14 @@ The attractor of community dynamics, i.e., the shape of community trajectories
  If we had to describe our community mathematically, a dynamical model with
  a stable fixed point forced by seasonality and some noise would probably
  be appropriate.
- This mild fluctuation scenario somehow constrasts with the dynamics of
- other communities, such as insect pests, that have quite often multi-year
- cycles (on top of seasonal cycles, for multivoltine species), with possibly
- strong indirect interactions between similar species mediated by predators
- and parasitoids 
+ This mild fluctuation scenario somehow con
+\change_deleted -2100369821 1573057164
+s
+\change_unchanged
+trasts with the dynamics of other communities, such as insect pests, that
+ have quite often multi-year cycles (on top of seasonal cycles, for multivoltine
+ species), with possibly strong indirect interactions between similar species
+ mediated by predators and parasitoids 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "murdoch2003consumer"
@@ -2533,8 +2811,17 @@ literal "false"
 \end_inset
 
 .
- In this latter context of internally-generated variability ("Endogenous
- compensatory cycles" in 
+ In this latter context of internally-generated variability (
+\change_inserted -2100369821 1573057190
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\change_deleted -2100369821 1573057189
+"
+\change_unchanged
+Endogenous compensatory cycles" in 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "gonzalez2009causes"
@@ -2597,11 +2884,17 @@ zooming out
 \begin_inset Quotes erd
 \end_inset
 
- functionally (considering summed abondances of dissimilar functional groups)
- and temporally (considering temporal scales well above the periodicity
- of the dominant abiotic driver) may often be the best strategy to see the
- compensation that will inevitably manifest if the community-level biomass
- is to be maintained within bounds in the long run.
+ functionally (considering summed ab
+\change_inserted -2100369821 1573057365
+u
+\change_deleted -2100369821 1573057364
+o
+\change_unchanged
+ndances of dissimilar functional groups) and temporally (considering temporal
+ scales well above the periodicity of the dominant abiotic driver) may often
+ be the best strategy to see the compensation that will inevitably manifest
+ if the community-level biomass is to be maintained within bounds in the
+ long run.
 
 \change_deleted -666822487 1570026242
  
@@ -2626,6 +2919,28 @@ We thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
 \begin_inset Newline newline
 \end_inset
 
+
+\change_inserted -2100369821 1573048854
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1573048857
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\backslash
+end{linenumbers}
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 

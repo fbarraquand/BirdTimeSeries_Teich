@@ -4539,7 +4539,11 @@ Appendix S
 \change_inserted -2100369821 1567775220
 2
 \change_unchanged
- - Temporal patterns of in the Teich bird community
+ - Temporal patterns of 
+\change_deleted -2100369821 1573058608
+in 
+\change_unchanged
+the Teich bird community
 \end_layout
 
 \begin_layout Standard
@@ -4661,7 +4665,11 @@ i.e.,
 ducks, geese and swans, i.e.
 
 \change_unchanged
- anatids and the common coot).
+ anatids
+\change_inserted -2100369821 1573058681
+,
+\change_unchanged
+ and the common coot).
  The dashed line presents the ratio of wader individuals in the whole community,
  
 \change_inserted -666822487 1568727513
@@ -4842,6 +4850,9 @@ We noted on Fig.
  likely.
  It appears to be the reverse: synchrony values are higher with log-transformed
  abundances.
+
+\change_inserted -2100369821 1568889220
+ 
 \change_inserted -666822487 1568727854
 In fact, an annual representation of abundance (seasonal averages, Fig.
  
@@ -4854,8 +4865,16 @@ noprefix "false"
 
 \end_inset
 
-) make the correlation between the two groups less obvious, which is probably
- why it only appear at larger scales (>5 years).
+) make
+\change_inserted -2100369821 1573058837
+s
+\change_inserted -666822487 1568727854
+ the correlation between the two groups less obvious, which is probably
+ why it only appear
+\change_inserted -2100369821 1573058842
+s
+\change_inserted -666822487 1568727854
+ at larger scales (>5 years).
  
 \end_layout
 
@@ -4890,7 +4909,15 @@ status open
 \change_inserted -666822487 1568727836
 Time series of seasonally averaged abundances of the great cormorant (dashed
  black line) and the grey heron plus little egret group (solid grey line),
- differentiating between a warm and cold season.
+ differentiating between 
+\change_deleted -2100369821 1573058888
+a 
+\change_inserted -666822487 1568727836
+warm and cold season
+\change_inserted -2100369821 1573058890
+s
+\change_inserted -666822487 1568727836
+.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -5062,9 +5089,9 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1568280530
+\change_inserted -2100369821 1573058993
 Wavelet modulus ratio for the wader community, scaling from 0 (compensation,
- blue color) to 1 (synchrony, red color), using the mean masses instead
+ blue color) to 1 (synchrony, red color), using the mean biomasses instead
  of the abundances of each species.
  Dashed black lines delineate regions significantly different from the null
  model (independently fluctuating species) with a false discovery rate controlle
@@ -5126,9 +5153,16 @@ literal "false"
 
 \end_inset
 
- (developed in their Appendix D), we explored the effect of a shared environment
-al driver on a community formed by two groups reacting oppositely to this
- driver.
+ 
+\change_deleted -2100369821 1573059059
+(developed 
+\change_unchanged
+in their Appendix D
+\change_deleted -2100369821 1573059061
+)
+\change_unchanged
+, we explored the effect of a shared environmental driver on a community
+ formed by two groups reacting oppositely to this driver.
 \end_layout
 
 \begin_layout Standard
@@ -5217,7 +5251,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-x_{i}(t+1)=x_{i}(t)\exp\left(r_{i}\left(1-\frac{x_{i}(t)+\sum_{i\neq j}^{n}\alpha x_{j}(t)}{K}\right)+b_{i}U(t)+\epsilon_{i}(t)\right)\label{eq:dynamics}
+x_{i}(t+1)=x_{i}(t)\exp\left(r_{i}\left(1-\frac{x_{i}(t)+\sum_{j\neq i}^{n}\alpha x_{j}(t)}{K}\right)+b_{i}U(t)+\epsilon_{i}(t)\right)\label{eq:dynamics}
 \end{equation}
 
 \end_inset
@@ -5355,8 +5389,9 @@ Evolution of Gross' synchrony index for different time series length and
  in the environmental signal and the data is not subsampled, keeping the
  autocorrelation of the environment.
 
-\change_inserted -2100369821 1567777712
- The parameter b is the effect strength of the environmental variable.
+\change_inserted -2100369821 1573059292
+ The parameter b is the strength of the response to the the environmental
+ signal.
 
 \change_unchanged
  
@@ -5630,14 +5665,12 @@ worst case
 \end_inset
 
  simulation with
-\change_inserted -2100369821 1568292762
- small community (10 species),
+\change_inserted -2100369821 1573059390
+ small community (10 species) and
 \change_unchanged
  10% missing values for all species
 \change_deleted -2100369821 1568292831
 , and few species below that 10% level
-\change_inserted -2100369821 1568292872
- 
 \change_unchanged
 
 \begin_inset Note Note
