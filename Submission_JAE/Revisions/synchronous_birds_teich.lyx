@@ -582,29 +582,14 @@ linenumbers
 
 \end_inset
 
+
+\change_deleted -666822487 1574346829
  
-\change_deleted -2100369821 1573048790
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-doublespacing
-\end_layout
-
-\end_inset
-
-
-\change_inserted -2100369821 1573048746
+\change_unchanged
 
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1573048769
 \begin_inset ERT
 status open
 
@@ -618,18 +603,16 @@ begin{linenumbers}{
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Abstract
 1.
  Compensatory dynamics, during which community composition shifts despite
- a more
-\change_inserted -2100369821 1573051722
-
+ a 
+\change_deleted -666822487 1574346843
+more
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -661,10 +644,39 @@ near constant
 
 
 \change_unchanged
- constant total community size, are usually rare: synchronous dynamics prevail
+ 
+\change_inserted -666822487 1574346855
+near-
+\change_unchanged
+constant total community size, are usually rare: synchronous dynamics prevail
  in natural communities.
  This is a puzzle for ecologists, because of the key role of compensation
- to explain the relation between biodiversity and ecosystem functioning.
+ 
+\change_deleted -666822487 1574346890
+to
+\change_inserted -666822487 1574346890
+in
+\change_unchanged
+ explain
+\change_inserted -666822487 1574346894
+ing
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1574346920
+J'aurais tendance à favoriser cette écriture, mais je me trompe peut-être,
+ à vérifier si tu peux
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ the relation between biodiversity and ecosystem functioning.
 \end_layout
 
 \begin_layout Abstract
@@ -686,16 +698,30 @@ community where we suspected that compensation might occur due to changes
  potential competition.
  We perform both yearly analyses by season, using a synchrony index, and
  monthly analyses using wavelet-based measures allowing for scale-dependence.
- We 
-\change_deleted -666822487 1570026242
- 
+ We analyse synchrony both within and between guilds, with guilds defined
+ either 
+\change_deleted -666822487 1574346950
+through
+\change_inserted -666822487 1574346954
+as tight-knit
 \change_unchanged
-analyse synchrony both within and between guilds, with guilds defined either
- through phylogeny or more functional groups.
+ phylogen
+\change_inserted -666822487 1574346961
+etic groups
+\change_deleted -666822487 1574346957
+y
+\change_unchanged
+ or 
+\change_deleted -666822487 1574346929
+more
+\change_inserted -666822487 1574346930
+larger
+\change_unchanged
+ functional groups.
 \change_inserted -2100369821 1573051899
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -725,8 +751,11 @@ through phylogeny or through functional traits/common traits.
  appear after a management change in the reserve, and at the scale of a
  few months or several years.
  We also found that synchrony varies with taxonomic and functional scale:
- the rare cases where compensation appeared more consistently at the annual
- scale were 
+ the rare cases where compensation appeared 
+\change_deleted -666822487 1574346979
+more 
+\change_unchanged
+consistently at the annual scale were 
 \emph on
 between
 \emph default
@@ -811,7 +840,35 @@ Understanding why environmental variation may lead to compensation is relatively
 s
 \change_unchanged
  (e.g., thermal optima), and the environment changes over time, different
- species will be most fit at different points in time.
+ species will be 
+\change_deleted -666822487 1574347002
+most fit
+\change_inserted -666822487 1574347007
+fittest
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1574347015
+wonder if that should be 
+\begin_inset Quotes eld
+\end_inset
+
+the fittest
+\begin_inset Quotes erd
+\end_inset
+
+?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ at different points in time.
  As a consequence, relative abundances will shift over time even though
  the community biomass as a whole may remain relatively stable 
 \begin_inset CommandInset citation
@@ -1108,7 +1165,11 @@ literal "false"
 \end_inset
 
  because they are more likely to respond to the environment in an asynchronous
- manner (sensu 
+ manner (
+\emph on
+sensu
+\emph default
+ 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "loreau2013biodiversity"
@@ -1658,9 +1719,20 @@ literal "true"
 
 , which amounts to zero cross-correlations between species abundances (or
  guild-level abundances when considering functional groups).
- The challenge to construct such null hypothesis is to remove all cross-correlat
-ions while keeping the exact same autocorrelation in each individual time
- series.
+ The challenge
+\change_inserted -666822487 1574347073
+,
+\change_unchanged
+ 
+\change_inserted -666822487 1574347081
+in order 
+\change_unchanged
+to construct such null hypothesis
+\change_inserted -666822487 1574347086
+,
+\change_unchanged
+ is to remove all cross-correlations while keeping the exact same autocorrelatio
+n in each individual time series.
  Therefore, for each set of time series (each combination year 
 \begin_inset Formula $\times$
 \end_inset
@@ -1677,7 +1749,13 @@ surrogates
  time series.
  There are multiple ways to erase cross-correlations depending on the resolution
  of the considered community.
- Within communities, we shifted the time-series 
+ Within 
+\change_deleted -666822487 1574347094
+communities
+\change_inserted -666822487 1574347096
+guilds
+\change_unchanged
+, we shifted the time-series 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "purves_fine-scale_2002"
@@ -1685,8 +1763,14 @@ literal "true"
 
 \end_inset
 
- while between communities, we used a frequency-based approach (Iterated
- Amplitude-Adjusted Fourier Transform or IAAFT, see 
+ while between 
+\change_deleted -666822487 1574347102
+communities
+\change_inserted -666822487 1574347117
+guilds (two groups only)
+\change_unchanged
+, we used a frequency-based approach (Iterated Amplitude-Adjusted Fourier
+ Transform or IAAFT, see 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "schreiber_surrogate_2000"
@@ -1711,20 +1795,32 @@ literal "false"
 .
  At the boundary (the end of the time series), remaining points are displaced
  towards the beginning of the time-series, which implements a toroidal shift.
- This methods works well when comparing many times series corresponding
- to the multiple species.
+ This method
+\change_deleted -666822487 1574347123
+s
+\change_unchanged
+ works well when comparing many times series corresponding to the multiple
+ species.
  However, when computing synchrony across 
 \change_deleted -666822487 1570026242
  
 \change_unchanged
 only two groups (
+\change_deleted -666822487 1574347132
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 between guilds
+\change_deleted -666822487 1574347134
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
 ),
 \change_deleted -2100369821 1573054204
  ,
@@ -1759,15 +1855,25 @@ ed time series for each computed synchrony index.
 \end_inset
 
  values which exceeded or were inferior to the observed value to compute
- the p-value according to 
+ the p-value 
+\change_deleted -666822487 1574347144
+according to 
+\change_unchanged
+
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "north_note_2002"
 literal "false"
 
 \end_inset
 
- (i.e., using the ratio 
+
+\change_deleted -666822487 1574347159
+ (i.e., using
+\change_inserted -666822487 1574347161
+: we use
+\change_unchanged
+ the ratio 
 \begin_inset Formula $(r+1)/(n+1)$
 \end_inset
 
@@ -1799,7 +1905,11 @@ respectively
 \begin_inset Formula $n$
 \end_inset
 
- is the number of surrogates).
+ is the number of surrogates
+\change_deleted -666822487 1574347170
+)
+\change_unchanged
+.
  Independence of species was rejected at the 10% threshold with a Benjamini-Hoch
 berg correction, as we compare across 2 seasons and 3 periods, with partially
  overlapping data.
@@ -1885,30 +1995,33 @@ r corresponds to the fluctuations of each species.
  This index is close to 0 when species compensate and reaches 1 when they
  are synchronous.
  As before, the significance of each value was tested at the 10%, Benjamini-Hoch
-berg corrected, threshold by 100 phase-
-\change_deleted -2100369821 1573049287
-randomiz
-\change_inserted -2100369821 1573049287
-randomis
-\change_unchanged
-ations of each species time series, and computation of the corresponding
- 
+berg corrected, threshold by 100 phase-randomisations of each species time
+ series, and computation of the corresponding 
 \begin_inset Formula $\rho$
 \end_inset
 
  values.
  The robustness of the wavelet approach to the presence of exactly zero
  values is tested in SI Appendix S7
-\change_deleted -2100369821 1573055015
- [I guess we may have to change it to S2 and re-order all of them accordingly
- later on]
+\change_inserted -666822487 1574347198
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1574347214
+Still wondering whether we should (or not) change the order of sections
+ in the SI?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_unchanged
 .
-
-\change_deleted -666822487 1570026242
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -2041,7 +2154,13 @@ Even though there is no widespread community-wide or genus-wide compensation
  at the yearly timescale (differentiating the seasons), there could be compensat
 ion at finer temporal scales, e.g.
  a month or two, or coarser scales, over several years.
- When we consider the wavelet plot (Fig.
+ When we consider the wavelet 
+\change_deleted -666822487 1574347256
+plot
+\change_inserted -666822487 1574347291
+transform
+\change_unchanged
+ (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2052,9 +2171,13 @@ noprefix "false"
 
 \end_inset
 
-), that is a time-varying and scale-dependent strength of synchrony, we
- can see that there is synchrony even at a fine temporal scale throughout
- most of the time series.
+), that is
+\change_inserted -666822487 1574347299
+,
+\change_unchanged
+ a time-varying and scale-dependent strength of synchrony, we can see that
+ there is synchrony even at a fine temporal scale throughout most of the
+ time series.
  However, post-2006, there seems to be a possibility for compensation on
  a temporal scale of approximat
 \change_deleted -2100369821 1573055407
@@ -2103,11 +2226,7 @@ between
 \emph default
  (bottom, c-d) groups.
  The groups considered were different functional groups (waders vs waterfowl,
- right b-d
-\change_deleted -2100369821 1573055574
-)
-\change_unchanged
- or taxonomic groups (
+ right b-d) or taxonomic groups (
 \emph on
 Anatini
 \emph default
@@ -2318,17 +2437,31 @@ s
  
 \change_deleted -2100369821 1573055835
 t
-\change_inserted -2100369821 1573055835
-T
-\change_unchanged
-he biological mechanisms for this are unclear, since these species compete
+\change_deleted -666822487 1574347349
+The biological mechanisms for this are unclear, since these species compete
  for roost sites, a process that i
 \change_deleted -2100369821 1573055842
 t
-\change_inserted -2100369821 1573055842
-s
+\change_deleted -666822487 1574347349
+s unlikely to manifest at such very short timescales.
+\change_inserted -666822487 1574347351
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1574347362
+Was confusing and contradicts parts of the discussion I think.
 \change_unchanged
- unlikely to manifest at such very short timescales.
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2578,8 +2711,12 @@ Calidris
  guilds while the taxonomic classification did not, despite the contrasted
  habitat preferences of these two phylogenetic groups.
  Using functional groups produced more logical results, although as we stressed
- above, the null hypothesis of no compensation at the yearly scale is still
- plausible as well.
+ above, 
+\change_inserted -666822487 1574347396
+due to the low power of the tests, 
+\change_unchanged
+the null hypothesis of no compensation at the yearly scale is still plausible
+ as well.
 
 \change_deleted -666822487 1570026242
  
@@ -2655,9 +2792,37 @@ Effect of the change in management on synchrony
 \end_layout
 
 \begin_layout Standard
-Although we performed analyses throughout the whole time series, in which
- there is a progressive change in composition (Appendix S1), a marked change
- in management occu
+Although we performed 
+\change_inserted -666822487 1574347445
+first 
+\change_unchanged
+analyses 
+\change_deleted -666822487 1574347406
+throughout
+\change_inserted -666822487 1574347406
+on
+\change_unchanged
+ the whole time series,
+\change_deleted -666822487 1574347451
+ in which there is a progressive change in composition (Appendix S1),
+\change_inserted -666822487 1574347454
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1574347459
+We don't need this actually
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ a marked change in management occu
 \change_inserted -2100369821 1573056849
 r
 \change_unchanged
@@ -2698,7 +2863,7 @@ Synchrony in a small module with known competition
 
 \begin_layout Standard
 Zooming in on the cormorant-heron-egret module, for which we knew beforehand
- that competition for resting/roosting sites in the summer season occurs
+ that competition for resting and roosting sites in the summer season occurs
  between
 \change_inserted -2100369821 1573056936
 ,
