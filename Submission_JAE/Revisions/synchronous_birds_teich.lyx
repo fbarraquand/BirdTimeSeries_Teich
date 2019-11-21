@@ -1828,7 +1828,13 @@ between guilds
  spurious cross-correlations could emerge with a shift-based approach as
  the number of possible combinations is more limited.
  Therefore, to test for synchrony between the summed abundances of two guilds
- or taxonomic units, we used the more refined IAAFT method 
+ or taxonomic units, we used the more 
+\change_deleted -666822487 1574349155
+refined
+\change_inserted -666822487 1574349157
+sophisticated
+\change_unchanged
+ IAAFT method 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "schreiber_surrogate_2000"
@@ -2607,9 +2613,12 @@ within
 \emph default
  genera or guilds at the annual scale or below.
  Yet, summing species abundances within a guild and comparing the total
- abundance of contrasted guilds, it was possible to find some compensation
- (although the null hypothesis of no correlation could not be rejected);
- in other words, there was some compensation 
+ abundance of contrasted guilds, it was possible to find 
+\change_deleted -666822487 1574348749
+some 
+\change_unchanged
+compensation (although the null hypothesis of no correlation could not be
+ rejected); in other words, there was some compensation 
 \emph on
 between
 \emph default
