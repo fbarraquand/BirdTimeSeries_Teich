@@ -84,8 +84,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -583,10 +581,6 @@ linenumbers
 \end_inset
 
 
-\change_deleted -666822487 1574346829
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -720,20 +714,13 @@ literal "false"
 
 \begin_layout Standard
 Understanding why environmental variation may lead to compensation is relatively
- easy
-\change_deleted -2100369821 1573052053
-,
-\change_unchanged
-: if species have different environmental preferences (e.g., thermal optima),
- and the environment changes over time, different species will be fittest
-\change_inserted -666822487 1574347007
-
+ easy: if species have different environmental preferences (e.g., thermal
+ optima), and the environment changes over time, different species will
+ be fittest
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1574347015
 wonder if that should be 
 \begin_inset Quotes eld
 \end_inset
@@ -742,17 +729,11 @@ the fittest
 \begin_inset Quotes erd
 \end_inset
 
-?
-\change_inserted -2100369821 1574418945
- Not necessarily: https://www.perfect-english-grammar.com/superlatives.html
-\change_unchanged
-
+? Not necessarily: https://www.perfect-english-grammar.com/superlatives.html
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
  at different points in time.
  As a consequence, relative abundances will shift over time even though
  the community biomass as a whole may remain relatively stable 
@@ -821,15 +802,11 @@ literal "false"
 
 , though this depends on the fluctuation regime.
  Thus, in a world where total community size varies, predicting whether
- compensatory (asynchronous)
-\change_inserted -2100369821 1573052254
- 
+ compensatory (or asynchronous) 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1573052289
 compensaton and asynchrony are not exactly the same to me.
  Could we write 
 \begin_inset Quotes eld
@@ -840,14 +817,10 @@ compensaton and asynchrony are not exactly the same to me.
 \end_inset
 
 ?
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
  dynamics can occur is intrinsically difficult 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -951,35 +924,10 @@ literal "false"
 \end_inset
 
  in beetles).
- Here, we take advantage of a long-term bird
-\change_inserted -2100369821 1573052413
- 
+ Here, we take advantage of a long-term bird abundance time series record
+ at the monthly scale (over 35 years
 \begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1573052421
-precise bird 
-\begin_inset Quotes eld
-\end_inset
-
-abundance
-\begin_inset Quotes erd
-\end_inset
-
- ?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- time series record at the monthly scale (over 35 years
-\begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Foot
@@ -1098,12 +1046,9 @@ Our objective is therefore to examine how synchronous or compensatory bird
  times, but it also extends well beyond generation time (35 years) and (ii)
  the reserve where the data has been collected was subjected to a major
  management change c.
- 2006 (change in water levels), favo
-\change_inserted -2100369821 1573052992
-u
-\change_unchanged
-ring different types of wetland birds (so that over long timescales, there
- is a real potential for changes in community composition).
+ 2006 (change in water levels), favouring different types of wetland birds
+ (so that over long timescales, there is a real potential for changes in
+ community composition).
 \begin_inset Note Note
 status open
 
@@ -1128,11 +1073,7 @@ Data
 The monthly time series used for the statistical analyses have been collected
  at the Teich Ornithological Reserve, Arcachon Bay, France (44.64°N / -1.02°E),
  by the staff of the Teich reserve, over the whole study period.
- A species list of the frequent birds is provided in 
-\change_deleted -2100369821 1574428558
-SI 
-\change_unchanged
-Appendix S1.
+ A species list of the frequent birds is provided in SI Appendix S1.
  The reserve comprises 120 ha of wetlands, and the counts have been aggregated
  at the reserve scale (summed over 18
 \begin_inset Note Note
@@ -1197,11 +1138,7 @@ noprefix "false"
 
 \end_inset
 
-), as well as the original monthly data (presented in 
-\change_deleted -2100369821 1574428566
-SI 
-\change_unchanged
-Appendix S2).
+), as well as the original monthly data (presented in Appendix S2).
  We defined two seasons based on observations of bird presence.
  We defined a `warm season', from May to August, and a `cold season' as
  the months between November and February of the following year.
@@ -1331,12 +1268,9 @@ Calidris
  Waders and ducks have different environmental preferences, with ducks (and
  waterfowl more generally) preferring water levels allowing them to dive,
  while waders usually forage on mudflats.
- A list of all birds found frequently in the reserve is presented in 
-\change_deleted -2100369821 1574428578
-SI 
-\change_unchanged
-Appendix S1; aside from waders and waterfowl, other common species include
- herons, egrets and cormorants (see below).
+ A list of all birds found frequently in the reserve is presented in Appendix
+ S1; aside from waders and waterfowl, other common species include herons,
+ egrets and cormorants (see below).
  Among the fish eaters, grebes and gulls were also present; a few raptors
  as well.
 \end_layout
@@ -1696,11 +1630,7 @@ In addition to the time-domain analyses above, we performed frequency-domain
  This was done in particular for analyzing synchrony within the rich wader
  community, as well as the group formed by the great cormorant, grey heron
  and little egret.
-
-\change_inserted -2100369821 1573054557
- 
-\change_unchanged
-All wavelet analyses take as input the monthly time series data.
+ All wavelet analyses take as input the monthly time series data.
  Based on the work by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1770,33 +1700,7 @@ berg corrected, threshold by 100 phase-randomisations of each species time
 
  values.
  The robustness of the wavelet approach to the presence of exactly zero
- values is tested in 
-\change_deleted -2100369821 1574428592
-SI Appendix S7
-\change_inserted -2100369821 1574428598
-the Appendices
-\change_inserted -666822487 1574347198
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1574347214
-Still wondering whether we should (or not) change the order of sections
- in the SI?
-\change_inserted -2100369821 1574428626
- S7 was the only Appendix that was not correctly ordered.
- I just removed the name here.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-.
+ values is tested in Appendix S7.
 \end_layout
 
 \begin_layout Standard
@@ -1875,12 +1779,8 @@ noprefix "false"
 
 a and b) at the annual scale.
  This matches the patterns obtained within the entire wetland bird community
- (
-\change_deleted -2100369821 1574428842
-Fig A1 in 
-\change_unchanged
-Appendix S3): synchrony dominates when abundances are computed at the species
- level.
+ (Appendix S3): synchrony dominates when abundances are computed at the
+ species level.
 \end_layout
 
 \begin_layout Standard
@@ -2111,11 +2011,7 @@ noprefix "false"
 
 \end_inset
 
-, though see 
-\change_deleted -2100369821 1574428638
-SI 
-\change_unchanged
-Appendix S4 for alternative representations).
+, though see Appendix S4 for alternative representations).
  However, we see on Fig.
  
 \begin_inset CommandInset ref
@@ -2141,13 +2037,7 @@ noprefix "false"
 \end_inset
 
  were caused by the use of a log scale, but we found that in fact the correlatio
-n was higher rather than lower on the log scale (Appendix 
-\change_inserted -2100369821 1574428488
-S4
-\change_deleted -2100369821 1574428489
-2
-\change_unchanged
-).
+n was higher rather than lower on the log scale (Appendix S4).
  However, over long temporal scales (
 \begin_inset Formula $\sim$
 \end_inset
@@ -2323,11 +2213,7 @@ between
  A zoom on a module of three species with known competition also revealed
  compensation at scales above 5 years.
  Similar results have been obtained using biomass in place of abundance
- (
-\change_deleted -2100369821 1574428644
-SI 
-\change_unchanged
-Appendix S5).
+ (Appendix S5).
  We elaborate below on these findings.
 \end_layout
 
@@ -2374,14 +2260,9 @@ compartments
 
  at the whole community level.
  This might explain the low levels of compensation that we found at the
- overall wetland bird community level (Appendix S
-\change_inserted -2100369821 1574428508
-3
-\change_deleted -2100369821 1574428507
-2
-\change_unchanged
-), in spite of the clear presence of two guilds (waders and waterfowl) reacting
- in opposite way to a shared driver (here, water levels).
+ overall wetland bird community level (Appendix S3), in spite of the clear
+ presence of two guilds (waders and waterfowl) reacting in opposite way
+ to a shared driver (here, water levels).
  Analyses at several taxonomic/functional scales are therefore warranted
  to be conclusive about compensation.
 \end_layout
@@ -2452,13 +2333,9 @@ literal "true"
 \end_inset
 
  as the observed long-term changes in species composition (more waders,
- proportionally less waterfowl; 
-\change_deleted -2100369821 1574428651
-SI 
-\change_unchanged
-Appendix S2) might be due to an increased inflow of birds preferring low
- water levels (waders), and outflow of birds preferring high water levels
- (waterfowl), under an overall space constraint.
+ proportionally less waterfowl; Appendix S2) might be due to an increased
+ inflow of birds preferring low water levels (waders), and outflow of birds
+ preferring high water levels (waterfowl), under an overall space constraint.
  In other words, the shift in community dynamics is likely not directly
  due to births and deaths.
  However, it would be incorrect to conclude that such local compensation

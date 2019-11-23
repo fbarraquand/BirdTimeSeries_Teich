@@ -85,7 +85,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
 \end_header
 
 \begin_body
@@ -170,12 +169,9 @@ status open
 
 \begin_layout Plain Layout
 NB Are these percentages based on the monthly data? (which I would typically
- assume) or just total number of records through the whole database?
-\change_inserted -2100369821 1574429191
- They are from the post-treatment file, that is the monthly data, before
- averaging (of course)
-\change_unchanged
-
+ assume) or just total number of records through the whole database? They
+ are from the post-treatment file, that is the monthly data, before averaging
+ (of course)
 \end_layout
 
 \end_inset
@@ -4076,57 +4072,11 @@ Calidris
  The solid black lines represent trends in summed abundances for each guild
  when abundances are strictly positive, thin dotted lines connect positive
  to zero abundances.
- The coloured symbols below the curves represent each species abundances
-\change_deleted -2100369821 1574430726
-,
-\change_inserted -2100369821 1574430726
-.
-
-\change_deleted -2100369821 1574430728
- with s
-\change_inserted -2100369821 1574430729
- S
-\change_unchanged
-pecies composition 
-\change_deleted -2100369821 1574430735
-on the right side 
-\change_unchanged
-on the donut plots
-\change_inserted -2100369821 1574430755
- (right) are given for
-\change_unchanged
- 
-\change_deleted -2100369821 1574430760
-for the most abundant species (
-\change_inserted -2100369821 1574430769
-species whose relative abundance is 
-\change_unchanged
-over 1% 
-\change_deleted -2100369821 1574430776
-of relative abundance 
-\change_unchanged
-in the group considered)
-\change_deleted -2100369821 1574430794
-,
-\change_inserted -2100369821 1574430794
-.
- 
-\change_deleted -2100369821 1574430797
- and t
-\change_inserted -2100369821 1574430802
-The t
-\change_unchanged
-otal number of species 
-\change_inserted -2100369821 1574430808
-consituting the
-\change_deleted -2100369821 1574430812
-taken into account in the
-\change_unchanged
- group
-\change_inserted -2100369821 1574430817
- is given below the donut plot
-\change_unchanged
-.
+ The coloured symbols below the curves represent each species abundances.
+ Species composition on the donut plots (right) are given for species whose
+ relative abundance is over 1% in the group considered.
+ The total number of species consituting the group is given below the donut
+ plot.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4168,11 +4118,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Temporal trends in the abundance of all birds and 
-\change_inserted -2100369821 1574430841
-in 
-\change_unchanged
-the main functional groups (waders and waterfowl), with one point per year.
+Temporal trends in the abundance of all birds and in the main functional
+ groups (waders and waterfowl), with one point per year.
  The waterfowl category actually includes all species functionally similar
  to ducks (ducks, geese and swans, i.e.
  anatids, and the common coot).
@@ -4231,11 +4178,6 @@ status collapsed
 \begin_layout Plain Layout
 Note: Previously not including waders because presented as compared to synchrony
  within waders – at that time there was no compensation.
-
-\change_deleted -2100369821 1574428947
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -4787,11 +4729,7 @@ Gross' synchrony index for different time series length and number of species
 \begin_inset Formula $b$
 \end_inset
 
- is t
-\change_inserted -2100369821 1574431143
-he 
-\change_unchanged
-strength of the response to the environmental signal.
+ is the strength of the response to the environmental signal.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4854,11 +4792,7 @@ Gross' synchrony index for different time series length and number of species
 \begin_inset Formula $b$
 \end_inset
 
- is 
-\change_inserted -2100369821 1574431157
-the 
-\change_unchanged
-strength of the response to the environmental signal.
+ is the strength of the response to the environmental signal.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:withtrend_subsample"
@@ -4894,13 +4828,7 @@ noprefix "false"
 ), if we consider two groups which have opposite reactions to the same driver,
  the Gross index is not sensitive to the length of the time series or to
  the number of species in the community, in the sense that it will not indicate
- false
-\change_inserted -2100369821 1574431265
-s
-\change_deleted -2100369821 1574431197
-ly
-\change_unchanged
- synchrony.
+ false synchrony.
  The only contradiction to this observation appears when the driver has
  only a small effect on the community, and the Gross index is actually a
  simple correlation (i.e., the community is made of 2 species).
@@ -4936,27 +4864,14 @@ missing
 \begin_layout Standard
 We investigate here if exactly-zero abundances can distort the compensation
  patterns evidenced by the wavelet coherence.
- We chose a 
-\begin_inset Quotes eld
-\end_inset
-
-worst case
-\begin_inset Quotes erd
-\end_inset
-
- simulation with small community (10 species) and 10% missing values for
- all species
+ We chose a simulation with 10 species and 10% missing values for all species
+ (close to a worst-case scenario) 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 I'm not sure what I/we meant here, but the last part of the sentence is
- not supported by the code
-\change_inserted -2100369821 1574429412
-.
- It is l.32 of wavelets_simulation.R
-\change_unchanged
-
+ not supported by the code-> It is l.32 of wavelets_simulation.R
 \end_layout
 
 \end_inset
