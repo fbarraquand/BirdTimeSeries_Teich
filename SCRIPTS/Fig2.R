@@ -13,7 +13,7 @@ box_index=T #If box_index is true, draw boxplots for the whole distribution for 
 type_correct="BH" #Was bonferroni before
 amethod_b="iaaft" #Could also be shift or ebisuzaki. Was shift before.
 amethod_w="shift"
-anrands=100 #Number of surrogates we want to test the significance. Up to now (2019/07/03), 100.
+anrands=2 #Number of surrogates we want to test the significance. Up to now (2019/07/03), 100.
 biomass=F
 if(biomass){
 end_bio="biomasses"
@@ -215,9 +215,10 @@ for(v in 1:length(list_duck)){
 
 print('Freq birds output')
 upsi=0.02
-color=rep(c("Black","Lightblue","Darkblue"),2)
+color=rep(c("Black","Lightblue","Dodgerblue2"),2)
 filename_pdf=paste("Gross_freq_new_",end_bio,".pdf",sep="")
-pdf(paste("OUT/",filename_pdf,sep=""),width=11,height=7,family="Times")
+#pdf(paste("OUT/",filename_pdf,sep=""),width=11,height=7,family="Times")
+pdf(paste("Submission_JAE/Revisions_R2/",filename_pdf,sep=""),width=11,height=7,family="Times")
   #if(box_index){
 #pdf(paste("Submission_JAE/Revisions/Gross_freq",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=7)
 #}else{
@@ -253,14 +254,15 @@ lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
 legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
 legend("bottomright",c("Freq"),pch=c(21),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
-system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
+#system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
 
 print('Actual Figure 2, within groups')
 #PLOT
 upsi=0.05
 #pdf("OUT/Fig2_new2.pdf",width=11,height=14,family="Times")
 filename_pdf=paste("Fig2_new3_JAE_",end_bio,".pdf",sep="")
-pdf(paste("OUT/",filename_pdf,sep=""),width=11,height=14)
+#pdf(paste("OUT/",filename_pdf,sep=""),width=11,height=14)
+pdf(paste("Submission_JAE/Revisions_R2/",filename_pdf,sep=""),width=11,height=14)
 #if(box_index){
 #pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"boxplot.pdf",sep="_"),width=11,height=14)
 #}else{
@@ -523,4 +525,4 @@ lines(c(0.0,7.5),c(0,0),lty=2,lwd=2)
 legend("topleft",c("Waterfowl/Waders"),pch=c(22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 dev.off()
 
-system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
+#system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
