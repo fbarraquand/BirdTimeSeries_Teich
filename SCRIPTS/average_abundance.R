@@ -1,5 +1,6 @@
 ###CP Just extracting part of the code of analyseP_oiseaux... entirely written by CAluome, just for efficiency
 ###CP 04/09/2019: Adding las=1 to have horizontal y-axis tick labels and updating taxonomy
+###CP 07/03/2020: Modified shapes of the points to make the figure easier to read
 
 rm(list=ls())
 graphics.off()
@@ -113,7 +114,8 @@ listColor = c('darkorchid','#F0C300','pink','lightgreen','darkgreen','lightblue'
 minimal_percent = 1.00001
 
 filename_pdf="average_abundance_timeseries_v2.pdf"
-pdf(paste("OUT/",filename_pdf,sep=""),width=15,height=10)
+#pdf(paste("OUT/",filename_pdf,sep=""),width=15,height=10)
+pdf(paste("Submission_JAE/Revisions_R2/",filename_pdf,sep=""),width=15,height=10)
 par(mfrow=c(3,2))
 layout(matrix(c(1,2,3,4,5,6), 3, 2, byrow = TRUE),heights = c(1,1,1),widths = c(3,1))
 #Prepare doughnuts
@@ -159,7 +161,7 @@ for(d in dd){
 	plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Anas"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Anas"&db_warm_tot$Date==d])
 }
 par(mar=c(3.9,4.75,0.1,0.1))
-plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
+plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,xaxt="n",pch=c(21,24),type="o",lwd =2,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1,cex=1.25)
 #points(db_warm_tot$Date[idw]+0.5,db_warm_tot$Abundance[idw],col="black",pch=17,ylim=c(0,max(db_warm_tot$Abundance[idw],na.rm=T)),type="p",lwd =2)
 for (s in 1:length(temp_species)){
 	temp=c()
@@ -168,7 +170,7 @@ for (s in 1:length(temp_species)){
         	temp=c(temp,d,d+0.5)
         	plou=c(plou,db_cold$abundance_cold[db_cold$sp_all == temp_species[s]&db_cold$dates==d],db_warm$abundance_warm[db_warm$sp_all == temp_species[s]&db_warm$dates==d])
 	}
-	points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,23),lty=2,t="o")
+	points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,24),lty=2,t="o",cex=1.25)
 #  points(db_cold$dates[as.character(db_cold$sp_all) == temp_species[s]],log10(db_cold$abundance_cold[db_cold$sp_all==temp_species[s]]),col=listColor[s],bg=listColor[s],pch=21,t="o",lty=2)
 #  points(db_warm$dates[as.character(db_warm$sp_all) == temp_species[s]]+0.5,log10(db_warm$abundance_warm[db_warm$sp_all==temp_species[s]]),col=listColor[s],bg=listColor[s],pch=23)
 }
@@ -201,7 +203,7 @@ for(d in dd){
         plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Calidris"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Calidris"&db_warm_tot$Date==d])
 }
 par(mar=c(3.9,4.8,0.1,0.1))
-plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,xaxt="n",pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
+plot(temp,log10(plou+1),col="black",xlab="",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,xaxt="n",pch=c(21,24),type="o",lwd =2,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1,cex=1.25)
 for (s in 1:length(temp_species)){
         temp=c()
         plou=c()
@@ -209,7 +211,7 @@ for (s in 1:length(temp_species)){
                 temp=c(temp,d,d+0.5)
                 plou=c(plou,db_cold$abundance_cold[db_cold$sp_all == temp_species[s]&db_cold$dates==d],db_warm$abundance_warm[db_warm$sp_all == temp_species[s]&db_warm$dates==d])
         }
-        points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,23),lty=2,t="o")
+        points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,24),lty=2,t="o",cex=1.25)
 }
 #text(c(0,1), "a)",cex = 2)
 mtext("\n (b)",side=3,cex = 1.5, adj = 0,padj=1)
@@ -236,7 +238,7 @@ for(d in dd){
         plou=c(plou,db_cold_tot$Abundance[db_cold_tot$Species=="Waders"&db_cold_tot$Date==d],db_warm_tot$Abundance[db_warm_tot$Species=="Waders"&db_warm_tot$Date==d])
 }
 par(mar=c(3.9,4.75,0.1,0.1))
-plot(temp,log10(plou+1),col="black",xlab="Year",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,pch=c(21,23),type="o",lwd =1,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1)
+plot(temp,log10(plou+1),col="black",xlab="Year",ylab="log10(average abundance)",cex.lab=1.5,cex.axis=1.5,pch=c(21,24),type="o",lwd =2,ylim=c(-0.1,max(log10(plou),na.rm=T)),bg=c("blue","red"),las=1,cex=1.25)
 for (s in 1:length(temp_species)){
         temp=c()
         plou=c()
@@ -244,7 +246,7 @@ for (s in 1:length(temp_species)){
                 temp=c(temp,d,d+0.5)
                 plou=c(plou,db_cold$abundance_cold[db_cold$sp_all == temp_species[s]&db_cold$dates==d],db_warm$abundance_warm[db_warm$sp_all == temp_species[s]&db_warm$dates==d])
         }
-        points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,23),lty=2,t="o")
+        points(temp,log10(plou+1),col=listColor[s],bg=listColor[s],pch=c(21,24),lty=2,t="o",cex=1.25)
 }
 #text(c(0,1), "a)",cex = 2)
 mtext("\n (c)",side=3,cex = 1.5, adj = 0,padj=1)
