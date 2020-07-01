@@ -13,7 +13,7 @@ box_index=T #If box_index is true, draw boxplots for the whole distribution for 
 type_correct="BH" #Was bonferroni before
 amethod_b="iaaft" #Could also be shift or ebisuzaki. Was shift before.
 amethod_w="shift"
-anrands=2 #Number of surrogates we want to test the significance. Up to now (2019/07/03), 100.
+anrands=100 #Number of surrogates we want to test the significance
 biomass=F
 if(biomass){
 end_bio="biomasses"
@@ -251,7 +251,7 @@ for (v in 1:6){
 
         }
 lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
-legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+legend("topleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Dodgerblue2"),pt.cex=2,bty="n",cex=2)
 legend("bottomright",c("Freq"),pch=c(21),pt.bg="black",pt.cex=2,bty="n",cex=2)
 dev.off()
 #system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
@@ -326,7 +326,7 @@ for (v in 1:6){
 
 
 lines(c(0,7.5),c(0.,0.),lty=2,lwd=2)
-legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Dodgerblue2"),pt.cex=2,bty="n",cex=2)
 legend("bottomright",c("Anatini","Calidris"),pch=c(21,22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n",main='Functional groups',cex.main=2,las=1)
@@ -428,7 +428,7 @@ for(v in 1:length(essai_taxo)){
 }
 
 
-color=rep(c("Black","Lightblue","Darkblue"),2)
+color=rep(c("Black","Lightblue","Dodgerblue2"),2)
 #par(mfrow=c(1,2),mar=c(3,4.5,1,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.lab=1.8,cex.axis=1.8,las=1)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=1.8)
@@ -460,7 +460,7 @@ ll=c(essai_taxo[[2]]$obs,essai_taxo[[3]]$obs)
 #lines(2:3,ll,col="black",lwd=2,lty=1)
 #ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
 #lines(6:7,ll,col="black",lwd=2,lty=1)
-legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Darkblue"),pt.cex=2,bty="n",cex=2)
+legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Dodgerblue2"),pt.cex=2,bty="n",cex=2)
 legend("topleft",c("Anatini/Calidris"),pch=21,pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 
 db_warm_all=subset(db_warm,sp_data_frame %in% c("Waders","Ducks")&dates<2016)
@@ -492,7 +492,7 @@ for(v in 1:length(essai_taxo)){
 }
 
 
-color=rep(c("Black","Lightblue","Darkblue"),2)
+color=rep(c("Black","Lightblue","Dodgerblue2"),2)
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="",yaxt="n",las=1)
 axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=2)
 mtext("d)",side=2,line=-35,at=0.49,cex=2,outer=T,las=1)
