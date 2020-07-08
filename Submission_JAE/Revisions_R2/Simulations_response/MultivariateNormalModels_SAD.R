@@ -22,7 +22,7 @@ anrands=0
 amethod="shift"
 type_correct="BH"
 nspecies_list = 40 #Starting out with a random number of species just to check that it works
-nrep=2 #Should be 100
+nrep=1 #Should be 100
 mu_min_coeff=0.1
 mu_max_coeff=0.9
 m=3.26
@@ -30,6 +30,8 @@ c=0.5
 
 alpha=c(15,2,4)
 beta=c(15,4,2)
+#alpha=c(2)
+#beta=c(4)
 type_dist=c("Pair","Quasi-normal","Compensation","Synchrony")
 
 set.seed(42)
@@ -40,7 +42,7 @@ par(mfrow=c(4,2))
 
 ### 1. 10 pairs with -0.8 correlation, unit variance, no correlation outside pairs
 #seq_sp=seq(2,nspecies_list,2)
-
+print('pair')
 
 seq_sp=c(4,40) ###REMOVE
 
@@ -53,6 +55,7 @@ sp=0
 
 for(nspecies in seq_sp){
 sp=sp+1
+print(nspecies)
 #Define mu
 log_mu=rnorm(nspecies,m)
 mu=exp(log_mu)
@@ -62,11 +65,13 @@ for(r in 1:nrep){
 x=matrix(NA,nsamples,nspecies)
 for(t in 1:nsamples){
 #Compute mu_t
-mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*sin(2*pi*t/12)
+mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12+pi)) #pi
 sigma_i=c*mu_t
 
-SigmaPair = matrix(rho,nrow=nspecies,ncol=nspecies)
-diag(SigmaPair)=1
+#SigmaPair = matrix(rho,nrow=nspecies,ncol=nspecies)
+SigmaPair = matrix(c(1,rho,rho,1),2,2,byrow=TRUE)
+
+SigmaPair = bdiag(rep(list(SigmaPair),nspecies/2))
 
 for(i in 1:nspecies){
 	for(j in 1:nspecies){
@@ -77,20 +82,17 @@ for(i in 1:nspecies){
 		}
 	}
 }
-
 IsPosDef = min(Re(eigen(SigmaPair)$values))>0.05
 
 if(!IsPosDef){
-SigmaPair <- as.matrix(nearPD(SigmaPair, corr=T, do2eigen=T,posd.tol=10^(-5))$mat)
+SigmaPair <- as.matrix(nearPD(SigmaPair, corr=F, do2eigen=T,posd.tol=10^(-5))$mat)
           IsPosDef = min(Re(eigen(SigmaPair)$values))>10^(-10) #was 0.05
 }
-
 
 x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
 
 }
 #cor(x)
-
 #mean(cor(x)) #CP These two  are different, am wondering why.
 rhomean_list[r,sp]=meancorr(x)$obs
 ## Why the hell can't I get the right result the first time?
@@ -119,10 +121,14 @@ data_tot=cbind(rep(r,nrow(data_x)),data_x)
 colnames(data_tot)=c("Rep","Time","Species","Abundance")
 if(nspecies==4|nspecies==40){
 write.table(data_tot,paste("MockData_SAD_",nspecies,"sp_pair.csv",sep=""),sep=";",dec=".",row.names=F,append=T)
+tab=cbind(mu,SigmaPair)
+colnames(tab)=c("mu",paste("Sp",1:nspecies))
+write.table(tab,paste("MuSigma_SAD_",nspecies,"sp_pair.csv",sep=""),sep=";",dec=".",row.names=F,append=T)
 }
 } #end loop on nrep
 }#end loop on nspecies_seq
 
+if(1==0){
 par(mar=c(3,5,2.5,1))
 eta_mean=apply(eta_list,2,mean)
 eta_sd=apply(eta_list,2,sd)
@@ -140,12 +146,13 @@ rho_sd=apply(rhomean_list,2,sd)
 rho_min=rho_mean-rho_sd
 rho_max=rho_mean+rho_sd
 #plot( seq_sp,rho_mean,t="o",xlab="",ylab="",pch=16,xaxt="n",ylim=c(-0.85,0.65),main="rhomean")
-plot( seq_sp,rho_mean,t="o",xlab="",ylab="",pch=16,xaxt="n",ylim=c(min(rho_min),max(rho_max)),main=expression(bar(rho)))
+plot(seq_sp,rho_mean,t="o",xlab="",ylab="",pch=16,xaxt="n",ylim=c(min(rho_min),max(rho_max)),main=expression(bar(rho)))
 arrows(seq_sp,rho_min,seq_sp,rho_max,angle=90,length=0.1,code=3)
 abline(h=0.0,col="red")
-
+}#end1==0
 
 #}#end 1==0
+
 ### 2. Modified Beta distributed rho entries, with a skew towards positive (skew towards negative, Beta(2,4) does not work)
 
 rhomean_list=matrix(NA,ncol=length(seq_sp),nrow=nrep)
@@ -153,6 +160,7 @@ eta_list=matrix(NA,ncol=length(seq_sp),nrow=nrep)
 
 
 for(t_sigma in 1:length(alpha)){
+#for(t_sigma in 2:2){
 sp=0
 print(paste('alpha',alpha[t_sigma],"beta",beta[t_sigma]))
 for(nspecies in seq_sp){
@@ -167,22 +175,19 @@ for(r in 1:nrep){
 x=matrix(NA,nsamples,nspecies)
 for(t in 1:nsamples){
 #Compute mu_t
-mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*sin(2*pi*t/12)
+
+mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12+pi)) #+pi so that it decreases at the beginning of the year
+#mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*sin(2*pi*t/12)
 sigma_i=c*mu_t
 
 IsPosDef = FALSE
 iter=0
-
+while(!IsPosDef){
   SigmaPair = matrix(-1+2*rbeta(n=nspecies*nspecies, alpha[t_sigma], beta[t_sigma]),nspecies,nspecies)
-  diag(SigmaPair) = rep(1,nspecies)
 
 for(i in 1:nspecies){
         for(j in 1:nspecies){
-                if(j==i){
-                        SigmaPair[i,j]=1
-                }else{
                         SigmaPair[i,j]=SigmaPair[i,j]*sigma_i[i]*sigma_i[j]
-                }
         }
 }
   SigmaPair[upper.tri(SigmaPair)] = t(SigmaPair)[upper.tri(SigmaPair)]
@@ -191,13 +196,15 @@ for(i in 1:nspecies){
 IsPosDef = min(Re(eigen(SigmaPair)$values))>0.05
 
 if(!IsPosDef){
-SigmaPair <- as.matrix(nearPD(SigmaPair, corr=T, do2eigen=T,posd.tol=10^(-5))$mat)
+try(SigmaPair <- as.matrix(nearPD(SigmaPair, corr=F, do2eigen=T,posd.tol=10^(-5))$mat),silent=T)
           IsPosDef = min(Re(eigen(SigmaPair)$values))>10^(-10) #was 0.05
 }
-
-
+}
+if(t==1&nspecies==4){
+print(type_dist[t_sigma+1])
+print(SigmaPair)
+}
 x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
-
 }
 #cor(x)
 
@@ -224,6 +231,10 @@ data_tot=cbind(rep(r,nrow(data_x)),data_x)
 colnames(data_tot)=c("Rep","Time","Species","Abundance")
 if(nspecies==4|nspecies==40){
 write.table(data_tot,paste("MockData_SAD_",nspecies,"sp_alpha",alpha[t_sigma],"_beta",beta[t_sigma],".csv",sep=""),sep=";",dec=".",row.names=F,append=T)
+
+tab=cbind(mu,SigmaPair)
+colnames(tab)=c("mu",paste("Sp",1:nspecies))
+write.table(tab,paste("MuSigma_SAD_",nspecies,"sp_alpha",alpha[t_sigma],"_beta",beta[t_sigma],".csv",sep=""),sep=";",dec=".",row.names=F,append=T)
 }
 } #end r
 } #end nspecies
@@ -232,6 +243,8 @@ eta_mean=apply(eta_list,2,mean)
 eta_sd=apply(eta_list,2,sd)
 eta_min=eta_mean-eta_sd
 eta_max=eta_mean+eta_sd
+
+if(1==0){
 if(t_sigma==length(alpha)){
 par(mar=c(3,5,2.5,1))
 ax=""
@@ -262,6 +275,7 @@ plot( seq_sp,rho_mean,t="o",xlab=ax,ylab="",pch=16,ylim=c(min(rho_min),max(rho_m
 }
  arrows(seq_sp,rho_min,seq_sp,rho_max,angle=90,length=0.1,code=3)
 abline(h=0.0,col="red")
+}
 }
 
 dev.off()

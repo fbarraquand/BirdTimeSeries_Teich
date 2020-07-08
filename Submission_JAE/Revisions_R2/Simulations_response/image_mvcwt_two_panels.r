@@ -3,7 +3,7 @@
 #### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
 #### 2020/03/23 Changed the color palette to viridis
 
-image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,amain="",...) 
+image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...) 
 {
 	library('viridis')
     z.fun = match.fun(z.fun)
@@ -20,7 +20,7 @@ image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,am
 #            4))
         for (i in 1:nvar) {
             image(x, y, z.fun(z[, , i]), log = "y", col = pal, 
-                axes = FALSE, xlab="",ylab="",main=amain,...)
+                axes = FALSE, xlab="",ylab="",...)
 #		mtext("b)",side=2,line=-2,at=0.975,cex=2,outer=T,las=1)
 #		lines(c(2006,2006),c(0.2,20),lwd=2,col="black") 
             if (i%%2) 

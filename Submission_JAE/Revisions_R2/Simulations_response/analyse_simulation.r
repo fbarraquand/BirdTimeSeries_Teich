@@ -7,17 +7,20 @@
 graphics.off()
 rm(list=ls())
 library('mvcwt')
-source("../../../SCRIPTS/image_mvcwt.r") #Add to change the image function to have a nice Color Bar
+#source("../../../SCRIPTS/image_mvcwt.r") #Add to change the image function to have a nice Color Bar
+source("image_mvcwt_for_colormaps.r") #Add to change the image function to have a nice Color Bar
 library("lubridate")
 library("RColorBrewer")
 
 set.seed(42)
-norm=c(FALSE,TRUE)
+#norm=c(FALSE,TRUE)
+norm=c(TRUE)
 
-end_of_file_seq=c("4sp_pair","40sp_pair","4sp_alpha15_beta15","40sp_alpha15_beta15","4sp_alpha2_beta4","40sp_alpha2_beta4","4sp_alpha4_beta2","40sp_alpha4_beta2")
-explain=c("rho=-0.8","rho=-0.8","quasi-normal","quasi-normal","compensation","compensation","synchrony","synchrony")
+end_of_file_seq=c("4sp_pair","40sp_pair")#,"4sp_alpha15_beta15","40sp_alpha15_beta15","4sp_alpha2_beta4","40sp_alpha2_beta4","4sp_alpha4_beta2","40sp_alpha4_beta2")
+explain=c("rho=-0.8","rho=-0.8")#,"quasi-normal","quasi-normal","compensation","compensation","synchrony","synchrony")
 
 for(e in 1:length(end_of_file_seq)){
+#for(e in 1:1){
 end_of_file=end_of_file_seq[e]
 #############################
 tab_bm=read.table(paste("MockData_SAD_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
@@ -82,11 +85,11 @@ print(Sys.time())
 mm=mvcwt(x,tab_species_tmp,min.scale=0.2,max.scale=10.0)
 
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
-mr = wmr.boot(mm, smoothing = 1,reps=10)
+mr = wmr.boot(mm, smoothing = 1,reps=50)
 
 #png('OUT/Figure3.png',width=800)
-png(paste("wavelet_simu_",end_nor,"_",end_of_file,".png",sep=""),width=800)
-  image_mvcwt(mr,reset.par=F,cex.axis=4,z.fun="Mod",main=explain[e])
+pdf(paste("wavelet_simu_",end_nor,"_",end_of_file,"TESTforcontourlines.pdf",sep=""))
+  image_mvcwt_for_colormaps(mr,reset.par=F,cex.axis=4,z.fun="Mod",main=explain[e])
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
 print(Sys.time())
