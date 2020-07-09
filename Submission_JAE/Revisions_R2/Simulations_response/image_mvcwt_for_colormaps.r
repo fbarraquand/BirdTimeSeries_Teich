@@ -3,7 +3,7 @@
 #### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
 #### CP 2020/07/03 Trying out different colormaps
 
-image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,col.palette="Spectral",inv=F,...) 
+image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,col.palette="Spectral",inv=F,amain="",...) 
 {
     require("viridis")
 	test_col=9 #Should be 11
@@ -41,7 +41,7 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
 #            4))
         for (i in 1:nvar) {
             image(x, y, z.fun(z[, , i]), log = "y", col = pal,#main=col.palette, 
-                axes = FALSE, xlab="",ylab="",...)
+                axes = FALSE, xlab="",ylab="",main=amain,...)
 		print("it's ok here")
 #		mtext("b)",side=2,line=-2,at=0.975,cex=2,outer=T,las=1)
 #		lines(c(2006,2006),c(0.2,20),lwd=2,col="black") 
@@ -98,11 +98,11 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
         mtext("Years", 1, 1, outer = TRUE,cex=2)
         mtext("Scale (years)", 2, 1, outer = TRUE,cex=2)
     })
-#WWW	par(mar=c(2,.5,2,3))
+	par(mar=c(2,.5,2,3))
 	seqi=seq(min(z.fun(x$z[, , 1]),na.rm=T),max(z.fun(x$z[, , 1]),na.rm=T),length.out=1024)
 	image(x=1,y=seqi,matrix(seqi,nrow=1,ncol=1024),col=pal,axes=FALSE,xlab="",ylab="")
 #WWW	image(x=1,y=seqi,matrix(seqi,nrow=1,ncol=1024),col=pal,axes=FALSE,xlab="",ylab="")
-#WWW axis(4,cex.axis=1.8,las=1)
+ axis(4,cex.axis=1.8,las=1)
 #WWW box()
 
     return(invisible(x))

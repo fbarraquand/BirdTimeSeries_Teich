@@ -4,16 +4,21 @@ rm(list=ls())
 graphics.off()
 source("SCRIPTS/test_synchrony_Gross.r")
 library('mvcwt')
-source("SCRIPTS/image_mvcwt_two_panels.r") #Add to change the image function to have a nice Color Bar
+#source("SCRIPTS/image_mvcwt_two_panels.r") #Add to change the image function to have a nice Color Bar
+source("Submission_JAE/Revisions_R2/Simulations_response/image_mvcwt_for_colormaps.r")
 library("RColorBrewer")
 library("lubridate")
 
 set.seed(42)
 
-thresh=0.1
 type_correct="BH" #was Bonferroni before
-anrands=100
-normalize=T
+anrands=1000
+end_bio="abundances"
+normalize_seq=c(T,F)
+doyouload=F
+
+for(normalize in normalize_seq){
+
 if(normalize){
 end_nor="scaled"
 }else{
@@ -101,25 +106,96 @@ print(Sys.time())
 mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0)
 
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
-mr = wmr.boot(mm, smoothing = 1,reps=2)
+if(!doyouload){
+
+
+mr = wmr.boot(mm, smoothing = 1,reps=anrands)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
+
+tab_xy=cbind(mr$x,mr$y)
+colnames(tab_xy)=c("x","y")
+write.table(tab_xy,paste("OUT/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+
+tab_z=mr$z
+write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+
+tab_z.boot=mr$z.boot
+write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+
+mr_object=mr
+
+
 print(Sys.time())
+}else{
+
+mr_object = wmr.boot(mm, smoothing = 1,reps=2)
+
+tmp_xy=read.csv(paste("OUT/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
+mr_object$x=tmp_xy[,"x"]
+mr_object$y=tmp_xy[,"y"]
+
+tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_array_z=array(0,dim=c(dim(tmp_z),1))
+tmp_array_z[,,1]=tmp_z
+mr_object$z=tmp_array_z
+
+tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
+tmp_array_z.boot[,,1]=tmp_z.boot
+mr_object$z.boot=tmp_array_z.boot
+}
 
 #png('OUT/Figure3.png',width=800)
-pdf(paste("Submission_JAE/Revisions_R2/wavelet_wader_waterfowl.pdf",sep=""),height=15,width=12)
+pdf(paste("Submission_JAE/Revisions_R2/wavelet_wader_waterfowl",end_nor,".pdf",sep=""),height=15,width=12)
 layout(matrix(c(1,2,3,4),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 par(mar=c(4,5,2,3))
-  image_mvcwt_two_panels(mr,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader")
+  image_mvcwt_for_colormaps(mr,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader")
 
 print("Canards")
 print(Sys.time())
 mm=mvcwt(x,tab_ducks,min.scale=0.2,max.scale=10.0)
-mr = wmr.boot(mm, smoothing = 1,reps=2)
+
+if(!doyouload){
+mr = wmr.boot(mm, smoothing = 1,reps=anrands)
 print(Sys.time())
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
+
+tab_xy=cbind(mr$x,mr$y)
+colnames(tab_xy)=c("x","y")
+write.table(tab_xy,paste("OUT/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+
+tab_z=mr$z
+write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+
+tab_z.boot=mr$z.boot
+write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+
+mr_object=mr
+
+
+}else{
+
+mr_object = wmr.boot(mm, smoothing = 1,reps=2)
+
+tmp_xy=read.csv(paste("OUT/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
+mr_object$x=tmp_xy[,"x"]
+mr_object$y=tmp_xy[,"y"]
+  
+tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_array_z=array(0,dim=c(dim(tmp_z),1))
+tmp_array_z[,,1]=tmp_z
+mr_object$z=tmp_array_z
+
+tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
+tmp_array_z.boot[,,1]=tmp_z.boot
+mr_object$z.boot=tmp_array_z.boot
+}
+
 ###
 par(mar=c(4,5,2,3))
 ###
-image_mvcwt_two_panels(mr,reset.par=F,cex.axis=4,z.fun="Mod",amain="Waterfowl")
+image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Waterfowl")
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
 dev.off()
+}
