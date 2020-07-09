@@ -100,7 +100,7 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
     })
 #WWW	par(mar=c(2,.5,2,3))
 	seqi=seq(min(z.fun(x$z[, , 1]),na.rm=T),max(z.fun(x$z[, , 1]),na.rm=T),length.out=1024)
-	#image(x=1,y=seqi,matrix(seqi,nrow=1,ncol=1024),col=par,axes=FALSE,xlab="",ylab="")
+	image(x=1,y=seqi,matrix(seqi,nrow=1,ncol=1024),col=pal,axes=FALSE,xlab="",ylab="")
 #WWW	image(x=1,y=seqi,matrix(seqi,nrow=1,ncol=1024),col=pal,axes=FALSE,xlab="",ylab="")
 #WWW axis(4,cex.axis=1.8,las=1)
 #WWW box()
