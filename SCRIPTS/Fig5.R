@@ -116,7 +116,7 @@ for(v in 1:length(essai_taxo)){
         }
         mat_save[v,paste("rands",anrands+1,sep="")]=essai_taxo[[v]]$rands[anrands+1]
 }
-#write.table(mat_save,paste("OUT/tab_data_frame_Gross_triad_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
+write.table(mat_save,paste("OUT/tab_data_frame_Gross_triad_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 
 }
 
@@ -149,13 +149,9 @@ axis(1,at=c(2,6),lab=c("Cold","Warm"),cex.axis=1.5)
 for (v in 1:6){
         obs=essai_taxo[[v]]$obs
         print(obs)
-#        ic=2*sd(essai_taxo[[v]]$rands[1:100])/sqrt(100)
         p_s=essai_taxo[[v]]$pval
         x=v+(v>3)
-#        yHigh=as.numeric(obs)+as.numeric(ic)
-#        yLow=as.numeric(obs)-as.numeric(ic)
         points(x,obs,pch=21,col=color[v],bg=color[v],cex=2)
-#        arrows(x,yHigh,x,yLow,angle=90,length=0.1,code=3,col=color[v],lwd=2)
         boxplot(essai_taxo[[v]]$rands[1:100],at=x,add=T,boxwex=0.25,range=0,yaxt="n",xaxt="n")
         if (p_s<thresh){
                 points(x,as.numeric(obs),pch='*',col="red",cex=2)
@@ -163,10 +159,6 @@ for (v in 1:6){
 
         }
 lines(c(0,7.5),c(0,0),lty=2,lwd=2)
-#ll=c(essai_taxo[[2]]$obs,essai_taxo[[3]]$obs)
-#lines(2:3,ll,col="black",lwd=2,lty=1)
-#ll=c(essai_taxo[[5]]$obs,essai_taxo[[6]]$obs)
-#lines(6:7,ll,col="black",lwd=2,lty=1)
 
 legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Lightblue","Dodgerblue2"),pt.cex=2,bty="n",cex=1.5)
 
@@ -185,11 +177,6 @@ db_ap=subset(db_tmp,dates>=as.Date("2007-01-01"))
 db_tmp$dates=as.numeric(db_tmp$dates)
 db_av$dates=as.numeric(db_av$dates)
 db_ap$dates=as.numeric(db_ap$dates)
-
-#synch_all=community_sync_Gross(db_tmp,nrands=100) #-0.09735, p=0.74
-#synch_av=community_sync_Gross(db_av,nrands=100) #-0.2028886, p=0.34
-#synch_ap=community_sync_Gross(db_ap,nrands=100) #0.2758426, p=0.11
-
 
 dates=unique(db$Date)
 tab=matrix(0,nrow=length(dates),ncol=2)
@@ -227,13 +214,13 @@ mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
 tab_xy=cbind(mr$x,mr$y)
 colnames(tab_xy)=c("x","y")
-#write.table(tab_xy,paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+write.table(tab_xy,paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
 tab_z=mr$z
-#write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 tab_z.boot=mr$z.boot
-#write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 mr_object=mr
 
