@@ -104,7 +104,7 @@ x=(dates-dates[1])/365.25
 #This function computes the Morlet wavelet transform for each bird species separately
 print("Limicoles")
 print(Sys.time())
-mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2))
+mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
 
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
 if(!doyouload){

@@ -214,7 +214,7 @@ year_min=1981
 #This function computes the Morlet wavelet transform for each bird species separately
 print("Keitt index")
 print(Sys.time())
-mm=mvcwt(x,tab_freq,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2))
+mm=mvcwt(x,tab_freq,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
 print(paste(Sys.time(),"after mvcwt"))
 
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
