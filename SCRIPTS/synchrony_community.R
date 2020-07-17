@@ -82,7 +82,7 @@ if(normalize){
 
 if(doyouload){
 
-	mat_save=read.table(paste("OUT/tab_data_frame_Gross_community_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
+	mat_save=read.table(paste("OUT/ResultsAnalysisWavelets/tab_data_frame_Gross_community_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
 	list_freq=list()
 	for(v in 1:nrow(mat_save)){
 		list_freq[[v]]=list(obs=as.numeric(mat_save[v,"obs"]),pval=as.numeric(mat_save[v,"pval"]),alternative=as.character(mat_save[v,"alternative"]),rands=as.numeric(c(mat_save[v,grep("rands",colnames(mat_save))])))
@@ -132,11 +132,11 @@ essai_taxo=list_freq
 
 upsi=0.02
 color=rep(c("Black","Lightblue","Dodgerblue2"),2)
-filename_pdf=paste("synchrony_indices_frequent_",end_bio,"_",end_nor,"_with",anrands,"rand.pdf",sep="")
-pdf(paste("Submission_JAE/Revisions_R2/",filename_pdf,sep=""),width=11,height=7,family="Times")
+filename_pdf=paste("synchrony_indices_frequent_",end_bio,"_",end_nor,"_with",anrands,"rand_nocorrection_smallgrid.pdf",sep="")
+pdf(paste("Submission_JAE/Revisions_R2/",filename_pdf,sep=""),width=9,height=9)#,family="Times")
 
 layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,2))
-par(mar=c(4,5,2,3))
+par(mar=c(3,5,2,3))
 
 plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab=expression(eta),cex.lab=1.5,cex.axis=1.5,las=1)
 mtext("a)",side=2,line=-2,at=0.96,cex=1.5,outer=T,las=1)
@@ -214,7 +214,7 @@ year_min=1981
 #This function computes the Morlet wavelet transform for each bird species separately
 print("Keitt index")
 print(Sys.time())
-mm=mvcwt(x,tab_freq,min.scale=0.2,max.scale=10.0)
+mm=mvcwt(x,tab_freq,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2))
 print(paste(Sys.time(),"after mvcwt"))
 
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
@@ -242,23 +242,25 @@ mr_object=mr
 
 mr_object = wmr.boot(mm, smoothing = 1,reps=2)
 
-tmp_xy=read.csv(paste("OUT/tab_xy_mr_community",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
+tmp_xy=read.csv(paste("OUT/ResultsAnalysisWavelets/tab_xy_mr_community",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
 mr_object$x=tmp_xy[,"x"]
 mr_object$y=tmp_xy[,"y"]
 
-tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_community",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_z_mr_community",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
 tmp_array_z[,,1]=tmp_z
 mr_object$z=tmp_array_z
 
-tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_community",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z.boot=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_zboot_mr_community",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
 tmp_array_z.boot[,,1]=tmp_z.boot
 mr_object$z.boot=tmp_array_z.boot
 }
 
 print(paste(Sys.time(),"before image"))
-image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod")
+par(mar=c(3,5,2,3))
+image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",adj="None")
+mtext("b)",side=2,line=-2,at=0.48,cex=1.5,outer=T,las=1)
 print(paste(Sys.time(),"after image"))
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management

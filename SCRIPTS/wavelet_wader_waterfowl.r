@@ -2,10 +2,11 @@
 
 rm(list=ls())
 graphics.off()
-source("SCRIPTS/test_synchrony_Gross.r")
+#source("SCRIPTS/test_synchrony_Gross.r")
 library('mvcwt')
 #source("SCRIPTS/image_mvcwt_two_panels.r") #Add to change the image function to have a nice Color Bar
 source("Submission_JAE/Revisions_R2/Simulations_response/image_mvcwt_for_colormaps.r")
+source("SCRIPTS/image_mvcwt_for_pvalues.r")
 library("RColorBrewer")
 library("lubridate")
 
@@ -103,7 +104,7 @@ x=(dates-dates[1])/365.25
 #This function computes the Morlet wavelet transform for each bird species separately
 print("Limicoles")
 print(Sys.time())
-mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0)
+mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2))
 
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
 if(!doyouload){
@@ -130,30 +131,32 @@ print(Sys.time())
 
 mr_object = wmr.boot(mm, smoothing = 1,reps=2)
 
-tmp_xy=read.csv(paste("OUT/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
+tmp_xy=read.csv(paste("OUT/ResultsAnalysisWavelets/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
 mr_object$x=tmp_xy[,"x"]
 mr_object$y=tmp_xy[,"y"]
 
-tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
 tmp_array_z[,,1]=tmp_z
 mr_object$z=tmp_array_z
 
-tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z.boot=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
 tmp_array_z.boot[,,1]=tmp_z.boot
 mr_object$z.boot=tmp_array_z.boot
 }
 
 #png('OUT/Figure3.png',width=800)
-pdf(paste("Submission_JAE/Revisions_R2/wavelet_wader_waterfowl",end_nor,".pdf",sep=""),height=15,width=12)
+pdf(paste("Submission_JAE/Revisions_R2/wavelet_wader_waterfowl",end_nor,"nocorrection_smallergrid.pdf",sep=""),height=15,width=12)
 layout(matrix(c(1,2,3,4),nrow=2,ncol=2,byrow=T),widths=c(10,2))
-par(mar=c(4,5,2,3))
-  image_mvcwt_for_colormaps(mr,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader")
+par(mar=c(4,5,3,3))
+  image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader",adj="None")
+#  image_mvcwt_for_pvalues(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader",adj="None")
+mtext("a)",side=2,line=-2,at=0.98,cex=1.5,outer=T,las=1)
 
 print("Canards")
 print(Sys.time())
-mm=mvcwt(x,tab_ducks,min.scale=0.2,max.scale=10.0)
+mm=mvcwt(x,tab_ducks,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2))
 
 if(!doyouload){
 mr = wmr.boot(mm, smoothing = 1,reps=anrands)
@@ -177,25 +180,27 @@ mr_object=mr
 
 mr_object = wmr.boot(mm, smoothing = 1,reps=2)
 
-tmp_xy=read.csv(paste("OUT/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
+tmp_xy=read.csv(paste("OUT/ResultsAnalysisWavelets/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
 mr_object$x=tmp_xy[,"x"]
 mr_object$y=tmp_xy[,"y"]
   
-tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_z_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
 tmp_array_z[,,1]=tmp_z
 mr_object$z=tmp_array_z
 
-tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z.boot=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_zboot_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
 tmp_array_z.boot[,,1]=tmp_z.boot
 mr_object$z.boot=tmp_array_z.boot
 }
 
 ###
-par(mar=c(4,5,2,3))
+par(mar=c(4,5,3,3))
 ###
-image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Waterfowl")
+mtext("b)",side=2,line=-2,at=0.49,cex=1.5,outer=T,las=1)
+image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Waterfowl",adj="None")
+#image_mvcwt_for_pvalues(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Waterfowl",adj="None")
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
 dev.off()
 }
