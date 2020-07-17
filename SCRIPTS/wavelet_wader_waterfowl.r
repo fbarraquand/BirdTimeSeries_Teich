@@ -156,7 +156,7 @@ mtext("a)",side=2,line=-2,at=0.98,cex=1.5,outer=T,las=1)
 
 print("Canards")
 print(Sys.time())
-mm=mvcwt(x,tab_ducks,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2))
+mm=mvcwt(x,tab_ducks,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
 
 if(!doyouload){
 mr = wmr.boot(mm, smoothing = 1,reps=anrands)
