@@ -36,7 +36,6 @@ end_nor="scaled"
 end_nor="NOTscaled"
 }
 
-
 # Grand Cormoran Phalacrocorax carbo
 # Héron cendré Ardea cinerea
 # Aigrette garzette Egretta garzetta
@@ -125,7 +124,6 @@ print(Sys.time())
 
 #if(1==0){ ##remove that after
 #Plot everything
-essai_taxo=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 mat=rep(NA,length(essai_taxo))
 for(v in 1:length(essai_taxo)){
         mat[v]=essai_taxo[[v]]$pval
@@ -137,11 +135,11 @@ for(v in 1:length(essai_taxo)){
 
 
 color=rep(c("Black","Lightblue","Dodgerblue2"),2)
-pdf(paste("Submission_JAE/Revisions_R2/triad_synchrony_2panels_",end_bio,"_",end_nor,"_",end_log,"_test_with",anrands,"rand.pdf",sep=""),width=11,height=7) 
+pdf(paste("Submission_JAE/Revisions_R2/triad_synchrony_2panels_",end_bio,"_",end_nor,"_",end_log,"_test_with",anrands,"rand_nocorrection_smallgrid_IAAFT.pdf",sep=""),width=9,height=9) 
 layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 
 #par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
-par(mar=c(4,5,2,3))
+par(mar=c(3,5,2,3))
 
 plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab=expression(eta),cex.lab=1.5,cex.axis=1.5,las=1)
 mtext("a)",side=2,line=-2,at=0.96,cex=1.5,outer=T,las=1)
@@ -152,7 +150,7 @@ for (v in 1:6){
         p_s=essai_taxo[[v]]$pval
         x=v+(v>3)
         points(x,obs,pch=21,col=color[v],bg=color[v],cex=2)
-        boxplot(essai_taxo[[v]]$rands[1:100],at=x,add=T,boxwex=0.25,range=0,yaxt="n",xaxt="n")
+        boxplot(essai_taxo[[v]]$rands[1:anrands],at=x,add=T,boxwex=0.25,range=0,yaxt="n",xaxt="n")
         if (p_s<thresh){
                 points(x,as.numeric(obs),pch='*',col="red",cex=2)
                 }
@@ -164,7 +162,6 @@ legend("bottomleft",c("All","Pre-2006","Post-2006"),pch=NA,fill=c("black","Light
 
 
 ############################################ WAVELETS ########################################
-
 
 db=read.csv(paste("IN/summed_",end_bio,"_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
 db$Date=as.Date(db$Date)
@@ -203,47 +200,72 @@ if(normalize){
 x=(dates-dates[1])/365.25
 year_min=1981
 #This function computes the Morlet wavelet transform for each bird species separately
-print("Before Gross")
+print("Before wavelet")
 print(Sys.time())
-mm=mvcwt(x,tab,min.scale=0.2,max.scale=10.0)
+mm=mvcwt(x,tab,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
 
 if(!doyouload){
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
-mr = wmr.boot(mm, smoothing = 1,reps=anrands)
-mr$x=mr$x+year_min #Change the dates to be "human-readable"
+ref_wmr=wmr(mm)
+ref_wmr$x=ref_wmr$x+year_min #Change the dates to be "human-readable"
+ref_val=ref_wmr$z[,,1]
 
-tab_xy=cbind(mr$x,mr$y)
-colnames(tab_xy)=c("x","y")
-write.table(tab_xy,paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
-
-tab_z=mr$z
-write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
-
-tab_z.boot=mr$z.boot
-write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
-
-mr_object=mr
-
-}else{
-mr_object = wmr.boot(mm, smoothing = 1,reps=2)
-
-tmp_xy=read.csv(paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=T,sep=";",dec=".")
-mr_object$x=tmp_xy[,"x"]
-mr_object$y=tmp_xy[,"y"]
-
-tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
-tmp_array_z=array(0,dim=c(dim(tmp_z),1))
-tmp_array_z[,,1]=tmp_z
-mr_object$z=tmp_array_z
-
-tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),header=F,sep=";",dec="."))
-tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
-tmp_array_z.boot[,,1]=tmp_z.boot
-mr_object$z.boot=tmp_array_z.boot
+tab_values_iaaft=array(NA,dim=c(length(mm$x),length(mm$y),anrands+1))
+tab_values_iaaft[,,anrands+1]=ref_val
+prog.bar = txtProgressBar(min = 0, max = anrands,style = 3)
+for(i in 1:anrands){
+        setTxtProgressBar(prog.bar, i)
+        tab_tmp=tab
+        tab_tmp[,"Cormorant"]=iaaft_surrogate(tab[,'Cormorant'])
+        tab_tmp[,"HeronEgret"]=iaaft_surrogate(tab[,'HeronEgret'])
+        mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
+        wmr_tmp=wmr(mmtmp)
+        tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
-par(mar=c(4,5,2,3))
-image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod")
+tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
+for(i in 1:length(mm$x)){
+        for(j in 1:length(mm$y)){
+                #tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(nrep+1)
+                tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
+                if(tab_pval[i,j,1]>1){stop()}
+
+        }
+}
+
+tab_xy=cbind(ref_wmr$x,ref_wmr$y)
+colnames(tab_xy)=c("x","y")
+write.table(tab_xy,paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+
+tab_z=ref_wmr$z
+write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+
+tab_z.boot=ref_wmr$z.boot
+write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+
+
+}else{
+ref_wmr = wmr(mm)
+
+tmp_xy=read.csv(paste("OUT/ResultsAnalysisWavelets/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
+ref_wmr$x=tmp_xy[,"x"]
+ref_wmr$y=tmp_xy[,"y"]
+
+tmp_z=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_array_z=array(0,dim=c(dim(tmp_z),1))
+tmp_array_z[,,1]=tmp_z
+ref_wmr$z=tmp_array_z
+
+tmp_z.boot=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
+tmp_array_z.boot[,,1]=tmp_z.boot
+ref_wmr$z.boot=tmp_array_z.boot
+
+}
+
+par(mar=c(3,5,2,3))
+image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None")
+mtext("b)",side=2,line=-2,at=0.48,cex=1.5,outer=T,las=1)
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
 print("After wavelet")

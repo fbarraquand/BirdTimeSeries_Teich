@@ -3,7 +3,7 @@
 #### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
 #### CP 2020/07/03 Trying out different colormaps
 
-image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,col.palette="Spectral",inv=F,amain="",adj="BH",...) 
+image_mvcwt_with_iaaft=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,col.palette="Spectral",inv=F,amain="",adj="BH",...) 
 {
     require("viridis")
 	test_col=9 #Should be 11
@@ -39,36 +39,7 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
                 axis(2,cex.axis=1.5,las=1)
             else axis(4) #### NOW, CONTOURS FOR PVALUES
             if (exists("z.boot") && !is.null(z.boot)) {
-
-
-#################THIS WAS THE CODE FOR LAST REVISION########
-
-#	                z.boot = 1 - abs(1 - 2 * z.boot) #Compute the p-values using the values of Pr(X>=x) in zboot
-#                zb = p.adjust(as.vector(z.boot), method = "BH") #Adjust them with BH
-#                dim(zb) = dim(z.boot)
-#                contour(x, y, zb[, , i], levels = 0.1, lwd = 0.5,lty=1, #Contour at level=0.1 ; all values for x high and low are showed with black lines
-#                  add = TRUE, drawlabels = FALSE)
-
-#################THIS WAS THE CODE BEFORE CORRECTIONS TODAY (padjust, pval)
-#		z.boot_tmp=1-2*z.boot #This temporary file will be used to check whether x values are at the lower or higher end of the distribution. If Pr(X>=x) > 0.5 (meaning that x is at the higher end of the distribution), then z.boot_tmp < 0  and we will want to show this value with a red line
-
-#		z.boot_pos=array(NA,dim(z.boot)) #Contains p-values for which z.boot_tmp>0, i.e. Pr(X<=x) < 0.5 (i.e., also, Pr(X<=x) < Pr(X>=x)); small value of x
-#		z.boot_neg=array(NA,dim(z.boot)) #P-Values for which z.boot_tmp<0, i.e. high values of x
-#		z.boot_pos[which(z.boot_tmp>0,arr.ind=T)]=1-abs(1-2*z.boot[which(z.boot_tmp>0,arr.ind=T)]) #We keep the same formulation as before
-#		z.boot_neg[which(z.boot_tmp<0,arr.ind=T)]=1-abs(1-2*z.boot[which(z.boot_tmp<0,arr.ind=T)])
-
-#                zb_pos = p.adjust(as.vector(z.boot_pos), method = "BH") #AND NOW, we adjust. Which is completely wrong, because all info are not present in z.boot_pos)
-#                dim(zb_pos) = dim(z.boot_pos)
-#                contour(x, y, zb_pos[, , i], levels = 0.05, lwd = 1.5,lty=1,  # Draw contours. Note that I was using the level = 0.05, it should have been 0.1
-#                  add = TRUE, drawlabels = FALSE,col="darkblue")
-#Same thing for high values of x
-#                zb_neg = p.adjust(as.vector(z.boot_neg), method = "BH")
-#                dim(zb_neg) = dim(z.boot_neg)
-#                contour(x, y, zb_neg[, , i], levels = 0.05, lwd = 1.5,lty=1, 
- #                 add = TRUE, drawlabels = FALSE,col="red")
-
-
-#################CODE AS ITS NOW
+		#tab_= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(nrep+1)
                 z.boot_tmp = 1 - abs(1 - 2 * z.boot) #First compute all p-values
 		if(adj=="BH"){
 			zb = p.adjust(as.vector(z.boot_tmp), method = "BH") #Adjust all p-values
@@ -76,8 +47,8 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
 			zb = p.adjust(as.vector(z.boot_tmp), method = "BY") #Adjust all p-values
 		}else if (adj=="None"){
 			zb=z.boot_tmp
-		}
-                dim(zb) = dim(z.boot_tmp)
+                }
+		dim(zb) = dim(z.boot)
 	
 		pval=z.boot #Now, keep Pr(X<=x)
 		oneminuspval=1-z.boot #Pr(X>x)
@@ -90,10 +61,6 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
                 contour(x, y, zb_big[, , i], levels = 0.1, lwd = 1.5,lty=1, 
                   add = TRUE, drawlabels = FALSE,col="red")
 
-
-
-#                contour(x, y, zb[, , i], levels = c(0.1), lwd = 1.5,lty=1,  ##This line is just uncommented if I want to check the contours obtained the "old-fashioned" way
-#                  add = TRUE, drawlabels = F,col=c("black"))
             }
             if (is.finite(bound)) {
                 lines(min(x) + bound * y, y, lty = 2, lwd = 4, 
