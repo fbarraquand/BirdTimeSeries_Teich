@@ -4,7 +4,7 @@
 
 rm(list=ls())
 graphics.off()
-#source("SCRIPTS/test_synchrony_Gross.r")
+source("SCRIPTS/test_synchrony_Gross.r")
 library('mvcwt')
 #source("SCRIPTS/image_mvcwt_two_panels.r") #Add to change the image function to have a nice Color Bar
 source("Submission_JAE/Revisions_R2/Simulations_response/image_mvcwt_for_colormaps.r")
@@ -107,7 +107,13 @@ x=(dates-dates[1])/365.25
 #This function computes the Morlet wavelet transform for each bird species separately
 print("Limicoles")
 print(Sys.time())
-mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
+#mm=mvcwt(x,tab_limicoles,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
+
+seq_x=seq(1,365.25*35+3*30.5,length.out=423)/365.25
+
+mm=mvcwt(x,tab_limicoles,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
+
+
 year_min=1981
 
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
@@ -124,9 +130,10 @@ for(i in 1:anrands){
         setTxtProgressBar(prog.bar, i)
         tab_tmp=tab_limicoles
 	for(s in limicoles){
-        tab_tmp[,s]=scale(tab_limicoles[,s])
+        tab_tmp[,s]=iaaft_surrogate(tab_limicoles[,s])
 	}
-        mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
+        #mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
+	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
         wmr_tmp=wmr(mmtmp)
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
@@ -134,7 +141,8 @@ for(i in 1:anrands){
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
+                #tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
+                tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
                 if(tab_pval[i,j,1]>1){stop()}
 
         }
@@ -142,7 +150,14 @@ for(i in 1:length(mm$x)){
 ref_wmr_wader$z.boot=tab_pval
 
 
-tab_xy=cbind(ref_wmr_wader$x,ref_wmr_wader$y)
+if(length(ref_wmr_wader$x)>length(ref_wmr_wader$y)){
+        yy=c(ref_wmr_wader$y,rep(NA,length(ref_wmr_wader$x)-length(ref_wmr_wader$y)))
+        xx=ref_wmr_wader$x
+}else{
+        xx=c(ref_wmr_wader$x,rep(NA,length(ref_wmr_wader$y)-length(ref_wmr_wader$x)))
+        yy=ref_wmr_wader$y
+}
+tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
 write.table(tab_xy,paste("OUT/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
@@ -156,16 +171,16 @@ write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_waders",end_bio,"
 
 ref_wmr_wader = wmr(mm)
 
-tmp_xy=read.csv(paste("OUT/ResultsAnalysisWavelets/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
-ref_wmr_wader$x=tmp_xy[,"x"]
-ref_wmr_wader$y=tmp_xy[,"y"]
+tmp_xy=read.csv(paste("OUT/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
+ref_wmr_wader$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
+ref_wmr_wader$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
 
-tmp_z=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
 tmp_array_z[,,1]=tmp_z
 ref_wmr_wader$z=tmp_array_z
 
-tmp_z.boot=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
 tmp_array_z.boot[,,1]=tmp_z.boot
 ref_wmr_wader$z.boot=tmp_array_z.boot
@@ -173,12 +188,15 @@ ref_wmr_wader$z.boot=tmp_array_z.boot
 
 print("Canards")
 print(Sys.time())
-mm=mvcwt(x,tab_ducks,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
+#mm=mvcwt(x,tab_ducks,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
+seq_x=seq(1,365.25*35+3*30.5,length.out=423)/365.25
+
+mm=mvcwt(x,tab_ducks,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
 
 if(!doyouload){
 ref_wmr_waterfowl=wmr(mm)
 ref_val=ref_wmr_waterfowl$z[,,1]
-
+ref_wmr_waterfowl$x=ref_wmr_waterfowl$x+year_min #Change the dates to be "human-readable"
 
 tab_values_iaaft=array(NA,dim=c(length(mm$x),length(mm$y),anrands+1))
 tab_values_iaaft[,,anrands+1]=ref_val
@@ -187,9 +205,10 @@ for(i in 1:anrands){
         setTxtProgressBar(prog.bar, i)
         tab_tmp=tab_ducks
 	for(s in ducks){
-        tab_tmp[,s]=scale(tab_ducks[,s])
+        tab_tmp[,s]=iaaft_surrogate(tab_ducks[,s])
 	}
-        mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
+        #mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
+	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
         wmr_tmp=wmr(mmtmp)
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
@@ -197,15 +216,23 @@ for(i in 1:anrands){
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
+                tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
                 if(tab_pval[i,j,1]>1){stop()}
 
         }
 }
-ref_wmr$z.boot=tab_pval
-ref_wmr$x=mr$x+year_min #Change the dates to be "human-readable"
+ref_wmr_waterfowl$z.boot=tab_pval
+ref_wmr_waterfowl$x=ref_wmr_waterfowl$x+year_min #Change the dates to be "human-readable"
 
-tab_xy=cbind(ref_wmr_waterfowl$x,ref_wmr_waterfowl$y)
+if(length(ref_wmr_waterfowl$x)>length(ref_wmr_waterfowl$y)){
+        yy=c(ref_wmr_waterfowl$y,rep(NA,length(ref_wmr_waterfowl$x)-length(ref_wmr_waterfowl$y)))
+        xx=ref_wmr_waterfowl$x
+}else{
+        xx=c(ref_wmr_waterfowl$x,rep(NA,length(ref_wmr_waterfowl$y)-length(ref_wmr_waterfowl$x)))
+        yy=ref_wmr_waterfowl$y
+}
+
+tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
 write.table(tab_xy,paste("OUT/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
@@ -218,11 +245,11 @@ write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_waterfowl",end_bi
 
 }else{
 
-ref_wmr = wmr(mm)
+ref_wmr_waterfowl = wmr(mm)
 
 tmp_xy=read.csv(paste("OUT/ResultsAnalysisWavelets/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
-ref_wmr_waterfowl$x=tmp_xy[,"x"]
-ref_mwr_waterfowl$y=tmp_xy[,"y"]
+ref_wmr_waterfowl$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
+ref_wmr_waterfowl$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
 
 tmp_z=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_z_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
@@ -238,7 +265,7 @@ ref_wmr_waterfowl$z.boot=tmp_array_z.boot
 pdf(paste("Submission_JAE/Revisions_R2/wavelet_wader_waterfowl",end_nor,"nocorrection_smallergrid_IAAFT.pdf",sep=""),height=15,width=12)
 layout(matrix(c(1,2,3,4),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 par(mar=c(4,5,3,3))
-  image_mvcwt_for_colormaps(ref_wmr_wwader,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader",adj="None")
+  image_mvcwt_for_colormaps(ref_wmr_wader,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader",adj="None")
 #  image_mvcwt_for_pvalues(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader",adj="None")
 mtext("a)",side=2,line=-2,at=0.98,cex=1.5,outer=T,las=1)
 par(mar=c(4,5,3,3))

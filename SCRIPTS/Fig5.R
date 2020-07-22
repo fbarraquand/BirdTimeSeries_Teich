@@ -19,7 +19,8 @@ type_correct="BH" #was Bonferroni before
 log_b=F
 amethod="iaaft"
 anrands=1000
-normalize_seq=c(T,F)
+#normalize_seq=c(T,F)
+normalize_seq=c(T)
 doyouload=F
 
 biomass=F
@@ -202,7 +203,12 @@ year_min=1981
 #This function computes the Morlet wavelet transform for each bird species separately
 print("Before wavelet")
 print(Sys.time())
-mm=mvcwt(x,tab,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
+#mm=mvcwt(x,tab,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
+
+#TRYING A DATE FOR EVERY MONTH
+seq_x=seq(1,365.25*35+3*30.5,length.out=423)/365.25
+
+mm=mvcwt(x,tab,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
 
 if(!doyouload){
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
@@ -218,7 +224,8 @@ for(i in 1:anrands){
         tab_tmp=tab
         tab_tmp[,"Cormorant"]=iaaft_surrogate(tab[,'Cormorant'])
         tab_tmp[,"HeronEgret"]=iaaft_surrogate(tab[,'HeronEgret'])
-        mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
+        #mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
+	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
         wmr_tmp=wmr(mmtmp)
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
@@ -228,12 +235,22 @@ for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
                 #tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(nrep+1)
                 tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
-                if(tab_pval[i,j,1]>1){stop()}
+#                if(tab_pval[i,j,1]>1){stop()}
 
         }
 }
 
-tab_xy=cbind(ref_wmr$x,ref_wmr$y)
+
+ref_wmr$z.boot=tab_pval
+
+if(length(ref_wmr$x)>length(ref_wmr$y)){
+        yy=c(ref_wmr$y,rep(NA,length(ref_wmr$x)-length(ref_wmr$y)))
+        xx=ref_wmr$x
+}else{
+        xx=c(ref_wmr$x,rep(NA,length(ref_wmr$y)-length(ref_wmr$x)))
+        yy=ref_wmr$y
+}
+tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
 write.table(tab_xy,paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
@@ -247,16 +264,16 @@ write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_triad",end_bio,"_
 }else{
 ref_wmr = wmr(mm)
 
-tmp_xy=read.csv(paste("OUT/ResultsAnalysisWavelets/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
-ref_wmr$x=tmp_xy[,"x"]
-ref_wmr$y=tmp_xy[,"y"]
+tmp_xy=read.csv(paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
+ref_wmr$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
+ref_wmr$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
 
-tmp_z=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_z=as.matrix(read.csv(paste("OUT/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
 tmp_array_z[,,1]=tmp_z
 ref_wmr$z=tmp_array_z
 
-tmp_z.boot=as.matrix(read.csv(paste("OUT/ResultsAnalysisWavelets/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_z.boot=as.matrix(read.csv(paste("OUT/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
 tmp_array_z.boot[,,1]=tmp_z.boot
 ref_wmr$z.boot=tmp_array_z.boot
