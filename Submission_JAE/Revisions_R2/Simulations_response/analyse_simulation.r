@@ -13,11 +13,12 @@ library("lubridate")
 library("RColorBrewer")
 
 set.seed(42)
-#norm=c(FALSE,TRUE)
-norm=c(TRUE)
+norm=c(FALSE,TRUE)
 
-end_of_file_seq=c("4sp_pair","40sp_pair")#,"4sp_alpha15_beta15","40sp_alpha15_beta15","4sp_alpha2_beta4","40sp_alpha2_beta4","4sp_alpha4_beta2","40sp_alpha4_beta2")
-explain=c("rho=-0.8","rho=-0.8")#,"quasi-normal","quasi-normal","compensation","compensation","synchrony","synchrony")
+#end_of_file_seq=c("4sp_pair","40sp_pair","4sp_alpha15_beta15","40sp_alpha15_beta15","4sp_alpha2_beta4","40sp_alpha2_beta4","4sp_alpha4_beta2","40sp_alpha4_beta2")
+#explain=c("rho=-0.8","rho=-0.8","quasi-normal","quasi-normal","compensation","compensation","synchrony","synchrony")
+end_of_file_seq=c("4sp_alpha2_beta4","4sp_alpha4_beta2")
+explain=c("compensation","synchrony")
 
 for(e in 1:length(end_of_file_seq)){
 #for(e in 1:1){

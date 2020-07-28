@@ -1,0 +1,926 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{ae,aecompl}
+\usepackage{graphicx}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+On wavelet analyses with the mvcwt package
+\end_layout
+
+\begin_layout Standard
+To study synchrony, Keitt (2008) presents the wavelet modulus ratio, i.e.
+ 
+\begin_inset Formula $\rho(s,t)=\frac{\Lambda_{s,t}(|\sum_{k}w_{k}(s,t)|)}{\Lambda_{s,t}(\sum_{k}|w_{k}(s,t)|)}$
+\end_inset
+
+ where 
+\begin_inset Formula $\Lambda_{s,t}\int_{-\infty}^{+\infty}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}(.)d\tau$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+ is the scale (
+\begin_inset Quotes eld
+\end_inset
+
+frequency
+\begin_inset Quotes erd
+\end_inset
+
+) and 
+\begin_inset Formula $t$
+\end_inset
+
+ is the location (
+\begin_inset Quotes eld
+\end_inset
+
+date
+\begin_inset Quotes erd
+\end_inset
+
+) for which the wavelet 
+\begin_inset Formula $w_{k}$
+\end_inset
+
+ is computed for species 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ The package 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|mvcwt|
+\end_layout
+
+\end_inset
+
+ is meant to compute this index.
+ 
+\end_layout
+
+\begin_layout Standard
+The package works as follows:
+\end_layout
+
+\begin_layout Enumerate
+the function 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|mvcwt|
+\end_layout
+
+\end_inset
+
+ takes a table of dates and time series and computes the corresponding Morlet
+ wavelets for each scale and location required.
+ By default, the number of locations L is the number of dates, and is equal
+ to the number of scales S.
+\end_layout
+
+\begin_layout Enumerate
+the function 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|wmr.boot|
+\end_layout
+
+\end_inset
+
+ takes the wavelets and compute the wavelet modulus ratio (wmr) of the observed
+ time-series.
+ It then computes R surrogates to provide the quantiles corresponding to
+ the observed value at each scale and location.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+it first computes the observed wmr (called z)
+\end_layout
+
+\begin_layout Enumerate
+for each scale, it shifts the phase of the observed wavelets for the number
+ of surrogates required.
+ This can be compared to surrogates produced by shifting in the time-domain.
+ In total, there is therefore S 
+\begin_inset Formula $\times$
+\end_inset
+
+ R bootstrapped wavelets.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What is the exact null hypothesis with this method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+for each scale, it compares the value of the observed wmr at location 
+\begin_inset Formula $t$
+\end_inset
+
+ to the distribution of the index obtained with the surrogates.
+ There is therefore S 
+\begin_inset Formula $\times$
+\end_inset
+
+ L comparisons to a distribution made of R samples.
+ This is performed with the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|ecdf|
+\end_layout
+
+\end_inset
+
+ function (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ECDF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) which returns 
+\begin_inset Formula $Pr(X<=x)$
+\end_inset
+
+.
+ The table made of S
+\begin_inset Formula $\times$
+\end_inset
+
+L 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $Pr(X<=x)$
+\end_inset
+
+ is called z.boot.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+the function 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|image.mvcwt|
+\end_layout
+
+\end_inset
+
+ takes an object from 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|wmr.boot|
+\end_layout
+
+\end_inset
+
+ (or 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|wmr|
+\end_layout
+
+\end_inset
+
+, which contains only the observed values of the index, z).
+ It first plots the values in z as an image ; then uses z.boot.
+ We describe first the classical way it does this, and will then explain
+ the modifications we made.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+it first computes 
+\begin_inset Formula $1-|1-2*Pr(X<=x)|$
+\end_inset
+
+.
+ This formulation corresponds to the usual two-sided p-value, that is 
+\begin_inset Formula $p_{val}=2\min\left(Pr(X\le x),Pr(X\ge x)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+it computes the adjusted p-value 
+\begin_inset Formula $p_{val,adj}$
+\end_inset
+
+ with a Benjamini-Yekutieli false discovery rate.
+\end_layout
+
+\begin_layout Enumerate
+it plots the contour for 
+\begin_inset Formula $p_{val}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{val,adj}$
+\end_inset
+
+ at the chosen 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ level (0.05 by default).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Insert here the distributions of the index
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+What we changed
+\end_layout
+
+\begin_layout Standard
+There were several adjustments made to the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|image.mvcwt|
+\end_layout
+
+\end_inset
+
+ function.
+ The first ones were only cosmetic.
+ Panels were created to be able to plot a wmr image as well as other plots
+ on the same figure, add a colorbar and increase the size of certain labels.
+ We also changed the Benjamini-Yekutieli fdr to Benjamini-Hochberg following
+ the suggestion of Referee 2 in Revision 1 (who actually only suggested
+ that we changed Bonferroni to something else).
+\end_layout
+
+\begin_layout Standard
+We also differentiated between low values and high values of the observed
+ wmr.
+ To do so:
+\end_layout
+
+\begin_layout Enumerate
+we first compute 
+\begin_inset Formula $p_{val}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{val,adj}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+for each z.boot value, we check if 
+\begin_inset Formula $Pr(X<=x)<Pr(X>x)$
+\end_inset
+
+ (x has a low value and might therefore indicate compensation) or 
+\begin_inset Formula $Pr(X<=x)>Pr(X>x)$
+\end_inset
+
+ (x has a high value and might therefore indicate synchrony).
+ 
+\end_layout
+
+\begin_layout Enumerate
+we draw a contour at the alpha level with the following code: red for each
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $p_{val}$
+\end_inset
+
+ (or 
+\begin_inset Formula $p_{val,adj}$
+\end_inset
+
+) where 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $Pr(X<=x)>Pr(X>x)$
+\end_inset
+
+ and blue for each 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $p_{val}$
+\end_inset
+
+ (or 
+\begin_inset Formula $p_{val,adj}$
+\end_inset
+
+) where 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $Pr(X<=x)<Pr(X>x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+What is the issue?
+\end_layout
+
+\begin_layout Standard
+There were several issues (theoretical and not due to the package itself)
+ noted thanks to the suggestions of Referee 1 in Revision 2.
+ 
+\end_layout
+
+\begin_layout Itemize
+normalizing the time-series led to a change in observed values (see for
+ instance the wavelet/wader wavelet plots in which the synchronizing effect
+ of 2006 is much stronger with the scaled time-series).
+ Normalised wavelet modulus ratios are not, however, comparable to the Gross
+ index and the notion of compensation they examine looses its ecosystem
+ level meaning (biomass replacement)
+\end_layout
+
+\begin_layout Itemize
+increasing the number of surrogates from 100 (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Reference-wavelet-analysis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) to 1000, most of the significant zones disappeared.
+ As the number of surrogates increase, we could assume that the distribution
+ of possible values increases in width, and observed values which were really
+ close to the limits of the distribution (most of them differ by 10
+\begin_inset Formula $^{-2}-$
+\end_inset
+
+10
+\begin_inset Formula $^{-3}$
+\end_inset
+
+ from the 5% limits of the null distribution) are finally included in the
+ distribution.
+ This, however, is not clear when empirical cumulative distributions are
+ plotted (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ECDF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/reference_image-1.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reference wavelet analysis for the Cormoran/Heron/Egret case with 100 surrogates
+, BH correction and a fine grid (423
+\begin_inset Formula $\times$
+\end_inset
+
+423) 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Reference-wavelet-analysis"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/compare_distrib.pdf
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Empirical cumulative distribution of 
+\begin_inset Formula $\rho(s,t)$
+\end_inset
+
+ forseveral randomly chosen 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+ with 100 (blue) and 1000 (red) surrogates.
+ Observed values are indicated by vertical dashed lines.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ECDF"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the p-value BH-adjustment could lead from 12% pvalues<0.1 to 2% pvals<0.1
+ in the Cormoran/Heron/Egret case with 100 surrogates and from 11% to 0.2%
+ with 1000 surrogates.
+ When using a fine scale, there is indeed 178929 (423 scales 
+\begin_inset Formula $\times$
+\end_inset
+
+ 423 locations) comparisons.
+ It appears that only the p-values equal to 0 when not adjusted are considered
+ significant with a correction (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:P-values-corrections"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/pvalue_for1000rands-1.png
+	height 75theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+P-values images for 1000 surrogates without fdr correction, with the BH
+ correction and with BY correction 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P-values-corrections"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+What we also checked
+\end_layout
+
+\begin_layout Itemize
+The contours do correspond to small p-values; see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:P-values-corrections"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Instead of phase-randomization of the wavelets, we built new time series
+ (that is, in the time domain) with the iaaft method and then built the
+ p-values using each image pixel's surrogate distribution, each surrogate
+ 
+\begin_inset Formula $\rho_{j}(s,t)$
+\end_inset
+
+ being obtained through wavelet transformation and wavelet modulus ratio
+ computation of the IAAFT-obtained time series.
+ This led to even less significant zones 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What is the difference in H0? What could be closer to the Gross index?
+\end_layout
+
+\end_inset
+
+, which should have been expected (Cazelles et al.
+ 2014, Journal of the Royal Society Interface), see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:IAAFT"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/iaaft_100surrogate-1.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet analysis with 100 iaaft surrogates (in the time-domain
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+redundant, but maybe it's cleared that way
+\end_layout
+
+\end_inset
+
+) and a BH-correction.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:IAAFT"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Finally, we changed the number of scales (from 423 to 100) and locations
+ (from 423 to 212).
+ This reduced the noise in significance contours (as well as the size of
+ the images), see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small_wmr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/triad_notscaled_nocorrection_smallgrid_1000rands-cut.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet analysis on a coarser grid, with 1000 surrogates and no correction
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:small_wmr"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

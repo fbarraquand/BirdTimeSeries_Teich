@@ -1,4 +1,3 @@
-
 # Script by CPicoche 2018
 #The aim is to compare synchrony indices at different taxonomic levels
 #06/03/2020: Just checking the time necessary for 100 and 1000 randomization
@@ -8,27 +7,31 @@ rm(list=ls())
 graphics.off()
 source("../../../SCRIPTS/test_synchrony_Gross.r")
 library('mvcwt')
-source("../../../SCRIPTS/image_mvcwt_for_colormaps.r")
+source("../../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 library("RColorBrewer")
-library(lubridate)
+library("lubridate")
 
 set.seed(42)
 
 thresh=0.1
 type_correct="BH" #was Bonferroni before
-log_b=F
-amethod="iaaft"
+amethod="shift"
 anrands=1000
-norm=c(FALSE,TRUE)
-doyouload=F
+biomass=F
+if(biomass){
+end_bio="biomasses"
+}else{
+end_bio="abundances"
+}
 
-#end_of_file_seq=c("4sp_pair","40sp_pair","4sp_alpha15_beta15","40sp_alpha15_beta15","4sp_alpha2_beta4","40sp_alpha2_beta4","4sp_alpha4_beta2","40sp_alpha4_beta2")
-#explain=c("rho=-0.8","rho=-0.8","quasi-normal","quasi-normal","compensation","compensation","synchrony","synchrony")
+doyouload=F #False if you want to launch the analyses again ; TRUE if you just want to do the plots
+
+normalize_seq=c(TRUE,FALSE)
+
 end_of_file_seq=c("4sp_alpha2_beta4","4sp_alpha4_beta2")
 explain=c("compensation","synchrony")
 
 for(e in 1:length(end_of_file_seq)){
-#for(e in 1:1){
 end_of_file=end_of_file_seq[e]
 #############################
 tab_bm=read.table(paste("MockData_SAD_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
@@ -77,11 +80,8 @@ tab_annual_warm=as.data.frame(matrix(NA,nrow=length(yy_seq)*length(sp),ncol=3))
 tab_annual_cold=as.data.frame(matrix(NA,nrow=length(yy_seq)*length(sp),ncol=3))
 names(tab_annual_warm)=names(tab_annual_cold)=c("dates","sp_data_frame","abundance")
 
-
-#cold month 1:4 (we're not adding difficulties here)
-#warm month 7:10
-
-for(normalize in norm){
+for(normalize in normalize_seq){
+print(paste("normalize",normalize))
 if(normalize){
 end_nor="scaled"
 }else{
@@ -98,14 +98,14 @@ if(normalize){
 x=0
 for(s in sp){
 for(y in 1:length(yy_seq)){
-	x=x+1
-	subset=tab_species_tmp[year(dates)==yy_seq[y],s]
-	tab_annual_warm[x,"dates"]=yy_seq[y]
-	tab_annual_warm[x,"sp_data_frame"]=s	
-	tab_annual_warm[x,"abundance"]=mean(subset[7:10])
-	tab_annual_cold[x,"dates"]=yy_seq[y]
-	tab_annual_cold[x,"sp_data_frame"]=s	
-	tab_annual_cold[x,"abundance"]=mean(subset[1:4])
+        x=x+1
+        subset=tab_species_tmp[year(dates)==yy_seq[y],s]
+        tab_annual_warm[x,"dates"]=yy_seq[y]
+        tab_annual_warm[x,"sp_data_frame"]=s
+        tab_annual_warm[x,"abundance"]=mean(subset[7:10])
+        tab_annual_cold[x,"dates"]=yy_seq[y]
+        tab_annual_cold[x,"sp_data_frame"]=s
+        tab_annual_cold[x,"abundance"]=mean(subset[1:4])
 }
 }
 
@@ -148,8 +148,6 @@ write.table(mat_save,paste("tab_data_frame_Gross_simulated_data_",end_nor,"_with
 print("After Gross")
 print(Sys.time())
 
-#if(1==0){ ##remove that after
-#Plot everything
 mat=rep(NA,length(essai_taxo))
 for(v in 1:length(essai_taxo)){
         mat[v]=essai_taxo[[v]]$pval
@@ -162,7 +160,7 @@ for(v in 1:length(essai_taxo)){
 
 color=rep(c("Black","Lightblue","Dodgerblue2"),2)
 
-pdf(paste("wavelet_simu_",end_nor,"_",end_of_file,"_with",anrands,"_two_panels_no_correction_smallergrid.pdf",sep=""),width=10,height=10)
+pdf(paste("wavelet_simu_",end_nor,"_",end_of_file,"_with",anrands,"_two_panels_no_correction_smallergrid_IAAFT.pdf",sep=""),width=10,height=10)
 
 layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 
@@ -185,7 +183,6 @@ for (v in 1:2){
         }
 lines(c(0,7.5),c(0,0),lty=2,lwd=2)
 
-
 x=(dates-dates[1])/365.25
 #Here, I don't need to regularize data as they are already cleaned in the lines before
 
@@ -195,58 +192,85 @@ seq_x=seq(1,365.25*35,length.out=420)/365.25
 
 mm=mvcwt(seq_x,tab_species_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x) ####WARNING. THIS ONLY WORKS BECAUSE x IS ARTIFICIAL)
 
+print(paste(Sys.time(),"after mvcwt"))
+
 #This function computes the wavelet ratio of the whole community (see Keitt's paper in 2008)
-
 if(!doyouload){
-mr = wmr.boot(mm, smoothing = 1,reps=anrands)
 
-if(length(mr$x)>length(mr$y)){
-        yy=c(mr$y,rep(NA,length(mr$x)-length(mr$y)))
-        xx=mr$x
-}else{
-        xx=c(mr$x,rep(NA,length(mr$y)-length(mr$x)))
-        yy=mr$y
+ref_wmr=wmr(mm)
+ref_val=ref_wmr$z[,,1]
+
+tab_values_iaaft=array(NA,dim=c(length(mm$x),length(mm$y),anrands+1))
+tab_values_iaaft[,,anrands+1]=ref_val
+prog.bar = txtProgressBar(min = 0, max = anrands,style = 3)
+for(i in 1:anrands){
+        setTxtProgressBar(prog.bar, i)
+        tab_tmp=tab_species_tmp
+        for(s in 1:ncol(tab_species)){
+        tab_tmp[,s]=iaaft_surrogate(tab_species_tmp[,s])
+        }
+	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
+        wmr_tmp=wmr(mmtmp)
+        tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
+tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
+for(i in 1:length(mm$x)){
+        for(j in 1:length(mm$y)){
+#                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
+                tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
+                if(tab_pval[i,j,1]>1){stop()}
+
+        }
+}
+ref_wmr$z.boot=tab_pval
+
+if(length(ref_wmr$x)>length(ref_wmr$y)){
+	yy=c(ref_wmr$y,rep(NA,length(ref_wmr$x)-length(ref_wmr$y)))
+	xx=ref_wmr$x
+}else{
+	xx=c(ref_wmr$x,rep(NA,length(ref_wmr$y)-length(ref_wmr$x)))
+	yy=ref_wmr$y
+}
 tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
-write.table(tab_xy,paste("tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+write.table(tab_xy,paste("tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
-tab_z=mr$z
-write.table(as.matrix(tab_z[,,1]),paste("tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+tab_z=ref_wmr$z
+write.table(as.matrix(tab_z[,,1]),paste("tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
-tab_z.boot=mr$z.boot
-write.table(as.matrix(tab_z.boot[,,1]),paste("tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
-
-mr_object=mr
+tab_z.boot=ref_wmr$z.boot
+write.table(as.matrix(tab_z.boot[,,1]),paste("tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 }else{
-mr_object = wmr(mm, smoothing = 1)
+ref_wmr=wmr(mm)
 
-tmp_xy=read.csv(paste("tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),header=T,sep=";",dec=".")
-mr_object$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
-mr_object$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
+tmp_xy=read.csv(paste("tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
+ref_wmr$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
+ref_wmr$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
 
 
-tmp_z=as.matrix(read.csv(paste("tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z=as.matrix(read.csv(paste("tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
 tmp_array_z[,,1]=tmp_z
-mr_object$z=tmp_array_z
+ref_wmr$z=tmp_array_z
 
-tmp_z.boot=as.matrix(read.csv(paste("tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),header=F,sep=";",dec="."))
+tmp_z.boot=as.matrix(read.csv(paste("tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
 tmp_array_z.boot[,,1]=tmp_z.boot
-mr_object$z.boot=tmp_array_z.boot
+ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-#png('OUT/Figure3.png',width=800)
-  image_mvcwt_for_colormaps(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain=explain[e],adj="None")
+print(paste(Sys.time(),"before image"))
+par(mar=c(3,5,2,3))
+image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None")
+mtext("b)",side=2,line=-2,at=0.48,cex=1.5,outer=T,las=1)
+print(paste(Sys.time(),"after image"))
 
+#abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management
+print("After wavelet")
 print(Sys.time())
 dev.off()
 }
 }
-
-#} #1==0, remove that after
-#

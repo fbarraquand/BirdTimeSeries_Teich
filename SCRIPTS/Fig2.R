@@ -24,8 +24,7 @@ end_bio="abundances"
 
 doyouload=F
 
-#normalize_seq=c(TRUE,FALSE)
-normalize_seq=c(FALSE)
+normalize_seq=c(TRUE,FALSE)
 
 source("SCRIPTS/test_synchrony_Gross.r")
 set.seed(42)

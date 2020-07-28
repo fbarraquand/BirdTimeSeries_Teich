@@ -7,6 +7,8 @@ library("RColorBrewer")
 
 end_of_file_seq=c("4sp_pair","40sp_pair","4sp_alpha15_beta15","40sp_alpha15_beta15","4sp_alpha2_beta4","40sp_alpha2_beta4","4sp_alpha4_beta2","40sp_alpha4_beta2")
 explain=c("rho=-0.8","rho=-0.8","quasi-normal","quasi-normal","compensation","compensation","synchrony","synchrony")
+#end_of_file_seq=c("4sp_alpha2_beta4","4sp_alpha4_beta2")
+#explain=c("compensation","synchrony")
 
 rep=1
 
@@ -17,7 +19,7 @@ lis_hist=list()
 for(e in 1:length(end_of_file_seq)){
 end_of_file=end_of_file_seq[e]
 #############################
-tab_bm=read.table(paste("MockData_SAD_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
+tab_bm=read.table(paste("../../../../Teich_results/simulated_timeseries_withlognormaldistribution/MockData_SAD_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
 tab_bm$Species=as.character(tab_bm$Species)
 tab_bm$Time=as.numeric(as.character(tab_bm$Time))
 tab_bm$Abundance=as.numeric(as.character(tab_bm$Abundance))
@@ -51,7 +53,7 @@ mean_val=apply(tab_species,2,mean)
 
 lis_hist[[e]]=hist(mean_val,breaks=nb,plot=F,main=explain[e])
 
-pdf(paste("time_series_",end_of_file,".pdf",sep=""),height=12,width=12)
+#pdf(paste("time_series_",end_of_file,".pdf",sep=""),height=12,width=12)
 par(mfrow=c(2,1))
 plot(dates_tmp,rep(0,length(dates_tmp)),t="n",ylim=range(tab_bm$Abundance),ylab="Abundance",xlab="Date",main=explain[e])
 for(s in 1:length(species)){
@@ -70,8 +72,19 @@ for(s in 1:length(species)){
 	lines(dates_tmp,tab_species_norm[,species[s]],col=col[s])
 }
 
+dev.off()
 
-
+#pdf(paste("time_series_",end_of_file,"_single.pdf",sep=""),width=10)
+par(mfrow=c(1,1))
+plot(dates_tmp,rep(0,length(dates_tmp)),t="n",ylim=range(tab_bm$Abundance),ylab="Abundance",xlab="Years",main=explain[e],xaxt="n")
+seq_d=seq(0,length(dates_tmp),by=12*5)
+axis(1,at=seq_d[2:length(seq_d)],labels=seq(5,35,by=5))
+for(s in 1:length(species)){
+        lines(dates_tmp,tab_species[,species[s]],col=col[s])
+}
+if(length(species)==4){
+legend("topleft",legend=paste("species",1:4),col=col,lty=1,bty="n",lwd=2)
+}
 dev.off()
 }
 
@@ -82,14 +95,14 @@ se_4=seq(1,length(end_of_file_seq),by=2)
 se_40=seq(2,length(end_of_file_seq),by=2)
 for(e in se_4){
 	plot(lis_hist[[e]],main=explain[e])
-	tab=read.table(paste("MuSigma_SAD_",end_of_file_seq[e],".csv",sep=""),sep=";",header=T,dec=".")
+	tab=read.table(paste("../../../../Teich_results/simulated_timeseries_withlognormaldistribution/MuSigma_SAD_",end_of_file_seq[e],".csv",sep=""),sep=";",header=T,dec=".")
 	Sigma=as.matrix(tab[,2:ncol(tab)])
 	rownames(Sigma)=colnames(Sigma)
 	corrplot(Sigma,is.corr=F)
 }
 for(e in se_40){
         plot(lis_hist[[e]],main=explain[e])
-        tab=read.table(paste("MuSigma_SAD_",end_of_file_seq[e],".csv",sep=""),sep=";",header=T,dec=".")
+        tab=read.table(paste("../../../../Teich_results/simulated_timeseries_withlognormaldistribution/MuSigma_SAD_",end_of_file_seq[e],".csv",sep=""),sep=";",header=T,dec=".")
 	Sigma=as.matrix(tab[,2:ncol(tab)])
 	rownames(Sigma)=colnames(Sigma)
 	corrplot(Sigma,is.corr=F)
