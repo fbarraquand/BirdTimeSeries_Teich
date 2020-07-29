@@ -776,7 +776,7 @@ noprefix "false"
 
 \begin_layout Itemize
 Instead of phase-randomization of the wavelets, we built new time series
- (that is, in the time domain) with the IAAFT method and then built the
+ (that is, in the time domain) with the IAAFTq method and then built the
  p-values using each image pixel's surrogate distribution, each surrogate
  
 \begin_inset Formula $\rho_{j}(s,t)$
