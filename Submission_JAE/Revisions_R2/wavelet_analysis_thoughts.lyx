@@ -97,7 +97,7 @@ To study synchrony, Keitt (2008) presents the wavelet modulus ratio, i.e.
 \end_inset
 
  where 
-\begin_inset Formula $\Lambda_{s,t}\int_{-\infty}^{+\infty}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}(.)d\tau$
+\begin_inset Formula $\Lambda_{s,t}(y)=\int_{-\infty}^{+\infty}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}(y)d\tau$
 \end_inset
 
 , 
@@ -776,7 +776,7 @@ noprefix "false"
 
 \begin_layout Itemize
 Instead of phase-randomization of the wavelets, we built new time series
- (that is, in the time domain) with the iaaft method and then built the
+ (that is, in the time domain) with the IAAFT method and then built the
  p-values using each image pixel's surrogate distribution, each surrogate
  
 \begin_inset Formula $\rho_{j}(s,t)$
@@ -784,18 +784,9 @@ Instead of phase-randomization of the wavelets, we built new time series
 
  being obtained through wavelet transformation and wavelet modulus ratio
  computation of the IAAFT-obtained time series.
- This led to even less significant zones 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-What is the difference in H0? What could be closer to the Gross index?
-\end_layout
-
-\end_inset
-
-, which should have been expected (Cazelles et al.
- 2014, Journal of the Royal Society Interface), see Fig.
+ This could lead to even less significant zones (Cazelles et al.
+ 2014, Journal of the Royal Society Interface).
+ In Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -806,7 +797,12 @@ noprefix "false"
 
 \end_inset
 
-.
+, the number of significant pixels has not changed markedly, but all significant
+ 
+\begin_inset Formula $\rho(s,t)$
+\end_inset
+
+ are now in one block instead of being spread out.
 \end_layout
 
 \begin_layout Standard
