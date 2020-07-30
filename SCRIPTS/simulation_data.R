@@ -8,7 +8,7 @@ graphics.off()
 #Parameters which change
 burn_in=500
 #n_species_series=c(5,15,30,50)
-n_species_series=c(1)
+n_species_series=c(1) #We then multiply the number of species by 2, as is written in the Appendices
 n_time_series=burn_in+c(35,100,500)
 n_repeats=10
 b_series=c(0.1,0.5,0.75)

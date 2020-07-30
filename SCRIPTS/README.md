@@ -12,11 +12,11 @@ This folder contains the scripts used to produce the results in the main text an
 ### Data analysis (functions and figures)
 * `iaaft.R` is a function taken from the function `make_surrogate_data` in the package rEDM to compute the Iterative Amplitude Adjusted Fourier Transform surrogates
 * `test_synchrony_Gross.r` is based on the function `community.sync` in the package synchrony but adds a way to compute surrogates and corrects the p-value computation
-* `image_mvcwt.r` is taken from the same function in the the mvcwt package but uses the BH fdr correction and adds value to the colorbars. It is now only used in `wavelets_simulation.R` and other exploratory files. It has been updated to `image_mvcwt_two_panels.r` which allows for more flexibility in positioning the wavelet plot and was improved to differentiate between high and low values of the synchrony index
+* `image_mvcwt.r` is taken from the same function in the the mvcwt package but uses the BH fdr correction and adds value to the colorbars. It is now only used in `wavelets_simulation.R` and other exploratory files. It has been updated to `image_mvcwt_two_panels.r` which allows for more flexibility in positioning the wavelet plot and was improved to differentiate between high and low values of the synchrony index. It has then been upated to `image_mvcwt_for_colormaps.r` which plot the contours with different coulours for high and low values of the Keitt index
 * `Fig2.R` draws the second figure of the MS, with the Gross index within and between taxonomic and functional groups.
-* `wavelet_wader_waterfowl.R` draws the third figure of the MS with the wavelet analysis in the wader and waterfowl communities.
-* `Fig5.R` draws the fifth figure of the MS with Gross and Keitt indices for the group Cormoran/Heron/Egret
-* `synchrony_community.R` plots the Gross and Keitt indices for the most frequent bird group.
+* `use_iaaft_wavelet_wader.R` draws the third figure of the MS with the wavelet analysis in the wader and waterfowl communities.
+* `use_iaaft_triad.R` draws the fifth figure of the MS with Gross and Keitt indices for the group Cormoran/Heron/Egret
+* `use_iaaft_community.R` plots the Gross and Keitt indices for the most frequent bird group.
 
 ### Simulations (data production and analyses)
 * `simulation_data.R` produces simulated data used in the Appendices which explore the way the Gross index varies for a community reacting to different environmental signals and the effect of missing values on the wavelet analysis

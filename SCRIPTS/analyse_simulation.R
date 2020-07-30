@@ -11,7 +11,7 @@ source("SCRIPTS/test_synchrony_Gross.r")
 #Parameters which change
 #pdf("OUT/analyse_simulation.pdf")
 #n_species_series=c(5,15,30,50)
-n_species_series=c(1,5,15,30)
+n_species_series=c(1,5,15,30) #We then multiply the number of species by 2
 n_time_series=c(35,100,500)
 b_series=c(0.1,0.5,0.75)
 nb_repeats=1:10

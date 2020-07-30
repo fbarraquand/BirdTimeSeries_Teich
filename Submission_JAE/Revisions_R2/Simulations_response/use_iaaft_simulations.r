@@ -17,24 +17,21 @@ thresh=0.1
 type_correct="BH" #was Bonferroni before
 amethod="shift"
 anrands=1000
-biomass=F
-if(biomass){
-end_bio="biomasses"
-}else{
-end_bio="abundances"
-}
 
 doyouload=F #False if you want to launch the analyses again ; TRUE if you just want to do the plots
 
 normalize_seq=c(TRUE,FALSE)
 
-end_of_file_seq=c("4sp_alpha2_beta4","4sp_alpha4_beta2")
-explain=c("compensation","synchrony")
+#end_of_file_seq=c("4sp_alpha2_beta4","4sp_alpha4_beta2")
+#explain=c("compensation","synchrony")
+
+end_of_file_seq=c("4sp_pair","40sp_pair","4sp_alpha15_beta15","40sp_alpha15_beta15","40sp_alpha2_beta4","40sp_alpha4_beta2") #We removed "4sp_alpha2_beta4","4sp_alpha4_beta2" because analyses have already been done
+explain=c("rho=-0.8","rho=-0.8","quasi-normal","quasi-normal","compensation","synchrony")
 
 for(e in 1:length(end_of_file_seq)){
 end_of_file=end_of_file_seq[e]
 #############################
-tab_bm=read.table(paste("MockData_SAD_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
+tab_bm=read.table(paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/MockData_SAD_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
 
 rep=1
 
@@ -111,7 +108,7 @@ for(y in 1:length(yy_seq)){
 
 if(doyouload){
 
-        mat_save=read.table(paste("tab_data_frame_Gross_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
+        mat_save=read.table(paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_data_frame_Gross_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),sep=";",dec=".",header=T)
         essai_taxo=list()
         for(v in 1:nrow(mat_save)){
                 essai_taxo[[v]]=list(obs=as.numeric(mat_save[v,"obs"]),pval=as.numeric(mat_save[v,"pval"]),alternative=as.character(mat_save[v,"alternative"]),rands=as.numeric(c(mat_save[v,grep("rands",colnames(mat_save))])))
@@ -140,7 +137,7 @@ for(v in 1:length(essai_taxo)){
         }
         mat_save[v,paste("rands",anrands+1,sep="")]=essai_taxo[[v]]$rands[anrands+1]
 }
-write.table(mat_save,paste("tab_data_frame_Gross_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
+write.table(mat_save,paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_data_frame_Gross_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
 
@@ -234,28 +231,28 @@ if(length(ref_wmr$x)>length(ref_wmr$y)){
 }
 tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
-write.table(tab_xy,paste("tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+write.table(tab_xy,paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
 tab_z=ref_wmr$z
-write.table(as.matrix(tab_z[,,1]),paste("tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z[,,1]),paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 tab_z.boot=ref_wmr$z.boot
-write.table(as.matrix(tab_z.boot[,,1]),paste("tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z.boot[,,1]),paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 }else{
 ref_wmr=wmr(mm)
 
-tmp_xy=read.csv(paste("tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
+tmp_xy=read.csv(paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_xy_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
 ref_wmr$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
 ref_wmr$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
 
 
-tmp_z=as.matrix(read.csv(paste("tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_z=as.matrix(read.csv(paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_z_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z=array(0,dim=c(dim(tmp_z),1))
 tmp_array_z[,,1]=tmp_z
 ref_wmr$z=tmp_array_z
 
-tmp_z.boot=as.matrix(read.csv(paste("tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
+tmp_z.boot=as.matrix(read.csv(paste("../../../../Teich_resultsLFS/simulated_timeseries_withlognormaldistribution/tab_zboot_mr_simulated_data_",end_nor,"_with",anrands,"_",end_of_file,"_IAAFT.csv",sep=""),header=F,sep=";",dec="."))
 tmp_array_z.boot=array(0,dim=c(dim(tmp_z.boot),1))
 tmp_array_z.boot[,,1]=tmp_z.boot
 ref_wmr$z.boot=tmp_array_z.boot

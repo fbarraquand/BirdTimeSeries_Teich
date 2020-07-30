@@ -1,7 +1,5 @@
 #### First used by CP (2018) from Keitt's package mvcwt
-#### CP 2019/07/03 Corrected BY to BH correction for homogeneity reason
-#### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
-#### CP 2020/07/03 Trying out different colormaps
+#### 07/2020 This script is used to represent the p_values instead of the wavelets to check that they correspond to contourlines
 
 image_mvcwt_for_pvalues=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,col.palette="Spectral",inv=F,amain="",adj="BH",...) 
 {
@@ -35,38 +33,7 @@ image_mvcwt_for_pvalues=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,c
         for (i in 1:nvar) { ####MAIN IMAGE, with actual observed values for Keitt's index
             if (exists("z.boot") && !is.null(z.boot)) {
 
-
-#################THIS WAS THE CODE FOR LAST REVISION########
-
-#	                z.boot = 1 - abs(1 - 2 * z.boot) #Compute the p-values using the values of Pr(X>=x) in zboot
-#                zb = p.adjust(as.vector(z.boot), method = "BH") #Adjust them with BH
-#                dim(zb) = dim(z.boot)
-#                contour(x, y, zb[, , i], levels = 0.1, lwd = 0.5,lty=1, #Contour at level=0.1 ; all values for x high and low are showed with black lines
-#                  add = TRUE, drawlabels = FALSE)
-
-#################THIS WAS THE CODE BEFORE CORRECTIONS TODAY (padjust, pval)
-#		z.boot_tmp=1-2*z.boot #This temporary file will be used to check whether x values are at the lower or higher end of the distribution. If Pr(X>=x) > 0.5 (meaning that x is at the higher end of the distribution), then z.boot_tmp < 0  and we will want to show this value with a red line
-
-#		z.boot_pos=array(NA,dim(z.boot)) #Contains p-values for which z.boot_tmp>0, i.e. Pr(X<=x) < 0.5 (i.e., also, Pr(X<=x) < Pr(X>=x)); small value of x
-#		z.boot_neg=array(NA,dim(z.boot)) #P-Values for which z.boot_tmp<0, i.e. high values of x
-#		z.boot_pos[which(z.boot_tmp>0,arr.ind=T)]=1-abs(1-2*z.boot[which(z.boot_tmp>0,arr.ind=T)]) #We keep the same formulation as before
-#		z.boot_neg[which(z.boot_tmp<0,arr.ind=T)]=1-abs(1-2*z.boot[which(z.boot_tmp<0,arr.ind=T)])
-
-#                zb_pos = p.adjust(as.vector(z.boot_pos), method = "BH") #AND NOW, we adjust. Which is completely wrong, because all info are not present in z.boot_pos)
-#                dim(zb_pos) = dim(z.boot_pos)
-#                contour(x, y, zb_pos[, , i], levels = 0.05, lwd = 1.5,lty=1,  # Draw contours. Note that I was using the level = 0.05, it should have been 0.1
-#                  add = TRUE, drawlabels = FALSE,col="darkblue")
-#Same thing for high values of x
-#                zb_neg = p.adjust(as.vector(z.boot_neg), method = "BH")
-#                dim(zb_neg) = dim(z.boot_neg)
-#                contour(x, y, zb_neg[, , i], levels = 0.05, lwd = 1.5,lty=1, 
- #                 add = TRUE, drawlabels = FALSE,col="red")
-
-
-#################CODE AS ITS NOW
                 z.boot_tmp = 1 - abs(1 - 2 * z.boot) #First compute all p-values
-
-
 
 		if(adj=="BH"){
 			zb = p.adjust(as.vector(z.boot_tmp), method = "BH") #Adjust all p-values
@@ -111,7 +78,6 @@ image_mvcwt_for_pvalues=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,c
         axis(1,cex.axis=1.5)
         mtext("Years", 1, 1, outer = TRUE,cex=2)
         mtext("Scale (years)", 2, 1, outer = TRUE,cex=2)
-#    })
 
 	par(mar=c(2,.5,2,4))
 	seqi=seq(min(zz[,],na.rm=T),max(zz[,],na.rm=T),length.out=1024)

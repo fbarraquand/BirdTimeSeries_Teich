@@ -2,6 +2,8 @@
 ### 2019/07/03: CP Relaunched with BH-correction 
 ### 2019/07/25: CP Relaunched adding Calidris 
 ### 2019/09/04: CP Modified to take into account biomasses and increased a lot the number of species to ignore
+### 2020/07/01: CP normalize values
+### Warning: this is an old version of the script, which performs wavelet analyses with phase-shift surrogates
 
 graphics.off()
 rm(list=ls())
@@ -10,7 +12,20 @@ source("SCRIPTS/image_mvcwt.r") #Add to change the image function to have a nice
 library("lubridate")
 library("RColorBrewer")
 
-biomass=T
+set.seed(42)
+biomass=F
+normalize=T
+if(biomass){
+end_bio="biomasses"
+}else{
+end_bio="abundances"
+}
+if(normalize){
+end_nor="scaled"
+}else{
+end_nor="NOTscaled"
+}
+
 
 ##################################################################################
 # -- importation des données du Teich
@@ -63,6 +78,13 @@ for(id in 1:length(dates)){
 	}
 }
 
+for(s in limicoles){
+if(normalize){
+        tab_limicoles[,s]=scale(tab_limicoles[,s])
+}
+
+}
+
 x=(dates-dates[1])/365.25
 
 #This function computes the Morlet wavelet transform for each bird species separately
@@ -74,11 +96,7 @@ mr = wmr.boot(mm, smoothing = 1,reps=100)
 mr$x=mr$x+year_min #Change the dates to be "human-readable"
 
 #png('OUT/Figure3.png',width=800)
-if(biomass){
-  png("Submission_JAE/Revisions/Figure3_BH_biomasses.png",width=800)
-}else{
-png("Submission_JAE/Revisions/Figure3_BH.png",width=800)
-}
+png(paste("Submission_JAE/Revisions_R2/Figure3_BH_",end_bio,"_",end_nor,".png",sep=""),width=800)
   image_mvcwt(mr,reset.par=F,cex.axis=4,z.fun="Mod")
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management

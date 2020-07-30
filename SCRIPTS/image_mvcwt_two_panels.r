@@ -1,7 +1,7 @@
 #### First used by CP (2018) from Keitt's package mvcwt
 #### 2019/07/03 Corrected BY to BH correction for homogeneity reeaon
 #### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
-#### 2020/03/23 Changed the color palette to viridis
+#### 2020/03/23 Changed the color palette to viridis, then back to Spectral as it was more intuitive
 
 image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,amain="",...) 
 {

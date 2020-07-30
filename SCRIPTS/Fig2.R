@@ -6,14 +6,15 @@
 ### 2019/09/05: Presentation details (las=1, Anas-> Anatini, etc.)
 ### 2019/09/12: Ducks are actually waterfowl
 ### 2020/07/09: Added the normalization option and 1000 rands
+### 2020/07: Added saving files to plot them later without having to relaunch the whole analysis 
 
 rm(list=ls())
 graphics.off()
 
 box_index=T #If box_index is true, draw boxplots for the whole distribution for the Gross index with shifted time series. Otherwise, we just show a line for the 5%-95% percentiles
 type_correct="BH" #Was bonferroni before
-amethod_b="iaaft" #Could also be shift or ebisuzaki. Was shift before.
-amethod_w="shift"
+amethod_b="iaaft" #Could also be shift or ebisuzaki. IAAFT is used between groups as shifting with two groups only may lead to the same surrogates (there is a limited number of combinations of shift you can do with only two time series
+amethod_w="shift" #Shift is used within groups
 anrands=1000 #Number of surrogates we want to test the significance
 biomass=F
 if(biomass){
@@ -22,15 +23,15 @@ end_bio="biomasses"
 end_bio="abundances"
 }
 
-doyouload=F
+doyouload=F #True if you use files that already exist, False if you want to relaunch the analyses
 
 normalize_seq=c(TRUE,FALSE)
 
-source("SCRIPTS/test_synchrony_Gross.r")
+source("SCRIPTS/test_synchrony_Gross.r") #Warning: test_synchrony Gross uses SCRIPTS/iaaft.r It sometimes is switched to ../../SCRIPTS/iaaft.r as it also used in other folders that are not located at the root of this folder
 set.seed(42)
 thresh=0.1
 
-sp_to_ignore=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser brachyrhynchus")
+sp_to_ignore=c("Anas discors","Anas americana","Calidris melanotos","Calidris pusilla","Calidris ruficollis", "Calidris fuscicollis", "Calidris himantopus", "Burhinus oedicnemus","Phalaropus lobatus","Charadrius alexandrinus","Haematopus ostralegus","Calidris maritima","Aythya nyroca","Bucephala clangula","Melanitta nigra","Mergus serrator","Clangula hyemalis","Alopochen aegyptiaca", "Aix galericulata","Cygnus atratus","Tadorna ferruginea","Branta leucopsis","Anser fabalis","Anser albifrons","Cygnus cygnus","Mergus merganser","Anser brachyrhynchus") #There are species that are not abundant enough to be used. 
 
 for(normalize in normalize_seq){
 	print(paste("normalize",normalize))
@@ -43,14 +44,16 @@ for(normalize in normalize_seq){
 
 print("Anas")
 print(Sys.time())
+#Load data
 db_warm=read.csv(paste("IN/warmseason_anas_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_cold=read.csv(paste("IN/coldseason_anas_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
-db_warm=db_warm[,c(2,3,4)]
+db_warm=db_warm[,c(2,3,4)] #Choose the columns we need, that is dates, sp_data_frame and abundance
 db_cold=db_cold[,c(2,3,4)]
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 
+#Subset of the dataframe so we don't have the species we want to ignore and some faulty points in 2016. Also, divide the database between before and after 2006
 db_warm_all=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates<2016)
 db_warm_pre_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates<=2006)
 db_warm_post_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates>2006&dates<2016)
@@ -58,6 +61,7 @@ db_cold_all=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dat
 db_cold_pre_2006=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates<=2006)
 db_cold_post_2006=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates>2006&dates<2016)
 
+#Normalize time series if necessary
 if(normalize){
         list_db=list(db_cold_all,db_cold_pre_2006,db_cold_post_2006,db_warm_all,db_warm_pre_2006,db_warm_post_2006)
         for(d in 1:length(list_db)){
@@ -75,7 +79,7 @@ if(normalize){
 }
 
 if(doyouload){
-
+#In this case, we just take the value from an already existing file.
         mat_save=read.table(paste("OUT/tab_data_frame_Gross_anas_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
         list_anas=list()
         for(v in 1:nrow(mat_save)){
@@ -95,6 +99,7 @@ synch_cold_post_2006=community_sync_Gross(db_cold_post_2006,nrands=anrands,metho
 
 list_anas=list(synch_cold_all,synch_cold_pre_2006,synch_cold_post_2006,synch_warm_all,synch_warm_pre_2006,synch_warm_post_2006)
 
+#Save everything in a separate text file
 mat_save=matrix(NA,nrow=length(list_anas),ncol=3+anrands+1) #3 for obs, pval, alternative ; nrands for all the values... of rands. We add 1 to nrands because we also use the observed value in the computation of the pvalues
 colnames(mat_save)=c("obs",paste("rands",1:(anrands+1),sep=""),"pval","alternative")
 for(v in 1:length(list_anas)){
@@ -109,7 +114,7 @@ for(v in 1:length(list_anas)){
 write.table(mat_save,paste("OUT/tab_data_frame_Gross_anas_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
-
+#With the values in mat_save, correct the p-value for FDR
 mat=rep(NA,length(list_anas))
 for(v in 1:length(list_anas)){
 	mat[v]=list_anas[[v]]$pval
@@ -122,15 +127,16 @@ for(v in 1:length(list_anas)){
 print("Calidris")
 print(Sys.time())
 #We look at only 6 species for the Calidris, we could also look at only 4
+#Load data
 db_warm=read.csv(paste("IN/warmseason_calidris_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_cold=read.csv(paste("IN/coldseason_calidris_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
-
 db_warm=db_warm[,c(2,3,4)]
 db_cold=db_cold[,c(2,3,4)]
 #Right format for synchrony scripts
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 
+#Subset of the database to divide between before and after 2006, remove the species we need to ignore and remove faulty dates in 2016.
 db_warm_all=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates<2016)
 db_warm_pre_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates<=2006)
 db_warm_post_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates>2006&dates<2016)
@@ -138,6 +144,7 @@ db_cold_all=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dat
 db_cold_pre_2006=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates<=2006)
 db_cold_post_2006=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates>2006&dates<2016)
 
+#Normalize if necessary
 if(normalize){
         list_db=list(db_cold_all,db_cold_pre_2006,db_cold_post_2006,db_warm_all,db_warm_pre_2006,db_warm_post_2006)
         for(d in 1:length(list_db)){
@@ -154,6 +161,7 @@ if(normalize){
         db_warm_post_2006=list_db[[6]]
 }
 
+#Load data from a previous text file if the analyses have already been done
 if(doyouload){
 
         mat_save=read.table(paste("OUT/tab_data_frame_Gross_calidris_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
@@ -163,7 +171,7 @@ if(doyouload){
         }
 
 }else{
-
+#Launch the Gross analyses
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=anrands,method=amethod_w)
 synch_warm_pre_2006=community_sync_Gross(db_warm_pre_2006,nrands=anrands,method=amethod_w)
 synch_warm_post_2006=community_sync_Gross(db_warm_post_2006,nrands=anrands,method=amethod_w)
@@ -188,7 +196,7 @@ for(v in 1:length(list_calidris)){
 write.table(mat_save,paste("OUT/tab_data_frame_Gross_calidris_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
-	
+#Adjust p-values	
 mat=rep(NA,length(list_calidris))
 for(v in 1:length(list_calidris)){
         mat[v]=list_calidris[[v]]$pval
@@ -201,9 +209,9 @@ for(v in 1:length(list_calidris)){
 
 print("Waders")
 print(Sys.time())
+#Load data
 db_warm=read.csv(paste("IN/warmseason_waders_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_cold=read.csv(paste("IN/coldseason_waders_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
-
 db_warm=db_warm[,c(2,3,4)]
 db_cold=db_cold[,c(2,3,4)]
 #Right format for synchrony scripts
@@ -211,6 +219,7 @@ names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 limicoles=unique(db_warm$sp_data_frame)
 
+#Divide the data set between before and after 2006 and remove species and dates we do not want
 db_warm_all=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates<2016)
 db_warm_pre_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates<=2006)
 db_warm_post_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates>2006&dates<2016)
@@ -234,6 +243,7 @@ if(normalize){
         db_warm_post_2006=list_db[[6]]
 }
 
+#load resuls from previous analyses
 if(doyouload){
 
         mat_save=read.table(paste("OUT/tab_data_frame_Gross_waders_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
@@ -243,7 +253,6 @@ if(doyouload){
         }
 
 }else{
-
 
 #Compute synchrony values
 synch_warm_all=community_sync_Gross(db_warm_all,nrands=anrands,method=amethod_w)
@@ -274,6 +283,7 @@ mat=rep(NA,length(list_waders))
 for(v in 1:length(list_waders)){
         mat[v]=list_waders[[v]]$pval
 }
+#Correct p-values
 mat_adj=p.adjust(mat,method=type_correct)
 for(v in 1:length(list_waders)){
         list_waders[[v]]$pval=mat_adj[v]
@@ -281,6 +291,7 @@ for(v in 1:length(list_waders)){
 
 print("Ducks")
 print(Sys.time())
+#Load data
 db_warm=read.csv(paste("IN/warmseason_ducks_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_cold=read.csv(paste("IN/coldseason_ducks_detailed_v2_",end_bio,"_wtoutrarespecies.txt",sep=""))
 db_warm=db_warm[,c(2,3,4)]
@@ -289,6 +300,7 @@ db_cold=db_cold[,c(2,3,4)]
 names(db_warm)=c("dates","sp_data_frame","abundance")
 names(db_cold)=c("dates","sp_data_frame","abundance")
 
+#Divide the data set between before and after 2006 and remove species and dates we do not want
 db_warm_all=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates<2016)
 db_warm_pre_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)   &dates<=2006)
 db_warm_post_2006=subset(db_warm,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dates>2006&dates<2016)
@@ -296,6 +308,7 @@ db_cold_all=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore)  &dat
 db_cold_pre_2006=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore) &dates<=2006)
 db_cold_post_2006=subset(db_cold,!(as.character(sp_data_frame) %in%sp_to_ignore)&dates>2006&dates<2016)
 
+#Normalize if necessary
 if(normalize){
         list_db=list(db_cold_all,db_cold_pre_2006,db_cold_post_2006,db_warm_all,db_warm_pre_2006,db_warm_post_2006)
         for(d in 1:length(list_db)){
@@ -312,6 +325,7 @@ if(normalize){
         db_warm_post_2006=list_db[[6]]
 }
 
+#load previous analyses
 if(doyouload){
 
         mat_save=read.table(paste("OUT/tab_data_frame_Gross_ducks_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
@@ -347,6 +361,7 @@ for(v in 1:length(list_waders)){
 write.table(mat_save,paste("OUT/tab_data_frame_Gross_ducks_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
+#Adjust p-values
 mat=rep(NA,length(list_duck))
 for(v in 1:length(list_duck)){
         mat[v]=list_duck[[v]]$pval
@@ -368,6 +383,7 @@ pdf(paste("Submission_JAE/Revisions_R2/",filename_pdf,sep=""),width=11,height=14
 #pdf(paste("Submission_JAE/Revisions/Fig2_new2_JAE",type_correct,amethod_b,"line.pdf",sep="_"),width=11,height=14)
 #}
 
+#Plot everything within groups
 par(mfrow=c(2,2),mar=c(3,4.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 plot(0,0,t="n",ylim=c(-1,1),xlim=c(0,7.5),xaxt="n",xlab="",ylab="Synchrony index",cex.axis=1.8,cex.lab=1.8,main="Taxonomic groups",cex.main=2,las=1)
 mtext("Within",side=2,line=0.3,outer=T,cex=2,font=2,at=0.75)
@@ -452,6 +468,7 @@ legend("bottomright",c("Waders","Waterfowl"),pch=c(23,24),pt.bg="black",pt.cex=2
 
 print('Now computing between groups')
 #Anas and Calidris
+##Analyses are exactly the same, apart from the method used, which is now amethod_b
 print("Anas Calidris")
 print(Sys.time())
 db_warm=read.csv(paste("IN/warmseason_",end_bio,"_asdataframe_summed_v2_wtoutrarespecies.csv",sep=""),sep=";",header=T)
@@ -661,4 +678,3 @@ lines(c(0.0,7.5),c(0,0),lty=2,lwd=2)
 legend("topleft",c("Waterfowl/Waders"),pch=c(22),pt.bg=c("black"),pt.cex=2,bty="n",cex=2)
 dev.off()
 }
-#system(paste("cp OUT/",filename_pdf," Submission_JAE/Revisions/",filename_pdf,sep=""))
