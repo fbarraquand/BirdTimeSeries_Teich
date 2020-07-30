@@ -116,7 +116,7 @@ for(v in 1:length(essai_taxo)){
         }
         mat_save[v,paste("rands",anrands+1,sep="")]=essai_taxo[[v]]$rands[anrands+1]
 }
-write.table(mat_save,paste("OUT/tab_data_frame_Gross_triad_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
+write.table(mat_save,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_triad_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 
 }
 
@@ -248,20 +248,20 @@ if(length(ref_wmr$x)>length(ref_wmr$y)){
 }
 tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
-write.table(tab_xy,paste("OUT/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+write.table(tab_xy,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
 tab_z=ref_wmr$z
-write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z[,,1]),paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_z_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 tab_z.boot=ref_wmr$z.boot
-write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z.boot[,,1]),paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_zboot_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 
 }else{
 #We need to create a wmr object to store the values, so that it is recognized by the function image_mvcwt. We then store the values from previous analyses in it.
 ref_wmr = wmr(mm)
 
-tmp_xy=read.csv(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
+tmp_xy=read.csv(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/IAAFT_analyses_Gross100-1000surrogates/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
 ref_wmr$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
 ref_wmr$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
 

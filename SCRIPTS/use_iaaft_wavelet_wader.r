@@ -3,7 +3,7 @@
 
 rm(list=ls())
 graphics.off()
-source("SCRIPTS/test_synchrony_Gross.r")
+source("SCRIPTS/iaaft.R")
 library('mvcwt')
 source("SCRIPTS/image_mvcwt_for_colormaps.r")
 source("SCRIPTS/image_mvcwt_for_pvalues.r")
@@ -13,9 +13,18 @@ library("lubridate")
 set.seed(42)
 
 anrands=1000 #Number of surrogates
-end_bio="abundances" #We look at abundances. We make it clear as we also studied the biomasses in other analyses.
-normalize_seq=c(T,F)
-doyouload=T #True if analyses are taken from previous files, False if we want to relaunch an analysis
+
+biomass=T #If biomass==False, we only look at abundances. If biomass==TRUE, we weigh the abundances with the mass of each bird
+
+if(biomass){
+end_bio="biomasses"
+}else{
+end_bio="abundances"
+}
+
+#normalize_seq=c(T,F)
+normalize_seq=F
+doyouload=F #True if analyses are taken from previous files, False if we want to relaunch an analysis
 
 for(normalize in normalize_seq){
 
@@ -73,17 +82,28 @@ tab_ducks=matrix(0,nrow=length(dates),ncol=length(ducks))
 colnames(tab_ducks)=ducks
 
 #We extract the two different tables of waders and waterfowl from the complete database
+######If we want to analyse the biomasses, we need to weigh the abundances
+tab_bm=read.table("IN/Information_Trait_Oiseaux_20190903_allimportantbirds_meanmass.csv",sep=";",dec=".",header=T)
+
 for(id in 1:length(dates)){
         for (s in limicoles){
                 id_d=which(DBt$Date==dates[id]&DBt$Nom_latin==s)
                 if(length(id_d)>0){
                         tab_limicoles[id,s]=DBt$Nombre[id_d]
                 }
+                if(biomass){
+                  tab_limicoles[id,s]=tab_limicoles[id,s]*tab_bm$Mean_mass[as.character(tab_bm$Species)==s]
+		  if(length(tab_bm$Mean_mass[as.character(tab_bm$Species)==s])==0){stop("limicoles pas bm")}
+                }
         }
         for (s in ducks){
                 id_d=which(DBt$Date==dates[id]&DBt$Nom_latin==s)
                 if(length(id_d)>0){
                         tab_ducks[id,s]=DBt$Nombre[id_d]
+                }
+                if(biomass){
+                  tab_ducks[id,s]=tab_ducks[id,s]*tab_bm$Mean_mass[as.character(tab_bm$Species)==s]
+		  if(length(tab_bm$Mean_mass[as.character(tab_bm$Species)==s])==0){stop("ducks pas bm")}
                 }
         }
 
@@ -157,13 +177,13 @@ if(length(ref_wmr_wader$x)>length(ref_wmr_wader$y)){
 }
 tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
-write.table(tab_xy,paste("OUT/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+write.table(tab_xy,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_xy_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
 tab_z=ref_wmr_wader$z
-write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z[,,1]),paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_z_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 tab_z.boot=ref_wmr_wader$z.boot
-write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z.boot[,,1]),paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_zboot_mr_waders",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 }else{
 
@@ -239,13 +259,13 @@ if(length(ref_wmr_waterfowl$x)>length(ref_wmr_waterfowl$y)){
 
 tab_xy=cbind(xx,yy)
 colnames(tab_xy)=c("x","y")
-write.table(tab_xy,paste("OUT/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
+write.table(tab_xy,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_xy_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=T,row.names=F)
 
 tab_z=ref_wmr_waterfowl$z
-write.table(as.matrix(tab_z[,,1]),paste("OUT/tab_z_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z[,,1]),paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_z_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 tab_z.boot=ref_wmr_waterfowl$z.boot
-write.table(as.matrix(tab_z.boot[,,1]),paste("OUT/tab_zboot_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
+write.table(as.matrix(tab_z.boot[,,1]),paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_zboot_mr_waterfowl",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),sep=";",dec=".",col.names=F,row.names=F)
 
 
 }else{
@@ -271,7 +291,7 @@ ref_wmr_waterfowl$z.boot=tmp_array_z.boot
 }
 
 #Finally, we plot both the waterfowl and wader wavelet modulus ratios
-pdf(paste("Submission_JAE/Revisions_R2/wavelet_wader_waterfowl",end_nor,"nocorrection_smallergrid_IAAFT.pdf",sep=""),height=15,width=12)
+pdf(paste("Submission_JAE/Revisions_R2/wavelet_wader_waterfowl",end_bio,"_",end_nor,"_with",anrands,"nocorrection_smallergrid_IAAFT.pdf",sep=""),height=15,width=12)
 layout(matrix(c(1,2,3,4),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 
 #par(mar=c(4,5,3,3))
