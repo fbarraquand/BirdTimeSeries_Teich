@@ -16,7 +16,7 @@ type_correct="BH" #Was bonferroni before
 amethod_b="iaaft" #Could also be shift or ebisuzaki. IAAFT is used between groups as shifting with two groups only may lead to the same surrogates (there is a limited number of combinations of shift you can do with only two time series
 amethod_w="shift" #Shift is used within groups
 anrands=1000 #Number of surrogates we want to test the significance
-biomass=F
+biomass=T
 if(biomass){
 end_bio="biomasses"
 }else{
@@ -25,7 +25,8 @@ end_bio="abundances"
 
 doyouload=F #True if you use files that already exist, False if you want to relaunch the analyses
 
-normalize_seq=c(TRUE,FALSE)
+#normalize_seq=c(TRUE,FALSE)
+normalize_seq=c(FALSE)
 
 source("SCRIPTS/test_synchrony_Gross.r") #Warning: test_synchrony Gross uses SCRIPTS/iaaft.r It sometimes is switched to ../../SCRIPTS/iaaft.r as it also used in other folders that are not located at the root of this folder
 set.seed(42)
@@ -80,7 +81,7 @@ if(normalize){
 
 if(doyouload){
 #In this case, we just take the value from an already existing file.
-        mat_save=read.table(paste("OUT/tab_data_frame_Gross_anas_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
+        mat_save=read.table(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_anas_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
         list_anas=list()
         for(v in 1:nrow(mat_save)){
                 list_anas[[v]]=list(obs=as.numeric(mat_save[v,"obs"]),pval=as.numeric(mat_save[v,"pval"]),alternative=as.character(mat_save[v,"alternative"]),rands=as.numeric(c(mat_save[v,grep("rands",colnames(mat_save))])))
@@ -111,7 +112,7 @@ for(v in 1:length(list_anas)){
         }
         mat_save[v,paste("rands",anrands+1,sep="")]=list_anas[[v]]$rands[anrands+1]
 }
-write.table(mat_save,paste("OUT/tab_data_frame_Gross_anas_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
+write.table(mat_save,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_anas_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
 #With the values in mat_save, correct the p-value for FDR
@@ -164,7 +165,7 @@ if(normalize){
 #Load data from a previous text file if the analyses have already been done
 if(doyouload){
 
-        mat_save=read.table(paste("OUT/tab_data_frame_Gross_calidris_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
+        mat_save=read.table(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_calidris_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
         list_calidris=list()
         for(v in 1:nrow(mat_save)){
                 list_calidris[[v]]=list(obs=as.numeric(mat_save[v,"obs"]),pval=as.numeric(mat_save[v,"pval"]),alternative=as.character(mat_save[v,"alternative"]),rands=as.numeric(c(mat_save[v,grep("rands",colnames(mat_save))])))
@@ -193,7 +194,7 @@ for(v in 1:length(list_calidris)){
         }
         mat_save[v,paste("rands",anrands+1,sep="")]=list_calidris[[v]]$rands[anrands+1]
 }
-write.table(mat_save,paste("OUT/tab_data_frame_Gross_calidris_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
+write.table(mat_save,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_calidris_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
 #Adjust p-values	
@@ -246,7 +247,7 @@ if(normalize){
 #load resuls from previous analyses
 if(doyouload){
 
-        mat_save=read.table(paste("OUT/tab_data_frame_Gross_waders_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
+        mat_save=read.table(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_waders_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
         list_waders=list()
         for(v in 1:nrow(mat_save)){
                 list_waders[[v]]=list(obs=as.numeric(mat_save[v,"obs"]),pval=as.numeric(mat_save[v,"pval"]),alternative=as.character(mat_save[v,"alternative"]),rands=as.numeric(c(mat_save[v,grep("rands",colnames(mat_save))])))
@@ -276,7 +277,7 @@ for(v in 1:length(list_waders)){
         }
         mat_save[v,paste("rands",anrands+1,sep="")]=list_waders[[v]]$rands[anrands+1]
 }
-write.table(mat_save,paste("OUT/tab_data_frame_Gross_waders_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
+write.table(mat_save,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_waders_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
 mat=rep(NA,length(list_waders))
@@ -328,7 +329,7 @@ if(normalize){
 #load previous analyses
 if(doyouload){
 
-        mat_save=read.table(paste("OUT/tab_data_frame_Gross_ducks_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
+        mat_save=read.table(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_ducks_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",dec=".",header=T)
         list_duck=list()
         for(v in 1:nrow(mat_save)){
                 list_duck[[v]]=list(obs=as.numeric(mat_save[v,"obs"]),pval=as.numeric(mat_save[v,"pval"]),alternative=as.character(mat_save[v,"alternative"]),rands=as.numeric(c(mat_save[v,grep("rands",colnames(mat_save))])))
@@ -358,7 +359,7 @@ for(v in 1:length(list_waders)){
         }
         mat_save[v,paste("rands",anrands+1,sep="")]=list_duck[[v]]$rands[anrands+1]
 }
-write.table(mat_save,paste("OUT/tab_data_frame_Gross_ducks_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
+write.table(mat_save,paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_data_frame_Gross_ducks_",end_bio,"_",end_nor,"_with",anrands,".csv",sep=""),sep=";",col.names=TRUE,row.names=F,dec=".")
 }
 
 #Adjust p-values

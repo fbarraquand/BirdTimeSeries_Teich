@@ -85,6 +85,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -4283,7 +4284,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Revisions/Fig2_new3_JAE_biomasses.pdf
+	filename Fig2_new3_JAE_biomasses_NOTscaled.pdf
 	width 95text%
 
 \end_inset
@@ -4298,6 +4299,9 @@ status open
 
 \change_inserted -666822487 1596290922
 Note we have not changed that one
+\change_inserted -2100369821 1596316232
+.
+ It is now.
 \change_unchanged
 
 \end_layout
@@ -4387,9 +4391,14 @@ Dashed black lines delineate regions significantly different from the null
 d at the 10% threshold with a Benjamini-Hochberg correction.
  
 \change_inserted -666822487 1596290996
-Red and blue lines respectivally delineate regions of significantly lower
- and higher synchrony than the null model (independently fluctuating species
- with the same Fourier spectrum).
+Red and blue lines respectiv
+\change_deleted -2100369821 1596314875
+al
+\change_inserted -2100369821 1596314875
+e
+\change_inserted -666822487 1596290996
+ly delineate regions of significantly lower and higher synchrony than the
+ null model (independently fluctuating species with the same Fourier spectrum).
 \change_unchanged
 
 \begin_inset CommandInset label
@@ -4852,11 +4861,16 @@ We investigate here if exactly-zero abundances can distort the compensation
  We chose a simulation with 10 species and 10% missing values for all species
  (close to a worst-case scenario) 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 I'm not sure what I/we meant here, but the last part of the sentence is
  not supported by the code-> It is l.32 of wavelets_simulation.R
+\change_inserted -2100369821 1596315016
+ Is this note still relevant? I don't see the issue here? (the script is
+ now called use_iaaft_simulation_with_missing_data.r )
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -4868,7 +4882,7 @@ I'm not sure what I/we meant here, but the last part of the sentence is
  occurrence of compensation (blue values in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Wavelets-missing-data"
+reference "fig:Wavelet-missing-data"
 plural "false"
 caps "false"
 noprefix "false"
@@ -4881,6 +4895,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -2100369821 1596315020
 \begin_inset Float figure
 wide false
 sideways false
@@ -4969,6 +4985,70 @@ name "fig:Wavelets-missing-data"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1596315029
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1596315064
+\begin_inset Graphics
+	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/worstcase_scenario_wavelets_with1000_IAAFT.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596315029
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596321077
+Wavelet modulus ratio for a 10-species community with compensatory dynamics
+ without (a) and with (b) missing data 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Wavelet-missing-data"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 

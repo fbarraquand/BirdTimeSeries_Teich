@@ -84,6 +84,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -1125,8 +1126,24 @@ Data
 The monthly time series used for the statistical analyses have been collected
  at the Teich Ornithological Reserve, Arcachon Bay, France (44.64°N / -1.02°E),
  by the staff of the Teich reserve, over the whole study period
-\change_inserted -666822487 1596288671
+\change_deleted -2100369821 1596309909
  ([Add years here])
+\change_inserted -2100369821 1596309922
+(1981-2016)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596309940
+There are data before but waders were not counted at this time
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_unchanged
 .
  A species list of the frequent birds is provided in SI Appendix S1.
@@ -1180,8 +1197,26 @@ missing
  data with a model assuming that our reserve is a subsample of a regional
  population) because doing so would have compromised the patterns of local
  synchrony/compensation.
- However, we did check below that having such zeroes in the monthly time
- series cannot affect our conclusions.
+ However, we did check below
+\change_inserted -2100369821 1596310271
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596310319
+Don't you mean in the Appendices?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ that having such zeroes in the monthly time series cannot affect our conclusion
+s.
  In the statistical analyses, we use seasonally averaged abundances (plotted
  in Fig.
  
@@ -1739,8 +1774,14 @@ for
 \change_inserted -666822487 1596289395
 and waterfowl 
 \change_unchanged
-community, as well as the group formed by the great cormorant, grey heron
- and little egret.
+communit
+\change_inserted -2100369821 1596310582
+ies
+\change_deleted -2100369821 1596310581
+y
+\change_unchanged
+, as well as the group formed by the great cormorant, grey heron and little
+ egret.
  All wavelet analyses take as input the monthly time series data.
  Based on the work by 
 \begin_inset CommandInset citation
@@ -1811,7 +1852,29 @@ where
 \begin_inset Formula $|\centerdot|$
 \end_inset
 
- is the modulus of the complex number.
+ is the modulus of the complex number
+\change_inserted -2100369821 1596310650
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596310674
+Don't your prefer writing 
+\begin_inset Formula $\Lambda_{t,s}(y)=\int_{-\infty}^{+\infty}e^{-\frac{1}{2}(\frac{t-\tau}{s})^{2}}(y)d\tau$
+\end_inset
+
+? 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
  The numerator corresponds to the total abundance variation while the denominato
 r corresponds to the fluctuations of each species.
  This index is close to 0 when species compensate and reaches 1 when they
@@ -1840,8 +1903,25 @@ using a
 \change_deleted -666822487 1596289143
 , Benjamini-Hochberg corrected, threshold by
 \change_inserted -666822487 1596289172
- The null hypothesis was constructured using the IAAFT algorithm, using
- 1000 surrogate time series
+ The null hypothesis was constructured
+\change_inserted -2100369821 1596311043
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596311049
+Do you mean constructed?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1596289172
+ using the IAAFT algorithm, using 1000 surrogate time series
 \change_deleted -666822487 1596289158
  100 phase-randomisations of each species time series
 \change_unchanged
@@ -2079,6 +2159,8 @@ status open
 
 \change_inserted -666822487 1596289645
 check that Coralie
+\change_inserted -2100369821 1596312444
+ True, but we could even say 2-6 months
 \change_unchanged
 
 \end_layout
@@ -2104,7 +2186,27 @@ Happy this is still true with the new analyses!
 \end_inset
 
  There could be within-guild compensation at scales of 5 years, post-2006
- for waders and pre-2000 waterfowl.
+ for waders and pre-2000 waterfowl
+\change_inserted -2100369821 1596312511
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596312647
+This is less clear for me.
+ For what I see, the 5-year compensation is around 2006 (1995-2010) for
+ waders.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1596291962
+.
  Waterfowl synchrony trends likely influence whole community trends (Fig.
  
 \begin_inset CommandInset ref
@@ -2147,6 +2249,9 @@ status open
 
 \change_inserted -666822487 1596291996
 Hope this is the right figure!
+\change_inserted -2100369821 1596312928
+ It is.
+ Note that there are more significant values with 1000 than with 100 surrogates.
 \change_unchanged
 
 \end_layout
@@ -2265,6 +2370,7 @@ status open
 \change_inserted -666822487 1596283291
 \begin_inset Graphics
 	filename wavelet_wader_waterfowlNOTscalednocorrection_smallergrid_IAAFT.pdf
+	width 99text%
 
 \end_inset
 
@@ -2317,7 +2423,13 @@ Red and blue
 \change_unchanged
  lines 
 \change_inserted -666822487 1596289241
-respectivally 
+respectiv
+\change_deleted -2100369821 1596313160
+al
+\change_inserted -2100369821 1596313160
+e
+\change_inserted -666822487 1596289241
+ly 
 \change_unchanged
 delineate regions 
 \change_inserted -666822487 1596289241
@@ -2327,13 +2439,48 @@ significantly
 \change_deleted -666822487 1596283370
 different from
 \change_inserted -666822487 1596289241
-lower and higher synchrony than
+lower and higher synchrony 
+\change_inserted -2100369821 1596313314
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596313318
+sychrony value?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1596289241
+than
 \change_unchanged
  the null model (independently fluctuating species
 \change_inserted -666822487 1596289241
  with the same Fourier spectrum
 \change_unchanged
 )
+\change_inserted -2100369821 1596313192
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596313241
+Shouldn't we add the 10% threshold as done in Fig.
+ 2, even though it is not correcred anymore?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_deleted -666822487 1596283404
  with a false discovery rate controlled at the 10% threshold
 \change_unchanged
@@ -2370,6 +2517,7 @@ status open
 \change_inserted -666822487 1596283415
 \begin_inset Graphics
 	filename synchrony_indices_frequent_abundances_NOTscaled_with1000rand_nocorrection_smallgrid_IAAFT_corrected_loc.pdf
+	width 95text%
 
 \end_inset
 
@@ -2396,9 +2544,14 @@ Synchrony indices for the whole community of frequently observed birds.
 ).
  The latter index scales from 0 (compensation, blue color) to 1 (synchrony,
  red color).
- Red and blue lines respectivally delineate regions of significantly lower
- and higher synchrony than the null model (independently fluctuating species
- with the same Fourier spectrum).
+ Red and blue lines respectiv
+\change_deleted -2100369821 1596313372
+al
+\change_inserted -2100369821 1596313372
+e
+\change_inserted -666822487 1596289236
+ly delineate regions of significantly lower and higher synchrony than the
+ null model (independently fluctuating species with the same Fourier spectrum).
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2428,7 +2581,23 @@ Synchrony between phylogenetic or functional groups
 \begin_layout Standard
 More interpretable results can be found when we examine synchrony vs compensatio
 n between functional groups (Fig.
- 2d).
+ 
+\change_deleted -2100369821 1596313431
+2
+\change_inserted -2100369821 1596313431
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gross-synchrony-index"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+d).
  Since we consider only two functional or phylogenetic groups, the 
 \change_deleted -666822487 1596284578
 Gross
@@ -2454,10 +2623,42 @@ Calidris
 \emph default
  are positively correlated in the warm season (for all periods), and have
  unclear correlations during the cold season (Fig.
- 2c).
+ 
+\change_deleted -2100369821 1596313440
+2
+\change_inserted -2100369821 1596313440
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gross-synchrony-index"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+c).
  In contrast, waders and waterfowl are negatively correlated during the
  cold season and positively correlated during the warm season (Fig.
- 2d).
+ 
+\change_deleted -2100369821 1596313445
+2
+\change_inserted -2100369821 1596313445
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gross-synchrony-index"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\change_unchanged
+d).
  Although the negative correlation is not statistically significant, it
  is consistent for both pre- and post-2006 periods.
 \end_layout
@@ -2533,7 +2734,26 @@ noprefix "false"
 
 ).
  There might be some compensation over very short timescales as well (within
- the season), but at very specific times.
+ the season), but at very specific times
+\change_inserted -2100369821 1596313611
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596313667
+So specific that we may not want to mention, them? Do you think it's worth
+ it? If so, why not mention also the ones around 2 years after 2000?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
