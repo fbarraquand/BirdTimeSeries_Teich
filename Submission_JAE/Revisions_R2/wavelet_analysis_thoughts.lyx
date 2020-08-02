@@ -77,11 +77,12 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -524,22 +525,76 @@ we draw a contour at the alpha level with the following code: red for each
 \end_layout
 
 \begin_layout Subsection*
-What is the issue?
+What 
+\change_deleted -666822487 1596355808
+is the issue
+\change_inserted -666822487 1596355811
+were the issues
+\change_unchanged
+?
 \end_layout
 
 \begin_layout Standard
-There were several issues (theoretical and not due to the package itself)
- noted thanks to the suggestions of Referee 1 in Revision 2.
+There were several issues (theoretical
+\change_inserted -666822487 1596355821
+, probably
+\change_deleted -666822487 1596355823
+ and
+\change_unchanged
+ not due to the package itself) noted thanks to the suggestions of Referee
+ 1
+\change_inserted -666822487 1596355837
+ and 3
+\change_unchanged
+ in Revision 2.
  
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -666822487 1596355841
 normalizing the time-series led to a change in observed values (see for
  instance the wavelet/wader wavelet plots in which the synchronizing effect
  of 2006 is much stronger with the scaled time-series).
  Normalised wavelet modulus ratios are not, however, comparable to the Gross
  index and the notion of compensation they examine looses its ecosystem
  level meaning (biomass replacement)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is referee 3's stuff.
+ Perhaps better mentioned after the technical suggestions of R1.
+ 
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1596356821
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -666822487 1596356910
+We first implemented, using the changes mentioned above, a visualization
+ of significantly low (blue) and significantly high (red) synchrony zones,
+ as suggested by referee 1 (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Reference-wavelet-analysis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
@@ -554,10 +609,32 @@ noprefix "false"
 
 \end_inset
 
-) to 1000, most of the significant zones disappeared.
- As the number of surrogates increase, we could assume that the distribution
- of possible values increases in width, and observed values which were really
- close to the limits of the distribution (most of them differ by 10
+) to 1000
+\change_inserted -666822487 1596356977
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1596356986
+check which is in the figure
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+, as suggested by referee 1
+\change_unchanged
+, most of the significant zones disappeared.
+ As the number of surrogates increase
+\change_inserted -666822487 1596356145
+d
+\change_unchanged
+, we could assume that the distribution of possible values increases in
+ width, and observed values which were really close to the limits of the
+ distribution (most of them differ by 10
 \begin_inset Formula $^{-2}-$
 \end_inset
 
@@ -565,10 +642,20 @@ noprefix "false"
 \begin_inset Formula $^{-3}$
 \end_inset
 
- from the 5% limits of the null distribution) are finally included in the
- distribution.
- This, however, is not clear when empirical cumulative distributions are
- plotted (Fig.
+ from the 5% limits of the null distribution) 
+\change_deleted -666822487 1596356151
+are
+\change_inserted -666822487 1596356153
+were
+\change_unchanged
+ finally included in the distribution.
+ This, however, 
+\change_deleted -666822487 1596356160
+is
+\change_inserted -666822487 1596356160
+was
+\change_unchanged
+ not clear when empirical cumulative distributions are plotted (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -592,7 +679,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/reference_image-1.png
+	filename ../../SCRIPTS/explo_mvcwt/reference_image-1.png
 	width 50text%
 
 \end_inset
@@ -605,6 +692,23 @@ status open
 
 \begin_layout Plain Layout
 Reference wavelet analysis for the Cormoran/Heron/Egret case with 100 surrogates
+\change_inserted -666822487 1596356938
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1596356962
+isn't it 1000, since we have all these little dots?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
 , BH correction and a fine grid (423
 \begin_inset Formula $\times$
 \end_inset
@@ -643,7 +747,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/compare_distrib.pdf
+	filename ../../SCRIPTS/explo_mvcwt/compare_distrib.pdf
 	width 99text%
 
 \end_inset
@@ -689,16 +793,72 @@ name "fig:ECDF"
 \end_layout
 
 \begin_layout Itemize
-the p-value BH-adjustment could lead from 12% pvalues<0.1 to 2% pvals<0.1
- in the Cormoran/Heron/Egret case with 100 surrogates and from 11% to 0.2%
- with 1000 surrogates.
- When using a fine scale, there is indeed 178929 (423 scales 
+the p-value B
+\change_inserted -666822487 1596357014
+enjamini-
+\change_unchanged
+H
+\change_inserted -666822487 1596357018
+ochberg
+\change_unchanged
+-adjustment 
+\change_deleted -666822487 1596356193
+could lead
+\change_inserted -666822487 1596356197
+led
+\change_unchanged
+ from 12% pvalues<0.1 to 2% pvals<0.1 in the Cormoran/Heron/Egret case with
+ 100 surrogates and from 11% to 0.2% with 1000 surrogates.
+ 
+\change_inserted -666822487 1596357069
+The important reduction in significant values after correction could perhaps
+ come from the larger number of comparisons due to the size of the grid.
+ Indeed, 
+\change_deleted -666822487 1596356241
+W
+\change_inserted -666822487 1596356241
+w
+\change_unchanged
+hen using a fine scale
+\change_inserted -666822487 1596356244
+d image grid
+\change_unchanged
+, there 
+\change_deleted -666822487 1596356215
+is indeed 
+\change_inserted -666822487 1596356216
+was 
+\change_unchanged
+178929 (423 scales 
 \begin_inset Formula $\times$
 \end_inset
 
  423 locations) comparisons.
- It appears that only the p-values equal to 0 when not adjusted are considered
- significant with a correction (Fig.
+ It appears that only the p-values equal to 0
+\change_inserted -666822487 1596357161
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1596357168
+are we sure that it's exactly zero?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ when not adjusted are 
+\change_inserted -666822487 1596357101
+eventually
+\change_deleted -666822487 1596357086
+considered 
+\change_unchanged
+significant with a correction (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -710,6 +870,14 @@ noprefix "false"
 \end_inset
 
 )
+\change_inserted -666822487 1596357138
+.
+ The False Discovery Rate correction therefore appears of dubious utility
+ here, since this is essentially picking exactly zero p-values and not selecting
+ zones with low p-values.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -722,7 +890,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/pvalue_for1000rands-1.png
+	filename ../../SCRIPTS/explo_mvcwt/pvalue_for1000rands-1.png
 	height 75theight%
 
 \end_inset
@@ -734,7 +902,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-P-values images for 1000 surrogates without fdr correction, with the BH
+P-values images for 1000 surrogates without FDR correction, with the BH
  correction and with BY correction 
 \begin_inset CommandInset label
 LatexCommand label
@@ -753,14 +921,56 @@ name "fig:P-values-corrections"
 \end_inset
 
 
+\change_inserted -666822487 1596355889
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -666822487 1596356312
+Normalizing the time-series also led to a change in observed values (see
+ for instance the wavelet/wader wavelet plots in which the synchronizing
+ effect of 2006 is much stronger with the scaled time-series).
+ Normalised wavelet modulus ratios are not, however, comparable to the Gross
+ index and the notion of compensation they examine looses its ecosystem
+ level meaning (biomass replacement)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1596355903
+This is referee 3's stuff.
+ Perhaps better mentioned after the technical suggestions of R1, so I moved
+ it here.
+ 
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection*
 What we also checked
+\change_inserted -666822487 1596356398
+ and eventually decided
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-The contours do correspond to small p-values; see Fig.
+The contours 
+\change_inserted -666822487 1596356335
+that are drawn 
+\change_unchanged
+do correspond 
+\change_inserted -666822487 1596356339
+well 
+\change_unchanged
+to small p-values; see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -772,19 +982,132 @@ noprefix "false"
 \end_inset
 
 .
+\change_inserted -666822487 1596356541
+
 \end_layout
 
 \begin_layout Itemize
-Instead of phase-randomization of the wavelets, we built new time series
- (that is, in the time domain) with the IAAFTq method and then built the
- p-values using each image pixel's surrogate distribution, each surrogate
+
+\change_inserted -666822487 1596356594
+While removing the FDR correction (but still using Keitt 2008's method),
+ we changed the number of scales (from 423 to 100) and locations (from 423
+ to 212) to limit the number of computations.
+ This had the benefit of reducing the noise in significance contours (as
+ well as the size of the images), see Fig.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small_wmr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ However, illogical contours still appeared in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small_wmr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, in the sense that a zone with index around 0.5 was found to be of significantly
+ low synchrony, which essentially suggested that was is an issue with the
+ null hypothesis (i.e., we can reject too easily the null in places we should
+ not be able to).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1596356541
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\change_inserted -666822487 1596356541
+\begin_inset Graphics
+	filename ../../SCRIPTS/explo_mvcwt/triad_notscaled_nocorrection_smallgrid_1000rands-cut.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1596356541
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1596356541
+Wavelet analysis on a coarser grid, with 1000 surrogates and no correction
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:small_wmr"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -666822487 1596356624
+To fix the problems of null hypotheses and associated p-values, that could
+ not be fixed by simply changing the grid size or the FDR correction, we
+ constructed a new null hypothesis.
+ 
+\change_unchanged
+Instead of phase-randomization of the wavelets
+\change_inserted -666822487 1596356414
+ sensu Keitt (2008)
+\change_unchanged
+, we built new time series (that is, in the time domain) with the IAAFT
+\change_deleted -666822487 1596355915
+q
+\change_unchanged
+ method and then built the p-values using each image pixel's surrogate distribut
+ion, each surrogate 
 \begin_inset Formula $\rho_{j}(s,t)$
 \end_inset
 
  being obtained through wavelet transformation and wavelet modulus ratio
  computation of the IAAFT-obtained time series.
- This could lead to even less significant zones (Cazelles et al.
+ This could lead to 
+\change_deleted -666822487 1596356424
+even 
+\change_unchanged
+less significant zones
+\change_inserted -666822487 1596356431
+ than alternative methods
+\change_unchanged
+ (Cazelles et al.
  2014, Journal of the Royal Society Interface).
  In Fig.
  
@@ -802,7 +1125,34 @@ noprefix "false"
 \begin_inset Formula $\rho(s,t)$
 \end_inset
 
- are now in one block instead of being spread out.
+ are now in one block
+\change_inserted -666822487 1596356455
+ of obvious compensation
+\change_unchanged
+ instead of being spread out
+\change_inserted -666822487 1596356463
+, which is desirable behaviour
+\change_unchanged
+.
+
+\change_inserted -666822487 1596356730
+ In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:IAAFT"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we kept the Benjamini-Hochberg FDR correction but we eventually removed
+ that correction, and the obtained graphs, on both real and simulated data
+ were found to be satisfactory.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -815,7 +1165,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/iaaft_100surrogate-1.png
+	filename ../../SCRIPTS/explo_mvcwt/iaaft_100surrogate-1.png
 	width 50text%
 
 \end_inset
@@ -827,7 +1177,31 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Wavelet analysis with 100 iaaft surrogates (in the time-domain
+Wavelet analysis with 100
+\change_inserted -666822487 1596355939
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1596355962
+thought this was 1000?but I may be wrong
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted -666822487 1596355965
+iaaft
+\change_inserted -666822487 1596355965
+IAAFT
+\change_unchanged
+ surrogates (in the time-domain
 \begin_inset Note Note
 status open
 
@@ -858,6 +1232,8 @@ name "fig:IAAFT"
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -666822487 1596356537
 Finally, we changed the number of scales (from 423 to 100) and locations
  (from 423 to 212).
  This reduced the noise in significance contours (as well as the size of
@@ -876,6 +1252,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1596356537
 \begin_inset Float figure
 wide false
 sideways false
@@ -885,7 +1263,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/SCRIPTS/explo_mvcwt/triad_notscaled_nocorrection_smallgrid_1000rands-cut.png
+	filename ../../SCRIPTS/explo_mvcwt/triad_notscaled_nocorrection_smallgrid_1000rands-cut.png
 	width 75text%
 
 \end_inset
@@ -915,6 +1293,8 @@ name "fig:small_wmr"
 
 \end_inset
 
+
+\change_unchanged
 
 \end_layout
 

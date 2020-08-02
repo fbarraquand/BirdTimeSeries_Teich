@@ -85,7 +85,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -4290,27 +4289,6 @@ status open
 \end_inset
 
 
-\change_inserted -666822487 1596290916
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1596290922
-Note we have not changed that one
-\change_inserted -2100369821 1596316232
-.
- It is now.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -4378,29 +4356,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Wavelet modulus ratio for the wader 
-\change_inserted -666822487 1596290969
-and waterfowl 
-\change_unchanged
-community, scaling from 0 (compensation, blue color) to 1 (synchrony, red
- color), using the mean biomasses instead of the abundances of each species.
- 
-\change_deleted -666822487 1596290976
-Dashed black lines delineate regions significantly different from the null
- model (independently fluctuating species) with a false discovery rate controlle
-d at the 10% threshold with a Benjamini-Hochberg correction.
- 
-\change_inserted -666822487 1596290996
-Red and blue lines respectiv
-\change_deleted -2100369821 1596314875
-al
-\change_inserted -2100369821 1596314875
-e
-\change_inserted -666822487 1596290996
-ly delineate regions of significantly lower and higher synchrony than the
- null model (independently fluctuating species with the same Fourier spectrum).
-\change_unchanged
-
+Wavelet modulus ratio for the wader and waterfowl community, scaling from
+ 0 (compensation, blue color) to 1 (synchrony, red color), using the mean
+ biomasses instead of the abundances of each species.
+ Red and blue lines respectively delineate regions of significantly lower
+ and higher synchrony than the null model (independently fluctuating species
+ with the same Fourier spectrum), at the 10% level.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Wavelet-modulus-ratio"
@@ -4602,13 +4563,9 @@ We compared results for time series of length 35 (the length of our data
  first 35 or 100 time steps of the following 500-time steps series, or subsample
  the time series in order to get 35 or 100 time points (which removes some
  autocorrelation in the dynamics).
- We also considered several community richness (2, 
-\change_inserted -666822487 1596291080
-10, 
-\change_unchanged
-30 and 60, to remain close to the number of species in the different groups
- we analysed), and several strengths of the response to the environmental
- signal (
+ We also considered several community richness (2, 10, 30 and 60, to remain
+ close to the number of species in the different groups we analysed), and
+ several strengths of the response to the environmental signal (
 \begin_inset Formula $b=$
 \end_inset
 
@@ -4661,11 +4618,7 @@ Evolution of Gross' synchrony index for different time series length and
  number of species in the community, in simulations where there is no trend
  in the environmental signal and the data is not subsampled, keeping the
  autocorrelation of the environment.
- The parameter b is the strength of the response to
-\change_deleted -666822487 1596291113
- the
-\change_unchanged
- the environmental signal.
+ The parameter b is the strength of the response to the environmental signal.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4859,23 +4812,7 @@ missing
 We investigate here if exactly-zero abundances can distort the compensation
  patterns evidenced by the wavelet coherence.
  We chose a simulation with 10 species and 10% missing values for all species
- (close to a worst-case scenario) 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I'm not sure what I/we meant here, but the last part of the sentence is
- not supported by the code-> It is l.32 of wavelets_simulation.R
-\change_inserted -2100369821 1596315016
- Is this note still relevant? I don't see the issue here? (the script is
- now called use_iaaft_simulation_with_missing_data.r )
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-.
+ (close to a worst-case scenario) .
  The results show that while the statistical significance of the values
  can change (i.e., the data is more compatible with the null hypothesis of
  time series uncorrelated between species, assuming the null is true), the
@@ -4895,15 +4832,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -2100369821 1596315020
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -4912,107 +4840,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../OUT/wavelets_simulation_1.png
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Without missing data
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../../OUT/wavelets_simulation_missingdata.png
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-With missing data
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Wavelet coherence for a 10-species community with compensatory dynamics,
- without (a) and with (b) missing data
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Wavelets-missing-data"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -2100369821 1596315029
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-
-\change_inserted -2100369821 1596315064
-\begin_inset Graphics
-	filename /home/cpicoche/Documents/Birds/BirdTimeSeries_Teich/OUT/worstcase_scenario_wavelets_with1000_IAAFT.pdf
+	filename ../../OUT/worstcase_scenario_wavelets_with1000_IAAFT.pdf
 	width 95text%
 
 \end_inset
@@ -5021,13 +4849,9 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1596315029
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1596321077
 Wavelet modulus ratio for a 10-species community with compensatory dynamics
  without (a) and with (b) missing data 
 \begin_inset CommandInset label
@@ -5037,18 +4861,10 @@ name "fig:Wavelet-missing-data"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
