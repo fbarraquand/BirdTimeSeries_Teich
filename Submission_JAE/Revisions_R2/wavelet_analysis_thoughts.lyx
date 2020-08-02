@@ -82,6 +82,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -701,6 +702,10 @@ status open
 
 \change_inserted -666822487 1596356962
 isn't it 1000, since we have all these little dots?
+\change_inserted -2100369821 1596361628
+ No.
+ You can check the previous figure in Revision 1, you'll see that we already
+ had these dots.
 \change_unchanged
 
 \end_layout
@@ -844,6 +849,8 @@ status open
 
 \change_inserted -666822487 1596357168
 are we sure that it's exactly zero?
+\change_inserted -2100369821 1596361670
+ Yes.
 \change_unchanged
 
 \end_layout
@@ -991,7 +998,27 @@ noprefix "false"
 \change_inserted -666822487 1596356594
 While removing the FDR correction (but still using Keitt 2008's method),
  we changed the number of scales (from 423 to 100) and locations (from 423
- to 212) to limit the number of computations.
+ to 212
+\change_inserted -2100369821 1596361728
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1596362255
+Just a word : we have 212 locations for the mvcwt package analysis.
+ We went back to 423 for the 'real' plots so that we don't ignore information
+ from one month to another.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1596356594
+) to limit the number of computations.
  This had the benefit of reducing the noise in significance contours (as
  well as the size of the images), see Fig.
  
@@ -1163,13 +1190,24 @@ status open
 
 \begin_layout Plain Layout
 \noindent
-\align center
+\align left
 \begin_inset Graphics
 	filename ../../SCRIPTS/explo_mvcwt/iaaft_100surrogate-1.png
-	width 50text%
+	width 45text%
 
 \end_inset
 
+
+\change_inserted -2100369821 1596362073
+
+\begin_inset Graphics
+	filename ../../SCRIPTS/explo_mvcwt/iaaft_1000surrogate.pdf
+	width 45text%
+
+\end_inset
+
+
+\change_unchanged
 
 \end_layout
 
@@ -1187,6 +1225,9 @@ status open
 
 \change_inserted -666822487 1596355962
 thought this was 1000?but I may be wrong
+\change_inserted -2100369821 1596362083
+.
+ I put the 1000 one on the right, so that you can see by yourself and choose
 \change_unchanged
 
 \end_layout
