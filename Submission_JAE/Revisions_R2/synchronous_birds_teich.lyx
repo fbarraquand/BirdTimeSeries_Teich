@@ -667,31 +667,32 @@ within
 
 \begin_layout Abstract
 5.
- Although most research has focused on viewing compensation vs synchrony
+ 
+\change_deleted -666822487 1596897911
+Although most research has focused on viewing compensation vs synchrony
  across temporal scales, because synchrony is guaranteed at the temporal
- scale of the dominant environmental forcing, our results suggest that compensat
-ion can be masked as well at some taxonomic or functional scales.
- We suggest that abundance compensation may have more potential to emerge
- between broad functional groups, rather between species.
-\change_inserted -666822487 1596292072
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1596292091
-check if we need to modify this concluding sentence somewhat in the end.
+ scale of the dominant environmental forcing, o
+\change_inserted -666822487 1596897916
+O
+\change_unchanged
+ur results suggest that 
+\change_deleted -666822487 1596897947
+compensation can be masked as well at some taxonomic or functional scales.
+ We suggest that 
+\change_inserted -666822487 1596897956
  
 \change_unchanged
-
-\end_layout
-
-\end_inset
-
-
+abundance compensation may have more potential to emerge between broad functiona
+l groups
+\change_deleted -666822487 1596898062
+,
 \change_unchanged
-
+ rather between species
+\change_inserted -666822487 1596898011
+, as well as at relatively long temporal scales, such as multiple years
+ for vertebrates, above that of the dominant synchronizing driver
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -815,11 +816,18 @@ literal "false"
 
 \end_inset
 
- since no species can increase without another species decreasing in abundance.
+ since no species can increase without 
+\change_inserted -666822487 1596898278
+at least 
+\change_unchanged
+another species decreasing in abundance.
  Outside of this zero-sum scenario, in models where Lotka-Volterra competition
  is combined with temporal environmental variability, theoretical research
- has revealed that increased interspecific competition might not increase
- species compensation 
+ has revealed that increased interspecific competition might not 
+\change_inserted -666822487 1596898307
+always 
+\change_unchanged
+increase species compensation 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ives_stability_1999"
@@ -873,8 +881,12 @@ literal "true"
 \end_inset
 
 , because a main environmental driver (e.g., temperature or light) may synchronize
- species abundances or growth rates at some scale, creating large variance
- in community-wide biomass, in spite of strongly competitive dynamics.
+ species abundances or growth rates at some 
+\change_inserted -666822487 1596898371
+temporal 
+\change_unchanged
+scale, creating large variance in community-wide biomass, in spite of strongly
+ competitive dynamics.
  Further research has therefore focused on specific timeframes during which
  compensatory dynamics may be found (e.g., below the seasonal scale at which
  temperature fluctuations tend to synchronize species dynamics, 
@@ -1041,9 +1053,12 @@ Our objective is therefore to examine how synchronous or compensatory bird
  communities are at different temporal and taxonomic (or functional) scales.
  Our dataset is ideally suited to the task given that (i) it is a highly
  temporally resolved time series with respect to the species typical generation
- times, but it also extends well beyond generation time (35 years) and (ii)
- the reserve where the data has been collected was subjected to a major
- management change c.
+ times, but it also extends well beyond generation time (
+\change_inserted -666822487 1596898737
+timespan of 
+\change_unchanged
+35 years) and (ii) the reserve where the data has been collected was subjected
+ to a major management change c.
  2006 (change in water levels), favouring different types of wetland birds
  (so that over long timescales, there is a real potential for changes in
  community composition).
@@ -1062,7 +1077,7 @@ The monthly time series used for the statistical analyses have been collected
  at the Teich Ornithological Reserve, Arcachon Bay, France (44.64°N / -1.02°E),
  by the staff of the Teich reserve, over the whole study period (1981-2016)
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 There are data before but waders were not counted at this time
@@ -1145,7 +1160,11 @@ Don't you mean in the Appendices?
 
 \change_unchanged
  that having such zeroes in the monthly time series cannot affect our conclusion
-s.
+s
+\change_inserted -666822487 1596899006
+ (see SI)
+\change_unchanged
+.
  In the statistical analyses, we use seasonally averaged abundances (plotted
  in Fig.
  
@@ -1178,10 +1197,9 @@ partially
 greatly 
 \change_unchanged
 overlap
-\change_inserted -666822487 1596384651
+\change_inserted -666822487 1596899825
  (i.e., species with greater abundances in the reserve in winter have also
- some summer residents, though these individuals may not be the same as
- there can be marked differences in migratory patterns within a species).
+ some summer residents, though these may be different individuals).
 
 \change_deleted -666822487 1596384362
  due to a number of shared species.
@@ -1310,8 +1328,17 @@ Calidris
  A list of all birds found frequently in the reserve is presented in Appendix
  S1; aside from waders and waterfowl, other common species include herons,
  egrets and cormorants (see below).
- Among the fish eaters, grebes and gulls were also present; a few raptors
- as well.
+ Among the fish eaters, grebes and gulls were 
+\change_deleted -666822487 1596899911
+also present
+\change_inserted -666822487 1596899914
+frequently counted
+\change_unchanged
+; a few raptors 
+\change_inserted -666822487 1596899919
+were present 
+\change_unchanged
+as well.
 \end_layout
 
 \begin_layout Standard
@@ -2988,7 +3015,7 @@ This can be explained by a broad inflow of birds in the summer, including
 \change_unchanged
 .
 
-\change_inserted -666822487 1596388586
+\change_inserted -666822487 1596902295
  A simple explanation is that the reserve might be closer to its carrying
  capacity for these species in winter, so that space is limited and increases
  in one functional group are compensated by decreases in the other.
@@ -3039,34 +3066,31 @@ filled
 
 \begin_layout Standard
 
-\change_inserted -666822487 1596388737
-An alternative idea is that although space may be likewise limited in spring
- and summer, the nature of bird individuals may be more varied in summer:
- some individuals are breeders and compete locally for space and food resources,
- while other individuals are just passing through.
+\change_inserted -666822487 1596902851
+Another reason why compensation between guilds might not be seen in the
+ warm season pertains to differences in migratory and reproductive patterns
+ of these two guilds.
+ Although a number of waterfowl species breed in the reserve, most waders
+ do not.
+ Therefore, there is a greater difference between the spatial contraints
+ of the two guilds in summer, with some waterfowl individuals that are 
+\begin_inset Quotes eld
+\end_inset
+
+locally anchored
+\begin_inset Quotes erd
+\end_inset
+
+ while all waders are presumably very mobile.
  
 \change_deleted -666822487 1596351196
  
-\change_inserted -666822487 1596388831
-Disentangling this and the carrying capacity hypotheses would likely require
- further inquiry on a species-by-species basis, investigating in detail
- life histories.
+\change_inserted -666822487 1596902934
+Further investigation on a species-by-species basis, with the knowledge
+ of migratory schedules and reproductive status (i.e., which species is known
+ to breed in the reserve), could reveal other interesting patterns of synchrony
+ or compensation.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1596388831
-(which would be unpractical here, since there are 60 frequent species...).
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3169,7 +3193,7 @@ n turn, regional-scale dynamics influence which species are locally settling
 \change_inserted -666822487 1596389901
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3209,12 +3233,28 @@ on
 using
 \change_unchanged
  the whole time series, 
-\change_inserted -666822487 1596389590
-we have also performed yearly analyses pre- and post-2006.
- The reason for this is that 
+\change_inserted -666822487 1596903076
+we have also performed seasonal analyses pre- and post-2006.
+ The reason for these additional analyses is that 
 \change_unchanged
 a marked change in management occurred around 2006, after which the water
- levels were kept at a lower level.
+ levels were 
+\change_deleted -666822487 1596903106
+kept at a lower level
+\change_inserted -666822487 1596903137
+lower.
+ Separating pre-/post-2006 and comparing to the previous analyses allows
+ to disentangle the effect of the 
+\begin_inset Quotes eld
+\end_inset
+
+normal
+\begin_inset Quotes erd
+\end_inset
+
+ dynamics from the effect of this management change
+\change_unchanged
+.
  
 \change_deleted -666822487 1596389576
 We have therefore also performed yearly analyses pre- and post-2006
