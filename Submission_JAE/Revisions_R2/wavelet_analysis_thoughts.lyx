@@ -92,7 +92,21 @@ On wavelet analyses with the mvcwt package, issues, and technical fixes
 \end_layout
 
 \begin_layout Standard
-To study synchrony, Keitt (2008) presents the wavelet modulus ratio, i.e.
+To study synchrony, 
+\change_deleted -666822487 1597168811
+Keitt (2008)
+\change_inserted -666822487 1597168811
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "keitt_coherent_2008"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ presents the wavelet modulus ratio, i.e.
  
 \begin_inset Formula $\rho(s,t)=\frac{\Lambda_{s,t}(|\sum_{k}w_{k}(s,t)|)}{\Lambda_{s,t}(\sum_{k}|w_{k}(s,t)|)}$
 \end_inset
@@ -1009,8 +1023,19 @@ To fix the problems of null hypotheses and associated p-values, that could
  not be fixed by simply changing the grid size or changing the FDR correction,
  we constructed an entirely new null hypothesis.
  Instead of phase-randomization of the wavelets sensu Keitt (2008), we built
- new time series with the IAAFT method and then built the p-values using
- each image pixel's surrogate distribution.
+ new time series with the IAAFT method 
+\change_inserted -666822487 1597168935
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "schreiber_surrogate_2000"
+literal "false"
+
+\end_inset
+
+ 
+\change_unchanged
+and then built the p-values using each image pixel's surrogate distribution.
  Each surrogate 
 \begin_inset Formula $\rho_{j}(s,t)$
 \end_inset
@@ -1018,11 +1043,24 @@ To fix the problems of null hypotheses and associated p-values, that could
  is therefore obtained through wavelet transformation and wavelet modulus
  ratio computation of the IAAFT-obtained time series.
  In theory, this could have led to less significant zones than alternative
- methods (Cazelles et al.
- 2014, Journal of the Royal Society Interface), but we found that it provided
- a suitable and easily understandable null hypothesis: the Fourier spectrum
- is conserved for each species while all cross-correlations between species
- are lost.
+ methods 
+\change_deleted -666822487 1597168896
+(Cazelles et al.
+ 2014, Journal of the Royal Society Interface)
+\change_inserted -666822487 1597168896
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cazelles2014wavelet"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+, but we found that it provided a suitable and easily understandable null
+ hypothesis: the Fourier spectrum is conserved for each species while all
+ cross-correlations between species are lost.
  In Fig.
  
 \begin_inset CommandInset ref
@@ -1055,8 +1093,22 @@ noprefix "false"
 
 , we kept the Benjamini-Hochberg FDR correction but we eventually removed
  that correction, which is in general not considered in wavelet analyses
- (Cazelles et al.
- 2014).
+ 
+\change_deleted -666822487 1597168907
+(Cazelles et al.
+ 2014)
+\change_inserted -666822487 1597168907
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cazelles2014wavelet"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+.
  The graphs presented in the paper and the response letter/revision folder
 \begin_inset Note Note
 status collapsed
@@ -1176,12 +1228,28 @@ status open
 
 \begin_layout Plain Layout
 We should add a biblio?
-\change_inserted -666822487 1597168131
- F: yes if you're so inclined...
+\change_inserted -666822487 1597168950
+ Yes, done.
  
 \change_unchanged
 
 \end_layout
+
+\end_inset
+
+
+\change_inserted -666822487 1597168770
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1597168792
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "BiblioTeich"
+options "besjournals"
 
 \end_inset
 
