@@ -82,6 +82,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -94,9 +95,68 @@ On wavelet analyses with the mvcwt package, issues, and technical fixes
 \begin_layout Standard
 To study synchrony, Keitt (2008) presents the wavelet modulus ratio, i.e.
  
-\begin_inset Formula $\rho(s,t)=\frac{\Lambda_{s,t}(|\sum_{k}w_{k}(s,t)|)}{\Lambda_{s,t}(\sum_{k}|w_{k}(s,t)|)}$
+\begin_inset Formula $\rho(s,t)=\frac{\Lambda_{s,t}(|\sum_{k}w_{k}(s,\tau)|)}{\Lambda_{s,t}(\sum_{k}|w_{k}(s,\tau)|)}$
 \end_inset
 
+
+\change_inserted -2100369821 1597156742
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1597156875
+I would be happy to have your opinion on using either 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $w_{k}(s,\tau)$
+\end_inset
+
+ or 
+\begin_inset Formula $w_{k}(s,t)$
+\end_inset
+
+.
+ From Keitt's notation in his 2008 paper, it should be the former BUT I
+ am wondering if this is a typo.
+ As 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ integrates over 
+\begin_inset Formula $\tau$
+\end_inset
+
+, however, it would make sense that 
+\begin_inset Formula $y=w_{k}(s,\tau)$
+\end_inset
+
+ is indexed on 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ What do you think?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
  where 
 \begin_inset Formula $\Lambda_{s,t}(y)=\int_{-\infty}^{+\infty}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}(y)d\tau$
 \end_inset
@@ -170,7 +230,11 @@ verb|mvcwt|
 \end_inset
 
  takes a table of dates and time series and computes the corresponding Morlet
- wavelets for each scale and location required.
+ wavelet
+\change_deleted -2100369821 1597156894
+s
+\change_unchanged
+ for each scale and location required.
  By default, the number of locations L is the number of dates, and is equal
  to the number of scales S.
 \end_layout
@@ -737,7 +801,17 @@ status open
 
 \begin_layout Plain Layout
 Reference wavelet analysis for the Cormoran/Heron/Egret case with 100 surrogates
-, BH correction and a fine grid (423
+, 
+\change_deleted -2100369821 1597157131
+BH
+\change_inserted -2100369821 1597157155
+Benjamini-Hochberg false discovery correction
+\change_deleted -2100369821 1597157158
+ correction
+\change_inserted -2100369821 1597157158
+s
+\change_unchanged
+ and a fine grid (423
 \begin_inset Formula $\times$
 \end_inset
 
@@ -869,6 +943,22 @@ are we sure that it's exactly zero? Yes.
 are
 \change_inserted -666822487 1597135727
 become
+\change_inserted -2100369821 1597157729
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1597157731
+became?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_deleted -666822487 1597135728
  
 \change_inserted -666822487 1596817609
@@ -974,11 +1064,25 @@ for 1000 surrogates without FDR correction
 \change_inserted -666822487 1596818369
  (top)
 \change_unchanged
-, with the BH correction
+, with the BH
+\change_inserted -2100369821 1597157766
+ (Benjamini-Hochberg)
+\change_unchanged
+ correction
 \change_inserted -666822487 1596818401
  (middle),
 \change_unchanged
- and with BY correction
+ and with
+\change_inserted -2100369821 1597157809
+ the
+\change_unchanged
+ 
+\change_deleted -2100369821 1597157797
+BY
+\change_inserted -2100369821 1597157797
+Benjamini-Yekutieli
+\change_unchanged
+ correction
 \change_inserted -666822487 1596818377
  (bottom)
 \change_unchanged
@@ -992,8 +1096,11 @@ name "fig:P-values-corrections"
 
 \change_inserted -666822487 1597135852
  as recommended by Keitt (2008).
- Red is high probabability, close to 1, blue is low probability, close to
- 0.
+ Red is high proba
+\change_deleted -2100369821 1597157830
+ba
+\change_inserted -666822487 1597135852
+bility, close to 1, blue is low probability, close to 0.
  The bottom and middle panel show 
 \begin_inset Quotes eld
 \end_inset
@@ -1061,8 +1168,11 @@ level meaning (
 biomass replacement
 \change_inserted -666822487 1596817792
 i.e., rare species have equal weight than common species in normalised analyses,
- while common species are actually the species that matters most for compensatio
-n in real systems
+ while common species are actually the species that matter
+\change_deleted -2100369821 1597157895
+s
+\change_inserted -666822487 1596817792
+ most for compensation in real systems
 \change_unchanged
 )
 \change_inserted -666822487 1596817799
@@ -1327,6 +1437,23 @@ obtained
 graphs
 \change_inserted -666822487 1597136532
  presented in the paper and the response letter
+\change_inserted -2100369821 1597158127
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1597158144
+If this is supposed to be public, should we mention the response letter,
+ which will not be accessible by other readers?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
 \change_unchanged
 , on both real and simulated data
 \change_inserted -666822487 1597136535
@@ -1451,6 +1578,29 @@ make it produce meaningful results on our data
 We have therefore used instead the well-known IAAFT procedure which has
  a clearly defined null hypothesis and provided sensible results on both
  simulated and real data.
+\change_inserted -2100369821 1597158178
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1597158180
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1597158185
+We should add a biblio?
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_body

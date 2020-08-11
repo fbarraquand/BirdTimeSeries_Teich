@@ -74,9 +74,9 @@ n_list=sample(1:length(distrib100_func$z.boot),9)
 for(i in 1:9){
 	plot(distrib100_func$z.boot[[n_list[i]]],col="blue",xlim=c(0,1))
 	lines(distrib1000_func$z.boot[[n_list[i]]],col="red",xlim=c(0,1))
-	id_obs=which(id==n_list[[i]],arr.ind=T)
-	abline(v=distrib100_func$z.boot[[n_list[[i]]]](distrib100_func$z[id_obs[1],id_obs[2],1]),lty=2,col="blue")
-	abline(v=distrib1000_func$z.boot[[n_list[[i]]]](distrib1000_func$z[id_obs[1],id_obs[2],1]),lty=2,col="red")
+	id_obs=which(id==n_list[[i]],arr.ind=T) #Observed value
+	abline(v=distrib100_func$z[id_obs[1],id_obs[2],1],lty=2,col="blue")
+	abline(v=distrib1000_func$z[id_obs[1],id_obs[2],1],lty=2,col="red")
 }
 dev.off()
 
