@@ -4071,11 +4071,11 @@ ducks of the tribe
 Calidris
 \emph default
  genus), and all waders (c, including calidrids).
- The solid black lines represent trends
-\change_inserted -2100369821 1597155490
-
+ The solid black lines represent 
+\change_deleted -666822487 1597168247
+trends
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4088,10 +4088,19 @@ Are these trends? These are actual numbers.
 
 \end_inset
 
-
+ in 
+\change_inserted -666822487 1597168270
+how 
 \change_unchanged
- in summed abundances for each guild when abundances are strictly positive,
- thin dotted lines connect positive to zero abundances.
+summed abundances
+\change_inserted -666822487 1597168273
+ change over time
+\change_unchanged
+ for each guild when abundances are strictly positive, 
+\change_inserted -666822487 1597168261
+while 
+\change_unchanged
+thin dotted lines connect positive to zero abundances.
  The coloured symbols below the curves represent each species abundances.
  Species composition on the donut plots (right) are given for species whose
  relative abundance is over 1% in the group considered.
@@ -4165,13 +4174,7 @@ Temporal trends in the abundance of all birds and in the main functional
 \end_layout
 
 \begin_layout Subsection*
-Appendix S
-\change_inserted -666822487 1596290856
-3
-\change_deleted -666822487 1596290855
-4
-\change_unchanged
- - Additional plots concerning cormorant and heron+egret
+Appendix S3 - Additional plots concerning cormorant and heron+egret
 \end_layout
 
 \begin_layout Standard
@@ -4221,34 +4224,26 @@ We noted on Fig.
  scale.
  We thus wondered if log-transforming the abundance would affect the values
  of the synchrony index observed for this group, and make compensation more
- 
-\change_deleted -2100369821 1597155694
-likely
-\change_inserted -2100369821 1597155697
-visible
+ visible
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1597155728
 Log-transforming does not change the likelihood of a mechanism
+\change_inserted -666822487 1597168348
+.
+ F: yes, good point.
+ 
 \change_unchanged
 
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 .
  It appears to be the reverse: synchrony values are higher with log-transformed
  abundances.
- In fact, an annual representation of abundance
-\change_inserted -2100369821 1597155745
-s
-\change_unchanged
- (seasonal averages, Fig.
+ In fact, an annual representation of abundances (seasonal averages, Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4295,25 +4290,23 @@ name "fig:seasonal-averages-cormorant"
 \end_inset
 
 
-\change_inserted -2100369821 1597155777
-
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1597155790
 I wonder if we should not begin by the time series, then show 
 \backslash
 eta
+\change_inserted -666822487 1597168333
+.
+ F/ fine like this.
+ 
 \change_unchanged
 
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -4328,7 +4321,13 @@ eta
 \end_layout
 
 \begin_layout Subsection*
-Appendix S5 - Synchrony indices using biomasses
+Appendix S
+\change_deleted -666822487 1597169918
+5
+\change_inserted -666822487 1597169918
+4
+\change_unchanged
+ - Synchrony indices using biomasses
 \end_layout
 
 \begin_layout Standard
@@ -4386,24 +4385,16 @@ Calidris
  to the observed values.
  Red stars correspond to synchrony values significantly different from the
  null model, at the 10% threshold with a Benjamini-Hochberg correction.
-\change_inserted -2100369821 1597155865
-
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1597155879
 J'ai réduit un tout petit peu la figure car la légende mordait sur le numéro
  de page
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -4471,10 +4462,34 @@ name "fig:Wavelet-modulus-ratio"
 
 
 \change_unchanged
-Appendix S6 - Properties of the Gross whole community synchrony index 
+Appendix S
+\change_deleted -666822487 1597169931
+6
+\change_inserted -666822487 1597169931
+5
+\change_unchanged
+ - Properties of the 
+\change_deleted -666822487 1597169068
+Gross
+\change_inserted -666822487 1597169068
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ whole community synchrony index 
 \begin_inset Formula $\eta$
 \end_inset
 
+
+\change_inserted -666822487 1597169076
+,
+\change_unchanged
  when two groups react in opposite ways
 \end_layout
 
@@ -4543,20 +4558,9 @@ noprefix "false"
  Open circles represent all points of the time series while large filled
  circles correspond to the sub-sampling of the time series (keeping only
  35 points).
- 
-\change_deleted -2100369821 1597156158
-Cold colors
-\change_inserted -2100369821 1597156160
-Shades of blue
-\change_unchanged
- indicate species which react positively to the environmental signal and
- 
-\change_deleted -2100369821 1597156166
-warm colors
-\change_inserted -2100369821 1597156169
-shades of red
-\change_unchanged
- indicate species which have a negative reaction to the same signal.
+ Shades of blue indicate species which react positively to the environmental
+ signal and shades of red indicate species which have a negative reaction
+ to the same signal.
  The environmental signal is shown in black, dashed lines, and indexed on
  the right axis.
  This signal either follows an increasing trend (a), or just an autocorrelated
@@ -4639,11 +4643,6 @@ where the whole community is formed by
 \end_inset
 
 , to keep the model in other ways exactly similar to 
-\change_deleted -2100369821 1597156049
-Gross et al.
- 
-\change_unchanged
-
 \begin_inset CommandInset citation
 LatexCommand citet
 key "gross2013species"
@@ -4723,17 +4722,28 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of Gross' synchrony index for different time series length
-\change_inserted -2100369821 1597156464
+
+\change_deleted -666822487 1597169028
+Evolution of Gross
+\change_inserted -666822487 1597169028
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+'
+\change_inserted -666822487 1597169042
 s
 \change_unchanged
- and number
-\change_inserted -2100369821 1597156509
-s
-\change_unchanged
- of species in the community, in simulations where there is no trend in
- the environmental signal and the data is not subsampled, keeping the autocorrel
-ation of the environment.
+ synchrony index for different time series length and number of species
+ in the community, in simulations where there is no trend in the environmental
+ signal and the data is not subsampled, keeping the autocorrelation of the
+ environment.
  The parameter b is the strength of the response to the environmental signal.
  
 \begin_inset CommandInset label
@@ -4784,17 +4794,28 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gross' synchrony index for different time series length
-\change_inserted -2100369821 1597156473
+
+\change_deleted -666822487 1597169036
+Gross
+\change_inserted -666822487 1597169036
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+'
+\change_inserted -666822487 1597169040
 s
 \change_unchanged
- and number
-\change_inserted -2100369821 1597156505
-s
-\change_unchanged
- of species in the community, in simulations where there is no trend in
- the environmental signal and the data is subsampled (keeping 35 or 100
- time steps), removing in effect the autocorrelation of the environment.
+ synchrony index for different time series lengths and numbers of species
+ in the community, in simulations where there is no trend in the environmental
+ signal and the data is subsampled (keeping 35 or 100 time steps), removing
+ in effect the autocorrelation of the environment.
  The parameter 
 \begin_inset Formula $b$
 \end_inset
@@ -4853,18 +4874,25 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gross' synchrony index for different time series length
-\change_inserted -2100369821 1597156477
-s
+
+\change_deleted -666822487 1597169050
+Gross'
+\change_inserted -666822487 1597169051
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+'s
 \change_unchanged
- and number
-\change_inserted -2100369821 1597156501
-s
-\change_unchanged
- of species in the community, in simulations where there is an increasing
- trend in the environmental signal and the data is subsampled (for 35 or
- 100 time steps), removing part of the autocorrelation of the environment
- in the dynamics of the species.
+ synchrony index for different time series lengths and numbers of species
+ in the community, in simulations where there is an increasing trend in
+ the environmental signal and the data is subsampled (for 35 or 100 time
+ steps), removing part of the autocorrelation of the environment in the
+ dynamics of the species.
  The parameter 
 \begin_inset Formula $b$
 \end_inset
@@ -4903,12 +4931,40 @@ noprefix "false"
 \end_inset
 
 ), if we consider two groups which have opposite reactions to the same driver,
- the Gross index is not sensitive to the length of the time series or to
- the number of species in the community, in the sense that it will not indicate
- false synchrony.
+ the 
+\change_deleted -666822487 1597169054
+Gross
+\change_inserted -666822487 1597169054
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ index is not sensitive to the length of the time series or to the number
+ of species in the community, in the sense that it will not indicate false
+ synchrony.
  The only contradiction to this observation appears when the driver has
- only a small effect on the community, and the Gross index is actually a
- simple correlation (i.e., the community is made of 2 species).
+ only a small effect on the community, and the 
+\change_deleted -666822487 1597169057
+Gross
+\change_inserted -666822487 1597169057
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gross2013species"
+literal "false"
+
+\end_inset
+
+
+\change_unchanged
+ index is actually a simple correlation (i.e., the community is made of 2
+ species).
  The main finding of these analyses, aside from the robustness of the 
 \begin_inset Formula $\eta$
 \end_inset
@@ -4927,7 +4983,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsection*
-Appendix S7 - Effect of 
+Appendix S
+\change_deleted -666822487 1597169944
+7
+\change_inserted -666822487 1597169944
+6
+\change_unchanged
+ - Effect of 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4942,11 +5004,7 @@ missing
 We investigate here if exactly-zero abundances can distort the compensation
  patterns evidenced by the wavelet coherence.
  We chose a simulation with 10 species and 10% missing values for all species
- (close to a worst-case scenario)
-\change_deleted -2100369821 1597156583
- 
-\change_unchanged
-.
+ (close to a worst-case scenario).
  The results show that while the statistical significance of the values
  can change (i.e., the data is more compatible with the null hypothesis of
  time series uncorrelated between species, assuming the null is true), the
@@ -5011,7 +5069,7 @@ name "fig:Wavelet-missing-data"
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "../../ARTICLE/BiblioTeich"
+bibfiles "BiblioTeich"
 options "besjournals"
 
 \end_inset
