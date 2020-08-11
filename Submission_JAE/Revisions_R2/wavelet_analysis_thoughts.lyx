@@ -88,11 +88,7 @@
 \begin_body
 
 \begin_layout Title
-On wavelet analyses with the mvcwt package
-\change_inserted -666822487 1596816971
-, issues, and technical fixes
-\change_unchanged
-
+On wavelet analyses with the mvcwt package, issues, and technical fixes
 \end_layout
 
 \begin_layout Standard
@@ -193,8 +189,11 @@ verb|wmr.boot|
 
 \end_inset
 
- takes the wavelets and compute the wavelet modulus ratio (wmr) of the observed
- time-series.
+ takes the wavelets and compute
+\change_inserted -666822487 1597135120
+s
+\change_unchanged
+ the wavelet modulus ratio (wmr) of the observed time-series.
  It then computes R surrogates to provide the quantiles corresponding to
  the observed value at each scale and location.
 \end_layout
@@ -205,10 +204,34 @@ it first computes the observed wmr (called z)
 \end_layout
 
 \begin_layout Enumerate
-for each scale, it shifts the phase of the observed wavelets for the number
- of surrogates required.
- This can be compared to surrogates produced by shifting in the time-domain.
- In total, there is therefore S 
+for each scale
+\change_inserted -666822487 1597135132
+ 
+\begin_inset Formula $s$
+\end_inset
+
+
+\change_unchanged
+, 
+\change_deleted -666822487 1597135137
+it
+\change_inserted -666822487 1597135146
+the function
+\change_unchanged
+ shifts the phase of the observed wavelets for the number of surrogates
+ required.
+ 
+\change_deleted -666822487 1597135157
+This can be compared to surrogates produced by shifting in the time-domain.
+ 
+\change_unchanged
+In total, there 
+\change_deleted -666822487 1597135173
+is
+\change_inserted -666822487 1597135173
+are
+\change_unchanged
+ therefore S 
 \begin_inset Formula $\times$
 \end_inset
 
@@ -219,6 +242,10 @@ status open
 
 \begin_layout Plain Layout
 What is the exact null hypothesis with this method
+\change_inserted -666822487 1597135165
+, we do not know...
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -227,12 +254,30 @@ What is the exact null hypothesis with this method
 \end_layout
 
 \begin_layout Enumerate
-for each scale, it compares the value of the observed wmr at location 
+for each scale, 
+\change_deleted -666822487 1597135182
+it
+\change_inserted -666822487 1597135184
+the function
+\change_unchanged
+ compares the value of the observed wmr at location 
 \begin_inset Formula $t$
 \end_inset
 
- to the distribution of the index obtained with the surrogates.
- There is therefore S 
+ to the distribution of the index obtained 
+\change_deleted -666822487 1597135202
+with
+\change_inserted -666822487 1597135203
+from
+\change_unchanged
+ the surrogates.
+ There 
+\change_deleted -666822487 1597135206
+is
+\change_inserted -666822487 1597135207
+are
+\change_unchanged
+ therefore S 
 \begin_inset Formula $\times$
 \end_inset
 
@@ -284,7 +329,7 @@ L
 \noun off
 \color none
 
-\begin_inset Formula $Pr(X<=x)$
+\begin_inset Formula $Pr(X<=x_{obs})$
 \end_inset
 
  is called z.boot.
@@ -333,26 +378,51 @@ verb|wmr|
 
 , which contains only the observed values of the index, z).
  It first plots the values in z as an image ; then uses z.boot.
- We describe first the classical way it does this, and will then explain
- the modifications we made.
+ We describe first the 
+\change_deleted -666822487 1597135315
+classical way it does this
+\change_inserted -666822487 1597135342
+way this function was originally implemented
+\change_unchanged
+, and 
+\change_deleted -666822487 1597135332
+will 
+\change_unchanged
+then 
+\change_deleted -666822487 1597135337
+explain 
+\change_unchanged
+the modifications we made.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-it first computes 
-\begin_inset Formula $1-|1-2*Pr(X<=x)|$
+
+\change_deleted -666822487 1597135357
+it
+\change_inserted -666822487 1597135361
+the function
+\change_unchanged
+ first computes 
+\begin_inset Formula $1-|1-2*Pr(X<=x_{obs})|$
 \end_inset
 
 .
  This formulation corresponds to the usual two-sided p-value, that is 
-\begin_inset Formula $p_{val}=2\min\left(Pr(X\le x),Pr(X\ge x)\right)$
+\begin_inset Formula $p_{val}=2\min\left(Pr(X\le x_{obs}),Pr(X\ge x_{obs})\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-it computes the adjusted p-value 
+
+\change_deleted -666822487 1597135470
+it
+\change_inserted -666822487 1597135472
+the function then
+\change_unchanged
+ computes the adjusted p-value 
 \begin_inset Formula $p_{val,adj}$
 \end_inset
 
@@ -360,7 +430,13 @@ it computes the adjusted p-value
 \end_layout
 
 \begin_layout Enumerate
-it plots the contour for 
+
+\change_deleted -666822487 1597135477
+it
+\change_inserted -666822487 1597135479
+the function finally
+\change_unchanged
+ plots the contour for 
 \begin_inset Formula $p_{val}$
 \end_inset
 
@@ -394,7 +470,11 @@ What we changed
 \end_layout
 
 \begin_layout Standard
-There were several adjustments made to the 
+There were several adjustments
+\change_inserted -666822487 1597135497
+ we
+\change_unchanged
+ made to the 
 \begin_inset ERT
 status open
 
@@ -445,15 +525,23 @@ we first compute
 
 \begin_layout Enumerate
 for each z.boot value, we check if 
-\begin_inset Formula $Pr(X<=x)<Pr(X>x)$
+\begin_inset Formula $Pr(X<=x_{obs})<Pr(X>x_{obs})$
 \end_inset
 
- (x has a low value and might therefore indicate compensation) or 
-\begin_inset Formula $Pr(X<=x)>Pr(X>x)$
+ (
+\begin_inset Formula $x_{obs}$
+\end_inset
+
+ has a low value and might therefore indicate compensation) or 
+\begin_inset Formula $Pr(X<=x_{obs})>Pr(X>x_{obs})$
 \end_inset
 
  (x has a high value and might therefore indicate synchrony).
+
+\change_deleted -666822487 1597135533
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Enumerate
@@ -493,7 +581,7 @@ we draw a contour at the alpha level with the following code: red for each
 \noun default
 \color inherit
 
-\begin_inset Formula $Pr(X<=x)>Pr(X>x)$
+\begin_inset Formula $Pr(X<=x_{obs})>Pr(X>x_{obs})$
 \end_inset
 
  and blue for each 
@@ -531,7 +619,7 @@ we draw a contour at the alpha level with the following code: red for each
 \noun default
 \color inherit
 
-\begin_inset Formula $Pr(X<=x)<Pr(X>x)$
+\begin_inset Formula $Pr(X<=x_{obs})<Pr(X>x_{obs})$
 \end_inset
 
 .
@@ -573,10 +661,23 @@ noprefix "false"
 \end_inset
 
 ).
+
+\change_inserted -666822487 1597135671
+ This revealed that the significance contours were not always logically
+ located (blue lines should be around low values of the index).
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Itemize
-increasing the number of surrogates from 100 (Fig.
+
+\change_deleted -666822487 1597135676
+i
+\change_inserted -666822487 1597135676
+I
+\change_unchanged
+ncreasing the number of surrogates from 100 (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -747,7 +848,13 @@ scaled image grid, there was 178929 (423 scales
 \end_inset
 
  423 locations) comparisons.
- It appears that only the p-values equal to 0
+ It appear
+\change_deleted -666822487 1597135711
+s
+\change_inserted -666822487 1597135711
+ed
+\change_unchanged
+ that only the p-values equal to 0
 \begin_inset Note Note
 status open
 
@@ -760,18 +867,28 @@ are we sure that it's exactly zero? Yes.
  when not adjusted 
 \change_deleted -666822487 1596817607
 are
-\change_inserted -666822487 1596817608
-appear
-\change_unchanged
+\change_inserted -666822487 1597135727
+become
+\change_deleted -666822487 1597135728
  
 \change_inserted -666822487 1596817609
-as 
+ 
 \change_unchanged
 eventually
 \change_inserted -666822487 1596817611
  
 \change_unchanged
-significant with a correction (Fig.
+significant with 
+\change_deleted -666822487 1597135736
+a
+\change_inserted -666822487 1597135738
+this FDR
+\change_unchanged
+ 
+\change_inserted -666822487 1597135771
+(False Discovery Rate) 
+\change_unchanged
+correction (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -783,21 +900,41 @@ noprefix "false"
 \end_inset
 
 )
-\change_inserted -666822487 1596817630
-, which raises some questions as to the whole process
+\change_inserted -666822487 1597135771
+, which raises some questions as to the usefulness of the whole FDR-correction
+ process
 \change_unchanged
 .
- The False Discovery Rate correction therefore appears of dubious utility
- here, since this is essentially picking exactly zero p-values 
+ The 
+\change_deleted -666822487 1597135781
+False Discovery Rate
+\change_inserted -666822487 1597135781
+FDR
+\change_unchanged
+ correction 
+\change_deleted -666822487 1597135786
+therefore 
+\change_unchanged
+appears of dubious utility here, since 
+\change_deleted -666822487 1597135791
+this
+\change_inserted -666822487 1597135791
+it
+\change_unchanged
+ is essentially 
+\change_inserted -666822487 1597135797
+equivalent to 
+\change_unchanged
+picking exactly zero p-values 
 \change_deleted -666822487 1596817643
 and not
-\change_inserted -666822487 1596817644
+\change_inserted -666822487 1597135771
 rather than
 \change_unchanged
  
 \change_deleted -666822487 1596817648
 selecting
-\change_inserted -666822487 1596817650
+\change_inserted -666822487 1597135771
 highlighting
 \change_unchanged
  zones with low p-values.
@@ -853,8 +990,10 @@ name "fig:P-values-corrections"
 \end_inset
 
 
-\change_inserted -666822487 1596818476
+\change_inserted -666822487 1597135852
  as recommended by Keitt (2008).
+ Red is high probabability, close to 1, blue is low probability, close to
+ 0.
  The bottom and middle panel show 
 \begin_inset Quotes eld
 \end_inset
@@ -863,7 +1002,7 @@ scattered significance
 \begin_inset Quotes erd
 \end_inset
 
- through the blue dots, rather than countours of high- and low-value wmr.
+ through the blue dots, rather than contours of high- and low-value wmr.
  
 \change_unchanged
 
@@ -994,7 +1133,11 @@ Just a word : we have 212 locations for the mvcwt package analysis.
 
 \end_inset
 
-) to limit the number of computations.
+) to limit the number of 
+\change_inserted -666822487 1597135898
+p-value 
+\change_unchanged
+computations.
  This had the benefit of reducing the noise in significance contours (as
  well as the size of the images), see Fig.
  
@@ -1019,10 +1162,19 @@ noprefix "false"
 
 \end_inset
 
-, in the sense that a zone with index around 0.5 was found to be of significantly
- low synchrony, which essentially suggested that was is an issue with the
- null hypothesis (i.e., we can reject too easily the null in places we should
- not be able to).
+, in the sense that a zone with index 
+\change_inserted -666822487 1597135912
+value 
+\change_unchanged
+around 0.5 was found to be of significantly low synchrony, which essentially
+ suggested that 
+\change_deleted -666822487 1597135924
+was is
+\change_inserted -666822487 1597135925
+there was
+\change_unchanged
+ an issue with the null hypothesis (i.e., we can reject too easily the null
+ in places we should not be able to).
 \end_layout
 
 \begin_layout Standard
@@ -1073,23 +1225,52 @@ name "fig:small_wmr"
 
 \begin_layout Itemize
 To fix the problems of null hypotheses and associated p-values, that could
- not be fixed by simply changing the grid size or the FDR correction, we
- constructed a new null hypothesis.
+ not be fixed by simply changing the grid size or 
+\change_inserted -666822487 1597135945
+changing 
+\change_unchanged
+the FDR correction, we constructed a
+\change_inserted -666822487 1597135954
+n entirely
+\change_unchanged
+ new null hypothesis.
  Instead of phase-randomization of the wavelets sensu Keitt (2008), we built
- new time series (that is, in the time domain) with the IAAFT method and
- then built the p-values using each image pixel's surrogate distribution,
- each surrogate 
+ new time series 
+\change_deleted -666822487 1597135968
+(that is, in the time domain) 
+\change_unchanged
+with the IAAFT method and then built the p-values using each image pixel's
+ surrogate distribution
+\change_deleted -666822487 1597136650
+, e
+\change_inserted -666822487 1597135982
+.
+ E
+\change_unchanged
+ach surrogate 
 \begin_inset Formula $\rho_{j}(s,t)$
 \end_inset
 
- being obtained through wavelet transformation and wavelet modulus ratio
- computation of the IAAFT-obtained time series.
- This could lead to less significant zones than alternative methods (Cazelles
- et al.
+ 
+\change_deleted -666822487 1597135988
+being
+\change_inserted -666822487 1597135989
+is therefore
+\change_unchanged
+ obtained through wavelet transformation and wavelet modulus ratio computation
+ of the IAAFT-obtained time series.
+ 
+\change_deleted -666822487 1597136006
+This could lead 
+\change_inserted -666822487 1597136014
+In theory, this could have led 
+\change_unchanged
+to less significant zones than alternative methods (Cazelles et al.
  2014, Journal of the Royal Society Interface)
-\change_inserted -666822487 1596818072
-, but provides a suitable and understandable null hypothesis: the Fourier
- spectrum is conserved while all other cross-correlations are lost
+\change_inserted -666822487 1597136055
+, but we found that it provided a suitable and easily understandable null
+ hypothesis: the Fourier spectrum is conserved for each species while all
+ cross-correlations between species are lost
 \change_unchanged
 .
  In Fig.
@@ -1108,8 +1289,15 @@ noprefix "false"
 \begin_inset Formula $\rho(s,t)$
 \end_inset
 
- are now in one block of obvious compensation instead of being spread out,
- which is desirable behaviour.
+ are now in one block of obvious compensation instead of being spread out
+\change_inserted -666822487 1597136082
+ throughout the image as scattered points
+\change_unchanged
+, which is 
+\change_inserted -666822487 1597136076
+obviously 
+\change_unchanged
+desirable behaviour.
  In Fig.
  
 \begin_inset CommandInset ref
@@ -1122,14 +1310,75 @@ noprefix "false"
 \end_inset
 
 , we kept the Benjamini-Hochberg FDR correction but we eventually removed
- that correction, and the obtained graphs, on both real and simulated data
+ that correction
+\change_inserted -666822487 1597136571
+, which is in general not considered in wavelet analyses (Cazelles et al.
+ 2014)
+\change_deleted -666822487 1597136517
+, and t
+\change_inserted -666822487 1597136670
+.
+ T
+\change_unchanged
+he 
+\change_deleted -666822487 1597136521
+obtained 
+\change_unchanged
+graphs
+\change_inserted -666822487 1597136532
+ presented in the paper and the response letter
+\change_unchanged
+, on both real and simulated data
+\change_inserted -666822487 1597136535
+,
+\change_unchanged
  were found to be satisfactory 
 \change_deleted -666822487 1596818094
 by
 \change_inserted -666822487 1596818095
 when
 \change_unchanged
- using 1000 surrogates.
+ using 1000 
+\change_inserted -666822487 1597136682
+rather than 100 
+\change_unchanged
+surrogates
+\change_inserted -666822487 1597136719
+ and an absence of the FDR-correction
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1597147620
+Upon reflection, strictly FDR-correcting such p-values images might make
+ little theoretical sense: we do not count / sum over significant pixels
+ to determine how much of the image shows compensation or synchrony.
+ Contiguous high or low synchrony zones that are deemed significantly away
+ from the null are interpreted 
+\begin_inset Quotes eld
+\end_inset
+
+as a whole
+\begin_inset Quotes erd
+\end_inset
+
+, e.g., there's a low-synchrony band near 8 years.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+.
+
+\change_inserted -666822487 1597136710
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1148,28 +1397,6 @@ status open
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align left
-
-\change_deleted -666822487 1596818549
-\begin_inset Graphics
-	filename ../../SCRIPTS/explo_mvcwt/iaaft_1000surrogate.pdf
-	width 45text%
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename ../../SCRIPTS/explo_mvcwt/iaaft_1000surrogate.pdf
 	width 45text%
@@ -1180,49 +1407,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Wavelet analysis with 100
-\change_deleted -666822487 1596818556
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1596818126
-F: 
-\change_unchanged
-thought this was 1000?but I may be wrong.
- 
-\change_inserted -666822487 1596818122
-C: 
-\change_unchanged
-I put the 1000 one on the right, so that you can see by yourself and choose
-\change_inserted -666822487 1596818138
-.
- F: moved as a note.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- IAAFT surrogates
-\change_inserted -666822487 1596818564
- (left)
-\change_unchanged
- 
-\change_inserted -666822487 1596818591
-and 1000 IAAFT surrogates (right)
-\change_deleted -666822487 1596818570
-and a 
-\change_inserted -666822487 1596818577
-.
- These graphs include a 
-\change_unchanged
-BH-correction for the false discovery rate.
+Wavelet analysis with 100 IAAFT surrogates (left) and 1000 IAAFT surrogates
+ (right).
+ These graphs include a BH-correction for the false discovery rate.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:IAAFT"
@@ -1240,44 +1427,30 @@ name "fig:IAAFT"
 \end_inset
 
 
-\change_inserted -666822487 1596818153
-
 \end_layout
 
 \begin_layout Subsection*
-
-\change_inserted -666822487 1596818172
 Conclusion
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -666822487 1596818219
 Although the null hypothesis testing proposed by Keitt (2008) does seem
- to provide sensible results in some cases, it was both difficult to 
+ to provide sensible results in some cases, with hindsight it was both difficult
+ to
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -666822487 1596818232
-understand theoretically the null hypothesis
+fully understand the biological meaning of this null hypothesis
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -666822487 1596818240
-make it work in practice on our data
+make it produce meaningful results on our data
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -666822487 1596818297
 We have therefore used instead the well-known IAAFT procedure which has
  a clearly defined null hypothesis and provided sensible results on both
  simulated and real data.
- 
-\change_unchanged
-
 \end_layout
 
 \end_body
