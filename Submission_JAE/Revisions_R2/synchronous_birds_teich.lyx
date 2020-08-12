@@ -1971,6 +1971,13 @@ Figure 4 cited before Figure 3
 \change_inserted -666822487 1597169653
 .
  F: No we cite it just above
+\change_inserted -2100369821 1597217749
+.
+ No.
+ Fig.
+ 3 only appears in the 3rd paragraph.
+ Above, it's Fig.
+ 2 
 \change_unchanged
 
 \end_layout
@@ -2284,7 +2291,7 @@ Synchrony indices for the whole community of frequently observed birds.
 \change_inserted -2100369821 1597153020
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2293,6 +2300,8 @@ If we say how the second index works, why not say that the first is between
  - 1 (compensation) and 1 (synchrony)?
 \change_inserted -666822487 1597169768
 F: parce que ce n'est pas aussi évident avec le y-axis, non?
+\change_inserted -2100369821 1597217808
+ Ok.
 \change_unchanged
 
 \end_layout
@@ -2831,6 +2840,11 @@ Repetition of l.
  335-336, is it intentional?
 \change_inserted -666822487 1597170437
 F: not sure which are those lines anymore.
+
+\change_inserted -2100369821 1597217882
+ Just above, in the same paragraph ' so that space is limited and increases
+ in one functional group are compensated by decreases in the other.'
+\change_inserted -666822487 1597170437
  
 \change_unchanged
 
@@ -3171,6 +3185,8 @@ status open
 
 \change_inserted -666822487 1597170631
 F: I have a question there: is it really 6 years, not 8?
+\change_inserted -2100369821 1597218519
+ Effectivement, c'est plus proche de 8 ans
 \change_unchanged
 
 \end_layout
