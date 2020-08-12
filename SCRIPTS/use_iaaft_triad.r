@@ -261,7 +261,7 @@ write.table(as.matrix(tab_z.boot[,,1]),paste("../Teich_resultsLFS/IAAFT_analyses
 #We need to create a wmr object to store the values, so that it is recognized by the function image_mvcwt. We then store the values from previous analyses in it.
 ref_wmr = wmr(mm)
 
-tmp_xy=read.csv(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/IAAFT_analyses_Gross100-1000surrogates/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
+tmp_xy=read.csv(paste("../Teich_resultsLFS/IAAFT_analyses_Gross100-1000surrogates/tab_xy_mr_triad",end_bio,"_",end_nor,"_with",anrands,"_IAAFT.csv",sep=""),header=T,sep=";",dec=".")
 ref_wmr$x=tmp_xy[!is.na(tmp_xy[,"x"]),"x"]
 ref_wmr$y=tmp_xy[!is.na(tmp_xy[,"y"]),"y"]
 
