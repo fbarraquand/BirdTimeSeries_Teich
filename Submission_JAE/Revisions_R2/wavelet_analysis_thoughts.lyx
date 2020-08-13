@@ -94,10 +94,6 @@ On wavelet analyses with the mvcwt package, issues, and technical fixes
 
 \begin_layout Standard
 To study synchrony, 
-\change_deleted -666822487 1597168811
-Keitt (2008)
-\change_inserted -666822487 1597168811
-
 \begin_inset CommandInset citation
 LatexCommand citet
 key "keitt_coherent_2008"
@@ -105,8 +101,6 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
  presents the wavelet modulus ratio, i.e.
  
 \begin_inset Formula $\rho(s,t)=\frac{\Lambda_{s,t}(|\sum_{k}w_{k}(s,t)|)}{\Lambda_{s,t}(\sum_{k}|w_{k}(s,t)|)}$
@@ -208,6 +202,27 @@ I would be happy to have your opinion on using either
 \end_inset
 
 , and the smoothing operator would be of little interest.
+
+\change_inserted -666822487 1597301046
+ F: First, the smoothing would localize the signal which is already important.
+ Second, I understand what you mean, but then there's a notational issue;
+ we cannot have a variable 
+\begin_inset Formula $\tau$
+\end_inset
+
+ that is a dummy variable part of the operator in the argument of the function,
+ it is just that we take the time series as a whole.
+ Instead it is something like 
+\begin_inset Formula $\Lambda_{s,t}(|\sum_{k}w_{k}(s,.)|)=\int_{-\infty}^{+\infty}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}(|\sum_{k}w_{k}(s,\tau)|)d\tau$
+\end_inset
+
+, then the formula with 
+\begin_inset Formula $y$
+\end_inset
+
+ below is wrong.
+ Perhaps the only thing left to do is to dig in the code.
+ 
 \change_unchanged
 
 \end_layout
@@ -675,11 +690,6 @@ noprefix "false"
 ).
  This revealed that the significance contours were not always logically
  located (blue lines should be around low values of the index).
-
-\change_deleted -666822487 1597168008
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Itemize
@@ -740,11 +750,7 @@ status open
 
 \begin_layout Plain Layout
 Reference wavelet analysis for the Cormoran/Heron/Egret case with 100 surrogates
-, Benjamini-Hochberg false discovery correction
-\change_deleted -666822487 1597167978
-s
-\change_unchanged
- and a fine grid (423
+, Benjamini-Hochberg false discovery correction and a fine grid (423
 \begin_inset Formula $\times$
 \end_inset
 
@@ -794,11 +800,7 @@ Empirical cumulative distribution of
 \begin_inset Formula $\rho(s,t)$
 \end_inset
 
- for
-\change_inserted -666822487 1596817261
- 
-\change_unchanged
-several randomly chosen 
+ for several randomly chosen 
 \begin_inset Formula $s$
 \end_inset
 
@@ -911,11 +913,6 @@ scattered significance
 \end_inset
 
  through the blue dots, rather than contours of high- and low-value wmr.
-
-\change_deleted -666822487 1597168049
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1070,8 +1067,6 @@ To fix the problems of null hypotheses and associated p-values, that could
  we constructed an entirely new null hypothesis.
  Instead of phase-randomization of the wavelets sensu Keitt (2008), we built
  new time series with the IAAFT method 
-\change_inserted -666822487 1597168935
-
 \begin_inset CommandInset citation
 LatexCommand citep
 key "schreiber_surrogate_2000"
@@ -1079,9 +1074,7 @@ literal "false"
 
 \end_inset
 
- 
-\change_unchanged
-and then built the p-values using each image pixel's surrogate distribution.
+ and then built the p-values using each image pixel's surrogate distribution.
  Each surrogate 
 \begin_inset Formula $\rho_{j}(s,t)$
 \end_inset
@@ -1090,11 +1083,6 @@ and then built the p-values using each image pixel's surrogate distribution.
  ratio computation of the IAAFT-obtained time series.
  In theory, this could have led to less significant zones than alternative
  methods 
-\change_deleted -666822487 1597168896
-(Cazelles et al.
- 2014, Journal of the Royal Society Interface)
-\change_inserted -666822487 1597168896
-
 \begin_inset CommandInset citation
 LatexCommand citep
 key "cazelles2014wavelet"
@@ -1102,8 +1090,6 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 , but we found that it provided a suitable and easily understandable null
  hypothesis: the Fourier spectrum is conserved for each species while all
  cross-correlations between species are lost.
@@ -1140,11 +1126,6 @@ noprefix "false"
 , we kept the Benjamini-Hochberg FDR correction but we eventually removed
  that correction, which is in general not considered in wavelet analyses
  
-\change_deleted -666822487 1597168907
-(Cazelles et al.
- 2014)
-\change_inserted -666822487 1597168907
-
 \begin_inset CommandInset citation
 LatexCommand citet
 key "cazelles2014wavelet"
@@ -1152,8 +1133,6 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
  The graphs presented in the paper and the response letter/revision folder
 \begin_inset Note Note
@@ -1162,10 +1141,6 @@ status collapsed
 \begin_layout Plain Layout
 If this is supposed to be public, should we mention the response letter,
  which will not be accessible by other readers?
-\change_deleted -666822487 1597168095
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1269,28 +1244,6 @@ We have therefore used instead the well-known IAAFT procedure which has
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-We should add a biblio?
-\change_inserted -666822487 1597168950
- Yes, done.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_inserted -666822487 1597168770
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -666822487 1597168792
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
