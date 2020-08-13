@@ -82,7 +82,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -212,18 +211,11 @@ I would be happy to have your opinion on using either
 , then the initial formula is wrong.
  Perhaps the only thing left to do is to dig in the code.
  F: corrected here slightly differently than in the main text.
-
-\change_deleted -666822487 1597320454
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
  where
-\change_inserted -666822487 1597320904
-
 \family roman
 \series medium
 \shape up
@@ -254,46 +246,16 @@ I would be happy to have your opinion on using either
 \noun default
 \color inherit
  a function 
-\begin_inset Formula $f(t,s)$
+\begin_inset Formula $f(s,t)$
 \end_inset
 
- of both location in time and scale, defined by
-\change_unchanged
- 
-\begin_inset Formula $\Lambda_{s,t}(f)=\int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}\times f(\tau,s)d\tau$
+ of both location in time and scale, defined by 
+\begin_inset Formula $\Lambda_{s,t}(f)=\int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}\times f(s,\tau)d\tau$
 \end_inset
 
-
-\change_deleted -666822487 1597320918
-, 
-\begin_inset Formula $s$
-\end_inset
-
- is the scale (
-\begin_inset Quotes eld
-\end_inset
-
-frequency
-\begin_inset Quotes erd
-\end_inset
-
-) and 
-\begin_inset Formula $t$
-\end_inset
-
- is the location (
-\begin_inset Quotes eld
-\end_inset
-
-date
-\begin_inset Quotes erd
-\end_inset
-
-) 
-\change_inserted -666822487 1597321032
 .
  In the numerator, 
-\begin_inset Formula $f(\tau,s)=|\sum_{k}w_{k}(\tau,s)|$
+\begin_inset Formula $f(s,\tau)=|\sum_{k}w_{k}(\tau,s)|$
 \end_inset
 
  (community-level fluctuation amplitude), and in the denumerator 
@@ -310,15 +272,13 @@ date
 \noun off
 \color none
 
-\begin_inset Formula $f(\tau,s)=\sum_{k}|w_{k}|$
+\begin_inset Formula $f(s,\tau)=\sum_{k}|w_{k}(\tau,s)|$
 \end_inset
 
  (sum of species-level amplitudes), if the computation is done for multiple
  species within a community (it can be performed for functional groups rather
  than species).
  
-\change_deleted -666822487 1597320623
-
 \family default
 \series default
 \shape default
@@ -331,37 +291,15 @@ date
 \uwave default
 \noun default
 \color inherit
-for which t
-\change_inserted -666822487 1597320872
-T
-\change_unchanged
-he 
-\change_deleted -666822487 1597321076
-wavelet
-\change_inserted -666822487 1597321076
-signal
-\change_unchanged
- 
+The signal 
 \begin_inset Formula $w_{k}(\tau,s)$
 \end_inset
 
- is 
-\change_deleted -666822487 1597321060
-computed 
-\change_inserted -666822487 1597320872
-the continuous wavelet transform of species 
+ is the continuous wavelet transform of species 
 \begin_inset Formula $k$
 \end_inset
 
- abundance, with mother Morlet wavelet
-\change_deleted -666822487 1597320661
-for species 
-\begin_inset Formula $k$
-\end_inset
-
-
-\change_unchanged
-.
+ abundance, with mother Morlet wavelet.
  The package 
 \begin_inset ERT
 status open
@@ -375,11 +313,7 @@ verb|mvcwt|
 
 \end_inset
 
- is meant to compute this index.
-\end_layout
-
-\begin_layout Standard
-The package works as follows:
+ is meant to compute this index, and works as follows:
 \end_layout
 
 \begin_layout Enumerate

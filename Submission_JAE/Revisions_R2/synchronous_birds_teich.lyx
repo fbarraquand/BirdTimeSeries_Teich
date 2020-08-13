@@ -84,8 +84,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -1716,19 +1714,7 @@ where
 \end_inset
 
  is the modulus of the complex number.
- The numerator 
-\change_deleted -666822487 1597317148
-corresponds
-\change_inserted -666822487 1597317235
-considers
-\change_unchanged
- 
-\change_deleted -666822487 1597317655
-to 
-\change_unchanged
-the total abundance variation 
-\change_inserted -666822487 1597318197
-
+ The numerator considers the total abundance variation 
 \family roman
 \series medium
 \shape up
@@ -1754,8 +1740,6 @@ the total abundance variation
 \end_inset
 
 , 
-\change_unchanged
-
 \family default
 \series default
 \shape default
@@ -1768,23 +1752,8 @@ the total abundance variation
 \uwave default
 \noun default
 \color inherit
-while the denominator 
-\change_deleted -666822487 1597317354
-corresponds
-\change_inserted -666822487 1597317686
-considers a weighted sum of
-\change_deleted -666822487 1597317695
- to
-\change_unchanged
- the fluctuation
-\change_inserted -666822487 1597317395
- amplitude
-\change_deleted -666822487 1597317393
-s
-\change_unchanged
- of each species
-\change_inserted -666822487 1597317384
- (
+while the denominator considers a weighted sum of the fluctuation amplitude
+ of each species (
 \family roman
 \series medium
 \shape up
@@ -1814,12 +1783,8 @@ s
 \uwave default
 \noun default
 \color inherit
-)
-\change_unchanged
-.
- 
-\change_inserted -666822487 1597318186
-The Gaussian weights in the numerator and denominator ensure that 
+).
+ The Gaussian weights in the numerator and denominator ensure that 
 \begin_inset Formula $\rho(s,t)$
 \end_inset
 
@@ -1832,23 +1797,12 @@ The Gaussian weights in the numerator and denominator ensure that
 \end_inset
 
 .
- 
-\change_unchanged
-This index
-\change_inserted -666822487 1597317716
- 
+ This index 
 \begin_inset Formula $\rho$
 \end_inset
 
-
-\change_unchanged
- is close to 0 when species
-\change_inserted -666822487 1597317715
- (or compartments)
-\change_unchanged
- compensate and reaches 1 when they are synchronous
-\change_inserted -666822487 1597317892
- 
+ is close to 0 when species (or compartments) compensate and reaches 1 when
+ they are synchronous 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "keitt_coherent_2008"
@@ -1856,23 +1810,13 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
  Significance of high and low values of 
 \begin_inset Formula $\rho$
 \end_inset
 
- were evaluated using a 10% overall 
-\change_deleted -666822487 1597317900
-threshold
-\change_inserted -666822487 1597317902
-level
-\change_unchanged
-.
- The null hypothesis was constructed using the IAAFT algorithm
-\change_inserted -666822487 1597317932
- 
+ were evaluated using a 10% overall level.
+ The null hypothesis was constructed using the IAAFT algorithm 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "schreiber_surrogate_2000"
@@ -1880,15 +1824,11 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 , using 1000 surrogate time series, and computing of the corresponding 
 \begin_inset Formula $\rho$
 \end_inset
 
- values for each one
-\change_inserted -666822487 1597317715
- 
+ values for each one 
 \begin_inset CommandInset citation
 LatexCommand citep
 before "similar to"
@@ -1897,11 +1837,9 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 .
  The robustness of the wavelet approach to the presence of exactly zero
- values is tested in Appendix S7.
+ values is tested in Appendix S6.
 \end_layout
 
 \begin_layout Standard
@@ -1917,7 +1855,8 @@ https://github.com/fbarraquand/BirdTimeSeries_Teich
 
 \end_inset
 
- and stored at Zenodo (Picoche, Aluome & Barraquand, 2020).
+ and stored at Zenodo [will be done for the final version] (Picoche, Aluome
+ & Barraquand, 2020).
 \end_layout
 
 \begin_layout Section*
@@ -2000,35 +1939,7 @@ noprefix "false"
 
 \end_inset
 
-a)
-\change_inserted -2100369821 1597152400
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1597152405
-Figure 4 cited before Figure 3
-\change_inserted -666822487 1597169653
-.
- F: No we cite it just above
-\change_inserted -2100369821 1597217749
-.
- No.
- Fig.
- 3 only appears in the 3rd paragraph.
- Above, it's Fig.
- 2 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-: synchrony dominates when abundances are computed at the species level.
+a): synchrony dominates when abundances are computed at the species level.
 \end_layout
 
 \begin_layout Standard
@@ -2179,21 +2090,9 @@ name "fig:Gross-synchrony-index"
 There are therefore contrasted results regarding the effect of the management
  change on synchrony within guilds or within the whole bird community.
  At the seasonal timescale, the results are unclear for both guilds.
- At shorter (one or two months)
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I make this more precise: a season can be 4 months here
-\end_layout
-
-\end_inset
-
- and longer (five years) timescales though, the management change may decrease
- synchrony and even promote compensation.
+ At shorter (one or two months) and longer (five years) timescales though,
+ the management change may decrease synchrony and even promote compensation.
  
-\change_inserted -666822487 1597301327
-
 \begin_inset Float figure
 placement H
 wide false
@@ -2202,8 +2101,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -666822487 1597301327
 \begin_inset Graphics
 	filename synchrony_indices_frequent_abundances_NOTscaled_with1000rand_nocorrection_smallgrid_IAAFT_corrected_loc.pdf
 	width 95text%
@@ -2214,13 +2111,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1597301327
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1597301327
 Synchrony indices for the whole community of frequently observed birds.
  Panel a) presents yearly synchrony (
 \begin_inset Formula $\eta)$
@@ -2237,8 +2130,6 @@ Synchrony indices for the whole community of frequently observed birds.
 status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1597301327
 If we say how the second index works, why not say that the first is between
  - 1 (compensation) and 1 (synchrony)?F: parce que ce n'est pas aussi évident
  avec le y-axis, non? Ok.
@@ -2267,8 +2158,6 @@ name "fig:synchrony-whole-comm"
 
 \end_inset
 
-
-\change_unchanged
 
 \begin_inset Float figure
 placement H
@@ -2344,76 +2233,6 @@ J'ai très légèrement réduit la taille de la figure parce que la légende
 
 \end_inset
 
-
-\change_deleted -666822487 1597301325
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename synchrony_indices_frequent_abundances_NOTscaled_with1000rand_nocorrection_smallgrid_IAAFT_corrected_loc.pdf
-	width 95text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Synchrony indices for the whole community of frequently observed birds.
- Panel a) presents yearly synchrony (
-\begin_inset Formula $\eta)$
-\end_inset
-
- for both seasons and b) the wavelet modulus ratio (
-\begin_inset Formula $\rho$
-\end_inset
-
-).
- The latter index scales from 0 (compensation, blue color) to 1 (synchrony,
- red color)
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-If we say how the second index works, why not say that the first is between
- - 1 (compensation) and 1 (synchrony)?F: parce que ce n'est pas aussi évident
- avec le y-axis, non? Ok.
-\end_layout
-
-\end_inset
-
-.
- Red and blue lines respectively delineate regions of significantly lower
- and higher synchrony than the null model (independently fluctuating species,
- but conserving their original Fourier spectrum), at the 10% level.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:synchrony-whole-comm"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -2501,7 +2320,7 @@ noprefix "false"
 
 \end_inset
 
-, though see Appendix S4 for alternative representations).
+, though see Appendix S3 for alternative representations).
  However, we see on Fig.
  
 \begin_inset CommandInset ref
@@ -2527,20 +2346,14 @@ noprefix "false"
 \end_inset
 
  were caused by the use of a log scale, but we found that in fact the correlatio
-n was higher rather than lower on the log scale (Appendix S4).
+n was higher rather than lower on the log scale (Appendix S3).
  However, over long temporal scales (
 \begin_inset Formula $\sim$
 \end_inset
 
- 
-\change_deleted -666822487 1597301588
-6
-\change_inserted -666822487 1597301588
-8
-\change_unchanged
- years) there seems to be some compensation, which could correspond to the
- progressive change in composition within this small community module, that
- was already visible on the abundance time series plot (Fig.
+ 8 years) there seems to be some compensation, which could correspond to
+ the progressive change in composition within this small community module,
+ that was already visible on the abundance time series plot (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2710,10 +2523,14 @@ within
 between
 \emph default
  guilds.
- A zoom on a module of three species with known competition also revealed
- clear compensation at scales above 5 years.
  Similar results have been obtained using biomass in place of abundance
  (Appendix S4).
+ A zoom on a module of three species with known competition also revealed
+ clear compensation at scales 
+\begin_inset Formula $\approx8$
+\end_inset
+
+ years.
  We elaborate below on these findings.
 \end_layout
 
@@ -2882,11 +2699,6 @@ Repetition of l.
  Just above, in the same paragraph ' so that space is limited and increases
  in one functional group are compensated by decreases in the other.' Yes
  that is on purpose.
-
-\change_deleted -666822487 1597318281
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2932,11 +2744,6 @@ status collapsed
 Can we precise that it is even more complicated as, for a given species,
  migration may or may not happen? (partial migration).
  F/ done.
-
-\change_deleted -666822487 1597301220
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -3114,13 +2921,7 @@ We zoomed in on...
  found on the annual scale for which synchrony (or an absence of relation)
  dominates.
  Instead, we find that compensation mostly occurs above the annual temporal
- scale, approximatively on a scale of 
-\change_deleted -666822487 1597301260
-6
-\change_inserted -666822487 1597301260
-8
-\change_unchanged
- years
+ scale, approximatively on a scale of 8 years
 \begin_inset Note Note
 status open
 
@@ -3360,7 +3161,23 @@ https://github.com/fbarraquand/BirdTimeSeries_Teich
 
 \end_inset
 
- and archived at Zenodo, DOI:XX-XXX (Picoche, Aluome & Barraquand, 2020).
+ and archived at Zenodo [will be done for the final version], DOI:XX-XXX
+ (Picoche, Aluome & Barraquand, 2020).
+\end_layout
+
+\begin_layout Subsection*
+Authors' contributions
+\end_layout
+
+\begin_layout Standard
+FB, LC and CF designed the original project.
+ CF coordinated the data collection and provided knowledge on functional
+ groups.
+ CA, FB and CP standardized the bird abundance database and performed explorator
+y analyses.
+ Final statistical analyses were designed by FB and CP, and coded mostly
+ by CP.
+ FB and CP led the article writing, with inputs from all authors.
 \end_layout
 
 \begin_layout Standard
