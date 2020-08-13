@@ -82,7 +82,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
 \author -666822487 "frederic"
 \end_header
 
@@ -103,12 +102,12 @@ literal "false"
 
  presents the wavelet modulus ratio, i.e.
  
-\begin_inset Formula $\rho(s,t)=\frac{\Lambda_{s,t}(|\sum_{k}w_{k}(s,t)|)}{\Lambda_{s,t}(\sum_{k}|w_{k}(s,t)|)}$
+\begin_inset Formula $\rho(s,t)=\frac{\Lambda_{s,t}(|\sum_{k}w_{k}|)}{\Lambda_{s,t}(\sum_{k}|w_{k}|)}$
 \end_inset
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 I would be happy to have your opinion on using either 
@@ -159,8 +158,6 @@ I would be happy to have your opinion on using either
  in the formula, see eq.
  5.
  I corrected.
-
-\change_inserted -2100369821 1597220381
  C: Actually, eq.
  (5) corresponds to 
 \begin_inset Formula $\rho(s)$
@@ -202,11 +199,7 @@ I would be happy to have your opinion on using either
 \end_inset
 
 , and the smoothing operator would be of little interest.
-
-\change_inserted -666822487 1597301046
- F: First, the smoothing would localize the signal which is already important.
- Second, I understand what you mean, but then there's a notational issue;
- we cannot have a variable 
+ F: Then there's a notational issue; we cannot have a variable 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -216,12 +209,11 @@ I would be happy to have your opinion on using either
 \begin_inset Formula $\Lambda_{s,t}(|\sum_{k}w_{k}(s,.)|)=\int_{-\infty}^{+\infty}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}(|\sum_{k}w_{k}(s,\tau)|)d\tau$
 \end_inset
 
-, then the formula with 
-\begin_inset Formula $y$
-\end_inset
-
- below is wrong.
+, then the initial formula is wrong.
  Perhaps the only thing left to do is to dig in the code.
+ F: corrected here slightly differently than in the main text.
+
+\change_deleted -666822487 1597320454
  
 \change_unchanged
 
@@ -229,10 +221,50 @@ I would be happy to have your opinion on using either
 
 \end_inset
 
- where 
-\begin_inset Formula $\Lambda_{s,t}(y)=\int_{-\infty}^{+\infty}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}\times yd\tau$
+ where
+\change_inserted -666822487 1597320904
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\Lambda_{s,t}$
 \end_inset
 
+ is an operator weighting
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ a function 
+\begin_inset Formula $f(t,s)$
+\end_inset
+
+ of both location in time and scale, defined by
+\change_unchanged
+ 
+\begin_inset Formula $\Lambda_{s,t}(f)=\int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{t-\tau}{s}\right)^{2}}\times f(\tau,s)d\tau$
+\end_inset
+
+
+\change_deleted -666822487 1597320918
 , 
 \begin_inset Formula $s$
 \end_inset
@@ -257,14 +289,78 @@ date
 \begin_inset Quotes erd
 \end_inset
 
-) for which the wavelet 
-\begin_inset Formula $w_{k}$
+) 
+\change_inserted -666822487 1597321032
+.
+ In the numerator, 
+\begin_inset Formula $f(\tau,s)=|\sum_{k}w_{k}(\tau,s)|$
 \end_inset
 
- is computed for species 
+ (community-level fluctuation amplitude), and in the denumerator 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(\tau,s)=\sum_{k}|w_{k}|$
+\end_inset
+
+ (sum of species-level amplitudes), if the computation is done for multiple
+ species within a community (it can be performed for functional groups rather
+ than species).
+ 
+\change_deleted -666822487 1597320623
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+for which t
+\change_inserted -666822487 1597320872
+T
+\change_unchanged
+he 
+\change_deleted -666822487 1597321076
+wavelet
+\change_inserted -666822487 1597321076
+signal
+\change_unchanged
+ 
+\begin_inset Formula $w_{k}(\tau,s)$
+\end_inset
+
+ is 
+\change_deleted -666822487 1597321060
+computed 
+\change_inserted -666822487 1597320872
+the continuous wavelet transform of species 
 \begin_inset Formula $k$
 \end_inset
 
+ abundance, with mother Morlet wavelet
+\change_deleted -666822487 1597320661
+for species 
+\begin_inset Formula $k$
+\end_inset
+
+
+\change_unchanged
 .
  The package 
 \begin_inset ERT
