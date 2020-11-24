@@ -439,7 +439,7 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-Irstea, UR EABX, 50 Avenue de Verdun, 33612 Cestas, France
+INRAE, UR EABX, 50 Avenue de Verdun, 33612 Cestas, France
 \end_layout
 
 \begin_layout Standard
@@ -2923,7 +2923,7 @@ We zoomed in on...
  Instead, we find that compensation mostly occurs above the annual temporal
  scale, approximatively on a scale of 8 years
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 F: I have a question there: is it really 6 years, not 8? Effectivement,
@@ -2942,7 +2942,7 @@ F: I have a question there: is it really 6 years, not 8? Effectivement,
  mismatch).
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 This seems very likely to me from the time series.
@@ -3013,7 +3013,6 @@ In theory, we could have expected compensation to manifest also at the smallest
  availability, rather than by births and deaths directly.
  Such behavioural dynamics can certainly be much faster than bird population
  dynamics, and could operate at the scale of weeks or months.
- .
  However, such compensation due to short-term movements did not occur here.
  We suspect that instead, because many species share common abiotic and
  biotic drivers (e.g., disturbances due to nearby hunting, local climatic
