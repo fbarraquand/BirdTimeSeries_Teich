@@ -782,10 +782,13 @@ rs of the interactions between and within species in the community.
 \end_layout
 
 \begin_layout Standard
-Compensation is particularly likely to occur when such temporal environmental
- variation combines with a space constraint or with a strongly limiting
- resource, so that individuals are close to competing in a zero-sum game
- (sensu 
+Compensation is particularly likely to occur when 
+\change_deleted -666822487 1607357133
+such 
+\change_unchanged
+temporal environmental variation combines with a space constraint or with
+ a strongly limiting resource, so that individuals are close to competing
+ in a zero-sum game (sensu 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "hubbell2001unified"
@@ -963,8 +966,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Indeed, taxonomic and functional scales should be main modulators of synchrony/c
-ompensation.
+
+\change_deleted -666822487 1607357167
+Indeed, t
+\change_inserted -666822487 1607357167
+T
+\change_unchanged
+axonomic and functional scales should 
+\change_inserted -666822487 1607357172
+indeed 
+\change_unchanged
+be main modulators of synchrony/compensation.
  On the one hand, compensation can be high between similar and closely related
  species.
  If two species of ducks A and B share almost the same niche, individuals
@@ -1048,16 +1060,27 @@ literal "false"
 \end_inset
 
 .
+\change_deleted -666822487 1607357878
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -666822487 1607357828
 Our objective is therefore to examine how synchronous or compensatory bird
  communities are at different temporal and taxonomic (or functional) scales.
- Our dataset is ideally suited to the task given that (i) it is a highly
- temporally resolved time series with respect to the species typical generation
- times, but it also extends well beyond generation time (timespan of 35
- years) and (ii) the reserve where the data has been collected was subjected
- to a major management change c.
+ 
+\change_unchanged
+Our dataset is ideally suited to 
+\change_deleted -666822487 1607357834
+the task
+\change_inserted -666822487 1607357854
+examine the presence of synchrony or compensation at different scales
+\change_unchanged
+ given that (i) it is a highly temporally resolved time series with respect
+ to the species typical generation times, but it also extends well beyond
+ generation time (timespan of 35 years) and (ii) the reserve where the data
+ has been collected was subjected to a major management change c.
  2006 (change in water levels), favouring different types of wetland birds
  (so that over long timescales, there is a real potential for changes in
  community composition).
@@ -1174,11 +1197,8 @@ noprefix "false"
  greatly overlap (i.e., species with greater abundances in the reserve in
  winter have also some summer residents, though these may be different individua
 ls).
-\end_layout
-
-\begin_layout Standard
-The dynamics of species abundances in the Teich reserve bird community show
- a marked signature of seasonality (Fig.
+ The dynamics of species abundances in the Teich reserve bird community
+ show a marked signature of seasonality (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1301,14 +1321,29 @@ Occurrence=100% for both groups
 Anatini 
 \emph default
 tribe 
+\change_inserted -666822487 1607358054
+(corresponding previously to the 
+\change_unchanged
+
+\emph on
+Anas
+\change_inserted -666822487 1607358054
+
+\emph default
+ genus, 
+\change_unchanged
+
 \begin_inset CommandInset citation
-LatexCommand citep
-before "corresponding previously to the Anas genus,"
+LatexCommand citealp
 key "gonzalez_phylogenetic_2009"
 literal "false"
 
 \end_inset
 
+
+\change_inserted -666822487 1607358059
+)
+\change_unchanged
  in ducks and members of the 
 \emph on
 Calidris
@@ -1469,7 +1504,12 @@ where
 \end_inset
 
  species and the correlation is computed over the years.
- This synchrony index varies between -1 (perfect compensation, total biomass
+ This synchrony index varies between -1 (perfect compensation, total 
+\change_deleted -666822487 1607358097
+biomass
+\change_inserted -666822487 1607358098
+abundance
+\change_unchanged
  is constant) and 1 (complete synchrony), while 0 represents a case where
  all populations fluctuate independently.
  Contrary to other indices (e.g., 
@@ -1516,9 +1556,9 @@ noprefix "false"
 
 .
 
-\change_inserted -666822487 1606842940
+\change_inserted -666822487 1607358242
  All analyses performed with abundance in the main text are performed with
- biomass in SI SXX.
+ biomass in Supporting Information Appendix S4.
  
 \change_unchanged
 
@@ -3205,8 +3245,24 @@ literal "false"
 \end_inset
 
 .
- Thus our findings contribute to suggesting to search for compensation over
- relatively long timescales (several years for vertebrates or plants).
+ Thus our findings 
+\change_deleted -666822487 1607358386
+contribute to
+\change_inserted -666822487 1607358387
+reinforce
+\change_unchanged
+ 
+\change_inserted -666822487 1607358397
+previous 
+\change_unchanged
+suggesti
+\change_inserted -666822487 1607358400
+ons
+\change_deleted -666822487 1607358323
+ng
+\change_unchanged
+ to search for compensation over relatively long timescales (several years
+ for vertebrates or plants).
 \end_layout
 
 \begin_layout Standard
