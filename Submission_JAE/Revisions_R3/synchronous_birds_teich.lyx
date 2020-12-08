@@ -3024,8 +3024,14 @@ In theory, we could have expected compensation to manifest also at the smallest
  However, such compensation due to short-term movements did not occur here.
  We suspect that instead, because many species share common abiotic and
  biotic drivers (e.g., disturbances due to nearby hunting, local climatic
- conditions) even below the seasonal timescale, their dynamics are bound
- to be synchronized to some degree at monthly temporal scales.
+ conditions) even 
+\change_deleted -666822487 1607387821
+below the seasonal timescale
+\change_inserted -666822487 1607387850
+within a single season
+\change_unchanged
+, their dynamics are bound to be synchronized to some degree at monthly
+ temporal scales.
  It is noteworthy that even in planktonic systems, the temporal scale of
  compensation has often been found to be well above that of the forcing
  driver 
