@@ -638,8 +638,25 @@ begin{linenumbers}{
  Negative covariation in abundance at the guild or community level did only
  appear at the scale of a few months or several years.
  We also found that synchrony varies with taxonomic and functional scale:
- the rare cases where compensation appeared consistently at the seasonal
- scale were 
+ the rare cases where compensation appeared consistently 
+\change_deleted -666822487 1607387275
+at the
+\change_inserted -666822487 1607387275
+in
+\change_unchanged
+ 
+\change_deleted -666822487 1607387259
+seasonal
+\change_inserted -666822487 1607387262
+year-to-year
+\change_unchanged
+ 
+\change_deleted -666822487 1607387278
+scale
+\change_inserted -666822487 1607387280
+analyses
+\change_unchanged
+ were 
 \emph on
 between
 \emph default
@@ -842,8 +859,14 @@ literal "true"
  species abundances or growth rates at some temporal scale, creating large
  variance in community-wide biomass, in spite of strongly competitive dynamics.
  Further research has therefore focused on specific timeframes during which
- compensatory dynamics may be found (e.g., below the seasonal scale at which
- temperature fluctuations tend to synchronize species dynamics, 
+ compensatory dynamics may be found (e.g., below the 
+\change_deleted -666822487 1607387389
+seasonal
+\change_inserted -666822487 1607387392
+annual
+\change_unchanged
+ scale at which temperature fluctuations tend to synchronize species dynamics,
+ 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "vasseur_synchronous_2014"
@@ -1442,11 +1465,6 @@ noprefix "false"
 .
  All analyses performed with abundance in the main text are performed with
  biomass in Supporting Information Appendix S4.
-
-\change_deleted -666822487 1607358493
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -1985,8 +2003,13 @@ Calidris
 
 \begin_layout Standard
 Even though there is no widespread community-wide or genus-wide compensation
- at the seasonal timescale, there could be compensation at finer temporal
- scales, e.g.
+ at the 
+\change_deleted -666822487 1607387464
+seasonal timescale
+\change_inserted -666822487 1607387478
+across years (separating the two seasons)
+\change_unchanged
+, there could be compensation at finer temporal scales, e.g.
  a month or two, or coarser scales, over several years.
  Such compensation could also occur at specific time intervals instead of
  throughout the whole time series, a time-dependency that wavelet analyses
@@ -2536,7 +2559,7 @@ between
 \emph default
  guilds.
  Similar results have been obtained using biomass in place of abundance
- (Appendix S4).
+ (SI Appendix S4).
  A zoom on a module of three species with known competition also revealed
  clear compensation at scales 
 \begin_inset Formula $\approx8$
