@@ -1,0 +1,413 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{ae,aecompl}
+\usepackage{graphicx}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Compensation between 2 groups
+\end_layout
+
+\begin_layout Standard
+We want to emulate the dynamics of the subset Cormorant vs.
+ HeronEgret.
+ The HeronEgret (HE) group is, on average, more abundant (
+\begin_inset Formula $\mu_{HE}=473$
+\end_inset
+
+ vs 
+\begin_inset Formula $\mu_{C}=203$
+\end_inset
+
+), more variable (
+\begin_inset Formula $\sigma_{HE}=729$
+\end_inset
+
+ vs 
+\begin_inset Formula $\sigma_{C}=191$
+\end_inset
+
+) and has a wider amplitude of variation (
+\begin_inset Formula $r_{HE}=[0;4000]$
+\end_inset
+
+ vs 
+\begin_inset Formula $r_{C}=[0;1150]$
+\end_inset
+
+) than the Cormorant group.
+ We want to make sure that wavelet analyses can detect compensation even
+ in those cases.
+ Compensation is simulated by species being in antiphase.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Simulations
+\end_layout
+
+\begin_layout Subsubsection*
+Raw value
+\end_layout
+
+\begin_layout Standard
+We use simulations similar to those in the 2nd review for JAE, i.e.
+ : at each time step, abundances are drown from 
+\begin_inset Formula $\mathcal{N}(\mathbf{\mu}_{t},\Sigma)$
+\end_inset
+
+ with 
+\begin_inset Formula $\mu_{t,i}=\mu_{i}\mu_{\min}+\mu_{i}(\mu_{\max}-\mu_{\min})(1+0.5\sin(\frac{2\pi t}{P})+\phi_{i})$
+\end_inset
+
+ with 
+\begin_inset Formula $\boldsymbol{\mu}=(200,500)$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mu_{\max}=0.9$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{\min}=0.1$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $\boldsymbol{\phi}=(0,\pi)$
+\end_inset
+
+ and 
+\begin_inset Formula $P=12$
+\end_inset
+
+.
+ The variance-covariance matrix 
+\begin_inset Formula $\Sigma_{ii}=\sigma_{i}^{2}$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma_{1}=0.5\mu_{1}$
+\end_inset
+
+ (in line with the previous simulations) and 
+\begin_inset Formula $\sigma_{2}=4\sigma_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Sigma_{ij}=0\forall i\neq j.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The corresponding time series are the following :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename MockData_cormorantheronegret_timeseries.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulated time series for a 2-species subset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The problem with this simulation is that we have negative values and are
+ far from the skewed distribution of abundance that is observed in reality.
+ 
+\end_layout
+
+\begin_layout Standard
+Using 1000 surrogates, we obtain the following wavelet analysis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Skewed_SAD_cormorantheronegret_IAAFT.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Logged abundance
+\end_layout
+
+\begin_layout Standard
+To keep positive values, we can use a logscale throughout the simulations.
+ 
+\end_layout
+
+\begin_layout Standard
+In this case, 
+\begin_inset Formula $\mu_{t}$
+\end_inset
+
+ follows 
+\begin_inset Formula $\exp(\mathcal{N}(\log(\mu_{t,i}),\Sigma')$
+\end_inset
+
+), with 
+\begin_inset Formula $\log(\mu_{t,i})=\log(\mu_{i}\mu_{\min}+\mu_{i}(\mu_{\max}-\mu_{\min})(1+0.5\sin(\frac{2\pi t}{P})+\phi_{i}))$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma'_{1}=\sigma'_{2}=1$
+\end_inset
+
+ (extracted through trial error, this leads to standard deviations with
+ a ratio similar to the one observed in the actual dataset, i.e.
+ 
+\begin_inset Formula $\sigma_{1}=243$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{2}=827$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename MockData_cormorantheronegret_timeseries_log.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulated time series for a 2-species subset, simulation in logscale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Skewed_SAD_cormorantheronegret_log_IAAFT.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet analysis, simulation in logscale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
