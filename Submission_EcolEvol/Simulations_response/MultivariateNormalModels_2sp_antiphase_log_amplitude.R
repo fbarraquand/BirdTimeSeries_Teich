@@ -19,35 +19,26 @@ anrands=1000
 amethod="shift"
 type_correct="BH"
 nrep=1 #Should be 100
-mu_min_coeff=0.1
-mu_max_coeff=0.9
-mu=c(200,500)
-c=0.5
-rho = 1
+nu_min=c(0,0)
+nu_max=c(7.0,8.3)
 doyouload=F
 type_dist=c("Compensation")
 nspecies=c(2)
 norm=F
 set.seed(42)
-
-
-
-### 2. Modified Beta distributed rho entries, with a skew towards positive (skew towards negative, Beta(2,4) does not work)
+sigma_i=c(1,1)
 
 for(r in 1:nrep){
 x=matrix(NA,nsamples,nspecies)
 for(t in 1:nsamples){
 #Compute mu_t
-mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12+c(0,pi))) #We want to antiphase populations
-sigma_i=c*mu_t
-sigma_i[2]=4*sigma_i[1]
-#mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*sin(2*pi*t/12)
+nu_t=(nu_max-nu_min)*(0.5+0.5*sin(2*pi*t/12+c(0,pi))) #We want to antiphase populations
 SigmaPair = matrix(c(sigma_i[1]^2,0,0,sigma_i[2]^2),2,2,byrow=TRUE)
 
-x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
+tmp = mvrnorm(n = 1, nu_t, SigmaPair)
+x[t,]=exp(tmp)
 }
 #cor(x)
-
 #Let's turn the matrix into a data.frame
 name_species=paste("Sp",1:nspecies,sep="")
 sp_data_frame=c()
@@ -62,19 +53,20 @@ data_x=data.frame(dates,sp_data_frame,abundance)
 
 data_tot=cbind(rep(r,nrow(data_x)),data_x)
 colnames(data_tot)=c("Rep","Time","Species","Abundance")
-write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_2sp_antiphase.csv",sep=""),sep=";",dec=".",row.names=F)
+write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_2sp_antiphase_log_amplitude.csv",sep=""),sep=";",dec=".",row.names=F)
 
-tab=cbind(mu,SigmaPair)
-colnames(tab)=c("mu",paste("Sp",1:nspecies))
-write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_2sp_antiphase.csv",sep=""),sep=";",dec=".",row.names=F,append=T)
+tab=cbind(nu_min,nu_max,SigmaPair)
+colnames(tab)=c("nu_min","nu_max",paste("Sp",1:nspecies))
+write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_2sp_antiphase_log_amplitude.csv",sep=""),sep=";",dec=".",row.names=F,append=F)
 } #end r
 
-pdf("MockData_2sp_antiphase_timeseries.pdf",width=20,height=6)
-plot(x[,2],col="grey",ylim=range(x[,2]),t="o",pch=16)
+pdf("MockData_2sp_antiphase_timeseries_log_amplitude.pdf",width=20,height=6)
+#plot(x[,2],col="grey",ylim=range(x[,2]),t="o",pch=16)
+plot(x[,2],col="grey",ylim=c(0,6000),t="o",pch=16)
 lines(x[,1],col="black",t="o",pch=16)
 dev.off()
 
-end_of_file_seq="2sp_antiphase"
+end_of_file_seq="2sp_antiphase_log_amplitude"
 explain=c("antiphase")
 
 for(e in 1:length(end_of_file_seq)){

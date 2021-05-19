@@ -135,18 +135,18 @@ Raw value
 \begin_layout Standard
 We use simulations similar to those in the 2nd review for JAE, i.e.
  : at each time step, abundances are drown from 
-\begin_inset Formula $\mathcal{N}(\mathbf{\mu}_{t},\Sigma)$
+\begin_inset Formula $\mathcal{N}(\mathbf{\boldsymbol{\mu}}_{t},\boldsymbol{\Sigma})$
 \end_inset
 
  with 
-\begin_inset Formula $\mu_{t,i}=\mu_{i}\mu_{\min}+\mu_{i}(\mu_{\max}-\mu_{\min})(1+0.5\sin(\frac{2\pi t}{P})+\phi_{i})$
+\begin_inset Formula $\mu_{t,i}=\mu_{i}\eta_{\min}+\mu_{i}(\eta_{\max}-\eta_{\min})(1+0.5\sin(\frac{2\pi t}{P}+\phi_{i}))$
 \end_inset
 
- with 
+ with the mean abundance 
 \begin_inset Formula $\boldsymbol{\mu}=(200,500)$
 \end_inset
 
-, 
+, the coefficients 
 \family roman
 \series medium
 \shape up
@@ -160,11 +160,11 @@ We use simulations similar to those in the 2nd review for JAE, i.e.
 \noun off
 \color none
 
-\begin_inset Formula $\mu_{\max}=0.9$
+\begin_inset Formula $\eta_{\max}=0.9$
 \end_inset
 
-, 
-\begin_inset Formula $\mu_{\min}=0.1$
+ and 
+\begin_inset Formula $\eta_{\min}=0.1$
 \end_inset
 
 ,
@@ -180,7 +180,7 @@ We use simulations similar to those in the 2nd review for JAE, i.e.
 \uwave default
 \noun default
 \color inherit
- 
+ the phase 
 \begin_inset Formula $\boldsymbol{\phi}=(0,\pi)$
 \end_inset
 
@@ -287,10 +287,6 @@ Wavelet analysis
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -307,15 +303,15 @@ To keep positive values, we can use a logscale throughout the simulations.
 
 \begin_layout Standard
 In this case, 
-\begin_inset Formula $\mu_{t}$
+\begin_inset Formula $\boldsymbol{\mu}_{t}$
 \end_inset
 
  follows 
-\begin_inset Formula $\exp(\mathcal{N}(\log(\mu_{t,i}),\Sigma')$
+\begin_inset Formula $\exp(\mathcal{N}(\boldsymbol{\nu}_{t},\boldsymbol{\Sigma}')$
 \end_inset
 
-), with 
-\begin_inset Formula $\log(\mu_{t,i})=\log(\mu_{i}\mu_{\min}+\mu_{i}(\mu_{\max}-\mu_{\min})(1+0.5\sin(\frac{2\pi t}{P})+\phi_{i}))$
+), with the log abundance 
+\begin_inset Formula $\nu_{t,i}=\log(\mu_{i}\eta_{\min}+\mu_{i}(\eta_{\max}-\eta_{\min})(1+0.5\sin(\frac{2\pi t}{P}+\phi_{i}))$
 \end_inset
 
  and 
@@ -407,6 +403,34 @@ Wavelet analysis, simulation in logscale
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+Logged abundance using amplitude
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{\mu}_{t}\sim\exp(\mathcal{N}(\boldsymbol{\nu}_{t},\boldsymbol{\Sigma}'))$
+\end_inset
+
+ , with 
+\begin_inset Formula $\nu_{t,i}=(\nu_{\max,i}-\nu_{\min,i})(0.5+0.5\sin(\frac{2\pi t}{P}+\phi_{i}))$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma'_{1}=\sigma'_{2}=1$
+\end_inset
+
+ (in this case, 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+ are 3 times higher than they should be but the ratio between the two of
+ them is kept the same).
 \end_layout
 
 \end_body

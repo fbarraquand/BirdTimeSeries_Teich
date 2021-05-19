@@ -9,9 +9,9 @@ library(synchrony)
 library(codyn)
 library(mvcwt)
 
-source("../SCRIPTS/iaaft.R")
-source("../SCRIPTS/test_synchrony_Gross.r")
-source("../SCRIPTS/image_mvcwt_for_colormaps.r") 
+source("../../SCRIPTS/iaaft.R")
+source("../../SCRIPTS/test_synchrony_Gross.r")
+source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 library("RColorBrewer")
 
 nsamples = 35 *12 #We want to look at monthly data
@@ -70,7 +70,6 @@ pdf("MockData_2sp_antiphase_timeseries_log.pdf",width=20,height=6)
 plot(x[,2],col="grey",ylim=c(0,6000),t="o",pch=16)
 lines(x[,1],col="black",t="o",pch=16)
 dev.off()
-stop()
 end_of_file_seq="2sp_antiphase_log"
 explain=c("antiphase")
 
