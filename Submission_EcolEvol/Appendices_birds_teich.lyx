@@ -4321,7 +4321,13 @@ Anatini
 \emph on
 Calidris
 \emph default
- genus, left a-b) groups.
+ genus, left a-
+\change_deleted -2100369821 1621925682
+b
+\change_inserted -2100369821 1621925682
+c
+\change_unchanged
+) groups.
  The index was computed in each panel on the whole dataset (black) or using
  two periods: before and after 2006 (light and dark blue), the year of the
  change in water level management.
