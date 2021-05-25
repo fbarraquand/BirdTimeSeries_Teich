@@ -1154,7 +1154,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Revisions_R2/average_abundance_timeseries_v2.pdf
+	filename ../Submission_JAE/Revisions_R2/average_abundance_timeseries_v2.pdf
 	width 18cm
 
 \end_inset
@@ -2027,7 +2027,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Revisions_R2/Fig2_new3_JAE_abundances_NOTscaled.pdf
+	filename ../Submission_JAE/Revisions_R2/Fig2_new3_JAE_abundances_NOTscaled.pdf
 	width 85text%
 
 \end_inset
@@ -2110,7 +2110,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Revisions_R2/synchrony_indices_frequent_abundances_NOTscaled_with1000rand_nocorrection_smallgrid_IAAFT_corrected_loc.pdf
+	filename ../Submission_JAE/Revisions_R2/synchrony_indices_frequent_abundances_NOTscaled_with1000rand_nocorrection_smallgrid_IAAFT_corrected_loc.pdf
 	width 95text%
 
 \end_inset
@@ -2176,7 +2176,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Revisions_R2/wavelet_wader_waterfowlNOTscalednocorrection_smallergrid_IAAFT.pdf
+	filename ../Submission_JAE/Revisions_R2/wavelet_wader_waterfowlNOTscalednocorrection_smallergrid_IAAFT.pdf
 	width 95text%
 
 \end_inset
@@ -2399,7 +2399,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Revisions/abundance_3species.pdf
+	filename ../Submission_JAE/Revisions/abundance_3species.pdf
 	width 110text%
 
 \end_inset
@@ -2443,7 +2443,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Revisions_R2/triad_synchrony_2panels_abundances_NOTscaled_NOlog_test_with1000rand_nocorrection_smallgrid_IAAFT.pdf
+	filename ../Submission_JAE/Revisions_R2/triad_synchrony_2panels_abundances_NOTscaled_NOlog_test_with1000rand_nocorrection_smallgrid_IAAFT.pdf
 	width 99text%
 
 \end_inset
