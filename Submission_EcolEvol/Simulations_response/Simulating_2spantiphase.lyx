@@ -222,7 +222,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename MockData_cormorantheronegret_timeseries.pdf
+	filename MockData_2sp_antiphase_timeseries.pdf
 	width 95text%
 
 \end_inset
@@ -267,7 +267,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename Skewed_SAD_cormorantheronegret_IAAFT.pdf
+	filename Skewed_SAD_2sp_antiphase_IAAFT.pdf
 	width 95text%
 
 \end_inset
@@ -341,7 +341,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename MockData_cormorantheronegret_timeseries_log.pdf
+	filename MockData_2sp_antiphase_timeseries_log.pdf
 	width 95text%
 
 \end_inset
@@ -376,7 +376,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename Skewed_SAD_cormorantheronegret_log_IAAFT.pdf
+	filename Skewed_SAD_2sp_antiphase_log_IAAFT.pdf
 	width 95text%
 
 \end_inset
@@ -431,6 +431,76 @@ Logged abundance using amplitude
 
  are 3 times higher than they should be but the ratio between the two of
  them is kept the same).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename MockData_2sp_antiphase_timeseries_log_amplitude.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulated time series for a 2-species subset, simulation in logscale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Skewed_SAD_2sp_antiphase_log_amplitude_IAAFT.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet analysis, simulation in logscale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
