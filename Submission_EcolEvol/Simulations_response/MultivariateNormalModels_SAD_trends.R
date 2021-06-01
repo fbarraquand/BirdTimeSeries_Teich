@@ -7,6 +7,8 @@ library(MASS)
 library(Matrix)
 library(synchrony)
 library(codyn)
+library(mvcwt)
+library(RColorBrewer)
 
 source("../../SCRIPTS/iaaft.R")
 source("../../SCRIPTS/test_synchrony_Gross.r")
@@ -20,10 +22,12 @@ nrep=1 #Should be 100
 mu_min_coeff=0.1
 mu_max_coeff=0.9
 m=3.26
-c=0.5
+#c=0.5
+c=0.01
 doyouload=F
 type_dist=c("trends")
-seq_sp=c(4)
+seq_sp=c(2)
+#seq_sp=c(4)
 norm=F
 set.seed(42)
 
@@ -35,20 +39,31 @@ print(nspecies)
 log_mu=rnorm(nspecies,m)
 mu=exp(log_mu)
 mu=sort(mu,decreasing=T)
-
+mu_a=mu[1]
+mu_b=mu[2]
 
 for(r in 1:nrep){
 x=matrix(NA,nsamples,nspecies)
 for(t in 1:nsamples){
 #Compute mu_t
 mu_t=rep(NA,4)
-mu_t[1]=mu_min_coeff*mu[1]+mu[1]*(mu_max_coeff-mu_min_coeff)*(1+t/nsamples+0.5*sin(2*pi*t/12+pi/2))
-mu_t[2]=mu_min_coeff*mu[2]+mu[2]*(mu_max_coeff-mu_min_coeff)*(1-t/nsamples+0.5*sin(2*pi*t/12-pi/2))
-mu_t[3]=mu_min_coeff*mu[3]+mu[3]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
-mu_t[4]=mu_min_coeff*mu[4]+mu[4]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
+mu_t=rep(NA,2)
+if(t==1){
+	mu_t[1]=mu_a
+	mu_t[2]=mu_b
+}else if(t==nsamples){
+	mu_t[1]=mu_b
+	mu_t[2]=mu_a
+}else{
+	mu_t[1]=mu_a + (mu_b - mu_a)*(t/nsamples)#+mu[1]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
+	mu_t[2]=mu_b + (mu_a - mu_b)*(t/nsamples)#+mu[2]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
+
+}
+#mu_t[3:4]=mu_min_coeff*mu[3:4]+mu[3:4]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
 
 sigma_i=c*mu_t
-SigmaPair = matrix(0,4,4,byrow=TRUE)
+#SigmaPair = matrix(0,4,4,byrow=TRUE)
+SigmaPair = matrix(0,2,2,byrow=TRUE)
 
 for(i in 1:nspecies){
                         SigmaPair[i,i]=sigma_i[i]^2
@@ -62,8 +77,8 @@ x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
 pdf("MockData_SAD_timeseries_with_trends.pdf",width=20,height=6)
 plot(1:nsamples,x[,2],col="grey",t="o",pch=16,ylim=range(c(x)),xlab="Time",ylab="Abundance")
 lines(x[,1],col="black",t="o",pch=16)
-lines(x[,3],col="red",t="o",pch=16)
-lines(x[,4],col="blue",t="o",pch=16)
+#lines(x[,3],col="red",t="o",pch=16)
+#lines(x[,4],col="blue",t="o",pch=16)
 dev.off()
 
 
