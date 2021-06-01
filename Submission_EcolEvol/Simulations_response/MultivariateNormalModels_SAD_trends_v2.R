@@ -15,7 +15,7 @@ source("../../SCRIPTS/test_synchrony_Gross.r")
 source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 
 nsamples = 35 *12 #We want to look at monthly data
-anrands=1000
+anrands=100
 amethod="shift"
 type_correct="BH"
 nrep=1 #Should be 100
@@ -23,11 +23,11 @@ mu_min_coeff=0.1
 mu_max_coeff=0.9
 m=3.26
 #c=0.5
-c=0.01
+c=0.1
 doyouload=F
 type_dist=c("trends")
-seq_sp=c(2)
-#seq_sp=c(4)
+#seq_sp=c(2)
+seq_sp=c(4)
 norm=F
 set.seed(42)
 
@@ -47,7 +47,6 @@ x=matrix(NA,nsamples,nspecies)
 for(t in 1:nsamples){
 #Compute mu_t
 mu_t=rep(NA,4)
-mu_t=rep(NA,2)
 if(t==1){
 	mu_t[1]=mu_a
 	mu_t[2]=mu_b
@@ -55,15 +54,14 @@ if(t==1){
 	mu_t[1]=mu_b
 	mu_t[2]=mu_a
 }else{
-	mu_t[1]=mu_a + (mu_b - mu_a)*(t/nsamples)#+mu[1]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
-	mu_t[2]=mu_b + (mu_a - mu_b)*(t/nsamples)#+mu[2]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
+	mu_t[1]=(mu_a + (mu_b - mu_a)*(t/nsamples))*(1+0.5*sin(2*pi*t/12))
+	mu_t[2]=(mu_b + (mu_a - mu_b)*(t/nsamples))*(1+0.5*sin(2*pi*t/12))
 
 }
-#mu_t[3:4]=mu_min_coeff*mu[3:4]+mu[3:4]*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12))
+mu_t[3:4]=mu[3:4]*(1+0.5*sin(2*pi*t/12))
 
 sigma_i=c*mu_t
-#SigmaPair = matrix(0,4,4,byrow=TRUE)
-SigmaPair = matrix(0,2,2,byrow=TRUE)
+SigmaPair = matrix(0,4,4,byrow=TRUE)
 
 for(i in 1:nspecies){
                         SigmaPair[i,i]=sigma_i[i]^2
@@ -74,13 +72,12 @@ x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
 
 #cor(x)
 
-pdf("MockData_SAD_timeseries_with_trends.pdf",width=20,height=6)
+pdf("MockData_SAD_timeseries_with_trends_4sp_v2.pdf",width=20,height=6)
 plot(1:nsamples,x[,2],col="grey",t="o",pch=16,ylim=range(c(x)),xlab="Time",ylab="Abundance")
 lines(x[,1],col="black",t="o",pch=16)
-#lines(x[,3],col="red",t="o",pch=16)
-#lines(x[,4],col="blue",t="o",pch=16)
+lines(x[,3],col="red",t="o",pch=16)
+lines(x[,4],col="blue",t="o",pch=16)
 dev.off()
-
 
 #Let's turn the matrix into a data.frame
 name_species=paste("Sp",1:nspecies,sep="")
@@ -243,7 +240,7 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-pdf(paste("Skewed_SAD_",nspecies,"sp_trends_IAAFT.pdf",sep=""),width=7,height=3)
+pdf(paste("Skewed_SAD_",nspecies,"sp_trends_IAAFT_v2.pdf",sep=""),width=7,height=3)
 layout(matrix(c(1,1,2),nrow=1,ncol=3,byrow=T),widths=c(6,2))
 print(paste(Sys.time(),"before image"))
 par(mar=c(3,5,2,3))
