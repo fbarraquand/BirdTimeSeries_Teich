@@ -15,7 +15,7 @@ source("../../SCRIPTS/test_synchrony_Gross.r")
 source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 
 nsamples = 35 *12 #We want to look at monthly data
-anrands=100
+anrands=10
 amethod="shift"
 type_correct="BH"
 nrep=1 #Should be 100
@@ -30,7 +30,7 @@ type_dist=c("trends")
 seq_sp=c(4)
 norm=F
 set.seed(42)
-
+max_scale=35
 
 
 for(nspecies in seq_sp){
@@ -46,7 +46,7 @@ for(r in 1:nrep){
 x=matrix(NA,nsamples,nspecies)
 for(t in 1:nsamples){
 #Compute mu_t
-mu_t=rep(NA,4)
+mu_t=rep(NA,nspecies)
 if(t==1){
 	mu_t[1]=mu_a
 	mu_t[2]=mu_b
@@ -56,12 +56,13 @@ if(t==1){
 }else{
 	mu_t[1]=(mu_a + (mu_b - mu_a)*(t/nsamples))*(1+0.5*sin(2*pi*t/12))
 	mu_t[2]=(mu_b + (mu_a - mu_b)*(t/nsamples))*(1+0.5*sin(2*pi*t/12))
-
 }
-mu_t[3:4]=mu[3:4]*(1+0.5*sin(2*pi*t/12))
+if(nspecies>2){
+mu_t[3:length(mu_t)]=mu[3:length(mu_t)]*(1+0.5*sin(2*pi*t/12))
+}
 
 sigma_i=c*mu_t
-SigmaPair = matrix(0,4,4,byrow=TRUE)
+SigmaPair = matrix(0,nspecies,nspecies,byrow=TRUE)
 
 for(i in 1:nspecies){
                         SigmaPair[i,i]=sigma_i[i]^2
@@ -72,11 +73,13 @@ x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
 
 #cor(x)
 
-pdf("MockData_SAD_timeseries_with_trends_4sp_v2.pdf",width=20,height=6)
+pdf(paste("MockData_SAD_timeseries_with_trends_",nspecies,"sp_v2_1stage_ms35_c0p1.pdf",sep=""),width=20,height=6)
 plot(1:nsamples,x[,2],col="grey",t="o",pch=16,ylim=range(c(x)),xlab="Time",ylab="Abundance")
 lines(x[,1],col="black",t="o",pch=16)
+if(nspecies>2){
 lines(x[,3],col="red",t="o",pch=16)
 lines(x[,4],col="blue",t="o",pch=16)
+}
 dev.off()
 
 #Let's turn the matrix into a data.frame
@@ -168,7 +171,7 @@ x=(dates-dates[1])/365.25
 print(Sys.time())
 seq_x=seq(1,365.25*35,length.out=420)/365.25
 
-mm=mvcwt(seq_x,tab_species_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x) ####WARNING. THIS ONLY WORKS BECAUSE x IS ARTIFICIAL)
+mm=mvcwt(seq_x,tab_species_tmp,min.scale=mean(diff(seq_x))*3,max.scale=max_scale,nscales=100,loc=seq_x) ####WARNING. THIS ONLY WORKS BECAUSE x IS ARTIFICIAL)
 
 print(paste(Sys.time(),"after mvcwt"))
 
@@ -187,7 +190,7 @@ for(i in 1:anrands){
         for(s in 1:ncol(tab_species)){
         tab_tmp[,s]=iaaft_surrogate(tab_species_tmp[,s])
         }
-	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
+	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=max_scale,nscales=100,loc=seq_x)
         wmr_tmp=wmr(mmtmp)
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
@@ -240,11 +243,12 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-pdf(paste("Skewed_SAD_",nspecies,"sp_trends_IAAFT_v2.pdf",sep=""),width=7,height=3)
+pdf(paste("Skewed_SAD_",nspecies,"sp_trends_IAAFT_v2_1stage.pdf",sep=""),width=7,height=3)
 layout(matrix(c(1,1,2),nrow=1,ncol=3,byrow=T),widths=c(6,2))
 print(paste(Sys.time(),"before image"))
 par(mar=c(3,5,2,3))
 image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None")
+abline(h=8.75,col="black")
 #mtext("b)",side=2,line=-2,at=0.48,cex=1.5,outer=T,las=1)
 print(paste(Sys.time(),"after image"))
 
