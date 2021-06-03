@@ -22,8 +22,8 @@ nrep=1 #Should be 100
 mu_min_coeff=0.1
 mu_max_coeff=0.9
 m=3.26
-#c=0.5
-c=0.1
+c=0.5
+#c=0.1
 doyouload=F
 type_dist=c("trends")
 #seq_sp=c(2)
@@ -31,7 +31,7 @@ seq_sp=c(4)
 norm=F
 set.seed(42)
 max_scale=35
-
+nb_cycles=4
 
 for(nspecies in seq_sp){
 print(nspecies)
@@ -54,13 +54,13 @@ if(t==1){
 	mu_t[1]=mu_b
 	mu_t[2]=mu_a
 }else{
-	tbis=t%%(nsamples/8)
-	if(t%%(nsamples/4)<(nsamples/8)){
-		mu_t[1]=(mu_a + (mu_b - mu_a)*(tbis/(nsamples/8)))*(1+0.5*sin(2*pi*t/12))
-		mu_t[2]=(mu_b + (mu_a - mu_b)*(tbis/(nsamples/8)))*(1+0.5*sin(2*pi*t/12))
+	tbis=t%%(nsamples/(nb_cycles*2))
+	if(t%%(nsamples/nb_cycles)<(nsamples/(nb_cycles*2))){
+		mu_t[1]=(mu_a + (mu_b - mu_a)*(tbis/(nsamples/(nb_cycles*2))))*(1+0.5*sin(2*pi*t/12))
+		mu_t[2]=(mu_b + (mu_a - mu_b)*(tbis/(nsamples/(nb_cycles*2))))*(1+0.5*sin(2*pi*t/12))
 	}else{
-		mu_t[2]=(mu_a + (mu_b - mu_a)*(tbis/(nsamples/8)))*(1+0.5*sin(2*pi*t/12))
-		mu_t[1]=(mu_b + (mu_a - mu_b)*(tbis/(nsamples/8)))*(1+0.5*sin(2*pi*t/12))
+		mu_t[2]=(mu_a + (mu_b - mu_a)*(tbis/(nsamples/(nb_cycles*2))))*(1+0.5*sin(2*pi*t/12))
+		mu_t[1]=(mu_b + (mu_a - mu_b)*(tbis/(nsamples/(nb_cycles*2))))*(1+0.5*sin(2*pi*t/12))
 	}
 
 }
@@ -80,7 +80,7 @@ x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
 
 #cor(x)
 
-pdf(paste("MockData_SAD_timeseries_with_trends_",nspecies,"sp_v2_8stages_ms35_c0p1.pdf",sep=""),width=20,height=6)
+pdf(paste("MockData_SAD_timeseries_with_trends_",nspecies,"sp_v2_",nb_cycles,"cycles_ms",max_scale,"_c",c*10,".pdf",sep=""),width=20,height=6)
 plot(1:nsamples,x[,2],col="grey",t="o",pch=16,ylim=range(c(x)),xlab="Time",ylab="Abundance")
 lines(x[,1],col="black",t="o",pch=16)
 if(nspecies>2){
@@ -250,7 +250,7 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-pdf(paste("Skewed_SAD_",nspecies,"sp_trends_IAAFT_v2_8stages_ms35.pdf",sep=""),width=7,height=3)
+pdf(paste("Skewed_SAD_with_trends_",nspecies,"sp_v2_",nb_cycles,"cycles_ms",max_scale,"_c",c*10,".pdf",sep=""),width=7,height=3)
 layout(matrix(c(1,1,2),nrow=1,ncol=3,byrow=T),widths=c(6,2))
 print(paste(Sys.time(),"before image"))
 par(mar=c(3,5,2,3))

@@ -22,8 +22,8 @@ nrep=1 #Should be 100
 mu_min_coeff=0.1
 mu_max_coeff=0.9
 m=3.26
-#c=0.5
-c=0.1
+c=0.5
+#c=0.1
 doyouload=F
 type_dist=c("trends")
 #seq_sp=c(2)
@@ -73,7 +73,7 @@ x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
 
 #cor(x)
 
-pdf(paste("MockData_SAD_timeseries_with_trends_",nspecies,"sp_v2_1stage_ms35_c0p1.pdf",sep=""),width=20,height=6)
+pdf(paste("MockData_SAD_timeseries_with_trends_",nspecies,"sp_v2_1cycle_ms",max_scale,"_c",c*10,".pdf",sep=""),width=20,height=6)
 plot(1:nsamples,x[,2],col="grey",t="o",pch=16,ylim=range(c(x)),xlab="Time",ylab="Abundance")
 lines(x[,1],col="black",t="o",pch=16)
 if(nspecies>2){
@@ -243,7 +243,7 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-pdf(paste("Skewed_SAD_",nspecies,"sp_trends_IAAFT_v2_1stage.pdf",sep=""),width=7,height=3)
+pdf(paste("Skewed_SAD_",nspecies,"sp_v2_1cycle_ms",max_scale,"_c",c*10,".pdf",sep=""),width=7,height=3)
 layout(matrix(c(1,1,2),nrow=1,ncol=3,byrow=T),widths=c(6,2))
 print(paste(Sys.time(),"before image"))
 par(mar=c(3,5,2,3))
