@@ -4966,17 +4966,37 @@ Skewed species abundance distributions (SAD) might make compensation difficult
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1621433257
+\change_inserted -2100369821 1622467410
 The simulations were based on 
 \begin_inset Formula $\mathbf{x}_{t}\sim\mathcal{N}(\boldsymbol{\mathbf{\mu}}_{t},\boldsymbol{\Sigma})$
 \end_inset
 
- where 
-\begin_inset Formula $\boldsymbol{\mu}_{t}$
+ where the average abundance 
+\begin_inset Formula $\mu_{i}$
 \end_inset
 
- is drawn from a lognormal distribution (kept constant over time) to obtain
- a skewed SAD.
+ of a species is drawn from a lognormal distribution (kept constant over
+ time) to obtain a skewed SAD and the abundance 
+\begin_inset Formula $\mu_{t,i}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ follows 
+\begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+(\mu_{\max,i}-\mu_{\min,i})(1+0.5\sin(\frac{2\pi t}{P}))$
+\end_inset
+
+ with 
+\begin_inset Formula $\mu_{\min,i}=0.1\mu_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{\max,i}=0.9\mu_{i}$
+\end_inset
+
+ and P=12 (we need montlhy abundances with a seasonal trend).
  The variance-covariance matrix 
 \begin_inset Formula $\Sigma_{ij}=\rho_{ij}\sigma_{i}\sigma_{j}$
 \end_inset
@@ -5000,24 +5020,6 @@ The simulations were based on
  per scenario, allowing either compensation or synchrony.
  In this way, we keep the exact same correlation structure but we have a
  realistic mean-variance scaling variance for abundances.
- Because the simulation is designed to test monthly wavelet analyses, we
- need monthly abundances with a seasonal trend: we considered 
-\begin_inset Formula $\mu_{\min,i}=0.1\mu_{i}$
-\end_inset
-
- and 
-\begin_inset Formula $\mu_{\max,i}=0.9\mu_{i}$
-\end_inset
-
- so that we have a fluctuating mean abundance 
-\begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+(\mu_{\max,i}-\mu_{\min,i})(1+0.5\sin(\frac{2\pi t}{P}))$
-\end_inset
-
- with 
-\begin_inset Formula $P=12$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -5513,21 +5515,66 @@ ref{fig:40spcomp}
 ).
 \end_layout
 
+\begin_layout Subsection*
+
+\change_inserted -2100369821 1622463214
+Appendix S8 - Effect of variation dominance on wavelet analyses
+\end_layout
+
+\begin_layout Subsubsection*
+
+\change_inserted -2100369821 1622463255
+Highly skewed species-abundance distribution
+\end_layout
+
 \begin_layout Standard
 
-\change_inserted -2100369821 1621434076
-In addition to SAD distributions, the amplitude of variation should also
- be taken into account.
- We modeled a 4-species community in which the most abundant species had
- an amplitude 3 (ratio found in observations of waders) times higher than
- the sum of the amplitudes of the other species, and still found signs of
- compensation.
+\change_inserted -2100369821 1622208784
+Skewed distributions of abundances can come not only from different average
+ abundances (see Appendix S7), but also from different amplitude of variations
+ of abundances.
+ A highly variable species can drive the observed dynamics of the community
+ and make compensation more difficult to detect with the wavelet modulus
+ ratio.
  
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1621433970
+\change_inserted -2100369821 1622463086
+Using the simulation described in Appendix S7, in the case of compensation,
+ we modeled a 4-species community in which we modified the distribution
+ of abundances so that the most abundant species had an amplitude 3 times
+ higher than the sum of the amplitudes of the other species (ratio found
+ in observations of waders).
+ To do so, we only increased the amplitude of variation of the most abundant
+ species, therefore modifying its mean abundance, but not the distribution
+ of abundances of the other species, i.e.
+ for most abundant species 
+\begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+\kappa(\mu_{\max,i}-\mu_{\min,i})(1+0.5\sin(\frac{2\pi t}{P}))$
+\end_inset
+
+ where 
+\begin_inset Formula $\kappa=7$
+\end_inset
+
+ in a 4-species community.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622209659
+In this case, we still found signs of compensation, but for longer time
+ scales than the one input in the simulations (i.e.
+ above 2 years).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622208803
 \begin_inset Float figure
 wide false
 sideways false
@@ -5536,9 +5583,117 @@ status open
 \begin_layout Plain Layout
 \align center
 
-\change_inserted -2100369821 1621433997
+\change_inserted -2100369821 1622208450
 \begin_inset Graphics
 	filename Simulations_response/Skewed_SAD_4sp_compensation_IAAFT.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1622208450
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1622208450
+Wavelet modulus ratio, for 4 species with compensation, with 1 species having
+ an amplitude of variation 3 times higher than the sum of the others.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\change_inserted -2100369821 1622463284
+Dynamics including species in antiphase
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622463303
+In the most extreme case of compensation, we analysed only 2 species in
+ antiphase with one of them having a much higher amplitude of variation.
+ We mimicked the dynamics of the subset formed by the cormorant and the
+ group heron/egret, in which compensation was not detected despite being
+ seemingly apparent on time series (Fig.
+ 5 and 6 in the main text
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1622463306
+Check that at the end
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+).
+ The group heron/egret is more abundant and has an amplitude of variation
+ nearly 4 times higher than the cormorant.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622210773
+At each time step, abundances are drown from a lognormal distribution 
+\begin_inset Formula $\mathcal{N}(\mathbf{\boldsymbol{\nu}}_{t},\boldsymbol{\Sigma})$
+\end_inset
+
+ where 
+\begin_inset Formula $\nu_{t,i}=(\nu_{\max,i}-\nu_{\min,i})(0.5+0.5\sin(\frac{2\pi t}{P}+\phi_{i}))$
+\end_inset
+
+ with 
+\begin_inset Formula $\nu_{\text{max/min,i}}$
+\end_inset
+
+ are the maximum and minimum log amplitude taken directly from the observations,
+ the phase 
+\begin_inset Formula $\boldsymbol{\phi}=(0,\pi)$
+\end_inset
+
+ to force the antiphase in the dynamics, and 
+\begin_inset Formula $\Sigma_{ii}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\Sigma_{ij}=0,\forall i\neq j$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622210779
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1622210799
+\begin_inset Graphics
+	filename Simulations_response/MockData_2sp_antiphase_timeseries_log_amplitude.pdf
 	width 95text%
 
 \end_inset
@@ -5550,14 +5705,13 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433970
+\change_inserted -2100369821 1622210779
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621434058
-Wavelet modulus ratio, for 4 species with compensation, with 1 species having
- an amplitude of variation 3 times higher than the sum of the others.
+\change_inserted -2100369821 1622210823
+Simulated time series for 2 species in antiphase
 \change_unchanged
 
 \end_layout
@@ -5576,6 +5730,243 @@ Wavelet modulus ratio, for 4 species with compensation, with 1 species having
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622211030
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1622210689
+\begin_inset Graphics
+	filename Simulations_response/Skewed_SAD_2sp_antiphase_log_amplitude_IAAFT.pdf
+	width 95text%
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1622210628
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1622210674
+Wavelet modulus ratio for 2 species in antiphase, one of them having an
+ amplitude of variation 4 times higher than the other one.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622467624
+\begin_inset Quotes eld
+\end_inset
+
+Compensation
+\begin_inset Quotes erd
+\end_inset
+
+ (species being in antiphase) is then detected at the annual scale and seem
+ to be also visible for longer time scales.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\change_inserted -2100369821 1623082087
+Dynamics including long-term compensation
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1623082153
+Previous simulations included compensation (or antiphase) only at the monthly
+ scale, i.e.
+ the shortest scale in the dataset.
+ We wondered if compensation would be detectable at longest time scales.
+ In a 4-species community, we forced to 2 most abundant species to have
+ opposite long-term dynamics, with cycles of compensation.
+ Assuming the expected abundance of species 1, the most abundant, at time
+ 1 is 
+\begin_inset Formula $\mu_{1,1}=\mu_{a}$
+\end_inset
+
+ and the expected abundance of species 2, the second most abundant, is 
+\begin_inset Formula $\mu_{1,2}=\mu_{b}$
+\end_inset
+
+, we want the expected abundances at half cycle to be 
+\begin_inset Formula $\mu_{t_{cycle/2},1}=\mu_{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{t_{cycle/2},2}=\mu_{a}$
+\end_inset
+
+, and to go back to their initial value at the end of the cycle, i.e.
+ 
+\begin_inset Formula $\mu_{t_{cycle},1}=\mu_{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{t_{cycle},2}=\mu_{b}$
+\end_inset
+
+.
+ In our example, we modeled 4 cycles in 35 years, i.e.
+ the period was around 9 years.
+ We use a model similar to the one presented in Appendix S7.
+ Over the first half of the cyle, the dynamics follow:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622466795
+\begin_inset Formula 
+\[
+\begin{cases}
+\mu_{t,1}= & \left(\mu_{a}+(\mu_{b}-\mu_{a})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
+\mu_{t,2}= & \left(\mu_{b}+(\mu_{a}-\mu_{b})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
+\mu_{t,3/4}= & \mu_{3/4}(1+0.5\sin(\frac{2\pi t}{P}))
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1623081952
+Abundances revert to their initial value at the end of the cycle.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1623075010
+In this way, we include the synchrony due to the seasonality, but expect
+ to detect compensation
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622467480
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1622467480
+\begin_inset Graphics
+	filename Simulations_response/MockData_SAD_timeseries_with_trends_4sp_v2_4cycles_ms10_c5.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1622467480
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1623075829
+Time series of abundances in a 4-species community with compensation between
+ the 2 most abundant species with a 9-year cycle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1622467582
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -2100369821 1622467480
+\begin_inset Graphics
+	filename Simulations_response/Skewed_SAD_with_trends_4sp_v2_4cycles_ms10_c5.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1622467480
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1623081957
+Wavelet modulus ratio in a 4-species community with compensation between
+ the 2 most abundant species with a 9-year cycle.
+ Significance is evaluated with 1000 surrogates.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -2100369821 1623082250
+We find signs of compensation, but they are not significant throughout the
+ whole time series.
 \end_layout
 
 \begin_layout Standard

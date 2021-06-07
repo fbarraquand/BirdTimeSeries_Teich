@@ -15,7 +15,7 @@ source("../../SCRIPTS/test_synchrony_Gross.r")
 source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 
 nsamples = 35 *12 #We want to look at monthly data
-anrands=10
+anrands=1000
 amethod="shift"
 type_correct="BH"
 nrep=1 #Should be 100
@@ -30,15 +30,18 @@ type_dist=c("trends")
 seq_sp=c(4)
 norm=F
 set.seed(42)
-max_scale=35
+max_scale=20
 nb_cycles=4
 
 for(nspecies in seq_sp){
 print(nspecies)
 #Define mu
-log_mu=rnorm(nspecies,m)
-mu=exp(log_mu)
-mu=sort(mu,decreasing=T)
+#log_mu=rnorm(nspecies,m)
+#mu=exp(log_mu)
+#mu=sort(mu,decreasing=T)
+
+mu=c(100,25,10,5)  #Reco Fred
+
 mu_a=mu[1]
 mu_b=mu[2]
 
@@ -103,16 +106,16 @@ data_x=data.frame(dates,sp_data_frame,abundance)
 
 data_tot=cbind(rep(r,nrow(data_x)),data_x)
 colnames(data_tot)=c("Rep","Time","Species","Abundance")
-write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_",nspecies,"sp_trends.csv",sep=""),sep=";",dec=".",row.names=F)
+write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_",nspecies,"sp_",nb_cycles,"cycles.csv",sep=""),sep=";",dec=".",row.names=F)
 
 tab=cbind(mu,SigmaPair)
 colnames(tab)=c("mu",paste("Sp",1:nspecies))
-write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_",nspecies,"sp_trends.csv",sep=""),sep=";",dec=".",row.names=F,append=T)
+write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_",nspecies,"sp_",nb_cycles,"cycles.csv",sep=""),sep=";",dec=".",row.names=F,append=T)
 } #end r
 } #end nspecies
 
-end_of_file_seq=paste(nspecies,"sp_trends",sep="")
-explain=c("trends")
+end_of_file_seq=paste(nspecies,"sp_",nb_cycles,"cycles",sep="")
+explain=c("cycles")
 
 for(e in 1:length(end_of_file_seq)){
 #for(e in 1:1){

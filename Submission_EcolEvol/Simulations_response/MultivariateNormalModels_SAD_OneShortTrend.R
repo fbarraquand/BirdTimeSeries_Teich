@@ -50,17 +50,17 @@ x=matrix(NA,nsamples,nspecies)
 for(t in 1:(nsamples)){
 #Compute mu_t
 mu_t=rep(NA,nspecies)
-if(t==0){
+if(t<10*12){
 	mu_t[1]=mu_a*(1+0.5*sin(2*pi*t/12))
 	mu_t[2]=mu_b*(1+0.5*sin(2*pi*t/12))
-}else if(t==nsamples){
+}else if(t>30*12){
 	mu_t[1]=mu_b*(1+0.5*sin(2*pi*t/12))
 	mu_t[2]=mu_a*(1+0.5*sin(2*pi*t/12))
 }else{
-	mu_t[1]=(mu_a + (mu_b - mu_a)*((t-1)/(nsamples-1)))*(1+0.5*sin(2*pi*t/12))
-	mu_t[2]=(mu_b + (mu_a - mu_b)*((t-1)/(nsamples-1)))*(1+0.5*sin(2*pi*t/12))
-	#mu_t[1]=(mu_a + (mu_b - mu_a)*((t-10*12)/(30*12-10*12)))*(1+0.5*sin(2*pi*t/12))
-	#mu_t[2]=(mu_b + (mu_a - mu_b)*((t-10*12)/(30*12-10*12)))*(1+0.5*sin(2*pi*t/12))
+	#mu_t[1]=(mu_a + (mu_b - mu_a)*((t-1)/(nsamples-1)))*(1+0.5*sin(2*pi*t/12))
+	#mu_t[2]=(mu_b + (mu_a - mu_b)*((t-1)/(nsamples-1)))*(1+0.5*sin(2*pi*t/12))
+	mu_t[1]=(mu_a + (mu_b - mu_a)*((t-10*12)/(30*12-10*12)))*(1+0.5*sin(2*pi*t/12))
+	mu_t[2]=(mu_b + (mu_a - mu_b)*((t-10*12)/(30*12-10*12)))*(1+0.5*sin(2*pi*t/12))
 }
 if(nspecies>2){
 mu_t[3:length(mu_t)]=mu[3:length(mu_t)]*(1+0.5*sin(2*pi*t/12))
@@ -78,7 +78,7 @@ x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
 
 #cor(x)
 
-pdf(paste("MockData_SAD_timeseries_with_trends_",nspecies,"sp_v2_1cycle_ms",max_scale,"_c",c*10,".pdf",sep=""),width=20,height=6)
+pdf(paste("MockData_SAD_timeseries_with_trends_",nspecies,"sp_v2_1cycle_shorter_ms",max_scale,"_c",c*10,".pdf",sep=""),width=20,height=6)
 plot(1:nsamples,x[,2],col="grey",t="o",pch=16,ylim=range(c(x)),xlab="Time",ylab="Abundance")
 lines(x[,1],col="black",t="o",pch=16)
 if(nspecies>2){
@@ -101,15 +101,15 @@ data_x=data.frame(dates,sp_data_frame,abundance)
 
 data_tot=cbind(rep(r,nrow(data_x)),data_x)
 colnames(data_tot)=c("Rep","Time","Species","Abundance")
-write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_",nspecies,"sp_1cycle_ms35.csv",sep=""),sep=";",dec=".",row.names=F)
+write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_",nspecies,"sp_1cycle_shorter_ms35.csv",sep=""),sep=";",dec=".",row.names=F)
 
 tab=cbind(mu,SigmaPair)
 colnames(tab)=c("mu",paste("Sp",1:nspecies))
-write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_",nspecies,"sp_1cycle_ms35.csv",sep=""),sep=";",dec=".",row.names=F,append=T)
+write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_",nspecies,"sp_1cycle_shorter_ms35.csv",sep=""),sep=";",dec=".",row.names=F,append=T)
 } #end r
 } #end nspecies
 
-end_of_file_seq=paste(nspecies,"sp_1cycle_ms35",sep="")
+end_of_file_seq=paste(nspecies,"sp_1cycle_shorter_ms35",sep="")
 explain=c("trends")
 
 for(e in 1:length(end_of_file_seq)){
@@ -248,7 +248,7 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-pdf(paste("Skewed_SAD_",nspecies,"sp_v2_1cycle_ms",max_scale,"_c",c*10,".pdf",sep=""),width=7,height=3)
+pdf(paste("Skewed_SAD_",nspecies,"sp_v2_1cycle_shorter_ms",max_scale,"_c",c*10,".pdf",sep=""),width=7,height=3)
 layout(matrix(c(1,1,2),nrow=1,ncol=3,byrow=T),widths=c(6,2))
 print(paste(Sys.time(),"before image"))
 par(mar=c(3,5,2,3))
