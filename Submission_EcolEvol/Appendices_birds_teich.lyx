@@ -89,6 +89,7 @@
 \html_css_as_file 0
 \html_be_strict false
 \author -2100369821 "cpicoche"
+\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -4193,7 +4194,13 @@ Gross' synchrony index as a function of the season (cold and warm seasons),
 
 \begin_layout Standard
 We noted on Fig.
- 4 in the main text that cormorants, herons and egrets seemed to compensate
+ 
+\change_deleted -666822487 1625852843
+4
+\change_inserted -666822487 1625852843
+5
+\change_unchanged
+ in the main text that cormorants, herons and egrets seemed to compensate
  each other, at least for the first period of the time series.
  This compensation was seen on a log scale, and seemed conspicuous on that
  scale.
@@ -4215,6 +4222,27 @@ noprefix "false"
 
 ) makes the correlation between the two groups less obvious, which is probably
  why it only appears at larger scales (>5 years).
+\change_inserted -666822487 1625852846
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1625852916
+F: Somehow I wonder about the relevance of this paragraph after our explorations
+ of variation dominance.
+ Probably I am worrying too much.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -4321,13 +4349,7 @@ Anatini
 \emph on
 Calidris
 \emph default
- genus, left a-
-\change_deleted -2100369821 1621925682
-b
-\change_inserted -2100369821 1621925682
-c
-\change_unchanged
-) groups.
+ genus, left a-c) groups.
  The index was computed in each panel on the whole dataset (black) or using
  two periods: before and after 2006 (light and dark blue), the year of the
  change in water level management.
@@ -4345,6 +4367,11 @@ status open
 \begin_layout Plain Layout
 J'ai réduit un tout petit peu la figure car la légende mordait sur le numéro
  de page
+\change_inserted -666822487 1625852930
+.
+ F: OK
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -4865,6 +4892,8 @@ literal "false"
 
 \begin_layout Subsection*
 Appendix S6 - Effect of 
+\change_deleted -666822487 1625852968
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4872,14 +4901,23 @@ missing
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_inserted -666822487 1625852969
+zero
+\change_unchanged
  values on wavelet analyses
 \end_layout
 
 \begin_layout Standard
 We investigate here if exactly-zero abundances can distort the compensation
  patterns evidenced by the wavelet coherence.
- We chose a simulation with 10 species and 10% missing values for all species
- (close to a worst-case scenario).
+ We chose a simulation with 10 species and 10% 
+\change_deleted -666822487 1625852976
+missing
+\change_inserted -666822487 1625852976
+zero
+\change_unchanged
+ values for all species (close to a worst-case scenario).
  The results show that while the statistical significance of the values
  can change (i.e., the data is more compatible with the null hypothesis of
  time series uncorrelated between species, assuming the null is true), the
@@ -4920,7 +4958,30 @@ status open
 
 \begin_layout Plain Layout
 Wavelet modulus ratio for a 10-species community with compensatory dynamics
- without (a) and with (b) missing data 
+ without (a) and with (b) 
+\change_deleted -666822487 1625853006
+missing
+\change_inserted -666822487 1625853054
+exactly zero values
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1625853036
+F: I'm afraid we'll have to change this in the figure as well or remove
+ the titles in the figure
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_deleted -666822487 1625853009
+ data
+\change_unchanged
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Wavelet-missing-data"
@@ -4938,35 +4999,47 @@ name "fig:Wavelet-missing-data"
 \end_inset
 
 
-\change_inserted -2100369821 1621432692
-
 \end_layout
 
 \begin_layout Subsection*
-
-\change_inserted -2100369821 1621432718
 Appendix S7 - Effect of species dominance on wavelet analyses
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1621433077
 Skewed species abundance distributions (SAD) might make compensation difficult
  to detect, as the wavelet modulus ratio 
 \begin_inset Formula $\rho$
 \end_inset
 
  may be affected mostly by the abundance of the dominant species.
- In order to test the sensitivity of this metrics, we modeled small (4 species)
- and large (40 species) communities with a skewed SAD and a similar seasonal
- dynamics, mimicking observed data, and performed analyses with and without
- normalisation.
- 
+ In order to test the sensitivity of this metric
+\change_inserted -666822487 1625853102
+ to species dominance
+\change_deleted -666822487 1625853099
+s
+\change_unchanged
+, we modeled small (4 species) and large (40 species) communities with a
+ skewed SAD and a similar seasonal 
+\change_deleted -666822487 1625853119
+dynamics
+\change_inserted -666822487 1625853120
+forcing
+\change_unchanged
+, mimicking observed data
+\change_deleted -666822487 1625853128
+, and
+\change_inserted -666822487 1625853130
+.
+ We then
+\change_unchanged
+ performed analyses with and without normalisation
+\change_inserted -666822487 1625853165
+ (i.e., standardisation)
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622467410
 The simulations were based on 
 \begin_inset Formula $\mathbf{x}_{t}\sim\mathcal{N}(\boldsymbol{\mathbf{\mu}}_{t},\boldsymbol{\Sigma})$
 \end_inset
@@ -4976,7 +5049,11 @@ The simulations were based on
 \end_inset
 
  of a species is drawn from a lognormal distribution (kept constant over
- time) to obtain a skewed SAD and the abundance 
+ time) to obtain a skewed SAD
+\change_inserted -666822487 1625853179
+,
+\change_unchanged
+ and the abundance 
 \begin_inset Formula $\mu_{t,i}$
 \end_inset
 
@@ -4985,7 +5062,7 @@ The simulations were based on
 \end_inset
 
  follows 
-\begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+(\mu_{\max,i}-\mu_{\min,i})(1+0.5\sin(\frac{2\pi t}{P}))$
+\begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+(\mu_{\max,i}-\mu_{\min,i})\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)$
 \end_inset
 
  with 
@@ -4996,7 +5073,17 @@ The simulations were based on
 \begin_inset Formula $\mu_{\max,i}=0.9\mu_{i}$
 \end_inset
 
- and P=12 (we need montlhy abundances with a seasonal trend).
+ and 
+\change_deleted -666822487 1625853240
+P=12
+\change_inserted -666822487 1625853240
+
+\begin_inset Formula $P=12$
+\end_inset
+
+
+\change_unchanged
+ (we need montlhy abundances with a seasonal trend).
  The variance-covariance matrix 
 \begin_inset Formula $\Sigma_{ij}=\rho_{ij}\sigma_{i}\sigma_{j}$
 \end_inset
@@ -5018,19 +5105,52 @@ The simulations were based on
 \end_inset
 
  per scenario, allowing either compensation or synchrony.
- In this way, we keep the exact same correlation structure but we have a
- realistic mean-variance scaling variance for abundances.
-\end_layout
+ In this way, we 
+\change_deleted -666822487 1625853267
+keep the exact same
+\change_inserted -666822487 1625853270
+can control the
+\change_unchanged
+ correlation structure
+\change_deleted -666822487 1625853280
+ but we have a
+\change_inserted -666822487 1625853282
+ while keeping a
+\change_unchanged
+ realistic mean-variance scaling 
+\change_deleted -666822487 1625853292
+variance 
+\change_unchanged
+for abundances.
 
-\begin_layout Standard
-
-\change_inserted -2100369821 1621433274
-\begin_inset ERT
+\change_inserted -666822487 1625853483
+ Time series for compensation or synchrony are presented for the 4-species
+ communities in Fig.
+ S12
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433277
+\change_inserted -666822487 1625853501
+Would be better to have fig:4spcomp1 but this yields a broken link.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5039,8 +5159,6 @@ begin{figure}[H]
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433279
-
 
 \backslash
 centering     
@@ -5048,16 +5166,12 @@ centering
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433283
-
 
 \backslash
 subfloat[Compensation]{
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621434118
 
 
 \backslash
@@ -5069,8 +5183,6 @@ ha2_beta4_single.pdf}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433295
-
 
 \backslash
 label{fig:ts1}
@@ -5078,20 +5190,14 @@ label{fig:ts1}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621434288
-
 }
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433274
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433300
 
 
 \backslash
@@ -5099,8 +5205,6 @@ subfloat[Synchrony]{
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621434121
 
 
 \backslash
@@ -5112,8 +5216,6 @@ ha4_beta2_single.pdf}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433315
-
 
 \backslash
 label{fig:ts2} 
@@ -5121,26 +5223,32 @@ label{fig:ts2}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433319
-
 }
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433324
-
 
 \backslash
 caption{Time series of communities with a skewed SAD, for 4 species, with
- (a) compensation and (b) synchrony.}     
+ (a) compensation 
+\change_inserted -666822487 1625853623
+($B_{ij}
+\backslash
+sim Beta(2,4)$) 
+\change_unchanged
+and (b) synchrony
+\change_inserted -666822487 1625853628
+ ($B_{ij}
+\backslash
+sim Beta(4,2)$)
+\change_unchanged
+.}     
 \backslash
 label{fig:timeseries}
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433274
 
 
 \backslash
@@ -5148,8 +5256,6 @@ end{figure}
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433274
 
 
 \backslash
@@ -5162,16 +5268,12 @@ arabic{subfigure}}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433330
-
 
 \backslash
 begin{figure}[H] 	
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433332
 
 
 \backslash
@@ -5180,16 +5282,12 @@ centering
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433335
-
 
 \backslash
 subfloat[Untransformed]{     
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433642
 
 
 \backslash
@@ -5202,8 +5300,6 @@ led_4sp_alpha2_beta4_with1000_two_panels_no_correction_smallergrid_IAAFT.pdf}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433344
-
 
 \backslash
 label{fig:4spcomp1}     
@@ -5211,20 +5307,14 @@ label{fig:4spcomp1}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621434309
-
 }
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433274
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433385
 
 
 \backslash
@@ -5232,8 +5322,6 @@ subfloat[Scaled]{
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433650
 
 
 \backslash
@@ -5248,14 +5336,10 @@ label{fig:4spcomp2}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433388
-
 }   
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621434416
 
 
 \backslash
@@ -5265,8 +5349,6 @@ caption{Gross index and wavelet modulus ratio, for 4 species with compensation,
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433396
-
 
 \backslash
 label{fig:4spcomp} 
@@ -5274,16 +5356,12 @@ label{fig:4spcomp}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433274
-
 
 \backslash
 end{figure}
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433274
 
 
 \backslash
@@ -5294,16 +5372,12 @@ centering
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433404
-
     
 \backslash
 subfloat[Untransformed]{     
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621434315
 
 
 \backslash
@@ -5318,13 +5392,9 @@ label{fig:4spsync1} }
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433654
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433408
 
 
 \backslash
@@ -5332,8 +5402,6 @@ subfloat[Scaled]{
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433659
 
 
 \backslash
@@ -5348,8 +5416,6 @@ label{fig:4spsync2} }
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621434429
-
  
 \backslash
 caption{Gross index and wavelet modulus ratio, for 4 species with synchrony,
@@ -5357,8 +5423,6 @@ caption{Gross index and wavelet modulus ratio, for 4 species with synchrony,
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433274
 
 
 \backslash
@@ -5369,16 +5433,12 @@ end{figure}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433428
-
 
 \backslash
 begin{figure}[H] 
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433431
 
 
 \backslash
@@ -5387,16 +5447,12 @@ centering
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433435
-
 
 \backslash
 subfloat[Untransformed]{     
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433665
 
 
 \backslash
@@ -5409,8 +5465,6 @@ led_40sp_alpha2_beta4_with1000_two_panels_no_correction_smallergrid_IAAFT.pdf}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433446
-
 
 \backslash
 label{fig:40spcomp1}
@@ -5418,20 +5472,14 @@ label{fig:40spcomp1}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621434323
-
 }
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433439
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433450
 
 
 \backslash
@@ -5439,8 +5487,6 @@ subfloat[Scaled]{
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621434236
 
 
 \backslash
@@ -5452,16 +5498,12 @@ _40sp_alpha2_beta4_with1000_two_panels_no_correction_smallergrid_IAAFT.pdf}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433458
-
 
 \backslash
 label{fig:40spcomp2} }       
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621434437
 
 
 \backslash
@@ -5473,13 +5515,9 @@ label{fig:40spcomp}
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1621433274
-
 
 \backslash
 end{figure} 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -5488,69 +5526,147 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1621433757
 The fact that one species dominates does not seem to be a problem for the
- index to find synchrony or compensation.
- In fact, the scaling was found to decrease the statistical significance
- of short-term compensation (
+ index to find synchrony or compensation
+\change_inserted -666822487 1625853676
+ (Figs.
+ S13, S14, S15)
+\change_unchanged
+.
+
+\change_deleted -666822487 1625853684
+ In fact, the scaling
+\change_inserted -666822487 1625853715
+ Normalising the time series, which was suggested by a referee,
+\change_unchanged
+ was found to decrease the statistical significance of short-term compensation
+ (
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1621433751
 
 Figs.~
 \backslash
 ref{fig:4spcomp},
 \backslash
 ref{fig:40spcomp}
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 ).
+
+\change_inserted -666822487 1625853788
+ We stress that analyses of such scaled data essentially consider another
+ compensation/synchrony concept than the one we modelled, more closely related
+ to phase synchrony.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection*
-
-\change_inserted -2100369821 1622463214
 Appendix S8 - Effect of variation dominance on wavelet analyses
 \end_layout
 
 \begin_layout Subsubsection*
+Highly skewed 
+\change_deleted -666822487 1625853813
+species-abundance distribution
+\change_inserted -666822487 1625853831
+distribution of temporal variation among species
+\change_unchanged
 
-\change_inserted -2100369821 1622463255
-Highly skewed species-abundance distribution
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622208784
 Skewed distributions of abundances can come not only from different average
- abundances (see Appendix S7), but also from different amplitude of variations
- of abundances.
- A highly variable species can drive the observed dynamics of the community
- and make compensation more difficult to detect with the wavelet modulus
- ratio.
+ abundances (see Appendix S7), but also from different amplitude of 
+\change_inserted -666822487 1625853847
+temporal 
+\change_unchanged
+variation
+\change_deleted -666822487 1625853849
+s
+\change_unchanged
  
+\change_deleted -666822487 1625853852
+of
+\change_inserted -666822487 1625853852
+in
+\change_unchanged
+ abundances
+\change_inserted -666822487 1625853861
+ among species
+\change_unchanged
+.
+ A highly variable species
+\change_inserted -666822487 1625853878
+ reaching high numbers
+\change_unchanged
+ can drive the observed dynamics of the community
+\change_inserted -666822487 1625853884
+,
+\change_unchanged
+ and
+\change_inserted -666822487 1625853887
+ eventually
+\change_unchanged
+ make compensation more difficult 
+\change_inserted -666822487 1625853900
+if not impossible 
+\change_unchanged
+to detect with the wavelet modulus ratio
+\change_inserted -666822487 1625853909
+ (and likely other metrics of compensation)
+\change_unchanged
+.
+
+\change_deleted -666822487 1625852954
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1622463086
-Using the simulation described in Appendix S7, in the case of compensation,
- we modeled a 4-species community in which we modified the distribution
- of abundances so that the most abundant species had an amplitude 3 times
- higher than the sum of the amplitudes of the other species (ratio found
- in observations of waders).
- To do so, we only increased the amplitude of variation of the most abundant
- species, therefore modifying its mean abundance, but not the distribution
- of abundances of the other species, i.e.
- for most abundant species 
+\change_deleted -666822487 1625853929
+Using
+\change_inserted -666822487 1625853931
+Starting from
+\change_unchanged
+ the simulation described in Appendix S7, in the case of compensation, we
+ modeled a 4-species community in which we modified the distribution of
+ abundances
+\change_inserted -666822487 1625853940
+,
+\change_unchanged
+ so that the most abundant species had an amplitude 3 times higher than
+ the sum of the amplitudes of the other species (ratio found in observations
+ of waders
+\change_inserted -666822487 1625853976
+, at or below the annual time scale
+\change_unchanged
+).
+ To do so, we
+\change_deleted -666822487 1625853994
+ only
+\change_unchanged
+ increased the amplitude of variation of the most abundant species
+\change_inserted -666822487 1625854018
+ while keeping the minimum constant
+\change_unchanged
+, therefore modifying
+\change_inserted -666822487 1625854004
+ also
+\change_unchanged
+ its mean abundance, but not the distribution of abundances of the other
+ species, i.e.
+ for
+\change_inserted -666822487 1625854033
+ the
+\change_unchanged
+ most abundant species 
 \begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+\kappa(\mu_{\max,i}-\mu_{\min,i})(1+0.5\sin(\frac{2\pi t}{P}))$
 \end_inset
 
@@ -5559,22 +5675,42 @@ Using the simulation described in Appendix S7, in the case of compensation,
 \end_inset
 
  in a 4-species community.
+\end_layout
+
+\begin_layout Standard
+In this case, we still found signs of compensation, but 
+\change_inserted -666822487 1625854198
+weakly and 
+\change_unchanged
+for longer time scales than the one 
+\change_deleted -666822487 1625854052
+input
+\change_inserted -666822487 1625854053
+assumed
+\change_unchanged
+ in the simulations (i.e.
+\change_inserted -666822487 1625854056
+,
+\change_unchanged
+ above 2 years).
+
+\change_deleted -666822487 1625852954
+ 
+\change_inserted -666822487 1625854394
+There was intermittent detection of compensation at short (monthly) time
+ scales though, but this detection should have been homogeneous throughout
+ the time series.
+ This absence of detection is likely not an artefact of the method, but
+ rather a limitation of the compensation concept.
+ Whenever one species fluctuate much more than the rest, it is impossible
+ to a change in numbers of the dominant species to be compensated by a change
+ in numbers of the rest of the species.
+ 
 \change_unchanged
 
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622209659
-In this case, we still found signs of compensation, but for longer time
- scales than the one input in the simulations (i.e.
- above 2 years).
- 
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -2100369821 1622208803
 \begin_inset Float figure
 wide false
 sideways false
@@ -5582,8 +5718,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -2100369821 1622208450
 \begin_inset Graphics
 	filename Simulations_response/Skewed_SAD_4sp_compensation_IAAFT.pdf
 	width 95text%
@@ -5594,13 +5728,9 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622208450
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622208450
 Wavelet modulus ratio, for 4 species with compensation, with 1 species having
  an amplitude of variation 3 times higher than the sum of the others.
 \end_layout
@@ -5616,47 +5746,89 @@ Wavelet modulus ratio, for 4 species with compensation, with 1 species having
 \end_layout
 
 \begin_layout Subsubsection*
-
-\change_inserted -2100369821 1622463284
 Dynamics including species in antiphase
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622463303
-In the most extreme case of compensation, we analysed only 2 species in
- antiphase with one of them having a much higher amplitude of variation.
- We mimicked the dynamics of the subset formed by the cormorant and the
- group heron/egret, in which compensation was not detected despite being
- seemingly apparent on time series (Fig.
+In the most extreme case of compensation, we analysed 
+\change_deleted -666822487 1625854464
+only 
+\change_unchanged
+2 species 
+\change_deleted -666822487 1625854486
+in antiphase
+\change_inserted -666822487 1625854490
+with opposed annual phases,
+\change_unchanged
+ 
+\change_deleted -666822487 1625854498
+with
+\change_inserted -666822487 1625854507
+under the constraint that
+\change_unchanged
+ one of them 
+\change_deleted -666822487 1625854511
+having
+\change_inserted -666822487 1625854511
+has
+\change_unchanged
+ a much higher amplitude of variation
+\change_inserted -666822487 1625854522
+.
+ We therefore explore the same issue of variation dominance in a different
+ context
+\change_unchanged
+.
+ We mimicked
+\change_inserted -666822487 1625854434
+ this time
+\change_unchanged
+ the dynamics of the subset formed by the cormorant and the group heron/egret,
+ in which compensation was not detected despite being
+\change_deleted -666822487 1625854442
+ seemingly
+\change_unchanged
+ apparent on time series
+\change_inserted -666822487 1625854453
+ through antiphase behaviour
+\change_unchanged
+ (Fig
+\change_inserted -666822487 1625854535
+s
+\change_unchanged
+.
  5 and 6 in the main text
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622463306
 Check that at the end
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 ).
- The group heron/egret is more abundant and has an amplitude of variation
- nearly 4 times higher than the cormorant.
+ The group heron/egret is 
+\change_inserted -666822487 1625854554
+indeed 
+\change_unchanged
+more abundant and has an amplitude of variation nearly 4 times higher than
+ the cormorant.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622210773
-At each time step, abundances are drown from a lognormal distribution 
-\begin_inset Formula $\mathcal{N}(\mathbf{\boldsymbol{\nu}}_{t},\boldsymbol{\Sigma})$
+At each time step, abundances are dr
+\change_inserted -666822487 1625854560
+a
+\change_deleted -666822487 1625854560
+o
+\change_unchanged
+wn from a lognormal distribution 
+\begin_inset Formula $\mathcal{\mathcal{L}N}(\mathbf{\boldsymbol{\nu}}_{t},\boldsymbol{\Sigma})$
 \end_inset
 
  where 
-\begin_inset Formula $\nu_{t,i}=(\nu_{\max,i}-\nu_{\min,i})(0.5+0.5\sin(\frac{2\pi t}{P}+\phi_{i}))$
+\begin_inset Formula $\nu_{t,i}=(\nu_{\max,i}-\nu_{\min,i})\left(0.5+0.5\sin(\frac{2\pi t}{P}+\phi_{i})\right)$
 \end_inset
 
  with 
@@ -5677,12 +5849,16 @@ At each time step, abundances are drown from a lognormal distribution
 \end_inset
 
 .
+
+\change_inserted -666822487 1625854638
+ This implies that we do not assume compensation to be present at lower
+ or higher temporal scales than the year.
  
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622210779
 \begin_inset Float figure
 wide false
 sideways false
@@ -5690,8 +5866,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -2100369821 1622210799
 \begin_inset Graphics
 	filename Simulations_response/MockData_2sp_antiphase_timeseries_log_amplitude.pdf
 	width 95text%
@@ -5699,31 +5873,17 @@ status open
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622210779
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622210823
 Simulated time series for 2 species in antiphase
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -5733,8 +5893,6 @@ Simulated time series for 2 species in antiphase
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622211030
 \begin_inset Float figure
 wide false
 sideways false
@@ -5742,8 +5900,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -2100369821 1622210689
 \begin_inset Graphics
 	filename Simulations_response/Skewed_SAD_2sp_antiphase_log_amplitude_IAAFT.pdf
 	width 95text%
@@ -5751,28 +5907,18 @@ status open
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622210628
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622210674
 Wavelet modulus ratio for 2 species in antiphase, one of them having an
  amplitude of variation 4 times higher than the other one.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -5782,8 +5928,6 @@ Wavelet modulus ratio for 2 species in antiphase, one of them having an
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622467624
 \begin_inset Quotes eld
 \end_inset
 
@@ -5791,25 +5935,101 @@ Compensation
 \begin_inset Quotes erd
 \end_inset
 
- (species being in antiphase) is then detected at the annual scale and seem
- to be also visible for longer time scales.
+ (species being in antiphase) is then 
+\change_inserted -666822487 1625854688
+poorly 
+\change_unchanged
+detected at the annual scale
+\change_inserted -666822487 1625854781
+, the detection being as in the previous section intermittent instead of
+ being constant.
+ 
+\change_deleted -666822487 1625854735
+ and seem to be also visible for
+\change_inserted -666822487 1625854800
+ The randomness of peak heights also created some compensation at
+\change_unchanged
+ longer time scales
+\change_inserted -666822487 1625854797
+ in this simulation, but this should not be overinterpreted
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Subsubsection*
-
-\change_inserted -2100369821 1623082087
 Dynamics including long-term compensation
+\change_inserted -666822487 1625854959
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1625854989
+Shouldn't we promote this section? We may or may not do that, I wonder.
+ Otherwise I wonder about S8's title
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+Previous simulations included compensation 
+\change_deleted -666822487 1625854815
+(or antiphase)
+\change_unchanged
+ only at the monthly scale, i.e.
+ the shortest scale in the dataset
+\change_inserted -666822487 1625854824
+, or annual antiphase
+\change_unchanged
+.
+ We wondered if compensation 
+\change_deleted -666822487 1625854842
+w
+\change_inserted -666822487 1625854842
+c
+\change_unchanged
+ould be detectable at longe
+\change_deleted -666822487 1625854831
+st
+\change_inserted -666822487 1625854831
+r
+\change_unchanged
+ time scales
+\change_inserted -666822487 1625854944
+, i.e., above the year, in a context slightly different than variation dominance,
+ where we still expect compensation to be possible
+\change_unchanged
+.
 
-\change_inserted -2100369821 1623082153
-Previous simulations included compensation (or antiphase) only at the monthly
- scale, i.e.
- the shortest scale in the dataset.
- We wondered if compensation would be detectable at longest time scales.
- In a 4-species community, we forced to 2 most abundant species to have
- opposite long-term dynamics, with cycles of compensation.
+\change_inserted -666822487 1625854879
+ This is especially relevant in our context given that our datasets seems
+ to have long-term trends.
+
+\change_unchanged
+ 
+\change_inserted -666822487 1625854949
+
+\end_layout
+
+\begin_layout Standard
+In a 4-species community, we forced to
+\change_inserted -666822487 1625854902
+ the
+\change_unchanged
+ 2 most abundant species to have opposite long-term dynamics, with cycles
+ of compensation
+\change_inserted -666822487 1625855209
+ over multiple years
+\change_unchanged
+.
  Assuming the expected abundance of species 1, the most abundant, at time
  1 is 
 \begin_inset Formula $\mu_{1,1}=\mu_{a}$
@@ -5844,8 +6064,6 @@ Previous simulations included compensation (or antiphase) only at the monthly
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622466795
 \begin_inset Formula 
 \[
 \begin{cases}
@@ -5862,21 +6080,56 @@ Previous simulations included compensation (or antiphase) only at the monthly
 
 \begin_layout Standard
 
-\change_inserted -2100369821 1623081952
-Abundances revert to their initial value at the end of the cycle.
+\change_inserted -666822487 1625855055
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1625855093
+This time we haven't used the log-scale? Somehow I thought we did.
  
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+Abundances revert to their initial value at the end of the cycle.
+
+\change_deleted -666822487 1625852954
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1623075010
 In this way, we include the synchrony due to the seasonality, but expect
  to detect compensation
+\change_inserted -666822487 1625855112
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1625855118
+Results seem to be missing here.
+ 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622467480
 \begin_inset Float figure
 wide false
 sideways false
@@ -5884,8 +6137,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -2100369821 1622467480
 \begin_inset Graphics
 	filename Simulations_response/MockData_SAD_timeseries_with_trends_4sp_v2_4cycles_ms10_c5.pdf
 	width 95text%
@@ -5893,16 +6144,30 @@ status open
 \end_inset
 
 
+\change_inserted -666822487 1625855004
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1625855034
+this file is missing for me
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622467480
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1623075829
 Time series of abundances in a 4-species community with compensation between
  the 2 most abundant species with a 9-year cycle
 \end_layout
@@ -5918,8 +6183,6 @@ Time series of abundances in a 4-species community with compensation between
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -2100369821 1622467582
 \begin_inset Float figure
 wide false
 sideways false
@@ -5927,8 +6190,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -2100369821 1622467480
 \begin_inset Graphics
 	filename Simulations_response/Skewed_SAD_with_trends_4sp_v2_4cycles_ms10_c5.pdf
 	width 95text%
@@ -5936,20 +6197,38 @@ status open
 \end_inset
 
 
+\change_inserted -666822487 1625855012
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -666822487 1625855029
+this file is missing for me
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1622467480
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1623081957
 Wavelet modulus ratio in a 4-species community with compensation between
  the 2 most abundant species with a 9-year cycle.
  Significance is evaluated with 1000 surrogates.
+
+\change_deleted -666822487 1625852954
  
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -5963,10 +6242,18 @@ Wavelet modulus ratio in a 4-species community with compensation between
 \end_layout
 
 \begin_layout Standard
-
+We find signs of compensation, 
+\change_inserted -666822487 1625855171
+which is encouraging, 
+\change_unchanged
+but they are not significant throughout the whole time series
+\change_inserted -666822487 1625855191
+, which implies that we might not detect long-term compensation as well
+ as we would hope
+\change_unchanged
+.
 \change_inserted -2100369821 1623082250
-We find signs of compensation, but they are not significant throughout the
- whole time series.
+
 \end_layout
 
 \begin_layout Standard
