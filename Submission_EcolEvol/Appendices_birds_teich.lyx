@@ -5832,9 +5832,9 @@ status open
 \change_inserted -666822487 1625854989
 Shouldn't we promote this section? We may or may not do that, I wonder.
  Otherwise I wonder about S8's title
-\change_inserted -2100369821 1626169845
+\change_inserted -2100369821 1626177617
 .
- S8's title is still true, though
+ Yes.
 \change_unchanged
 
 \end_layout
