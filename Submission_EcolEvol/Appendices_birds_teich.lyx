@@ -4128,7 +4128,20 @@ Temporal trends in the abundance of all birds and in the main functional
  The waterfowl category actually includes all species functionally similar
  to ducks (ducks, geese and swans, i.e.
  anatids, and the common coot).
- The dashed line presents the ratio of wader individuals in the whole community,
+ 
+\change_inserted -2100369821 1626179105
+The term 
+\begin_inset Quotes eld
+\end_inset
+
+All other birds
+\begin_inset Quotes erd
+\end_inset
+
+ corresponds to the sum of all individuals not beloging to waders no waterfowl.
+ 
+\change_unchanged
+The dashed line presents the ratio of wader individuals in the whole community,
  i.e., their relative abundance, which changes markedly over time.
 \end_layout
 
@@ -4945,29 +4958,17 @@ status open
 
 \begin_layout Plain Layout
 Wavelet modulus ratio for a 10-species community with compensatory dynamics
- without (a) and with (b) 
-\change_deleted -666822487 1625853006
-missing
-\change_inserted -666822487 1625853054
-exactly zero values
+ without (a) and with (b) exactly zero values
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1625853036
 F: I'm afraid we'll have to change this in the figure as well or remove
  the titles in the figure
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_deleted -666822487 1625853009
- data
-\change_unchanged
  
 \begin_inset CommandInset label
 LatexCommand label

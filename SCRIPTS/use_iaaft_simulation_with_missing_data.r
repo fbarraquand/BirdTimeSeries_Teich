@@ -121,7 +121,7 @@ for(n_time in n_time_series){
 			#Begin plot
 			layout(matrix(c(1,2,3,4),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 			par(mar=c(6,6,3,3))
-			image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None",amain="Without missing data")
+			image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None",amain="")
 			mtext("a)",side=2,line=-2,at=0.98,cex=1.5,outer=T,las=1)
 			mtext("Scale (years)", side=2, line=-2,at=0.775, outer = TRUE,cex=1.5)
 
@@ -206,7 +206,7 @@ for(n_time in n_time_series){
                         }
 
 			par(mar=c(6,6,3,3))
-			image_mvcwt_for_colormaps(ref_wmr_missingdata,reset.par=F,cex.axis=4,z.fun="Mod",adj="None",amain="With missing data")
+			image_mvcwt_for_colormaps(ref_wmr_missingdata,reset.par=F,cex.axis=4,z.fun="Mod",adj="None",amain="")
 
 			mtext("b)",side=2,line=-2,at=0.49,cex=1.5,outer=T,las=1)
 			mtext("Scale (years)", side=2, line=-2,at=0.28, outer = TRUE,cex=1.5)
