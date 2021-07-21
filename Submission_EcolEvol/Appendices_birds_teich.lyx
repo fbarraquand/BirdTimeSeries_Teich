@@ -89,7 +89,7 @@
 \html_css_as_file 0
 \html_be_strict false
 \author -2100369821 "cpicoche"
-\author -666822487 "frederic"
+\author 617562988 "fbarraquand"
 \end_header
 
 \begin_body
@@ -4138,7 +4138,27 @@ All other birds
 \begin_inset Quotes erd
 \end_inset
 
- corresponds to the sum of all individuals not beloging to waders no waterfowl.
+ corresponds to the sum of all individuals 
+\change_deleted 617562988 1626880909
+not 
+\change_inserted 617562988 1626880913
+neither 
+\change_inserted -2100369821 1626179105
+belo
+\change_inserted 617562988 1626880887
+n
+\change_inserted -2100369821 1626179105
+ging to waders 
+\change_deleted 617562988 1626880916
+no
+\change_inserted 617562988 1626880916
+nor
+\change_inserted -2100369821 1626179105
+ 
+\change_inserted 617562988 1626880971
+to 
+\change_inserted -2100369821 1626179105
+waterfowl.
  
 \change_unchanged
 The dashed line presents the ratio of wader individuals in the whole community,
@@ -4229,21 +4249,17 @@ noprefix "false"
 
 ) makes the correlation between the two groups less obvious, which is probably
  why it only appears at larger scales (>5 years).
-\change_inserted -666822487 1625852846
-
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1625852916
 F: Somehow I wonder about the relevance of this paragraph after our explorations
  of variation dominance.
  Probably I am worrying too much.
- 
-\change_inserted -2100369821 1626167544
-Maybe remove the last sentence and add a word about variation dominance.
+ Maybe remove the last sentence and add a word about variation dominance.
  The comparison with log-scale analysis is still interesting.
+
+\change_deleted 617562988 1626881002
  
 \change_unchanged
 
@@ -4251,8 +4267,6 @@ Maybe remove the last sentence and add a word about variation dominance.
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -4287,23 +4301,6 @@ name "fig:seasonal-averages-cormorant"
 
 \end_inset
 
-
-\change_deleted -2100369821 1626167558
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-I wonder if we should not begin by the time series, then show 
-\backslash
-eta.
- F/ fine like this.
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -4376,26 +4373,6 @@ Calidris
  to the observed values.
  Red stars correspond to synchrony values significantly different from the
  null model, at the 10% threshold with a Benjamini-Hochberg correction.
-\change_deleted -2100369821 1626167562
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-J'ai réduit un tout petit peu la figure car la légende mordait sur le numéro
- de page
-\change_inserted -666822487 1625852930
-.
- F: OK
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -5067,51 +5044,30 @@ The simulations were based on
  Time series for compensation or synchrony are presented for the 4-species
  communities in Fig.
  
-\change_deleted -2100369821 1626168738
-S12
-\change_inserted -2100369821 1626168738
-
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted -2100369821 1626168806
-
 
 \backslash
 ref{fig:timeseries}
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_inserted -666822487 1625853483
 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -666822487 1625853501
 Would be better to have fig:4spcomp1 but this yields a broken link.
-
-\change_inserted -2100369821 1626168841
  You say 4spcomp1, but shouldn't it be fig:timeseries?
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 .
-
-\change_deleted -2100369821 1626168286
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -5487,20 +5443,11 @@ end{figure}
 
 \begin_layout Standard
 The fact that one species dominates does not seem to be a problem for the
- index to find synchrony or compensation
-\change_inserted -666822487 1625853676
- 
-\change_deleted -2100369821 1626168611
-(Figs.
- S13, S14, S15)
-\change_inserted -2100369821 1626168698
-(
+ index to find synchrony or compensation (
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1626168698
 
 Figs~
 \backslash
@@ -5509,15 +5456,11 @@ ref{fig:4spcomp},
 ref{fig:4spsync}, 
 \backslash
 ref{fig:40spcomp}
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-)
-\change_unchanged
-.
+).
  Normalising the time series, which was suggested by a referee, was found
  to decrease the statistical significance of short-term compensation (
 \begin_inset ERT
@@ -5540,6 +5483,193 @@ ref{fig:40spcomp}
  to phase synchrony.
 \end_layout
 
+\begin_layout Subsubsection*
+Dynamics including long-term compensation
+\end_layout
+
+\begin_layout Standard
+Previous simulations included compensation only at the monthly scale, i.e.
+ the shortest scale in the dataset.
+ We wondered if compensation could be detectable 
+\change_inserted 617562988 1626880665
+through wavelet-based index 
+\begin_inset Formula $\rho$
+\end_inset
+
+ 
+\change_unchanged
+at longer time scales, i.e., above the year, in a context slightly different
+ than variation dominance, where we still expect compensation to be possible.
+ This is especially relevant in our context given that our datasets seems
+ to have long-term trends.
+
+\change_inserted 617562988 1626880723
+ Also, the previous simulations showed some transfer of compensation from
+ short to long time scales - we wondered if the reverse can be observed
+ as well.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+In a 4-species community, we forced to the 2 most abundant species to have
+ opposite long-term dynamics, with cycles of compensation over multiple
+ years.
+ Assuming the expected abundance of species 1, the most abundant, at time
+ 1 is 
+\begin_inset Formula $\mu_{1,1}=\mu_{a}$
+\end_inset
+
+ and the expected abundance of species 2, the second most abundant, is 
+\begin_inset Formula $\mu_{1,2}=\mu_{b}$
+\end_inset
+
+, we want the expected abundances at half cycle to be 
+\begin_inset Formula $\mu_{t_{cycle/2},1}=\mu_{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{t_{cycle/2},2}=\mu_{a}$
+\end_inset
+
+, and to go back to their initial value at the end of the cycle, i.e.
+ 
+\begin_inset Formula $\mu_{t_{cycle},1}=\mu_{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{t_{cycle},2}=\mu_{b}$
+\end_inset
+
+.
+ In our example, we modeled 4 cycles in 35 years, i.e.
+ the period was around 9 years.
+ We use a model similar to the one presented in Appendix S7.
+ Over the first half of the cyle, the dynamics follow:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+\mu_{t,1}= & \left(\mu_{a}+(\mu_{b}-\mu_{a})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
+\mu_{t,2}= & \left(\mu_{b}+(\mu_{a}-\mu_{b})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
+\mu_{t,3/4}= & \mu_{3/4}(1+0.5\sin(\frac{2\pi t}{P})).
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This time we haven't used the log-scale? Somehow I thought we did.
+ No, we actually did that for the antiphase simulations, not these ones.
+ I can still launch log-simulations here, if needed.
+\end_layout
+
+\end_inset
+
+Abundances revert to their initial value at the end of the cycle.In this
+ way, we include the synchrony due to the seasonality, but expect to detect
+ compensation.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Results seem to be missing here.
+ The last sentence just concludes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Simulations_response/MockData_SAD_timeseries_with_trends_4sp_v2_4cycles_ms10_c5.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Time series of abundances in a 4-species community with compensation between
+ the 2 most abundant species with a 9-year cycle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Simulations_response/Skewed_SAD_with_trends_4sp_v2_4cycles_ms10_c5.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wavelet modulus ratio in a 4-species community with compensation between
+ the 2 most abundant species with a 9-year cycle.
+ Significance is evaluated with 1000 surrogates.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We find signs of compensation, which is encouraging, but they are not significan
+t throughout the whole time series, which implies that we might not detect
+ long-term compensation as well as we would hope.
+\end_layout
+
 \begin_layout Subsection*
 Appendix S8 - Effect of variation dominance on wavelet analyses
 \end_layout
@@ -5550,14 +5680,60 @@ Highly skewed distribution of temporal variation among species
 
 \begin_layout Standard
 Skewed distributions of abundances can come not only from different average
- abundances (see Appendix S7), but also from different amplitude of temporal
- variation in abundances among species.
- A highly variable species reaching high numbers can drive the observed
- dynamics of the community, and eventually make compensation more difficult
- if not impossible to detect with the wavelet modulus ratio (and likely
- other metrics of compensation
-\change_inserted -2100369821 1626168993
-
+ abundances (see Appendix S7), but also from
+\change_inserted 617562988 1626881134
+ a combination of the SAD with
+\change_unchanged
+ different amplitude of temporal variation in abundances among species.
+ A highly variable
+\change_inserted 617562988 1626881372
+ and abundant
+\change_unchanged
+ species
+\change_inserted 617562988 1626881151
+, momentarily
+\change_unchanged
+ reaching high
+\change_inserted 617562988 1626881156
+er
+\change_unchanged
+ numbers 
+\change_inserted 617562988 1626881406
+than all the rest of the species combined and whose numbers change more
+ than the rest of the community, 
+\change_unchanged
+can drive the observed dynamics of the community
+\change_deleted 617562988 1626881413
+, and
+\change_inserted 617562988 1626881417
+ up to the point that it
+\change_unchanged
+ 
+\change_deleted 617562988 1626881241
+eventually
+\change_inserted 617562988 1626881242
+possibly
+\change_unchanged
+ 
+\change_deleted 617562988 1626881071
+make
+\change_inserted 617562988 1626881421
+forbids
+\change_unchanged
+ compensation
+\change_inserted 617562988 1626881624
+.
+ This impossibility of compensation arises from the fact that under that
+ scenario, 
+\change_deleted 617562988 1626881449
+ 
+\change_inserted 617562988 1626881633
+no matter how the other species numbers combine, they may not be able compensate
+ the changes in numbers observed in the most abundant and variable species.
+ 
+\change_deleted 617562988 1626881097
+more difficult if not impossible to detect with the wavelet modulus ratio
+ (and likely other metrics of compensation
 \begin_inset Note Note
 status open
 
@@ -5571,9 +5747,9 @@ C'est pas un peu tendre le bâton pour se faire battre ?
 
 \end_inset
 
-
+)
 \change_unchanged
-).
+.
 \end_layout
 
 \begin_layout Standard
@@ -5581,7 +5757,13 @@ Starting from the simulation described in Appendix S7, in the case of compensati
 on, we modeled a 4-species community in which we modified the distribution
  of abundances, so that the most abundant species had an amplitude 3 times
  higher than the sum of the amplitudes of the other species (ratio found
- in observations of waders, at or below the annual time scale).
+ 
+\change_deleted 617562988 1626881302
+in observations of waders
+\change_inserted 617562988 1626881305
+within the wader group
+\change_unchanged
+, at or below the annual time scale).
  To do so, we increased the amplitude of variation of the most abundant
  species while keeping the minimum constant, therefore modifying also its
  mean abundance, but not the distribution of abundances of the other species,
@@ -5599,10 +5781,23 @@ on, we modeled a 4-species community in which we modified the distribution
 
 \begin_layout Standard
 In this case, we still found signs of compensation, but weakly and for longer
- time scales than the one assumed in the simulations (i.e., above 2 years).There
- was intermittent detection of compensation at short (monthly) time scales
- though, but this detection should have been homogeneous throughout the
- time series.
+ time scales than the one assumed in the simulations (i.e., above 2 years).
+
+\change_inserted 617562988 1626881479
+ 
+\change_unchanged
+There was intermittent detection of compensation at short (monthly) time
+ scales though, but this detection 
+\change_deleted 617562988 1626881502
+should have been
+\change_inserted 617562988 1626881507
+was not
+\change_unchanged
+ homogeneous throughout the time series
+\change_inserted 617562988 1626881520
+, as it should have if compensation was detectable
+\change_unchanged
+.
  This absence of detection is likely not an artefact of the method, but
  rather a limitation of the compensation concept
 \change_inserted -2100369821 1626169431
@@ -5615,6 +5810,9 @@ status open
 \change_inserted -2100369821 1626169463
 Can we really accuse a concept because a metric does not do exactly what
  we expact it to do?
+\change_inserted 617562988 1626881577
+ F: as explained above that is not the case here –> I rephrased.
+ 
 \change_unchanged
 
 \end_layout
@@ -5624,7 +5822,13 @@ Can we really accuse a concept because a metric does not do exactly what
 
 \change_unchanged
 .
- Whenever one species fluctuate
+ 
+\change_deleted 617562988 1626881539
+W
+\change_inserted 617562988 1626881545
+As we sketched above, w
+\change_unchanged
+henever one species fluctuate
 \change_inserted -2100369821 1626169419
 s
 \change_unchanged
@@ -5634,8 +5838,11 @@ to
 \change_inserted -2100369821 1626169422
 for
 \change_unchanged
- a change in numbers of the dominant species to be compensated by a change
- in numbers of the rest of the species.
+ a change in numbers of the dominant species to be 
+\change_inserted 617562988 1626881562
+fully 
+\change_unchanged
+compensated by a change in numbers of the rest of the species.
 
 \change_deleted -2100369821 1626169415
  
@@ -5819,235 +6026,6 @@ Compensation
  being constant.
  The randomness of peak heights also created some compensation at longer
  time scales in this simulation, but this should not be overinterpreted.
-\end_layout
-
-\begin_layout Subsubsection*
-Dynamics including long-term compensation
-\change_inserted -666822487 1625854959
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1625854989
-Shouldn't we promote this section? We may or may not do that, I wonder.
- Otherwise I wonder about S8's title
-\change_inserted -2100369821 1626177617
-.
- Yes.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-Previous simulations included compensation 
-\change_deleted -2100369821 1626169888
- 
-\change_unchanged
-only at the monthly scale, i.e.
- the shortest scale in the dataset, or annual antiphase.
- We wondered if compensation could be detectable at longer time scales,
- i.e., above the year, in a context slightly different than variation dominance,
- where we still expect compensation to be possible.
- This is especially relevant in our context given that our datasets seems
- to have long-term trends.
-\end_layout
-
-\begin_layout Standard
-In a 4-species community, we forced to the 2 most abundant species to have
- opposite long-term dynamics, with cycles of compensation over multiple
- years.
- Assuming the expected abundance of species 1, the most abundant, at time
- 1 is 
-\begin_inset Formula $\mu_{1,1}=\mu_{a}$
-\end_inset
-
- and the expected abundance of species 2, the second most abundant, is 
-\begin_inset Formula $\mu_{1,2}=\mu_{b}$
-\end_inset
-
-, we want the expected abundances at half cycle to be 
-\begin_inset Formula $\mu_{t_{cycle/2},1}=\mu_{b}$
-\end_inset
-
- and 
-\begin_inset Formula $\mu_{t_{cycle/2},2}=\mu_{a}$
-\end_inset
-
-, and to go back to their initial value at the end of the cycle, i.e.
- 
-\begin_inset Formula $\mu_{t_{cycle},1}=\mu_{a}$
-\end_inset
-
- and 
-\begin_inset Formula $\mu_{t_{cycle},2}=\mu_{b}$
-\end_inset
-
-.
- In our example, we modeled 4 cycles in 35 years, i.e.
- the period was around 9 years.
- We use a model similar to the one presented in Appendix S7.
- Over the first half of the cyle, the dynamics follow:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\begin{cases}
-\mu_{t,1}= & \left(\mu_{a}+(\mu_{b}-\mu_{a})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
-\mu_{t,2}= & \left(\mu_{b}+(\mu_{a}-\mu_{b})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
-\mu_{t,3/4}= & \mu_{3/4}(1+0.5\sin(\frac{2\pi t}{P}))
-\end{cases}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -666822487 1625855055
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1625855093
-This time we haven't used the log-scale? Somehow I thought we did.
-
-\change_inserted -2100369821 1626170107
- No, we actually did that for the antiphase simulations, not these ones.
- I can still launch log-simulations here, if needed.
-
-\change_inserted -666822487 1625855093
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-Abundances revert to their initial value at the end of the cycle.
-
-\change_deleted -666822487 1625852954
- 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-In this way, we include the synchrony due to the seasonality, but expect
- to detect compensation
-\change_inserted -666822487 1625855112
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -666822487 1625855118
-Results seem to be missing here.
- 
-\change_inserted -2100369821 1626170130
-The last sentence just concludes.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Simulations_response/MockData_SAD_timeseries_with_trends_4sp_v2_4cycles_ms10_c5.pdf
-	width 95text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Time series of abundances in a 4-species community with compensation between
- the 2 most abundant species with a 9-year cycle
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Simulations_response/Skewed_SAD_with_trends_4sp_v2_4cycles_ms10_c5.pdf
-	width 95text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Wavelet modulus ratio in a 4-species community with compensation between
- the 2 most abundant species with a 9-year cycle.
- Significance is evaluated with 1000 surrogates.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We find signs of compensation, which is encouraging, but they are not significan
-t throughout the whole time series, which implies that we might not detect
- long-term compensation as well as we would hope.
 \end_layout
 
 \begin_layout Standard
