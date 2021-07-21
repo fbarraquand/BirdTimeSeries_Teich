@@ -84,8 +84,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -666822487 "frederic"
-\author 617562988 "fbarraquand"
 \end_header
 
 \begin_body
@@ -1048,17 +1046,8 @@ monthly snapshot
 
  of the bird abundance, that has been used to monitor the reserve since
  its inception.
- When abundance values are 
-\change_deleted -666822487 1625851405
-missing
-\change_inserted -666822487 1625851406
-not reported
-\change_unchanged
- 
-\change_deleted 617562988 1626880246
-(numbers are actually set to 0 in the original database) 
-\change_unchanged
-for certain species and months, we replace them by zeroes.
+ When abundance values are not reported for certain species and months,
+ we replace them by zeroes.
  Given the sustained observation effort (all sectors are patrolled multiple
  times throughout the month by the staff, amateur ornithologists visiting
  the reserve daily and communicating their findings to the reserve staff),
