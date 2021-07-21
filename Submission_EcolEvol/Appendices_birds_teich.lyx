@@ -4128,9 +4128,7 @@ Temporal trends in the abundance of all birds and in the main functional
  The waterfowl category actually includes all species functionally similar
  to ducks (ducks, geese and swans, i.e.
  anatids, and the common coot).
- 
-\change_inserted -2100369821 1626179105
-The term 
+ The term 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4138,30 +4136,9 @@ All other birds
 \begin_inset Quotes erd
 \end_inset
 
- corresponds to the sum of all individuals 
-\change_deleted 617562988 1626880909
-not 
-\change_inserted 617562988 1626880913
-neither 
-\change_inserted -2100369821 1626179105
-belo
-\change_inserted 617562988 1626880887
-n
-\change_inserted -2100369821 1626179105
-ging to waders 
-\change_deleted 617562988 1626880916
-no
-\change_inserted 617562988 1626880916
-nor
-\change_inserted -2100369821 1626179105
- 
-\change_inserted 617562988 1626880971
-to 
-\change_inserted -2100369821 1626179105
-waterfowl.
- 
-\change_unchanged
-The dashed line presents the ratio of wader individuals in the whole community,
+ corresponds to the sum of all individuals neither belonging to waders nor
+ to waterfowl.
+ The dashed line presents the ratio of wader individuals in the whole community,
  i.e., their relative abundance, which changes markedly over time.
 \end_layout
 
@@ -5058,7 +5035,7 @@ ref{fig:timeseries}
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Would be better to have fig:4spcomp1 but this yields a broken link.
@@ -5490,26 +5467,18 @@ Dynamics including long-term compensation
 \begin_layout Standard
 Previous simulations included compensation only at the monthly scale, i.e.
  the shortest scale in the dataset.
- We wondered if compensation could be detectable 
-\change_inserted 617562988 1626880665
-through wavelet-based index 
+ We wondered if compensation could be detectable through wavelet-based index
+ 
 \begin_inset Formula $\rho$
 \end_inset
 
- 
-\change_unchanged
-at longer time scales, i.e., above the year, in a context slightly different
+ at longer time scales, i.e., above the year, in a context slightly different
  than variation dominance, where we still expect compensation to be possible.
  This is especially relevant in our context given that our datasets seems
  to have long-term trends.
-
-\change_inserted 617562988 1626880723
  Also, the previous simulations showed some transfer of compensation from
  short to long time scales - we wondered if the reverse can be observed
  as well.
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -5553,9 +5522,9 @@ In a 4-species community, we forced to the 2 most abundant species to have
 \begin_inset Formula 
 \[
 \begin{cases}
-\mu_{t,1}= & \left(\mu_{a}+(\mu_{b}-\mu_{a})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
-\mu_{t,2}= & \left(\mu_{b}+(\mu_{a}-\mu_{b})\frac{t}{t_{cycle}/2}\right)(1+0.5\sin(\frac{2\pi t}{P}))\\
-\mu_{t,3/4}= & \mu_{3/4}(1+0.5\sin(\frac{2\pi t}{P})).
+\mu_{t,1}= & \left(\mu_{a}+(\mu_{b}-\mu_{a})\frac{t}{t_{cycle}/2}\right)\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)\\
+\mu_{t,2}= & \left(\mu_{b}+(\mu_{a}-\mu_{b})\frac{t}{t_{cycle}/2}\right)\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)\\
+\mu_{t,3/4}= & \mu_{3/4}\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right).
 \end{cases}
 \]
 
@@ -5680,76 +5649,17 @@ Highly skewed distribution of temporal variation among species
 
 \begin_layout Standard
 Skewed distributions of abundances can come not only from different average
- abundances (see Appendix S7), but also from
-\change_inserted 617562988 1626881134
- a combination of the SAD with
-\change_unchanged
+ abundances (see Appendix S7), but also from a combination of the SAD with
  different amplitude of temporal variation in abundances among species.
- A highly variable
-\change_inserted 617562988 1626881372
- and abundant
-\change_unchanged
- species
-\change_inserted 617562988 1626881151
-, momentarily
-\change_unchanged
- reaching high
-\change_inserted 617562988 1626881156
-er
-\change_unchanged
- numbers 
-\change_inserted 617562988 1626881406
-than all the rest of the species combined and whose numbers change more
- than the rest of the community, 
-\change_unchanged
-can drive the observed dynamics of the community
-\change_deleted 617562988 1626881413
-, and
-\change_inserted 617562988 1626881417
- up to the point that it
-\change_unchanged
- 
-\change_deleted 617562988 1626881241
-eventually
-\change_inserted 617562988 1626881242
-possibly
-\change_unchanged
- 
-\change_deleted 617562988 1626881071
-make
-\change_inserted 617562988 1626881421
-forbids
-\change_unchanged
- compensation
-\change_inserted 617562988 1626881624
-.
+ A highly variable and abundant species, momentarily reaching higher numbers
+ than all the rest of the species combined and whose numbers change more
+ than the rest of the community, can drive the observed dynamics of the
+ community up to the point that it possibly forbids compensation.
  This impossibility of compensation arises from the fact that under that
- scenario, 
-\change_deleted 617562988 1626881449
- 
-\change_inserted 617562988 1626881633
-no matter how the other species numbers combine, they may not be able compensate
- the changes in numbers observed in the most abundant and variable species.
- 
-\change_deleted 617562988 1626881097
-more difficult if not impossible to detect with the wavelet modulus ratio
- (and likely other metrics of compensation
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -2100369821 1626169009
-C'est pas un peu tendre le bâton pour se faire battre ?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-)
-\change_unchanged
-.
+ scenario, no matter how the other species numbers combine, they may not
+ be able compensate the changes in numbers observed in the most abundant
+ and variable species.
+ .
 \end_layout
 
 \begin_layout Standard
@@ -5757,19 +5667,13 @@ Starting from the simulation described in Appendix S7, in the case of compensati
 on, we modeled a 4-species community in which we modified the distribution
  of abundances, so that the most abundant species had an amplitude 3 times
  higher than the sum of the amplitudes of the other species (ratio found
- 
-\change_deleted 617562988 1626881302
-in observations of waders
-\change_inserted 617562988 1626881305
-within the wader group
-\change_unchanged
-, at or below the annual time scale).
+ within the wader group, at or below the annual time scale).
  To do so, we increased the amplitude of variation of the most abundant
  species while keeping the minimum constant, therefore modifying also its
  mean abundance, but not the distribution of abundances of the other species,
  i.e.
  for the most abundant species 
-\begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+\kappa(\mu_{\max,i}-\mu_{\min,i})(1+0.5\sin(\frac{2\pi t}{P}))$
+\begin_inset Formula $\mu_{t,i}=\mu_{\min,i}+\kappa(\mu_{\max,i}-\mu_{\min,i})\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)$
 \end_inset
 
  where 
@@ -5782,36 +5686,20 @@ within the wader group
 \begin_layout Standard
 In this case, we still found signs of compensation, but weakly and for longer
  time scales than the one assumed in the simulations (i.e., above 2 years).
-
-\change_inserted 617562988 1626881479
- 
-\change_unchanged
-There was intermittent detection of compensation at short (monthly) time
- scales though, but this detection 
-\change_deleted 617562988 1626881502
-should have been
-\change_inserted 617562988 1626881507
-was not
-\change_unchanged
- homogeneous throughout the time series
-\change_inserted 617562988 1626881520
-, as it should have if compensation was detectable
-\change_unchanged
-.
+ There was intermittent detection of compensation at short (monthly) time
+ scales though, but this detection was not homogeneous throughout the time
+ series, as it should have if compensation was detectable.
  This absence of detection is likely not an artefact of the method, but
- rather a limitation of the compensation concept
-\change_inserted -2100369821 1626169431
- 
+ rather a limitation of the compensation concept 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted -2100369821 1626169463
 Can we really accuse a concept because a metric does not do exactly what
- we expact it to do?
-\change_inserted 617562988 1626881577
- F: as explained above that is not the case here –> I rephrased.
+ we expact it to do? F: as explained above that is not the case here –>
+ I rephrased.
+
+\change_deleted -2100369821 1626877345
  
 \change_unchanged
 
@@ -5819,35 +5707,10 @@ Can we really accuse a concept because a metric does not do exactly what
 
 \end_inset
 
-
-\change_unchanged
 .
- 
-\change_deleted 617562988 1626881539
-W
-\change_inserted 617562988 1626881545
-As we sketched above, w
-\change_unchanged
-henever one species fluctuate
-\change_inserted -2100369821 1626169419
-s
-\change_unchanged
- much more than the rest, it is impossible 
-\change_deleted -2100369821 1626169422
-to
-\change_inserted -2100369821 1626169422
-for
-\change_unchanged
- a change in numbers of the dominant species to be 
-\change_inserted 617562988 1626881562
-fully 
-\change_unchanged
-compensated by a change in numbers of the rest of the species.
-
-\change_deleted -2100369821 1626169415
- 
-\change_unchanged
-
+ As we sketched above, whenever one species fluctuates much more than the
+ rest, it is impossible for a change in numbers of the dominant species
+ to be fully compensated by a change in numbers of the rest of the species.
 \end_layout
 
 \begin_layout Standard
