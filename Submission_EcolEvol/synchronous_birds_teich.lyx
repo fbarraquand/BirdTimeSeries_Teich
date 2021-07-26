@@ -6,7 +6,9 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{aecompl}\usepackage{lineno}
+%\usepackage{aecompl}
+\usepackage{lmodern}
+\usepackage{lineno}
 
 \usepackage{babel}
 
@@ -1842,7 +1844,7 @@ https://github.com/fbarraquand/BirdTimeSeries_Teich
 
  and stored at Zenodo [will be done for the final version] (Picoche, Aluome
  & Barraquand, 2020).
- Finally, we want to highlight an conceptual issue worth keeping in mind:
+ Finally, we want to highlight a conceptual issue worth keeping in mind:
  both 
 \begin_inset Formula $\rho$
 \end_inset
@@ -1854,11 +1856,12 @@ https://github.com/fbarraquand/BirdTimeSeries_Teich
  indicate synchrony when reaching one, but such synchrony should be understood
  as the reciprocal of compensation rather than exactly synchronized peaks
  and troughs for all species (i.e., phase synchrony).
- Both synchrony and compensation are community-level properties affected
- by species dominance, so that e.g.
- when a single species fluctuates much more than the others, compensation
- may not be reachable: adding individuals of other species will not compensate
- for individuals lost of the species with dominant variation.
+ Unlike phase synchrony, compensation and community-level synchrony depend
+ on the distribution of abundance variation within the community.
+ In the limit case where a single species abundance fluctuates more than
+ all others combined, compensation may not even be reachable, since variation
+ in the abundance of that dominant species cannot be offset by changes in
+ numbers of other species.
  Only when species densities have commensurate temporal variability will
  the concepts of community-level synchrony and phase synchrony exactly match.
 \end_layout
