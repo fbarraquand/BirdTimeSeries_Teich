@@ -6,7 +6,8 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{ae,aecompl}
+%\usepackage{ae,aecompl}
+\usepackage{lmodern}
 \usepackage{lineno}
 \usepackage{float}
 \usepackage{caption}
@@ -88,6 +89,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author 617562988 "fbarraquand"
 \end_header
 
 \begin_body
@@ -124,7 +126,22 @@ renewcommand{
 \backslash
 thefigure}{S
 \backslash
-arabic{figure}} 
+arabic{figure}}
+\change_inserted 617562988 1627326993
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 617562988 1627326997
+
+
+\backslash
+linenumbers
+\change_deleted 617562988 1627326993
+ 
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -4869,6 +4886,11 @@ We investigate here if exactly-zero abundances can distort the compensation
  can change (i.e., the data is more compatible with the null hypothesis of
  time series uncorrelated between species, assuming the null is true), the
  occurrence of compensation (blue values in Fig.
+
+\change_inserted 617562988 1627326487
+ 
+\change_unchanged
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Wavelet-missing-data"
@@ -5229,8 +5251,32 @@ label{fig:4spcomp2}
 
 
 \backslash
-caption{Gross index and wavelet modulus ratio, for 4 species with compensation,
- with (1) untransformed and (2) scaled time series.}     
+caption{Gross 
+\change_inserted 617562988 1627326615
+et al.
+ 
+\change_unchanged
+index
+\change_inserted 617562988 1627326598
+ $
+\backslash
+eta$
+\change_unchanged
+ and wavelet modulus ratio
+\change_inserted 617562988 1627326603
+ $
+\backslash
+rho$
+\change_unchanged
+, for 4 species with compensation, with (1) untransformed and (2) scaled
+ time series.
+
+\change_inserted 617562988 1627326778
+ The boxplots show the distribution of $
+\backslash
+eta$ values under the null hypothesis.
+\change_unchanged
+}     
 \end_layout
 
 \begin_layout Plain Layout
@@ -5304,8 +5350,32 @@ label{fig:4spsync2} }
 
  
 \backslash
-caption{Gross index and wavelet modulus ratio, for 4 species with synchrony,
- with (1) untransformed and (2) scaled time series.}     
+caption{Gross
+\change_inserted 617562988 1627326620
+ et al.
+
+\change_unchanged
+ index
+\change_inserted 617562988 1627326609
+ $
+\backslash
+eta$
+\change_unchanged
+ and wavelet modulus ratio
+\change_inserted 617562988 1627326627
+  $
+\backslash
+rho$
+\change_unchanged
+, for 4 species with synchrony, with (1) untransformed and (2) scaled time
+ series.
+
+\change_inserted 617562988 1627326740
+  The boxplots show the distribution of $
+\backslash
+eta$ values under the null hypothesis.
+\change_unchanged
+}     
 \end_layout
 
 \begin_layout Plain Layout
@@ -5393,8 +5463,32 @@ label{fig:40spcomp2} }
 
 
 \backslash
-caption{Gross index and wavelet modulus ratio, for 40 species with compensation,
- with (1) untransformed and (2) scaled time series.}     
+caption{Gross 
+\change_inserted 617562988 1627326638
+et al.
+ 
+\change_unchanged
+index
+\change_inserted 617562988 1627326643
+  $
+\backslash
+eta$
+\change_unchanged
+ and wavelet modulus ratio
+\change_inserted 617562988 1627326645
+  $
+\backslash
+rho$
+\change_unchanged
+, for 40 species with compensation, with (1) untransformed and (2) scaled
+ time series.
+
+\change_inserted 617562988 1627326744
+ The boxplots show the distribution of $
+\backslash
+eta$ values under the null hypothesis.
+\change_unchanged
+}     
 \backslash
 label{fig:40spcomp} 
 \end_layout
@@ -5488,20 +5582,20 @@ In a 4-species community, we forced to the 2 most abundant species to have
 \end_inset
 
 , we want the expected abundances at half cycle to be 
-\begin_inset Formula $\mu_{t_{cycle/2},1}=\mu_{b}$
+\begin_inset Formula $\mu_{t_{\text{cycle}/2},1}=\mu_{b}$
 \end_inset
 
  and 
-\begin_inset Formula $\mu_{t_{cycle/2},2}=\mu_{a}$
+\begin_inset Formula $\mu_{t_{\text{cycle}/2},2}=\mu_{a}$
 \end_inset
 
 , and to go back to their initial value at the end of the cycle, i.e.
  
-\begin_inset Formula $\mu_{t_{cycle},1}=\mu_{a}$
+\begin_inset Formula $\mu_{t_{\text{cycle}},1}=\mu_{a}$
 \end_inset
 
  and 
-\begin_inset Formula $\mu_{t_{cycle},2}=\mu_{b}$
+\begin_inset Formula $\mu_{t_{\text{cycle}},2}=\mu_{b}$
 \end_inset
 
 .
@@ -5515,8 +5609,8 @@ In a 4-species community, we forced to the 2 most abundant species to have
 \begin_inset Formula 
 \[
 \begin{cases}
-\mu_{t,1}= & \left(\mu_{a}+(\mu_{b}-\mu_{a})\frac{t}{t_{cycle}/2}\right)\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)\\
-\mu_{t,2}= & \left(\mu_{b}+(\mu_{a}-\mu_{b})\frac{t}{t_{cycle}/2}\right)\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)\\
+\mu_{t,1}= & \left(\mu_{a}+(\mu_{b}-\mu_{a})\frac{t}{t_{\text{cycle}}/2}\right)\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)\\
+\mu_{t,2}= & \left(\mu_{b}+(\mu_{a}-\mu_{b})\frac{t}{t_{\text{cycle}}/2}\right)\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right)\\
 \mu_{t,3/4}= & \mu_{3/4}\left(1+0.5\sin\left(\frac{2\pi t}{P}\right)\right).
 \end{cases}
 \]
