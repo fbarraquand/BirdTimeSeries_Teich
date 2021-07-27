@@ -85,10 +85,11 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes true
-\output_changes false
+\output_changes true
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \author 617562988 "fbarraquand"
 \end_header
 
@@ -182,8 +183,11 @@ noprefix "false"
 \end_inset
 
 , we also present the most frequent birds present with the species we consider.
- The rest of the community (not detailed here) amount to 1% of the total
- number of observed birds.
+ The rest of the community (not detailed here) amount
+\change_inserted -2100369821 1627380869
+s
+\change_unchanged
+ to 1% of the total number of observed birds.
 \begin_inset Note Note
 status open
 
@@ -1661,6 +1665,8 @@ Little stint
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 Calidris pugnax
 \end_layout
 
@@ -4665,7 +4671,17 @@ literal "false"
  in the community, in simulations where there is no trend in the environmental
  signal and the data is not subsampled, keeping the autocorrelation of the
  environment.
- The parameter b is the strength of the response to the environmental signal.
+ The parameter 
+\change_deleted -2100369821 1627381305
+b
+\change_inserted -2100369821 1627381305
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\change_unchanged
+ is the strength of the response to the environmental signal.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -5251,32 +5267,16 @@ label{fig:4spcomp2}
 
 
 \backslash
-caption{Gross 
-\change_inserted 617562988 1627326615
-et al.
- 
-\change_unchanged
-index
-\change_inserted 617562988 1627326598
- $
+caption{Gross et al.
+ index $
 \backslash
-eta$
-\change_unchanged
- and wavelet modulus ratio
-\change_inserted 617562988 1627326603
- $
+eta$ and wavelet modulus ratio $
 \backslash
-rho$
-\change_unchanged
-, for 4 species with compensation, with (1) untransformed and (2) scaled
+rho$, for 4 species with compensation, with (1) untransformed and (2) scaled
  time series.
-
-\change_inserted 617562988 1627326778
  The boxplots show the distribution of $
 \backslash
-eta$ values under the null hypothesis.
-\change_unchanged
-}     
+eta$ values under the null hypothesis.}     
 \end_layout
 
 \begin_layout Plain Layout
@@ -5350,32 +5350,16 @@ label{fig:4spsync2} }
 
  
 \backslash
-caption{Gross
-\change_inserted 617562988 1627326620
- et al.
-
-\change_unchanged
- index
-\change_inserted 617562988 1627326609
- $
+caption{Gross et al.
+ index $
 \backslash
-eta$
-\change_unchanged
- and wavelet modulus ratio
-\change_inserted 617562988 1627326627
-  $
+eta$ and wavelet modulus ratio  $
 \backslash
-rho$
-\change_unchanged
-, for 4 species with synchrony, with (1) untransformed and (2) scaled time
- series.
-
-\change_inserted 617562988 1627326740
+rho$, for 4 species with synchrony, with (1) untransformed and (2) scaled
+ time series.
   The boxplots show the distribution of $
 \backslash
-eta$ values under the null hypothesis.
-\change_unchanged
-}     
+eta$ values under the null hypothesis.}     
 \end_layout
 
 \begin_layout Plain Layout
@@ -5463,32 +5447,16 @@ label{fig:40spcomp2} }
 
 
 \backslash
-caption{Gross 
-\change_inserted 617562988 1627326638
-et al.
- 
-\change_unchanged
-index
-\change_inserted 617562988 1627326643
-  $
+caption{Gross et al.
+ index  $
 \backslash
-eta$
-\change_unchanged
- and wavelet modulus ratio
-\change_inserted 617562988 1627326645
-  $
+eta$ and wavelet modulus ratio  $
 \backslash
-rho$
-\change_unchanged
-, for 40 species with compensation, with (1) untransformed and (2) scaled
+rho$, for 40 species with compensation, with (1) untransformed and (2) scaled
  time series.
-
-\change_inserted 617562988 1627326744
  The boxplots show the distribution of $
 \backslash
-eta$ values under the null hypothesis.
-\change_unchanged
-}     
+eta$ values under the null hypothesis.}     
 \backslash
 label{fig:40spcomp} 
 \end_layout
@@ -5561,17 +5529,23 @@ Previous simulations included compensation only at the monthly scale, i.e.
 
  at longer time scales, i.e., above the year, in a context slightly different
  than variation dominance, where we still expect compensation to be possible.
- This is especially relevant in our context given that our datasets seems
- to have long-term trends.
+ This is especially relevant in our context given that our dataset
+\change_deleted -2100369821 1627381562
+s
+\change_unchanged
+ seems to have long-term trends.
  Also, the previous simulations showed some transfer of compensation from
  short to long time scales - we wondered if the reverse can be observed
  as well.
 \end_layout
 
 \begin_layout Standard
-In a 4-species community, we forced to the 2 most abundant species to have
- opposite long-term dynamics, with cycles of compensation over multiple
- years.
+In a 4-species community, we forced 
+\change_deleted -2100369821 1627381580
+to 
+\change_unchanged
+the 2 most abundant species to have opposite long-term dynamics, with cycles
+ of compensation over multiple years.
  Assuming the expected abundance of species 1, the most abundant, at time
  1 is 
 \begin_inset Formula $\mu_{1,1}=\mu_{a}$
@@ -5632,9 +5606,13 @@ This time we haven't used the log-scale? Somehow I thought we did.
 
 \end_inset
 
-Abundances revert to their initial value at the end of the cycle.In this
- way, we include the synchrony due to the seasonality, but expect to detect
- compensation.
+Abundances revert to their initial value at the end of the cycle.
+
+\change_inserted -2100369821 1627381632
+ 
+\change_unchanged
+In this way, we include the synchrony due to the seasonality, but expect
+ to detect compensation.
  
 \begin_inset Note Note
 status collapsed
@@ -5777,7 +5755,11 @@ In this case, we still found signs of compensation, but weakly and for longer
  scales though, but this detection was not homogeneous throughout the time
  series, as it should have if compensation was detectable.
  This absence of detection is likely not an artefact of the method, but
- rather a limitation of the compensation concept 
+ rather a limitation of the compensation concept
+\change_deleted -2100369821 1627381764
+ 
+\change_unchanged
+
 \begin_inset Note Note
 status collapsed
 
@@ -5845,7 +5827,7 @@ In the most extreme case of compensation, we analysed 2 species with opposed
  being apparent on time series through antiphase behaviour (Figs.
  5 and 6 in the main text
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Check that at the end
@@ -5871,7 +5853,11 @@ At each time step, abundances are drawn from a lognormal distribution
 \begin_inset Formula $\nu_{\text{max/min,i}}$
 \end_inset
 
- are the maximum and minimum log amplitude taken directly from the observations,
+ 
+\change_deleted -2100369821 1627381914
+are 
+\change_unchanged
+the maximum and minimum log amplitude taken directly from the observations,
  the phase 
 \begin_inset Formula $\boldsymbol{\phi}=(0,\pi)$
 \end_inset
