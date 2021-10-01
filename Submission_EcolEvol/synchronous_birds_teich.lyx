@@ -7,7 +7,7 @@
 \textclass article
 \begin_preamble
 %\usepackage{aecompl}
-\usepackage{lmodern}
+\usepackage{ae,lmodern}
 \usepackage{lineno}
 
 \usepackage{babel}
@@ -86,6 +86,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -1370,7 +1371,15 @@ where
  species and the correlation is computed over the years.
  This synchrony index varies between -1 (perfect compensation, total abundance
  is constant) and 1 (complete synchrony), while 0 represents a case where
- all populations fluctuate independently.
+ 
+\change_deleted -666822487 1633100790
+all 
+\change_unchanged
+populations fluctuate independently
+\change_inserted -666822487 1633100794
+ on average
+\change_unchanged
+.
  Contrary to other indices (e.g., 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1827,6 +1836,24 @@ literal "false"
 
  to identify compensation or synchrony in cases of skewed species abundance
  distribution, either in the mean or in the amplitude of temporal variation.
+\change_inserted -666822487 1633100371
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1633100756
+Statistical significance testing was always done using a significance level
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ = 10%, which was based on previous experience working with (statistically
+ short) ecological time series as well as numerical simulations of compensation
+ and synchrony provided in SI Appendices.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
