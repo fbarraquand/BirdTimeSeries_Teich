@@ -89,8 +89,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
-\author 617562988 "fbarraquand"
 \end_header
 
 \begin_body
@@ -128,21 +126,13 @@ renewcommand{
 thefigure}{S
 \backslash
 arabic{figure}}
-\change_inserted 617562988 1627326993
-
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 617562988 1627326997
-
 
 \backslash
 linenumbers
-\change_deleted 617562988 1627326993
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -183,11 +173,8 @@ noprefix "false"
 \end_inset
 
 , we also present the most frequent birds present with the species we consider.
- The rest of the community (not detailed here) amount
-\change_inserted -2100369821 1627380869
-s
-\change_unchanged
- to 1% of the total number of observed birds.
+ The rest of the community (not detailed here) amounts to 1% of the total
+ number of observed birds.
 \begin_inset Note Note
 status open
 
@@ -4672,15 +4659,9 @@ literal "false"
  signal and the data is not subsampled, keeping the autocorrelation of the
  environment.
  The parameter 
-\change_deleted -2100369821 1627381305
-b
-\change_inserted -2100369821 1627381305
-
 \begin_inset Formula $b$
 \end_inset
 
-
-\change_unchanged
  is the strength of the response to the environmental signal.
  
 \begin_inset CommandInset label
@@ -4902,11 +4883,7 @@ We investigate here if exactly-zero abundances can distort the compensation
  can change (i.e., the data is more compatible with the null hypothesis of
  time series uncorrelated between species, assuming the null is true), the
  occurrence of compensation (blue values in Fig.
-
-\change_inserted 617562988 1627326487
  
-\change_unchanged
-
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Wavelet-missing-data"
@@ -5529,23 +5506,17 @@ Previous simulations included compensation only at the monthly scale, i.e.
 
  at longer time scales, i.e., above the year, in a context slightly different
  than variation dominance, where we still expect compensation to be possible.
- This is especially relevant in our context given that our dataset
-\change_deleted -2100369821 1627381562
-s
-\change_unchanged
- seems to have long-term trends.
+ This is especially relevant in our context given that our dataset seems
+ to have long-term trends.
  Also, the previous simulations showed some transfer of compensation from
  short to long time scales - we wondered if the reverse can be observed
  as well.
 \end_layout
 
 \begin_layout Standard
-In a 4-species community, we forced 
-\change_deleted -2100369821 1627381580
-to 
-\change_unchanged
-the 2 most abundant species to have opposite long-term dynamics, with cycles
- of compensation over multiple years.
+In a 4-species community, we forced the 2 most abundant species to have
+ opposite long-term dynamics, with cycles of compensation over multiple
+ years.
  Assuming the expected abundance of species 1, the most abundant, at time
  1 is 
 \begin_inset Formula $\mu_{1,1}=\mu_{a}$
@@ -5607,11 +5578,7 @@ This time we haven't used the log-scale? Somehow I thought we did.
 \end_inset
 
 Abundances revert to their initial value at the end of the cycle.
-
-\change_inserted -2100369821 1627381632
- 
-\change_unchanged
-In this way, we include the synchrony due to the seasonality, but expect
+ In this way, we include the synchrony due to the seasonality, but expect
  to detect compensation.
  
 \begin_inset Note Note
@@ -5756,10 +5723,6 @@ In this case, we still found signs of compensation, but weakly and for longer
  series, as it should have if compensation was detectable.
  This absence of detection is likely not an artefact of the method, but
  rather a limitation of the compensation concept
-\change_deleted -2100369821 1627381764
- 
-\change_unchanged
-
 \begin_inset Note Note
 status collapsed
 
@@ -5853,11 +5816,7 @@ At each time step, abundances are drawn from a lognormal distribution
 \begin_inset Formula $\nu_{\text{max/min,i}}$
 \end_inset
 
- 
-\change_deleted -2100369821 1627381914
-are 
-\change_unchanged
-the maximum and minimum log amplitude taken directly from the observations,
+ the maximum and minimum log amplitude taken directly from the observations,
  the phase 
 \begin_inset Formula $\boldsymbol{\phi}=(0,\pi)$
 \end_inset

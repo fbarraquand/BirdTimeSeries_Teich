@@ -7,7 +7,7 @@
 \textclass article
 \begin_preamble
 %\usepackage{aecompl}
-\usepackage{lmodern}
+\usepackage{ae,lmodern}
 \usepackage{lineno}
 
 \usepackage{babel}
@@ -86,7 +86,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -2100369821 "cpicoche"
+\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -1077,13 +1077,7 @@ missing
  population) because doing so would have compromised the patterns of local
  synchrony/compensation.
  However, we did check that having such zeroes in the monthly time series
- cannot affect our conclusions (see 
-\change_deleted -2100369821 1627378053
-SI
-\change_inserted -2100369821 1627378080
-Appendix S6
-\change_unchanged
-).
+ cannot affect our conclusions (see SI).
  In the statistical analyses, we use seasonally averaged abundances (plotted
  in Fig.
  
@@ -1377,7 +1371,15 @@ where
  species and the correlation is computed over the years.
  This synchrony index varies between -1 (perfect compensation, total abundance
  is constant) and 1 (complete synchrony), while 0 represents a case where
- all populations fluctuate independently.
+ 
+\change_deleted -666822487 1633100790
+all 
+\change_unchanged
+populations fluctuate independently
+\change_inserted -666822487 1633100794
+ on average
+\change_unchanged
+.
  Contrary to other indices (e.g., 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1473,13 +1475,7 @@ Anatini
 \emph on
  
 \shape italic
-the sum of the 
-\change_deleted -2100369821 1627378827
-7
-\change_inserted -2100369821 1627378827
-6
-\change_unchanged
- 
+the sum of the 6 
 \emph default
 Calidris
 \shape default
@@ -1840,6 +1836,24 @@ literal "false"
 
  to identify compensation or synchrony in cases of skewed species abundance
  distribution, either in the mean or in the amplitude of temporal variation.
+\change_inserted -666822487 1633100371
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -666822487 1633100756
+Statistical significance testing was always done using a significance level
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ = 10%, which was based on previous experience working with (statistically
+ short) ecological time series as well as numerical simulations of compensation
+ and synchrony provided in SI Appendices.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2861,13 +2875,10 @@ We now zoom in on the cormorant-heron-egret module, for which we knew beforehand
  Instead, we find that compensation mostly occurs on a scale of 8 years,
  much above the annual scale, which is a likely consequence of the slow
  shift in frequencies of cormorants and little egrets / grey herons.
- The reason why we do not find a compensation at the mont
-\change_inserted -2100369821 1627376462
-h
-\change_unchanged
-ly to annual scale pre-2000 in spite of some opposition of annual phases
- may be related to the large difference in the amplitude of short-term temporal
- variation between the two groups.
+ The reason why we do not find a compensation at the monthly to annual scale
+ pre-2000 in spite of some opposition of annual phases may be related to
+ the large difference in the amplitude of short-term temporal variation
+ between the two groups.
  When one functional group or species dominates the temporal variation,
  as shown in SI Appendix S8, its dominance of temporal variation can forbid
  the occurrence of compensation since by definition no increase in the numbers
