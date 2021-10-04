@@ -214,8 +214,7 @@ for(i in 1:anrands){
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-#                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
-                tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
+                tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1) #This corresponds to Pr(x<x_obs), as written in Submission_JAE/Revisions/pvalue/pval.pdf ; p2 is computed in image_mvcwt_for_colormaps 
                 if(tab_pval[i,j,1]>1){stop()}
 
         }
