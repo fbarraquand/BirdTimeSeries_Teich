@@ -14,7 +14,7 @@ set.seed(42)
 
 anrands=1000 #Number of surrogates
 
-biomass=T #If biomass==False, we only look at abundances. If biomass==TRUE, we weigh the abundances with the mass of each bird
+biomass=F #If biomass==False, we only look at abundances. If biomass==TRUE, we weigh the abundances with the mass of each bird
 
 if(biomass){
 end_bio="biomasses"
@@ -24,7 +24,7 @@ end_bio="abundances"
 
 #normalize_seq=c(T,F)
 normalize_seq=F
-doyouload=F #True if analyses are taken from previous files, False if we want to relaunch an analysis
+doyouload=T #True if analyses are taken from previous files, False if we want to relaunch an analysis
 
 for(normalize in normalize_seq){
 
