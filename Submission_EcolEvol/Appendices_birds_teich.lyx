@@ -89,6 +89,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \end_header
 
 \begin_body
@@ -4220,7 +4221,11 @@ We noted on Fig.
  of the synchrony index observed for this group, and make compensation more
  visible.
  It appears to be the reverse: synchrony values are higher with log-transformed
- abundances.
+ abundances
+\change_inserted -2100369821 1633443720
+ (none of them being significant at a 10% threshold)
+\change_unchanged
+.
  In fact, an annual representation of abundances (seasonal averages, Fig.
  
 \begin_inset CommandInset ref
@@ -4921,6 +4926,13 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio for a 10-species community with compensatory dynamics
  without (a) and with (b) exactly zero values
+\change_inserted -2100369821 1633443834
+.
+ Red and blue lines respectively delineate regions of significantly lower
+ and higher synchrony than the null model (independently fluctuating species,
+ but conserving their original Fourier spectrum), at the 10% level.
+\change_unchanged
+
 \begin_inset Note Note
 status collapsed
 
@@ -5165,6 +5177,138 @@ renewcommand{
 thesubfigure}{
 \backslash
 arabic{subfigure}}
+\change_inserted -2100369821 1633447356
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447356
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447519
+
+Captions for the 3 following figures:
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447243
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447332
+
+Figure 
+\backslash
+ref{fig:4spcomp}: Gross et al.
+ index $
+\backslash
+eta$ and wavelet modulus ratio $
+\backslash
+rho$, for 4 species with compensation, with (1) untransformed and (2) scaled
+ time series.
+ In a), the boxplots show the distribution of $
+\backslash
+eta$ values under the null hypothesis and red stars correspond to synchrony
+ values significantly different from the null model, at the 10
+\backslash
+% threshold.
+ In b), red and blue lines respectively delineate regions of significantly
+ lower and higher synchrony than the null model (independently fluctuating
+ species, but conserving their original Fourier spectrum), at the 10
+\backslash
+% level.
+\backslash
+
+\backslash
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447287
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447497
+
+Figure 
+\backslash
+ref{fig:4spsync}: Gross et al.
+ index $
+\backslash
+eta$ and wavelet modulus ratio  $
+\backslash
+rho$, for 4 species with synchrony, with (1) untransformed and (2) scaled
+ time series.
+ In a), the boxplots show the distribution of $
+\backslash
+eta$ values under the null hypothesis and red stars correspond to synchrony
+ values significantly different from the null model, at the 10
+\backslash
+% threshold.
+ In b), red and blue lines respectively delineate regions of significantly
+ lower and higher synchrony than the null model (independently fluctuating
+ species, but conserving their original Fourier spectrum), at the 10
+\backslash
+% level.
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447309
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -2100369821 1633447416
+
+Figure 
+\backslash
+ref{fig:40spcomp}: Gross et al.
+ index  $
+\backslash
+eta$ and wavelet modulus ratio  $
+\backslash
+rho$, for 40 species with compensation, with (1) untransformed and (2) scaled
+ time series.
+ In a), the boxplots show the distribution of $
+\backslash
+eta$ values under the null hypothesis and red stars correspond to synchrony
+ values significantly different from the null model, at the 10
+\backslash
+% threshold.
+ In b), red and blue lines respectively delineate regions of significantly
+ lower and higher synchrony than the null model (independently fluctuating
+ species, but conserving their original Fourier spectrum), at the 10
+\backslash
+% level.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5244,7 +5388,9 @@ label{fig:4spcomp2}
 
 
 \backslash
-caption{Gross et al.
+caption{
+\change_deleted -2100369821 1633447439
+Gross et al.
  index $
 \backslash
 eta$ and wavelet modulus ratio $
@@ -5253,7 +5399,9 @@ rho$, for 4 species with compensation, with (1) untransformed and (2) scaled
  time series.
  The boxplots show the distribution of $
 \backslash
-eta$ values under the null hypothesis.}     
+eta$ values under the null hypothesis.
+\change_unchanged
+}     
 \end_layout
 
 \begin_layout Plain Layout
@@ -5327,7 +5475,9 @@ label{fig:4spsync2} }
 
  
 \backslash
-caption{Gross et al.
+caption{
+\change_deleted -2100369821 1633447455
+Gross et al.
  index $
 \backslash
 eta$ and wavelet modulus ratio  $
@@ -5336,7 +5486,9 @@ rho$, for 4 species with synchrony, with (1) untransformed and (2) scaled
  time series.
   The boxplots show the distribution of $
 \backslash
-eta$ values under the null hypothesis.}     
+eta$ values under the null hypothesis.
+\change_unchanged
+}     
 \end_layout
 
 \begin_layout Plain Layout
@@ -5424,7 +5576,9 @@ label{fig:40spcomp2} }
 
 
 \backslash
-caption{Gross et al.
+caption{
+\change_deleted -2100369821 1633447467
+Gross et al.
  index  $
 \backslash
 eta$ and wavelet modulus ratio  $
@@ -5433,7 +5587,9 @@ rho$, for 40 species with compensation, with (1) untransformed and (2) scaled
  time series.
  The boxplots show the distribution of $
 \backslash
-eta$ values under the null hypothesis.}     
+eta$ values under the null hypothesis.
+\change_unchanged
+}     
 \backslash
 label{fig:40spcomp} 
 \end_layout
@@ -5652,7 +5808,21 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio in a 4-species community with compensation between
  the 2 most abundant species with a 9-year cycle.
- Significance is evaluated with 1000 surrogates.
+ 
+\change_inserted -2100369821 1633444110
+Red and blue lines respectively delineate regions of significantly lower
+ and higher synchrony than the null model (independently fluctuating species,
+ but conserving their original Fourier spectrum), at the 10% level.
+ 
+\change_unchanged
+Significance is evaluated with 1000 surrogates
+\change_deleted -2100369821 1633444094
+.
+
+\change_inserted -2100369821 1633444099
+ 
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -5763,6 +5933,13 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio, for 4 species with compensation, with 1 species having
  an amplitude of variation 3 times higher than the sum of the others.
+
+\change_inserted -2100369821 1633444126
+ Red and blue lines respectively delineate regions of significantly lower
+ and higher synchrony than the null model (independently fluctuating species,
+ but conserving their original Fourier spectrum), at the 10% level.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -5891,6 +6068,13 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio for 2 species in antiphase, one of them having an
  amplitude of variation 4 times higher than the other one.
+
+\change_inserted -2100369821 1633444132
+ Red and blue lines respectively delineate regions of significantly lower
+ and higher synchrony than the null model (independently fluctuating species,
+ but conserving their original Fourier spectrum), at the 10% level.
+\change_unchanged
+
 \end_layout
 
 \end_inset
