@@ -35,7 +35,7 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
         nvar = ifelse(length(dim(z)) == 3, dim(z)[3], 1)
         for (i in 1:nvar) { ####MAIN IMAGE, with actual observed values for Keitt's index
             image(x, y, z.fun(z[, , i]), log = "y", col = pal,
-                axes = FALSE, xlab="",ylab="",main=amain,cex.main=1.5,...)
+                axes = FALSE, xlab="",ylab="",main=amain,cex.main=2,...)
             if (i%%2) 
                 axis(2,cex.axis=1.5,las=1)
             else axis(4) #### NOW, CONTOURS FOR PVALUES
