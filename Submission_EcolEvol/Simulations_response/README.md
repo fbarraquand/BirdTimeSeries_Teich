@@ -1,0 +1,6 @@
+This folder contains analyses of the Gross and Keitt indices in situations where communities are characterized by a skewed species abundance distribution (species dominance) or species-specific abundance amplitudes (variation dominance), sometimes including species that are in antiphase, or with long-term or cyclic compensation.
+
+* `phase_difference.r` computes the phase difference between Cormoran and Heron+Egret abundances
+* `MultivariateNormalModels_2sp_antiphase.R` and `MultivariateNormalModels_2sp_antiphase_log_amplitude.R` are used to simulate and compute wavelet analyses for simulations with species in antiphase with abundance dominance and variation dominance on a log-scale respectively. 
+* `MultivariateNormalModels_SAD_OneTrend.R` and `MultivariateNormalModels_SAD_OneShortTrend.R` do the wavelet analyses for communities with species abundance dominance having a single trend (on the long term, one species abundance decreases while the other increases). The shorter one ends a bit before the first one, in order to be able to detect it within the boundary of the wavelet analysis. 
+* `MultivariateNormalModels_SAD_MultiTrends.R` performs the wavelet analyses for communities with species abundance dominance cycling.
