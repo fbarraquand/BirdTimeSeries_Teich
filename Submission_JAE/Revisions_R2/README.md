@@ -1,4 +1,4 @@
-This folder contains figures that were modified for revision2. 
+This folder contains figures that were modified for revision2. The folder `Simulations_response` contains the source code for most of the corresponding analyses. 
 
 * `average_abundance_timeseries_v2.pdf` represent the time series and was modified to be easier to read
 * all Fig2 present the Gross index within and between the Anas, Calidris, wader and waterfowl groups, re-analysed with 1000 surrogates and a new colour code (shades of blue should be easier to differentiate)

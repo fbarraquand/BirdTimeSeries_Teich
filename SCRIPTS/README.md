@@ -1,12 +1,13 @@
-This folder contains the scripts used to produce the results in the main text and most of the Supplementary Information.
+This folder contains the source code used to produce the results in the main text and most of the Supplementary Information.
 
 ### Data formatting
 
 * `ExploTeich.R` turns the raw data in `./IN/Initial_files/data_ROT20160324.csv` into a clean file `./IN/DBWithMonthlyPhotoTeich_completed.csv` with monthly data for only one location (Teich)
 * `analyseP_oiseaux_Teich2_synchrony.R` is the first exploratory file which was used on the data. It contains mostly time-series visualization, first uses and comparison of the Gross and Loreau synchrony indices and definition of studied species
 * `analyseP_oiseaux_Teich2_synchrony_reduced.R` is based on the previous file but focuses on time-series plots (focus on waders and the group Cormoran/Heron/Egret)
+* `abundance_CormorantHegret.r` plots the abundances of Cormoran, Heron and Egret without log-transforming.
 * `average_abundance.R` is based on the previous file but is only used to produce Fig.1 (i.e. the time-series) in MS 
-* `normalisation_timeseries.R` and `summed_timeseries.R` are used to produce input files for the annual analyses. The former differentiates between cold and warm season, with separate files for the different species in one group (anas, waders, etc.) while the later produces the files per taxonomic and functional groups (i.e., all species of one group are summed for each date). These scripts rely on the function in `outputtimeseries_seasonal.R` (sum and seasonal average). 
+* `normalisation_timeseries.R` and `summed_timeseries.R` are used to produce input files for the annual analyses. The former differentiates between cold and warm season, with separate files for the different species in one group (anas, waders, etc.) while the later produces the files per taxonomic and functional groups (i.e., all species of one group are summed for each date). These functions rely on the function in `outputtimeseries_seasonal.R` (sum and seasonal average). 
 * `occurrence.R` produces Table 1 in the Appendices, that is the precise percentage of occurrences and abundance of each species used in the analyses.
 
 ### Data analysis (functions and figures)
@@ -15,12 +16,13 @@ This folder contains the scripts used to produce the results in the main text an
 * `image_mvcwt.r` is taken from the same function in the the mvcwt package but uses the BH fdr correction and adds value to the colorbars. It is now only used in `wavelets_simulation.R` and other exploratory files. It has been updated to `image_mvcwt_two_panels.r` which allows for more flexibility in positioning the wavelet plot and was improved to differentiate between high and low values of the synchrony index. It has then been upated to `image_mvcwt_for_colormaps.r` which plot the contours with different coulours for high and low values of the Keitt index
 * `Fig2.R` draws the second figure of the MS, with the Gross index within and between taxonomic and functional groups.
 * `use_iaaft_wavelet_wader.R` draws the third figure of the MS with the wavelet analysis in the wader and waterfowl communities.
-* `use_iaaft_triad.R` draws the fifth figure of the MS with Gross and Keitt indices for the group Cormoran/Heron/Egret
+* `use_iaaft_triad.R` draws the fifth figure of the MS with Gross and Keitt indices for the group Cormoran/Heron/Egret.
 * `use_iaaft_community.R` plots the Gross and Keitt indices for the most frequent bird group.
+* `script_to_check_grey.sh` checks that colours can be distinguished even when figures are in black and white.
 
 ### Simulations (data production and analyses)
-* `simulation_data.R` produces simulated data used in the Appendices which explore the way the Gross index varies for a community reacting to different environmental signals and the effect of missing values on the wavelet analysis
-* `verif_simulation.R` checks the time series produced by the previous script
-* `wavelets_simulation.R` shows the effect of missing values in the wavelet analysis
-* `analyse_simulation.R` computes the Gross index for the different simulations
+* `simulation_data.R` produces simulated data used in the Appendices which explore the way the Gross index varies for a community reacting to different environmental signals and the effect of missing values on the wavelet analysis.
+* `verif_simulation.R` checks the time series produced by the previous file.
+* `use_iaaft_simulation_with_missing_data.r` shows the effect of missing values in the wavelet analysis.
+* `analyse_simulation.R` computes the Gross index for the different simulations.
 * `plot_analyse_simulation.R` plot the values from previous file.
