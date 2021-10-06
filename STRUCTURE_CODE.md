@@ -29,6 +29,4 @@ We describe here how to obtain the main results shown in Figures in the article 
 
 NOTE 1: It should be noted that there are more source code files than necessary to produce all results, some analyses being exploratory or used as first steps towards final programs. Also, some simulation programs were put in Revision folders (mostly in `Submission_JAE/Revisions/Simulations_response`,`Submission_JAE/Revisions_R2/Simulations_response` and `Submission_EcolEvol/Revisions/Simulations_response`).   
 
-NOTE 2: Some functions may require to un-comment/re-comment calls to other functions, depending on possibly conflicting or repeated dependencies in separate files.  
-
  
