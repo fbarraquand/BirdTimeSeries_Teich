@@ -1,6 +1,11 @@
 #### First used by CP (2018) from Keitt's package mvcwt
 #### 07/2020 This script is used to represent the p_values instead of the wavelets to check that they correspond to contourlines
 
+######## Warning
+#### CP 2021 : DEPRECATED version of the code, used as a first step towards imave_mvcwt_for_colormaps.r. This is why most options where commented out instead of just being removed as in imave_mvcwt_for_colormaps.r 
+######## 
+
+
 image_mvcwt_for_pvalues=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,col.palette="Spectral",inv=F,amain="",adj="BH",...) 
 {
     require("viridis")

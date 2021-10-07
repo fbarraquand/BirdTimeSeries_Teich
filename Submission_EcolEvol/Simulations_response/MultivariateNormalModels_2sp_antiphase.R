@@ -10,6 +10,7 @@ library(codyn)
 library(mvcwt)
 
 source("../../SCRIPTS/iaaft.R")
+#WARNING: test_synchrony_Gross calls to SCRIPTS/iaaft so there might be conflicting calls between files. source("SCRIPTS/iaaft.R") can be commented in test_synchrony_Gross.r or path can be changed to correspond to the folder we are currently working in
 source("../../SCRIPTS/test_synchrony_Gross.r")
 source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 library("RColorBrewer")
@@ -41,7 +42,6 @@ for(t in 1:nsamples){
 mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*(1+0.5*sin(2*pi*t/12+c(0,pi))) #We want to antiphase populations
 sigma_i=c*mu_t
 sigma_i[2]=4*sigma_i[1]
-#mu_t=mu_min_coeff*mu+mu*(mu_max_coeff-mu_min_coeff)*sin(2*pi*t/12)
 SigmaPair = matrix(c(sigma_i[1]^2,0,0,sigma_i[2]^2),2,2,byrow=TRUE)
 
 x[t,] = mvrnorm(n = 1, mu_t, SigmaPair)
@@ -70,7 +70,7 @@ write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewe
 } #end r
 
 pdf("MockData_2sp_antiphase_timeseries.pdf",width=20,height=6)
-plot(x[,2],col="grey",ylim=range(x[,2]),t="o",pch=16)
+plot(x[,2],col="grey",ylim=range(x[,2]),t="o",pch=16,ylab="Abundance",xlab="Time")
 lines(x[,1],col="black",t="o",pch=16)
 dev.off()
 
@@ -165,10 +165,10 @@ for(i in 1:anrands){
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-#                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
                 tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
                 if(tab_pval[i,j,1]>1){stop()}
 

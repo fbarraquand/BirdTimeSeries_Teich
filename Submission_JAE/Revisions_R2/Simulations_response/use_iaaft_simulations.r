@@ -5,6 +5,7 @@
 
 rm(list=ls())
 graphics.off()
+#WARNING: test_synchrony_Gross calls to SCRIPTS/iaaft so there might be conflicting calls between files. source("SCRIPTS/iaaft.R") can be commented in test_synchrony_Gross.r and added here, or path can be changed in test_synchrony_Gross.r
 source("../../../SCRIPTS/test_synchrony_Gross.r")
 library('mvcwt')
 source("../../../SCRIPTS/image_mvcwt_for_colormaps.r") 
@@ -211,6 +212,7 @@ for(i in 1:anrands){
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){

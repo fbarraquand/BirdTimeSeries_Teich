@@ -6,7 +6,6 @@ graphics.off()
 source("SCRIPTS/iaaft.R")
 library('mvcwt')
 source("SCRIPTS/image_mvcwt_for_colormaps.r")
-source("SCRIPTS/image_mvcwt_for_pvalues.r")
 library("RColorBrewer")
 library("lubridate")
 
@@ -155,11 +154,10 @@ for(i in 1:anrands){
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1] #Store the corresponding wavelet modulus ratio
 }
 
-#Now compute Pr(X<=x) (we will compute the corresponding p-values in the image. We stick to what is stored in z.boot in normal wmr.boot function
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-                #tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1) #With this line, we could extract directly the p-value
                 tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
                 if(tab_pval[i,j,1]>1){stop()}
 
@@ -231,13 +229,12 @@ for(i in 1:anrands){
 	for(s in ducks){
         tab_tmp[,s]=iaaft_surrogate(tab_ducks[,s])
 	}
-        #mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
 	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
         wmr_tmp=wmr(mmtmp)
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
-#We compute Pr(X<=x)
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
@@ -299,12 +296,10 @@ par(mar=c(6,6,3,3))
 
 
   image_mvcwt_for_colormaps(ref_wmr_wader,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader",adj="None")
-#  image_mvcwt_for_pvalues(mr_object,reset.par=F,cex.axis=4,z.fun="Mod",amain="Wader",adj="None")
 mtext("a)",side=2,line=-2,at=0.98,cex=1.5,outer=T,las=1)
 mtext("Scale (years)", side=2, line=-2,at=0.775, outer = TRUE,cex=1.5)
 
 
-#par(mar=c(4,5,3,3))
 par(mar=c(6,6,3,3))
 
 

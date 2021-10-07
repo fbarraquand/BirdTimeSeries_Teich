@@ -81,7 +81,6 @@ create_somme = function(colonneDate,colonneResultats){
     annee = as.numeric(annee)
     mois  = format(colonneDate[i], format = "%m") #extraire un mois d'une date
     mois = as.numeric(mois)
-    #print (annee,mois)
     mat[as.character(annee),as.character(mois)]=mat[as.character(annee),as.character(mois)]+colonneResultats[i]
   }
   return (mat)
@@ -178,10 +177,6 @@ doughnut <-
     title(main = main, ...)
     invisible(NULL)
   }
-
-# Let's use the function, it works like PiePlot !
-# inner.radius controls the width of the ring!
-#doughnut( c(3,5,9,12) , inner.radius=0.5, col=c(rgb(0.2,0.2,0.4,0.5), rgb(0.8,0.2,0.4,0.5), rgb(0.2,0.9,0.4,0.4) , rgb(0.0,0.9,0.8,0.4)) )
 
 filename_pdf="abundance_not_averaged.pdf"
 pdf(paste("OUT/",filename_pdf,sep=""),width=15,height=10)

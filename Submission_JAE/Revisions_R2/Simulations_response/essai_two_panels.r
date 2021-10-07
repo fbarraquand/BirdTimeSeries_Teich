@@ -6,6 +6,7 @@
 
 rm(list=ls())
 graphics.off()
+#WARNING: test_synchrony_Gross calls to SCRIPTS/iaaft so there might be conflicting calls between files. source("SCRIPTS/iaaft.R") can be commented in test_synchrony_Gross.r
 source("../../../SCRIPTS/test_synchrony_Gross.r")
 library('mvcwt')
 source("../../../SCRIPTS/image_mvcwt_for_colormaps.r")

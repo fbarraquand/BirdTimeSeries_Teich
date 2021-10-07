@@ -2,6 +2,11 @@
 #### CP 2019/07/03 Corrected BY to BH correction for homogeneity reason
 #### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
 
+######## Warning
+#### CP 2021 : DEPRECATED version of the code, used as a first step towards imave_mvcwt_for_colormaps.r. This is why most options where commented out instead of just being removed as in imave_mvcwt_for_colormaps.r 
+######## 
+
+
 image_mvcwt=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,...) 
 {
     z.fun = match.fun(z.fun)

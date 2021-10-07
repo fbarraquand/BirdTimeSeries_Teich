@@ -12,6 +12,7 @@ library(Matrix)
 library(synchrony)
 library(codyn)
 
+#WARNING: test_synchrony_Gross calls to SCRIPTS/iaaft so there might be conflicting calls between files. source("SCRIPTS/iaaft.R") can be commented in test_synchrony_Gross.r
 source("../../../SCRIPTS/iaaft.R")
 source("../../../SCRIPTS/test_synchrony_Gross.r")
 

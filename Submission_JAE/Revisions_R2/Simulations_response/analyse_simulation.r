@@ -7,8 +7,7 @@
 graphics.off()
 rm(list=ls())
 library('mvcwt')
-#source("../../../SCRIPTS/image_mvcwt.r") #Add to change the image function to have a nice Color Bar
-source("image_mvcwt_for_colormaps.r") #Add to change the image function to have a nice Color Bar
+source("../../../SCRIPTS/image_mvcwt_for_colormaps.r") #Add to change the image function to have a nice Color Bar
 library("lubridate")
 library("RColorBrewer")
 

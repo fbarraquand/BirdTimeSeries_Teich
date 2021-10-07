@@ -11,6 +11,7 @@ library(mvcwt)
 library(RColorBrewer)
 
 source("../../SCRIPTS/iaaft.R")
+#WARNING: test_synchrony_Gross calls to SCRIPTS/iaaft so there might be conflicting calls between files. source("SCRIPTS/iaaft.R") can be commented in test_synchrony_Gross.r or path can be changed to correspond to the folder we are currently working in
 source("../../SCRIPTS/test_synchrony_Gross.r")
 source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 
@@ -36,10 +37,6 @@ nb_cycles=4
 for(nspecies in seq_sp){
 print(nspecies)
 #Define mu
-#log_mu=rnorm(nspecies,m)
-#mu=exp(log_mu)
-#mu=sort(mu,decreasing=T)
-
 mu=c(100,25,10,5)  #Reco Fred
 
 mu_a=mu[1]
@@ -205,10 +202,10 @@ for(i in 1:anrands){
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-#                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
                 tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
                 if(tab_pval[i,j,1]>1){stop()}
 

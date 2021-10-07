@@ -7,9 +7,8 @@ graphics.off()
 source("SCRIPTS/test_synchrony_Gross.r")
 
 
-#tab_synch=array(NA,dim=c(length(n_species_series),length(n_time_series),length(b_series),length(nb_repeats)))
 #n_species_series=c(5,15,30,50)
-n_species_series=c(1) ####NEW
+n_species_series=c(1) ####NEW, the previous line can also be used depending on the community size we want to look at
 n_time_series=c(35,100,500)
 b_series=c(0.1,0.5,0.75)
 nb_repeats=1:10
@@ -17,7 +16,8 @@ nb_repeats=1:10
 #Doesn't make sense to have a look at 100 species at a time, so I'm just gonna sample 5 species per subgroup for all communities
 cold_colors=c("cyan","darkblue","grey","darkslateblue","green")
 hot_colors=c("red","orange","darkgoldenrod1","deeppink","lightsalmon")
-if(1==0){ #I will take that again later
+
+if(1==0){ #This code is commented out because we just want the final figure (to be found in the Appendices). Previous ones were also meant to check if there was a burnin we should cut out
 pdf("OUT/verif_visual_simulation.pdf")
 for(n_species in n_species_series){
 	id_species_1=paste("X",sample(1:n_species,5),sep="")
@@ -38,7 +38,7 @@ for(n_species in n_species_series){
 	}
 }
 dev.off()
-}
+} #End 1==0
 
 if(1==0){
 n_species=5
@@ -74,8 +74,8 @@ pdf(paste("OUT/verif_visual_simulation_withburnin_",e,".pdf",sep=""),width=14,he
                 }
 	}
 dev.off()
-}
-}
+} 
+} #End 1==0
 
 library('RColorBrewer')
 n_species=5

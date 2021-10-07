@@ -9,6 +9,7 @@ library(synchrony)
 library(codyn)
 library(mvcwt)
 
+#WARNING: test_synchrony_Gross calls to SCRIPTS/iaaft so there might be conflicting calls between files. source("SCRIPTS/iaaft.R") can be commented in test_synchrony_Gross.r or path can be changed to correspond to the folder we are currently working in
 source("../../SCRIPTS/iaaft.R")
 source("../../SCRIPTS/test_synchrony_Gross.r")
 source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
@@ -53,16 +54,17 @@ data_x=data.frame(dates,sp_data_frame,abundance)
 
 data_tot=cbind(rep(r,nrow(data_x)),data_x)
 colnames(data_tot)=c("Rep","Time","Species","Abundance")
-write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_2sp_antiphase_log_amplitude.csv",sep=""),sep=";",dec=".",row.names=F)
+#write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_2sp_antiphase_log_amplitude.csv",sep=""),sep=";",dec=".",row.names=F)
 
 tab=cbind(nu_min,nu_max,SigmaPair)
 colnames(tab)=c("nu_min","nu_max",paste("Sp",1:nspecies))
-write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_2sp_antiphase_log_amplitude.csv",sep=""),sep=";",dec=".",row.names=F,append=F)
+#write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_2sp_antiphase_log_amplitude.csv",sep=""),sep=";",dec=".",row.names=F,append=F)
 } #end r
 
-pdf("MockData_2sp_antiphase_timeseries_log_amplitude.pdf",width=20,height=6)
+pdf("MockData_2sp_antiphase_timeseries_log_amplitude.pdf",width=12.5,height=4)
+par(mar=c(4,4,1,1))
 #plot(x[,2],col="grey",ylim=range(x[,2]),t="o",pch=16)
-plot(x[,2],col="grey",ylim=c(0,6000),t="o",pch=16)
+plot(x[,2],col="grey",ylim=range(c(x)),t="o",pch=16,xlab="Time",ylab="Abundance")
 lines(x[,1],col="black",t="o",pch=16)
 dev.off()
 
@@ -157,10 +159,10 @@ for(i in 1:anrands){
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-#                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1)
                 tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
                 if(tab_pval[i,j,1]>1){stop()}
 

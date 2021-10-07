@@ -67,7 +67,7 @@ for(n_time in n_time_series){
 		        	tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
         		}
 
-			#We compute Pr(X<=x)
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 			tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 			for(i in 1:length(mm$x)){
 			        for(j in 1:length(mm$y)){

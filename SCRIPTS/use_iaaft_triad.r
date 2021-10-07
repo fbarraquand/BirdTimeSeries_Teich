@@ -139,7 +139,6 @@ color=rep(c("Black","Lightblue","Dodgerblue2"),2)
 pdf(paste("Submission_JAE/Revisions_R2/triad_synchrony_2panels_",end_bio,"_",end_nor,"_",end_log,"_test_with",anrands,"rand_nocorrection_smallgrid_IAAFT.pdf",sep=""),width=9,height=9) 
 layout(matrix(c(1,1,2,3),nrow=2,ncol=2,byrow=T),widths=c(10,2))
 
-#par(mfrow=c(1,1),mar=c(3,3.5,2,.25),oma=c(1,2,1,.25),mgp=c(3,1,0),xpd=NA)
 par(mar=c(3,5,2,3))
 
 plot(0,0,t="n",ylim=c(-1.,1.0),xlim=c(0,7.5),xaxt="n",xlab="",ylab=expression(eta),cex.lab=1.5,cex.axis=1.5,las=1)
@@ -218,17 +217,15 @@ for(i in 1:anrands){
         tab_tmp=tab
         tab_tmp[,"Cormorant"]=iaaft_surrogate(tab[,'Cormorant'])
         tab_tmp[,"HeronEgret"]=iaaft_surrogate(tab[,'HeronEgret'])
-        #mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
 	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
         wmr_tmp=wmr(mmtmp)
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
-#Computes Pr(X<=x) for each observed wavelet modulus ratio
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-                #tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(nrep+1) #This line could be used if we wanted to output the p-value directly. Here we stick to the philosophy of the mvcwt package and output Pr(X<=x)
                 tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
 #                if(tab_pval[i,j,1]>1){stop()}
 

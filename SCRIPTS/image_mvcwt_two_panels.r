@@ -3,6 +3,10 @@
 #### CP 2019/09/05 Used las=1 to have horizontal y-axis tick labels
 #### 2020/03/23 Changed the color palette to viridis, then back to Spectral as it was more intuitive
 
+######## Warning
+#### CP 2021 : DEPRECATED version of the code, used as a first step towards imave_mvcwt_for_colormaps.r. This is why most options where commented out instead of just being removed as in imave_mvcwt_for_colormaps.r 
+######## 
+
 image_mvcwt_two_panels=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,amain="",...) 
 {
 	library('viridis')

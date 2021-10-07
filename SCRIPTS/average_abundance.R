@@ -1,6 +1,6 @@
 ###CP Just extracting part of the code of analyseP_oiseaux... entirely written by CAluome, just for efficiency
 ###CP 04/09/2019: Adding las=1 to have horizontal y-axis tick labels and updating taxonomy
-###CP 07/03/2020: Modified shapes of the points to make the figure easier to read
+###CP 07/03/2020: Modified shapes of the points to make the figure easier to read, that's why there are "v2" versions
 
 rm(list=ls())
 graphics.off()

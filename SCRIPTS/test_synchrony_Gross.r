@@ -1,9 +1,9 @@
 ##CP 16/05/2018
 #Using the synchrony package, and more particularly the community.sync function from Gouhier and Guichard (2014) to compute confidence intervals for Gross index
-#CP 04/07/2019: p-value is now relying on quantile. But we wan't compute FDR-correction if we only have the corresponding boolean. Back to the very first formulation we had: https://stats.stackexchange.com/questions/25927/doubling-the-tails-in-two-sample-permutation-test (answer from caracal)  (but removed the abs() because I'm not sure it doesn't assume symmetrical distribution)
+#CP 04/07/2019: p-value is now relying on quantile. But we wan't compute FDR-correction if we only have the corresponding boolean. Back to the very first formulation we had: https://stats.stackexchange.com/questions/25927/doubling-the-tails-in-two-sample-permutation-test (answer from caracal) 
 
-source("../../../SCRIPTS/iaaft.R")
-#source("SCRIPTS/iaaft.R")
+#source("../../../SCRIPTS/iaaft.R")
+source("SCRIPTS/iaaft.R")
 
 community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"),method=c("shift","iaaft","ebisuzaki"), 
     quiet = FALSE, ...) 
@@ -16,8 +16,6 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
     results$obs = community_sync_Gross_aux(data)
     if (nrands > 0) {
 	data_matrix=convert_to_matrix(data)
-	#sp_data_frame=sapply(colnames(data_matrix),function(x) rep(x,dim(data_matrix)[1]))
-	#adates=rep(c(data[2]),dim(data_matrix)[2])
 	dates=data$dates
 	sp_data_frame=data$sp_data_frame
 	nr = NROW(data_matrix)
@@ -53,8 +51,7 @@ community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","g
         }
         results$rands[nrands + 1] = results$obs #CP: See North et al. (2002) and answers (2003). CP & FB agreed to keep North et al.'s formula (and Gouhier et al. too BTW). 
         if (alternative == "two-tailed") {
-#		results$pval = sum(abs(results$rands) >= abs(results$obs))/(nrands+1) ##Wondering if abs() assumes symmetry around 0
-		results$pval= 2*min(sum(results$rands >= results$obs),sum(results$rands <= results$obs))/(nrands+1) 
+		results$pval= 2*min(sum(results$rands >= results$obs),sum(results$rands <= results$obs))/(nrands+1) #p2 in Submission_JAE/Revisions/pvalue 
         }else if(alternative=="greater"){
 		results$pval = sum(results$rands >= results$obs)/(nrands+1)
 	}else if(alternative=="less"){

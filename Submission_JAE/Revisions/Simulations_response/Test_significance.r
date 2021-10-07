@@ -7,6 +7,7 @@ library(Matrix)
 library(synchrony)
 library(MASS)
 
+#WARNING: test_synchrony_Gross calls to SCRIPTS/iaaft so there might be conflicting calls between files. source("SCRIPTS/iaaft.R") can be commented in test_synchrony_Gross.r or path can be changed to correspond to the folder we are currently working in
 source("../../../SCRIPTS/iaaft.R")
 source("../../../SCRIPTS/test_synchrony_Gross.r")
 

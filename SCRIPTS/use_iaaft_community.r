@@ -214,7 +214,6 @@ year_min=1981
 #This function computes the Morlet wavelet transform for each bird species separately
 print("Keitt index")
 print(Sys.time())
-#mm=mvcwt(x,tab_freq,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=ceiling(length(x)/2)))
 
 #####Regularize data because some of them have been collected at different dates during the month after 2006
 seq_x=seq(1,365.25*35+3*30.5,length.out=423)/365.25
@@ -239,17 +238,15 @@ for(i in 1:anrands){
         for(s in freq_birds){
         tab_tmp[,s]=iaaft_surrogate(tab_freq[,s])
         }
-        #mmtmp=mvcwt(x,tab_tmp,min.scale=0.2,max.scale=10.0,nscales=100,loc=regularize(x,nsteps=length(x)/2))
 	mmtmp=mvcwt(x,tab_tmp,min.scale=mean(diff(seq_x))*3,max.scale=10.0,nscales=100,loc=seq_x)
         wmr_tmp=wmr(mmtmp)
         tab_values_iaaft[,,i]=wmr_tmp$z[,,1]
 }
 
-#Compare the observed modulus ratio and the ones obtained with the surrogates to compute Pr(X<=x)
+#Now compute the one-tailed p-value Pr(X<=x_obs) where X is the test statistic, for all pixels in the image. The switch to two-tailed p-values is done when calling image_mvcwt_for_colormaps.r
 tab_pval=array(NA,dim=c(length(mm$x),length(mm$y),1))
 for(i in 1:length(mm$x)){
         for(j in 1:length(mm$y)){
-#                tab_pval[i,j,1]= 2*min(sum(tab_values_iaaft[i,j,] >= ref_val[i,j]),sum(tab_values_iaaft[i,j,] < ref_val[i,j]))/(anrands+1) #This line can be used if we want to directly output the p-values, and not Pr(X<=x). Here, we follow the scheme of the mvcwt package which stores Pr(X<=x) in z.boot, and then compute the p-values in image.mvcwt
                 tab_pval[i,j,1]= sum(tab_values_iaaft[i,j,] <= ref_val[i,j])/(anrands+1)
                 if(tab_pval[i,j,1]>1){stop()}
 
@@ -295,7 +292,6 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 print(paste(Sys.time(),"before image"))
-#par(mar=c(3,5,2,3))
 par(mar=c(5,5,3,3))
 image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None")
 mtext("b)",side=2,line=-2,at=0.48,cex=1.5,outer=T,las=1)

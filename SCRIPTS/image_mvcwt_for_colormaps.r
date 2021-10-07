@@ -4,10 +4,11 @@
 #### CP 2020/07/03 Trying out different colormaps
 #### CP 2020 Use different colours for the contours of low and high value of the index. Also gives a choice to correct the p-values or not
 
+
 image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE,col.palette="Spectral",inv=F,amain="",adj="BH",...) 
 {
     require("viridis")
-	test_col=9 #Should be 11
+	test_col=9 
     z.fun = match.fun(z.fun)
 	if(col.palette=="Viridis"){
     		pal = viridis(1024) #Test
@@ -62,9 +63,7 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
                 contour(x, y, zb_big[, , i], levels = 0.1, lwd = 1.5,lty=1, 
                   add = TRUE, drawlabels = FALSE,col="red")
 
-
-
-#                contour(x, y, zb[, , i], levels = c(0.1), lwd = 1.5,lty=1,  ##This line is just uncommented if I want to check the contours obtained the "old-fashioned" way
+#                contour(x, y, zb[, , i], levels = c(0.1), lwd = 1.5,lty=1,  ##This line is just uncommented if I want to check the contours obtained the "old-fashioned" way (i.e. the initial image_mvcwt)
 #                  add = TRUE, drawlabels = F,col=c("black"))
             }
             if (is.finite(bound)) {

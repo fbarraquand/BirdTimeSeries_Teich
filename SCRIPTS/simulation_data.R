@@ -22,7 +22,6 @@ for(n_species in n_species_series){
 alpha=0.5
 alpha_matrix=diag(2*n_species)+alpha
 K=(1+alpha*(n_species*2-1))/(2*n_species)
-#b=0.1 #Don't think that's ok
 sigma_noise=0.1
 
 for (k.repeats in 1:n_repeats)
@@ -38,10 +37,10 @@ r=rnorm(2*n_species,mean=1,sd=0.25)
 #Environmental signal
 ymin=0
 ymax=1
-y0noise=arima.sim(model=list(ar=c(0.1, 0.2, 0.1,0.5,-0.1)), n=n_time,sd=sqrt(0.1) )
+y0noise=arima.sim(model=list(ar=c(0.1, 0.2, 0.1,0.5,-0.1)), n=n_time,sd=sqrt(0.1) ) #Autocorrelated environmental signal
 y0noise=y0noise/max(abs(y0noise))
 y1noise=y0noise
-#y1noise<-ymin+(ymax-ymin)*(0.5*y0noise+0.5*(seq(1:n_time)-1)/(n_time-1))
+#y1noise<-ymin+(ymax-ymin)*(0.5*y0noise+0.5*(seq(1:n_time)-1)/(n_time-1)) #Use for an environmental signal with an increasing trend
 
 for (t in 1:(n_time-1))
         {
