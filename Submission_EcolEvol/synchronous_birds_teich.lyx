@@ -1842,15 +1842,19 @@ literal "false"
 
 \begin_layout Standard
 
-\change_inserted -666822487 1633100756
+\change_inserted -666822487 1633710950
 Statistical significance testing was always done using a significance level
  
 \begin_inset Formula $\alpha$
 \end_inset
 
  = 10%, which was based on previous experience working with (statistically
- short) ecological time series as well as numerical simulations of compensation
- and synchrony provided in SI Appendices.
+ short) ecological time series as well as analyses of numerical simulations
+ using 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ = 10%, provided in SI Appendices.
  
 \change_unchanged
 
@@ -2675,9 +2679,22 @@ Calidris
  The functional group classification produced some compensation between
  guilds while the taxonomic classification did not, despite the contrasted
  habitat preferences of these two phylogenetic groups.
- Using functional groups produced more logical results, although as we stressed
- above, due to the low power of the tests, the null hypothesis of no compensatio
-n at the yearly scale was still plausible as well.
+ Using functional groups 
+\change_inserted -666822487 1633710800
+therefore 
+\change_unchanged
+produced more logical results, although as we stressed above, 
+\change_deleted -666822487 1633710562
+due to the low power of the tests, 
+\change_unchanged
+the null hypothesis of no compensation at the yearly scale 
+\change_deleted -666822487 1633710844
+was still plausible as well
+\change_inserted -666822487 1633710874
+could not be rejected, which may be due to the low power of the test when
+ comparing two groups
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
