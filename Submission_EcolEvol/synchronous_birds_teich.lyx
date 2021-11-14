@@ -13,6 +13,7 @@
 \usepackage{babel}
 
 %\linenumbers
+\date{}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
