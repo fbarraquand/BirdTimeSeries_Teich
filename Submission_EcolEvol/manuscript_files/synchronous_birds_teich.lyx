@@ -83,10 +83,12 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes true
-\output_changes true
+\output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -666822487 "frederic"
+\author 617562988 "fbarraquand"
 \end_header
 
 \begin_body
@@ -620,10 +622,15 @@ Compensatory dynamics, during which community composition shifts despite
  allows for both scale- and time-dependence.
  We analyse synchrony both within and between guilds, with guilds defined
  either as tightknit phylogenetic groups or larger functional groups.
- We find that abundance and biomass compensation is rare, likely due to
- the synchronizing influence of climate (and other drivers) on birds, even
- after considering several temporal scales of covariation (during either
- cold or warm seasons, above or below the annual scale).
+ We find that abundance and biomass compensation 
+\change_deleted 617562988 1637514893
+is
+\change_inserted 617562988 1637514893
+are
+\change_unchanged
+ rare, likely due to the synchronizing influence of climate (and other drivers)
+ on birds, even after considering several temporal scales of covariation
+ (during either cold or warm seasons, above or below the annual scale).
  Negative covariation in abundance at the guild or community level did only
  appear at the scale of a few months or several years.
  We also found that synchrony varies with taxonomic and functional scale:
@@ -907,10 +914,36 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Taxonomic and functional scales should indeed be main modulators of synchrony/co
-mpensation.
- On the one hand, compensation can be high between similar and closely related
- species.
+T
+\change_inserted 617562988 1637514933
+he t
+\change_unchanged
+axonomic 
+\change_deleted 617562988 1637514939
+and
+\change_inserted 617562988 1637514939
+or
+\change_unchanged
+ functional scale
+\change_deleted 617562988 1637514941
+s
+\change_inserted 617562988 1637514951
+ considered
+\change_unchanged
+ should indeed be 
+\change_inserted 617562988 1637514956
+a 
+\change_unchanged
+main modulator
+\change_deleted 617562988 1637514959
+s
+\change_unchanged
+ of synchrony/compensation.
+ On the one hand, compensation can be high between 
+\change_inserted 617562988 1637514979
+morphologically 
+\change_unchanged
+similar and closely related species.
  If two species of ducks A and B share almost the same niche, individuals
  from either species experience similar competition from species A or B,
  and should feel the effects of other species in the community identically.
@@ -1047,8 +1080,11 @@ monthly snapshot
 \begin_inset Quotes erd
 \end_inset
 
- of the bird abundance, that has been used to monitor the reserve since
- its inception.
+ of 
+\change_deleted 617562988 1637515008
+the 
+\change_unchanged
+bird abundance, that has been used to monitor the reserve since its inception.
  When abundance values are not reported for certain species and months,
  we replace them by zeroes.
  Given the sustained observation effort (all sectors are patrolled multiple
@@ -1095,7 +1131,11 @@ noprefix "false"
  We defined a `warm season', from May to August, and a `cold season' as
  the months between November and February of the following year.
  From an ecological viewpoint, this seasonal classification separates wintering
- birds from summer residents (some of whom are breeding).
+ birds from 
+\change_inserted 617562988 1637515352
+spring and 
+\change_unchanged
+summer residents (some of whom are breeding).
  This makes sense biologically because the two communities have different
  requirements and could respond differentially to abiotic drivers.
  It is also useful from a more statistical perspective, as there is a partial
@@ -1371,7 +1411,15 @@ where
  species and the correlation is computed over the years.
  This synchrony index varies between -1 (perfect compensation, total abundance
  is constant) and 1 (complete synchrony), while 0 represents a case where
- populations fluctuate independently on average.
+ 
+\change_deleted -666822487 1633100790
+all 
+\change_unchanged
+populations fluctuate independently
+\change_inserted -666822487 1633100794
+ on average
+\change_unchanged
+.
  Contrary to other indices (e.g., 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1621,12 +1669,20 @@ literal "false"
 \end_inset
 
  is the number of surrogates.
- Independence of species was rejected at the 10% threshold with a Benjamini-Hoch
-berg correction, as we compare across 2 seasons and 3 periods (all years,
- before 2006, after 2006), with partially overlapping data.
+ Independence of species was rejected at the 10% 
+\change_inserted 617562988 1637515482
+significance 
+\change_unchanged
+threshold with a Benjamini-Hochberg correction, as we compare across 2 seasons
+ and 3 periods (all years, before 2006, after 2006), with partially overlapping
+ data.
  This was found satisfactory based on simulated data, although power is
  low for detecting compensation (i.e., the null cannot always be rejected)
- when only two groups are compared.
+ when only two groups are compared
+\change_inserted 617562988 1637515428
+ (SI Appendix S5)
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1828,21 +1884,31 @@ literal "false"
 
  to identify compensation or synchrony in cases of skewed species abundance
  distribution, either in the mean or in the amplitude of temporal variation.
+\change_inserted -666822487 1633100371
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -666822487 1633710950
 Statistical significance testing was always done using a significance level
  
 \begin_inset Formula $\alpha$
 \end_inset
 
- = 10%, which was based on previous experience working with (statistically
- short) ecological time series as well as analyses of numerical simulations
- using 
+ = 10%, which was based on 
+\change_inserted 617562988 1637515549
+our 
+\change_inserted -666822487 1633710950
+previous experience working with (statistically short) ecological time series
+ as well as analyses of numerical simulations using 
 \begin_inset Formula $\alpha$
 \end_inset
 
  = 10%, provided in SI Appendices.
+ 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1928,6 +1994,8 @@ noprefix "false"
  Using functional groups (waders and waterfowl), synchrony within functional
  groups was also prominent.
  The 
+\change_deleted 617562988 1637515592
+
 \begin_inset CommandInset citation
 LatexCommand citet
 key "gross2013species"
@@ -1935,9 +2003,22 @@ literal "false"
 
 \end_inset
 
- synchrony indices are indeed mostly positive, and always positive whenever
- significantly different from the null hypothesis of no temporal correlation
- between species.
+ synchrony indices
+\change_inserted 617562988 1637515599
+index 
+\begin_inset Formula $\eta$
+\end_inset
+
+
+\change_unchanged
+ 
+\change_deleted 617562988 1637515609
+are
+\change_inserted 617562988 1637515609
+is
+\change_unchanged
+ indeed mostly positive, and always positive whenever significantly different
+ from the null hypothesis of no temporal correlation between species.
  Therefore, there is no compensation within guilds (Fig.
  
 \begin_inset CommandInset ref
@@ -2056,7 +2137,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gross' synchrony index (
+
+\change_deleted 617562988 1637515649
+Gross' s
+\change_inserted 617562988 1637515649
+S
+\change_unchanged
+ynchrony index (
 \begin_inset Formula $\eta$
 \end_inset
 
@@ -2279,7 +2366,9 @@ noprefix "false"
 \end_inset
 
 d).
- Since we consider only two functional or phylogenetic groups, the 
+ Since we consider only two functional or phylogenetic groups, 
+\change_deleted 617562988 1637515864
+the 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "gross2013species"
@@ -2287,7 +2376,17 @@ literal "false"
 
 \end_inset
 
- index reduces to a simple correlation between two groups.
+
+\change_inserted 617562988 1637515801
+
+\begin_inset Formula $\eta$
+\end_inset
+
+
+\change_deleted 617562988 1637515814
+ index
+\change_unchanged
+ reduces to a simple correlation between two groups.
  
 \emph on
 Anatini
@@ -2517,7 +2616,9 @@ Discussion
 \begin_layout Standard
 Between-species compensation was not found across years (for two separate
  seasons), synchrony between species being the rule.
- In other words, there was no widespread 
+ 
+\change_deleted 617562988 1637516230
+In other words, there was no widespread 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2537,11 +2638,20 @@ literal "true"
 
 \end_inset
 
-) 
+)
+\change_inserted 617562988 1637516261
+This was true for all species considered as a single community, as well
+ as
+\change_unchanged
+ 
 \emph on
 within
 \emph default
- genera or guilds in year-to-year analyses of cold and warm seasons.
+ genera or guilds
+\change_inserted 617562988 1637516267
+,
+\change_unchanged
+ in year-to-year analyses of cold and warm seasons.
  Yet, summing the abundances of species within a guild and comparing these
  total abundances of contrasted guilds, it was possible to find compensation
  across years, during the cold season corresponding to wintering birds (although
@@ -2664,10 +2774,28 @@ Calidris
  The functional group classification produced some compensation between
  guilds while the taxonomic classification did not, despite the contrasted
  habitat preferences of these two phylogenetic groups.
- Using functional groups therefore produced more logical results, although
- as we stressed above, the null hypothesis of no compensation at the yearly
- scale could not be rejected, which may be due to the low power of the test
- when comparing two groups.
+ Using functional groups 
+\change_inserted -666822487 1633710800
+therefore 
+\change_unchanged
+produced more logical results, although as we stressed above, 
+\change_deleted -666822487 1633710562
+due to the low power of the tests, 
+\change_unchanged
+the null hypothesis of no compensation 
+\change_deleted 617562988 1637516345
+at the yearly scale
+\change_inserted 617562988 1637516350
+in year-to-year data
+\change_unchanged
+ 
+\change_deleted -666822487 1633710844
+was still plausible as well
+\change_inserted -666822487 1633710874
+could not be rejected, which may be due to the low power of the test when
+ comparing two groups
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
@@ -2683,8 +2811,12 @@ functional group scale
  The separation of seasons allowed to differentiate summer residents (some
  of whom may be breeding) and wintering birds, in order to remove the overwhelmi
 ng influence of the seasonal migratory cycle.
- In both of those seasons though, we had reason to expect waders and waterfowl
- to have different environmental preferences.
+ In both of those seasons
+\change_deleted 617562988 1637516377
+ though
+\change_unchanged
+, we had reason to expect waders and waterfowl to have different environmental
+ preferences.
  Instead, waders and waterfowl were found to correlate negatively only during
  the cold (wintering) season.
  A simple explanation is that the reserve might be closer to its carrying
@@ -2721,7 +2853,11 @@ A.
  a very attractive wintering site where birds both rest and forage to some
  degree.
  Packing even more birds over its 120 ha may just not be feasible, so that
- increases in one guild result in decrease in the other
+ increases in one guild result in decrease
+\change_inserted 617562988 1637516413
+s
+\change_unchanged
+ in the other
 \begin_inset Note Note
 status collapsed
 
@@ -2783,7 +2919,11 @@ literal "true"
  (at least in winter, as we explained above).
  Bird settlement decisions for both winter and spring/summer seasons are
  the proximal causes of bird species composition in the reserve, rather
- than population dynamics.
+ than 
+\change_inserted 617562988 1637516434
+local 
+\change_unchanged
+population dynamics.
  However, it would be incorrect to conclude that because the local compensation
  in winter that we found results from bird behaviour, it is disconnected
  from regional-scale community dynamics: which species are present in the
@@ -2873,7 +3013,11 @@ We now zoom in on the cormorant-heron-egret module, for which we knew beforehand
  as shown in SI Appendix S8, its dominance of temporal variation can forbid
  the occurrence of compensation since by definition no increase in the numbers
  of the species that fluctuate less may compensate for the decreases in
- the species that fluctuate more (and vice versa).
+ the species that fluctuate
+\change_inserted 617562988 1637516482
+s
+\change_unchanged
+ more (and vice versa).
 \end_layout
 
 \begin_layout Subsection*
@@ -2983,7 +3127,17 @@ literal "false"
 \begin_inset Quotes eld
 \end_inset
 
-Endogenous compensatory cycles" in 
+Endogenous compensatory cycles
+\change_inserted 617562988 1637516579
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\change_deleted 617562988 1637516578
+"
+\change_unchanged
+ in 
 \begin_inset CommandInset citation
 LatexCommand citealp
 key "gonzalez2009causes"

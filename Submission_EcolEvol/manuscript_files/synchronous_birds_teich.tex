@@ -1,13 +1,10 @@
 %% FBarraquand et al. Looking for compensation at multiple scales in a wetland bird community
 \documentclass[12pt,english]{article}
-\usepackage{ae,lmodern}
-%\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
-\usepackage[authoryear]{natbib}
 \usepackage{geometry}
 \geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=2.5cm,rmargin=2.5cm}
-\usepackage{xcolor}
-\usepackage{pdfcolmk}
 \usepackage{float}
 \usepackage{textcomp}
 \usepackage{url}
@@ -16,20 +13,10 @@
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{esint}
-\PassOptionsToPackage{normalem}{ulem}
-\usepackage{ulem}
+\usepackage[authoryear]{natbib}
 \doublespacing
 
 \makeatletter
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
-\providecolor{lyxadded}{rgb}{0,0,1}
-\providecolor{lyxdeleted}{rgb}{1,0,0}
-%% Change tracking with ulem
-\DeclareRobustCommand{\lyxadded}[3]{{\color{lyxadded}{}#3}}
-\DeclareRobustCommand{\lyxdeleted}[3]{{\color{lyxdeleted}\lyxsout{#3}}}
-\DeclareRobustCommand{\lyxsout}[1]{\ifx\\#1\else\sout{#1}\fi}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 %\usepackage{aecompl}
 \usepackage{ae,lmodern}
@@ -42,7 +29,6 @@
 
 \makeatother
 
-\usepackage{babel}
 \begin{document}
 \title{Looking for compensation at multiple scales in a wetland bird community}
 \author{{\Large{}{}Frédéric Barraquand$^{1,2,*}$, Coralie Picoche$^{1,2}$,
@@ -111,7 +97,7 @@ analyses using a wavelet-based measure, which allows for both scale-
 and time-dependence. We analyse synchrony both within and between
 guilds, with guilds defined either as tightknit phylogenetic groups
 or larger functional groups. We find that abundance and biomass compensation
-is rare, likely due to the synchronizing influence of climate (and
+are rare, likely due to the synchronizing influence of climate (and
 other drivers) on birds, even after considering several temporal scales
 of covariation (during either cold or warm seasons, above or below
 the annual scale). Negative covariation in abundance at the guild
@@ -196,20 +182,20 @@ reserve, with records every month for 35 years, allowing us to dig
 deeper into patterns of synchrony, at several temporal and taxonomic
 or functional scales.
 
-Taxonomic and functional scales should indeed be main modulators of
-synchrony/compensation. On the one hand, compensation can be high
-between similar and closely related species. If two species of ducks
-A and B share almost the same niche, individuals from either species
-experience similar competition from species A or B, and should feel
-the effects of other species in the community identically. This favours
-priority effects \citep{fukami_historical_2015}, with chance due
-to movement events determining whether species A or B locally dominates,
-which can then provide compensation at the landscape level \citep{loreau2003biodiversity}.
-On the other hand, it could be argued that these two similar duck
-species will precisely respond in similar ways to environmental variables,
-which tends to obfuscate compensation. Hence, more dissimilar species
-or groups (within the same trophic level nonetheless) could exhibit
-more compensation \citep{bai2004ecosystem,morin2014temporal,klink_functional_2019}
+The taxonomic or functional scale considered should indeed be a main
+modulator of synchrony/compensation. On the one hand, compensation
+can be high between morphologically similar and closely related species.
+If two species of ducks A and B share almost the same niche, individuals
+from either species experience similar competition from species A
+or B, and should feel the effects of other species in the community
+identically. This favours priority effects \citep{fukami_historical_2015},
+with chance due to movement events determining whether species A or
+B locally dominates, which can then provide compensation at the landscape
+level \citep{loreau2003biodiversity}. On the other hand, it could
+be argued that these two similar duck species will precisely respond
+in similar ways to environmental variables, which tends to obfuscate
+compensation. Hence, more dissimilar species or groups (within the
+same trophic level nonetheless) could exhibit more compensation \citep{bai2004ecosystem,morin2014temporal,klink_functional_2019}
 because they are more likely to respond to the environment in an asynchronous
 manner (\emph{sensu} \citealp{loreau2013biodiversity}). Surprisingly,
 such compensation \textit{between} guilds has been less well explored
@@ -243,8 +229,8 @@ provided in SI Appendix S1. The reserve comprises 120 ha of wetlands,
 and the counts have been aggregated at the reserve scale (summed over
 18 sectors where the counts are actually performed, using binoculars).
 We use for each species the maximum observed abundance over a month,
-which provides a ``monthly snapshot'' of the bird abundance, that
-has been used to monitor the reserve since its inception. When abundance
+which provides a ``monthly snapshot'' of bird abundance, that has
+been used to monitor the reserve since its inception. When abundance
 values are not reported for certain species and months, we replace
 them by zeroes. Given the sustained observation effort (all sectors
 are patrolled multiple times throughout the month by the staff, amateur
@@ -264,15 +250,16 @@ defined two seasons based on observations of bird presence. We defined
 a `warm season', from May to August, and a `cold season' as the months
 between November and February of the following year. From an ecological
 viewpoint, this seasonal classification separates wintering birds
-from summer residents (some of whom are breeding). This makes sense
-biologically because the two communities have different requirements
-and could respond differentially to abiotic drivers. It is also useful
-from a more statistical perspective, as there is a partial shift in
-composition between the seasons, though winter and summer communities
-greatly overlap (i.e., species with greater abundances in the reserve
-in winter have also some summer residents, though these may be different
-individuals). The dynamics of species abundances in the Teich reserve
-bird community show a marked signature of seasonality (Fig. \ref{fig:Temporal-trends}).
+from spring and summer residents (some of whom are breeding). This
+makes sense biologically because the two communities have different
+requirements and could respond differentially to abiotic drivers.
+It is also useful from a more statistical perspective, as there is
+a partial shift in composition between the seasons, though winter
+and summer communities greatly overlap (i.e., species with greater
+abundances in the reserve in winter have also some summer residents,
+though these may be different individuals). The dynamics of species
+abundances in the Teich reserve bird community show a marked signature
+of seasonality (Fig. \ref{fig:Temporal-trends}).
 
 \begin{figure}[H]
 \begin{centering}
@@ -407,12 +394,12 @@ or were inferior to the observed value to compute the p-value \citep{north_note_
 we use the ratio $(r+1)/(n+1)$ where $r$ is the number of surrogate
 values that are $\ge\eta_{obs}$ or $\le\eta_{obs}$, and $n$ is
 the number of surrogates. Independence of species was rejected at
-the 10\% threshold with a Benjamini-Hochberg correction, as we compare
-across 2 seasons and 3 periods (all years, before 2006, after 2006),
-with partially overlapping data. This was found satisfactory based
-on simulated data, although power is low for detecting compensation
+the 10\% significance threshold with a Benjamini-Hochberg correction,
+as we compare across 2 seasons and 3 periods (all years, before 2006,
+after 2006), with partially overlapping data. This was found satisfactory
+based on simulated data, although power is low for detecting compensation
 (i.e., the null cannot always be rejected) when only two groups are
-compared.
+compared (SI Appendix S5).
 
 \subsubsection*{Wavelet analyses}
 
@@ -453,9 +440,10 @@ in cases of skewed species abundance distribution, either in the mean
 or in the amplitude of temporal variation.
 
 Statistical significance testing was always done using a significance
-level $\alpha$ = 10\%, which was based on previous experience working
-with (statistically short) ecological time series as well as analyses
-of numerical simulations using $\alpha$ = 10\%, provided in SI Appendices.
+level $\alpha$ = 10\%, which was based on our previous experience
+working with (statistically short) ecological time series as well
+as analyses of numerical simulations using $\alpha$ = 10\%, provided
+in SI Appendices. 
 
 All datasets and statistical analyses are available in a GitHub repository
 \url{https://github.com/fbarraquand/BirdTimeSeries_Teich} and stored
@@ -484,10 +472,10 @@ on the genera}} \textit{Calidris} and tribe \textit{Anatini }\textit{\emph{(form
 units with contrasted preferences, within-genus synchrony dominates
 year-to-year analyses for the two seasons (Fig. \ref{fig:Gross-synchrony-index}).
 Using functional groups (waders and waterfowl), synchrony within functional
-groups was also prominent. The \citet{gross2013species} synchrony
-indices are indeed mostly positive, and always positive whenever significantly
-different from the null hypothesis of no temporal correlation between
-species. Therefore, there is no compensation within guilds (Fig. \ref{fig:Gross-synchrony-index}a
+groups was also prominent. The index $\eta$ is indeed mostly positive,
+and always positive whenever significantly different from the null
+hypothesis of no temporal correlation between species. Therefore,
+there is no compensation within guilds (Fig. \ref{fig:Gross-synchrony-index}a
 and b) across years, for the two seasons. This matches the patterns
 obtained within the entire wetland bird community (Fig. \ref{fig:synchrony-whole-comm}a):
 synchrony dominates when abundances are computed at the species level.
@@ -521,17 +509,17 @@ whole-community trends (Fig. \ref{fig:synchrony-whole-comm}).
 \begin{centering}
 \includegraphics[width=0.85\textwidth]{Fig2_new3_JAE_abundances_NOTscaled}
 \par\end{centering}
-\caption{Gross' synchrony index ($\eta$) as a function of the season (cold
-and warm seasons), calculated \emph{within} (top, a-b) and \emph{between}
-(bottom, c-d) groups. The groups considered were different taxonomic
-groups (\emph{Anatini}, \emph{Calidris}, left a-c) or functional groups
-(waders vs waterfowl, right b-d). The index was computed in each panel
-on the whole dataset (black) or using two periods: before and after
-2006 (light and dark blue), the year of the change in water level
-management. Boxplots indicate the distribution of $\eta$ under the
-null hypothesis (independent species) and filled symbols correspond
-to the observed values. Red stars correspond to synchrony values significantly
-different from the null model, at the 10\% threshold with a Benjamini-Hochberg
+\caption{Synchrony index ($\eta$) as a function of the season (cold and warm
+seasons), calculated \emph{within} (top, a-b) and \emph{between} (bottom,
+c-d) groups. The groups considered were different taxonomic groups
+(\emph{Anatini}, \emph{Calidris}, left a-c) or functional groups (waders
+vs waterfowl, right b-d). The index was computed in each panel on
+the whole dataset (black) or using two periods: before and after 2006
+(light and dark blue), the year of the change in water level management.
+Boxplots indicate the distribution of $\eta$ under the null hypothesis
+(independent species) and filled symbols correspond to the observed
+values. Red stars correspond to synchrony values significantly different
+from the null model, at the 10\% threshold with a Benjamini-Hochberg
 correction. \label{fig:Gross-synchrony-index}}
 \end{figure}
 
@@ -571,16 +559,15 @@ their original Fourier spectrum), at the 10\% level. \label{fig:Wavelet-modulus-
 
 More easily interpretable results can be found when we examine synchrony
 vs compensation between functional groups (Fig. \ref{fig:Gross-synchrony-index}d).
-Since we consider only two functional or phylogenetic groups, the
-\citet{gross2013species} index reduces to a simple correlation between
-two groups. \emph{Anatini} and \emph{Calidris} are positively correlated
-in the warm season (for all periods), and have unclear correlations
-during the cold season (Fig. \ref{fig:Gross-synchrony-index}c). In
-contrast, waders and waterfowl are negatively correlated during the
-cold season and positively correlated during the warm season (Fig.
-\ref{fig:Gross-synchrony-index}d). Although the negative correlation
-is not statistically significant, it is consistent for both pre- and
-post-2006 periods.
+Since we consider only two functional or phylogenetic groups, $\eta$
+reduces to a simple correlation between two groups. \emph{Anatini}
+and \emph{Calidris} are positively correlated in the warm season (for
+all periods), and have unclear correlations during the cold season
+(Fig. \ref{fig:Gross-synchrony-index}c). In contrast, waders and
+waterfowl are negatively correlated during the cold season and positively
+correlated during the warm season (Fig. \ref{fig:Gross-synchrony-index}d).
+Although the negative correlation is not statistically significant,
+it is consistent for both pre- and post-2006 periods.
 
 \subsection*{Synchrony in a small module with known competition}
 
@@ -632,19 +619,18 @@ but conserving their original Fourier spectrum), at the 10\% level.
 \section*{Discussion}
 
 Between-species compensation was not found across years (for two separate
-seasons), synchrony between species being the rule. In other words,
-there was no widespread ``functional compensation'' (\textit{sensu}
-\citealt{gonzalez2009causes}) \emph{within} genera or guilds in year-to-year
-analyses of cold and warm seasons. Yet, summing the abundances of
-species within a guild and comparing these total abundances of contrasted
-guilds, it was possible to find compensation across years, during
-the cold season corresponding to wintering birds (although the null
-hypothesis of no correlation could not be rejected); that is, there
-was compensation \emph{between} guilds. These results are robust to
-using biomass in place of abundance (SI Appendix S4). A zoom on a
-module of three species with known competition also revealed clear
-compensation at scales $\approx8$ years. We elaborate below on these
-findings.
+seasons), synchrony between species being the rule. This was true
+for all species considered as a single community, as well as \emph{within}
+genera or guilds, in year-to-year analyses of cold and warm seasons.
+Yet, summing the abundances of species within a guild and comparing
+these total abundances of contrasted guilds, it was possible to find
+compensation across years, during the cold season corresponding to
+wintering birds (although the null hypothesis of no correlation could
+not be rejected); that is, there was compensation \emph{between} guilds.
+These results are robust to using biomass in place of abundance (SI
+Appendix S4). A zoom on a module of three species with known competition
+also revealed clear compensation at scales $\approx8$ years. We elaborate
+below on these findings.
 
 \subsection*{Synchrony \emph{within} or \emph{between} guilds}
 
@@ -681,7 +667,7 @@ The functional group classification produced some compensation between
 guilds while the taxonomic classification did not, despite the contrasted
 habitat preferences of these two phylogenetic groups. Using functional
 groups therefore produced more logical results, although as we stressed
-above, the null hypothesis of no compensation at the yearly scale
+above, the null hypothesis of no compensation in year-to-year data
 could not be rejected, which may be due to the low power of the test
 when comparing two groups.
 
@@ -689,12 +675,12 @@ We expected to see compensation at the ``functional group scale''
 for both cold and warm seasons. The separation of seasons allowed
 to differentiate summer residents (some of whom may be breeding) and
 wintering birds, in order to remove the overwhelming influence of
-the seasonal migratory cycle. In both of those seasons though, we
-had reason to expect waders and waterfowl to have different environmental
-preferences. Instead, waders and waterfowl were found to correlate
-negatively only during the cold (wintering) season. A simple explanation
-is that the reserve might be closer to its carrying capacity for these
-species in winter, so that space is limited and increases in one functional
+the seasonal migratory cycle. In both of those seasons, we had reason
+to expect waders and waterfowl to have different environmental preferences.
+Instead, waders and waterfowl were found to correlate negatively only
+during the cold (wintering) season. A simple explanation is that the
+reserve might be closer to its carrying capacity for these species
+in winter, so that space is limited and increases in one functional
 group are compensated by decreases in the other. The dominant species
 in each guild (Fig. \ref{fig:Temporal-trends}), such as \emph{C.
 alpina} for waders and \emph{A. crecca} for waterfowl, are migratory
@@ -707,7 +693,7 @@ but there are costs to those movements (energetics, mortality risk
 due to nearby hunting) which make the reserve a very attractive wintering
 site where birds both rest and forage to some degree. Packing even
 more birds over its 120 ha may just not be feasible, so that increases
-in one guild result in decrease in the other. Compensation might
+in one guild result in decreases in the other. Compensation might
 therefore be easier to detect during the cold season because the study
 area is ``filled'', and it is not detected in our warm season (May
 to August) because there are less birds overall.
@@ -722,13 +708,13 @@ low water levels (waders), and outflow of birds preferring high water
 levels (waterfowl), under an overall space constraint (at least in
 winter, as we explained above). Bird settlement decisions for both
 winter and spring/summer seasons are the proximal causes of bird species
-composition in the reserve, rather than population dynamics. However,
-it would be incorrect to conclude that because the local compensation
-in winter that we found results from bird behaviour, it is disconnected
-from regional-scale community dynamics: which species are present
-in the reserve - safe from hunting - affects ultimately their survival
-and reproductive success, which then feeds back into the regional-scale
-community dynamics. 
+composition in the reserve, rather than local population dynamics.
+However, it would be incorrect to conclude that because the local
+compensation in winter that we found results from bird behaviour,
+it is disconnected from regional-scale community dynamics: which species
+are present in the reserve - safe from hunting - affects ultimately
+their survival and reproductive success, which then feeds back into
+the regional-scale community dynamics. 
 
 \subsection*{Effect of the change in management on synchrony}
 
@@ -767,7 +753,7 @@ groups. When one functional group or species dominates the temporal
 variation, as shown in SI Appendix S8, its dominance of temporal variation
 can forbid the occurrence of compensation since by definition no increase
 in the numbers of the species that fluctuate less may compensate for
-the decreases in the species that fluctuate more (and vice versa).
+the decreases in the species that fluctuates more (and vice versa).
 
 \subsection*{Conclusion and perspectives for theory}
 
@@ -820,9 +806,9 @@ cycles (on top of seasonal cycles, for multivoltine species), with
 possibly strong indirect interactions between similar species mediated
 by predators and parasitoids \citep{murdoch2003consumer}. In the
 latter context of internally-generated variability (``Endogenous
-compensatory cycles\textquotedbl{} in \citealp{gonzalez2009causes}),
-compensation may be more likely: \citet{klapwijk2018transient} recently
-reported only transient synchrony between species of moths, that typically
+compensatory cycles'' in \citealp{gonzalez2009causes}), compensation
+may be more likely: \citet{klapwijk2018transient} recently reported
+only transient synchrony between species of moths, that typically
 exhibit such multi-year fluctuations.
 
 In many ways, searching for abundance compensation using biodiversity
