@@ -8,12 +8,12 @@ library(Matrix)
 library(synchrony)
 library(codyn)
 
-source("../SCRIPTS/iaaft.R")
-source("../SCRIPTS/test_synchrony_Gross.r")
-source("../SCRIPTS/image_mvcwt_for_colormaps.r") 
+source("../../SCRIPTS/iaaft.R")
+source("../../SCRIPTS/test_synchrony_Gross.r")
+source("../../SCRIPTS/image_mvcwt_for_colormaps.r") 
 
 nsamples = 35 *12 #We want to look at monthly data
-anrands=100
+anrands=1000
 amethod="shift"
 type_correct="BH"
 nrep=1 #Should be 100
@@ -56,7 +56,6 @@ coef_multiple[id_most_abundant]=100
 }else if(nspecies==4){
 coef_multiple[id_most_abundant]=7
 }else{
-stop()
 }
 
 for(r in 1:nrep){
@@ -99,6 +98,13 @@ print(l[id_most_abundant]/(sum(l_bis)))
 #mean(cor(x)) #CP These two  are different, am wondering why.
 rhomean_list[r,sp]=meancorr(x)$obs
 
+#pdf("MockData_SAD_timeseries.pdf",width=20,height=6)
+plot(1:nsamples,x[,2],col="grey",t="o",pch=16,ylim=range(c(x)),xlab="Time",ylab="Abundance")
+lines(x[,1],col="black",t="o",pch=16)
+lines(x[,3],col="red",t="o",pch=16)
+lines(x[,4],col="blue",t="o",pch=16)
+dev.off()
+
 #Let's turn the matrix into a data.frame
 name_species=paste("Sp",1:nspecies,sep="")
 sp_data_frame=c()
@@ -113,11 +119,11 @@ data_x=data.frame(dates,sp_data_frame,abundance)
 
 data_tot=cbind(rep(r,nrow(data_x)),data_x)
 colnames(data_tot)=c("Rep","Time","Species","Abundance")
-write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_",nspecies,"sp_alpha",alpha[t_sigma],"_beta",beta[t_sigma],".csv",sep=""),sep=";",dec=".",row.names=F)
+#write.table(data_tot,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MockData_SAD_",nspecies,"sp_alpha",alpha[t_sigma],"_beta",beta[t_sigma],".csv",sep=""),sep=";",dec=".",row.names=F)
 
 tab=cbind(mu,SigmaPair)
 colnames(tab)=c("mu",paste("Sp",1:nspecies))
-write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_",nspecies,"sp_alpha",alpha[t_sigma],"_beta",beta[t_sigma],".csv",sep=""),sep=";",dec=".",row.names=F,append=T)
+#write.table(tab,paste("../../../Teich_resultsLFS/simulated_timeseries_very_skewed_SAD/MuSigma_SAD_",nspecies,"sp_alpha",alpha[t_sigma],"_beta",beta[t_sigma],".csv",sep=""),sep=";",dec=".",row.names=F,append=T)
 } #end r
 } #end nspecies
 } #end t_sigma
@@ -261,12 +267,13 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-pdf(paste("Skewed_SAD_",nspecies,"sp_compensation_IAAFT.pdf",sep=""),width=7,height=3)
+pdf(paste("Skewed_SAD_",nspecies,"sp_compensation_IAAFT.pdf",sep=""),width=7,height=4)
 layout(matrix(c(1,1,2),nrow=1,ncol=3,byrow=T),widths=c(6,2))
 print(paste(Sys.time(),"before image"))
-par(mar=c(3,5,2,3))
+par(mar=c(5,5,2,3))
 image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None")
-#mtext("b)",side=2,line=-2,at=0.48,cex=1.5,outer=T,las=1)
+mtext("Scale (years)", side=2, line=-1.75,at=0.55, outer = TRUE,cex=1.1)
+mtext("Years",side=1, line=-2, at=0.475,outer = TRUE,cex=1.1)
 print(paste(Sys.time(),"after image"))
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management

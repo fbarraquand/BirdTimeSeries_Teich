@@ -22,7 +22,7 @@ type_correct="BH"
 nrep=1 #Should be 100
 nu_min=c(0,0)
 nu_max=c(7.0,8.3)
-doyouload=F
+doyouload=T
 type_dist=c("Compensation")
 nspecies=c(2)
 norm=F
@@ -62,9 +62,9 @@ colnames(tab)=c("nu_min","nu_max",paste("Sp",1:nspecies))
 } #end r
 
 pdf("MockData_2sp_antiphase_timeseries_log_amplitude.pdf",width=12.5,height=4)
-par(mar=c(4,4,1,1))
+par(mar=c(4,5,1,1))
 #plot(x[,2],col="grey",ylim=range(x[,2]),t="o",pch=16)
-plot(x[,2],col="grey",ylim=range(c(x)),t="o",pch=16,xlab="Time",ylab="Abundance")
+plot(x[,2],col="grey",ylim=range(c(x)),t="o",pch=16,xlab="Time",ylab="Abundance",cex.lab=1.75,cex.axis=1.75)
 lines(x[,1],col="black",t="o",pch=16)
 dev.off()
 
@@ -207,12 +207,13 @@ ref_wmr$z.boot=tmp_array_z.boot
 }
 
 
-pdf(paste("Skewed_SAD_",end_of_file,"_IAAFT.pdf",sep=""),width=7,height=3)
+pdf(paste("Skewed_SAD_",end_of_file,"_IAAFT.pdf",sep=""),width=7,height=4)
 layout(matrix(c(1,1,2),nrow=1,ncol=3,byrow=T),widths=c(6,2))
 print(paste(Sys.time(),"before image"))
-par(mar=c(3,5,2,3))
+par(mar=c(5,5,2,3))
 image_mvcwt_for_colormaps(ref_wmr,reset.par=F,cex.axis=4,z.fun="Mod",adj="None")
-#mtext("b)",side=2,line=-2,at=0.48,cex=1.5,outer=T,las=1)
+mtext("Scale (years)", side=2, line=-1.75,at=0.55, outer = TRUE,cex=1.1)
+mtext("Years",side=1, line=-2, at=0.475,outer = TRUE,cex=1.1)
 print(paste(Sys.time(),"after image"))
 
 #abline(v=2006,lwd=3,col="black") #This is supposed to change in 2006 with water management

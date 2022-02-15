@@ -3,7 +3,7 @@
 #CP 04/07/2019: p-value is now relying on quantile. But we wan't compute FDR-correction if we only have the corresponding boolean. Back to the very first formulation we had: https://stats.stackexchange.com/questions/25927/doubling-the-tails-in-two-sample-permutation-test (answer from caracal) 
 
 #source("../../../SCRIPTS/iaaft.R")
-source("SCRIPTS/iaaft.R")
+#source("SCRIPTS/iaaft.R")
 
 community_sync_Gross=function (data, nrands = 0, alternative = c("two-tailed","greater","less"),method=c("shift","iaaft","ebisuzaki"), 
     quiet = FALSE, ...) 

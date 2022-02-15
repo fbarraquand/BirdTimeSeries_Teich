@@ -75,7 +75,7 @@ image_mvcwt_for_colormaps=function (x, z.fun = "Re", bound = 1, reset.par = TRUE
             box()
         }
         axis(1,cex.axis=1.5)
-        mtext("Years", 1, 1, outer = TRUE,cex=2)
+        #mtext("Years", 1, 1, outer = TRUE,cex=2)
         mtext("Scale (years)", 2, 1, outer = TRUE,cex=2)
     })
 	par(mar=c(2,.5,2,4))
