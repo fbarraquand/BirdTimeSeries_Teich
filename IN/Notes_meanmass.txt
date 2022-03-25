@@ -1,0 +1,4 @@
+Data on species body masses where collated from two main sources
+- Hume, Lesaffre, Duquet (2007) Larousse des Oiseaux de France et d'Europe de 2007, ISBN 2-03-582265-3 which is the French translation of the RSPB Handbook of Birds (2006)
+- https://www.oiseaux.net/ which uses IOC World Bird List (download in 2018)
+Some mean species body masses were corrected with other sources when averaging the spread as (max - min)/2 was unlikely to yield the mean body mass.
