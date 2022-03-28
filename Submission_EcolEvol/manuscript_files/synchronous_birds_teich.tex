@@ -1,4 +1,5 @@
-%% FBarraquand et al. Looking for compensation at multiple scales in a wetland bird community
+%% LyX 2.3.6.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
 \documentclass[12pt,english]{article}
 \usepackage{ae,aecompl}
 \usepackage[T1]{fontenc}
@@ -29,45 +30,45 @@
 
 \makeatother
 
+\usepackage{babel}
 \begin{document}
 \title{Looking for compensation at multiple scales in a wetland bird community}
 \author{{\Large{}{}Frédéric Barraquand$^{1,2,*}$, Coralie Picoche$^{1,2}$,
-Christelle Aluome$^{1,3}$, }\\
- {\Large{}{}Laure Carassou$^{1,4}$ \& Claude Feigné$^{5}$}}
+Christelle Aluome$^{2,3}$, }\\
+ {\Large{}{}Laure Carassou$^{2,4}$ \& Claude Feigné$^{5}$}}
 
 \maketitle
 {\large{}{}\bigskip{}
 }{\large\par}
 
-{\large{}{}}\textsuperscript{{\large{}{}1}}{\large{}{}~University
-of Bordeaux, Integrative and Theoretical Ecology, LabEx COTE, Bât.
-B2 - Allée Geoffroy St-Hilaire, 33615 Pessac, France \bigskip{}
+{\large{}{}}\textsuperscript{{\large{}{}1}}{\large{}{}Institute
+of Mathematics of Bordeaux, University of Bordeaux and CNRS, Talence,
+France\bigskip{}
 }{\large\par}
 
-{\large{}{}}\textsuperscript{{\large{}{}2}}{\large{}{}~CNRS, Institute
-of Mathematics of Bordeaux, 351 Cours de la Libération, 33405 Talence,
+{\large{}{}}\textsuperscript{{\large{}{}2}}{\large{}{}~Integrative
+and Theoretical Ecology, LabEx COTE, University of Bordeaux, Pessac,
 France}{\large\par}
 
-{\large{}{}\bigskip{}
+{\large{}\bigskip{}
 }{\large\par}
 
 {\large{}{}}\textsuperscript{{\large{}{}3}}{\large{}{}~ISPA, Bordeaux
-Sciences Agro, INRA, 33140 Villenave d'Ornon, France}{\large\par}
+Sciences Agro \& INRAE, Villenave d'Ornon, France}{\large\par}
 
-{\large{}{}\bigskip{}
+{\large{}\bigskip{}
 }{\large\par}
 
-{\large{}{}}\textsuperscript{{\large{}{}4}}{\large{}{}~INRAE,
-UR EABX, 50 Avenue de Verdun, 33612 Cestas, France}{\large\par}
+{\large{}{}}\textsuperscript{{\large{}{}4}}{\large{}{}~UR EABX,
+INRAE, Cestas, France}{\large\par}
 
-{\large{}{}\bigskip{}
+{\large{}\bigskip{}
 }{\large\par}
 
-{\large{}{}}\textsuperscript{{\large{}{}5}}{\large{}{}~PNR Landes
-Gascognes, Teich Ornithological Reserve, Rue du Port BP 11 33470 Le
-Teich, France}{\large\par}
+{\large{}{}}\textsuperscript{{\large{}{}5}}{\large{}{}~Teich Ornithological
+Reserve, PNR Landes Gascognes, Le Teich, France}{\large\par}
 
-{\large{}{}\bigskip{}
+{\large{}\bigskip{}
 }{\large\par}
 
 {*} Corresponding author. Email: frederic.barraquand@u-bordeaux.fr
@@ -75,10 +76,6 @@ Teich, France}{\large\par}
 \thispagestyle{empty}
 
 \pagebreak{}
-
-%\linenumbers
-
-\begin{linenumbers}{
 \begin{abstract}
 Compensatory dynamics, during which community composition shifts despite
 a near-constant total community size, are usually rare: synchronous
@@ -443,24 +440,24 @@ Statistical significance testing was always done using a significance
 level $\alpha$ = 10\%, which was based on our previous experience
 working with (statistically short) ecological time series as well
 as analyses of numerical simulations using $\alpha$ = 10\%, provided
-in SI Appendices. 
+in SI Appendices.
 
-All datasets and statistical analyses are available in a GitHub repository
-\url{https://github.com/fbarraquand/BirdTimeSeries_Teich} and stored
-at Zenodo {[}will be done for the final version{]} (Picoche, Aluome
-\& Barraquand, 2020). Finally, we want to highlight a conceptual issue
-worth keeping in mind: both $\rho$ and $\eta$ indicate synchrony
-when reaching one, but such synchrony should be understood as the
-reciprocal of compensation rather than exactly synchronized peaks
-and troughs for all species (i.e., phase synchrony). Unlike phase
-synchrony, compensation and community-level synchrony depend on the
-distribution of abundance variation within the community. In the limit
-case where a single species abundance fluctuates more than all others
-combined, compensation may not even be reachable, since variation
-in the abundance of that dominant species cannot be offset by changes
-in numbers of other species. Only when species densities have commensurate
-temporal variability will the concepts of community-level synchrony
-and phase synchrony exactly match.
+All computer codes for statistical analyses, as well as the datasets,
+are available in a GitHub repository \url{https://github.com/fbarraquand/BirdTimeSeries_Teich}
+and stored at Zenodo \citep{picoche_2022_6368332}. Finally, we want
+to highlight a conceptual issue worth keeping in mind: both $\rho$
+and $\eta$ indicate synchrony when reaching one, but such synchrony
+should be understood as the reciprocal of compensation rather than
+exactly synchronized peaks and troughs for all species (i.e., phase
+synchrony). Unlike phase synchrony, compensation and community-level
+synchrony depend on the distribution of abundance variation within
+the community. In the limit case where a single species abundance
+fluctuates more than all others combined, compensation may not even
+be reachable, since variation in the abundance of that dominant species
+cannot be offset by changes in numbers of other species. Only when
+species densities have commensurate temporal variability will the
+concepts of community-level synchrony and phase synchrony exactly
+match.
 
 \section*{Results}
 
@@ -841,13 +838,14 @@ Constructive feedback by six referees -- Roel van Klink, Mike Fowler,
 and four anonymous others -- as well as three associate editors considerably
 improved the manuscript. The data collection was supported by the
 Landes Gascogne regional park as well as the Teich municipality, while
-data analysis was funded by LabEx COTE (ANR-10-LABX-45).
+data analysis was funded by LabEx COTE (ANR-10-LABX-45) and a grant
+to FB (ANR-20-CE45-0004).
 
 \subsection*{Data accessibility}
 
 All the code and data used for analyses are available at \url{https://github.com/fbarraquand/BirdTimeSeries_Teich}
-and archived at Zenodo {[}will be done for the final version{]}, DOI:XX-XXX
-(Picoche, Aluome \& Barraquand, 2020).
+and archived at Zenodo, DOI:10.5281/zenodo.6368332 \citep{picoche_2022_6368332}
+and the main data file deposited at Dryad \url{https://doi.org/10.5061/dryad.zpc866t9v}.
 
 \subsection*{Authors' contributions}
 
@@ -857,8 +855,6 @@ CP standardized the bird abundance database and performed exploratory
 analyses. Final statistical analyses were designed by FB and CP, and
 coded mostly by CP. FB and CP led the article writing, with inputs
 from all authors.
-
-}\end{linenumbers}
 
 \bibliographystyle{besjournals}
 \bibliography{BiblioTeich}

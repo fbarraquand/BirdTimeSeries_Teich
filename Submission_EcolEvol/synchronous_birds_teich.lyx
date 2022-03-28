@@ -117,7 +117,7 @@ Frédéric Barraquand
 \end_inset
 
 , Christelle Aluome
-\begin_inset Formula $^{1,3}$
+\begin_inset Formula $^{2,3}$
 \end_inset
 
 , 
@@ -140,7 +140,7 @@ status collapsed
 \end_inset
 
 Laure Carassou
-\begin_inset Formula $^{1,4}$
+\begin_inset Formula $^{2,4}$
 \end_inset
 
  & Claude Feigné
@@ -210,7 +210,7 @@ status collapsed
 \size large
 
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -219,13 +219,8 @@ status collapsed
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-University of Bordeaux, Integrative and Theoretical Ecology, LabEx COTE,
- Bât.
- B2 - Allée Geoffroy St-Hilaire, 33615 Pessac, France 
+Institute of Mathematics of Bordeaux, University of Bordeaux and CNRS, Talence,
+ France
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -285,24 +280,13 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-CNRS, Institute of Mathematics of Bordeaux, 351 Cours de la Libération,
- 33405 Talence, France
+Integrative and Theoretical Ecology, LabEx COTE, University of Bordeaux,
+ Pessac, France
 \end_layout
 
 \begin_layout Standard
 
 \size large
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -362,7 +346,7 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-ISPA, Bordeaux Sciences Agro, INRA, 33140 Villenave d
+ISPA, Bordeaux Sciences Agro & INRAE, Villenave d
 \begin_inset Quotes ers
 \end_inset
 
@@ -372,17 +356,6 @@ Ornon, France
 \begin_layout Standard
 
 \size large
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -442,23 +415,12 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-INRAE, UR EABX, 50 Avenue de Verdun, 33612 Cestas, France
+UR EABX, INRAE, Cestas, France
 \end_layout
 
 \begin_layout Standard
 
 \size large
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -518,24 +480,12 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-PNR Landes Gascognes, Teich Ornithological Reserve, Rue du Port BP 11 33470
- Le Teich, France
+Teich Ornithological Reserve, PNR Landes Gascognes, Le Teich, France
 \end_layout
 
 \begin_layout Standard
 
 \size large
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -3014,7 +2964,7 @@ We warmly thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
  improved the manuscript.
  The data collection was supported by the Landes Gascogne regional park
  as well as the Teich municipality, while data analysis was funded by LabEx
- COTE (ANR-10-LABX-45).
+ COTE (ANR-10-LABX-45) and a grant to FB (ANR-20-CE45-0004).
 \end_layout
 
 \begin_layout Subsection*
