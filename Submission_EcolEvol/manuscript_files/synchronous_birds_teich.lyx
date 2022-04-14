@@ -87,6 +87,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -531,8 +532,15 @@ Compensatory dynamics, during which community composition shifts despite
  is limited.
  Here, we extend analyses of community-level synchrony to wetland birds.
  We analyse a 35-year monthly survey of a community where we suspected that
- compensation might occur due to changes in water levels, favouring birds
- with different habitat preferences, and potential competition.
+ compensation might occur due to 
+\change_inserted -666822487 1649949284
+potential competition and 
+\change_unchanged
+changes in water levels, favouring birds with different habitat preferences
+\change_deleted -666822487 1649949291
+, and potential competition
+\change_unchanged
+.
  We perform both year-to-year analyses by season, using a compensation/synchrony
  index, as well as multiscale analyses using a wavelet-based measure, which
  allows for both scale- and time-dependence.
@@ -554,7 +562,11 @@ between
 \emph on
 within
 \emph default
- guilds, using functional groups.
+ 
+\change_deleted -666822487 1649949314
+guilds, using 
+\change_unchanged
+functional groups.
  Our results suggest that abundance compensation may have more potential
  to emerge between broad functional groups rather than between species,
  as well as at relatively long temporal scales (multiple years for vertebrates),
@@ -831,7 +843,11 @@ The taxonomic or functional scale considered should indeed be a main modulator
  and closely related species.
  If two species of ducks A and B share almost the same niche, individuals
  from either species experience similar competition from species A or B,
- and should feel the effects of other species in the community identically.
+ and should feel the effects of 
+\change_inserted -666822487 1649949360
+individuals of 
+\change_unchanged
+other species in the community identically.
  This favours priority effects 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -970,10 +986,22 @@ monthly snapshot
  When abundance values are not reported for certain species and months,
  we replace them by zeroes.
  Given the sustained observation effort (all sectors are patrolled multiple
- times throughout the month by the staff, amateur ornithologists visiting
- the reserve daily and communicating their findings to the reserve staff),
- we consider that the absence of counts for a given species signals its
- true absence from the reserve.
+ times throughout the month by the staff
+\change_deleted -666822487 1649949576
+,
+\change_unchanged
+ 
+\change_deleted -666822487 1649949497
+amateur ornithologists visiting the reserve daily
+\change_inserted -666822487 1649949564
+and the reserve is visited every day 
+\change_deleted -666822487 1649949532
+ and communicating
+\change_inserted -666822487 1649949542
+by birdwatchers who communicate
+\change_unchanged
+ their findings to the reserve staff), we consider that the absence of counts
+ for a given species signals its true absence from the reserve.
  This creates some zero abundances for rare species at the monthly scale.
  We have not attempted to 
 \begin_inset Quotes eld
@@ -1018,9 +1046,33 @@ noprefix "false"
  requirements and could respond differentially to abiotic drivers.
  It is also useful from a more statistical perspective, as there is a partial
  shift in composition between the seasons, though winter and summer communities
- greatly overlap (i.e., species with greater abundances in the reserve in
- winter have also some summer residents, though these may be different individua
-ls).
+ greatly overlap (i.e., species with 
+\change_deleted -666822487 1649949676
+greater
+\change_inserted -666822487 1649949676
+large
+\change_unchanged
+ abundances 
+\change_deleted -666822487 1649949717
+in the reserve 
+\change_unchanged
+in winter 
+\change_inserted -666822487 1649949838
+also 
+\change_unchanged
+have
+\change_deleted -666822487 1649949752
+ also some summer residents
+\change_inserted -666822487 1649949763
+ positive abundances in summer
+\change_unchanged
+, though 
+\change_inserted -666822487 1649949771
+summer residents
+\change_deleted -666822487 1649949767
+these
+\change_unchanged
+ may be different individuals).
  The dynamics of species abundances in the Teich reserve bird community
  show a marked signature of seasonality (Fig.
  
@@ -1442,13 +1494,21 @@ literal "true"
 \end_inset
 
  season for a given community), we constructed 1000 
+\change_deleted -666822487 1649949995
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 surrogates
+\change_deleted -666822487 1649949997
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
  in which we kept auto-correlations but removed cross-correlations between
  time series.
  There are multiple ways to erase cross-correlations depending on the resolution
@@ -1725,7 +1785,11 @@ literal "false"
 
 \end_inset
 
-, using 1000 surrogate time series, and computing of the corresponding 
+, using 1000 surrogate time series, and computing 
+\change_deleted -666822487 1649950103
+of 
+\change_unchanged
+the corresponding 
 \begin_inset Formula $\rho$
 \end_inset
 
@@ -2392,7 +2456,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Synchrony analyses of the group formed by cormorant vs egret and heron.
+Synchrony analyses of 
+\change_deleted -666822487 1649950189
+the group formed by 
+\change_unchanged
+cormorant vs egret and heron.
  Panel a) presents yearly synchrony (
 \begin_inset Formula $\eta)$
 \end_inset
@@ -2724,8 +2792,14 @@ normal
  Pre- and post-2006 analyses showed very little differences with whole time
  series analyses for either the warm or cold season.
  However, in the wavelet modulus ratio analyses, we see at monthly or 5-year
- timescales more compensation after 2006 for waders; this could reflect
- that the community is becoming saturated with waders.
+ timescales more compensation after 2006 
+\change_deleted -666822487 1649950221
+for
+\change_inserted -666822487 1649950222
+within
+\change_unchanged
+ waders; this could reflect that the community is becoming saturated with
+ waders.
  The effects of disturbances on the level of synchrony or compensation are
  likely idiosyncratic: for instance, 
 \begin_inset CommandInset citation
@@ -2770,8 +2844,11 @@ We now zoom in on the cormorant-heron-egret module, for which we knew beforehand
  When one functional group or species dominates the temporal variation,
  as shown in SI Appendix S8, its dominance of temporal variation can forbid
  the occurrence of compensation since by definition no increase in the numbers
- of the species that fluctuate less may compensate for the decreases in
- the species that fluctuates more (and vice versa).
+ of the species that fluctuate less may compensate for the decrease
+\change_deleted -666822487 1649950240
+s
+\change_unchanged
+ in the species that fluctuates more (and vice versa).
 \end_layout
 
 \begin_layout Subsection*
