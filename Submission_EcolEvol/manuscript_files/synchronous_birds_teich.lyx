@@ -87,7 +87,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -481,7 +480,7 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-Teich Ornithological Reserve, PNR Landes Gascognes, Le Teich, France
+Teich Ornithological Reserve, PNR Landes Gascogne, Le Teich, France
 \end_layout
 
 \begin_layout Standard
@@ -532,15 +531,8 @@ Compensatory dynamics, during which community composition shifts despite
  is limited.
  Here, we extend analyses of community-level synchrony to wetland birds.
  We analyse a 35-year monthly survey of a community where we suspected that
- compensation might occur due to 
-\change_inserted -666822487 1649949284
-potential competition and 
-\change_unchanged
-changes in water levels, favouring birds with different habitat preferences
-\change_deleted -666822487 1649949291
-, and potential competition
-\change_unchanged
-.
+ compensation might occur due to potential competition and changes in water
+ levels, favouring birds with different habitat preferences.
  We perform both year-to-year analyses by season, using a compensation/synchrony
  index, as well as multiscale analyses using a wavelet-based measure, which
  allows for both scale- and time-dependence.
@@ -562,11 +554,7 @@ between
 \emph on
 within
 \emph default
- 
-\change_deleted -666822487 1649949314
-guilds, using 
-\change_unchanged
-functional groups.
+ functional groups.
  Our results suggest that abundance compensation may have more potential
  to emerge between broad functional groups rather than between species,
  as well as at relatively long temporal scales (multiple years for vertebrates),
@@ -843,11 +831,8 @@ The taxonomic or functional scale considered should indeed be a main modulator
  and closely related species.
  If two species of ducks A and B share almost the same niche, individuals
  from either species experience similar competition from species A or B,
- and should feel the effects of 
-\change_inserted -666822487 1649949360
-individuals of 
-\change_unchanged
-other species in the community identically.
+ and should feel the effects of individuals of other species in the community
+ identically.
  This favours priority effects 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -986,22 +971,10 @@ monthly snapshot
  When abundance values are not reported for certain species and months,
  we replace them by zeroes.
  Given the sustained observation effort (all sectors are patrolled multiple
- times throughout the month by the staff
-\change_deleted -666822487 1649949576
-,
-\change_unchanged
- 
-\change_deleted -666822487 1649949497
-amateur ornithologists visiting the reserve daily
-\change_inserted -666822487 1649949564
-and the reserve is visited every day 
-\change_deleted -666822487 1649949532
- and communicating
-\change_inserted -666822487 1649949542
-by birdwatchers who communicate
-\change_unchanged
- their findings to the reserve staff), we consider that the absence of counts
- for a given species signals its true absence from the reserve.
+ times throughout the month by the staff and the reserve is visited every
+ day by birdwatchers who communicate their findings to the reserve staff),
+ we consider that the absence of counts for a given species signals its
+ true absence from the reserve.
  This creates some zero abundances for rare species at the monthly scale.
  We have not attempted to 
 \begin_inset Quotes eld
@@ -1045,33 +1018,9 @@ noprefix "false"
  This makes sense biologically because the two communities have different
  requirements and could respond differentially to abiotic drivers.
  It is also useful from a more statistical perspective, as there is a partial
- shift in composition between the seasons, though winter and summer communities
- greatly overlap (i.e., species with 
-\change_deleted -666822487 1649949676
-greater
-\change_inserted -666822487 1649949676
-large
-\change_unchanged
- abundances 
-\change_deleted -666822487 1649949717
-in the reserve 
-\change_unchanged
-in winter 
-\change_inserted -666822487 1649949838
-also 
-\change_unchanged
-have
-\change_deleted -666822487 1649949752
- also some summer residents
-\change_inserted -666822487 1649949763
- positive abundances in summer
-\change_unchanged
-, though 
-\change_inserted -666822487 1649949771
-summer residents
-\change_deleted -666822487 1649949767
-these
-\change_unchanged
+ shift in composition between the seasons, even though winter and summer
+ communities greatly overlap (i.e., abundant species in winter can also have
+ substantial albeit smaller abundances in summer—though summer residents
  may be different individuals).
  The dynamics of species abundances in the Teich reserve bird community
  show a marked signature of seasonality (Fig.
@@ -1493,24 +1442,8 @@ literal "true"
 \begin_inset Formula $\times$
 \end_inset
 
- season for a given community), we constructed 1000 
-\change_deleted -666822487 1649949995
-
-\begin_inset Quotes eld
-\end_inset
-
-
-\change_unchanged
-surrogates
-\change_deleted -666822487 1649949997
-
-\begin_inset Quotes erd
-\end_inset
-
-
-\change_unchanged
- in which we kept auto-correlations but removed cross-correlations between
- time series.
+ season for a given community), we constructed 1000 surrogates in which
+ we kept auto-correlations but removed cross-correlations between time series.
  There are multiple ways to erase cross-correlations depending on the resolution
  of the considered community.
  Within guilds, we shifted the time-series 
@@ -1785,11 +1718,7 @@ literal "false"
 
 \end_inset
 
-, using 1000 surrogate time series, and computing 
-\change_deleted -666822487 1649950103
-of 
-\change_unchanged
-the corresponding 
+, using 1000 surrogate time series, and computing the corresponding 
 \begin_inset Formula $\rho$
 \end_inset
 
@@ -2148,7 +2077,7 @@ If we say how the second index works, why not say that the first is between
 \end_inset
 
 .
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species,
  but conserving their original Fourier spectrum), at the 10% level.
  
@@ -2200,7 +2129,7 @@ Wavelet modulus ratio (
 \end_inset
 
  scales from 0 (compensation, blue color) to 1 (synchrony, red color).
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species,
  but conserving their original Fourier spectrum), at the 10% level.
  
@@ -2456,11 +2385,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Synchrony analyses of 
-\change_deleted -666822487 1649950189
-the group formed by 
-\change_unchanged
-cormorant vs egret and heron.
+Synchrony analyses of cormorant vs egret and heron.
  Panel a) presents yearly synchrony (
 \begin_inset Formula $\eta)$
 \end_inset
@@ -2472,7 +2397,7 @@ cormorant vs egret and heron.
 ).
  The latter index scales from 0 (compensation, blue color) to 1 (synchrony,
  red color).
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species,
  but conserving their original Fourier spectrum), at the 10% level.
  
@@ -2792,14 +2717,8 @@ normal
  Pre- and post-2006 analyses showed very little differences with whole time
  series analyses for either the warm or cold season.
  However, in the wavelet modulus ratio analyses, we see at monthly or 5-year
- timescales more compensation after 2006 
-\change_deleted -666822487 1649950221
-for
-\change_inserted -666822487 1649950222
-within
-\change_unchanged
- waders; this could reflect that the community is becoming saturated with
- waders.
+ timescales more compensation after 2006 within waders; this could reflect
+ that the community is becoming saturated with waders.
  The effects of disturbances on the level of synchrony or compensation are
  likely idiosyncratic: for instance, 
 \begin_inset CommandInset citation
@@ -2844,11 +2763,8 @@ We now zoom in on the cormorant-heron-egret module, for which we knew beforehand
  When one functional group or species dominates the temporal variation,
  as shown in SI Appendix S8, its dominance of temporal variation can forbid
  the occurrence of compensation since by definition no increase in the numbers
- of the species that fluctuate less may compensate for the decrease
-\change_deleted -666822487 1649950240
-s
-\change_unchanged
- in the species that fluctuates more (and vice versa).
+ of the species that fluctuate less may compensate for the decrease in the
+ species that fluctuates more (and vice versa).
 \end_layout
 
 \begin_layout Subsection*
@@ -3045,7 +2961,30 @@ We warmly thank the birdwatchers and staff of the Teich Reserve/Landes Gascogne
 \end_layout
 
 \begin_layout Subsection*
-Data accessibility
+Conflict of interest
+\end_layout
+
+\begin_layout Standard
+The authors have no conflicts of interest to declare.
+\end_layout
+
+\begin_layout Subsection*
+Author contributions
+\end_layout
+
+\begin_layout Standard
+FB, LC and CF designed the original project.
+ CF coordinated the data collection and provided knowledge on functional
+ groups.
+ CA, FB and CP standardized the bird abundance database and performed explorator
+y analyses.
+ Final statistical analyses were designed by FB and CP, and coded mostly
+ by CP.
+ FB and CP led the article writing, with inputs from all authors.
+\end_layout
+
+\begin_layout Subsection*
+Data availability
 \end_layout
 
 \begin_layout Standard
@@ -3080,21 +3019,6 @@ https://doi.org/10.5061/dryad.zpc866t9v
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Subsection*
-Authors' contributions
-\end_layout
-
-\begin_layout Standard
-FB, LC and CF designed the original project.
- CF coordinated the data collection and provided knowledge on functional
- groups.
- CA, FB and CP standardized the bird abundance database and performed explorator
-y analyses.
- Final statistical analyses were designed by FB and CP, and coded mostly
- by CP.
- FB and CP led the article writing, with inputs from all authors.
 \end_layout
 
 \begin_layout Standard

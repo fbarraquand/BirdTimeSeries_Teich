@@ -89,7 +89,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -666822487 "frederic"
 \end_header
 
 \begin_body
@@ -174,19 +173,8 @@ noprefix "false"
 
 \end_inset
 
-, we also present the 
-\change_inserted -666822487 1649950325
-other 
-\change_unchanged
-most frequent birds present
-\change_inserted -666822487 1649950386
- in the reserve
-\change_deleted -666822487 1649950338
- with the species we consider
-\change_inserted -666822487 1649950352
-, in addition to the two main functional groups
-\change_unchanged
-.
+, we also present the other most frequent birds in the reserve, in addition
+ to the two main functional groups.
  The rest of the community (not detailed here) amounts to 1% of the total
  number of observed birds.
 \begin_inset Note Note
@@ -4037,13 +4025,7 @@ African sacred ibis
 \begin_layout Plain Layout
 Most frequent birds (observed more than 75 times during the monitoring)
  which are not described in the previous functional groups (see previous
- legend for 
-\change_inserted -666822487 1649950452
-the meaning of the column headers
-\change_deleted -666822487 1649950420
-more details on the column signification
-\change_unchanged
-).
+ legend for the meaning of the column headers).
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Most-frequent-birds"
@@ -4108,11 +4090,8 @@ Calidris
  The coloured symbols below the curves represent each species abundances.
  Species composition on the donut plots (right) are given for species whose
  relative abundance is over 1% in the group considered.
- The total number of species cons
-\change_inserted -666822487 1649950469
-t
-\change_unchanged
-ituting the group is given below the donut plot.
+ The total number of species constituting the group is given below the donut
+ plot.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4412,7 +4391,7 @@ status open
 Wavelet modulus ratio for the wader and waterfowl community, scaling from
  0 (compensation, blue color) to 1 (synchrony, red color), using the mean
  biomasses instead of the abundances of each species.
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species
  with the same Fourier spectrum), at the 10% level.
 \begin_inset CommandInset label
@@ -4466,13 +4445,7 @@ literal "false"
 \end_inset
 
  in their Appendix D, we explored the effect of a shared environmental driver
- on a community formed by two groups reacting 
-\change_deleted -666822487 1649950525
-oppositely
-\change_inserted -666822487 1649950528
-in opposite ways
-\change_unchanged
- to this driver.
+ on a community formed by two groups reacting in opposite ways to this driver.
 \end_layout
 
 \begin_layout Standard
@@ -4517,18 +4490,7 @@ noprefix "false"
  to the same signal.
  The environmental signal is shown in black, dashed lines, and indexed on
  the right axis.
- This signal either follows an increasing trend (a), or 
-\change_inserted -666822487 1649950502
-is 
-\change_unchanged
-just 
-\change_deleted -666822487 1649950505
-an 
-\change_unchanged
-autocorrelated
-\change_deleted -666822487 1649950510
- signal
-\change_unchanged
+ This signal either follows an increasing trend (a), or is just autocorrelated
  (b).
 \end_layout
 
@@ -4902,39 +4864,12 @@ literal "false"
  Coming back to the interpretation of our results in the Teich reserve case,
  this means that the more bird population growth rates respond to changes
  in the water levels, the less we can expect compensation at the whole community
- level, even though compensation may be manifest 
-\change_deleted -666822487 1649950566
-at the
-\change_inserted -666822487 1649950567
-between
-\change_unchanged
- functional group
-\change_deleted -666822487 1649950572
- level
-\change_inserted -666822487 1649950572
-s
-\change_unchanged
- (here, 
-\change_deleted -666822487 1649950582
-the 
-\change_unchanged
-group
-\change_inserted -666822487 1649950584
-s
-\change_unchanged
- of species responding similarly to the environmental variable).
- 
-\change_deleted -666822487 1649950667
-C
-\change_inserted -666822487 1649950668
-That said, c
-\change_unchanged
-ompensation between groups in the case of a small effect of the environment
- can also be difficult to detect if there are only two functional groups
-\change_deleted -666822487 1649950649
- (between-guilds compensation)
-\change_unchanged
-.
+ level, even though compensation may be present between functional groups
+ (here, groups constituted of species responding similarly to the environmental
+ variable within each group).
+ That said, compensation between groups in the case of a small effect of
+ the environment can also be difficult to detect if there are only two functiona
+l groups.
 \end_layout
 
 \begin_layout Subsection*
@@ -4988,7 +4923,7 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio for a 10-species community with compensatory dynamics
  without (a) and with (b) exactly zero values.
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species,
  but conserving their original Fourier spectrum), at the 10% level.
 \begin_inset Note Note
@@ -5072,13 +5007,7 @@ The simulations were based on
 \begin_inset Formula $P=12$
 \end_inset
 
- (we need mont
-\change_inserted -666822487 1649950700
-hl
-\change_deleted -666822487 1649950699
-lh
-\change_unchanged
-y abundances with a seasonal trend).
+ (we need monthly abundances with a seasonal trend).
  The variance-covariance matrix 
 \begin_inset Formula $\Sigma_{ij}=\rho_{ij}\sigma_{i}\sigma_{j}$
 \end_inset
@@ -5219,28 +5148,12 @@ caption{Time series of communities with a skewed SAD, for 4 species, with
  (a) compensation ($B_{ij}
 \backslash
 sim 
-\change_inserted -666822487 1649950752
-
 \backslash
-text{
-\change_unchanged
-Beta
-\change_inserted -666822487 1649950754
-}
-\change_unchanged
-(2,4)$) and (b) synchrony ($B_{ij}
+text{Beta}(2,4)$) and (b) synchrony ($B_{ij}
 \backslash
 sim 
-\change_inserted -666822487 1649950760
-
 \backslash
-text{
-\change_unchanged
-Beta
-\change_inserted -666822487 1649950762
-}
-\change_unchanged
-(4,2)$).}     
+text{Beta}(4,2)$).}     
 \backslash
 label{fig:timeseries}
 \end_layout
@@ -5297,7 +5210,7 @@ eta$ values under the null hypothesis and red stars correspond to synchrony
  values significantly different from the null model, at the 10
 \backslash
 % threshold.
- In b), red and blue lines respectively delineate regions of significantly
+ In b), blue and red lines respectively delineate regions of significantly
  lower and higher synchrony than the null model (independently fluctuating
  species, but conserving their original Fourier spectrum), at the 10
 \backslash
@@ -5329,7 +5242,7 @@ eta$ values under the null hypothesis and red stars correspond to synchrony
  values significantly different from the null model, at the 10
 \backslash
 % threshold.
- In b), red and blue lines respectively delineate regions of significantly
+ In b), blue and red lines respectively delineate regions of significantly
  lower and higher synchrony than the null model (independently fluctuating
  species, but conserving their original Fourier spectrum), at the 10
 \backslash
@@ -5362,7 +5275,7 @@ eta$ values under the null hypothesis and red stars correspond to synchrony
  values significantly different from the null model, at the 10
 \backslash
 % threshold.
- In b), red and blue lines respectively delineate regions of significantly
+ In b), blue and red lines respectively delineate regions of significantly
  lower and higher synchrony than the null model (independently fluctuating
  species, but conserving their original Fourier spectrum), at the 10
 \backslash
@@ -5677,27 +5590,18 @@ Dynamics including long-term compensation
 
 \begin_layout Standard
 Previous simulations included compensation only at the monthly scale, i.e.
- the shortest 
-\change_inserted -666822487 1649950798
-time 
-\change_unchanged
-scale in the dataset.
+ the shortest time scale in the dataset.
  We wondered if compensation could be detectable through wavelet-based index
  
 \begin_inset Formula $\rho$
 \end_inset
 
- at longer time scales, i.e., above the year
-\change_deleted -666822487 1649950813
-, in a context slightly different than variation dominance, where we still
- expect compensation to be possible
-\change_unchanged
-.
+ at longer time scales, i.e., above the year.
  This is especially relevant in our context given that our dataset seems
  to have long-term trends.
  Also, the previous simulations showed some transfer of compensation from
- short to long time scales - we wondered if the reverse can be observed
- as well.
+ short to long time scales—we wondered if the reverse can be observed as
+ well.
 \end_layout
 
 \begin_layout Standard
@@ -5839,7 +5743,7 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio in a 4-species community with compensation between
  the 2 most abundant species with a 9-year cycle.
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species,
  but conserving their original Fourier spectrum), at the 10% level.
  Significance is evaluated with 1000 surrogates.
@@ -5952,7 +5856,7 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio, for 4 species with compensation, with 1 species having
  an amplitude of variation 3 times higher than the sum of the others.
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species,
  but conserving their original Fourier spectrum), at the 10% level.
 \end_layout
@@ -6083,7 +5987,7 @@ status open
 \begin_layout Plain Layout
 Wavelet modulus ratio for 2 species in antiphase, one of them having an
  amplitude of variation 4 times higher than the other one.
- Red and blue lines respectively delineate regions of significantly lower
+ Blue and red lines respectively delineate regions of significantly lower
  and higher synchrony than the null model (independently fluctuating species,
  but conserving their original Fourier spectrum), at the 10% level.
 \end_layout
