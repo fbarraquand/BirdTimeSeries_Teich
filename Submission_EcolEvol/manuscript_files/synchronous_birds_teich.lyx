@@ -87,6 +87,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -2100369821 "cpicoche"
 \end_header
 
 \begin_body
@@ -720,9 +721,15 @@ literal "false"
 
 \begin_layout Standard
 Early investigations of the frequency of synchronous vs compensatory dynamics
- focused on the variance ratio, that is, the variance of the sum of the
- community biomass divided by the sum of the variance of the component species
- biomasses 
+ focused on the variance ratio, that is, the variance 
+\change_deleted -2100369821 1651302820
+of the sum 
+\change_unchanged
+of the community biomass divided by the sum of the variance
+\change_inserted -2100369821 1651302823
+s
+\change_unchanged
+ of the component species biomasses 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "houlahan_compensatory_2007,gonzalez2009causes"
@@ -758,8 +765,11 @@ literal "true"
 
 \begin_layout Standard
 Despite efforts to look for more meaningful temporal scales in community-level
- time series, temporal compensation has remained surprinsingly elusive in
- the field 
+ time series, temporal compensation has remained surpri
+\change_deleted -2100369821 1651302831
+n
+\change_unchanged
+singly elusive in the field 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "houlahan_compensatory_2007,vasseur_synchronous_2014"
@@ -996,7 +1006,13 @@ missing
  population) because doing so would have compromised the patterns of local
  synchrony/compensation.
  However, we did check that having such zeroes in the monthly time series
- cannot affect our conclusions (see SI).
+ cannot affect our conclusions (see 
+\change_deleted -2100369821 1651302866
+SI
+\change_inserted -2100369821 1651302868
+Appendix S6
+\change_unchanged
+).
  In the statistical analyses, we use seasonally averaged abundances (plotted
  in Fig.
  
@@ -1391,9 +1407,12 @@ the sum of the 6
 Calidris
 \shape default
  species).
- In the latter case of between-guilds comparisons, we summed species together
- before seasonal averaging, to consider seasonal averages of the monthly
- guild-level abundance.
+ In the latter case of between-guild
+\change_deleted -2100369821 1651303154
+s
+\change_unchanged
+ comparisons, we summed species together before seasonal averaging, to consider
+ seasonal averages of the monthly guild-level abundance.
 \begin_inset Note Note
 status collapsed
 
@@ -1480,8 +1499,11 @@ literal "false"
 .
  At the boundary (the end of the time series), remaining points are displaced
  towards the beginning of the time-series, which implements a toroidal shift.
- This method works well when comparing many times series corresponding to
- the multiple species.
+ This method works well when comparing many time
+\change_deleted -2100369821 1651302895
+s
+\change_unchanged
+ series corresponding to the multiple species.
  However, when computing synchrony across only two groups (between guilds),
  spurious cross-correlations could emerge with a shift-based approach as
  the number of possible combinations is more limited.
@@ -1679,7 +1701,7 @@ while the denominator considers a weighted sum of the fluctuation amplitude
 \color inherit
 ).
  The Gaussian weights in the numerator and denominator ensure that 
-\begin_inset Formula $\rho(s,t)$
+\begin_inset Formula $\rho(t,s)$
 \end_inset
 
  is specific to scale 
@@ -1754,7 +1776,13 @@ Statistical significance testing was always done using a significance level
 \begin_inset Formula $\alpha$
 \end_inset
 
- = 10%, provided in SI Appendices.
+ = 10%, provided in 
+\change_deleted -2100369821 1651302921
+SI Appendices
+\change_inserted -2100369821 1651302925
+Appendices S5-S8
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
