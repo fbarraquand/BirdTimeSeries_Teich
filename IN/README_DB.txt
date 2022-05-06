@@ -1,3 +1,0 @@
-The dataset contained in DBWithMonthlyPhotoTeich_completed.csv is analysed in Looking for compensation at multiple scales in a wetland bird community (2022), Ecology and Evolution, by Frédéric Barraquand, Coralie Picoche, Christelle Aluome, Laure Carassou & Claude Feigné.
-
-It contains monthly abundances for birds at the Teich reserve in Arcachon Bay, France. The species list is made mostly of wader and waterfowl species, although some other groups are present as well. This dataset is dubbed the "monthly photograph", as we attempt to create a snapshot of monthly abundance to homogeneize data over the long-term duration of this study (1973-2016, with most data covering 1981-2016). See https://doi.org/10.5281/zenodo.6367146 for more details.
