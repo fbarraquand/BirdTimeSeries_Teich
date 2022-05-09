@@ -2511,8 +2511,13 @@ Discussion
 \begin_layout Standard
 Between-species compensation was not found across years (for two separate
  seasons), synchrony between species being the rule.
- This was true for all species considered as a single community, as well
- as 
+ This was true 
+\change_deleted -666822487 1652116590
+for all species considered as a single community
+\change_inserted -666822487 1652116595
+at the whole-community level
+\change_unchanged
+, as well as 
 \emph on
 within
 \emph default
@@ -2523,19 +2528,35 @@ guilds
 functional groups
 \change_unchanged
 , in year-to-year analyses of cold and warm seasons.
- Yet, summing the abundances of species within a guild and comparing these
- total abundances of contrasted guilds, it was possible to find compensation
- across years, during the cold season corresponding to wintering birds (although
- the null hypothesis of no correlation could not be rejected); that is,
- there was compensation 
+ Yet, summing the abundances of species within a 
+\change_deleted -666822487 1652116644
+guild
+\change_inserted -666822487 1652116647
+functional group
+\change_unchanged
+ and comparing these total abundances of contrasted 
+\change_deleted -666822487 1652116652
+guilds
+\change_inserted -666822487 1652116655
+functional groups
+\change_unchanged
+, it was possible to find compensation across years, during the cold season
+ corresponding to wintering birds (although the null hypothesis of no correlatio
+n could not be rejected); that is, there was compensation 
 \emph on
 between
 \emph default
- guilds.
  
-\change_inserted -666822487 1652115926
-Moreover, compensation did eventually appear in wavelet analyses considering
- longer temporal scales.
+\change_deleted -666822487 1652116681
+guilds
+\change_inserted -666822487 1652116684
+functional groups
+\change_unchanged
+.
+ 
+\change_inserted -666822487 1652117658
+Moreover, compensation did eventually appear in community and within-guild
+ level wavelet analyses considering longer temporal scales.
  
 \change_unchanged
 These results are robust to using biomass in place of abundance (SI Appendix
@@ -2665,13 +2686,21 @@ Calidris
 
 \begin_layout Standard
 We expected to see compensation at the 
+\change_deleted -666822487 1652116713
+
 \begin_inset Quotes eld
 \end_inset
 
+
+\change_unchanged
 functional group scale
+\change_deleted -666822487 1652116717
+
 \begin_inset Quotes erd
 \end_inset
 
+
+\change_unchanged
  for both cold and warm seasons.
  The separation of seasons allowed to differentiate summer residents (some
  of whom may be breeding) and wintering birds, in order to remove the overwhelmi
